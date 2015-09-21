@@ -1,0 +1,16 @@
+# Site settings
+title: Ladies Learning Code | Digital Skills Program
+email: info@ladieslearningcode.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: " " # the base hostname & protocol for your site
+twitter_username: learningcode
+github_username: ladieslearningcode
+
+# Build settings
+markdown: kramdown
+collections:
+  lessons:
+    output: true
+    permalink: /lessons/:path/
