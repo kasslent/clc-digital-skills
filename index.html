@@ -3,17 +3,19 @@ layout: default
 class: home
 ---
 
-  <h2>Lessons</h2>
-  <ul>
-    {% for lesson in site.lessons %} 
-    <li>
-      <a href="{{ lesson.url}}">{{ lesson.title }}</a>
-      <p>{{ lesson.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <h2>Resources</h2>
-  <ul>
-    <li>Slack group: <a href="http://digitalskills.slack.com">digitalskills.slack.com</a></li>
-  </ul>
+  <section>
+    <h1>Lessons</h1>
+    <ul>
+      {% for lesson in site.lessons %} 
+      <li>
+        <a href="{{ lesson.url}}">{{ lesson.title }}</a> - {{ lesson.description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section>
+    <h1>Resources</h1>
+    <ul>
+      <li>Stack Overflow</li>
+    </ul>
+  </section>
