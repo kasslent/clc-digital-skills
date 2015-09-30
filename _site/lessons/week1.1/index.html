@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Week 1, lesson 1</title>
+  <meta name="description" content="Write an awesome description for your new site here. 
+">
+
+  <link rel="stylesheet" href="/llc-digital-skills/css/main.css">
+  <link rel="canonical" href=" /llc-digital-skills/lessons/week1.1/">
+  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+</head>
+
+  <body class="">
+      <header>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h2>Digital Skills Program</h2>
+  </header>
+
+
+    <main role="main" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <a href="/llc-digital-skills/index.html">Back to Home</a>
+      </nav>
+      <section>
+        <p>In 1989, Tim Berners-Lee, a physicist at CERN, began
+experimenting with ways to share research documents
+across different computer platforms. This would
+eventually lead to the creation of the World Wide Web.</p>
+
+<p>In 1994, he founded the <a href="http://www.w3.org/">World Wide Web Consortium</a>
+(W3C). The W3C governs web standards with
+specifications, guidelines, tools and recommendations.</p>
+
+<!-- ##Websites vs web apps vs native apps
+
+**Websites** are generally informational. **Web applications** usually allow the user to perform actions and tasks (e.g. Gmail). This is just a general rule of thumb, since informational sites can contain app-like features and vice versa. They are not entirely exclusive.
+
+**Native applications** are apps that must be downloaded to your computer or mobile device rather than being accessed via web browser.
+
+Many websites are created to be mobile friendly and many native apps will also have a web app version as well.  -->
+
+<h2 id="what-are-websites-and-apps-made-of">What are websites and apps made of?</h2>
+
+<h3 id="front-end--client-side">Front-end &amp; client-side</h3>
+
+<p><strong>HTML</strong> (Hypertext Markup Language) is a markup language and defines structure and content. </p>
+
+<p><strong>CSS</strong> (Cascading Style Sheet) is a style sheet language responsible for presentation. </p>
+
+<p><strong>JavaScript</strong> is a programming language and controls the behavior and interactions.</p>
+
+<p>These three languages work together but perform different functions. Front-end development can also be referred to as “client-side”, basically the stuff you see and interact with, in the web browser and are static.</p>
+
+<blockquote>
+  <p>Go to any website and right-click or two-finger tap anywhere on the page. Select <strong>View Page Source</strong>.  That’s HTML, CSS and JavaScript!</p>
+</blockquote>
+
+<h3 id="back-end--server-side">Back-end &amp; server side</h3>
+
+<p>The back-end basically refers to how a website <em>works</em> – updates, dynamic changes and storing data. These are things the user <em>can’t</em> see in the browser, like databases and servers.</p>
+
+<p>Dynamic sites like Facebook and blogs, have content that is constantly changing and updated in real-time and contains information like user profiles.  These types of features also require some kind of server side language.</p>
+
+<p>Some examples of back-end programming languages are PHP, Ruby, Java (totally different from JavaScript!), Python, etc. These languages need to be run on a <em>server</em> to work.</p>
+
+<h3 id="native-apps">Native Apps</h3>
+
+<p>Native apps are specific to the device or operating system (e.g. Photoshop for computers, Instagram for phones) and need to be downloaded onto your computer or mobile device.</p>
+
+<p>It doesn’t need to be connected to the Internet to work, though some apps may require it to display some types of content or features such as showing updated content feeds or syncing data.</p>
+
+<p>Native apps are built in the specific programming language of the device/operating system (Objective-C for iPhones, Java for Android) and are different from front and back-end programming languages.</p>
+
+<blockquote>
+  <p>What are some examples of websites, web apps and native apps?</p>
+</blockquote>
+
+<h2 id="html-vs-xhtml-vs-html5">HTML vs XHTML vs HTML5</h2>
+
+<p>Basically, these terms refer to different versions of the
+same language. With each new version, new features and rules are added while other features become obsolete.</p>
+
+<p>HTML5 is the latest version.</p>
+
+<h2 id="creating-html-pages">Creating HTML pages</h2>
+
+<p>To create an HTML page, name your file using an <code>.html</code> extension (e.g .pdf for PDF files or .doc for Word files).  It will then open in your default browser.</p>
+
+<p>Here are some best practices and file naming tips:</p>
+
+<ul>
+  <li>Use lowercase letters.
+    <ul>
+      <li><strong>about.html</strong> instead of <strong>About.html</strong> or <strong>ABOUT.html</strong></li>
+    </ul>
+  </li>
+  <li>Avoid s p a c e s. Use underscores (<code>_</code>) or dashes (<code>-</code>). 
+    <ul>
+      <li>Note that <a href="http://searchengineland.com/9-seo-quirks-you-should-be-aware-of-146465">dashes are preferred for SEO</a> (search engine optimization).</li>
+      <li><strong>business-hours.html</strong> instead of <strong>business hours.html</strong></li>
+      <li>The browser will interpret spaces as <strong>business%20hours.html</strong></li>
+    </ul>
+  </li>
+  <li>Avoid symbols like <code>#</code> <code>&amp;</code> <code>*</code> in your file name.</li>
+  <li>Keep your file names concise, yet meaningful.
+    <ul>
+      <li><strong>about.html</strong>, <strong>contact.html</strong> instead of <strong>page1.html</strong>, <strong>page2.html</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>All the file naming tips also apply to other files such as folders, images, CSS files, etc.</p>
+
+<h2 id="exercise-create-a-web-page">Exercise: Create a web page</h2>
+<blockquote>
+  <ol>
+    <li>Create a project folder</li>
+    <li>Open the text editor</li>
+    <li>Type anything you want</li>
+    <li>Save file as <strong>index.html</strong></li>
+    <li>View in browser</li>
+    <li>Make another change and save</li>
+    <li>Refresh the browser</li>
+  </ol>
+</blockquote>
+
+<h2 id="html-basics">HTML Basics</h2>
+
+<p>Tags <em>usually</em> come in pairs — an opening tag and a closing tag — to <em>wrap</em> the content.  Note that the closing tag has a forward slash (<code>/</code>).</p>
+
+<pre><code>&lt;tag&gt; opening tag --- closing tag &lt;/tag&gt;
+</code></pre>
+
+<p>HTML <em>tags</em> describe the content inside of them to the web browser.  This is referred to as <a href="http://html5doctor.com/lets-talk-about-semantics/">semantics</a>.</p>
+
+<pre><code>&lt;h1&gt;This tag describes a heading&lt;/h1&gt;
+&lt;p&gt;This tag is for paragraphs.&lt;/p&gt;
+</code></pre>
+
+<p>Tags are written with <code>&lt;</code> left and right angled brackets <code>&gt;</code> and a forward slash <code>/</code> for the closing tag.</p>
+
+<p><img src="../assets/img/week1/keyboard-html.png" alt="keyboard keys" /></p>
+
+<h3 id="nested-tags--attributes">Nested tags &amp; attributes</h3>
+
+<p>Tags can be <em>nested</em> within other tags like this:</p>
+
+<pre><code>&lt;outertag&gt;outer content &lt;innertag&gt;inner&lt;/innertag&gt; outer content&lt;/outertag&gt;
+</code></pre>
+
+<p>Nested tags create a <em>family tree-like</em> relationship and is often referred to as the <em>parent</em> node and <em>child</em> nodes.  The inner tag is the child of the outer tag.</p>
+
+<p>When nesting tags, they must always close in the <em>reverse order</em>. Failing to do so will cause the HTML be to invalid and possibly break and not apply CSS styles properly.</p>
+
+<p>What’s wrong with this example below?</p>
+
+<pre><code>&lt;p&gt;I am a paragraph with &lt;strong&gt;bold text.&lt;/p&gt;&lt;/strong&gt;
+</code></pre>
+
+<h4 id="organizing-your-code">Organizing your code</h4>
+
+<p>Writing the HTML all in one line will work, but will make it really difficult for us to read (the browser doesn’t care).</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+
+<p>Whitespace through indentation (tabs) makes HTML easier to read. When nesting a tag, add one tab space.  Getting into this habit from the start will help keep you organized.</p>
+
+<p><strong>These are the base HTML tags and should be included in all HTML documents.</strong></p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- page content here (this is an HTML comment by the way) --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="attributes--html-comments">Attributes &amp; HTML Comments</h3>
+
+<p><strong>Attributes</strong> provide additional information or instruction for the element and is included <em>inside the opening HTML tag</em> in the form of <code>attribute="value"</code>. There are many different types of attributes.</p>
+
+<pre><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;
+</code></pre>
+
+<blockquote>
+  <p>Looking at the example of the base HTML document tags above, can you pick out the two attributes?</p>
+</blockquote>
+
+<p>HTML comments are useful for leaving notes for yourself (or others) but do not display in the browser. Comments are often used for:</p>
+
+<ul>
+  <li>hiding code for later use</li>
+  <li>leaving notes, reminders, explanations</li>
+  <li>organizing the document</li>
+</ul>
+
+<p>The syntax for comments start with <code>&lt;!--</code> and ends with <code>--&gt;</code>.</p>
+
+<pre><code>&lt;!-- Comments should always be included between the dashes. --&gt;
+</code></pre>
+
+<h2 id="the-html-document">The HTML Document</h2>
+
+<h3 id="doctype">Doctype</h3>
+
+<ul>
+  <li>must be the first item</li>
+  <li>not an HTML tag</li>
+  <li>tells the browser what HTML version the page is written in</li>
+  <li>switches the document into <em>standards</em> mode - helps the browser render the content based on the rules denoted by the DOCTYPE version</li>
+  <li>browsers can render the document without a doctype but will switch into <em>quirks</em> mode and may have unexpected results (no rules!)</li>
+</ul>
+
+<pre><code class="opacity"><strong>&lt;!DOCTYPE html&gt;</strong>
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- page content here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>The above is the HTML5 doctype. The previous version, XHTML, looked like this:</p>
+
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+</code></pre>
+
+<p>The W3C provides a free service to check if your markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
+
+<h3 id="the-html-element">The <code>html</code> element</h3>
+
+<ul>
+  <li>always the first HTML tag</li>
+  <li>root element &amp; ancestor of all other elements because everything is nested inside</li>
+  <li>identifies the document as HTML</li>
+  <li>the <code>lang</code> <em>attribute</em> classifies the language</li>
+</ul>
+
+<pre><code class="opacity">&lt;!DOCTYPE html&gt;
+<strong>&lt;html lang=&quot;en&quot;&gt;</strong>
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- page content here --&gt;
+  &lt;/body&gt;
+<strong>&lt;/html&gt;</strong>
+</code></pre>
+
+<h3 id="the-head-element">The <code>head</code> element</h3>
+
+<ul>
+  <li>includes information about the page but does not display content</li>
+  <li><code>&lt;title&gt;&lt;/title&gt;</code> is the only required tag inside of this element
+    <ul>
+      <li>defines the title of the web page/document</li>
+      <li>displayed in the browser toolbar, bookmarks and search engine results</li>
+    </ul>
+  </li>
+  <li>CSS, JavaScript &amp; <a href="searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags">metadata</a> can also be included here
+    <ul>
+      <li><code>&lt;meta charset="UTF-8"&gt;</code> sets the <a href="https://code.google.com/p/doctype-mirror/wiki/MetaCharsetAttribute">character encoding</a> of an HTML document</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="opacity">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  <strong>&lt;head&gt;</strong>
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My page title&lt;/title&gt;
+  <strong>&lt;/head&gt;</strong>
+  &lt;body&gt;
+    &lt;!-- page content here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="the-body-element">The <code>body</code> element</h3>
+
+<p>All content to be displayed in the browser window goes between the <code>&lt;body&gt;&lt;/body&gt;</code> tags.<br />
+Also known as the <em>viewport</em>.</p>
+
+<pre><code class="opacity">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My page title&lt;/title&gt;
+  &lt;/head&gt;
+  <strong>&lt;body&gt;</strong>
+    &lt;!-- page content here --&gt;
+  <strong>&lt;/body&gt;</strong>
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="exercise-html-basic-tags">Exercise: HTML basic tags</h2>
+
+<blockquote>
+  <ul>
+    <li>Add all of the basic HTML tags to your <strong>index.html</strong> file. (show shortcut?)</li>
+    <li>Add a page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag.  </li>
+  </ul>
+
+  <p>Check your updates in the browser.  Where you do you see the <code>title</code>?</p>
+</blockquote>
+
+<h2 id="html-page-structures">HTML Page Structures</h2>
+
+<p>An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with semantic markup is a good way to start.</p>
+
+<p>It’s like building a house. You start with a blueprint and frame before putting up walls and painting. If you don’t have a design to work from, a simple sketch also works. </p>
+
+<p>There are many HTML tags for creating the page structure.</p>
+
+<p>For example, here is a simple wireframe for a basic web page. With this in mind, let’s create the basic structure using the appropriate HTML tags.</p>
+
+<p><img src="../assets/img/week1/wireframe-basic.png" alt="" /></p>
+
+<h3 id="grouping-elements">Grouping Elements</h3>
+
+<p>The <code>&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code>&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements together for styling.</p>
+
+<p><code>&lt;div&gt;</code> tags are often used with the <code>class</code> attribute to differentiate them (more on class later). </p>
+
+<p>To create the page layout, the HTML could look something like this:</p>
+
+<pre><code>&lt;div class="nav"&gt;
+  nav links here
+&lt;/div&gt;
+
+&lt;div class="header"&gt;
+  header content here
+&lt;/div&gt;
+
+&lt;div class="about"&gt;
+  about content here
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+  footer info here
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="html5-structural-elements">HTML5 Structural Elements</h3>
+
+<p>HTML5 introduced new semantic tags to better describe blocks of content such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code> and many more. Using HTML5 tags, the previous example could look like this instead:</p>
+
+<pre><code>&lt;nav&gt;
+  nav links here
+&lt;/nav&gt;
+
+&lt;header&gt;
+  header content here
+&lt;/header&gt;
+
+&lt;section class="about"&gt;
+  about content here
+&lt;/section&gt;
+
+&lt;footer&gt;
+  footer info here
+&lt;/footer&gt;
+</code></pre>
+
+<p><code>&lt;div&gt;</code> can and is still often used when no other tag properly describes the element. When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the structural tags for content it was not intended for.</p>
+
+<p><a href="http://html5doctor.com">html5doctor.com</a> is a great reference for proper usage and the semantics of all the HTML tags and also provides this handy <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">HTML5 Element Flowchart</a>.</p>
+
+<blockquote>
+  <h4 id="add-the-page-structure">Add the page structure</h4>
+
+  <p>Go back to your <strong>index.html</strong> and add these tags to your page.</p>
+</blockquote>
+
+<h2 id="html-content-tags">HTML Content Tags</h2>
+
+<h3 id="paragraphs">Paragraphs</h3>
+<p>Whether it's one sentence or more, each paragraph needs its own pair of <code>&lt;p&gt;&lt;/p&gt;</code> tags.</p>
+
+<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</code></pre>
+
+<h3 id="headings">Headings</h3>
+
+<p>There are six headings tags (not to be confused with the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure. </p>
+
+<p>To decide which heading to use, think about how you would arrange an essay outline.</p>
+
+<!-- <div class="example essay">
+  <h1>Essay About Apples</h1>
+
+  <h2>Introduction</h2>
+  <p>There are many different types of apples. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur minus libero ut voluptatum voluptates obcaecati doloribus saepe nobis ipsa natus, assumenda possimus, laudantium in, iure. </p>
+
+  <h2>Apple varieties</h2>
+  <p>Paragraph. Culpa nihil voluptatem quae.</p>
+
+  <h3>Green apple varieties</h3>
+  <p>Paragraph. Culpa nihil voluptatem quae.</p>
+
+  <h3>Red apple varieties</h3>
+  <p>Paragraph. Culpa nihil voluptatem quae.</p>
+
+  <h2>Conclusion</h2>
+  <p>Final paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur minus libero ut voluptatum voluptates obcaecati doloribus saepe nobis ipsa natus, assumenda possimus, laudantium in, iure. </p>
+</div>-->
+
+<p>Let’s look at how we could describe this hierarchy using heading tags.</p>
+
+<p>Prior to the HTML5 rules, using only one <code>&lt;h1&gt;</code> was recommended per page.  With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its <em>own</em> outline.</p>
+
+<p><strong>Pre-HTML5 Heading Outline:</strong></p>
+
+<pre><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
+
+&lt;div class="intro"&gt;
+  &lt;h2&gt;Introduction&lt;/h2&gt;
+  &lt;p&gt;There are many different types of apples...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="varieties"&gt;
+  &lt;h2&gt;Apple varieties&lt;/h2&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+
+  &lt;h3&gt;Green apple varieties&lt;/h3&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+
+  &lt;h3&gt;Red apple varieties&lt;/h3&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="conclusion"&gt;
+  &lt;h2&gt;Conclusion&lt;/h2&gt;
+  &lt;p&gt;Final paragraph.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>HTML5 Heading Outline:</strong></p>
+
+<pre><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
+
+&lt;section class="intro"&gt;
+  &lt;h1&gt;Introduction&lt;/h1&gt;
+  &lt;p&gt;There are many different types of apples...&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section class="varieties"&gt;
+  &lt;h1&gt;Apple varieties&lt;/h1&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+
+  &lt;h2&gt;Green apple varieties&lt;/h2&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+
+  &lt;h2&gt;Red apple varieties&lt;/h2&gt;
+  &lt;p&gt;Paragraph. Culpa nihil voluptatem quae.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section class="conclusion"&gt;
+  &lt;h1&gt;Conclusion&lt;/h1&gt;
+  &lt;p&gt;Final paragraph.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><br />
+<strong>Extra resources:</strong>  Read more about headings and HTML5<!-- .element: class="footnote" --> <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">here</a> and <a href="http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824">here</a>.</p>
+
+<blockquote>
+  <h4 id="add-some-content">Add some content</h4>
+
+  <p>Back in your <strong>index.html</strong>, add some content using the appropriate headings and paragraphs.  Leave the <code>&lt;nav&gt;</code> blank for now. </p>
+
+  <ul>
+    <li>Add the main page heading and subheading to the header section.</li>
+    <li>Add a heading and a couple paragraphs to the About and Footer/Contact section.</li>
+  </ul>
+
+  <p>Your page will look similar to this: </p>
+
+  <p><img src="../assets/img/week1/text-only-example.png" alt="" /></p>
+
+  <p>Not sure what to write? Use placeholder text.  </p>
+
+  <p><a href="http://meettheipsums.com">http://meettheipsums.com</a><br />
+<a href="http://thewireipsum.com">http://thewireipsum.com</a>  </p>
+</blockquote>
+
+<h2 id="self-closing-tags">Self-closing tags</h2>
+
+<p>Self-closing tags don’t format content. Instead they are used to embed objects onto the page; they <em>are</em> the content. Because of this, they do not require a closing tag.</p>
+
+<p>Two self common self-closing tags are the line break (<code>&lt;br&gt;</code>) and horizontal rule (<code>&lt;hr&gt;</code>).</p>
+
+<pre><code>&lt;p&gt;Paragraph with a line break,&lt;br&gt; this is on a new line.&lt;/p&gt;
+&lt;p&gt;Another paragraph.&lt;/p&gt;
+&lt;hr&gt;
+</code></pre>
+
+<p>The above code will look like this in the browser: </p>
+
+<p>[ add example style ]</p>
+
+<div class="example">
+  <p>This part of the sentence is on the first line <br />this is on a new line.</p>
+  <p>Another paragraph.</p>
+  <hr />
+</div>
+
+<p>Prior to HTML5, self-closing tags had to actually self-close by including a forward slash like this:</p>
+
+<pre><code>&lt;br/&gt;
+&lt;hr/&gt;
+</code></pre>
+
+<p>Though this is still considered valid in HTML5, it is <strong>no longer needed</strong>.</p>
+
+<h3 id="images">Images</h3>
+
+<p>Images are another example of a self-closing tag. It also requires a <code>src</code> <em>attribute</em> to tell the browser the location of the image file.</p>
+
+<pre><code>&lt;img src="path/to/image/file"&gt;
+</code></pre>
+
+<p>The <code>alt</code> attribute should be added to the image tag to provide <em>alternative information</em> for visually impaired visitors using screen readers or if the images are disabled or unable to load.  This is highly recommended for your HTML to be valid and for accessibility.</p>
+
+<p>The <code>title</code> attribute is optional and can be added to provide additional information: it should be relevant and concise.  The content of this attribute will show as as a “tool tip” when you hover over the image.</p>
+
+<pre><code>&lt;img src="http://placekitten.com/g/200/300" alt="kitten" title="kitten image from http://placekitten.com"&gt;
+</code></pre>
+
+<p><img src="http://placekitten.com/g/200/300" alt="kitten" title="kitten image from http://placekitten.com" /></p>
+
+<p>More about <code>alt</code>, <code>title</code> and SEO (search engine optimization) <a href="http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/">here</a>.</p>
+
+<h3 id="image-file-types">Image file types</h3>
+
+<p>There are many different file types used for web. Each type is best suited for specific kinds of images. Use the format that maintains the best quality while reducing the file size.</p>
+
+<p><strong>jpg</strong> - used for photographs with lots of rich colours or gradients<br />
+<strong>png</strong> - used for images with transparent or opaque backgrounds<br />
+<strong>gif</strong> - used for images with minimal colour variation and of course, for animated gifs!</p>
+
+<iframe src="https://giphy.com/embed/n0WvhHFTpihk4" width="500" height="285" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p><strong>svg</strong> - used for 2D graphics and is scalable. Based on XML and can be used as a image file or as HTML. When included as HTML, CSS can be used to style the svg!</p>
+
+<p>While not required, it’s best practice and common to put image files into its own folder (as well as CSS and JavaScript files) to keep your project directory organized.</p>
+
+<h4 id="extra-resource">Extra resource</h4>
+
+<p>If your file extensions do not show by default, here are instructions for <a href="https://support.apple.com/kb/PH19072?locale=en_US">Mac</a> and for <a href="http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7">Windows</a>.</p>
+
+<h4 id="image-resources">Image resources</h4>
+
+<ul>
+  <li>list of <a href="http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/">image placeholder sites</a></li>
+  <li>free stock photos <a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">here</a> and <a href="http://blog.hubspot.com/marketing/free-stock-photos">here</a></li>
+  <li>more about SVG: <a href="http://css-tricks.com/using-svg/">http://css-tricks.com/using-svg/</a></li>
+</ul>
+
+<h2 id="links--anchor-tag">Links / Anchor tag</h2>
+
+<p>Links (hyperlinks) are represented by the anchor tag, <code>&lt;a&gt;</code>. It also needs an <code>href</code> attribute to provide information for where the link should go.</p>
+
+<h4 id="link-to-an-external-site">Link to an external site</h4>
+
+<pre><code>&lt;a href="http://ladieslearningcode.com"&gt;Ladies Learning Code&lt;/a&gt;
+</code></pre>
+
+<h4 id="link-to-other-html-pages">Link to other HTML pages</h4>
+
+<pre><code>&lt;a href="page-name.html"&gt;Another page&lt;/a&gt;
+</code></pre>
+
+<h4 id="link-to-a-specific-spot-on-a-page">Link to a specific spot on a page</h4>
+
+<p>Add an <code>id</code> <em>attribute</em> to the tag where you would like the link to go to. In the <code>href</code> <em>attribute</em> value, use the <code>#</code> symbol followed by the id name, with no spaces.</p>
+
+<pre><code>&lt;a href="#linkSpot"&gt;Click this link to navigate to a spot on the page&lt;/a&gt;
+&lt;p&gt;Content in between.&lt;/p&gt;
+&lt;p&gt;More content.&lt;/p&gt;
+&lt;p&gt;More content.&lt;/p&gt;
+&lt;p&gt;More content.&lt;/p&gt;
+&lt;p id="linkSpot"&gt;This where you want the link to go TO.&lt;/p&gt;
+</code></pre>
+
+<h4 id="link-to-a-specific-spot-on-another-page">Link to a specific spot on another page</h4>
+
+<pre><code>&lt;a href="about.html#linkSpot"&gt;Click this link to navigate to a spot on the page&lt;/a&gt;
+</code></pre>
+
+<h4 id="set-link-to-open-in-a-new-window">Set link to open in a new window</h4>
+<p>Add a second attribute, <code>target="_blank"</code>. When using multiple attributes, make sure to include a space <em>between</em> the attributes.</p>
+
+<pre><code>&lt;a href="http://ladieslearningcode.com" target="_blank"&gt;Ladies Learning Code&lt;/a&gt;
+</code></pre>
+
+<h4 id="set-an-email-link">Set an email link</h4>
+
+<pre><code>&lt;a href="mailto:hello@myemail.com"&gt;hello@myemail.com&lt;/a&gt;
+</code></pre>
+
+<h2 id="folder-structure-relative--absolute-paths">Folder Structure, Relative &amp; Absolute Paths</h2>
+
+<p>A website is basically a variety of files linked together.
+Understanding the folder structure &amp; using proper file
+naming techniques will ensure that these linked files are
+not “broken.”</p>
+
+<p>Example of a basic folder structure:</p>
+
+<p><img src="../assets/img/week1/file-path.jpg" alt="" /></p>
+
+<p><strong>the-cupcakery</strong> is the <em>root</em> folder.  </p>
+
+<h3 id="relative-path">Relative Path</h3>
+
+<p>Points to files located in the project files (not an external source like placekitten.com). The HTML file that contains the link is the <em>starting point</em> to find your source.</p>
+
+<p>Using the above example to link from <strong>index.html</strong> to <strong>menu.html</strong>, the <code>href</code> value will look like this:</p>
+
+<pre><code>&lt;a href="menu.html"&gt;Menu&lt;/a&gt;
+</code></pre>
+
+<p>The <code>src</code> value for an image in the image folder: </p>
+
+<pre><code>&lt;img src="images/cupcakes.png"&gt;
+</code></pre>
+
+<h3 id="absolute-path">Absolute Path</h3>
+
+<p>Uses the exact address including domain, subdirectories and filename. Use this option when linking to an external or <em>hosted</em> source.</p>
+
+<pre><code>&lt;a href="http://ladieslearningcode.com/"&gt;Ladies Learning Code&lt;/a&gt;
+</code></pre>
+
+<p>Only link to web pages, not specific files such as images (unless it points to your own server). This would be considered <em>hotlinking</em>.</p>
+
+<pre><code>&lt;a href="http://ladieslearningcode.com/imagefile.jpg"&gt;Hotlinking an image. No!&lt;/a&gt;
+</code></pre>
+
+<blockquote>
+  <h2 id="exercise">Exercise</h2>
+
+  <ol>
+    <li>add links to the <code>&lt;nav&gt;</code> block to link to the About and Footer of the page</li>
+    <li>add some images, like a profile image to the About section</li>
+    <li>update the copy to reflect your bio and contact info</li>
+  </ol>
+
+  <p><strong>Bonus:</strong>  For the email link, how do you set a default subject line?</p>
+
+  <p>See example <a href="../examples/week1-1.html">here</a>.</p>
+</blockquote>
+
+<p>~ End ~</p>
+
+
+      </section>
+    </main>
+
+      <footer>
+    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook Group: <a href=""></a></li>
+      <li>Slack Group: <a href=""></a></li>
+    </ul>
+  </footer>
+
+
+    
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+    <script src="../../assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+  </body>
+</html>
