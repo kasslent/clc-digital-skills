@@ -8,7 +8,7 @@ class: home
     <ul>
       {% for lesson in site.lessons %} 
       <li>
-        <a href="{{ lesson.url}}">{{ lesson.title }}</a> - {{ lesson.description }}
+        <a href="{{site.baseurl}}{{ lesson.url}}">{{ lesson.title }}</a> - {{ lesson.description }}
       </li>
       {% endfor %}
     </ul>
