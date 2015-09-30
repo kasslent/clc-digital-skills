@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat-Regular"), url(../assets/fonts/montserrat-regular.woff2) format("woff2"); }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat-Bold"), url(../assets/fonts/montserrat-bold.woff2) format("woff2"); }
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pacifico Regular"), local("Pacifico-Regular"), url(../assets/fonts/pacifico.woff2) format("woff2"); }
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url(../assets/fonts/quicksand.woff2) format("woff2"); }
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #808080;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  color: #333; }
+
+a {
+  color: #b109aa;
+  text-decoration: none; }
+  a:hover {
+    color: #1a1a1a;
+    text-decoration: underline; }
+
+blockquote {
+  border: 2px solid #eaefec;
+  padding: 0 20px;
+  margin: 0; }
+  blockquote ul {
+    padding-left: 20px; }
+
+header {
+  background: #1a1a1a;
+  padding: 40px; }
+  header h1 {
+    font-family: "Quicksand", Helvetica, Arial, sans-serif;
+    margin: 0; }
+  header h2 {
+    color: white;
+    margin: -15px 0 0 44px; }
+
+main,
+footer {
+  padding: 40px 85px; }
+
+footer {
+  border-top: 1px solid #eaefec;
+  font-size: 1.44rem; }
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+
+.table-of-contents {
+  float: right;
+  background-color: #eaefec;
+  padding: 30px;
+  border-radius: 8px;
+  width: 30%;
+  font-size: 1.44rem; }
+  .table-of-contents p {
+    margin: 10px 0 4px;
+    text-transform: uppercase; }
+  .table-of-contents ul {
+    padding-left: 20px;
+    margin: -0; }
+  .table-of-contents.fixed {
+    position: fixed;
+    top: 40px;
+    right: 84px;
+    width: 26%; }
+
+section {
+  max-width: 66%; }

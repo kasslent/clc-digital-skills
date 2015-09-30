@@ -1,0 +1,15 @@
+---
+layout: default
+class: home
+---
+
+  <section>
+    <h1>Lessons</h1>
+    <ul>
+      {% for lesson in site.lessons %} 
+      <li>
+        <a href="{{site.baseurl}}{{ lesson.url}}">{{ lesson.title }}</a> - {{ lesson.description }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>

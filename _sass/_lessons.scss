@@ -1,0 +1,26 @@
+.table-of-contents {
+  float: right;
+  background-color: $gray-lighter;
+  padding: 30px;
+  border-radius: 8px;
+  width: 30%;
+  font-size: $small-font-size;
+  
+  p {
+    margin: 10px 0 4px;
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 20px;
+    margin: -0;
+  }
+  &.fixed {
+    position: fixed;
+    top: 40px;
+    right: 84px;
+    width: 26%;
+  }
+}
+section {
+  max-width: 66%;
+}
