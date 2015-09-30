@@ -1,6 +1,13 @@
 //------------------------------
 // GLOBAL STYLES
 //------------------------------
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html {
   font-size: 62.5%;
@@ -28,6 +35,15 @@ a {
     text-decoration: underline;
   }
 }
+blockquote {
+  border: 2px solid $gray-lighter;
+  padding: 0 20px;
+  margin: 0;
+  
+  ul {
+    padding-left: 20px;
+  }
+}
 header {
   background: $gray-darkest;
   padding: 40px;
@@ -43,7 +59,7 @@ header {
 }
 main,
 footer {
-  padding: 20px 84px;
+  padding: 40px 85px;
 }
 footer {
   border-top: 1px solid $gray-lighter;
