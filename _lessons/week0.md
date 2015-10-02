@@ -2,13 +2,30 @@
 layout: lessons
 week: 0
 lesson: 0
-description: Tips & cheat sheets
+description: Tips, Recommendations & Cheatsheets
 ---
 
 
 #Welcome to Ladies Learning Code's Digital Skills Program!
 
 Below are some tips and tricks to get you up and running and help with your work flow for the remainder of this course and get you ready!
+
+##Keyboard shortcuts
+
+Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. Here are some recommended commonly used shortcuts to get to know!
+
+* copy, cut & copy, paste
+* creating new files and saving files
+* switching between open applications
+* refreshing the browser
+
+Some other useful general computer tricks:
+
+* right-clicking or a two-finger tap in an application often reveals more options
+* use the space bar & keyboard arrows to scroll
+
+View printable cheatsheet [here](../../assets/keyboard-shortcuts.pdf).
+
 
 ##Web Browsers & Developer Tools
 
@@ -25,8 +42,11 @@ Click the menu <span class="menu-icon">![](../../assets/img/menu-icon.png)</span
 **Option 3:**  
 Keyboard shortcut: **CTRL + Shift + I** (PC) or **CMD + Option + I** (Mac).
 
-> In Chrome or Firefox, open the dev tools and experiment!  
-> HTML is display on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+In this course and in any examples, Chrome will be referenced for consistency.
+
+> In your browser, open the dev tools and experiment!  
+> HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+
 
 ###Extra resources
   
@@ -41,40 +61,45 @@ Keyboard shortcut: **CTRL + Shift + I** (PC) or **CMD + Option + I** (Mac).
 
 Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Brackets](http://brackets.io), [Sublime Text](http://www.sublimetext.com/), and [Atom](https://atom.io/).
 
-Some packages and plugins to note:
+In this course and in any examples, Atom will be referenced for consistency.
 
-* [Emmet](http://emmet.io/download/) (coding shorcuts)
-* [Themes](https://atom.io/themes) for Atom
-
-
-##Get to know your editor
+###Get to know Atom
 
 Having a good text editor and learning how to use it to its full potential will definitely help your work flow.  We'll be using [Atom](http://atom.io) during this program because it has some great integrated features and is totally free!
 
-###Find in Files / Projects
 
-[to add instructions and maybe screenshots]
+Here's a few handy settings and feature to familiarize yourself with:
 
-- spellcheck
-- wordwrap
-- columns/panes
-- sidebar
-- emmet?
+- wordwrap 
+- using columns (called "panes" in Atom)
+- find on page, or in files
+- show/hide sidebar
 
-##Keyboard shortcuts
-
-[to add instructions and maybe screenshots]
-
-- space bar & arrows to scroll
-- common shortcuts that work on many apps:  bold, underline, etc
-
-##Workflow tips
-- pinned tabs in browsers
-- tools? Evernote, todoist, workflowy
+###Extra resources
+* [Atom documenation](https://atom.io/docs)
+* [Atom Shortcuts cheat sheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+* [Themes](https://atom.io/themes) for Atom
+* [Emmet](http://emmet.io/download/) - shorcuts for HTML & CSS
+* [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
 
 
-##References & cheat sheets
+<!-- ##References
 
-- stuff
-- stuff
-- stuff
+- [Stack Overflow](http://stackoverflow.com)
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web)
+- [caniuse.com](http://caniuse.com)
+- [HTML5Doctor](http://html5doctor.com) -->
+
+##Using Slack 
+Slack can be used in the browser but there are also desktop and mobile apps. Download them [here](https://slack.com/apps).
+
+Some things to explore:
+
+- adding several Slack groups
+- enabling/disabling notifications
+- joining different rooms and private chats
+
+Take the tour [here](https://slack.com/is).
+
+
+

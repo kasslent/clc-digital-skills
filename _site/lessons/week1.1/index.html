@@ -16,13 +16,19 @@
   <link rel="canonical" href=" /llc-digital-skills/lessons/week1.1/">
   <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
 </head>
 
   <body class="">
       <header>
     <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
     <h2>Digital Skills Program</h2>
-    <a class="back" href="/llc-digital-skills/index.html">Home</a>
+    <nav>
+      <a class="back" href="/llc-digital-skills/index.html">Home</a>
+      <a href="digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
   </header>
 
 
@@ -50,9 +56,9 @@ Many websites are created to be mobile friendly and many native apps will also h
 
 <h3 id="front-end--client-side">Front-end &amp; client-side</h3>
 
-<p><strong>HTML</strong> (Hypertext Markup Language) is a markup language and defines structure and content. </p>
+<p><strong>HTML</strong> (Hypertext Markup Language) is a markup language and defines structure and content.</p>
 
-<p><strong>CSS</strong> (Cascading Style Sheet) is a style sheet language responsible for presentation. </p>
+<p><strong>CSS</strong> (Cascading Style Sheet) is a style sheet language responsible for presentation.</p>
 
 <p><strong>JavaScript</strong> is a programming language and controls the behavior and interactions.</p>
 
@@ -101,7 +107,7 @@ same language. With each new version, new features and rules are added while oth
       <li><strong>about.html</strong> instead of <strong>About.html</strong> or <strong>ABOUT.html</strong></li>
     </ul>
   </li>
-  <li>Avoid s p a c e s. Use underscores (<code>_</code>) or dashes (<code>-</code>). 
+  <li>Avoid s p a c e s. Use underscores (<code>_</code>) or dashes (<code>-</code>).
     <ul>
       <li>Note that <a href="http://searchengineland.com/9-seo-quirks-you-should-be-aware-of-146465">dashes are preferred for SEO</a> (search engine optimization).</li>
       <li><strong>business-hours.html</strong> instead of <strong>business hours.html</strong></li>
@@ -314,7 +320,7 @@ Also known as the <em>viewport</em>.</p>
 <blockquote>
   <ul>
     <li>Add all of the basic HTML tags to your <strong>index.html</strong> file. (show shortcut?)</li>
-    <li>Add a page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag.  </li>
+    <li>Add a page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag.</li>
   </ul>
 
   <p>Check your updates in the browser.  Where you do you see the <code>title</code>?</p>
@@ -324,7 +330,7 @@ Also known as the <em>viewport</em>.</p>
 
 <p>An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with semantic markup is a good way to start.</p>
 
-<p>It’s like building a house. You start with a blueprint and frame before putting up walls and painting. If you don’t have a design to work from, a simple sketch also works. </p>
+<p>It’s like building a house. You start with a blueprint and frame before putting up walls and painting. If you don’t have a design to work from, a simple sketch also works.</p>
 
 <p>There are many HTML tags for creating the page structure.</p>
 
@@ -336,7 +342,7 @@ Also known as the <em>viewport</em>.</p>
 
 <p>The <code>&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code>&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements together for styling.</p>
 
-<p><code>&lt;div&gt;</code> tags are often used with the <code>class</code> attribute to differentiate them (more on class later). </p>
+<p><code>&lt;div&gt;</code> tags are often used with the <code>class</code> attribute to differentiate them (more on class later).</p>
 
 <p>To create the page layout, the HTML could look something like this:</p>
 
@@ -399,7 +405,7 @@ Also known as the <em>viewport</em>.</p>
 
 <h3 id="headings">Headings</h3>
 
-<p>There are six headings tags (not to be confused with the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure. </p>
+<p>There are six headings tags (not to be confused with the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure.</p>
 
 <p>To decide which heading to use, think about how you would arrange an essay outline.</p>
 
@@ -484,21 +490,21 @@ Also known as the <em>viewport</em>.</p>
 <blockquote>
   <h4 id="add-some-content">Add some content</h4>
 
-  <p>Back in your <strong>index.html</strong>, add some content using the appropriate headings and paragraphs.  Leave the <code>&lt;nav&gt;</code> blank for now. </p>
+  <p>Back in your <strong>index.html</strong>, add some content using the appropriate headings and paragraphs.  Leave the <code>&lt;nav&gt;</code> blank for now.</p>
 
   <ul>
     <li>Add the main page heading and subheading to the header section.</li>
     <li>Add a heading and a couple paragraphs to the About and Footer/Contact section.</li>
   </ul>
 
-  <p>Your page will look similar to this: </p>
+  <p>Your page will look similar to this:</p>
 
   <p><img src="../assets/img/week1/text-only-example.png" alt="" /></p>
 
-  <p>Not sure what to write? Use placeholder text.  </p>
+  <p>Not sure what to write? Use placeholder text.</p>
 
   <p><a href="http://meettheipsums.com">http://meettheipsums.com</a><br />
-<a href="http://thewireipsum.com">http://thewireipsum.com</a>  </p>
+<a href="http://thewireipsum.com">http://thewireipsum.com</a></p>
 </blockquote>
 
 <h2 id="self-closing-tags">Self-closing tags</h2>
@@ -512,7 +518,7 @@ Also known as the <em>viewport</em>.</p>
 &lt;hr&gt;
 </code></pre>
 
-<p>The above code will look like this in the browser: </p>
+<p>The above code will look like this in the browser:</p>
 
 <p>[ add example style ]</p>
 
@@ -627,7 +633,7 @@ not “broken.”</p>
 
 <p><img src="../assets/img/week1/file-path.jpg" alt="" /></p>
 
-<p><strong>the-cupcakery</strong> is the <em>root</em> folder.  </p>
+<p><strong>the-cupcakery</strong> is the <em>root</em> folder.</p>
 
 <h3 id="relative-path">Relative Path</h3>
 
@@ -638,7 +644,7 @@ not “broken.”</p>
 <pre><code>&lt;a href="menu.html"&gt;Menu&lt;/a&gt;
 </code></pre>
 
-<p>The <code>src</code> value for an image in the image folder: </p>
+<p>The <code>src</code> value for an image in the image folder:</p>
 
 <pre><code>&lt;img src="images/cupcakes.png"&gt;
 </code></pre>
@@ -680,8 +686,7 @@ not “broken.”</p>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
-      <li>Facebook Group: <a href=""></a></li>
-      <li>Slack Group: <a href=""></a></li>
+      <li>Facebook: <a href="fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
   </footer>
 
