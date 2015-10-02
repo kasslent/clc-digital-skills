@@ -21,7 +21,7 @@
   &.fixed {
     position: fixed;
     top: 40px;
-    right: 84px;
+    right: 85px;
     width: 22.5%;
   }
 }
@@ -32,7 +32,10 @@ section {
     margin-top: 70px;
   }
   h3 {
-    margin: 35px 0 0;
+    margin-top: 35px;
+  }
+  h3, h4 {
+    margin-bottom: 0;
     
     + ul {
       margin-top: 4px;

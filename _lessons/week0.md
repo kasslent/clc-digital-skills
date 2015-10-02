@@ -70,10 +70,25 @@ Having a good text editor and learning how to use it to its full potential will 
 
 Here's a few handy settings and feature to familiarize yourself with:
 
-- wordwrap 
-- using columns (called "panes" in Atom)
-- find on page, or in files
-- show/hide sidebar
+####Soft wrap
+
+* wraps the code in the editor to a custom width or width of your editor  
+`Atom > Preferences > Settings`
+
+####Columns
+
+* called "panes" in Atom  
+`View > Panes`
+* can add multiple columns within the editor to allow for side by side editing
+
+####Find & Replace
+* find keywords on a single file  
+`Find > Find in Buffer`
+* find keywords in multiple files in an entire folder  
+`Find > Find in Project`
+* can also find *and* replace  
+* more search options found under `Find`
+
 
 ###Extra resources
 * [Atom documenation](https://atom.io/docs)
