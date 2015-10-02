@@ -6,7 +6,7 @@ $(function(){
   
   
   // Table of Contents
-  var ToC = "<p>On this page</p><ul>";
+  var ToC = "<ul>";
   var newLine, el, title, link;
 
   $("main h2").each(function() {

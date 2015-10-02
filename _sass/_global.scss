@@ -1,6 +1,7 @@
 //------------------------------
 // GLOBAL STYLES
 //------------------------------
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -15,10 +16,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  color: $base-font-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $font-color-base;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
 }
@@ -38,23 +39,42 @@ a {
 blockquote {
   border: 2px solid $gray-lighter;
   padding: 0 20px;
-  margin: 0;
-  
-  ul {
-    padding-left: 20px;
-  }
+  margin: 35px 0;
 }
+ul {
+  padding-left: 20px;
+}
+strong {
+  color: $gray-dark;
+}
+
+// Page components
 header {
   background: $gray-darkest;
-  padding: 40px;
+  padding: 40px 40px 10px;
   
   h1 {
-    font-family: $accent-font;
+    font-family: $font-size-base;
     margin: 0;
   }
   h2 {
     color: white;
     margin: -15px 0 0 44px;
+  }
+  .back {
+    text-transform: uppercase;
+    font-size: $font-size-sml;
+    margin: 30px 0 0 44px;
+    display: inline-block;
+    
+    &:hover {
+      color: white;
+    }
+  }
+  .home & {
+    padding-bottom: 40px;
+    
+    .back { display: none; }
   }
 }
 main,
@@ -63,7 +83,7 @@ footer {
 }
 footer {
   border-top: 1px solid $gray-lighter;
-  font-size: $small-font-size;
+  font-size: $font-size-sml;
   
   ul {
     list-style-type: none;

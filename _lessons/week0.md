@@ -1,26 +1,32 @@
 ---
 layout: lessons
-title: Week 0
+week: 0
+lesson: 0
 description: Tips & cheat sheets
 ---
 
 
-Welcome to Ladies Learning Code's Digital Skills Program! 
+#Welcome to Ladies Learning Code's Digital Skills Program!
 
-Below are some tips and tricks to get you up and running and help with your work flow for the remainder of this course.
+Below are some tips and tricks to get you up and running and help with your work flow for the remainder of this course and get you ready!
 
 ##Web Browsers & Developer Tools
 
-Choose a modern web browser that supports current web standards and dev tools for a better web experience.
+Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
 
-In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in other browsers), there are built-in
-**Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tools can be accessed in 3 ways:
+All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. In Chrome & Firefox, this tool can be accessed in 3 ways:
 
-* Option 1: right-click / two-finger tap on a web page and select **Inspect Element**  
-* Option 2: select the menu icon (top right hand corner) and select **Tools > Developer Tools**   
-* Option 3: keyboard shortcut: **CTRL + Shift + I** (PC) / **CMD + Option + I** (Mac)
+**Option 1:**  
+On any web page, right-click or two-finger tap anywhere and select **Inspect Element**.  
 
-> Open Chrome and try accessing the dev tools.
+**Option 2:**  
+Click the menu <span class="menu-icon">![](../../assets/img/menu-icon.png)</span> and select **More Tools > Developer Tools** (Chrome) or **Developer > Inspector** (Firefox).
+
+**Option 3:**  
+Keyboard shortcut: **CTRL + Shift + I** (PC) or **CMD + Option + I** (Mac).
+
+> In Chrome or Firefox, open the dev tools and experiment!  
+> HTML is display on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
 
 ###Extra resources
   
@@ -29,12 +35,17 @@ In [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) (and in ot
 
 ##Text Editors
 
-Text editors are used to write and edit code.
-
-* Default text editors come pre-installed on your computers -- Notepad (Windows) or TextEdit (Apple) but are pretty basic.
-* Lots of paid and free options that include useful features such as syntax colour highlighting, various preference settings and plug-ins for improving work flow.
+* Text editors are used to write and edit code.
+* Basic text editors come pre-installed on your computers &mdash; Notepad (Windows) or TextEdit (Apple) but don't have very many features.
+* There are many editors that include useful features such as syntax colour highlighting, preference settings, plug-ins and packages for improving work flow.
 
 Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [Brackets](http://brackets.io), [Sublime Text](http://www.sublimetext.com/), and [Atom](https://atom.io/).
+
+Some packages and plugins to note:
+
+* [Emmet](http://emmet.io/download/) (coding shorcuts)
+* [Themes](https://atom.io/themes) for Atom
+
 
 ##Get to know your editor
 

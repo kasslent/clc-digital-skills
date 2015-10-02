@@ -11,6 +11,7 @@ github_username: ladieslearningcode
 
 # Build settings
 markdown: kramdown
+style: debug
 collections:
   lessons:
     output: true

@@ -1,26 +1,47 @@
+//------------------------------
+// LESSON PLANS
+//------------------------------
+
 .table-of-contents {
   float: right;
   background-color: $gray-lighter;
-  padding: 30px;
+  padding: 20px 25px;
   border-radius: 8px;
-  width: 30%;
-  font-size: $small-font-size;
+  width: 26%;
+  font-size: $font-size-sml;
   
   p {
     margin: 10px 0 4px;
     text-transform: uppercase;
   }
   ul {
-    padding-left: 20px;
-    margin: -0;
+    padding-left: 16px;
+    margin: 0;
   }
   &.fixed {
     position: fixed;
     top: 40px;
     right: 84px;
-    width: 26%;
+    width: 22.5%;
   }
 }
 section {
   max-width: 66%;
+  
+  h2 {
+    margin-top: 70px;
+  }
+  h3 {
+    margin-bottom: 0;
+    
+    + ul {
+      margin-top: 4px;
+    }
+  }
+}
+
+// Lesson 0
+// -----------
+.menu-icon img {
+  height: 20px;
 }
