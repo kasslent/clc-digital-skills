@@ -62,7 +62,7 @@ header {
   }
   h2 {
     color: white;
-    margin: -15px 0 0 44px;
+    margin: 0 0 0 44px;
   }
   nav {
     margin-left: 44px;
@@ -78,11 +78,6 @@ header {
         text-decoration: none;
       }
     }
-  }
-  .home & {
-    padding-bottom: 40px;
-    
-    .back { display: none; }
   }
 }
 main,

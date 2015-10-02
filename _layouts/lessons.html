@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <body class="{{ page.class }}">
+
     {% include header.html %}
 
     <main role="main" data-main>
-      <nav role="navigation" class="table-of-contents" data-nav><p>Week {{ page.week }}, Lesson {{ page.lesson }}</p></nav>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <p>Week {{ page.week }}, Lesson {{ page.lesson }}</p>
+      </nav>
+      
       <section>
         {{ content }}
       </section>
     </main>
 
     {% include footer.html %}
-    
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
-    <script src="../../assets/js/jquery.waypoints.min.js"></script>
-    <script src="../../assets/js/custom.js"></script>
-  </body>
-</html>

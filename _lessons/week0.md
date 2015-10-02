@@ -3,6 +3,7 @@ layout: lessons
 week: 0
 lesson: 0
 description: Tips, Recommendations & Cheatsheets
+permalink: /week0/
 ---
 
 
@@ -24,7 +25,7 @@ Some other useful general computer tricks:
 * right-clicking or a two-finger tap in an application often reveals more options
 * use the space bar & keyboard arrows to scroll
 
-View printable cheatsheet [here](../../assets/keyboard-shortcuts.pdf).
+View printable cheatsheet [here]({{ site.baseurl }}/assets/keyboard-shortcuts.pdf).
 
 
 ##Web Browsers & Developer Tools
@@ -37,7 +38,7 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 On any web page, right-click or two-finger tap anywhere and select **Inspect Element**.  
 
 **Option 2:**  
-Click the menu <span class="menu-icon">![](../../assets/img/menu-icon.png)</span> and select **More Tools > Developer Tools** (Chrome) or **Developer > Inspector** (Firefox).
+Click the menu <span class="menu-icon">![]({{ site.baseurl }}/assets/img/menu-icon.png)</span> and select **More Tools > Developer Tools** (Chrome) or **Developer > Inspector** (Firefox).
 
 **Option 3:**  
 Keyboard shortcut: **CTRL + Shift + I** (PC) or **CMD + Option + I** (Mac).

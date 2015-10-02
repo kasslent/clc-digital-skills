@@ -5,7 +5,7 @@ $(function(){
 	$("[data-year]").text(currentYear);
   
   
-  // Table of Contents
+  // Table of Contents for lesson notes
   var ToC = "<ul>";
   var newLine, el, title, link;
 
@@ -27,7 +27,7 @@ $(function(){
   ToC +="</ul>";
   $(".table-of-contents").append(ToC);
   
-  
+  // fix table of contents on scroll
   var waypoints = $('[data-nav]').waypoint({
     handler: function(direction) {
       if(direction === "down") {
@@ -37,12 +37,15 @@ $(function(){
       }
     },
     offset: 40
-  })
+  });
   var waypoints = $('[data-main]').waypoint({
     handler: function(direction) {
       if(direction === "up") {
         $('[data-nav]').removeClass('fixed');
       }
     }
-  })
+  });
+  
+  // open external links in a new window
+  $("a[href^='http://'],a[href^='https://']").attr("target","_blank");
 });
