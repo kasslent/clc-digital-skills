@@ -54,8 +54,8 @@ blockquote {
   padding: 0 20px;
   margin: 35px 0; }
 
-ul {
-  padding-left: 20px; }
+ul, ol {
+  padding-left: 25px; }
 
 strong {
   color: #333;
@@ -118,10 +118,34 @@ section {
     margin-top: 70px; }
   section h3 {
     margin-top: 35px; }
-  section h3, section h4 {
+  section h4 {
     margin-bottom: 0; }
-    section h3 + ul, section h4 + ul {
+    section h4 + ul,
+    section h4 + p {
       margin-top: 4px; }
+  section img {
+    max-width: 100%; }
+  section pre {
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+
+blockquote h2 {
+  margin-top: 15px; }
+
+.example {
+  border: 1px solid #808080;
+  padding: 15px;
+  font-size: 1.2rem; }
+  .example h1, .example h2, .example h3 {
+    margin-top: 0; }
+  .example h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px; }
+  .example h2 {
+    font-size: 1.9rem; }
 
 .menu-icon img {
   height: 20px; }
+
+.example-img {
+  width: 50px; }
