@@ -48,7 +48,12 @@ strong {
   color: $gray-darker;
   font-weight: 300;
 }
-
+code {
+  color: $gray-darkest;
+}
+.clear {
+  clear: both;
+}
 
 // Page layout
 //---------------

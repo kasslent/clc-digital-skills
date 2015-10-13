@@ -6,6 +6,7 @@
 @import "fonts";
 @import "global";
 @import "lessons";
+@import "print";
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {

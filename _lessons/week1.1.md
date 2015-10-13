@@ -88,7 +88,7 @@ HTML5 is the latest version.
 
 HTML **tags** are used to create the web page structure are written with left `<` and right angled brackets `>` and a forward slash `/` for the closing tag.
 
-![keyboard keys]({{site.baseurl}}/assets/img/keyboard-html.png)
+<img src="{{site.baseurl}}/assets/img/keyboard-html.png" class="print-hide">
 
 Tags *usually* come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note that the closing tag has a forward slash (`/`).
 
@@ -136,7 +136,6 @@ Below are the base HTML tags that should be included in **all** HTML documents.
         <!-- (this is an HTML comment by the way) -->
       </body>
     </html>
-
 
 ###Attributes & HTML Comments
 
@@ -274,8 +273,7 @@ If you don't have a web design to work from, a simple hand sketch also works. Al
 
 For example, here is a simple wireframe for a basic web page. 
 
-![]({{site.baseurl}}/assets/img/wireframe-basic.jpg)
-
+<img class="print-wireframe" src="{{site.baseurl}}/assets/img/wireframe-basic.jpg">
 
 ### Grouping Elements
 
@@ -284,41 +282,36 @@ Structural tags and creating a page layout often involves grouping related conte
 The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>` is the other. More on this later.) It is used purely for grouping related elements into page sections to creating a page structure.
 
 To create the page layout, the HTML could look something like this:
-    
-![]({{site.baseurl}}/assets/img/wireframe-basic.jpg)
-    
+
+<img class="grouping-elements print-hide" src="{{site.baseurl}}/assets/img/wireframe-basic.jpg">
+
     <div>
       nav links here
     </div>
-
     <div>
       header content here
     </div>
-
     <div>
       about content here
     </div>
-
     <div>
       footer info here
     </div>
 
-###HTML5 Structural Elements
+
+<h3 class="clear">HTML5 Structural Elements</h3>
 
 HTML5 introduced new semantic tags to better describe blocks of content such as `<header>`, `<footer>`, `<nav>`, `<section>` and [many more](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png). Using HTML5 tags, the previous example could look like this instead:
 
     <nav>
       nav links here
     </nav>
-
     <header>
       header content here
     </header>
-
     <section>
       about content here
     </section>
-
     <footer>
       footer info here
     </footer>
@@ -551,7 +544,7 @@ There are many different file types used for web. Each type is best suited for s
 * **png** - used for images with transparent or opaque backgrounds  
 * **gif** - used for images with minimal colour variation and of course, for animated gifs!
 
-![Beyonce boss]({{site.baseurl}}/assets/img/bey-boss.gif)
+<img src="{{site.baseurl}}/assets/img/bey-boss.gif" class="print-hide">
 
 ####Extra resource
 

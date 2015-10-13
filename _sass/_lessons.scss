@@ -75,11 +75,37 @@ blockquote {
 }
 
 // Lesson 0
-// -----------
+// -------------
 .menu-icon img {
   height: 20px;
 }
 .example-img {
   width: 50px;
 }
+
+// Lesson 1-1
+// -------------
+code strong {
+  background: #ddd;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+
+  [class^="hljs-"]{
+    color: black;
+    font-weight: bold;
+  }
+}
+.grouping-elements {
+  float: left;
+  margin: 0 30px 40px 0;
+}
+
+
+
+
+
+
+
+
 
