@@ -415,7 +415,7 @@ Prior to the HTML5 rules, using only one `<h1>` was recommended per page.  With 
     <section>
       <h1>Conclusion</h1>
       <p>Final paragraph.</p>
-    </div>
+    </section>
 
 
 What about the `<header>` tag? Why not do this?
@@ -603,7 +603,7 @@ Add an `id` *attribute* to the tag where you would like the link to go *to*. In 
     <p>More content.</p>
     <p>More content.</p>
     
-    <p id="#go-here">This where you want the link to go TO.</p>
+    <p id="go-here">This where you want the link to go TO.</p>
 
 It can be used in any order and in any HTML tag.  The `id` and `href` value has to match.
 
