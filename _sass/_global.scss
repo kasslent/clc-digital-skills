@@ -50,6 +50,14 @@ strong {
 }
 code {
   color: $gray-darkest;
+  font-size: $font-size-base + 0.4;
+  
+  pre & {
+    font-size: $font-size-base;
+  }
+}
+hr {
+  border: none;
 }
 .clear {
   clear: both;

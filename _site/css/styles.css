@@ -62,7 +62,13 @@ strong {
   font-weight: 300; }
 
 code {
-  color: #1a1a1a; }
+  color: #1a1a1a;
+  font-size: 2rem; }
+  pre code {
+    font-size: 1.6rem; }
+
+hr {
+  border: none; }
 
 .clear {
   clear: both; }
@@ -226,6 +232,9 @@ code strong {
   pre {
     border: 1px solid #ccc;
     page-break-inside: avoid; }
+
+  code {
+    font-size: 10pt; }
 
   .hljs {
     font-size: 8pt; }
