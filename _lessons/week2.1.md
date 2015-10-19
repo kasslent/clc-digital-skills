@@ -2,8 +2,8 @@
 layout: lessons
 week: 2
 lesson: 1
-description: All about design
-permalink: /week2/1/
+description: All About Design
+permalink: /week2/lesson1/
 ---
 
 ##What is Design?

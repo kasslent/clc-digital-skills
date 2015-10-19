@@ -3,7 +3,7 @@ layout: lessons
 week: 1
 lesson: 1
 description: Intro to HTML
-permalink: /week1/1/
+permalink: /week1/lesson1/
 ---
 
 In 1989, Tim Berners-Lee, a physicist at CERN, began

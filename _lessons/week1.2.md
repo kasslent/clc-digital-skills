@@ -3,7 +3,7 @@ layout: lessons
 week: 1
 lesson: 2
 description: Intro to CSS
-permalink: /week1/2/
+permalink: /week1/lesson2/
 ---
 
 ##More text-based HTML tags
