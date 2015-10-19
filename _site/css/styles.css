@@ -62,8 +62,7 @@ strong {
   font-weight: 300; }
 
 code {
-  color: #1a1a1a;
-  font-size: 2rem; }
+  color: #1a1a1a; }
   pre code {
     font-size: 1.6rem; }
 
@@ -72,6 +71,17 @@ hr {
 
 .clear {
   clear: both; }
+
+.left {
+  float: left;
+  margin: 0 20px 20px 0; }
+
+.right {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+.full-width {
+  width: 100%; }
 
 header {
   background: #1a1a1a;
@@ -128,8 +138,10 @@ section {
   max-width: 66%; }
   section h2 {
     margin-top: 70px; }
+    section h2 + h3 {
+      margin-top: 30px; }
   section h3 {
-    margin-top: 35px; }
+    margin-top: 40px; }
   section h4 {
     margin-bottom: 0; }
     section h4 + ul,
@@ -175,12 +187,25 @@ code strong {
   float: left;
   margin: 0 30px 40px 0; }
 
+.type {
+  width: 200px;
+  margin-top: 10px; }
+
 .print-only {
   display: none; }
 
 @media print {
   .print-hide {
     display: none; }
+
+  .print-50 {
+    width: 46%; }
+
+  .print-30 {
+    width: 30%; }
+
+  .print-15 {
+    width: 15%; }
 
   @page {
     margin: 2cm; }

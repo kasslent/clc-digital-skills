@@ -47,5 +47,5 @@ $(function(){
   });
   
   // open external links in a new window
-  $("a[href^='http://'],a[href^='https://']").attr("target","_blank");
+  $("a[href^='http://'], a[href^='https://'], a[href^='/llc-digital-skills/assets/img/']").attr("target","_blank");
 });

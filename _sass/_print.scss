@@ -5,6 +5,15 @@
   .print-hide {
     display: none;
   }
+  .print-50 {
+    width: 46%;
+  }
+  .print-30 {
+    width: 30%;
+  }
+  .print-15 {
+    width: 15%;
+  }
   @page {
     margin: 2cm;
   }
