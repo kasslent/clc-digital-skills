@@ -27,6 +27,10 @@ $(function(){
   ToC +="</ul>";
   $(".table-of-contents").append(ToC);
   
+  $('[data-collapse]').on("click", function(){
+    $(this).parent().toggleClass("collapse");
+  });
+  
   // fix table of contents on scroll
   var waypoints = $('[data-nav]').waypoint({
     handler: function(direction) {

@@ -9,10 +9,12 @@
   border-radius: 8px;
   width: 26%;
   font-size: $font-size-sml;
+  position: relative;
   
   p {
     margin: 10px 0 4px;
     text-transform: uppercase;
+    color: $gray-darker;
   }
   ul {
     padding-left: 16px;
@@ -23,6 +25,30 @@
     top: 40px;
     right: 85px;
     width: 22.5%;
+  }
+  
+  .icon:before {
+    content: "\00D7"; /* x */
+    font-size: 25px;
+    color: $gray-darker;
+    position: absolute;
+    right: 14px;
+    top: 3px;
+  }
+  &.collapse {
+    width: 42px;
+    padding: 0px 10px 5px;
+    
+    p, ul {
+      display: none;
+    }
+    + section {
+      max-width: 85%;
+    }
+    .icon:before {
+      position: static;
+      content: "\2630"; /* 3 bar menu */
+    }
   }
 }
 section {
