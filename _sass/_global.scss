@@ -40,6 +40,12 @@ blockquote {
   border: 4px solid rgba($raspberry, 0.2);
   padding: 0 20px;
   margin: 35px 0;
+  
+  &.note {
+    font-size: $font-size-sml;
+    border-width: 1px;
+    margin: 20px 0px;
+  }
 }
 ul, ol {
   padding-left: 25px;

@@ -2,7 +2,7 @@
 layout: lessons
 week: 2
 lesson: 1
-description: All About Design
+description: Design Theory
 permalink: /week2/lesson1/
 ---
 
@@ -122,8 +122,8 @@ Save your images in one of the following compressed file formats to keep file si
 ###Image editors
 You will need an image editor tool to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular options but [Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
 
-In **Pixlr** (and in most image editors), use the crop tool in the toolbar to crop your images. 
- ![]({{site.baseurl}}/assets/img/week2/05-pxlr-crop.jpg) 
+<img src="{{site.baseurl}}/assets/img/week2/05-pxlr-crop.jpg" class="left"> In **Pixlr** (and in most image editors), use the crop tool in the toolbar to crop your images. 
+ 
 
 Then, go to **Image &rarr; Image Size...** to resize your images. Make sure “Constrain Proportions” is checked to maintain proper image proportions.
 
@@ -175,9 +175,9 @@ Most sans serif typefaces are monoweight, meaning the strokes of the letterform 
 
 <hr class="clear">
 
-Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes. Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs. 
-
-Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need. 
+<blockquote class="note">
+  <p>Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes. Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs. Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need.</p>
+</blockquote>
 
 
 <img class="left type print-15" src="{{site.baseurl}}/assets/img/week2/09-script.jpg">
@@ -189,7 +189,7 @@ Script typefaces appear as if handlettered with a calligraphy pen, brush or penc
 <hr class="clear">
 
 
-<img class="left type print-15" src="{{site.baseurl}}/assets/img/week2/10-display.jpg">
+<img class="left type print-15 decorative" src="{{site.baseurl}}/assets/img/week2/10-display.jpg">
 
 ###Decorative
 Decorative typefaces have the characteristic of being very distinct in their style. While not great for long blocks of text where their decorative style becomes all too consuming and unreadable, they can be great for decorative touches and add character to a design. Most decorative typefaces are one offs containing just one font file. 
@@ -239,18 +239,31 @@ Look for fonts that have a complete character set. Pay attention to the glyphs a
 
 ##Free vs. Premium Fonts
 
-There are thousands of fonts available and range in price from top quality high end fonts to free fonts. 
+There are thousands of fonts available. They can range in price from top quality high end fonts to free fonts. 
 
-Free fonts can be sufficient for your project, but good quality free fonts can be hard to find. Look for fonts that have are a true font family with a complete character set. Most free fonts are limited in that they have only one, or two, styles.
+Free fonts:
 
-Premium fonts are typically better quality. They have a complete character set and multiple styles to choose from. Premium fonts have the added appeal of exclusivity, so if you’re looking for an elegant typeface that is unique, a premium font is the best way to go.
+* free, so no cost to use (sometimes free for personal use but need to be paid for commercial use)
+* hard to find good quality free fonts
+* may have missing characters
+* limited in the number of styles (generally one or two styles)
+* are commonly used
 
-**Pay attention to your font license.** Most free fonts are free for personal use, but the moment you use it for client work or you make money with your website, it is considered commercial use and you must pay a licensing fee to use that font.
+Premium fonts:
+
+* costly; prices vary
+* typically better quality and elegantly designed
+* have a complete character set
+* usually have multiple styles
+* exclusive and unique
 
 ####Font Resources
 
 * Google Fonts is a great source of quality free fonts for the web - <https://www.google.com/fonts>
 * Google Font pairing resource - <http://femmebot.github.io/google-type/> 
+* Typekit is a Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <http://typekit.com/>
+* Fonts.com has a wide library of premium fonts to choose from including a web font delivery service - <http://www.fonts.com/>
+* Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
 
 
 >##EXERCISE: Choosing fonts
