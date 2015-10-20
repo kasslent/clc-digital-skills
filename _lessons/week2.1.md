@@ -74,11 +74,11 @@ The most common grid structure is a 12 column grid because it can divide easily 
 
 [Brian’s website]({{site.baseurl}}/assets/img/week2/01-grid-bg.jpg) uses a 10 column grid for his main content with a 1 column padding on either side.
 
-[Lotta’s website]({{site.baseurl}}/assets/img/week2/02-grid-fs.jpg) uses a 3 column grid for her portfolio page. Notice that her [About]({{site.baseurl}}/assets/img/week2/03-grid-jsm.jpg) page content is divided into a 4 column grid.
+[Lotta’s website]({{site.baseurl}}/assets/img/week2/04-grid-lna.jpg) uses a 3 column grid for her portfolio page. Notice that her [About]({{site.baseurl}}/assets/img/week2/04-grid-ln.jpg) page content is divided into a 4 column grid.
 
-[Jason’s website]({{site.baseurl}}/assets/img/week2/04-grid-ln.jpg) uses a 11 column grid for his main content ( some of which is divided further) with a designated left column dates.
+[Jason’s website]({{site.baseurl}}/assets/img/week2/03-grid-jsm.jpg) uses a 11 column grid for his main content ( some of which is divided further) with a designated left column dates.
 
-The [Food Sense Blog website]({{site.baseurl}}/assets/img/week2/04-grid-lna.jpg) uses the 12 column grid to organize their content in different ways. A 2 column wide area on the left is designated for the logo and navigation. While the main content is divided into 1 large area as well as 4 smaller columns.
+The [Food Sense Blog website]({{site.baseurl}}/assets/img/week2/02-grid-fs.jpg) uses the 12 column grid to organize their content in different ways. A 2 column wide area on the left is designated for the logo and navigation. While the main content is divided into 1 large area as well as 4 smaller columns.
 
 ####Extra Resource
 
