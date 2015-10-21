@@ -27,6 +27,9 @@ html {
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 800px) {
+    html {
+      font-size: 55%; } }
 
 body {
   margin: 0;
@@ -64,6 +67,8 @@ ul, ol {
 strong {
   color: #333;
   font-weight: 300; }
+  strong code {
+    font-weight: 600; }
 
 code {
   color: #1a1a1a; }
@@ -110,6 +115,10 @@ header {
 main,
 footer {
   padding: 40px 85px; }
+  @media (max-width: 800px) {
+    main,
+    footer {
+      padding: 20px 40px; } }
 
 footer {
   border-top: 1px solid #eaefec;
@@ -127,6 +136,9 @@ footer {
   width: 26%;
   font-size: 1.32rem;
   position: relative; }
+  @media (max-width: 800px) {
+    .table-of-contents {
+      display: none; } }
   .table-of-contents p {
     margin: 10px 0 4px;
     text-transform: uppercase;
@@ -161,6 +173,9 @@ footer {
 
 section {
   max-width: 66%; }
+  @media (max-width: 800px) {
+    section {
+      max-width: 100%; } }
   section h2 {
     margin-top: 70px; }
     section h2 + h3 {
@@ -181,10 +196,13 @@ section {
 blockquote h2 {
   margin-top: 15px; }
 
+iframe {
+  margin-top: 20px; }
+
 .example {
   border: 1px solid #808080;
   padding: 15px;
-  font-size: 1.2rem; }
+  /* font-size: 1.2rem; */ }
   .example h1, .example h2, .example h3 {
     margin-top: 0; }
   .example h1 {

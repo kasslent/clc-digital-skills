@@ -1,0 +1,354 @@
+
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Ladies Learning Code</title>
+  <meta name="description" content="Enhance your digital and technology skills. Unleash your creative potential with our 7-week part-time program!
+">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <link rel="stylesheet" href="/llc-digital-skills/css/highlightjs/github.css">
+  <script src="/llc-digital-skills/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    
+  <link rel="stylesheet" href="/llc-digital-skills/css/styles.css">
+  <link rel="canonical" href=" /llc-digital-skills/week2/lesson2/">
+  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+</head>
+<body class="">
+  <header>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h2>Digital Skills Program</h2>
+    <nav>
+      <a href="/llc-digital-skills/">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Week 2, Lesson 2</h2>
+  </header>
+
+
+    <main role="main" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <p>Week 2, Lesson 2</p>
+      </nav>
+      
+      <section>
+        <h1 id="typography--css">Typography &amp; CSS</h1>
+
+<p>Last class we covered the role of typography in design.  Let’s go over how to implement these principles into your web pages using  various CSS properties.</p>
+
+<h2 id="color"><code>color</code></h2>
+
+<p>Use the <code>color</code> property to change the colour of your text. We talked about how to set the colour for background styles in <a href="/llc-digital-skills/week1/lesson2/#css-colours">Week 1</a>.  Use the same value types (hex, keyword or rgb) for this property as well.</p>
+
+<pre><code>/* all the same colour */
+body {
+  color: firebrick;
+  color: rgb(178,34,34);
+  color: #B22222;
+}
+</code></pre>
+
+<h2 id="font-weight--font-style">font-weight &amp; font-style</h2>
+
+<p>Remember, use HTML for <em>meaning</em> and CSS for <em>presentation</em>. It doesn’t matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!</p>
+
+<pre><code>font-weight: bold; /* makes text bold */
+font-weight: normal; /* removes bold style */
+</code></pre>
+
+<hr />
+<pre><code>font-style: italic; /* sets text to italic */
+font-style: normal; /* removes italic style */
+</code></pre>
+
+<h2 id="text--properties">text- properties</h2>
+
+<p>Note that when a CSS property accepts <code>inherit</code> as a value, it will inherit the style set in either the parent or nearest ancestor element. <code>none</code> usually removes the style defined by that property.</p>
+
+<p><strong><code>text-align</code></strong><br />
+Used for aligning text and accepts five values: <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code> and <code>inherit</code>.</p>
+
+<p><strong><code>text-decoration</code></strong> <br />
+Most commonly used to add or remove underlines but accepts these five values: <code>none</code>, <code>underline</code>, <code>overline</code>, <code>line-through</code> and <code>inherit</code></p>
+
+<p><strong><code>text-tranform</code></strong><br />
+Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase</code>, <code>lowercase</code> and <code>inherit</code>.</p>
+
+<ul>
+  <li><code>capitalize</code> capitalizes the first letter of each word</li>
+  <li><code>uppercase</code> value will capitalize every letter</li>
+  <li><code>lowercase</code> value will make every letter lowercase</li>
+</ul>
+
+<p data-height="290" data-theme-id="0" data-slug-hash="epybqM" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/epybqM/">text- properties</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+<blockquote class="note">
+<p><a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-codepen">Exercise: CodePen</h2>
+  <p>There are more typography related CSS properties but let’s try out the ones mentioned so far.</p>
+
+  <p>Use this example on <a href="http://codepen.io/learningcode/pen/yYpNej?editors=110">CodePen</a> to try out these properties.</p>
+</blockquote>
+
+<h2 id="length--measurement-units">Length / Measurement Units</h2>
+<p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
+
+<ul>
+  <li><strong>pixels</strong> (<code>px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
+    <ul>
+      <li>must use whole numbers (e.g. <code>12px</code>)</li>
+    </ul>
+  </li>
+  <li><strong>percentages</strong> (<code>%</code>) - useful for fluid and responsive layouts
+    <ul>
+      <li>can use any number (e.g. <code>20%</code>, <code>25.5%</code>)</li>
+    </ul>
+  </li>
+  <li><strong>ems</strong> (<code>em</code>) - originally a typographic measurement based on the letter “M”
+    <ul>
+      <li>relative unit, sizing is based on parent &amp; ancestor elements sizes</li>
+      <li>can use any number (e.g. <code>1em</code>, <code>1.275em</code>)</li>
+    </ul>
+  </li>
+  <li><strong>rems</strong> (<code>rem</code>)-  stands for “relative em”
+    <ul>
+      <li>relative unit like <code>em</code> but is only relative to the <em>root</em> element (<code>html</code> tag)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>By default, with no other CSS, here’s how these units compare to each other:</p>
+
+<pre><code>1em = 1rem = 16px = 100% 
+</code></pre>
+
+<p>There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.</p>
+
+<p>Let’s look at how <code>em</code> and <code>rem</code> works.</p>
+
+<p data-height="300" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="extra-resources">Extra resources</h4>
+
+<ul>
+  <li><a href="http://www.tutorialspoint.com/css/css_measurement_units.htm">CSS - Measurement Units</a></li>
+  <li><a href="http://www.w3.org/Style/Examples/007/units.en.html">W3C - Units of length: px, em, cm, etc.</a></li>
+  <li><a href="https://css-tricks.com/the-lengths-of-css/">CSS Tricks - Lengths of CSS</a></li>
+  <li><a href="http://www.sitepoint.com/understanding-and-using-rem-units-in-css/">Understanding and Using rem Units in CSS</a></li>
+</ul>
+
+<h2 id="font-size--line-height"><code>font-size</code> &amp; <code>line-height</code></h2>
+
+<p>The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively bigger or smaller based on their hierarchy.</p>
+
+<p>Use <code>font-size</code> to change the size and <code>line-height</code> to adjust the space <em>between</em> lines of text.</p>
+
+<p>You can use any of the measurement units to declare the <code>font-size</code>.  For <code>line-height</code>, this property actually does <em>not</em> require the use of measurement units and works better without it.</p>
+
+<pre><code>p {
+  font-size: 20px;
+  line-height: 25px; /* fixed size */
+}
+</code></pre>
+
+<hr />
+<pre><code>p {
+  font-size: 20px;
+  line-height: 1.5; /* relative to font-size */
+}
+</code></pre>
+
+<h2 id="text-shadow"><code>text-shadow</code></h2>
+
+<p>Use this property to apply a shadow to your text.</p>
+
+<pre><code>p { 
+  text-shadow: 2px 4px 1px red;
+}
+</code></pre>
+
+<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
+
+<ul>
+  <li>first value - x-coordinate, horizontal distance of the shadow
+    <ul>
+      <li>positive numbers places the shadow to the right</li>
+      <li>negative numbers places the shadow to the left</li>
+    </ul>
+  </li>
+  <li>second value - y-coordinate, vertical distance
+    <ul>
+      <li>positive numbers places the shadow below the text</li>
+      <li>negative numbers places the shadow above the text</li>
+    </ul>
+  </li>
+  <li>third value - blur radius (optional), the higher the number, the bigger the blur</li>
+  <li>fourth value - color of the shadow</li>
+</ul>
+
+<p>To use multiple text shadows, separate each grouping with a comma.</p>
+
+<pre><code>p { 
+  text-shadow: 1px 1px 1px #000, 
+               5px 5px 5px red; 
+}
+</code></pre>
+
+<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="font-family"><code>font-family</code></h2>
+
+<pre><code>body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</code></pre>
+
+<ul>
+  <li>used to declare the font for displaying text</li>
+  <li>best practice is to list at least 2 options</li>
+  <li>first font is the primary choice</li>
+  <li>alternative fonts are declared after, in order of preference and separated by a comma</li>
+  <li>font names with two or more words should be wrapped in quotation marks (single or double quotes)</li>
+  <li>last font should be the generic option</li>
+</ul>
+
+<h3 id="generic-fonts">Generic fonts</h3>
+
+<ul>
+  <li>sans-serif</li>
+  <li>serif</li>
+  <li>cursive - script fonts</li>
+  <li>fantasy - decorative fonts</li>
+  <li>monospace - fixed width fonts</li>
+</ul>
+
+<h3 id="web-safe-fonts">Web safe fonts</h3>
+
+<p>Pre-installed fonts on a given computer or device. Because not all operating systems have the same fonts installed, use a font <em>stack</em> to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="http://www.cssfontstack.com">cssfontstack.com</a> - list of web safe fonts</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/CSS/font-family">Mozilla Developer Network: font-family</a></li>
+</ul>
+
+<h2 id="custom-fonts-google-external-and-icon-fonts">Custom fonts (Google, External and Icon fonts)</h2>
+
+<h3 id="using-google-fonts">Using Google Fonts</h3>
+
+<p>You can link directly to the <a href="https://www.google.com/fonts">Google Fonts</a> CSS files, making the fonts available to your site visitors. This option relies on the CSS to include the fonts rather than system installed fonts.</p>
+
+<p>To use Google Fonts:</p>
+
+<p>Select the fonts you want to use and <strong>Add to Collection</strong>. <strong>Review</strong> to compare and try different options, then choose <strong>Use</strong> when ready.</p>
+
+<p>Some things to keep in mind when going through the Google <strong>Use</strong> options:</p>
+
+<ul>
+  <li>choose only the fonts &amp; font weights that you need to reduce page loading time</li>
+  <li>the default Latin character set is usually all that is required unless you are specifically writing in the other languages listed</li>
+  <li>to add the CSS file to your website:
+    <ul>
+      <li><strong>Standard</strong> HTML option (most common) - copy the <code>&lt;link&gt;</code> code snippet and add it the <code>&lt;head&gt;</code> of your page, <em>before your stylesheet</em></li>
+      <li><strong>import</strong> CSS option - add the import code to the very top of your CSS file</li>
+      <li>JavaScript option - this has specific usages, read more about it <a href="http://billpatrianakos.me/blog/2014/12/05/should-i-load-google-web-fonts-js-api-or-the-css-link/">here</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Now you can use these new fonts with the <code>font-family</code> property as normal, using the font name listed in the example on the Google Fonts page.</p>
+
+<p><img src="/llc-digital-skills/assets/img/week2/google-fonts.png" alt="" /></p>
+
+<h3 id="using-downloaded-fonts">Using Downloaded fonts</h3>
+
+<p>The <code>@font-face</code> CSS3 method can be used to embed and load fonts files.  Ensure these font files are saved in your folder directory.</p>
+
+<p><code>@font-face</code> must be declared in your CSS files first before you can use it.  If you are targeting modern browsers, this should provide enough browser support.</p>
+
+<pre><code>@font-face {
+  font-family: 'Font Name';
+  src: url('file-path/font-file.woff2') format('woff2'),
+       url('file-path/font-file.woff') format('woff');
+}
+</code></pre>
+
+<hr />
+<pre><code>font-family: 'Font Name', second-option, sans-serif;
+</code></pre>
+
+<p><strong>Pro tip!</strong> You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming coventions.</p>
+
+<h4 id="resources-1">Resources</h4>
+
+<ul>
+  <li><a href="https://css-tricks.com/snippets/css/using-font-face/">CSS Tricks</a> - more about <code>font-face</code> and older browser support</li>
+  <li><a href="http://www.fontsquirrel.com/">Font Squirrel</a> - free fonts for downloads and <code>@font-face</code> generator (for creating cross-browser font file types)</li>
+  <li><a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts: Getting Started</a></li>
+</ul>
+
+<h3 id="icon-fonts">Icon fonts</h3>
+<p>Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they <em>are</em> fonts!</p>
+
+<p>There’s many to choose from but <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
+
+<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  If using the CDN, remember to add the “http” to make it work when you run your page “locally” (on your computer).</p>
+
+<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and that’s it!</p>
+
+<h4 id="resources-2">Resources</h4>
+
+<ul>
+  <li><a href="https://css-tricks.com/html-for-icon-font-usage/">https://css-tricks.com/html-for-icon-font-usage/</a></li>
+  <li><a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></li>
+  <li><a href="http://reference.sitepoint.com/css/typography">http://reference.sitepoint.com/css/typography</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="exercise-typography">Exercise: Typography</h2>
+</blockquote>
+
+<p>Space</p>
+
+<p>padding margin width height</p>
+
+<p>dev tool exercise to help with class exercise
+(maybe intro to floats, inline-block)</p>
+
+<p>Colors review</p>
+
+
+      </section>
+    </main>
+
+      <footer>
+    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+  </footer>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/llc-digital-skills/assets/js/custom.js"></script>
+</body>
+</html>
+
+
