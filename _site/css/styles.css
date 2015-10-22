@@ -239,7 +239,8 @@ code strong {
   display: none; }
 
 @media print {
-  .print-hide {
+  .print-hide,
+  iframe {
     display: none; }
 
   .print-50 {

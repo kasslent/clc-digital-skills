@@ -308,7 +308,7 @@ Getting to know your browser dev tools will be super handy when tweaking styles 
 
 It's also useful for finding the correct css selectors faster than hunting through your files (or someone else's).
 
-![]({{site.baseurl}}/assets/img/week2/inspect-element-css.gif)
+<img src="{{site.baseurl}}/assets/img/week2/inspect-element-css.gif" class="print-hide">
 
 In Chrome, you can access the tools in 3 ways:
 
