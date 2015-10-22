@@ -178,6 +178,8 @@ section {
       max-width: 100%; } }
   section h2 {
     margin-top: 70px; }
+    section h2:first-child {
+      margin-top: 15px; }
     section h2 + h3 {
       margin-top: 30px; }
   section h3 {
@@ -192,9 +194,6 @@ section {
   section pre {
     white-space: pre-wrap;
     word-wrap: break-word; }
-
-blockquote h2 {
-  margin-top: 15px; }
 
 iframe {
   margin-top: 20px; }

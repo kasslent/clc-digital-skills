@@ -86,7 +86,7 @@ There are also other measurement units used for print and new experimental units
 
 Let's look at how `em` and `rem` works.
 
-<p data-height="300" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ####Extra resources
@@ -156,7 +156,7 @@ To use multiple text shadows, separate each grouping with a comma.
 * used to declare the font for displaying text 
 * best practice is to list at least 2 options
 * first font is the primary choice
-* alternative fonts are declared after, in order of preference and separated by a comma
+* alternative fonts are declared in order of preference and separated by a comma
 * font names with two or more words should be wrapped in quotation marks (single or double quotes)
 * last font should be the generic option
 
@@ -231,9 +231,17 @@ Icon fonts are an easy way to add imagery to your web page but still have the fl
 
 There's many to choose from but [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
 
-Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
+Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
 
-To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and that's it! 
+**Pro tip!** When using CDNs, they are sometimes listed like this:
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
 
 ####Resources
 
@@ -242,15 +250,89 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 * <http://reference.sitepoint.com/css/typography>
 
 >##Exercise: Typography
-
-Space
-
-padding margin width height
-
-dev tool exercise to help with class exercise
-(maybe intro to floats, inline-block)
+>Download the exercise file <a href="{{site.baseurl}}/exercises/week2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instuctions listed in the comments in the `<head>` of the page.
+>
+>**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it! (e.g. organized with the rest of your LLC project/exercise files)
 
 
+##Adding/Removing Space
 
-Colors review
+Using space is a key part in design to ensure that the content is easy to read, view, find and aesthically pleasing. Sometimes a few pixels can make all the difference!
 
+The browser looks at every HTML element on the page as a rectangular box. The CSS [Box Model](https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/) describes the way CSS styles the size and spacing of HTML elements.
+
+CSS uses 5 properties to determine the size and spacing of these boxes: width, height, padding, margin and border. Today, let's look at padding and margin. (We'll continue with these other properties in the next lesson.)
+
+###Padding
+
+The `padding` property adds/removes space *inside* of the element. It only accepts positive numerical values.
+
+Setting the padding to "0" will remove any default space on an HTML element. Any positive value will add space *inside* of the element.
+
+    /* longhand */
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+
+    /* shorthand */
+    padding: 2px 2px 2px 2px; /* top right bottom left */
+
+The shorthand technique can be shortened even further.
+
+    padding: 2px; /* same on all sides */
+    padding: 2px 10px; /* top & bottom, right & left */
+    padding: 2px 10px 5px; /* top, right & left, bottom */
+
+###Margin
+Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. Margin also accepts negative values.
+
+    /* longhand */
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+
+    /* shorthand */
+    margin: 2px; /* same on all sides */
+    margin: 2px 10px; /* top & bottom, right & left */
+    margin: 2px 10px 5px; /* top, right & left, bottom */
+    margin: 2px 2px 2px 2px; /* top right bottom left */
+
+<p data-height="268" data-theme-id="0" data-slug-hash="bVaymY" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/bVaymY/'>margin & padding</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+##Dev tools & designing in the browser
+
+Getting to know your browser dev tools will be super handy when tweaking styles on your web page.  You'll be able to try out different CSS styles right in the browser and see the changes update right away rather than flipping back and forth between your editor and browser.
+
+It's also useful for finding the correct css selectors faster than hunting through your files (or someone else's).
+
+![]({{site.baseurl}}/assets/img/week2/inspect-element-css.gif)
+
+In Chrome, you can access the tools in 3 ways:
+
+* **Option 1:** right-click / two-finger tap / Ctrl + click on any web page and select **Inspect Element** to open the console
+* **Option 2:** select the menu icon in the top right hand corner and select **More Tools > Developer Tools**
+* **Option 3:** keyboard shortcut: **Ctrl + Shift + I (PC)** / **Cmnd + Option + I (Mac)**
+
+> Pick your favorite website and try it out!
+
+> ##Exercise: Margin & Padding
+> Download the [exercise file]({{site.baseurl}}/exercises/week2/margin-padding.zip) (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!
+
+
+##Intro to form design
+
+When design a form, there are many things to consider such as:
+
+* space, padding and layout
+* icons and typography
+* simplicity & ease of use
+* displaying validation error
+* form steps and progress
+* primary and secondary buttons
+
+With these considerations in mind, let's look at some of the rules listed in this article, [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/).
+
+~ end ~

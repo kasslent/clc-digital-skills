@@ -138,7 +138,7 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
 
 <p>Let’s look at how <code>em</code> and <code>rem</code> works.</p>
 
-<p data-height="300" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <h4 id="extra-resources">Extra resources</h4>
@@ -221,7 +221,7 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
   <li>used to declare the font for displaying text</li>
   <li>best practice is to list at least 2 options</li>
   <li>first font is the primary choice</li>
-  <li>alternative fonts are declared after, in order of preference and separated by a comma</li>
+  <li>alternative fonts are declared in order of preference and separated by a comma</li>
   <li>font names with two or more words should be wrapped in quotation marks (single or double quotes)</li>
   <li>last font should be the generic option</li>
 </ul>
@@ -307,9 +307,19 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
 
 <p>There’s many to choose from but <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
 
-<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  If using the CDN, remember to add the “http” to make it work when you run your page “locally” (on your computer).</p>
+<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).</p>
 
-<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and that’s it!</p>
+<p><strong>Pro tip!</strong> When using CDNs, they are sometimes listed like this:</p>
+
+<pre><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
+
+<pre><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
 
 <h4 id="resources-2">Resources</h4>
 
@@ -321,17 +331,102 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
 
 <blockquote>
   <h2 id="exercise-typography">Exercise: Typography</h2>
+  <p>Download the exercise file <a href="/llc-digital-skills/exercises/week2/typography.html" download="">here</a>.  Open <strong>typography.html</strong> in your editor and follow the instuctions listed in the comments in the <code>&lt;head&gt;</code> of the page.</p>
+
+  <p><strong>Pro tip!</strong> Move this exercise file from your downloads folder and add it somewhere you can find it! (e.g. organized with the rest of your LLC project/exercise files)</p>
 </blockquote>
 
-<p>Space</p>
+<h2 id="addingremoving-space">Adding/Removing Space</h2>
 
-<p>padding margin width height</p>
+<p>Using space is a key part in design to ensure that the content is easy to read, view, find and aesthically pleasing. Sometimes a few pixels can make all the difference!</p>
 
-<p>dev tool exercise to help with class exercise
-(maybe intro to floats, inline-block)</p>
+<p>The browser looks at every HTML element on the page as a rectangular box. The CSS <a href="https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/">Box Model</a> describes the way CSS styles the size and spacing of HTML elements.</p>
 
-<p>Colors review</p>
+<p>CSS uses 5 properties to determine the size and spacing of these boxes: width, height, padding, margin and border. Today, let’s look at padding and margin. (We’ll continue with these other properties in the next lesson.)</p>
 
+<h3 id="padding">Padding</h3>
+
+<p>The <code>padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
+
+<p>Setting the padding to “0” will remove any default space on an HTML element. Any positive value will add space <em>inside</em> of the element.</p>
+
+<pre><code>/* longhand */
+padding-top: 2px;
+padding-right: 2px;
+padding-bottom: 2px;
+padding-left: 2px;
+
+/* shorthand */
+padding: 2px 2px 2px 2px; /* top right bottom left */
+</code></pre>
+
+<p>The shorthand technique can be shortened even further.</p>
+
+<pre><code>padding: 2px; /* same on all sides */
+padding: 2px 10px; /* top &amp; bottom, right &amp; left */
+padding: 2px 10px 5px; /* top, right &amp; left, bottom */
+</code></pre>
+
+<h3 id="margin">Margin</h3>
+<p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding. Margin also accepts negative values.</p>
+
+<pre><code>/* longhand */
+margin-top: 2px;
+margin-right: 2px;
+margin-bottom: 2px;
+margin-left: 2px;
+
+/* shorthand */
+margin: 2px; /* same on all sides */
+margin: 2px 10px; /* top &amp; bottom, right &amp; left */
+margin: 2px 10px 5px; /* top, right &amp; left, bottom */
+margin: 2px 2px 2px 2px; /* top right bottom left */
+</code></pre>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="bVaymY" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/bVaymY/">margin &amp; padding</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="dev-tools--designing-in-the-browser">Dev tools &amp; designing in the browser</h2>
+
+<p>Getting to know your browser dev tools will be super handy when tweaking styles on your web page.  You’ll be able to try out different CSS styles right in the browser and see the changes update right away rather than flipping back and forth between your editor and browser.</p>
+
+<p>It’s also useful for finding the correct css selectors faster than hunting through your files (or someone else’s).</p>
+
+<p><img src="/llc-digital-skills/assets/img/week2/inspect-element-css.gif" alt="" /></p>
+
+<p>In Chrome, you can access the tools in 3 ways:</p>
+
+<ul>
+  <li><strong>Option 1:</strong> right-click / two-finger tap / Ctrl + click on any web page and select <strong>Inspect Element</strong> to open the console</li>
+  <li><strong>Option 2:</strong> select the menu icon in the top right hand corner and select <strong>More Tools &gt; Developer Tools</strong></li>
+  <li><strong>Option 3:</strong> keyboard shortcut: <strong>Ctrl + Shift + I (PC)</strong> / <strong>Cmnd + Option + I (Mac)</strong></li>
+</ul>
+
+<blockquote>
+  <p>Pick your favorite website and try it out!</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-margin--padding">Exercise: Margin &amp; Padding</h2>
+  <p>Download the <a href="/llc-digital-skills/exercises/week2/margin-padding.zip">exercise file</a> (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!</p>
+</blockquote>
+
+<h2 id="intro-to-form-design">Intro to form design</h2>
+
+<p>When design a form, there are many things to consider such as:</p>
+
+<ul>
+  <li>space, padding and layout</li>
+  <li>icons and typography</li>
+  <li>simplicity &amp; ease of use</li>
+  <li>displaying validation error</li>
+  <li>form steps and progress</li>
+  <li>primary and secondary buttons</li>
+</ul>
+
+<p>With these considerations in mind, let’s look at some of the rules listed in this article, <a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a>.</p>
+
+<p>~ end ~</p>
 
       </section>
     </main>
