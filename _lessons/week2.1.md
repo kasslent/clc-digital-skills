@@ -6,6 +6,29 @@ description: Design Theory
 permalink: /week2/lesson1/
 ---
 
+
+##Brainstorming questions
+
+Here are some questions that can help you (or your clients) define your brand & goals for your website and business.  You don't have to have an answer for all of these questions but keeping these ideas in mind before starting the design process can help inform you decisions.
+
+*  Describe your business/service in a couple of sentences.
+*  What is the vision/mission for your business or the values that represent your business?
+*  Do you have/want a tagline or slogan? If so, what is it?
+*  Where and how will your logo be used? This may change and expand but for the foreseeable future. (ie. website, business cards, posters, stationary, packaging, tshirts, etc.)
+*  What should people think or feel when they see your brand?
+*  Use 5 adjectives to describe your brand's personality.
+*  What makes a design or brand good, in your opinion?
+*  Do you prefer typographic logos or ones with imagery?
+*  If your brand were a city, which city would it be and why?
+*  Please select one from each pair:
+    * Sans serif / Serif
+    * Cursive / Printed
+    * Soft / Bold
+    * Minimal / Ornate
+    * Bright / Muted
+    * Vintage / Modern
+    
+    
 ##What is Design?
 
 Design is problem solving. 
