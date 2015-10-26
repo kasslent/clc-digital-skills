@@ -7,7 +7,7 @@
         <p>Week {{ page.week }}, Lesson {{ page.lesson }}</p>
       </nav>
       
-      <article {% if page.class %} class="{{ page.class }}" {% endif %}>
+      <article{% if page.class %} class="{{ page.class }}" {% endif %}>
         {{ content }}
       </article>
     </main>
