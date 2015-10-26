@@ -7,9 +7,9 @@
         <p>Week {{ page.week }}, Lesson {{ page.lesson }}</p>
       </nav>
       
-      <section>
+      <article {% if page.class %} class="{{ page.class }}" {% endif %}>
         {{ content }}
-      </section>
+      </article>
     </main>
 
     {% include footer.html %}

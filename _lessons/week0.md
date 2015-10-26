@@ -94,17 +94,11 @@ Here's a few handy settings and feature to familiarize yourself with:
 ###Extra resources
 * [Atom documenation](https://atom.io/docs)
 * [Atom Shortcuts cheat sheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+* [Customizing Atom](https://atom.io/docs/v0.61.0/customizing-atom)
 * [Themes](https://atom.io/themes) for Atom
 * [Emmet](http://emmet.io/download/) - shorcuts for HTML & CSS
 * [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
 
-
-<!-- ##References
-
-- [Stack Overflow](http://stackoverflow.com)
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web)
-- [caniuse.com](http://caniuse.com)
-- [HTML5Doctor](http://html5doctor.com) -->
 
 ##Using Slack 
 Slack can be used in the browser but there are also desktop and mobile apps. Download them [here](https://slack.com/apps).

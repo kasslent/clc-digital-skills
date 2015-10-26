@@ -9,7 +9,7 @@ $(function(){
   var ToC = "<ul>";
   var newLine, el, title, link;
 
-  $("section > h2, blockquote h2").each(function() {
+  $("article > h2, blockquote h2").each(function() {
     el = $(this);
     title = el.text();
     link = "#" + el.attr("id");

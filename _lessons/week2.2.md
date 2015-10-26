@@ -63,8 +63,6 @@ Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit
 >Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to try out these properties.  
 
 
-
-
 ##Length / Measurement Units
 The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:
 
@@ -91,6 +89,7 @@ Let's look at how `em` and `rem` works.
 
 ####Extra resources
 
+* [rem & the 62.5% method](http://snook.ca/archives/html_and_css/font-size-with-rem)
 * [CSS - Measurement Units](http://www.tutorialspoint.com/css/css_measurement_units.htm)
 * [W3C - Units of length: px, em, cm, etc.](http://www.w3.org/Style/Examples/007/units.en.html)
 * [CSS Tricks - Lengths of CSS]( https://css-tricks.com/the-lengths-of-css/)
@@ -250,9 +249,12 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 * <http://reference.sitepoint.com/css/typography>
 
 >##Exercise: Typography
->Download the exercise file <a href="{{site.baseurl}}/exercises/week2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instuctions listed in the comments in the `<head>` of the page.
+>Download the exercise file <a href="{{site.baseurl}}/exercises/week2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
 >
->**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it! (e.g. organized with the rest of your LLC project/exercise files)
+> [Answer key]({{site.expath}}/week2/typography-answer.zip) (zip file).
+> 
+>**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
+
 
 
 ##Adding/Removing Space

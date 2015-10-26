@@ -1,0 +1,689 @@
+
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Ladies Learning Code</title>
+  <meta name="description" content="Enhance your digital and technology skills. Unleash your creative potential with our 7-week part-time program!
+">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <link rel="stylesheet" href="/llc-digital-skills/css/highlightjs/github.css">
+  <script src="/llc-digital-skills/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    
+  <link rel="stylesheet" href="/llc-digital-skills/css/styles.css">
+  <link rel="canonical" href=" /llc-digital-skills/week3/lesson1/">
+  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+</head>
+<body class="week3-1">
+  <header>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h2>Digital Skills Program</h2>
+    <nav>
+      <a href="/llc-digital-skills/">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Week 3, Lesson 1</h2>
+  </header>
+
+
+    <main role="main" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <p>Week 3, Lesson 1</p>
+      </nav>
+      
+      <article  class="week3-1" >
+        <h2 id="css-review">CSS Review</h2>
+
+<h3 id="adding-css">Adding CSS</h3>
+
+<h4 id="inline">Inline</h4>
+
+<p>CSS is added to a specific HTML element using the style <em>attribute</em>.</p>
+
+<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
+</code></pre>
+
+<h4 id="internal">Internal</h4>
+<p>Included in the <code>&lt;head&gt;</code> with a <code>&lt;style&gt;</code> tag.</p>
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    <strong>&lt;style&gt;</strong>
+      p {
+        color: red;
+      }
+    <strong>&lt;/style&gt;</strong>
+ &lt;/head&gt;
+</code></pre>
+
+<h4 id="external">External</h4>
+<p>Add the CSS to a separate stylesheet (<code>.css</code> file).  Use the <code>&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code>&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
+&lt;/head&gt;
+</code></pre>
+
+<blockquote>
+  <p>What are the pros &amp; cons of each technique?</p>
+</blockquote>
+
+<p><strong>Reference:</strong> <a href="/llc-digital-skills/week1/lesson2/#referencing-css">Week 1, lesson 2</a></p>
+
+<h3 id="basic-selectors">Basic selectors</h3>
+
+<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
+
+<pre><code>p {
+  /* targets all paragraphs */
+}
+</code></pre>
+
+<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element. Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
+
+<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
+</code></pre>
+
+<hr />
+
+<pre><code>.special {
+  /* applies to any element with this class */ 
+}
+p.special {
+  /* more specific - applies only to paragraphs with this class */
+}
+</code></pre>
+
+<p><strong>ID selectors</strong> work the same way as the class attributes for CSS styling but it can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
+
+<pre><code>#about {
+  /* applies to any element with this id */ 
+}
+section#about {
+  /* more specific - applies only to a section element with this id */
+}
+</code></pre>
+
+<p><strong>Reference:</strong> <a href="/llc-digital-skills/week1/lesson2/#basic-css-selectors">Week 1, lesson 2</a></p>
+
+<h2 id="descendant-selectors">Descendant selectors</h2>
+<p>Descendant selectors can be used to target <em>nested</em> elements. To use a descendant selector, add a <em>space</em> between selectors.</p>
+
+<pre><code>&lt;parent&gt;
+  &lt;child&gt;
+    content here
+  &lt;/child&gt;
+&lt;/parent&gt;
+</code></pre>
+
+<hr />
+<pre><code>parent child {
+  /* targets only the child elements contained in that parent */
+}
+</code></pre>
+
+<hr />
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<hr />
+<pre><code>ul li a {
+  color: blue;
+}
+</code></pre>
+
+<p>In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.</p>
+
+<p>You can even “skip” an element. The below example will work as well.</p>
+
+<pre><code>ul a {
+  color: blue;
+}
+</code></pre>
+
+<h3 id="descendant-selectors-and-specificity">Descendant Selectors and Specificity</h3>
+<p>A good rule of thumb for descendant selectors is to avoid going more than <strong>three</strong> levels deep.  Browsers read selectors from right to left and work its way up the <a href="http://www.w3.org/TR/WD-DOM/introduction.html">DOM</a> tree.  Having many selectors can impact the site performance.</p>
+
+<h4 id="yes">Yes</h4>
+<pre><code>p a {
+  /* targets anchor link tags nested inside of a p tag */
+}
+.about p {
+  /* targets paragraphs within an element with the .about class*/
+}
+</code></pre>
+
+<h4 id="no">No!</h4>
+<pre><code>.about ul li a span {
+  ...
+}
+</code></pre>
+
+<p>Also, a more <em>specific</em> selector will override the descendant selector, regardless of written order in the CSS file.</p>
+
+<pre><code>ul a {
+  /* least specific */
+}
+ul li a {
+  /* more specific */
+}
+ul.nav li a {
+  /* most specific */
+}
+</code></pre>
+
+<h2 id="combining-selectors">Combining selectors</h2>
+<p>You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a <em>comma</em>. Any type of selector can be combined.</p>
+
+<pre><code>.special, #special {
+  color: red;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+header h1, h2 {
+  text-transform: uppercase;
+}
+</code></pre>
+
+<blockquote>
+  <p>What is the difference is between combining <code>h1, h2</code> and <code>header h1, h2</code>?</p>
+</blockquote>
+
+<h2 id="pseudo-class-selectors">Pseudo-class Selectors</h2>
+
+<p>Pseudo-class selectors target an elements <em>state</em> or <em>action</em>. The most commonly used pseudo-class is <code>:hover</code>.  Note the syntax. It must start with a colon (<code>:</code>) and be attached to an HTML element, with no white-space.</p>
+
+<pre><code>&lt;a href="#"&gt;Example link&lt;/a&gt;
+</code></pre>
+
+<hr />
+<pre><code>a { 
+  color: red;
+}
+a:hover { 
+  color: black;
+}
+</code></pre>
+
+<h3 id="pseudo-class--links">Pseudo Class &amp; links</h3>
+
+<p><code>:hover</code> - selects the link on mouse hover.<br />
+  Can also be used to create hover effects for elements other than an <code>&lt;a&gt;</code>.</p>
+
+<p><code>:link</code> - links that have <em>not</em> been clicked/visited</p>
+
+<p><code>:visited</code> - links that <em>have</em> been clicked/visited in the the current browser</p>
+
+<p><code>:active</code> - selects the link while it is being activated/clicked.</p>
+
+<p><br />
+There are <strong>many</strong> more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></li>
+  <li><a href="http://www.smashingmagazine.com/2009/08/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="exercise-selectors">Exercise: Selectors</h2>
+
+  <p>Download the <a href="/llc-digital-skills/exercises/week3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking until you’re done!</p>
+
+  <p>All the instructions are contained in the comments at the very top of <code>selector.html</code></p>
+</blockquote>
+
+<h2 id="selectors---general-guidelines">Selectors - General Guidelines</h2>
+
+<p>When building a web page, it’s best to start with the HTML structure and as much content as possible. It’s easier to style your page with “real” content to get a better idea of how the content should be presented.</p>
+
+<p>Then add CSS styles from general/shared styles to more specific styles.</p>
+
+<p>To avoid CSS specificity issues, here are some general guidelines:</p>
+
+<h3 id="html-element-selectors">HTML element selectors</h3>
+
+<p>Use this to apply a style to all or most of that particular element on the page. (e.g. all links on the page).</p>
+
+<pre><code>a {
+  color: red;
+}
+</code></pre>
+
+<h3 id="descendant-selectors-1">Descendant selectors</h3>
+
+<p>Use this to apply a style to multiple elements within another element. (e.g. only links within the navigation)</p>
+
+<pre><code>nav a {
+  color: blue;
+}
+</code></pre>
+
+<h3 id="class-selectors">Class selectors</h3>
+
+<p>Use this to apply a style to an element that can be anywhere on the page and will not be specific to the HTML element. (e.g. button styles used throughout the site, multiple times)</p>
+
+<pre><code>.button {
+  color: green;
+}
+</code></pre>
+
+<h3 id="id-selectors">ID selectors</h3>
+
+<p>Use this sparingly or not at all.  If using it, it can only be used <em>once</em> per page and save it for major page structural blocks (e.g. page header)</p>
+
+<pre><code>#main-header {
+  background: #cccccc;
+}
+</code></pre>
+
+<h3 id="combine-selectors">Combine selectors</h3>
+
+<p>Use this when specific selectors share the same styles. (e.g. just the h1 and h2 share the same styles)</p>
+
+<pre><code>h1, h2 {
+  font-weight: normal;
+}
+</code></pre>
+
+<hr />
+
+<h2 id="block-vs-inline-elements">Block vs Inline Elements</h2>
+
+<p>Block level HTML elements default behaviour:</p>
+
+<ul>
+  <li>takes up 100% width of its container, no matter how long the actual content is</li>
+  <li>will be the same height as its content</li>
+  <li>always starts on a new line</li>
+  <li>can wrap other block level elements or inline elements</li>
+  <li>can apply sizing related CSS to it (margin, padding, height, width)</li>
+  <li>examples: <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;ul&gt;</code></li>
+</ul>
+
+<p>Inline level HTML elements default behaviour:</p>
+
+<ul>
+  <li>will be the height and width of its content</li>
+  <li>always appears “in a line” with other inline level elements</li>
+  <li>can wrap other inline elements but cannot wrap block level elements <em>except</em> <code>&lt;a&gt;</code> tags.  This is only valid with an HTML5 doctype.</li>
+  <li>does not render CSS height and width at all, will apply margin and padding but with unexpected results</li>
+  <li>examples: <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code></li>
+</ul>
+
+<p><strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
+
+<p><span style="background:lightgreen;">this is a span</span></p>
+<div style="background:lightblue;">this is a div</div>
+
+<h3 id="css-display-property">CSS Display Property</h3>
+
+<p>CSS can be used to change the behavior of inline and block elements with the <code>display</code> property. There are three values we’ll look at today: <code>block</code>, <code>inline</code> and <code>inline-block</code>.</p>
+
+<p>Let’s try this out in this <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a>.</p>
+
+<h4 id="resource">Resource</h4>
+
+<p><a href="https://css-tricks.com/almanac/properties/d/display/">CSS Tricks: Display property</a></p>
+
+<h2 id="the-box-model-width-height-padding-margin-border">The Box Model: width, height, padding, margin, border</h2>
+
+<p>The browser looks at every HTML element on the page as a square/rectangular box. The <strong>CSS Box Model</strong> describes the way CSS handles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout.</p>
+
+<p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
+
+<ul>
+  <li><code>width</code> - change the default width</li>
+  <li><code>height</code> - change the default width</li>
+  <li><code>margin</code> - add or remove default space around the element</li>
+  <li><code>padding</code> - add or remove default space inside the element</li>
+  <li><code>border</code> -  add a border around the element</li>
+</ul>
+
+<p>Each of these boxes can have different combinations of margins, padding and borders, which in turn changes the element’s size (width &amp; height). This interaction is referred to as the box model.</p>
+
+<h3 id="width--height">Width &amp; Height</h3>
+
+<p>The <code>width</code> &amp; <code>height</code> properties can be used to set specific heights and widths to only <em>block</em> level elements.  It won’t work for <em>inline</em> level elements unless you use <code>display</code> to change it to <code>block</code> or <code>inline-block</code>.</p>
+
+<h3 id="padding">Padding</h3>
+
+<p>The <code>padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
+
+<p>Setting the padding to “0” will remove any default space on an HTML element. Any positive value will add space <em>inside</em> of the element.</p>
+
+<pre><code>/* longhand */
+padding-top: 2px;
+padding-right: 2px;
+padding-bottom: 2px;
+padding-left: 2px;
+
+/* shorthand */
+padding: 2px; /* same on all sides */
+padding: 2px 10px; /* top &amp; bottom, right &amp; left */
+padding: 2px 10px 5px; /* top, right &amp; left, bottom */
+padding: 2px 2px 2px 2px; /* top right bottom left */
+</code></pre>
+
+<p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
+<p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
+
+<h3 id="margin">Margin</h3>
+<p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding.</p>
+
+<pre><code>/* longhand */
+margin-top: 2px;
+margin-right: 2px;
+margin-bottom: 2px;
+margin-left: 2px;
+
+/* shorthand */
+margin: 2px; /* same on all sides */
+margin: 2px 10px; /* top &amp; bottom, right &amp; left */
+margin: 2px 10px 5px; /* top, right &amp; left, bottom */
+margin: 2px 2px 2px 2px; /* top right bottom left */
+</code></pre>
+
+<p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
+<p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
+
+<h3 id="margin--negative-values">Margin &amp; Negative values</h3>
+
+<p>Margin also accepts negative values.  This will nudge it just outside of its stacked position.</p>
+
+<p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
+<p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
+
+<h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code>margin</code></h3>
+<p>The margin property can also be used to center align <em>block</em> level elements.</p>
+
+<p>First a width needs to be set. Then by setting the left &amp; right values to <code>auto</code>, it finds the center of the page. The <code>0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
+
+<pre><code>div {
+  width: 600px;
+  margin: 0 auto; /* 0 on the top and bottom, auto on the left and right */
+}
+</code></pre>
+
+<div style="width:600px;margin: 0 auto;background:lightblue;">
+  <p>Auto aligned!</p>
+</div>
+
+<h3 id="border">Border</h3>
+<p>The <code>border</code> property resides between the <code>margin</code> and <code>padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
+
+<pre><code>/* longhand */
+border-width: 2px;
+border-style: solid;
+border-color: red;
+
+/* shorthand */
+border: 2px solid red;
+</code></pre>
+
+<p>Like padding and margin, a border can be added to a specific side of the element.</p>
+
+<pre><code>/* longhand */
+border-top-width: 2px;
+border-top-style: solid;
+border-top-color: red;
+
+/* shorthand */
+border-top: 2px solid red;
+</code></pre>
+
+<h3 id="seeing-it-all-together">Seeing it all together</h3>
+
+<pre><code>background: lightblue;
+width: 80%;
+margin: 50px auto;
+padding: 40px; 
+border: 5px solid black;
+</code></pre>
+
+<div style="width:80%;margin:50px auto;padding:40px; background:lightblue;border:5px solid black;">
+  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<h2 id="the-box-model-problem-and-fix">The Box Model Problem and Fix</h2>
+
+<p>In CSS ,the relationship between the width, padding and border properties is not always straightforward.
+For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:</p>
+
+<p>480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width</p>
+
+<p>But, there’s a fix! Let’s first compare how this works with and without the fix, looking at the CSS example below.</p>
+
+<pre><code>background: lightblue;
+width: 480px;
+padding: 0px 20px;
+border: 15px solid green;
+</code></pre>
+
+<div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
+  <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
+</div>
+<div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
+  <p>This example DOES have the border box fix.</p>
+</div>
+
+<p>The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.</p>
+
+<p>Here is the snippet:</p>
+
+<pre><code>/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+</code></pre>
+
+<h4 id="resource-1">Resource</h4>
+<p>Read more about the fix <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">here</a>.</p>
+
+<h2 id="positioning-elements-floats">Positioning Elements: Floats</h2>
+
+<p>We saw earlier that we can use <code>display: inline-block</code> to get elements to line up side by side. We can also use another property, <code>float</code>, to align elements using the <code>left</code> or <code>right</code> value.</p>
+
+<h3 id="stacking-order-parent-elements-and-floats">Stacking order, parent elements and floats</h3>
+
+<p>Each element is seen as a “box” by the browser (represented by the red border). The natural stacking order means block elements will stack on top of each other.</p>
+
+<p>The parent element (represented by the blue background) will wrap around its content.</p>
+
+<p><img src="/llc-digital-skills/assets/img/week3/no-float.jpg" alt="" /></p>
+
+<p>However, to get elements to float side by side, the natural stacking order must be broken first, then put back together.</p>
+
+<blockquote>
+  <h2 id="exercise-floats-part-1">Exercise: Floats, part 1</h2>
+  <p>Let’s try instruction #1 in the following <a href="http://codepen.io/learningcode/pen/gaedLj">CodePen example</a>.</p>
+</blockquote>
+
+<h3 id="exercise-1-followup">Exercise 1 followup</h3>
+
+<p>Here’s what it will look like:</p>
+
+<p><img src="/llc-digital-skills/assets/img/week3/float-no-clear.jpg" alt="" /></p>
+
+<p>Floating the element breaks the <em>natural stacking flow</em>.<br />
+Any element <em>after</em> the floated element will move up and flow around the floated element.</p>
+
+<p>Notice that the blue background only wraps around the text and not the image? That’s because floated elements cause the parent element to <strong>collapse</strong>. The parent cannot “see” the floated elements (the image in this example) and only wraps around the text (not floated).</p>
+
+<p>Also, as long as there is space for elements flow around the floated element, it will. What if you only wanted the first paragraph to flow around the image and the heading and following content to stack underneath the image? You’ll need to <strong>clear</strong> the float.</p>
+
+<p><strong>Note:</strong> If no width is set on the floated element, it will automatically be the width of its content.</p>
+
+<!-- That's how you can create layouts such as the below example of an image floated to the right.
+
+![](/llc-digital-skills/assets/img/week3/floated-img.png) -->
+
+<h3 id="clearing-floats">Clearing Floats</h3>
+
+<p>You may notice that floats have the ability to affect the rest of the web page in unexpected ways. The float must be “cleared” to get the rest of the page to go back to normal stacking order.</p>
+
+<p>On the element that comes <em>after</em> the last element to be floated can be used to <em>clear</em> the float using the property and value, <code>clear: both</code>.</p>
+
+<pre><code>&lt;div class="floated"&gt;floated element&lt;/div&gt;
+&lt;div&gt;Other content - will flow around floated content.&lt;/div&gt;
+&lt;div class="cleared"&gt;cleared element - will go back to natural stacking order&lt;/div&gt;
+</code></pre>
+
+<hr />
+<pre><code>.floated {
+  float: left;
+}
+.cleared {
+  clear: both; /* clears any left or right float */
+}
+</code></pre>
+
+<blockquote>
+  <h2 id="exercise-floats-part-2">Exercise: Floats, part 2</h2>
+  <p>Let’s go back to the previous CodePen example and complete instruction #2.</p>
+</blockquote>
+
+<p>Now it should look like this:</p>
+
+<p><img src="/llc-digital-skills/assets/img/week3/float-cleared.png" alt="" /></p>
+
+<p>Clearing the float on the <code>h1</code> element puts everything back to the normal stacking ordering starting from the h1 element and everything after.</p>
+
+<h3 id="self-clearing-floats">Self Clearing Floats</h3>
+<p>If there is no element following the floated elements, apply <code>overflow: hidden;</code> or <code>overflow: auto;</code> to the <strong>parent</strong> container to <strong>self-clear</strong> the floated children. This forces the element to ‘contain’ any floated children, so that they don’t disrupt the elements after them.</p>
+
+<pre><code>&lt;div class="parent"&gt;
+  &lt;div class="floated"&gt;floated element&lt;/div&gt;
+  &lt;div class="floated"&gt;floated element&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+<pre><code>.parent {
+  overflow: hidden;
+}
+.floated {
+  float: left;
+}
+</code></pre>
+
+<blockquote>
+  <h2 id="exercise-floats-part-3">Exercise: Floats, part 3</h2>
+  <p>Let’s go back to the previous CodePen example and complete instruction #3-4.</p>
+</blockquote>
+
+<p>Though the <code>overflow</code> property can be used to self-clear floated elements, it is actually used to specify how to display content that flows longer or wider than its container.  The options are  whether to clip content, show scrollbars or just display content overflowing content.</p>
+
+<p>When this option can’t be used, there is another option for self-clearing floats.</p>
+
+<h3 id="clearfix-hack">“Clearfix” hack</h3>
+
+<p>This fix, often referred to as the “clearfix hack” can be used when <code>overflow</code> is not appropriate or in place of using the <code>overflow</code>.  It is simply a CSS code snippet contained in a <code>class</code> called <code>clearfix</code>.</p>
+
+<p>It has changed over time as CSS support in various browsers are updated.</p>
+
+<p>Originally it looked like this:</p>
+
+<pre><code>/* slightly enhanced, universal clearfix hack */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+</code></pre>
+
+<p>Note the use of a <em>psuedo-class</em>, <code>:after</code> added to the <code>clearfix</code> class.<br />
+(Similar syntax to <code>:hover</code> but used to add css <em>after</em> an element.)</p>
+
+<p>It now looks like this:</p>
+
+<pre><code>.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</code></pre>
+
+<p>The class name was changed to “group” by some notable CSS Developers as they thought this gave it a better semantic meaning but it is just a class name so it can be changed! The below example would be the same thing.</p>
+
+<pre><code>.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</code></pre>
+
+<p>This snippet can be added to your css file and added to the <strong>parent</strong> of the floated element. To add multiple classes to the same element, separate each with a space.</p>
+
+<pre><code>&lt;div class="parent clearfix"&gt;
+    &lt;div class="floated"&gt;floated element&lt;/div&gt;
+    &lt;div class="floated"&gt;floated element&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>See the docmented clearfix hack changes here:<br />
+<a href="http://css-tricks.com/snippets/css/clear-fix/">CSS Tricks: Force Element To Self-Clear its Children</a></p>
+
+<p>Reminder, if you use this method, you do not need to use the <code>overflow</code> property.</p>
+
+<h4 id="extra-resources">Extra Resources</h4>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/overflow">Mozilla Developer Network: overflow property</a></li>
+  <li><a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">Clearing Floats: An Overview of Different clearfix Methods</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="exercise-putting-it-all-together">Exercise: Putting it all together</h2>
+</blockquote>
+
+<p>~ End ~</p>
+
+
+      </article>
+    </main>
+
+      <footer>
+    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+  </footer>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/llc-digital-skills/assets/js/custom.js"></script>
+</body>
+</html>
+
+

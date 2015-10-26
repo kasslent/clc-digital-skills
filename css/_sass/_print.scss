@@ -30,7 +30,7 @@
   main {
     padding: 0;
   }
-  section {
+  article {
     max-width: 100%;
 
     h2,
@@ -98,6 +98,14 @@
   .print-wireframe,
   .grouping-elements {
     width: 6cm;
+  }
+  
+  // Lesson 3-1
+  // -------------
+  .week3-1 {
+    img {
+      width: 8cm;
+    }
   }
 }
 

@@ -9,6 +9,7 @@ url: " " # the base hostname & protocol for your site
 twitter: learningcode
 slack: digitalskills
 facebook: ladieslearningcode
+expath: /llc-digital-skills/exercises # path to exercise folder
 
 # Build settings
 markdown: kramdown
