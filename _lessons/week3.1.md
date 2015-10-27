@@ -270,6 +270,7 @@ Inline level HTML elements default behaviour:
 
 
 **Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
+
 <div style="background:lightblue;">this is a div</div>
 <span style="background:lightgreen;">this is a span</span>
 
