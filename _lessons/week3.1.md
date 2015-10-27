@@ -357,7 +357,7 @@ First a width needs to be set. Then by setting the left & right values to `auto`
     div {
       background: lightblue;
       width: 600px;
-      margin: 0 auto; /* 0 on the top and bottom, auto on the left and right */
+      margin: 0 auto; /* 0 on the top & bottom, auto on the left & right */
     }
 
 <div style="width:600px;margin: 0 auto;background:lightblue;">
