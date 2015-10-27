@@ -232,7 +232,6 @@ Use this to apply a style to an element that can be anywhere on the page and wil
       color: green;
     }
 
-
 ###ID selectors
 
 Use this sparingly or not at all.  If using it, it can only be used *once* per page and save it for major page structural blocks (e.g. page header)
@@ -241,7 +240,6 @@ Use this sparingly or not at all.  If using it, it can only be used *once* per p
       background: #cccccc;
     }
 
-   
 ###Combine selectors
 
 Use this when specific selectors share the same styles. (e.g. just the h1 and h2 share the same styles)
@@ -249,11 +247,6 @@ Use this when specific selectors share the same styles. (e.g. just the h1 and h2
     h1, h2 {
       font-weight: normal;
     }
-
-
-
-
------
 
 
 ##Block vs Inline Elements
@@ -362,6 +355,7 @@ The margin property can also be used to center align *block* level elements.
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
 
     div {
+      background: lightblue;
       width: 600px;
       margin: 0 auto; /* 0 on the top and bottom, auto on the left and right */
     }
@@ -369,6 +363,16 @@ First a width needs to be set. Then by setting the left & right values to `auto`
 <div style="width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
+
+But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?
+
+![]({{site.baseurl}}/assets/img/week3/content-align.jpg)
+
+To do that, we'll need to create a container just for the content to auto align it and use the outer container for the background styles.
+
+>##Exercise: auto align content
+>
+>Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
 ###Border
 The `border` property resides between the `margin` and `padding` and creates an outline around the element. Also has longhand and shorthand syntax.
@@ -533,7 +537,7 @@ When this option can't be used, there is another option for self-clearing floats
 
 This fix, often referred to as the "clearfix hack" can be used when `overflow` is not appropriate or in place of using the `overflow`.  It is simply a CSS code snippet contained in a `class` called `clearfix`.
 
-It has changed over time as CSS support in various browsers are updated.  
+It has changed over time as CSS support in various browsers are updated.
 
 Originally it looked like this:
 
@@ -591,7 +595,23 @@ Reminder, if you use this method, you do not need to use the `overflow` property
 * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
 
 
+##Organizing Your CSS
+
+How you organize your CSS is a personal choice and you will probably develop your own style but here are some tips for keeping your files organized.
+
+* start with general & global styles
+  * add box-sizing fix and clearfix hack at the top of the page
+  * use type selectors to set up general styles (body, h1, h2, etc)
+* write the CSS in the same order as it appears on your HTML page
+  * e.g. general styles, header styles, about styles, footer styles
+* use comments to break up and organize the CSS into sections
+* put related CSS together starting with generic to more specific
+
+Remember, good organization helps to reduce errors and makes for easier debugging!
+
 >##Exercise: Putting it all together
+>
+>Download the <a href="{{site.expath}}/week3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
 
 ~ End ~
 

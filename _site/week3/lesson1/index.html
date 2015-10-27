@@ -303,8 +303,6 @@ There are <strong>many</strong> more ways to select elements such as position in
 }
 </code></pre>
 
-<hr />
-
 <h2 id="block-vs-inline-elements">Block vs Inline Elements</h2>
 
 <p>Block level HTML elements default behaviour:</p>
@@ -417,6 +415,7 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <p>First a width needs to be set. Then by setting the left &amp; right values to <code>auto</code>, it finds the center of the page. The <code>0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
 
 <pre><code>div {
+  background: lightblue;
   width: 600px;
   margin: 0 auto; /* 0 on the top and bottom, auto on the left and right */
 }
@@ -425,6 +424,18 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <div style="width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
+
+<p>But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?</p>
+
+<p><img src="/llc-digital-skills/assets/img/week3/content-align.jpg" alt="" /></p>
+
+<p>To do that, we’ll need to create a container just for the content to auto align it and use the outer container for the background styles.</p>
+
+<blockquote>
+  <h2 id="exercise-auto-align-content">Exercise: auto align content</h2>
+
+  <p>Looking at this <a href="http://codepen.io/learningcode/pen/avYXvq">CodePen example</a>, compare the difference between using and not using a content wrapper.</p>
+</blockquote>
 
 <h3 id="border">Border</h3>
 <p>The <code>border</code> property resides between the <code>margin</code> and <code>padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
@@ -661,8 +672,32 @@ Any element <em>after</em> the floated element will move up and flow around the 
   <li><a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">Clearing Floats: An Overview of Different clearfix Methods</a></li>
 </ul>
 
+<h2 id="organizing-your-css">Organizing Your CSS</h2>
+
+<p>How you organize your CSS is a personal choice and you will probably develop your own style but here are some tips for keeping your files organized.</p>
+
+<ul>
+  <li>start with general &amp; global styles
+    <ul>
+      <li>add box-sizing fix and clearfix hack at the top of the page</li>
+      <li>use type selectors to set up general styles (body, h1, h2, etc)</li>
+    </ul>
+  </li>
+  <li>write the CSS in the same order as it appears on your HTML page
+    <ul>
+      <li>e.g. general styles, header styles, about styles, footer styles</li>
+    </ul>
+  </li>
+  <li>use comments to break up and organize the CSS into sections</li>
+  <li>put related CSS together starting with generic to more specific</li>
+</ul>
+
+<p>Remember, good organization helps to reduce errors and makes for easier debugging!</p>
+
 <blockquote>
   <h2 id="exercise-putting-it-all-together">Exercise: Putting it all together</h2>
+
+  <p>Download the <a href="/llc-digital-skills/exercises/week3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the <strong>answer</strong> folder.</p>
 </blockquote>
 
 <p>~ End ~</p>
