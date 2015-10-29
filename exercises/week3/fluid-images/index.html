@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Images</title>
+  <style>
+    .width,
+    .max-width {
+      width: 48%;
+      border: 1px solid blue;
+      float: left;
+      margin-right: 1%;
+    }
+    .width img {
+      width: 100%;
+    }
+    .max-width img {
+      max-width: 100%;
+    }
+    code {
+      display: block;
+      padding: 10px;
+    }
+    p {
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>Try minimizing & maximizing the browser window to see how the image stretches and scales.</p>
+  <div class="width">
+    <img src="http://f.cl.ly/items/1P1n1Z2Z153f3F070G2k/polar-bears.jpg" alt="">
+    <code>img { width: 100%; } </code>
+    <p>Width of the image is equal to 100% of its container, no matter the original size of the image.</p>
+  </div>
+  <div class="max-width">
+    <img src="http://f.cl.ly/items/1P1n1Z2Z153f3F070G2k/polar-bears.jpg" alt="">
+    <code>img { max-width: 100%; }</code>
+    <p>Width of the image is equal to 100% of its container to a <strong>maximum</strong> of 100% of the image file size.</p>
+  </div>
+</body>
+</html>
