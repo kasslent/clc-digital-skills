@@ -7,4 +7,7 @@ General Tips
 
 
 Lesson "0"
-- high level demo of Atom shortcuts, etc. Since they won't have any projects yet, there's no point in making snippets yet, etc.  Can revisit throughout the course.
+- high level demo of Atom shortcuts, etc. Since they won't have any projects yet, there's no point in making snippets yet, etc.  Can revisit throughout the course if you feel the students are ready.  It might not be worth giving too many tips about plugins or tooling apps etc if the students are still grasping the fundamentals.  We don't want to overwhelm them and feel like they have to learn so many things.  You can introduce them and those that want and are capable of exploring more will.
+
+
+As the weeks progress, depending on the progress of the class you may need to do a small review at the beginning of each class.  If people are asking questions about certain things, do a small review at the beginning of class or ask people if they have questions about prev classes.  You many need to also review things like editor settings, general syntax and best practices.

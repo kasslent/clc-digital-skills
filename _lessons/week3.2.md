@@ -406,12 +406,12 @@ The above example targets a browser with the maximum width of 940px (anything eq
 All rules for a specific screen size is required to be nested *within* the media query.
 
     @media (max-width: 940px) {
-        body {
-          background: red;
-        }
-        h2 {
-          font-size: 20px;
-        }
+      body {
+        background: red;
+      }
+      h2 {
+        font-size: 20px;
+      }
     }
 
 You can also use `min-width` in media queries.
@@ -505,7 +505,8 @@ There are also many many other tools, [free](http://lab.maltewassermann.com/view
 >##Exercise: Responsive Web page
 >
 >Let's go back to the webpage contained in the **project** folder in today's exercise files and make the Portfolio section fluid and responsive.
->Resize the browser to different sizes and see what else you could change!
+>
+>**Bonus!** Resize the browser to different sizes and see what else you could change!
 
 
 ~ End ~

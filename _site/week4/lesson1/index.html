@@ -1,0 +1,300 @@
+
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Ladies Learning Code</title>
+  <meta name="description" content="Enhance your digital and technology skills. Unleash your creative potential with our 7-week part-time program!
+">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <link rel="stylesheet" href="/llc-digital-skills/css/highlightjs/github.css">
+  <script src="/llc-digital-skills/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    
+  <link rel="stylesheet" href="/llc-digital-skills/css/styles.css">
+  <link rel="canonical" href=" /llc-digital-skills/week4/lesson1/">
+  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+</head>
+<body class="">
+  <header>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h2>Digital Skills Program</h2>
+    <nav>
+      <a href="/llc-digital-skills/">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Week 4, Lesson 1</h2>
+  </header>
+
+
+    <main role="main" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <p>Week 4, Lesson 1</p>
+      </nav>
+      
+      <article>
+        <h2 id="intro-to-html-forms">Intro to HTML Forms</h2>
+
+<ul>
+  <li>used to capture information from users</li>
+  <li>information processing &amp; form submission requires a server-side language (e.g. PHP, Ruby or Python)</li>
+  <li>all forms begin with the <code>&lt;form&gt;</code> element and requires two <em>attributes</em>, <code>method</code> and <code>action</code>
+    <ul>
+      <li><strong><code>method</code></strong> defines how the form will communicate with the web server using <code>get</code> or <code>post</code> (more secure)</li>
+      <li><strong><code>action</code></strong> provides the path to where the form script is processed</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Extra resource:</strong> <a href="http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29">Get vs Post</a></p>
+
+<h3 id="form-controls">Form Controls</h3>
+<ul>
+  <li>users interact with forms through controls (e.g. checkboxes, buttons)</li>
+  <li>data add into these controls are processed by the server when the form is submitted</li>
+</ul>
+
+<p><code>&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
+
+<p><code>&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
+
+<p><code>&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
+
+<ul>
+  <li>used for various data types by changing the <code>type</code> attribute value</li>
+  <li>common values include <code>text</code>, <code>password</code>, <code>submit</code>, <code>reset</code>, <code>button</code>, <code>radio</code> and <code>checkbox</code></li>
+  <li>use with <code>label</code> to add a caption to each input</li>
+  <li>doesn’t require a closing tag!</li>
+</ul>
+
+<p><code>&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
+Though you can create buttons with the <code>input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code>value</code> attribute to add text to the button.</p>
+
+<p>There are three <code>type</code> attribute values: <code>submit</code>, <code>button</code>, <code>reset</code>.</p>
+
+<pre><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
+&lt;input type="submit" value="input tag"&gt;
+</code></pre>
+
+<div class="example">    
+  <button type="submit">button tag</button>
+  <input type="submit" value="input tag" />
+</div>
+
+<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code>type</code> value.</p>
+
+<pre><code>&lt;form method="POST" action="#"&gt;
+  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
+  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
+  &lt;br&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;input type="reset" value="reset"&gt;
+  &lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<form class="example">
+  <label>Name </label>
+  <input type="text" />
+  <label>Password </label>
+  <input type="password" />
+  <br />
+  <input type="radio" name="radio-example" /><label>yes</label>
+  <input type="radio" name="radio-example" /><label>no</label>
+  <input type="checkbox" /><label>option 1</label>
+  <input type="checkbox" /><label>option 2</label>
+  <br />
+  <label>Leave a comment</label> <textarea></textarea>
+  <input type="reset" value="reset" />
+  <input type="submit" value="submit" />
+</form>
+
+<blockquote>
+  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code>type</code> attributes, <code>text</code> and <code>password</code> differ.</p>
+
+  <p>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?</p>
+
+  <p>Note that clicking “submit” will not process any information because this example is only in HTML and is not attached to any server side processing.</p>
+</blockquote>
+
+<h3 id="label-and-the-for-attribute"><code>&lt;label&gt;</code> and the <code>for</code> attribute</h3>
+
+<p>Use the <code>for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code>id</code> value of the related form control.</p>
+
+<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
+&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
+</code></pre>
+
+<p><strong>label association</strong></p>
+
+<p><label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname" />
+<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname" /></p>
+
+<p><strong>no label association</strong></p>
+
+<p><label>First Name</label> <input type="text" name="firstname" />
+<label>Last Name</label> <input type="text" name="lastname" /></p>
+
+<blockquote>
+  <p>When labels and inputs are associated, select either the label OR the input to focus on the related input.</p>
+
+  <p>Try clicking on the labels in the examples above.</p>
+</blockquote>
+
+<h3 id="name-attribute"><code>name</code> attribute</h3>
+
+<p>The <code>name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
+
+<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
+&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
+</code></pre>
+
+<p>The <code>name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
+
+<pre><code>&lt;p&gt;What day is it today?&lt;/p&gt;
+&lt;input type="radio" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
+</code></pre>
+
+<p>What day is it today?<br />
+<input type="radio" name="days" id="mon" /><label for="mon">Monday</label><br />
+<input type="radio" name="days" id="tues" /><label for="tues">Tuesday</label><br />
+<input type="radio" name="days" id="wed" /><label for="wed">Wednesday</label><br />
+<input type="radio" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
+<input type="radio" name="days" id="fri" /><label for="fri">Friday</label></p>
+
+<pre><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
+&lt;input type="checkbox" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
+</code></pre>
+
+<p>What day do you attend class?</p>
+<p><input type="checkbox" name="days" id="mon" /><label for="mon">Monday</label><br />
+<input type="checkbox" name="days" id="tues" /><label for="tues">Tuesday</label><br />
+<input type="checkbox" name="days" id="wed" /><label for="wed">Wednesday</label><br />
+<input type="checkbox" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
+<input type="checkbox" name="days" id="fri" /><label for="fri">Friday</label></p>
+
+<p><br />
+In addition to the form controls, any HTML tags can be contained within the <code>&lt;form&gt;</code> element (e.g. <code>div</code>, <code>p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
+
+<p>Also, the form related HTML only create the form in the browser.  To actually submit the information and process the data, a server side language is required.</p>
+
+<p>Another option is to use 3rd party services such as <a href="http://www.wufoo.com/">Wufoo</a> or <a href="">Google Forms</a> to handle not only building the HTML &amp; CSS of the form but also the form processing as well.</p>
+
+<h4 id="extra-resources">Extra Resources</h4>
+<ul>
+  <li><a href="http://www.sitepoint.com/web-foundations/form-elements/">sitepoint: form elements</a></li>
+  <li><a href="http://diveintohtml5.info/forms.html">Dive Into HTML5 forms</a></li>
+  <li><a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a></li>
+  <li><a href="http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738">Bring Your Forms Up to Date With CSS3 and HTML5 Validation</a></li>
+</ul>
+
+<h2 id="google-forms">Google Forms</h2>
+
+<p>Use Google Forms to create your form and have all the repsonses sent to a handy spreadsheet.  Not only will this keep you from dealing with email responses, you can use the power of Sheets to manipulate &amp; sort the data!</p>
+
+<ol>
+  <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account. The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
+  <img src="/llc-digital-skills/assets/img/week4/gforms-new.png" alt="" /></li>
+  <li>
+    <p>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).</p>
+  </li>
+  <li>Once you’ve completed your form, you can either send out the form or embed it into your web page.
+    <ul>
+      <li>To send the form. Select <strong>Send form</strong> to see options.<br />
+  <img src="/llc-digital-skills/assets/img/week4/gforms-send.png" alt="" />
+  <br /><br />
+  You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br />
+  <img src="/llc-digital-skills/assets/img/week4/gforms-send-options.png" alt="" /></li>
+      <li>To embed the form onto your web page, select <strong>File &gt; Embed</strong> and copy the HTML onto your web page.<br />
+  <img src="/llc-digital-skills/assets/img/week4/gforms-embed.png" alt="" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="styling-google-forms">Styling Google Forms</h2>
+
+<p>Choose from existing themes!</p>
+
+<p>Select <strong>Change themes</strong> to see available themes.  (Select <strong>Edit questions</strong> to go back to the questions.)</p>
+
+<p><img src="/llc-digital-skills/assets/img/week4/gforms-themes.png" alt="" /></p>
+
+<p>Choose a theme on the right and select <strong>Customize</strong> for additional options.</p>
+
+<p><img src="/llc-digital-skills/assets/img/week4/gforms-themes-customize.png" alt="" /></p>
+
+<p>And that’s it!</p>
+
+<p><br /></p>
+
+<p>If you’re feeling adventurous, you can also edit the HTML &amp; CSS yourself.</p>
+
+<p>The embed code is simply an <code>&lt;iframe&gt;</code> which is a common way to insert content from another source (i.e. youtube embeds). But you can <strong>View Source</strong> and grab the actual HTML and embed that into your site instead of the <code>&lt;iframe&gt;</code>.</p>
+
+<p>If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.</p>
+
+<p>First, select <strong>View live form</strong> to see the form out of edit mode, in the browser.</p>
+
+<p><img src="/llc-digital-skills/assets/img/week4/gforms-live.png" alt="" /></p>
+
+<p>Then right-click anywhere and select <strong>View source</strong> and look for the <code>&lt;form&gt;</code> tag.</p>
+
+<p><strong>Pro tip!</strong> Use <strong>cmd/ctrl + F</strong> (find) and do a search for <code>form</code> on the page and copy everything from the opening <code>&lt;form&gt;</code> to the closing <code>&lt;/form&gt;</code> tags.</p>
+
+<p>Note that this option requires you to write all the CSS yourself!</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html">Google Drive Blog: Your Forms, Your Way</a></li>
+  <li><a href="http://morning.am/tutorials/how-to-style-google-forms/">How to style Google Forms</a></li>
+</ul>
+
+<h2 id="google-forms--analysis-with-excel">Google Forms + Analysis with Excel</h2>
+
+<p>View the presentation for this module <a href="https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166">here</a>.</p>
+
+<p>Exercise file <a href="https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#">here</a>.  Be sure to made a <strong>copy</strong> of this file in <em>your</em> Google Drive.</p>
+
+<p>~ End ~</p>
+
+
+      </article>
+    </main>
+
+      <footer>
+    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+  </footer>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/llc-digital-skills/assets/js/custom.js"></script>
+</body>
+</html>
+
+
