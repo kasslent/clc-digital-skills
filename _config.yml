@@ -10,7 +10,8 @@ twitter: learningcode
 slack: digitalskills
 facebook: ladieslearningcode
 expath: /llc-digital-skills/exercises # path to exercise folder
-
+imgpath: /llc-digital-skills/assets/img # path to image folder
+  
 # Build settings
 markdown: kramdown
 style: debug

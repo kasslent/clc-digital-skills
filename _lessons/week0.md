@@ -68,28 +68,42 @@ In this course and in any examples, Atom will be referenced for consistency.
 
 Having a good text editor and learning how to use it to its full potential will definitely help your work flow.  We'll be using [Atom](http://atom.io) during this program because it has some great integrated features and is totally free!
 
-
-Here's a few handy settings and feature to familiarize yourself with:
-
-####Soft wrap
-
-* wraps the code in the editor to a custom width or width of your editor  
-`Atom > Preferences > Settings`
+Here's a couple feature to familiarize yourself with:
 
 ####Columns
 
 * called "panes" in Atom  
-`View > Panes`
+  * `View > Panes`
 * can add multiple columns within the editor to allow for side by side editing
 
 ####Find & Replace
 * find keywords on a single file  
-`Find > Find in Buffer`
+  * `Find > Find in Buffer`
 * find keywords in multiple files in an entire folder  
-`Find > Find in Project`
+  * `Find > Find in Project`
 * can also find *and* replace  
 * more search options found under `Find`
 
+####Preferences
+Under **Preferences**, there are many options for customizing your editor.
+
+![atom preferences]({{site.imgpath}}/week0/atom-preferences.jpg)
+
+**Settings**
+
+The Settings include general options for personalizing your editor. 
+
+![atom settings]({{site.imgpath}}/week0/atom-settings.jpg)
+
+A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
+
+**Packages**
+
+Add packages under the **Install** tab.
+
+![atom install packages]({{site.imgpath}}/week0/atom-install-packages.jpg)
+
+[Emmet](http://docs.emmet.io/abbreviations/syntax/) is a great package to install once you gain some basic understanding of HTML & CSS. This package will help write HTML & CSS faster with some super handy shortcuts!
 
 ###Extra resources
 * [Atom documenation](https://atom.io/docs)
