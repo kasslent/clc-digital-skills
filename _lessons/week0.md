@@ -103,14 +103,17 @@ Add packages under the **Install** tab.
 
 ![atom install packages]({{site.imgpath}}/week0/atom-install-packages.jpg)
 
-[Emmet](http://docs.emmet.io/abbreviations/syntax/) is a great package to install once you gain some basic understanding of HTML & CSS. This package will help write HTML & CSS faster with some super handy shortcuts!
+[Emmet](http://docs.emmet.io/abbreviations/syntax/) is a great package to install, once you gain some basic understanding of HTML & CSS. This package will help write HTML & CSS faster with some super handy shortcuts!
+
+![atom install emmet]({{site.imgpath}}/week0/atom-install-emmet.jpg)
+
+Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) and [Emmet cheatsheet](http://docs.emmet.io/cheat-sheet/) to get up and running.
 
 ###Extra resources
 * [Atom documenation](https://atom.io/docs)
 * [Atom Shortcuts cheat sheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
 * [Customizing Atom](https://atom.io/docs/v0.61.0/customizing-atom)
 * [Themes](https://atom.io/themes) for Atom
-* [Emmet](http://emmet.io/download/) - shorcuts for HTML & CSS
 * [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
 
 

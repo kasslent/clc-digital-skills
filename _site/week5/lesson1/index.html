@@ -1,0 +1,597 @@
+
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Ladies Learning Code</title>
+  <meta name="description" content="Enhance your digital and technology skills. Unleash your creative potential with our 7-week part-time program!
+">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <link rel="stylesheet" href="/llc-digital-skills/css/highlightjs/github.css">
+  <script src="/llc-digital-skills/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+    
+  <link rel="stylesheet" href="/llc-digital-skills/css/styles.css">
+  <link rel="canonical" href=" /llc-digital-skills/week5/lesson1/">
+  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
+  <link rel="icon" type="image/png" href="/llc-digital-skills/assets/img/favicon.ico">
+</head>
+<body class="week5-1">
+  <header>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h2>Digital Skills Program</h2>
+    <nav>
+      <a href="/llc-digital-skills/">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Week 5, Lesson 1</h2>
+  </header>
+
+
+    <main role="main" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <p>Week 5, Lesson 1</p>
+      </nav>
+      
+      <article class="week5-1" >
+        <h1>Week 5, Lesson 1: HTML/CSS Review & Intro to jQuery</h1>
+        <h2 id="discussion-steps-for-creating-a-basic-website">Discussion: Steps for creating a basic website</h2>
+
+<p>The process for creating a website is not going to be exactly the same for every project and can vary based on your personal preferences and work flow but here are is a general checklist you can follow when setting up a new basic web project.</p>
+
+<ol>
+  <li>create project folders (i.e. css &amp; image folders, index.html etc)</li>
+  <li>add base HTML tags (required HTML tags for all web pages)</li>
+  <li>add some content (as much “real” content as possible to give the page context)</li>
+  <li>add base CSS (i.e. fixes like the clearfix hack and box-model fix)</li>
+  <li>add generic/general CSS (i.e. reset stylesheet or your own CSS to reset the default styles to your liking)</li>
+  <li>add page layout CSS and global page styles like font/text styles, colours and “content wrappers”</li>
+  <li>add specific styles as needed (i.e. styles specific just to the header area), working on one portion at a time</li>
+  <li>add responsive styles</li>
+</ol>
+
+<p>Refactor as you go along, test and keep tweaking!</p>
+
+<blockquote>
+  <p>Let’s look at how we can use Emmet to speed up our work flow.</p>
+
+  <p>Refer to Lesson 0 for notes on adding Emmet and other packages to your editor.</p>
+</blockquote>
+
+<h2 id="javascript-vs-jquery">JavaScript vs jQuery</h2>
+
+<h3 id="what-is-javascript">What is JavaScript?</h3>
+<p>JavaScript controls the <strong>behavior</strong> of your web page. It allows you to do things such as animate items, hide or show items, react to user input and even process data. Basically, if you need the user to do “something” first (i.e. scroll) to show a specific effect or even content, you’ll most likely need JavaScript.</p>
+
+<p>Here’s what JavaScript looks like:</p>
+
+<pre><code>var myVariable = "Hello World";
+function sayHello(){
+    alert(myVariable);
+}
+sayHello();
+</code></pre>
+
+<p>Unlike HTML &amp; CSS, JavaScript is a <em>programming</em> language, so the structure and syntax is more complex. JavaScript includes <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong> or <strong>control structures</strong> such as <strong>if</strong> statements or <strong>loops</strong>, which are the basic building blocks for many different programming languages.</p>
+
+<h3 id="what-is-jquery">What is jQuery?</h3>
+
+<p>jQuery <em>is</em> JavaScript.<br />
+jQuery is a cross-browser JavaScript <em>library</em> used to simplify your program.</p>
+
+<h4 id="javascript-example">JavaScript example</h4>
+
+<pre><code>document.getElementById("status")
+</code></pre>
+
+<h4 id="jquery-example">jQuery example</h4>
+
+<pre><code>$("#status")
+</code></pre>
+
+<p>Though it has its own syntax, it is still JavaScript at its core. Because of this, it’s important to have at least a basic understanding of JavaScript principles to make sense of how jQuery works.</p>
+
+<p>Let’s go through some high level JavaScript basics.  Some of these concepts may feel abstract but try to take note of the syntax. This will help to recognize the syntax patterns when using jQuery.</p>
+
+<h2 id="the-console">The Console</h2>
+
+<p>The console is a browser tool used to interact directly with a web page and is useful for testing small snippets of code or for debugging errors.  You can type commands and test code directly in the console as well.</p>
+
+<p>It can be accessed in the same area as when you’re inspecting elements except it’s under the <strong>Console</strong> tab.
+The console in Chrome looks like this:</p>
+
+<p><img src="/llc-digital-skills/assets/img/week5/console-open.jpg" alt="Chrome console" /></p>
+
+<p>Note the <code>&gt;</code> symbol. It is used by the console to represent a space for you to enter your input. In Chrome, there are a couple ways to open the Console tab.</p>
+
+<ul>
+  <li>keyboard shortcut: <strong>CMD + OPTION + J</strong>  (MAC) / <strong>CTRL + SHIFT + J</strong> (WINDOWS)</li>
+  <li>from the menu: <strong>View &gt; Developer &gt; JavaScript Console</strong></li>
+</ul>
+
+<h2 id="intro-to-javascript">Intro to JavaScript</h2>
+
+<h3 id="types-numbers">Types: Numbers</h3>
+
+<p>JavaScript values can be one of several different data <em>types</em>. The most basic is a number. JavaScript can also do math.</p>
+
+<p>Use <code>+</code> for addition, <code>-</code> for subtraction, <code>*</code> for multiplication and <code>/</code> for division.</p>
+
+<blockquote>
+  <p>Let’s try out a couple math exercises in the console.</p>
+</blockquote>
+
+<p>After the <code>&gt;</code> symbol, try adding any two numbers together using the <code>+</code> symbol and press the enter/return key.  The command gets <em>evaluated</em> and a value is returned back to you. You will see something like this:</p>
+
+<pre><code>&gt; 30 + 30
+&lt; 60
+</code></pre>
+
+<p>The <code>&gt;</code> symbol is used by the console to represent a space for your input.<br />
+The <code>&lt;</code> symbol is used by the console to represent the returned value of your input.</p>
+
+<blockquote>
+  <p>What do you think numbers and math can be used for in a website?</p>
+</blockquote>
+
+<h3 id="types-strings">Types: Strings</h3>
+
+<p>When you store any amount of text, like words or sentences, the <em>type</em> is a <strong>string</strong> value and must be contained in quotes.</p>
+
+<pre><code>&gt; "hello"
+&lt; "hello"
+</code></pre>
+
+<blockquote>
+  <p>When do you think a string can be used with JavaScript?</p>
+</blockquote>
+
+<h4 id="extra-resource">Extra Resource</h4>
+
+<p>There are more data types. View here: <a href="https://msdn.microsoft.com/library/7wkd9z69%28v=vs.94%29.aspx">Microsoft Developer Network Data Types (JavaScript)</a>.</p>
+
+<h3 id="comments">Comments</h3>
+
+<p>There are two ways to write comments.</p>
+
+<pre><code>// Single line comment.
+// Each line needs to include the two slashes.
+
+/* 
+Multi-line comment.
+Open and close the block
+with the same syntax as 
+CSS comments! 
+*/
+</code></pre>
+
+<h3 id="intro-to-functions">Intro to Functions</h3>
+
+<p>JavaScript generally executes one line at a time from top to bottom.</p>
+
+<p>Functions can be used to execute a repetitive set of instructions by grouping multiple commands into one name.  There are functions built into the language and you can also create your own.</p>
+
+<!-- Let&#39;s look at two built-in functions, `alert()` and `prompt()`. -->
+<p>Let's look at the <code>alert()</code> function.</p>
+
+<p>Note the syntax for functions, the parentheses <code>()</code>, must be included.</p>
+
+<p>Also, commands end with a semi-colon <code>;</code> to indicate that the instruction is complete.</p>
+
+<blockquote>
+  <p>Go back to the console and type in <code>alert();</code>, and see what happens!</p>
+</blockquote>
+
+<h3 id="functions-and-arguments">Functions and Arguments</h3>
+
+<!-- We&#39;ve seen now that the `alert()` and `prompt()` functions create a pop-up in the browser.  But the pop-ups are blank.  *Pass* an `argument` into these functions by adding a value *within* the parentheses `()`.  -->
+<p>We've seen now that the <code>alert()</code> function creates a pop-up in the browser.  But the pop-up is blank.  <em>Pass</em> an <code>argument</code> into this function by adding a value <em>within</em> the parentheses <code>()</code>.</p>
+
+<blockquote>
+  <p>Try this in the console:</p>
+
+  <pre><code>alert("Hello!");
+</code></pre>
+
+  <p>Try using the function again but with a different argument.</p>
+</blockquote>
+
+<!-- 
+    prompt("What day is it today?"); -->
+
+<p>Whatever value you put within the parentheses will get <em>passed</em> into the function. That way, you can re-use the function with different arguments.</p>
+
+<h3 id="make-your-own-functions">Make your own functions</h3>
+
+<p>To create your own functions, use the keyword <code>function</code> and give it a name.  See below for the syntax.</p>
+
+<pre><code>function nameOfFunction(){
+  // instructions go here
+}
+</code></pre>
+
+<p>When you declare/create a function, it won’t execute until you <em>call</em> it.</p>
+
+<pre><code>// Declare a function
+function myGreeting(){
+  alert("hello!");
+}
+
+// Call the function
+myGreeting();
+</code></pre>
+
+<h4 id="extra-resources">Extra resources</h4>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">MDN: Functions</a></li>
+  <li><a href="http://www.tutorialspoint.com/javascript/javascript_functions.htm">Tutorials Point</a></li>
+</ul>
+
+<h3 id="variables">Variables</h3>
+
+<p>Variables are used to store values. It's like a box; put something in it to store and take it out when you're ready to use it.</p>
+
+<p>Declare variables with the keyword <code>var</code> and a name of your choosing and <em>assign</em> a value. The name cannot contain spaces.</p>
+
+<pre><code>var myVariable = "Hello!";
+ |        |         |
+keyword   |      value given to variable
+          |
+        variable name created by you          
+</code></pre>
+
+<hr />
+<pre><code>// Declare the variable
+var favDay = "Saturday";
+
+// Pass the value into the function
+alert(favDay);
+</code></pre>
+
+<blockquote>
+  <p>Try out the above example in the console.  What do you think the alert message will be?</p>
+</blockquote>
+
+<h3 id="objects">Objects</h3>
+<p>If variables are boxes, objects can be thought of as a box with multiple compartments, like a bentobox!</p>
+
+<p>A basic variable only holds one value.</p>
+
+<p><img class="left" src="/llc-digital-skills/assets/img/week5/rice.png" alt="rice object example" /></p>
+
+<pre><code>/* declare the variable */
+var box;
+/* assign a value */
+box = "Rice";
+</code></pre>
+
+<hr class="clear" />
+
+<p>You can also declare and assign a variable and value in one line.</p>
+
+<pre><code>var box = "Rice";
+</code></pre>
+
+<p>An object holds a collection of values. Each value is a <strong>property</strong> of the object.</p>
+
+<pre><code>/* create a new object */
+var bentobox = {};
+</code></pre>
+
+<p><img class="left" src="/llc-digital-skills/assets/img/week5/bento-box.png" /></p>
+
+<pre><code>/* assign the values using "dot notation" */
+bentobox.main = "Teriyaki";
+bentobox.side = "Tempura";
+bentobox.salad = "Seaweed Salad";
+bentobox.soup = "Miso";
+bentobox.sauce = "Soya";
+bentobox.dessert = "Fruit";
+</code></pre>
+
+<hr class="clear" />
+
+<h3 id="almost-everything-in-js-is-an-object">(Almost) Everything in JS is an Object</h3>
+
+<p>Variables can also be treated as an object.  <em>Dot notation</em> can be used to set the property value of an object but can also be used to get information from an object using functions.</p>
+
+<p>When you apply a function to an oject, it’s called a <strong>method</strong>.</p>
+
+<p>For example, the <code>length()</code> method can be used to find the number of characters in a string.</p>
+
+<pre><code>var firstname = "Christina";
+alert(firstname.length);
+</code></pre>
+
+<p>You can even make the length command into a variable.</p>
+
+<pre><code>var firstname = "Christina";
+var numOfCharacters = firstname.length;
+alert(numOfCharacters);
+</code></pre>
+
+<h4 id="extra-resources-1">Extra resources:</h4>
+
+<ul>
+  <li><a href="http://www.2ality.com/2011/03/javascript-values-not-everything-is.html">JavaScript values: not everything is an object </a></li>
+  <li><a href="http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">The Secret Life of JavaScript Primitives</a></li>
+</ul>
+
+<h3 id="objects-functions-and-methods">Objects, Functions and Methods</h3>
+
+<p>What's the difference between these two?<br />
+The second one kind of looks like a function right?</p>
+
+<pre><code>alert();
+console.log();
+</code></pre>
+
+<p><code>alert()</code> is a <strong>function</strong> that works on its own.</p>
+
+<p><code>log()</code> is also a function as well but it is attached to the <code>console</code> <em>object</em>, using dot notation described in the previous section. So when a function is attached to an object, it’s considered a method. It will <strong>log a message</strong> into the <strong>console</strong>.</p>
+
+<p><code>console.log()</code> can be used to test and debug by outputting values in the console itself rather than using <code>alert()</code>. No more pesky pop-ups!</p>
+
+<pre><code>alert("hello!"); /* will show as a popup */
+console.log("hi!"); /* will show in only the console */
+</code></pre>
+
+<blockquote>
+  <p>Try passing an argument into both <code>alert();</code> and <code>console.log();</code> in the console and see the difference.</p>
+</blockquote>
+
+<h3 id="concatenation">Concatenation</h3>
+
+<p>When you store any amount of text, like words or sentences, the <em>type</em> is a <strong>string</strong> value and must be contained in quotes.</p>
+
+<pre><code>var myVariable = "Hello class!";
+</code></pre>
+
+<p>You can join strings together using the <code>+</code> symbol. This is called <strong>concatenation</strong>.  You join actual strings or strings contained in a variable.</p>
+
+<pre><code>var name = "Christina";
+var greeting = "Hello " + name + "!";
+</code></pre>
+
+<h3 id="resources">Resources</h3>
+
+<p>Here are some resources to dig deeper in to pure JavaScript.</p>
+
+<ul>
+  <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+  <li><a href="https://medium.com/@christinatruong/javascript-101-again-6f5c3de74165">JavaScript 101 — again</a></li>
+  <li><a href="http://www.scribd.com/doc/19457597/Javascript-Methods">JavaScript Methods</a></li>
+  <li><a href="https://www.codeschool.com/paths/javascript">Code School: JavaScript</a></li>
+</ul>
+
+<h2 id="functions--jquery">Functions &amp; jQuery</h2>
+
+<p>A function is one of the most powerful tools in JavaScript and the one you’re learning about today is:</p>
+
+<pre><code>jQuery()
+</code></pre>
+
+<p>Looks like a function right?</p>
+
+<p>Remember, jQuery is a JavaScript <em>library</em> and basically contains LOTS of prewritten functions/methods used to simplify your program.</p>
+
+<p>In most cases, it’s conventional to use the jQuery shortcut, <code>$</code>.</p>
+
+<p><code>jQuery()</code> is the same as <code>$()</code>.</p>
+
+<p>This syntax will be used for the remainder of the lessons.</p>
+
+<h2 id="using-jquery">Using jQuery</h2>
+
+<h3 id="how-to-select-an-html-objectelement">How to select an HTML object/element</h3>
+
+<p>A common use for jQuery is selecting an HTML object and applying an effect or action to it. The <code>$()</code> function takes a single value: a string containing a selector that is similar to how items are selected in CSS.</p>
+
+<p>To select all the paragraphs on the page, use <code>p</code> as the seletor. It is contained in quotes because it is a string.</p>
+
+<pre><code>$("p");
+</code></pre>
+
+<p>To select a class name, use the leading period, just like CSS.</p>
+
+<pre><code>$(".about");
+</code></pre>
+
+<p>To select an id name, use the number/hash symbol, just like CSS.</p>
+
+<pre><code>$("#about");
+</code></pre>
+
+<blockquote>
+  <p>What element will be selected in this example?</p>
+
+  <pre><code>$(".about p");
+</code></pre>
+</blockquote>
+
+<p>Once you select an object, you can apply one of many jQuery effects using various methods.  All the methods are documented here: <a href="http://api.jquery.com/category/effects/">http://api.jquery.com/</a></p>
+
+<p>Many of these effects allow you to add parameters to change the speed of the effect (numbers are in milliseconds).</p>
+
+<p>You can also chain them together to create multiple effects.</p>
+
+<pre><code>$(".box").fadeOut();
+$(".box").fadeOut(2000);
+$(".box").fadeOut(2000).fadeIn(500);
+</code></pre>
+
+<blockquote>
+  <p>Let’s try it out on CodePen: <a href="http://codepen.io/learningcode/pen/pjQePw#0">http://codepen.io/learningcode/pen/pjQePw#0</a></p>
+</blockquote>
+
+<h2 id="adding-javascriptjquery-to-your-files">Adding JavaScript/jQuery to your files</h2>
+
+<p>There are two ways to add JavaScript to a page.</p>
+
+<h3 id="inline">Inline</h3>
+<p>Similar to internal CSS, add a pair of <code>&lt;script&gt;&lt;/script&gt;</code> tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!</p>
+
+<p>However, it’s often recommended to add the scripts to bottom of the page, just before the closing <code>&lt;/body&gt;</code> tag, to allow all the page content to load first.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- a bunch of HTML here --&gt;
+  
+  &lt;script&gt;
+    // JavaScript here
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>You might see the <code>type</code> attribute included as well. This was required before HTML5 was introduced.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+  // JavaScript here
+&lt;/script&gt;
+</code></pre>
+
+<h4 id="jquery-vs-javascript">jQuery vs JavaScript</h4>
+
+<p>Including pure JavaScript into your web page only requires the code to be written between the <code>&lt;script&gt;&lt;/script&gt;</code> tags.</p>
+
+<pre><code>&lt;script&gt;
+  // JavaScript code here
+&lt;/script&gt;
+</code></pre>
+
+<p>In jQuery, the document needs to be “ready” first.</p>
+
+<pre><code>&lt;script&gt;    
+  $(document).ready(function(){
+     //jQuery code here
+  });
+&lt;/script&gt;
+</code></pre>
+
+<p>jQuery uses the <code>ready()</code> method to detect this state of readiness. This is a bit of a complex idea and has a lot of syntax to get used to. Just know that it’s <strong>required</strong> to make the jQuery code work properly. It only needs to be included once and add all the jQuery code in between the curly brackets <code>{}</code>.</p>
+
+<p>(In CodePen, you don’t have to add it because it’s already integrated into the tool.)</p>
+
+<p>Read more about <code>$( document ).ready()</code> <a href="http://learn.jquery.com/using-jquery-core/document-ready/">here</a>.</p>
+
+<h3 id="external">External</h3>
+<p>Again, just like CSS, you can also write JavaScript in a separate file.  To make it JavaScript file, name it using a <code>.js</code> file extension.  Link to it using the same <code>&lt;script&gt;&lt;/script&gt;</code> tag pair but add the <code>src</code> attribute.</p>
+
+<pre><code>&lt;script src="path/to/file.js"&gt;&lt;/script&gt; 
+</code></pre>
+
+<hr />
+<pre><code>&lt;script src="js/global.js"&gt;&lt;/script&gt; 
+</code></pre>
+
+<h4 id="jquery-vs-javascript-1">jQuery vs JavaScript</h4>
+<p>In the external file, you do <strong>not</strong> need to add the <code>&lt;script&gt;</code> tags but to right jQuery, the <code>$( document ).ready()</code> is still required.</p>
+
+<h2 id="referencing-jquerys-library">Referencing jQuery’s library</h2>
+
+<p>Similar to Google Fonts or any third party tool, you have to reference the file to access all code required to make to make it work.</p>
+
+<p><strong>Option 1</strong> - Download and include the files locally</p>
+
+<p><a href="http://jquery.com/download/">Download</a> the latest version of jQuery and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.</p>
+
+<p>Use the <code>&lt;script&gt;</code> tag to reference the file but in the src, link to where the file is saved in your project’s directory and the <em>exact file name</em>.  Make sure to add it <em>before</em> your custom JavaScript file.</p>
+
+<pre><code>&lt;script src="js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><strong>Option 2</strong> - Use a CDN</p>
+
+<p>CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the <a href="http://jquery.com/download/">Downloads</a> page.</p>
+
+<pre><code>&lt;script src="//code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Be sure to include the http:// when viewing the site locally (on your computer).</p>
+
+<pre><code>&lt;script src="http://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<blockquote>
+  <h2 id="exercise">Exercise</h2>
+
+  <p>Practice creating a project with all three components: HTML, CSS, jQuery.
+Take the HTML, CSS and jQuery snippets from the last <a href="http://codepen.io/learningcode/pen/pjQePw#0">CodePen</a> example and turn them into local project files.</p>
+
+  <ol>
+    <li>Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)</li>
+    <li>Link the CSS &amp; JS files to the HTML file.</li>
+    <li>Reference the jQuery library file to make sure your jQuery code with work.</li>
+  </ol>
+
+  <p><strong>Bonus:</strong> <br />
+Try adding more HTML elements and practice selecting elements an applying jQuery effects to it.</p>
+</blockquote>
+
+<h4 id="resources-1">Resources</h4>
+
+<ul>
+  <li><a href="http://api.jquery.com/category/selectors/">jQuery Selectors</a></li>
+  <li><a href="http://api.jquery.com/category/effects/">jQuery Effects</a></li>
+</ul>
+
+<h2 id="jquery-click-events">jQuery Click Events</h2>
+
+<p>Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control <em>when</em> the effects happen insted of being executed right away.</p>
+
+<p>Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.</p>
+
+<blockquote>
+  <p>When would this effect be useful?</p>
+</blockquote>
+
+<h4 id="syntax">Syntax</h4>
+
+<pre><code>$( "selector" ).click(function() {
+  // code to be executed on click
+});
+</code></pre>
+
+<p>Let’s try this out in another <a href="http://codepen.io/learningcode/pen/WQYpxG">CodePen example</a>.</p>
+
+<h4 id="resource">Resource</h4>
+
+<p><a href="http://api.jquery.com/click/">http://api.jquery.com/click/</a></p>
+
+<p>~ end ~</p>
+
+
+      </article>
+    </main>
+
+      <footer>
+    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+  </footer>
+  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/llc-digital-skills/assets/js/custom.js"></script>
+</body>
+</html>
+
+
