@@ -2,7 +2,7 @@
 layout: lessons
 week: 5
 lesson: 1
-description: HTML/CSS Review & Intro to jQuery
+description: Intro to JavaScript & jQuery
 permalink: /week5/lesson1/
 class: week5-1
 ---

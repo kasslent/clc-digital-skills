@@ -15,14 +15,20 @@
     display: none;
   }
   
-  p {
-    margin: 10px 0 4px;
+  h1 {
+    margin: 0;
     text-transform: uppercase;
-    color: $gray-darker;
+    font-size: $font-size-xsml;
+  }
+  h2 {
+    border-bottom: 1px solid $gray;
+    margin-top: 0;
+    padding-bottom: 2px;
+    font-size: $font-size-base;
   }
   ul {
     padding-left: 16px;
-    margin: 0;
+    margin: 10px 0 0;
   }
   &.fixed {
     position: fixed;
@@ -59,7 +65,7 @@
 article {
   max-width: 66%;
   
-  @media (max-width:800px){
+  @media (max-width: 800px){
     max-width: 100%;
   }
   h2 {
