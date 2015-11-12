@@ -16,9 +16,7 @@ $(function(){
 
     newLine =
       "<li>" +
-        "<a href='" + link + "'>" +
-          title +
-        "</a>" +
+        "<a href='" + link + "'>" + title + "</a>" +
       "</li>";
 
     ToC += newLine;

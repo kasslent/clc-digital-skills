@@ -438,7 +438,7 @@ CDNs can offer a performance benefit by hosting jQuery on servers spread across 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/custom.js"></script>
 
-Be sure to include the http:// when viewing the site locally (on your computer).
+Be sure to include the `http://` when viewing the site locally (on your computer).
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
@@ -452,7 +452,7 @@ Be sure to include the http:// when viewing the site locally (on your computer).
 > 1. Reference the jQuery library file to make sure your jQuery code with work.
 >
 >**Bonus:**   
->Try adding more HTML elements and practice selecting elements an applying jQuery effects to it. 
+>Try adding more HTML elements and practice selecting elements and applying jQuery effects to it. 
 
 ####Resources
 
