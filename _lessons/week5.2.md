@@ -54,13 +54,11 @@ If you want to get just a portion of the date, use a **method**. For example `ge
 >Then we'll discuss as a class.
 >Download the starter files for the exercise here: <a href="{{site.expath}}/week5/week5-exercise.zip" download>week5-exercise.zip</a>
 
-**Step 1:** In `index.html` add all your basic HTML tags.  We don't need any additional content just yet.
-
-**Step 2:** Reference the [jQuery](http://jquery.com/download/) file since this example will use a mixture of JavaScript and jQuery specific methods. Remember, you can add JavaScript anywhere but it's usually recommended to add it right before the closing `</body>` tag.
+**Step 1:** In **index.html**, reference the [jQuery](http://jquery.com/download/) file since this example will use a mixture of JavaScript and jQuery specific methods. Remember, you can add JavaScript anywhere but it's usually recommended to add it right before the closing `</body>` tag.
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-**Step 3:** An external `scripts.js` file is included in your exercise file. Link to it to the HTML page and add the "document ready" code snippet.  You can add a `console.log()` message to test it out.
+**Step 2:** An external `scripts.js` file is included in your exercise file. Link to it to the HTML page and add the "document ready" code snippet.  You can add a `console.log()` message to test it out.
   
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -71,11 +69,11 @@ If you want to get just a portion of the date, use a **method**. For example `ge
       console.log("it works!");
     });
 
-**Step 4:** Create a **variable** to *hold* the value of the `Date()` object.
+**Step 3:** Create a **variable** to *hold* the value of the `Date()` object.
     
     var currentYear = new Date().getFullYear();
     
-**Step 5:** Add your copyright content, in the `<footer>` and an id, class or some way to select the element to apply the date to.  In this example below, the `id="date"` can be used as the jQuery selector.
+**Step 4:** Add your copyright content, in the `<footer>` and an id, class or some way to select the element to apply the date to.  In this example below, the `id="date"` can be used as the jQuery selector.
     
     <p id="copyright">Copyright by Ladies Learning Code</p>
     
@@ -83,7 +81,7 @@ If you want to get just a portion of the date, use a **method**. For example `ge
     var currentYear = new Date().getFullYear();  
     $("#copyright")
     
-**Step 6:** We can use the jQuery `prepend()` method to add the date to the selected element. The description on jQuery's api says:  
+**Step 5:** We can use the jQuery `prepend()` method to add the date to the selected element. The description on jQuery's api says:  
 
 <blockquote class="quote">
   <p>Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.</p>
