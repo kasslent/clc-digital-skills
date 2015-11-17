@@ -330,6 +330,7 @@ There are <strong>many</strong> more ways to select elements such as position in
 <p><strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
 
 <div style="background:lightblue;">this is a div</div>
+
 <p><span style="background:lightgreen;">this is a span</span></p>
 
 <h3 id="css-display-property">CSS Display Property</h3>
@@ -492,6 +493,7 @@ border: 15px solid green;
 <div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
   <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
 </div>
+
 <div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
   <p>This example DOES have the border box fix.</p>
 </div>
@@ -557,7 +559,9 @@ Any element <em>after</em> the floated element will move up and flow around the 
 <p>On the element that comes <em>after</em> the last element to be floated can be used to <em>clear</em> the float using the property and value, <code>clear: both</code>.</p>
 
 <pre><code>&lt;div class="floated"&gt;floated element&lt;/div&gt;
+
 &lt;div&gt;Other content - will flow around floated content.&lt;/div&gt;
+
 &lt;div class="cleared"&gt;cleared element - will go back to natural stacking order&lt;/div&gt;
 </code></pre>
 
@@ -586,7 +590,9 @@ Any element <em>after</em> the floated element will move up and flow around the 
 
 <pre><code>&lt;div class="parent"&gt;
   &lt;div class="floated"&gt;floated element&lt;/div&gt;
+
   &lt;div class="floated"&gt;floated element&lt;/div&gt;
+
 &lt;/div&gt;
 </code></pre>
 
@@ -657,7 +663,9 @@ Any element <em>after</em> the floated element will move up and flow around the 
 
 <pre><code>&lt;div class="parent clearfix"&gt;
     &lt;div class="floated"&gt;floated element&lt;/div&gt;
+
     &lt;div class="floated"&gt;floated element&lt;/div&gt;
+
 &lt;/div&gt;
 </code></pre>
 
@@ -715,7 +723,7 @@ Any element <em>after</em> the floated element will move up and flow around the 
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
   </footer>
-  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
   <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
   <script src="/llc-digital-skills/assets/js/custom.js"></script>

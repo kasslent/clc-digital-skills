@@ -99,7 +99,10 @@ Since we want to add the date to the HTML, we can use the `currentYear` variable
 
 How can you add a space between the "2015" and the copyright symbol?
 
+This is just one way to add the date for this specific scenario. There are other jQuery methods such as `text()` or `append()` that can also be used to add text.
+
 >Discussion: What are some search techniques that can be used to figure out if and which jQuery method to use?
+
 
 ##Click event & an "active" menu
 

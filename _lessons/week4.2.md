@@ -338,6 +338,7 @@ As much as Google tries to understand intent (through initiatives like Hummingbi
 </div>
 
 
+
 ###Keyword usage
 
 - No more than 4-5% of the word count

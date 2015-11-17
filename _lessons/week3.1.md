@@ -272,6 +272,7 @@ Inline level HTML elements default behaviour:
 **Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
 
 <div style="background:lightblue;">this is a div</div>
+
 <span style="background:lightgreen;">this is a span</span>
 
 
@@ -365,6 +366,7 @@ First a width needs to be set. Then by setting the left & right values to `auto`
   <p>Auto aligned!</p>
 </div>
 
+
 But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?
 
 ![]({{site.baseurl}}/assets/img/week3/content-align.jpg)
@@ -409,6 +411,7 @@ Like padding and margin, a border can be added to a specific side of the element
   <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
+
 ##The Box Model Problem and Fix
 
 In CSS ,the relationship between the width, padding and border properties is not always straightforward.
@@ -426,9 +429,11 @@ But, there's a fix! Let's first compare how this works with and without the fix,
 <div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
   <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
 </div>
+
 <div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
   <p>This example DOES have the border box fix.</p>
 </div>
+
 
 The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.
 
@@ -490,8 +495,11 @@ You may notice that floats have the ability to affect the rest of the web page i
 On the element that comes *after* the last element to be floated can be used to *clear* the float using the property and value, `clear: both`.
     
     <div class="floated">floated element</div>
+
     <div>Other content - will flow around floated content.</div>
+
     <div class="cleared">cleared element - will go back to natural stacking order</div>
+
     
 ---
     .floated {
@@ -516,8 +524,11 @@ If there is no element following the floated elements, apply `overflow: hidden;`
 
     <div class="parent">
       <div class="floated">floated element</div>
+
       <div class="floated">floated element</div>
+
     </div>
+
     
 ---
     .parent {
@@ -581,8 +592,11 @@ This snippet can be added to your css file and added to the **parent** of the fl
 
     <div class="parent clearfix">
         <div class="floated">floated element</div>
+
         <div class="floated">floated element</div>
+
     </div>
+
 
 
 See the docmented clearfix hack changes here:  

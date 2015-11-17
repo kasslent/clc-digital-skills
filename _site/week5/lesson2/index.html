@@ -96,14 +96,12 @@ Then we’ll discuss as a class.
 Download the starter files for the exercise here: <a href="/llc-digital-skills/exercises/week5/week5-exercise.zip" download="">week5-exercise.zip</a></p>
 </blockquote>
 
-<p><strong>Step 1:</strong> In <code>index.html</code> add all your basic HTML tags.  We don’t need any additional content just yet.</p>
-
-<p><strong>Step 2:</strong> Reference the <a href="http://jquery.com/download/">jQuery</a> file since this example will use a mixture of JavaScript and jQuery specific methods. Remember, you can add JavaScript anywhere but it’s usually recommended to add it right before the closing <code>&lt;/body&gt;</code> tag.</p>
+<p><strong>Step 1:</strong> In <strong>index.html</strong>, reference the <a href="http://jquery.com/download/">jQuery</a> file since this example will use a mixture of JavaScript and jQuery specific methods. Remember, you can add JavaScript anywhere but it’s usually recommended to add it right before the closing <code>&lt;/body&gt;</code> tag.</p>
 
 <pre><code>&lt;script src="http://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<p><strong>Step 3:</strong> An external <code>scripts.js</code> file is included in your exercise file. Link to it to the HTML page and add the “document ready” code snippet.  You can add a <code>console.log()</code> message to test it out.</p>
+<p><strong>Step 2:</strong> An external <code>scripts.js</code> file is included in your exercise file. Link to it to the HTML page and add the “document ready” code snippet.  You can add a <code>console.log()</code> message to test it out.</p>
 
 <pre><code>&lt;script src="http://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
@@ -116,12 +114,12 @@ Download the starter files for the exercise here: <a href="/llc-digital-skills/e
 });
 </code></pre>
 
-<p><strong>Step 4:</strong> Create a <strong>variable</strong> to <em>hold</em> the value of the <code>Date()</code> object.</p>
+<p><strong>Step 3:</strong> Create a <strong>variable</strong> to <em>hold</em> the value of the <code>Date()</code> object.</p>
 
 <pre><code>var currentYear = new Date().getFullYear();
 </code></pre>
 
-<p><strong>Step 5:</strong> Add your copyright content, in the <code>&lt;footer&gt;</code> and an id, class or some way to select the element to apply the date to.  In this example below, the <code>id="date"</code> can be used as the jQuery selector.</p>
+<p><strong>Step 4:</strong> Add your copyright content, in the <code>&lt;footer&gt;</code> and an id, class or some way to select the element to apply the date to.  In this example below, the <code>id="date"</code> can be used as the jQuery selector.</p>
 
 <pre><code>&lt;p id="copyright"&gt;Copyright by Ladies Learning Code&lt;/p&gt;
 </code></pre>
@@ -131,7 +129,7 @@ Download the starter files for the exercise here: <a href="/llc-digital-skills/e
 $("#copyright")
 </code></pre>
 
-<p><strong>Step 6:</strong> We can use the jQuery <code>prepend()</code> method to add the date to the selected element. The description on jQuery’s api says:</p>
+<p><strong>Step 5:</strong> We can use the jQuery <code>prepend()</code> method to add the date to the selected element. The description on jQuery’s api says:</p>
 
 <blockquote class="quote">
   <p>Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.</p>
@@ -150,6 +148,8 @@ $("#copyright").prepend(currentYear);
 </code></pre>
 
 <p>How can you add a space between the “2015” and the copyright symbol?</p>
+
+<p>This is just one way to add the date for this specific scenario. There are other jQuery methods such as <code>text()</code> or <code>append()</code> that can also be used to add text.</p>
 
 <blockquote>
   <p>Discussion: What are some search techniques that can be used to figure out if and which jQuery method to use?</p>
@@ -198,7 +198,7 @@ $("#copyright").prepend(currentYear);
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
   </footer>
-  <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
   <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
   <script src="/llc-digital-skills/assets/js/custom.js"></script>

@@ -46,6 +46,7 @@ There are three `type` attribute values: `submit`, `button`, `reset`.
 </div>
 
 
+
 The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific `type` value.
 
 <pre><code>&lt;form method="POST" action="#"&gt;

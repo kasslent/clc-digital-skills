@@ -288,15 +288,19 @@ To create the page layout, the HTML could look something like this:
     <div>
       nav links here
     </div>
+
     <div>
       header content here
     </div>
+
     <div>
       about content here
     </div>
+
     <div>
       footer info here
     </div>
+
 
 
 <h3 class="clear">HTML5 Structural Elements</h3>
@@ -363,6 +367,7 @@ To decide which heading to use, think about how you would arrange an essay or bl
   <p>Final paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur minus libero ut voluptatum voluptates obcaecati doloribus saepe nobis ipsa natus, assumenda possimus, laudantium in, iure. </p>
 </div>
 
+
 Let's look at how we could describe this hierarchy using HTML.
 
 Prior to the HTML5 rules, using only one `<h1>` was recommended per page.  With the introduction of HTML5 *sectioning* tags, each part of the document that uses a sectioning tag now gets its *own* outline.
@@ -376,6 +381,7 @@ Prior to the HTML5 rules, using only one `<h1>` was recommended per page.  With 
       <p>There are many different types of apples...</p>
     </div>
 
+
     <div>
       <h2>Apple varieties</h2>
       <p>Paragraph.</p>
@@ -386,11 +392,13 @@ Prior to the HTML5 rules, using only one `<h1>` was recommended per page.  With 
       <h3>Red apple varieties</h3>
       <p>Paragraph.</p>
     </div>
+
     
     <div>
       <h2>Conclusion</h2>
       <p>Final paragraph.</p>
     </div>
+
     
 **HTML5 Heading Outline:**
 
@@ -513,6 +521,7 @@ The above code snippet will look like this in the browser:
   <p>Another paragraph.</p>
   <hr>
 </div>
+
 
 Prior to HTML5, self-closing tags had to including a forward slash like this:
 
