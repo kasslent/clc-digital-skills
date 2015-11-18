@@ -2,7 +2,7 @@
 layout: lessons
 week: 6
 lesson: 1
-description: Content Management Systems & WordPress
+description: CMS & Intro to WordPress
 permalink: /week6/lesson1/
 class: week6-1
 ---
@@ -182,8 +182,11 @@ Pages
 Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.
 
 To add categories, go to **Posts > Categories** or within the post itself.
+![]({{site.imgpath}}/week6/dashboard-categories-post.png)
 
 Sub-categories can also be created by selecting a Parent in the **Categories** menu.
+
+![]({{site.imgpath}}/week6/dashboard-categories.png)
 
 ###Tags
 Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:
@@ -200,7 +203,7 @@ Media
 * can also add media from within your pages and posts as well
 * this menu also shows a library of all uploaded media, added here or within the posts and pages
 
-##WordPress Theme
+##WordPress Themes
 
 A theme provides all of the graphical styles for your site. You can use existing themes from the WordPress theme directory, form theme developers or create your own.
 
