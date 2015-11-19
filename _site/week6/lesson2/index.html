@@ -41,14 +41,14 @@
       </nav>
       
       <article class="week6-2" >
-        <h1 id="more-about-wordpress">More About WordPress!</h1>
+        <h2 id="theme-development-options">Theme Development options</h2>
 
-<h2 id="theme-development-options">Theme Development options</h2>
+<p>There are three options for adding themes to your WordPress site.</p>
 
 <h3 id="option-1-free--premium-themes">Option 1: Free &amp; Premium Themes</h3>
 
 <ul>
-  <li>only pay for domain, hosting &amp; cost of theme (from free to a few hundred)</li>
+  <li>only pay for domain, hosting &amp; cost of theme (from free to ~ $300)</li>
   <li>does not require any coding (though you still have access to the codebase)</li>
   <li>includes some theme options that can be updated in the WordPress admin area</li>
 </ul>
@@ -66,11 +66,11 @@
 
 <ul>
   <li>built from scratch or from a starter template</li>
-  <li>requires a deeper knowledge of HTML, CSS, PHP or get really good at following the WordPress documentation!</li>
+  <li>requires a deeper knowledge of HTML, CSS, PHP or get really good at following the <a href="https://codex.wordpress.org/">WordPress documentation</a>!</li>
   <li>should develop locally using a local server</li>
 </ul>
 
-<p>We’ll be sticking to Option 1 for the remainder of this lesson but there are some extra <a href="#bonus-setting-up-a-local-server">resources and information</a> included at the end of this lesson for further exploration.</p>
+<p>We’ll be sticking to Option 1 for the remainder of this lesson but there are some extra <a href="#bonus-local-wordpress-theme-development">resources and information</a> included at the end of this lesson for further exploration.</p>
 
 <h2 id="choosing-a-theme">Choosing a Theme</h2>
 
@@ -99,14 +99,20 @@
 <p>Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select <strong>Save Changes</strong>!</p>
 
 <h2 id="adding-content">Adding content</h2>
+
+<blockquote>
+  <p>Open a post or page and try out some of the options listed below in the editor.</p>
+</blockquote>
+
 <p>When adding content into your <strong>Post</strong> or <strong>Page</strong>, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the <strong>Toolbar Toggle</strong> to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.</p>
+
+<p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week6/adding-content-wysiwyg.png" alt="" /></p>
 
-<p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.
-You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
-
 <h3 id="wordpress-and-html">WordPress and HTML</h3>
+
+<p>You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
 
 <p>In WordPress, you don’t need to add the <code>&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
 
@@ -126,7 +132,7 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
 <p>In posts and pages, the slug appears in the URL and is generated automatically based on the title. It can be changed manually to something different from the title but it’s best to keep them simple and relevant.</p>
 
-<p>Select Edit to change it manually.</p>
+<p>Select <strong>Edit</strong> to change it manually.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week6/dashboard-slug-automatic.png" alt="" /></p>
 
@@ -136,15 +142,20 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
 <p>Note that the <strong>WordPress.com</strong> version does not have an option to manually update the slug for categories and tags but the <strong>WordPress.org</strong> version does.</p>
 
-<p>Slugs can be found under the <strong>Post &gt; Categories or Post &gt; Tags</strong> menu. Though your tag &amp; category names can contain spaces and special characters, it will be converted to a dash for the slug to make it URL friendly.</p>
+<p>Slugs can be found under the <strong>Post &gt; Categories</strong> and <strong>Post &gt; Tags</strong> menu.</p>
+
+<p>Though your tag &amp; category names can contain spaces and special characters, it will be converted to a dash for the slug to make it URL friendly.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week6/dashboard-slugs-tags-categories.png" alt="" /></p>
 
 <h2 id="default-home-page-settings">Default Home page settings</h2>
 
-<p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content (e.g. page.php shows Page templates).</p>
+<p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content. These template files are also used to display just a specific <em>portion</em> of a page.</p>
 
-<p>Base on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
+<p><img src="/llc-digital-skills/assets/img/week6/wp-theme-files.jpg" alt="" /></p>
+
+<p><br />
+Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
 
 <p>To update these settings, follow these steps:</p>
 
@@ -155,12 +166,12 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
     <p>This page does not need any content because there is already a template file used to display the blog post listing.</p>
 
-    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code>http://yoursite.com/blog</code></p>
+    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code>http://yoursite.com/blog</code> or <code>http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
   </li>
   <li>
     <p>Change the settings</p>
 
-    <p>Under <strong>Settings &gt; Reading</strong>, select a page to show as the Front page (your homepage) and the blank page you created for the blog under Posts page.</p>
+    <p>Under <strong>Settings &gt; Reading</strong>, select whichever page you want to show as the <strong>Front page</strong> (your homepage) and the blank page you created for the blog under <strong>Posts page</strong>.</p>
 
     <p><img src="/llc-digital-skills/assets/img/week6/homepage-custom.jpg" alt="" /></p>
   </li>
@@ -186,16 +197,37 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
 <h2 id="editor-menu">Editor menu</h2>
 
-<p>[Add some stuff about this menu]</p>
+<p>The Editor menu (<strong>Appearance &gt; Editor</strong>) allows access to the theme files where you can add edits to the template files.</p>
+
+<p><strong>Be careful when editing these files.</strong></p>
+
+<p>Normally, it would be best practice to edit these files <em>locally</em> so any changes made won’t be “live” before it’s ready but since the Flywheel demo site is password protected, the general public won’t be able to view it.</p>
+
+<p><strong>Pro tip!</strong> Make a backup copy of the file before editing it in case you need to put it back!</p>
+
+<p><img src="/llc-digital-skills/assets/img/week6/wp-editor-menu.png" alt="" /></p>
 
 <h3 id="template-tags">Template tags</h3>
 
-<p>How do the template tags and files all work together? In the sydney theme folder, the header.php file contains a line of code that looks like this:</p>
+<p>WordPress uses <strong>template tags</strong> to pull data from the database and output it onto the page.  It is often mixed in with HTML so the data can be outputted into semantic HTML page layouts.</p>
+
+<p>Template tags are basically PHP functions (and look similar to JavaScript functions.) Note that WordPress (and most PHP developers) use the underscore naming convention and looks something like this:</p>
+
+<pre><code>template_tag()
+</code></pre>
+
+<p>Here’s a couple of common template tags:</p>
+
+<p><code>get_header()</code> - gets the header.php file and includes it in the current theme file<br />
+<code>the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
+
+<p><br />
+How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code>h2</code> heading.</p>
+
+<p><code>bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
 
 <pre><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
 </code></pre>
-
-<p><code>bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week6/site-title-settings.jpg" alt="" /></p>
 
@@ -207,7 +239,11 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
 <p>The core files can be downloaded here: <a href="https://wordpress.org/download/">https://wordpress.org/download/</a></p>
 
-<p>[add screenshot of core files]</p>
+<p>Though you can access all of these files, there are some that should never be edited. The majority of your edits will be contained in the <strong>wp-content</strong> folder since those files are specific to the WordPress theme.</p>
+
+<p>The one file outside of <strong>wp-content</strong> that you may need to edit is the <strong>wp-config.php</strong> file. It contains the website’s base configuration details, such as database connection information.</p>
+
+<p><img src="/llc-digital-skills/assets/img/week6/wp-core-files.jpg" alt="" /></p>
 
 <h3 id="setting-up-your-local-server">Setting up your local server</h3>
 
@@ -227,7 +263,14 @@ You can also edit or add your own HTML by selecting the <strong>Text</strong> ed
 
 <p><strong>Important!</strong> You will need to run a local server anytime you’re developing WordPress locally.</p>
 
-<p>https://en.support.wordpress.com/</p>
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://codex.wordpress.org/">WordPress Codex</a></li>
+  <li><a href="https://developer.wordpress.org/themes/getting-started/">WordPress Theme Development Handbook</a></li>
+  <li><a href="https://managewp.com/edit-wordpress-website">How to Edit Your WordPress Website (Without Hacking Core Files)</a></li>
+  <li><a href="https://codex.wordpress.org/Editing_wp-config.php">Editing wp-config.php</a></li>
+</ul>
 
       </article>
     </main>
