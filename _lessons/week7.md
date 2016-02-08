@@ -3,7 +3,7 @@ layout: lessons
 week: 7
 lesson: 1
 description: Domains, Hosting & FTP
-permalink: /week7.html
+permalink: week7.html
 class: week7
 ---
 

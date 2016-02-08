@@ -3,7 +3,7 @@ layout: lessons
 week: 5
 lesson: 1
 description: Intro to JavaScript & jQuery
-permalink: /week5-1.html
+permalink: week5-1.html
 class: week5-1
 ---
 

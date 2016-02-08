@@ -3,7 +3,7 @@ layout: lessons
 week: 3
 lesson: 2
 description: CSS Fundamentals & Intro to RWD
-permalink: /week3-2.html
+permalink: week3-2.html
 class: week3-2
 ---
 

@@ -1,0 +1,42 @@
+//------------------------------
+// VARIABLES
+//------------------------------
+
+
+// COLORS
+//------------------------------
+// LLC brand colours
+$raspberry:             #b109aa;
+$raspberry-light:       #ca62c9;
+$raspberry-lighter:     #d16dcd; 
+
+// grays
+$gray-darkest:          #1a1a1a;
+$gray-darker:           #333;
+$gray-dark:             #4d4d4d;
+$gray:                  #808080;
+$gray-light:            #bbb;
+$gray-lighter:          #eaefec;
+
+
+// TYPOGRAPHY
+//------------------------------
+$montserrat:            "Montserrat", serif;
+$quicksand:             "Quicksand", Helvetica, Arial, sans-serif;
+$sourcesanspro:         'Source Sans Pro', sans-serif;
+
+$serif:                 $montserrat;
+$serif-brand:           $montserrat;
+$sans-serif:            $sourcesanspro;
+$sans-serif-brand:      $quicksand;
+
+$accent-font:           $sans-serif-brand;
+$font-family-base:      $sans-serif;
+$font-family-base:      $serif-brand;
+$font-size-base:        1.65rem;
+$font-color-base:       $gray;
+$font-size-sml:         $font-size-base * 0.8;
+$font-size-xsml:        $font-size-base * 0.7;
+$line-height-base:      1.5;
+
+

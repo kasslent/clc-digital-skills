@@ -3,7 +3,7 @@ layout: lessons
 week: 1
 lesson: 1
 description: Intro to HTML
-permalink: /week1-1.html
+permalink: week1-1.html
 ---
 
 In 1989, Tim Berners-Lee, a physicist at CERN, began
@@ -542,7 +542,7 @@ This is what the `alt` information looks like, if the image doesn't load:
 
     <img src="path/to/image/file" alt="description of image">
     
-<img src="/fakepath/fake.jpg" alt="description of image">
+    <img src="/fakepath/fake.jpg" alt="description of image">
 
 ###Image file types
 

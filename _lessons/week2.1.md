@@ -3,7 +3,7 @@ layout: lessons
 week: 2
 lesson: 1
 description: Design Theory
-permalink: /week2-1.html
+permalink: week2-1.html
 ---
 
 

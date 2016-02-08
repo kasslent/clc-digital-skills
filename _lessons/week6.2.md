@@ -3,7 +3,7 @@ layout: lessons
 week: 6
 lesson: 2
 description: Intro to WordPress
-permalink: /week6-2.html
+permalink: week6-2.html
 class: week6-2
 ---
 

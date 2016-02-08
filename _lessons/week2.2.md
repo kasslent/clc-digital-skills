@@ -3,7 +3,7 @@ layout: lessons
 week: 2
 lesson: 2
 description: Design & the Browser
-permalink: /week2-2.html
+permalink: week2-2.html
 ---
 
 

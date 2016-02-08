@@ -9,9 +9,8 @@ url: " " # the base hostname & protocol for your site
 twitter: learningcode
 slack: digitalskills
 facebook: ladieslearningcode
-expath: /llc-digital-skills/exercises # path to exercise folder
-imgpath: /llc-digital-skills/assets/img # path to image folder
-  
+
+
 # Build settings
 markdown: kramdown
 style: debug
@@ -19,3 +18,14 @@ collections:
   lessons:
     output: true
     permalink: lessons/:path/
+
+
+#File paths
+css-global: assets/css/styles.css # global CSS file
+css-syntax: assets/css/highlightjs/github.css # syntax highlighter CSS
+js-global: assets/js/global.js # global JS file
+js-syntax: assets/js/highlight.pack.js # syntax highlighter JS
+js-waypoints: assets/js/jquery.waypoints.min.js # Waypoints library
+favicon: assets/img/favicon.ico # LLC logo favicon
+img-path: assets/img # path to image folder
+exercises-path: exercises/week{{page.week}}/ # path to exercise folder

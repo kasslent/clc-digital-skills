@@ -4,21 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Ladies Learning Code</title>
-  <meta name="description" content="Enhance your digital and technology skills. Unleash your creative potential with our 7-week part-time program!
-">
+  <title>Week3.2</title>
+  <meta name="description" content="Fluid &amp; Flexible Web Pages">
   
   <!-- Syntax highlighting with highlightjs.org -->
-  <link rel="stylesheet" href="/llc-digital-skills/css/highlightjs/github.css">
-  <script src="/llc-digital-skills/assets/js/highlight.pack.js"></script>
+  <script src=""></script>
   <script>hljs.initHighlightingOnLoad();</script>
-    
-  <link rel="stylesheet" href="/llc-digital-skills/css/styles.css">
-  <link rel="canonical" href=" /llc-digital-skills/week3-2.html">
-  <link rel="alternate" type="application/rss+xml" title="Ladies Learning Code" href=" /llc-digital-skills/feed.xml" />
-  <link rel="icon" type="image/png" href="/llc-digital-skills/assets/img/favicon.ico">
+  <link rel="stylesheet" href="">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="">
 </head>
 <body class="week3-2">
   <header>
@@ -51,7 +49,7 @@
 
 <p>Use percentages to create flexible images.</p>
 
-<pre><code>img {
+<div class="highlighter-rouge"><pre class="highlight"><code>img {
   /* image stretches full width of its container */
   width: 100%;
 
@@ -60,65 +58,70 @@
   max-width: 100%;
 }
 </code></pre>
+</div>
 
-<p><a href="/llc-digital-skills/exercises/week3/fluid-images/index.html">See example here</a>.</p>
+<p><a href="/week3/fluid-images/index.html">See example here</a>.</p>
 
 <h2 id="background-images">Background images</h2>
 
-<p>So far we’ve used <code>background</code> for colours but it can also be used for setting background <em>images</em>.</p>
+<p>So far we’ve used <code class="highlighter-rouge">background</code> for colours but it can also be used for setting background <em>images</em>.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 background-image: url(path/to/file.jpg); 
 
 /* shorthand */
 background: url(path/to/file.jpg); 
 </code></pre>
+</div>
 
 <h3 id="files-paths--folder-directories">Files Paths &amp; Folder Directories</h3>
 
-<pre><code>project-folder
+<div class="highlighter-rouge"><pre class="highlight"><code>project-folder
   |---css (folder)
        |---styles.css
   |---images (folder) 
        |---picture.jpg
   |---index.html    
 </code></pre>
+</div>
 
 <p>To find the correct file path to add a background image using CSS, the starting point is <strong>styles.css</strong>.  If your folder directory looks like the above example, the steps to follow are:</p>
 
 <ol>
-  <li>navigate up and out of the css folder (<code>../</code>)</li>
-  <li>go into the images folder (<code>../images/</code>)</li>
-  <li>image file name (<code>../images/picture.jpg</code>)</li>
+  <li>navigate up and out of the css folder (<code class="highlighter-rouge">../</code>)</li>
+  <li>go into the images folder (<code class="highlighter-rouge">../images/</code>)</li>
+  <li>image file name (<code class="highlighter-rouge">../images/picture.jpg</code>)</li>
 </ol>
 
 <hr />
-<pre><code>background-image: url(../images/picture.jpg); 
+<div class="highlighter-rouge"><pre class="highlight"><code>background-image: url(../images/picture.jpg); 
 </code></pre>
+</div>
 
-<p>To navigate <em>up and out</em> of a folder, the syntax is always <code>../</code>  to represent moving up the directory by <em>one</em> folder, regardless of the folder name.</p>
+<p>To navigate <em>up and out</em> of a folder, the syntax is always <code class="highlighter-rouge">../</code>  to represent moving up the directory by <em>one</em> folder, regardless of the folder name.</p>
 
-<h3 id="background-repeat"><code>background-repeat</code></h3>
+<h3 id="background-repeat"><code class="highlighter-rouge">background-repeat</code></h3>
 
 <p>If the image file is <em>smaller</em> than the element with the background image applied to it, the image will automatically repeat to fill up the space.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week3/background-repeat.jpg" alt="" /></p>
 
-<p>To keep the image from repeating, use the <code>background-repeat</code> property <strong>or</strong> add it to the shorthand <code>background</code> property.</p>
+<p>To keep the image from repeating, use the <code class="highlighter-rouge">background-repeat</code> property <strong>or</strong> add it to the shorthand <code class="highlighter-rouge">background</code> property.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/picture.jpg) no-repeat; 
 
 /* longhand */
 background-image: url(../images/picture.jpg); 
 background-repeat: no-repeat;
 </code></pre>
+</div>
 
-<h3 id="background-attachment"><code>background-attachment</code></h3>
+<h3 id="background-attachment"><code class="highlighter-rouge">background-attachment</code></h3>
 
-<p>When the page scrolls, all the content scrolls with it including the background image.  Adding <code>background-attachment: fixed;</code> will change that.</p>
+<p>When the page scrolls, all the content scrolls with it including the background image.  Adding <code class="highlighter-rouge">background-attachment: fixed;</code> will change that.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/picture.jpg) no-repeat fixed; 
 
 /* longhand */
@@ -126,51 +129,56 @@ background-image: url(../images/picture.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 </code></pre>
+</div>
 
 <h3 id="background-size">Background-size</h3>
 
-<p>CSS3 introduced the <code>background-size</code> property which can be used to change the size. The syntax is:</p>
+<p>CSS3 introduced the <code class="highlighter-rouge">background-size</code> property which can be used to change the size. The syntax is:</p>
 
-<pre><code>background-size: width height;
+<div class="highlighter-rouge"><pre class="highlight"><code>background-size: width height;
 </code></pre>
+</div>
 
-<p>The default values for width and height are <code>auto</code> and retains the original image dimensions. If only one value is defined, it is assumed to be the <code>width</code>.</p>
+<p>The default values for width and height are <code class="highlighter-rouge">auto</code> and retains the original image dimensions. If only one value is defined, it is assumed to be the <code class="highlighter-rouge">width</code>.</p>
 
 <p>There are several sizing dimensions: pixels, percentages and keywords.</p>
 
-<p><code>background-size</code> is the longhand property.</p>
+<p><code class="highlighter-rouge">background-size</code> is the longhand property.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 background-image: url(../images/background-1.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: 50%;
 background-size: 100%;
 </code></pre>
+</div>
 
-<p>To include it in the shorthand <code>background</code> property, it <strong>must</strong> be included after <code>background-position</code>, separated with the <code>/</code> character.</p>
+<p>To include it in the shorthand <code class="highlighter-rouge">background</code> property, it <strong>must</strong> be included after <code class="highlighter-rouge">background-position</code>, separated with the <code class="highlighter-rouge">/</code> character.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
 </code></pre>
+</div>
 
-<p><strong>Important</strong>: If no <code>background-position</code> value is being used, <code>background-size</code> will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.</p>
+<p><strong>Important</strong>: If no <code class="highlighter-rouge">background-position</code> value is being used, <code class="highlighter-rouge">background-size</code> will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.</p>
 
-<pre><code>background: url(../images/background-1.jpg) no-repeat fixed 50%;
+<div class="highlighter-rouge"><pre class="highlight"><code>background: url(../images/background-1.jpg) no-repeat fixed 50%;
 background-size: 100%;
 </code></pre>
+</div>
 
-<p><code>background-size</code> also accepts keyword values, <code>contain</code> and <code>cover</code>.</p>
+<p><code class="highlighter-rouge">background-size</code> also accepts keyword values, <code class="highlighter-rouge">contain</code> and <code class="highlighter-rouge">cover</code>.</p>
 
 <ul>
-  <li><code>contain</code> scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions</li>
-  <li><code>cover</code> scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped</li>
+  <li><code class="highlighter-rouge">contain</code> scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions</li>
+  <li><code class="highlighter-rouge">cover</code> scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped</li>
 </ul>
 
 <blockquote>
   <h2 id="exercise-images--background-images">Exercise: images &amp; background images</h2>
 
-  <p>Download <a href="/llc-digital-skills/exercises/week3/week3-lesson2.zip" download="">today’s exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
+  <p>Download <a href="/week3/week3-lesson2.zip" download="">today’s exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
 Uncomment each property, change some values and see what happens!</p>
 </blockquote>
 
@@ -182,9 +190,9 @@ Uncomment each property, change some values and see what happens!</p>
 
 <h2 id="display-vs-floats">Display vs Floats</h2>
 
-<p>In our previous lesson, we talk about inline &amp; block elements and how to use the <code>display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
+<p>In our previous lesson, we talk about inline &amp; block elements and how to use the <code class="highlighter-rouge">display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
 
-<p><code>float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
+<p><code class="highlighter-rouge">float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
 
 <p>So which one is better for page layouts?</p>
 
@@ -198,7 +206,7 @@ Uncomment each property, change some values and see what happens!</p>
 
 <h4 id="pre-html5">Pre-HTML5</h4>
 
-<pre><code>&lt;div class="nav"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="nav"&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -207,10 +215,11 @@ Uncomment each property, change some values and see what happens!</p>
   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <h4 id="html5">HTML5</h4>
 
-<pre><code>&lt;nav&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -219,6 +228,7 @@ Uncomment each property, change some values and see what happens!</p>
   &lt;/ul&gt;
 &lt;/nav&gt;
 </code></pre>
+</div>
 
 <blockquote class="note">
   <p>This is another topic where there is much debate. Are lists necessary for accessibility and semantics or should links be used on it’s own?  You can read more about it <a href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/">here</a> and <a href="http://www.sitepoint.com/are-navigation-lists-necessary/">here</a>.</p>
@@ -226,10 +236,10 @@ Uncomment each property, change some values and see what happens!</p>
 
 <p>To style a list navigation, first you’ll need to reset the list styles.  You’ll probably also want to remove the default underline of the links.</p>
 
-<p>Putting a background color on the <code>ul</code> will help to visually see the space the element is occupying.
+<p>Putting a background color on the <code class="highlighter-rouge">ul</code> will help to visually see the space the element is occupying.
 Using the HTML5 markup example above, the CSS will looks like this:</p>
 
-<pre><code>nav a {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
   text-decoration: none; /* remove default underline */
 }
 nav ul {
@@ -239,22 +249,25 @@ nav ul {
   background: red;
 }
 </code></pre>
+</div>
 
-<p>Using <code>display</code>, there are two values that can be used to align the list items horizontally.</p>
+<p>Using <code class="highlighter-rouge">display</code>, there are two values that can be used to align the list items horizontally.</p>
 
-<p><code>inline</code> will line up side by side but does not accept height and width values.</p>
+<p><code class="highlighter-rouge">inline</code> will line up side by side but does not accept height and width values.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline;
 }
 </code></pre>
+</div>
 
-<p><code>inline-block</code> will also display the items side by side but accepts height and width values.</p>
+<p><code class="highlighter-rouge">inline-block</code> will also display the items side by side but accepts height and width values.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline-block; 
 } 
 </code></pre>
+</div>
 
 <blockquote>
   <p>Which one is better to use?</p>
@@ -264,14 +277,15 @@ nav ul {
 
 <p><img src="/llc-digital-skills/assets/img/week3/horizontal-nav-no-padding.png" alt="" /></p>
 
-<p>Put some padding on the link, <code>a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
+<p>Put some padding on the link, <code class="highlighter-rouge">a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
 
-<pre><code>nav a {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
   text-decoration: none;
   display: inline-block; /* add block behavior to use padding */
   padding: 10px;
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Use this <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> to explore these styles before moving on.</p>
@@ -280,61 +294,66 @@ nav ul {
 <h3 id="getting-to-know-your-options">Getting to know your options</h3>
 <p>If you put a background color on the list item, you’ll see an extra space between the elements.  Here’s the quirk!</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline-block; 
   background: lightblue;
 }
 </code></pre>
+</div>
 
 <p><img src="/llc-digital-skills/assets/img/week3/horizontal-nav-display.png" alt="" /></p>
 
-<p>The extra space is caused by the line break in the HTML used to put the <code>&lt;li&gt;</code> on separate lines.</p>
+<p>The extra space is caused by the line break in the HTML used to put the <code class="highlighter-rouge">&lt;li&gt;</code> on separate lines.</p>
 
-<p>If you use <code>float</code> instead of <code>display</code>, you won’t see this quirk.</p>
+<p>If you use <code class="highlighter-rouge">float</code> instead of <code class="highlighter-rouge">display</code>, you won’t see this quirk.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
     float: left;
     background: lightblue;
 }
 </code></pre>
+</div>
 
 <p><img src="/llc-digital-skills/assets/img/week3/horizontal-nav-float.png" alt="" /></p>
 
-<p>But, float has it’s own quirks too. What happened to the red background in the <code>ul</code>?</p>
+<p>But, float has it’s own quirks too. What happened to the red background in the <code class="highlighter-rouge">ul</code>?</p>
 
-<p>Let’s tackle the <code>display</code> example first.</p>
+<p>Let’s tackle the <code class="highlighter-rouge">display</code> example first.</p>
 
 <h2 id="horizontal-navigation-display">Horizontal navigation: Display</h2>
 
-<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code>text-align: center;</code> to automatically center align the list items containing the links.</p>
+<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code class="highlighter-rouge">text-align: center;</code> to automatically center align the list items containing the links.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   text-align: center;
 }
 </code></pre>
+</div>
 
 <p><img src="/llc-digital-skills/assets/img/week3/horizontal-nav-centered.png" alt="" /></p>
 
 <p>Let’s say you wanted 4 equal width boxes for the nav.  You could set the list items to a width of 25%.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   background: lightblue;
   width: 25%;
 }
 </code></pre>
+</div>
 
-<p>However, the space between the <code>&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
+<p>However, the space between the <code class="highlighter-rouge">&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
 <img src="/llc-digital-skills/assets/img/week3/horizontal-nav-spaces.jpg" alt="" /></p>
 
 <p>You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here’s another fix.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   font-size: 0; /* removes space between li elements */
 }
 nav ul li {
   font-size: 16px; /* reset the inherited font-size */
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Let’s go back to the previous <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> and try this out.</p>
@@ -351,21 +370,23 @@ nav ul li {
 
 <p>No worries, just remember to clear your floats! Since this example requires all the list items to float, you’ll need to <em>self-clear</em> the floated elements.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   overflow: hidden;
 }
 </code></pre>
+</div>
 
-<p>(You can also use the “clearfix hack” instead of <code>overflow</code>.)</p>
+<p>(You can also use the “clearfix hack” instead of <code class="highlighter-rouge">overflow</code>.)</p>
 
 <p>With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   width: 25%;
 }
 </code></pre>
+</div>
 
-<p>However, <code>text-align: center;</code> will only center align the text <em>within</em> the <code>&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code>display</code> example.</p>
+<p>However, <code class="highlighter-rouge">text-align: center;</code> will only center align the text <em>within</em> the <code class="highlighter-rouge">&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code class="highlighter-rouge">display</code> example.</p>
 
 <blockquote>
   <p>Let’s try these techniques out in this <a href="http://codepen.io/learningcode/pen/qOYbYX?editors=110#0">CodePen</a>.</p>
@@ -383,9 +404,9 @@ nav ul li {
 Remember, every HTML element is essentially just a “box” so the techniques discussed above are not limited to just navigations using a list.</p>
 
 <h2 id="css-position-property">CSS Position property</h2>
-<p>The <code>position</code> property can also be used to lay out HTML elements and has five different values: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> and <code>inherit</code>.</p>
+<p>The <code class="highlighter-rouge">position</code> property can also be used to lay out HTML elements and has five different values: <code class="highlighter-rouge">static</code>, <code class="highlighter-rouge">relative</code>, <code class="highlighter-rouge">absolute</code>, <code class="highlighter-rouge">fixed</code> and <code class="highlighter-rouge">inherit</code>.</p>
 
-<p><code>position</code> is also used with a combination of box <em>offset properties</em>, <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code>, to specify the direction and measurements for the positioned elements.</p>
+<p><code class="highlighter-rouge">position</code> is also used with a combination of box <em>offset properties</em>, <code class="highlighter-rouge">top</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">bottom</code> and <code class="highlighter-rouge">left</code>, to specify the direction and measurements for the positioned elements.</p>
 
 <h3 id="position-static">position: static;</h3>
 
@@ -398,7 +419,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <h3 id="position-relative">position: relative;</h3>
 
 <ul>
-  <li>has the same behaviour as <code>static</code> <strong>but</strong> box offset properties can be applied to it</li>
+  <li>has the same behaviour as <code class="highlighter-rouge">static</code> <strong>but</strong> box offset properties can be applied to it</li>
   <li>use this to nudge the element within its stacked order</li>
 </ul>
 
@@ -407,7 +428,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <ul>
   <li>can be positioned anywhere, relative to its <strong>nearest positioned ancestor</strong> element</li>
   <li>if no ancestor element is positioned, it will be relative to the body</li>
-  <li>to contain the element, use <code>position: relative</code> in a parent selector</li>
+  <li>to contain the element, use <code class="highlighter-rouge">position: relative</code> in a parent selector</li>
 </ul>
 
 <h3 id="position-fixed">position: fixed;</h3>
@@ -435,7 +456,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <blockquote>
   <h2 id="exercise-position-fixed-nav">Exercise: Position Fixed nav</h2>
 
-  <p>Go back to the <strong>project</strong> folder included in today’s exercise files and try to make the navigation fixed to the top of the page using <code>position</code>.</p>
+  <p>Go back to the <strong>project</strong> folder included in today’s exercise files and try to make the navigation fixed to the top of the page using <code class="highlighter-rouge">position</code>.</p>
 </blockquote>
 
 <h2 id="intro-to-responsive-web-design">Intro to Responsive Web Design</h2>
@@ -447,7 +468,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <p><a href="http://mediaqueri.es">mediaqueri.es</a> houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.</p>
 
 <p><img src="/llc-digital-skills/assets/img/week3/rwd-example.png" alt="" />
-Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (<code>1024px x 768px</code> or <code>1280px x 1024px</code>).</p>
+Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (<code class="highlighter-rouge">1024px x 768px</code> or <code class="highlighter-rouge">1280px x 1024px</code>).</p>
 
 <p>If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version.</p>
 
@@ -455,21 +476,22 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <h2 id="viewport-meta-tag">Viewport Meta Tag</h2>
 
-<p>The viewport meta tag is <strong>required</strong> in the <code>&lt;head&gt;</code> of the HTML document to ensure that the page responds on mobile devices.</p>
+<p>The viewport meta tag is <strong>required</strong> in the <code class="highlighter-rouge">&lt;head&gt;</code> of the HTML document to ensure that the page responds on mobile devices.</p>
 
 <p>If you forget to include this tag, it will <strong>not</strong> render properly on a mobile device.</p>
 
-<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 </code></pre>
+</div>
 
 <ul>
-  <li><code>name=”viewport”</code> differentiates it from other meta tags</li>
-  <li><code>viewport</code> gives the browser information about the sizing abilities of the site</li>
-  <li><code>content</code> provides info about the viewport, separate key value pairs with a comma</li>
-  <li><code>width=value</code> sets the width of the web page</li>
-  <li><code>initial-scale</code> is the zoom value at which the site is zoomed in/out by default</li>
-  <li><code>user-scalable=no</code> (not shown in example tag above) will limit users from being able to zoom in</li>
-  <li><code>minimum-scale, maximum-scale</code> will limit how far in or out a user is allowed to scale/zoom</li>
+  <li><code class="highlighter-rouge">name=”viewport”</code> differentiates it from other meta tags</li>
+  <li><code class="highlighter-rouge">viewport</code> gives the browser information about the sizing abilities of the site</li>
+  <li><code class="highlighter-rouge">content</code> provides info about the viewport, separate key value pairs with a comma</li>
+  <li><code class="highlighter-rouge">width=value</code> sets the width of the web page</li>
+  <li><code class="highlighter-rouge">initial-scale</code> is the zoom value at which the site is zoomed in/out by default</li>
+  <li><code class="highlighter-rouge">user-scalable=no</code> (not shown in example tag above) will limit users from being able to zoom in</li>
+  <li><code class="highlighter-rouge">minimum-scale, maximum-scale</code> will limit how far in or out a user is allowed to scale/zoom</li>
 </ul>
 
 <h2 id="media-queries">Media queries</h2>
@@ -478,16 +500,17 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <p>Basic media query:</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   /* CSS for that screen size goes here */
 }
 </code></pre>
+</div>
 
 <p>The above example targets a browser with the maximum width of 940px (anything equal or less than 940px).</p>
 
 <p>All rules for a specific screen size is required to be nested <em>within</em> the media query.</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   body {
     background: red;
   }
@@ -496,27 +519,30 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
   }
 }
 </code></pre>
+</div>
 
-<p>You can also use <code>min-width</code> in media queries.</p>
+<p>You can also use <code class="highlighter-rouge">min-width</code> in media queries.</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   /* any screen 940px and below */
 }
 @media (min-width: 941px) {
   /* any screen 941px and above */
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Why do you think 941px was used for min-width instead of 940px?</p>
 </blockquote>
 
-<p>To limit the CSS to a range of pixel values, use a combination of <code>min-width</code> and <code>max-width</code>. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.</p>
+<p>To limit the CSS to a range of pixel values, use a combination of <code class="highlighter-rouge">min-width</code> and <code class="highlighter-rouge">max-width</code>. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.</p>
 
-<pre><code>@media (min-width: 768px) and (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-width: 768px) and (max-width: 940px) {
 
 }
 </code></pre>
+</div>
 
 <p>The above media query will only be applied when the width of the browser is greater or equal to 768px <strong>and</strong> less or equal to 940px.</p>
 
@@ -524,29 +550,32 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <p>Most responsive techniques target width but it is possible to target device heights.</p>
 
-<pre><code>@media (min-height: 568px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) {
   /* anything as high or higher than the iPhone 5 */
 }
 </code></pre>
+</div>
 
 <p>Height and width can also be used together in the media query:</p>
 
-<pre><code>@media (min-height: 568px) and (min-width:320px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) and (min-width:320px) {
   /* anything as high or higher than the iPhone 5 */
 }
 </code></pre>
+</div>
 
 <p><strong>Note:</strong> Relying on height-based media queries can be inconsistent and most of the time, it’s better to let the content flow downward as the width of the device gets smaller.</p>
 
 <h3 id="common-breakpoints">Common breakpoints</h3>
 
-<pre><code>320px — Mobile portrait
+<div class="highlighter-rouge"><pre class="highlight"><code>320px — Mobile portrait
 480px — Mobile landscape
 600px — Small tablet
 768px — Tablet portrait
 940px - 1024px — Tablet landscape, netbook, small desktop
 1280px &amp; greater — Desktop
 </code></pre>
+</div>
 
 <p>These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.</p>
 
@@ -555,10 +584,10 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
   <p>In the exercise folder, open <strong>media-queries.html</strong> in your editor.</p>
 
-  <p>In the <code>&lt;head&gt;</code> section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
+  <p>In the <code class="highlighter-rouge">&lt;head&gt;</code> section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 Change the background color and test it to make sure it works!</p>
 
-  <p><strong>Bonus:</strong> Try using <code>min-width</code> or a combination of <code>min-</code> and <code>max-width</code> to create a range.</p>
+  <p><strong>Bonus:</strong> Try using <code class="highlighter-rouge">min-width</code> or a combination of <code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-width</code> to create a range.</p>
 </blockquote>
 
 <h2 id="rwd-best-practices">RWD Best Practices</h2>
@@ -567,7 +596,7 @@ Change the background color and test it to make sure it works!</p>
 
 <p>When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.</p>
 
-<pre><code>.wrapper {
+<div class="highlighter-rouge"><pre class="highlight"><code>.wrapper {
   max-width: 1140px;
   font-family: helvetica, arial, sans-serif;
   background: white;
@@ -581,6 +610,7 @@ Change the background color and test it to make sure it works!</p>
   }
 }
 </code></pre>
+</div>
 
 <h3 id="testing-mobile-in-the-browser">Testing Mobile in the Browser</h3>
 
@@ -616,8 +646,8 @@ Change the background color and test it to make sure it works!</p>
   </footer>
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
-  <script src="/llc-digital-skills/assets/js/jquery.waypoints.min.js"></script>
-  <script src="/llc-digital-skills/assets/js/custom.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/global.js"></script>
 </body>
 </html>
 
