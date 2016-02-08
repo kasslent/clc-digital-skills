@@ -21,22 +21,20 @@ $gray-lighter:          #eaefec;
 
 // TYPOGRAPHY
 //------------------------------
-$montserrat:            "Montserrat", serif;
+$montserrat:            "Montserrat", sans-serif;
 $quicksand:             "Quicksand", Helvetica, Arial, sans-serif;
-$sourcesanspro:         'Source Sans Pro', sans-serif;
-
-$serif:                 $montserrat;
-$serif-brand:           $montserrat;
-$sans-serif:            $sourcesanspro;
+$sans-serif:            $montserrat;
 $sans-serif-brand:      $quicksand;
 
-$accent-font:           $sans-serif-brand;
 $font-family-base:      $sans-serif;
-$font-family-base:      $serif-brand;
-$font-size-base:        1.65rem;
 $font-color-base:       $gray;
+
+$font-size-base:        1.8rem;
+$font-size-xlrg:        $font-size-base * 2;
+$font-size-lrg:         $font-size-base * 1.5;
 $font-size-sml:         $font-size-base * 0.8;
 $font-size-xsml:        $font-size-base * 0.7;
 $line-height-base:      1.5;
+$line-height-compact:   1.3;
 
 

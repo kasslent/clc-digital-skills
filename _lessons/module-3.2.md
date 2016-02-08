@@ -2,7 +2,7 @@
 layout: lessons
 module: 3
 lesson: 2
-description: CSS Fundamentals & Intro to RWD
+title: CSS Fundamentals & Intro to RWD
 permalink: module3-2.html
 class: module3-2
 ---

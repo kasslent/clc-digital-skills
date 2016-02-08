@@ -7,7 +7,7 @@ class: home
     <h1>Class notes</h1>
     <ul>
       {% for lesson in site.lessons %} 
-      <li><a href="{{ lesson.permalink }}">Week {{ lesson.week }}, Lesson {{ lesson.lesson }}</a> - {{ lesson.description }}</li>
+      <li><a href="{{ lesson.permalink }}">Module {{ lesson.module }}, Lesson {{ lesson.lesson }}</a> - {{ lesson.title }}</li>
       {% endfor %}
     </ul>
     

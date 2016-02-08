@@ -2,7 +2,7 @@
 layout: lessons
 module: 5
 lesson: 1
-description: Intro to JavaScript & jQuery
+title: Intro to JavaScript & jQuery
 permalink: module5-1.html
 class: module5-1
 ---

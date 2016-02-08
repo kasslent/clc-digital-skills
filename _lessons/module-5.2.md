@@ -2,7 +2,7 @@
 layout: lessons
 module: 5
 lesson: 2
-description: jQuery & Plugins
+title: jQuery & Plugins
 permalink: module5-2.html
 class: module5-2
 ---

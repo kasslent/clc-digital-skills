@@ -2,7 +2,7 @@
 layout: lessons
 module: 4
 lesson: 1
-description: Forms & Data Manipulation with Sheets
+title: Forms & Data Manipulation with Sheets
 permalink: module4-1.html
 ---
 

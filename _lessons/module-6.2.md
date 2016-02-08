@@ -2,7 +2,7 @@
 layout: lessons
 module: 6
 lesson: 2
-description: Intro to WordPress
+title: Intro to WordPress
 permalink: module6-2.html
 class: module6-2
 ---

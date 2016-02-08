@@ -1,14 +1,15 @@
 
     {% include header.html %}
 
-    <main role="main" data-main>
+    <main role="main" class="lessons" data-main>
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
-        <h1>Module {{ page.module }}, Lesson {{ page.lesson }}</h1>
-        <h2>{{page.description}}</h2>
+        <h3>Module {{ page.module }}, Lesson {{ page.lesson }}</h3>
+        <h4>{{ page.title }}</h4>
       </nav>
       
       <article{% if page.class %} class="{{ page.class }}" {% endif %}>
+        <h1>{{ page.title }}</h1>
         {{ content }}
       </article>
     </main>

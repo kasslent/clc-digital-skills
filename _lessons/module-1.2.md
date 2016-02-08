@@ -2,7 +2,7 @@
 layout: lessons
 module: 1
 lesson: 2
-description: Intro to CSS
+title: Intro to CSS
 permalink: module1-2.html
 ---
 

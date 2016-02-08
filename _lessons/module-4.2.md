@@ -2,7 +2,7 @@
 layout: lessons
 module: 4
 lesson: 2
-description: SEO - Search Engine Optimization
+title: SEO - Search Engine Optimization
 permalink: module4-2.html
 class: module4-2
 ---

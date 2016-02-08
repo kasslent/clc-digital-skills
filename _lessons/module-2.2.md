@@ -2,7 +2,7 @@
 layout: lessons
 module: 2
 lesson: 2
-description: Design & the Browser
+title: Design & the Browser
 permalink: module2-2.html
 ---
 

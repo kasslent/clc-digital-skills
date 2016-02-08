@@ -12,10 +12,6 @@ html {
 
 html {
   font-size: 62.5%;
-  
-  @media (max-width: 800px){
-    font-size: 55%;
-  }
 }
 body {
   margin: 0;
@@ -27,7 +23,21 @@ body {
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
 }
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-size: $font-size-xlrg;
+  letter-spacing: -0.07em;
+  color: $raspberry;
+}
+h2 {
+  font-size: $font-size-lrg;
+  color: $gray-darkest;
+}
+h1, h2 {
+  font-family: $sans-serif-brand;
+  text-transform: uppercase;
+  line-height: $line-height-compact;
+}
+h3, h4, h5, h6 {
   font-weight: 300;
   color: $gray-darker;
 }
@@ -100,8 +110,8 @@ hr {
 }
 
 
-// Page layout
-//---------------
+// General Page layout
+//---------------------
 header {
   background: $gray-darkest;
   padding: 40px 40px 10px;
@@ -149,8 +159,88 @@ footer {
   }
 }
 
-// Lesson pages
+// Lesson notes
 //--------------
+.lessons {
+  h2 {
+    border-bottom: 1px solid $gray-light;
+  }
+  iframe {
+    margin-top: 20px;
+  }
+  .example {
+    border: 1px solid $gray;
+    padding: 15px;  
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.9rem;
+    }
+  }
+  .two-col {
+    overflow: hidden;
+    
+    img {
+      float: left;
+      width: 49%;
+      margin-right: 1%;
+    }
+  }
+}
+article {
+  max-width: 66%;
+  
+  @media (max-width: 800px){
+    max-width: 100%;
+  }
+  h2 {
+    margin-top: 70px;
+    
+    &:first-child {
+      margin-top: 15px;
+    }
+    + h3 {
+      margin-top: 30px;
+    }
+  }
+  h3 {
+    margin-top: 40px;
+  }
+  h4 {
+    margin-bottom: 0;
+    
+    + ul,
+    + p {
+      margin-top: 4px;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+// highlight blocks in code samples
+code strong {
+  background: #ddd;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+
+  [class^="hljs-"]{
+    color: black;
+    font-weight: bold;
+  }
+}
+
 .table-of-contents {
   float: right;
   background-color: $gray-lighter;
@@ -211,83 +301,10 @@ footer {
     }
   }
 }
-article {
-  max-width: 66%;
-  
-  @media (max-width: 800px){
-    max-width: 100%;
-  }
-  h2 {
-    margin-top: 70px;
-    
-    &:first-child {
-      margin-top: 15px;
-    }
-    + h3 {
-      margin-top: 30px;
-    }
-  }
-  h3 {
-    margin-top: 40px;
-  }
-  h4 {
-    margin-bottom: 0;
-    
-    + ul,
-    + p {
-      margin-top: 4px;
-    }
-  }
-  img {
-    max-width: 100%;
-  }
-  pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-}
-
-iframe {
-  margin-top: 20px;
-}
-.example {
-  border: 1px solid $gray;
-  padding: 15px;  
-  h1, h2, h3 {
-    margin-top: 0;
-  }
-  h1 {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 1.9rem;
-  }
-}
-.two-col {
-  overflow: hidden;
-  
-  img {
-    float: left;
-    width: 49%;
-    margin-right: 1%;
-  }
-}
 
 
-// highlight blocks in code samples
-code strong {
-  background: #ddd;
-  color: black;
-  display: inline-block;
-  font-weight: bold;
-
-  [class^="hljs-"]{
-    color: black;
-    font-weight: bold;
-  }
-}
-
+// Lesson specific styles
+//------------------------
 
 // Lesson 0
 .menu-icon img {

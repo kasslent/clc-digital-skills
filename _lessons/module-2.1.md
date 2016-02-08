@@ -2,7 +2,7 @@
 layout: lessons
 module: 2
 lesson: 1
-description: Design Theory
+title: Design Theory
 permalink: module2-1.html
 ---
 
