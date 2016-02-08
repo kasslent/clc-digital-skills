@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 7
+module: 7
 lesson: 1
 description: Domains, Hosting & FTP
-permalink: week7.html
-class: week7
+permalink: module7.html
+class: module7
 ---
 
 ##Local development vs live websites
@@ -50,13 +50,13 @@ Setting up a domain name will be slightly different based on which option you ch
 
 **Step 1**: Visit [hover.com](http://hover.com) and select **Find a domain** and enter your desired domain name into the search box.
 
-![]({{site.img}}/week7/1-search-domain.png)
+![]({{site.img}}/module7/1-search-domain.png)
 
 **Step 2**: A list of available domain name extensions will show as well as suggestions for similar names.  This is useful if your desired domain name is already taken.
 
 Select an option and add to cart.
 
-![]({{site.img}}/week7/2-domain-options.gif)
+![]({{site.img}}/module7/2-domain-options.gif)
 
 **Step 3**: Optional email customizations
 
@@ -68,7 +68,7 @@ Ad-free email accounts. The Big option has more storage and a few other features
 
 You can always add this option later. See full details [here](https://www.hover.com/email).
 
-![]({{site.img}}/week7/3-cart-email-options.png)
+![]({{site.img}}/module7/3-cart-email-options.png)
 
 **Step 4**: Create an account & add your WHOIS registration info.
 
@@ -80,15 +80,15 @@ Hover (and most other domain registrars) offer a privacy option, automatic with 
 
 
 <div markdown="1" class="two-col">
-![]({{site.img}}/week7/4-create-account.png)
-![]({{site.img}}/week7/5-whois-info.png)
+![]({{site.img}}/module7/4-create-account.png)
+![]({{site.img}}/module7/5-whois-info.png)
 </div>
 
 **Step 5**: Add your billing info. 
 
 To add another domain name, just log into your new account, choose the **Add New** option and follow the same steps.
 
-![]({{site.img}}/week7/6-get-another-domain.png)
+![]({{site.img}}/module7/6-get-another-domain.png)
 
 And you're done!
 
@@ -115,9 +115,9 @@ To forward your Hover domain to your hosting account, follow these steps. (This 
 1. go to **Your Account > Domains** (also the landing page when you log in)
 1. click your domain
 1. go down to **Nameservers** and select **Edit**
-  ![]({{site.img}}/week7/hover-nameservers-1.png)
+  ![]({{site.img}}/module7/hover-nameservers-1.png)
 1. update it with your host's nameservers
-  ![]({{site.img}}/week7/hover-nameservers-2.png)
+  ![]({{site.img}}/module7/hover-nameservers-2.png)
 
 ## FTP (File Transfer Protocol)
 
@@ -130,8 +130,8 @@ To create an FTP user in Dreamhost, follow these steps. (This will be similar wi
 * go to **Users > Manage users > Add a new user**
 * create a username, password and save
 
-![]({{site.img}}/week7/dreamhost-ftp-1.png)
-![]({{site.img}}/week7/dreamhost-ftp-2.png)
+![]({{site.img}}/module7/dreamhost-ftp-1.png)
+![]({{site.img}}/module7/dreamhost-ftp-2.png)
 
 
 ## FTP Client

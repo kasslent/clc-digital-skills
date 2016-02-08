@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 4
+module: 4
 lesson: 1
 description: Forms & Data Manipulation with Sheets
-permalink: week4-1.html
+permalink: module4-1.html
 ---
 
 ##Intro to HTML Forms
@@ -168,17 +168,17 @@ Use Google Forms to create your form and have all the repsonses sent to a handy 
 
 
 1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
-  ![]({{site.baseurl}}/assets/img/week4/gforms-new.png)
+  ![]({{ site.img }}/module4/gforms-new.png)
 1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  
 
 1. Once you've completed your form, you can either send out the form or embed it into your web page. 
   * To send the form. Select **Send form** to see options.<br>
-  ![]({{site.baseurl}}/assets/img/week4/gforms-send.png)
+  ![]({{ site.img }}/module4/gforms-send.png)
   <br><br>
   You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br>
-  ![]({{site.baseurl}}/assets/img/week4/gforms-send-options.png)
+  ![]({{ site.img }}/module4/gforms-send-options.png)
   * To embed the form onto your web page, select **File > Embed** and copy the HTML onto your web page.<br>
-  ![]({{site.baseurl}}/assets/img/week4/gforms-embed.png)
+  ![]({{ site.img }}/module4/gforms-embed.png)
   
 ##Styling Google Forms
 
@@ -186,11 +186,11 @@ Choose from existing themes!
 
 Select **Change themes** to see available themes.  (Select **Edit questions** to go back to the questions.)
 
-![]({{site.baseurl}}/assets/img/week4/gforms-themes.png)
+![]({{ site.img }}/module4/gforms-themes.png)
 
 Choose a theme on the right and select **Customize** for additional options.
 
-![]({{site.baseurl}}/assets/img/week4/gforms-themes-customize.png)
+![]({{ site.img }}/module4/gforms-themes-customize.png)
 
 And that's it!
 
@@ -204,7 +204,7 @@ If you decide to go this route, make sure you have the default theme selected so
 
 First, select **View live form** to see the form out of edit mode, in the browser.
 
-![]({{site.baseurl}}/assets/img/week4/gforms-live.png)
+![]({{ site.img }}/module4/gforms-live.png)
 
 Then right-click anywhere and select **View source** and look for the `<form>` tag.
 

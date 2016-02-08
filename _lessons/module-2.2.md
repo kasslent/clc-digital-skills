@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 2
+module: 2
 lesson: 2
 description: Design & the Browser
-permalink: week2-2.html
+permalink: module2-2.html
 ---
 
 
@@ -13,7 +13,7 @@ Last class we covered the role of typography in design.  Let's go over how to im
 
 ##`color`
 
-Use the `color` property to change the colour of your text. We talked about how to set the colour for background styles in [Week 1]({{site.baseurl}}/week1/lesson2/#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
+Use the `color` property to change the colour of your text. We talked about how to set the colour for background styles in [Module 1]({{site.baseurl}}/module1/lesson2/#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
     
     /* all the same colour */
     body {
@@ -198,7 +198,7 @@ Select the fonts you want to use and **Add to Collection**. **Review** to compar
  
 Now you can use these new fonts with the `font-family` property as normal, using the font name listed in the example on the Google Fonts page.
 
-![]({{site.baseurl}}/assets/img/week2/google-fonts.png)
+![]({{ site.img }}/module2/google-fonts.png)
 
 
 ###Using Downloaded fonts 
@@ -249,9 +249,9 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 * <http://reference.sitepoint.com/css/typography>
 
 >##Exercise: Typography
->Download the exercise file <a href="{{site.baseurl}}/exercises/week2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
+>Download the exercise file <a href="{{site.baseurl}}/exercises/module2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
 >
-> [Answer key]({{site.exercises}}/week2/typography-answer.zip) (zip file).
+> [Answer key]({{site.exercises}}/module2/typography-answer.zip) (zip file).
 > 
 >**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
@@ -310,7 +310,7 @@ Getting to know your browser dev tools will be super handy when tweaking styles 
 
 It's also useful for finding the correct css selectors faster than hunting through your files (or someone else's).
 
-<img src="{{site.baseurl}}/assets/img/week2/inspect-element-css.gif" class="print-hide">
+<img src="{{ site.img }}/module2/inspect-element-css.gif" class="print-hide">
 
 In Chrome, you can access the tools in 3 ways:
 
@@ -321,7 +321,7 @@ In Chrome, you can access the tools in 3 ways:
 > Pick your favorite website and try it out!
 
 > ##Exercise: Margin & Padding
-> Download the [exercise file]({{site.baseurl}}/exercises/week2/margin-padding.zip) (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!
+> Download the [exercise file]({{site.baseurl}}/exercises/module2/margin-padding.zip) (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!
 
 
 ##Intro to form design

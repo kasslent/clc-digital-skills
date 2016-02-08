@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 5
+module: 5
 lesson: 2
 description: jQuery & Plugins
-permalink: week5-2.html
-class: week5-2
+permalink: module5-2.html
+class: module5-2
 ---
 
 ##CSS vs JavaScript
@@ -52,7 +52,7 @@ If you want to get just a portion of the date, use a **method**. For example `ge
 >
 >Try following the steps below independently or in partners.  
 >Then we'll discuss as a class.
->Download the starter files for the exercise here: <a href="{{site.exercises}}/week5/week5-exercise.zip" download>week5-exercise.zip</a>
+>Download the starter files for the exercise here: <a href="{{site.exercises}}/module5/week5-exercise.zip" download>week5-exercise.zip</a>
 
 **Step 1:** In **index.html**, reference the [jQuery](http://jquery.com/download/) file since this example will use a mixture of JavaScript and jQuery specific methods. Remember, you can add JavaScript anywhere but it's usually recommended to add it right before the closing `</body>` tag.
 

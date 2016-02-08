@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 3
+module: 3
 lesson: 2
 description: CSS Fundamentals & Intro to RWD
-permalink: week3-2.html
-class: week3-2
+permalink: module3-2.html
+class: module3-2
 ---
 
 #Fluid & Flexible Web Pages
@@ -24,7 +24,7 @@ Use percentages to create flexible images.
       max-width: 100%;
     }
 
-[See example here]({{site.exercises}}/week3/fluid-images/index.html).
+[See example here]({{site.exercises}}/module3/fluid-images/index.html).
 
 ##Background images
 
@@ -61,7 +61,7 @@ To navigate *up and out* of a folder, the syntax is always `../`  to represent m
 
 If the image file is *smaller* than the element with the background image applied to it, the image will automatically repeat to fill up the space. 
 
-![]({{site.baseurl}}/assets/img/week3/background-repeat.jpg)
+![]({{ site.img }}/module3/background-repeat.jpg)
 
 To keep the image from repeating, use the `background-repeat` property **or** add it to the shorthand `background` property.
 
@@ -121,7 +121,7 @@ To include it in the shorthand `background` property, it **must** be included af
 
 >##Exercise: images & background images
 >
->Download <a href="{{site.exercises}}/week3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
+>Download <a href="{{site.exercises}}/module3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
 >Uncomment each property, change some values and see what happens!
 
 ####Extra Resources
@@ -207,7 +207,7 @@ Using `display`, there are two values that can be used to align the list items h
 
 At this point, the nav will be aligned horizonatally but could use some spacing.  
 
-![]({{site.baseurl}}/assets/img/week3/horizontal-nav-no-padding.png)
+![]({{ site.img }}/module3/horizontal-nav-no-padding.png)
 
 Put some padding on the link, `a`, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are *inline* elements by default which doesn't render padding properly.
 
@@ -229,7 +229,7 @@ If you put a background color on the list item, you'll see an extra space betwee
       background: lightblue;
     }
 
-![]({{site.baseurl}}/assets/img/week3/horizontal-nav-display.png)
+![]({{ site.img }}/module3/horizontal-nav-display.png)
 
 The extra space is caused by the line break in the HTML used to put the `<li>` on separate lines.
 
@@ -240,7 +240,7 @@ If you use `float` instead of `display`, you won't see this quirk.
         background: lightblue;
     }
 
-![]({{site.baseurl}}/assets/img/week3/horizontal-nav-float.png)
+![]({{ site.img }}/module3/horizontal-nav-float.png)
 
 But, float has it's own quirks too. What happened to the red background in the `ul`?
 
@@ -254,7 +254,7 @@ If your design does not require equal width "boxes" or you don't mind the space,
       text-align: center;
     }
 
-![]({{site.baseurl}}/assets/img/week3/horizontal-nav-centered.png)
+![]({{ site.img }}/module3/horizontal-nav-centered.png)
 
 Let's say you wanted 4 equal width boxes for the nav.  You could set the list items to a width of 25%.
 
@@ -264,7 +264,7 @@ Let's say you wanted 4 equal width boxes for the nav.  You could set the list it
     }
     
 However, the space between the `<li>` tags are taking up space so the boxes won't fit in one line.
-![]({{site.baseurl}}/assets/img/week3/horizontal-nav-spaces.jpg)
+![]({{ site.img }}/module3/horizontal-nav-spaces.jpg)
 
 You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here's another fix.
 
@@ -368,7 +368,7 @@ Fluid websites are not new. Using percentage based widths in the base CSS will m
 
 [mediaqueri.es](http://mediaqueri.es) houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.
 
-![]({{site.baseurl}}/assets/img/week3/rwd-example.png)
+![]({{ site.img }}/module3/rwd-example.png)
 Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (`1024px x 768px` or `1280px x 1024px`). 
 
 If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version. 
@@ -498,7 +498,7 @@ When creating mobile friendly sites, it’s always best to test on an actual dev
 
 Chrome has an emulator built right into the dev tools!
 
-![]({{site.baseurl}}/assets/img/week3/chrome-emulator.png)
+![]({{ site.img }}/module3/chrome-emulator.png)
 
 There are also many many other tools, [free](http://lab.maltewassermann.com/viewport-resizer/) and [paid](https://www.browserstack.com/responsive), available for testing and emulating multiple devices and device sizes.
 

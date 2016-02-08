@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 1
+module: 1
 lesson: 2
 description: Intro to CSS
-permalink: week1-2.html
+permalink: module1-2.html
 ---
 
 ##More text-based HTML tags
@@ -63,7 +63,7 @@ HTML5 introduced better support for media with `<audio>` and `<video>` tags.  Ho
 
 CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colon `;`
 
-![keyboard]({{site.baseurl}}/assets/img/keyboard-css.png)
+![keyboard]({{ site.img }}/keyboard-css.png)
 
 ##Syntax & Terminology
 
@@ -206,7 +206,7 @@ Multiple declarations can be contained in the value.
     </body>
 
 
-> Let's try some out! Download the exercise file <a href="{{site.baseurl}}/exercises/week1/exercise2.html" download>here</a>.
+> Let's try some out! Download the exercise file <a href="{{site.baseurl}}/exercises/module1/exercise2.html" download>here</a>.
 
 ###Internal CSS
 

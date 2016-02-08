@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 1
+module: 1
 lesson: 1
 description: Intro to HTML
-permalink: week1-1.html
+permalink: module1-1.html
 ---
 
 In 1989, Tim Berners-Lee, a physicist at CERN, began
@@ -88,7 +88,7 @@ HTML5 is the latest version.
 
 HTML **tags** are used to create the web page structure are written with left `<` and right angled brackets `>` and a forward slash `/` for the closing tag.
 
-<img src="{{site.baseurl}}/assets/img/keyboard-html.png" class="print-hide">
+<img src="{{ site.img }}/keyboard-html.png" class="print-hide">
 
 Tags *usually* come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note that the closing tag has a forward slash (`/`).
 
@@ -273,7 +273,7 @@ If you don't have a web design to work from, a simple hand sketch also works. Al
 
 For example, here is a simple wireframe for a basic web page. 
 
-<img class="print-wireframe" src="{{site.baseurl}}/assets/img/wireframe-basic.jpg">
+<img class="print-wireframe" src="{{ site.img }}/wireframe-basic.jpg">
 
 ### Grouping Elements
 
@@ -283,7 +283,7 @@ The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>`
 
 To create the page layout, the HTML could look something like this:
 
-<img class="grouping-elements print-hide" src="{{site.baseurl}}/assets/img/wireframe-basic.jpg">
+<img class="grouping-elements print-hide" src="{{ site.img }}/wireframe-basic.jpg">
 
     <div>
       nav links here
@@ -553,7 +553,7 @@ There are many different file types used for web. Each type is best suited for s
 * **png** - used for images with transparent or opaque backgrounds  
 * **gif** - used for images with minimal colour variation and of course, for animated gifs!
 
-<img src="{{site.baseurl}}/assets/img/bey-boss.gif" class="print-hide">
+<img src="{{ site.img }}/bey-boss.gif" class="print-hide">
 
 ####Extra resource
 
@@ -651,7 +651,7 @@ Just like text, simply wrap the anchor tag around the image. However, when using
 
     <a href="http://twitter.com" title="Twitter"><img src="images/twitter-logo.png" alt="Twitter logo"></a>
 
-<a href="http://twitter.com" title="Twitter"><img class="example-img"  src="{{site.baseurl}}/assets/img/twitter-logo.png" alt="Twitter logo"></a>
+<a href="http://twitter.com" title="Twitter"><img class="example-img"  src="{{ site.img }}/twitter-logo.png" alt="Twitter logo"></a>
 
 <br>
 

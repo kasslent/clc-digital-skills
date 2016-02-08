@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 3
+module: 3
 lesson: 1
 description: CSS Fundamentals
-permalink: week3-1.html
-class: week3-1
+permalink: module3-1.html
+class: module3-1
 ---
 
 ##CSS Review
@@ -43,7 +43,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
 
 > What are the pros & cons of each technique?
 
-**Reference:** [Week 1, lesson 2]({{site.baseurl}}/week1/lesson2/#referencing-css)
+**Reference:** [Module 1, lesson 2]({{site.baseurl}}/module1/lesson2/#referencing-css)
 
 ###Basic selectors
 
@@ -75,7 +75,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* more specific - applies only to a section element with this id */
     }
 
-**Reference:** [Week 1, lesson 2]({{site.baseurl}}/week1/lesson2/#basic-css-selectors)
+**Reference:** [Module 1, lesson 2]({{site.baseurl}}/module1/lesson2/#basic-css-selectors)
 
 ##Descendant selectors
 Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
@@ -192,7 +192,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 
 >##Exercise: Selectors
 >
->Download the <a href="{{site.exercises}}/week3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
+>Download the <a href="{{site.exercises}}/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
 >
 >All the instructions are contained in the comments at the very top of `selector.html`
 
@@ -369,7 +369,7 @@ First a width needs to be set. Then by setting the left & right values to `auto`
 
 But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?
 
-![]({{site.baseurl}}/assets/img/week3/content-align.jpg)
+![]({{ site.img }}/module3/content-align.jpg)
 
 To do that, we'll need to create a container just for the content to auto align it and use the outer container for the background styles.
 
@@ -460,7 +460,7 @@ Each element is seen as a "box" by the browser (represented by the red border). 
 
 The parent element (represented by the blue background) will wrap around its content.
 
-![]({{site.baseurl}}/assets/img/week3/no-float.jpg)
+![]({{ site.img }}/module3/no-float.jpg)
 
 However, to get elements to float side by side, the natural stacking order must be broken first, then put back together.
 
@@ -471,7 +471,7 @@ However, to get elements to float side by side, the natural stacking order must 
 
 Here's what it will look like:
 
-![]({{site.baseurl}}/assets/img/week3/float-no-clear.jpg)
+![]({{ site.img }}/module3/float-no-clear.jpg)
 
 Floating the element breaks the *natural stacking flow*.  
 Any element *after* the floated element will move up and flow around the floated element.  
@@ -486,7 +486,7 @@ Also, as long as there is space for elements flow around the floated element, it
 
 <!-- That's how you can create layouts such as the below example of an image floated to the right.
 
-![]({{site.baseurl}}/assets/img/week3/floated-img.png) -->
+![]({{ site.img }}/module3/floated-img.png) -->
 
 ###Clearing Floats
 
@@ -514,7 +514,7 @@ On the element that comes *after* the last element to be floated can be used to 
 
 Now it should look like this:
 
-![]({{site.baseurl}}/assets/img/week3/float-cleared.png)
+![]({{ site.img }}/module3/float-cleared.png)
 
 Clearing the float on the `h1` element puts everything back to the normal stacking ordering starting from the h1 element and everything after.
 
@@ -626,7 +626,7 @@ Remember, good organization helps to reduce errors and makes for easier debuggin
 
 >##Exercise: Putting it all together
 >
->Download the <a href="{{site.exercises}}/week3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
+>Download the <a href="{{site.exercises}}/module3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
 
 ~ End ~
 

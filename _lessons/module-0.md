@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 0
+module: 0
 lesson: 0
 description: Tips, Recommendations & Cheatsheets
-permalink: week0.html
+permalink: module0.html
 ---
 
 
@@ -87,13 +87,13 @@ Here's a couple feature to familiarize yourself with:
 ####Preferences
 Under **Preferences**, there are many options for customizing your editor.
 
-![atom preferences]({{site.img}}/week0/atom-preferences.jpg)
+![atom preferences]({{ site.img }}/module0/atom-preferences.jpg)
 
 **Settings**
 
 The Settings include general options for personalizing your editor. 
 
-![atom settings]({{site.img}}/week0/atom-settings.jpg)
+![atom settings]({{ site.img }}/module0/atom-settings.jpg)
 
 A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
 
@@ -101,11 +101,11 @@ A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exce
 
 Add packages under the **Install** tab.
 
-![atom install packages]({{site.img}}/week0/atom-install-packages.jpg)
+![atom install packages]({{ site.img }}/module0/atom-install-packages.jpg)
 
 [Emmet](http://docs.emmet.io/abbreviations/syntax/) is a great package to install, once you gain some basic understanding of HTML & CSS. This package will help write HTML & CSS faster with some super handy shortcuts!
 
-![atom install emmet]({{site.img}}/week0/atom-install-emmet.jpg)
+![atom install emmet]({{ site.img }}/module0/atom-install-emmet.jpg)
 
 Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) and [Emmet cheatsheet](http://docs.emmet.io/cheat-sheet/) to get up and running.
 

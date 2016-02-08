@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 5
+module: 5
 lesson: 1
 description: Intro to JavaScript & jQuery
-permalink: week5-1.html
-class: week5-1
+permalink: module5-1.html
+class: module5-1
 ---
 
 ##Discussion: Steps for creating a basic website
@@ -68,7 +68,7 @@ The console is a browser tool used to interact directly with a web page and is u
 It can be accessed in the same area as when you're inspecting elements except it's under the **Console** tab.
 The console in Chrome looks like this:
 
-![Chrome console]({{site.img}}/week5/console-open.jpg)
+![Chrome console]({{site.img}}/module5/console-open.jpg)
 
 Note the `>` symbol. It is used by the console to represent a space for you to enter your input. In Chrome, there are a couple ways to open the Console tab.
 
@@ -205,7 +205,7 @@ If variables are boxes, objects can be thought of as a box with multiple compart
 
 A basic variable only holds one value.
 
-<img class="left" src="{{site.img}}/week5/rice.png" alt="rice object example">
+<img class="left" src="{{site.img}}/module5/rice.png" alt="rice object example">
     
     /* declare the variable */
     var box;
@@ -222,7 +222,7 @@ An object holds a collection of values. Each value is a **property** of the obje
     /* create a new object */
     var bentobox = {};
     
-<img class="left" src="{{site.img}}/week5/bento-box.png">
+<img class="left" src="{{site.img}}/module5/bento-box.png">
 
     /* assign the values using "dot notation" */
     bentobox.main = "Teriyaki";

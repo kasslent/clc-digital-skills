@@ -1,10 +1,10 @@
 ---
 layout: lessons
-week: 4
+module: 4
 lesson: 2
 description: SEO - Search Engine Optimization
-permalink: week4-2.html
-class: week4-2
+permalink: module4-2.html
+class: module4-2
 ---
 
 #Introduction to SEO
@@ -45,7 +45,7 @@ Two components:
 ##Google search engine
 Google has a 65%-80% share of the world's search market.
 
-![]({{site.baseurl}}/assets/img/week4/search-engine-logos.jpg)
+![]({{ site.img }}/module4/search-engine-logos.jpg)
 
 A Google search results page:
 
@@ -61,7 +61,7 @@ A Google search results page:
 - Social media results
 - Reviews
 
-![]({{site.baseurl}}/assets/img/week4/google-results-page.jpg)
+![]({{ site.img }}/module4/google-results-page.jpg)
 
 Google uses algorithms to determine which results come up at the top.
 
@@ -81,7 +81,7 @@ Organic listings click curve:
 - The top rankings get the most clicks
 - More pronounced on mobile devices
 
-![]({{site.baseurl}}/assets/img/week4/click-curve.png)
+![]({{ site.img }}/module4/click-curve.png)
 
 Position 1: 32.5%  
 Position 2: 17.6%  
@@ -128,7 +128,7 @@ There are over 200 factors in Google's organic search algorithm.
 
 The Periodic Table of SEO Success Factors: <http://searchengineland.com/seotable>
 
-![]({{site.baseurl}}/assets/img/week4/periodic-table-of-seo-2015.png)
+![]({{ site.img }}/module4/periodic-table-of-seo-2015.png)
 
 ###Be aware - there's a "shady" side to SEO!
 

@@ -1,9 +1,9 @@
 ---
 layout: lessons
-week: 2
+module: 2
 lesson: 1
 description: Design Theory
-permalink: week2-1.html
+permalink: module2-1.html
 ---
 
 
@@ -95,13 +95,13 @@ The most common grid structure is a 12 column grid because it can divide easily 
 
 ####Examples
 
-[Brian’s website]({{site.baseurl}}/assets/img/week2/01-grid-bg.jpg) uses a 10 column grid for his main content with a 1 column padding on either side.
+[Brian’s website]({{ site.img }}/module2/01-grid-bg.jpg) uses a 10 column grid for his main content with a 1 column padding on either side.
 
-[Lotta’s website]({{site.baseurl}}/assets/img/week2/04-grid-lna.jpg) uses a 3 column grid for her portfolio page. Notice that her [About]({{site.baseurl}}/assets/img/week2/04-grid-ln.jpg) page content is divided into a 4 column grid.
+[Lotta’s website]({{ site.img }}/module2/04-grid-lna.jpg) uses a 3 column grid for her portfolio page. Notice that her [About]({{ site.img }}/module2/04-grid-ln.jpg) page content is divided into a 4 column grid.
 
-[Jason’s website]({{site.baseurl}}/assets/img/week2/03-grid-jsm.jpg) uses a 11 column grid for his main content ( some of which is divided further) with a designated left column dates.
+[Jason’s website]({{ site.img }}/module2/03-grid-jsm.jpg) uses a 11 column grid for his main content ( some of which is divided further) with a designated left column dates.
 
-The [Food Sense Blog website]({{site.baseurl}}/assets/img/week2/02-grid-fs.jpg) uses the 12 column grid to organize their content in different ways. A 2 column wide area on the left is designated for the logo and navigation. While the main content is divided into 1 large area as well as 4 smaller columns.
+The [Food Sense Blog website]({{ site.img }}/module2/02-grid-fs.jpg) uses the 12 column grid to organize their content in different ways. A 2 column wide area on the left is designated for the logo and navigation. While the main content is divided into 1 large area as well as 4 smaller columns.
 
 ####Extra Resource
 
@@ -145,12 +145,12 @@ Save your images in one of the following compressed file formats to keep file si
 ###Image editors
 You will need an image editor tool to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular options but [Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
 
-<img src="{{site.baseurl}}/assets/img/week2/05-pxlr-crop.jpg" class="left"> In **Pixlr** (and in most image editors), use the crop tool in the toolbar to crop your images. 
+<img src="{{ site.img }}/module2/05-pxlr-crop.jpg" class="left"> In **Pixlr** (and in most image editors), use the crop tool in the toolbar to crop your images. 
  
 
 Then, go to **Image &rarr; Image Size...** to resize your images. Make sure “Constrain Proportions” is checked to maintain proper image proportions.
 
-<img src="{{site.baseurl}}/assets/img/week2/06-pxlr-imagesize.jpg" class="full-width print-50">
+<img src="{{ site.img }}/module2/06-pxlr-imagesize.jpg" class="full-width print-50">
 
 >##EXERCISE: Resizing Images
 > Using [Pixlr](https://pixlr.com/editor/), practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.
@@ -180,7 +180,7 @@ Before we talk about how to select the right font for your project, we need to u
 
 
 
-<img class="left type print-15" src="{{site.baseurl}}/assets/img/week2/07-serif.jpg">
+<img class="left type print-15" src="{{ site.img }}/module2/07-serif.jpg">
 
 ###Serif
 Serif typefaces are distinguished by the little feet or hats at the bottom or top of the letters. 
@@ -189,7 +189,7 @@ These typefaces grew out of the handlettering of scribes and roman or blacklette
 
 <hr class="clear">
 
-<img class="left type print-15" src="{{site.baseurl}}/assets/img/week2/08-sansserif.jpg">
+<img class="left type print-15" src="{{ site.img }}/module2/08-sansserif.jpg">
 
 ###Sans Serif
 Sans serif typefaces have–just like the name implies–no serifs at the end of the strokes.
@@ -203,7 +203,7 @@ Most sans serif typefaces are monoweight, meaning the strokes of the letterform 
 </blockquote>
 
 
-<img class="left type print-15" src="{{site.baseurl}}/assets/img/week2/09-script.jpg">
+<img class="left type print-15" src="{{ site.img }}/module2/09-script.jpg">
 
 ###Script
 
@@ -212,7 +212,7 @@ Script typefaces appear as if handlettered with a calligraphy pen, brush or penc
 <hr class="clear">
 
 
-<img class="left type print-15 decorative" src="{{site.baseurl}}/assets/img/week2/10-display.jpg">
+<img class="left type print-15 decorative" src="{{ site.img }}/module2/10-display.jpg">
 
 ###Decorative
 Decorative typefaces have the characteristic of being very distinct in their style. While not great for long blocks of text where their decorative style becomes all too consuming and unreadable, they can be great for decorative touches and add character to a design. Most decorative typefaces are one offs containing just one font file. 
@@ -300,15 +300,15 @@ Premium fonts:
 ###Terminology
 **Hue** is what we think of when we think about color. It is the characteristic that makes a color unique. 
 
-<img src="{{site.baseurl}}/assets/img/week2/11-hue.jpg" class="print-50">
+<img src="{{ site.img }}/module2/11-hue.jpg" class="print-50">
 
 **Saturation** refers to how weak or strong the color is. 
 
-<img src="{{site.baseurl}}/assets/img/week2/12-saturation.jpg" class="print-50">
+<img src="{{ site.img }}/module2/12-saturation.jpg" class="print-50">
 
 **Value** refers to the lightness or darkness of a color. Think about it as adding white (lightness) or black (darkness) to a color. 
 
-<img src="{{site.baseurl}}/assets/img/week2/13-value.jpg" class="print-50">
+<img src="{{ site.img }}/module2/13-value.jpg" class="print-50">
 
 
 ###RGB vs CMYK
@@ -325,7 +325,7 @@ Premium fonts:
 * subtractive color system that is based on ink printing
 * used to specify colors for print.
 
-<img src="{{site.baseurl}}/assets/img/week2/14-rgb-cmyk.jpg" class="print-50">
+<img src="{{ site.img }}/module2/14-rgb-cmyk.jpg" class="print-50">
 
 You can specify RGB colors on the web using the `rgb(#,#,#)` format in CSS (where # is a value between 0 and 255) or with the Hex color code such as `#FFFFFF`.
 
@@ -399,7 +399,7 @@ In web design, a **style tile** is used in much the same way as a style guide ex
 
 ####Examples of style tiles
 
-<img src="{{site.baseurl}}/assets/img/week2/15-styletile-bh.jpg" class="print-50 left"><img src="{{site.baseurl}}/assets/img/week2/16-styletile-gen.jpg" class="print-50 left"><img src="{{site.baseurl}}/assets/img/week2/17-styletile-IH.png" class="print-50 left"><img src="{{site.baseurl}}/assets/img/week2/18-styletile-fpcaa.jpg" class="print-50 left">
+<img src="{{ site.img }}/module2/15-styletile-bh.jpg" class="print-50 left"><img src="{{ site.img }}/module2/16-styletile-gen.jpg" class="print-50 left"><img src="{{ site.img }}/module2/17-styletile-IH.png" class="print-50 left"><img src="{{ site.img }}/module2/18-styletile-fpcaa.jpg" class="print-50 left">
 
 <br>
 Keep track of the different styles you use in a style guide or style tile. Use it as a reference as you build out your website and your brand collateral to maintain consistency and clarity.
