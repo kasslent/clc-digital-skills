@@ -192,7 +192,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 
 >##Exercise: Selectors
 >
->Download the <a href="{{site.expath}}/week3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
+>Download the <a href="{{site.exercises}}/week3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
 >
 >All the instructions are contained in the comments at the very top of `selector.html`
 
@@ -626,7 +626,7 @@ Remember, good organization helps to reduce errors and makes for easier debuggin
 
 >##Exercise: Putting it all together
 >
->Download the <a href="{{site.expath}}/week3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
+>Download the <a href="{{site.exercises}}/week3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
 
 ~ End ~
 

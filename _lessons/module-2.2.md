@@ -251,7 +251,7 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 >##Exercise: Typography
 >Download the exercise file <a href="{{site.baseurl}}/exercises/week2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
 >
-> [Answer key]({{site.expath}}/week2/typography-answer.zip) (zip file).
+> [Answer key]({{site.exercises}}/week2/typography-answer.zip) (zip file).
 > 
 >**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 

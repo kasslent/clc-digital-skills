@@ -7,23 +7,23 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Week6.2</title>
+  <title>Module </title>
   <meta name="description" content="Theme Development options">
   
   <!-- Syntax highlighting with highlightjs.org -->
-  <script src=""></script>
+  <script src="assets/js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
   
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="">
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 </head>
 <body class="week6-2">
   <header>
-    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
     <h2>Digital Skills Program</h2>
     <nav>
-      <a href="/llc-digital-skills/">Home</a>
+      <a href="index.html">Home</a>
       <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     </nav>
   </header>
@@ -108,23 +108,23 @@
 
 <p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.</p>
 
-<p><img src="/week6/adding-content-wysiwyg.png" alt="" /></p>
+<p><img src="assets/img/week6/adding-content-wysiwyg.png" alt="" /></p>
 
 <h3 id="wordpress-and-html">WordPress and HTML</h3>
 
 <p>You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
 
-<p>In WordPress, you don’t need to add the <code class="highlighter-rouge">&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
+<p>In WordPress, you don’t need to add the <code>&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
 
-<p><img src="/week6/editor-visual-p.png" alt="" /></p>
+<p><img src="assets/img/week6/editor-visual-p.png" alt="" /></p>
 
-<p>In the <strong>Text</strong> editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into <code class="highlighter-rouge">&lt;p&gt;</code> tags via Wordpress magic!</p>
+<p>In the <strong>Text</strong> editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into <code>&lt;p&gt;</code> tags via Wordpress magic!</p>
 
-<p><img src="/week6/editor-text-p.png" alt="" /></p>
+<p><img src="assets/img/week6/editor-text-p.png" alt="" /></p>
 
-<p>Also, break tags <code class="highlighter-rouge">&lt;br&gt;</code> are also not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
+<p>Also, break tags <code>&lt;br&gt;</code> are also not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
 
-<p><img src="/week6/editor-line-break.png" alt="" /></p>
+<p><img src="assets/img/week6/editor-line-break.png" alt="" /></p>
 
 <h2 id="slug-posts--pages">Slug: Posts &amp; Pages</h2>
 
@@ -134,7 +134,7 @@
 
 <p>Select <strong>Edit</strong> to change it manually.</p>
 
-<p><img src="/week6/dashboard-slug-automatic.png" alt="" /></p>
+<p><img src="assets/img/week6/dashboard-slug-automatic.png" alt="" /></p>
 
 <h2 id="slug-categories--tags">Slug: Categories &amp; Tags</h2>
 
@@ -146,13 +146,13 @@
 
 <p>Though your tag &amp; category names can contain spaces and special characters, it will be converted to a dash for the slug to make it URL friendly.</p>
 
-<p><img src="/week6/dashboard-slugs-tags-categories.png" alt="" /></p>
+<p><img src="assets/img/week6/dashboard-slugs-tags-categories.png" alt="" /></p>
 
 <h2 id="default-home-page-settings">Default Home page settings</h2>
 
 <p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content. These template files are also used to display just a specific <em>portion</em> of a page.</p>
 
-<p><img src="/week6/wp-theme-files.jpg" alt="" /></p>
+<p><img src="assets/img/week6/wp-theme-files.jpg" alt="" /></p>
 
 <p><br />
 Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
@@ -166,14 +166,14 @@ Based on this template hierarchy, by default, a chronological listing of your bl
 
     <p>This page does not need any content because there is already a template file used to display the blog post listing.</p>
 
-    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code class="highlighter-rouge">http://yoursite.com/blog</code> or <code class="highlighter-rouge">http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
+    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code>http://yoursite.com/blog</code> or <code>http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
   </li>
   <li>
     <p>Change the settings</p>
 
     <p>Under <strong>Settings &gt; Reading</strong>, select whichever page you want to show as the <strong>Front page</strong> (your homepage) and the blank page you created for the blog under <strong>Posts page</strong>.</p>
 
-    <p><img src="/week6/homepage-custom.jpg" alt="" /></p>
+    <p><img src="assets/img/week6/homepage-custom.jpg" alt="" /></p>
   </li>
 </ol>
 
@@ -183,17 +183,17 @@ Based on this template hierarchy, by default, a chronological listing of your bl
 
 <p>The menu location may vary depending on the theme. Some themes also offer additional menus such as social links menus.</p>
 
-<p><img src="/week6/wp-menus.png" alt="" /></p>
+<p><img src="assets/img/week6/wp-menus.png" alt="" /></p>
 
 <p>You can also reorder the menus by dragging the menu options as well as make submenus by dragging it underneath another item.</p>
 
-<p><img src="/week6/menu-additions.gif" alt="" /></p>
+<p><img src="assets/img/week6/menu-additions.gif" alt="" /></p>
 
 <h3 id="changing-themes--menus">Changing themes &amp; menus:</h3>
 
 <p>If you change your theme, you may have to go back to your Appearance &gt; Menus to add in the Menu Settings in again.</p>
 
-<p><img src="/week6/change-theme-menu.png" alt="" /></p>
+<p><img src="assets/img/week6/change-theme-menu.png" alt="" /></p>
 
 <h2 id="editor-menu">Editor menu</h2>
 
@@ -205,7 +205,7 @@ Based on this template hierarchy, by default, a chronological listing of your bl
 
 <p><strong>Pro tip!</strong> Make a backup copy of the file before editing it in case you need to put it back!</p>
 
-<p><img src="/week6/wp-editor-menu.png" alt="" /></p>
+<p><img src="assets/img/week6/wp-editor-menu.png" alt="" /></p>
 
 <h3 id="template-tags">Template tags</h3>
 
@@ -213,25 +213,23 @@ Based on this template hierarchy, by default, a chronological listing of your bl
 
 <p>Template tags are basically PHP functions (and look similar to JavaScript functions.) Note that WordPress (and most PHP developers) use the underscore naming convention and looks something like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>template_tag()
+<pre><code>template_tag()
 </code></pre>
-</div>
 
 <p>Here’s a couple of common template tags:</p>
 
-<p><code class="highlighter-rouge">get_header()</code> - gets the header.php file and includes it in the current theme file<br />
-<code class="highlighter-rouge">the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
+<p><code>get_header()</code> - gets the header.php file and includes it in the current theme file<br />
+<code>the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
 
 <p><br />
-How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code class="highlighter-rouge">h2</code> heading.</p>
+How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code>h2</code> heading.</p>
 
-<p><code class="highlighter-rouge">bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
+<p><code>bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
+<pre><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
 </code></pre>
-</div>
 
-<p><img src="/week6/site-title-settings.jpg" alt="" /></p>
+<p><img src="assets/img/week6/site-title-settings.jpg" alt="" /></p>
 
 <h2 id="bonus-local-wordpress-theme-development">Bonus: Local WordPress Theme Development</h2>
 
@@ -245,7 +243,7 @@ How do the template tags work? This example below shows how the site tagline cou
 
 <p>The one file outside of <strong>wp-content</strong> that you may need to edit is the <strong>wp-config.php</strong> file. It contains the website’s base configuration details, such as database connection information.</p>
 
-<p><img src="/week6/wp-core-files.jpg" alt="" /></p>
+<p><img src="assets/img/week6/wp-core-files.jpg" alt="" /></p>
 
 <h3 id="setting-up-your-local-server">Setting up your local server</h3>
 
@@ -278,15 +276,14 @@ How do the template tags work? This example below shows how the site tagline cou
     </main>
 
       <footer>
-    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
   </footer>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/global.js"></script>
 </body>

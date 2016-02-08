@@ -10,19 +10,19 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
   <!-- Syntax highlighting with highlightjs.org -->
-  <script src="{{ site.syntaxjspath }}"></script>
+  <script src="{{ site.js-syntax }}"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <link rel="stylesheet" href="{{ site.syntaxcsspath }}">
+  <link rel="stylesheet" href="{{ site.css-syntax }}">
   
   <link rel="stylesheet" href="{{ site.css-global }}">
-  <link rel="icon" type="image/png" href="{{ site.faviconpath }}">
+  <link rel="icon" type="image/png" href="{{ site.favicon }}">
 </head>
 <body class="{{ page.class }}">
   <header>
-    <h1><a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/logo-llc-horizontal.svg" alt="{{ site.title }}"></a></h1>
+    <h1><a class="site-title" href="{{ site.baseurl }}/"><img src="{{ site.img }}/logo-llc-horizontal.svg" alt="{{ site.title }}"></a></h1>
     <h2>{{ site.subtitle }}</h2>
     <nav>
-      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="index.html">Home</a>
       <a href="http://{{ site.slack }}.slack.com" target="_blank">Slack group</a>
     </nav>
   </header>

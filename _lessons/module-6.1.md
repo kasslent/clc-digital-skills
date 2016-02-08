@@ -69,15 +69,15 @@ Customizations can range from how the site looks & page layouts to site function
 Let's compare the different WordPress admin options available between the .com (left image) and .org (right image) versions. Though the interface pretty much looks the same and works the same, notice how the .com version doesn't have an "Add New" option in the themes area and no "Plugin" option in the left menu (among some other menu options).
 
 <div markdown="1" class="two-col">
-![]({{site.imgpath}}/week6/wp-admin-com.jpg)
-![]({{site.imgpath}}/week6/wp-admin-basic.jpg)
+![]({{site.img}}/week6/wp-admin-com.jpg)
+![]({{site.img}}/week6/wp-admin-basic.jpg)
 </div>
 
 
 With the .org version you can also add your own options, further customizing the theme.
 
 <div class="print-hide" markdown="1">
-![]({{site.imgpath}}/week6/wp-admin-custom.jpg)
+![]({{site.img}}/week6/wp-admin-custom.jpg)
 </div>
 
 ##WordPress and PHP
@@ -135,19 +135,19 @@ How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-h
 
 To create a new project, login and select **new site** in the top navigation bar.
 
-![]({{site.imgpath}}/week6/1-flywheel.jpg)
+![]({{site.img}}/week6/1-flywheel.jpg)
 
 Fill out the required information and then choose the "My client will pay later" option to activate the 14 day free trial for creating a demo account.
 
-![]({{site.imgpath}}/week6/2-flywheel.jpg)
+![]({{site.img}}/week6/2-flywheel.jpg)
 
 To view your demo site, go to yoursite.flywheelsites.com and end the username and password provided in your account.
 
-![]({{site.imgpath}}/week6/3-flywheel.jpg)
+![]({{site.img}}/week6/3-flywheel.jpg)
 
 To access the WordPress adming panel for your site, select the **WordPress Login** button.
 
-![]({{site.imgpath}}/week6/4-flywheel.jpg)
+![]({{site.img}}/week6/4-flywheel.jpg)
 
 ##Common WordPress Settings
 
@@ -182,11 +182,11 @@ Pages
 Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.
 
 To add categories, go to **Posts > Categories** or within the post itself.
-![]({{site.imgpath}}/week6/dashboard-categories-post.png)
+![]({{site.img}}/week6/dashboard-categories-post.png)
 
 Sub-categories can also be created by selecting a Parent in the **Categories** menu.
 
-![]({{site.imgpath}}/week6/dashboard-categories.png)
+![]({{site.img}}/week6/dashboard-categories.png)
 
 ###Tags
 Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:

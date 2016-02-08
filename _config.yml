@@ -13,6 +13,7 @@ facebook: ladieslearningcode
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 style: debug
 collections:
   lessons:
@@ -23,9 +24,9 @@ collections:
 #File paths
 css-global: assets/css/styles.css # global CSS file
 css-syntax: assets/css/highlightjs/github.css # syntax highlighter CSS
+jquery: assets/js/jquery-1.11.3.min.js # jQuery
 js-global: assets/js/global.js # global JS file
 js-syntax: assets/js/highlight.pack.js # syntax highlighter JS
 js-waypoints: assets/js/jquery.waypoints.min.js # Waypoints library
 favicon: assets/img/favicon.ico # LLC logo favicon
-img-path: assets/img # path to image folder
-exercises-path: exercises/week{{page.week}}/ # path to exercise folder
+img: assets/img # path to image folder

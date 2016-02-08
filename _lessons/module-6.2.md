@@ -68,7 +68,7 @@ When adding content into your **Post** or **Page**, the default visual editor us
 
 When using the **Visual** editor, the content entered automatically gets converted into HTML.
 
-![]({{site.imgpath}}/week6/adding-content-wysiwyg.png)
+![]({{site.img}}/week6/adding-content-wysiwyg.png)
 
 ###WordPress and HTML
 
@@ -76,15 +76,15 @@ You can also edit or add your own HTML by selecting the **Text** editor tab.
 
 In WordPress, you don't need to add the `<p>` tags in either the visual or text editor. In the **Visual** editor, select the paragraph option from the dropdown. 
 
-![]({{site.imgpath}}/week6/editor-visual-p.png)
+![]({{site.img}}/week6/editor-visual-p.png)
 
 In the **Text** editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into `<p>` tags via Wordpress magic!
 
-![]({{site.imgpath}}/week6/editor-text-p.png)
+![]({{site.img}}/week6/editor-text-p.png)
 
 Also, break tags `<br>` are also not needed. Just use the enter/return key *once* for a line break in either the Visual or Text WordPress editor.
 
-![]({{site.imgpath}}/week6/editor-line-break.png)
+![]({{site.img}}/week6/editor-line-break.png)
 
 
 ##Slug: Posts & Pages
@@ -95,7 +95,7 @@ In posts and pages, the slug appears in the URL and is generated automatically b
 
 Select **Edit** to change it manually.
 
-![]({{site.imgpath}}/week6/dashboard-slug-automatic.png)
+![]({{site.img}}/week6/dashboard-slug-automatic.png)
 
 ##Slug: Categories & Tags
 
@@ -107,13 +107,13 @@ Slugs can be found under the **Post > Categories** and **Post > Tags** menu.
 
 Though your tag & category names can contain spaces and special characters, it will be converted to a dash for the slug to make it URL friendly.
 
-![]({{site.imgpath}}/week6/dashboard-slugs-tags-categories.png)
+![]({{site.img}}/week6/dashboard-slugs-tags-categories.png)
 
 ##Default Home page settings
 
 WordPress includes many core files to make this framework run.  The theme related files include [php template files](https://codex.wordpress.org/Theme_Development#Template_Files_List) that are used to determine how and where to display certain types of content. These template files are also used to display just a specific *portion* of a page. 
 
-![]({{site.imgpath}}/week6/wp-theme-files.jpg)
+![]({{site.img}}/week6/wp-theme-files.jpg)
 
 <br>
 Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you'll need to make sure you have a **Page** to set as your home page and another **Page** for your blog.
@@ -131,7 +131,7 @@ To update these settings, follow these steps:
 
     Under **Settings > Reading**, select whichever page you want to show as the **Front page** (your homepage) and the blank page you created for the blog under **Posts page**. 
 
-    ![]({{site.imgpath}}/week6/homepage-custom.jpg)
+    ![]({{site.img}}/week6/homepage-custom.jpg)
 
 
 ##Create a custom menu
@@ -140,17 +140,17 @@ Menus are a list of links, usually displayed as the navigation for your site. Yo
 
 The menu location may vary depending on the theme. Some themes also offer additional menus such as social links menus.
 
-![]({{site.imgpath}}/week6/wp-menus.png)
+![]({{site.img}}/week6/wp-menus.png)
 
 You can also reorder the menus by dragging the menu options as well as make submenus by dragging it underneath another item.
 
-![]({{site.imgpath}}/week6/menu-additions.gif)
+![]({{site.img}}/week6/menu-additions.gif)
 
 ###Changing themes & menus:
 
 If you change your theme, you may have to go back to your Appearance > Menus to add in the Menu Settings in again.
 
-![]({{site.imgpath}}/week6/change-theme-menu.png)
+![]({{site.img}}/week6/change-theme-menu.png)
 
 ##Editor menu
 
@@ -162,7 +162,7 @@ Normally, it would be best practice to edit these files *locally* so any changes
 
 **Pro tip!** Make a backup copy of the file before editing it in case you need to put it back!
 
-![]({{site.imgpath}}/week6/wp-editor-menu.png)
+![]({{site.img}}/week6/wp-editor-menu.png)
 
 ###Template tags
 
@@ -184,7 +184,7 @@ How do the template tags work? This example below shows how the site tagline cou
 
     <h2 class="site-tagline"><?php bloginfo( 'description' ); ?></h2>
 
-![]({{site.imgpath}}/week6/site-title-settings.jpg)
+![]({{site.img}}/week6/site-title-settings.jpg)
 
 ##Bonus: Local WordPress Theme Development
 
@@ -198,7 +198,7 @@ Though you can access all of these files, there are some that should never be ed
 
 The one file outside of **wp-content** that you may need to edit is the **wp-config.php** file. It contains the website's base configuration details, such as database connection information.
 
-![]({{site.imgpath}}/week6/wp-core-files.jpg)
+![]({{site.img}}/week6/wp-core-files.jpg)
 
 ###Setting up your local server
 

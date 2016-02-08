@@ -7,17 +7,15 @@ These lesson plans are created using [Jekyll](http://jekyllrb.com/) to make use 
 1. Fork or clone this repo.
 1. Navigate to the **llc-digital-skills** folder in Terminal.
 1. Run the command `jekyll server` or `jekyll serve` to start the local server.
-  * There's no need to preinstall Jekyll first.  The repo already contains what you need
-1. The local url should be `http://127.0.0.1:4000/llc-digital-skills/` or use the **Server address** listed in your Terminal.
-
-This will watch any changes made to any of the files (content, CSS, template updates, etc).
+  * There's no need to preinstall Jekyll first.  The repo already contains what you need.
+1. The local url should be `http://127.0.0.1:4000/llc-digital-skills/` (It will be listed under **Server address** Terminal).
+  * This will watch any changes made to any of the files (content, CSS, template updates, etc).
+  
 All files are compiled into standard HTML pages into the **_site** folder.  If students want a local copy, you can zip up the contents of the **_site** folder.  
 
 This repo uses [Github pages](https://help.github.com/articles/using-jekyll-with-pages/) to host the notes so all updates in the master branch needs to be rebased into the gh-pages branch to be available online.
 
-At the time of this writing, Jekyll supports [Sass](http://jekyllrb.com/docs/assets/) with specific rules but doesn't support sourcemaps so I use [CodeKit](https://incident57.com/codekit/index.html) to compile the Sass. Sourcemaps are not required but are useful for debugging.
-
-Use whatever compiler you prefer!
+At the time of this writing, Jekyll supports [Sass](http://jekyllrb.com/docs/assets/) with specific rules but doesn't support sourcemaps so I use [CodeKit](https://incident57.com/codekit/index.html) to compile the Sass. Sourcemaps are not required but are useful for debugging. Use whatever compiler you prefer!
 
 ##Lesson file structure
 

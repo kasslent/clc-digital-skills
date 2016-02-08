@@ -24,7 +24,7 @@ Use percentages to create flexible images.
       max-width: 100%;
     }
 
-[See example here]({{site.expath}}/week3/fluid-images/index.html).
+[See example here]({{site.exercises}}/week3/fluid-images/index.html).
 
 ##Background images
 
@@ -121,7 +121,7 @@ To include it in the shorthand `background` property, it **must** be included af
 
 >##Exercise: images & background images
 >
->Download <a href="{{site.expath}}/week3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
+>Download <a href="{{site.exercises}}/week3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
 >Uncomment each property, change some values and see what happens!
 
 ####Extra Resources

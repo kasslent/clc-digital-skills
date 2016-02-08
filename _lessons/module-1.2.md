@@ -48,7 +48,7 @@ HTML5 introduced better support for media with `<audio>` and `<video>` tags.  Ho
 
 >##Exercise: Review
 >
->Download the exercise file <a href="{{site.baseurl}}/exercises/week1/exercise1.html" download>here</a>.  Open **exercise1.html** in your editor and see if you can spot all of the errors!
+>Download the exercise file <a href="exercises/1.2/exercise1.html" download>here</a> (test).  Open **exercise1.html** in your editor and see if you can spot all of the errors!
 >
 >It could be formatting issues like tabbing nested elements, to mismatched tags, to missing quotes or recommended attributes.
 

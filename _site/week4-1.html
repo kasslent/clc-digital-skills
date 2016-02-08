@@ -7,23 +7,23 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Week4.1</title>
+  <title>Module </title>
   <meta name="description" content="Intro to HTML Forms">
   
   <!-- Syntax highlighting with highlightjs.org -->
-  <script src=""></script>
+  <script src="assets/js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
   
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="">
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
 </head>
 <body class="">
   <header>
-    <h1><a class="site-title" href="/llc-digital-skills/"><img src="/llc-digital-skills/assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
+    <h1><a class="site-title" href="/llc-digital-skills/"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a></h1>
     <h2>Digital Skills Program</h2>
     <nav>
-      <a href="/llc-digital-skills/">Home</a>
+      <a href="index.html">Home</a>
       <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     </nav>
   </header>
@@ -46,10 +46,10 @@
 <ul>
   <li>used to capture information from users</li>
   <li>information processing &amp; form submission requires a server-side language (e.g. PHP, Ruby or Python)</li>
-  <li>all forms begin with the <code class="highlighter-rouge">&lt;form&gt;</code> element and requires two <em>attributes</em>, <code class="highlighter-rouge">method</code> and <code class="highlighter-rouge">action</code>
+  <li>all forms begin with the <code>&lt;form&gt;</code> element and requires two <em>attributes</em>, <code>method</code> and <code>action</code>
     <ul>
-      <li><strong><code class="highlighter-rouge">method</code></strong> defines how the form will communicate with the web server using <code class="highlighter-rouge">get</code> or <code class="highlighter-rouge">post</code> (more secure)</li>
-      <li><strong><code class="highlighter-rouge">action</code></strong> provides the path to where the form script is processed</li>
+      <li><strong><code>method</code></strong> defines how the form will communicate with the web server using <code>get</code> or <code>post</code> (more secure)</li>
+      <li><strong><code>action</code></strong> provides the path to where the form script is processed</li>
     </ul>
   </li>
 </ul>
@@ -62,35 +62,34 @@
   <li>data add into these controls are processed by the server when the form is submitted</li>
 </ul>
 
-<p><code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
+<p><code>&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
 
-<p><code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
+<p><code>&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
 
-<p><code class="highlighter-rouge">&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
+<p><code>&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
 
 <ul>
-  <li>used for various data types by changing the <code class="highlighter-rouge">type</code> attribute value</li>
-  <li>common values include <code class="highlighter-rouge">text</code>, <code class="highlighter-rouge">password</code>, <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">reset</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">radio</code> and <code class="highlighter-rouge">checkbox</code></li>
-  <li>use with <code class="highlighter-rouge">label</code> to add a caption to each input</li>
+  <li>used for various data types by changing the <code>type</code> attribute value</li>
+  <li>common values include <code>text</code>, <code>password</code>, <code>submit</code>, <code>reset</code>, <code>button</code>, <code>radio</code> and <code>checkbox</code></li>
+  <li>use with <code>label</code> to add a caption to each input</li>
   <li>doesn’t require a closing tag!</li>
 </ul>
 
-<p><code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
-Though you can create buttons with the <code class="highlighter-rouge">input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code class="highlighter-rouge">value</code> attribute to add text to the button.</p>
+<p><code>&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
+Though you can create buttons with the <code>input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code>value</code> attribute to add text to the button.</p>
 
-<p>There are three <code class="highlighter-rouge">type</code> attribute values: <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">reset</code>.</p>
+<p>There are three <code>type</code> attribute values: <code>submit</code>, <code>button</code>, <code>reset</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
+<pre><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
 &lt;input type="submit" value="input tag"&gt;
 </code></pre>
-</div>
 
 <div class="example">    
   <button type="submit">button tag</button>
   <input type="submit" value="input tag" />
 </div>
 
-<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code class="highlighter-rouge">type</code> value.</p>
+<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code>type</code> value.</p>
 
 <pre><code>&lt;form method="POST" action="#"&gt;
   &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
@@ -124,16 +123,16 @@ Though you can create buttons with the <code class="highlighter-rouge">input</co
 </form>
 
 <blockquote>
-  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code class="highlighter-rouge">type</code> attributes, <code class="highlighter-rouge">text</code> and <code class="highlighter-rouge">password</code> differ.</p>
+  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code>type</code> attributes, <code>text</code> and <code>password</code> differ.</p>
 
   <p>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?</p>
 
   <p>Note that clicking “submit” will not process any information because this example is only in HTML and is not attached to any server side processing.</p>
 </blockquote>
 
-<h3 id="label-and-the-for-attribute"><code class="highlighter-rouge">&lt;label&gt;</code> and the <code class="highlighter-rouge">for</code> attribute</h3>
+<h3 id="label-and-the-for-attribute"><code>&lt;label&gt;</code> and the <code>for</code> attribute</h3>
 
-<p>Use the <code class="highlighter-rouge">for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code class="highlighter-rouge">id</code> value of the related form control.</p>
+<p>Use the <code>for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code>id</code> value of the related form control.</p>
 
 <pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
 &lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
@@ -155,24 +154,23 @@ Though you can create buttons with the <code class="highlighter-rouge">input</co
   <p>Try clicking on the labels in the examples above.</p>
 </blockquote>
 
-<h3 id="name-attribute"><code class="highlighter-rouge">name</code> attribute</h3>
+<h3 id="name-attribute"><code>name</code> attribute</h3>
 
-<p>The <code class="highlighter-rouge">name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
+<p>The <code>name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
 
 <pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
 &lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
 </code></pre>
 
-<p>The <code class="highlighter-rouge">name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
+<p>The <code>name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day is it today?&lt;/p&gt;
+<pre><code>&lt;p&gt;What day is it today?&lt;/p&gt;
 &lt;input type="radio" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
 &lt;input type="radio" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
 &lt;input type="radio" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
 &lt;input type="radio" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
 &lt;input type="radio" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
 </code></pre>
-</div>
 
 <p>What day is it today?<br />
 <input type="radio" name="days" id="mon" /><label for="mon">Monday</label><br />
@@ -181,14 +179,13 @@ Though you can create buttons with the <code class="highlighter-rouge">input</co
 <input type="radio" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
 <input type="radio" name="days" id="fri" /><label for="fri">Friday</label></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
+<pre><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
 &lt;input type="checkbox" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
 &lt;input type="checkbox" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
 &lt;input type="checkbox" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
 &lt;input type="checkbox" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
 &lt;input type="checkbox" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
 </code></pre>
-</div>
 
 <p>What day do you attend class?</p>
 <p><input type="checkbox" name="days" id="mon" /><label for="mon">Monday</label><br />
@@ -198,7 +195,7 @@ Though you can create buttons with the <code class="highlighter-rouge">input</co
 <input type="checkbox" name="days" id="fri" /><label for="fri">Friday</label></p>
 
 <p><br />
-In addition to the form controls, any HTML tags can be contained within the <code class="highlighter-rouge">&lt;form&gt;</code> element (e.g. <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
+In addition to the form controls, any HTML tags can be contained within the <code>&lt;form&gt;</code> element (e.g. <code>div</code>, <code>p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
 
 <p>Also, the form related HTML only create the form in the browser.  To actually submit the information and process the data, a server side language is required.</p>
 
@@ -253,7 +250,7 @@ In addition to the form controls, any HTML tags can be contained within the <cod
 
 <p>If you’re feeling adventurous, you can also edit the HTML &amp; CSS yourself.</p>
 
-<p>The embed code is simply an <code class="highlighter-rouge">&lt;iframe&gt;</code> which is a common way to insert content from another source (i.e. youtube embeds). But you can <strong>View Source</strong> and grab the actual HTML and embed that into your site instead of the <code class="highlighter-rouge">&lt;iframe&gt;</code>.</p>
+<p>The embed code is simply an <code>&lt;iframe&gt;</code> which is a common way to insert content from another source (i.e. youtube embeds). But you can <strong>View Source</strong> and grab the actual HTML and embed that into your site instead of the <code>&lt;iframe&gt;</code>.</p>
 
 <p>If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.</p>
 
@@ -261,9 +258,9 @@ In addition to the form controls, any HTML tags can be contained within the <cod
 
 <p><img src="/llc-digital-skills/assets/img/week4/gforms-live.png" alt="" /></p>
 
-<p>Then right-click anywhere and select <strong>View source</strong> and look for the <code class="highlighter-rouge">&lt;form&gt;</code> tag.</p>
+<p>Then right-click anywhere and select <strong>View source</strong> and look for the <code>&lt;form&gt;</code> tag.</p>
 
-<p><strong>Pro tip!</strong> Use <strong>cmd/ctrl + F</strong> (find) and do a search for <code class="highlighter-rouge">form</code> on the page and copy everything from the opening <code class="highlighter-rouge">&lt;form&gt;</code> to the closing <code class="highlighter-rouge">&lt;/form&gt;</code> tags.</p>
+<p><strong>Pro tip!</strong> Use <strong>cmd/ctrl + F</strong> (find) and do a search for <code>form</code> on the page and copy everything from the opening <code>&lt;form&gt;</code> to the closing <code>&lt;/form&gt;</code> tags.</p>
 
 <p>Note that this option requires you to write all the CSS yourself!</p>
 
@@ -292,15 +289,14 @@ In addition to the form controls, any HTML tags can be contained within the <cod
     </main>
 
       <footer>
-    <p>© 2011-<span data-year></span> Ladies Learning Code</p>
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
   </footer>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/llc-digital-skills/assets/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/global.js"></script>
 </body>
