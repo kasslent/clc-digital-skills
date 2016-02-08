@@ -3,7 +3,7 @@ layout: lessons
 week: 6
 lesson: 1
 description: CMS & Intro to WordPress
-permalink: /week6/lesson1/
+permalink: /week6-1.html
 class: week6-1
 ---
 

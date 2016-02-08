@@ -3,7 +3,7 @@ layout: lessons
 week: 3
 lesson: 1
 description: CSS Fundamentals
-permalink: /week3/lesson1/
+permalink: /week3-1.html
 class: week3-1
 ---
 

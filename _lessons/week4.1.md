@@ -3,7 +3,7 @@ layout: lessons
 week: 4
 lesson: 1
 description: Forms & Data Manipulation with Sheets
-permalink: /week4/lesson1/
+permalink: /week4-1.html
 ---
 
 ##Intro to HTML Forms

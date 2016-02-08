@@ -3,7 +3,7 @@ layout: lessons
 week: 4
 lesson: 2
 description: SEO - Search Engine Optimization
-permalink: /week4/lesson2/
+permalink: /week4-2.html
 class: week4-2
 ---
 

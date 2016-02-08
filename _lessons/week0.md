@@ -3,7 +3,7 @@ layout: lessons
 week: 0
 lesson: 0
 description: Tips, Recommendations & Cheatsheets
-permalink: /week0/
+permalink: /week0.html
 ---
 
 

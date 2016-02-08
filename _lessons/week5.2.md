@@ -3,7 +3,7 @@ layout: lessons
 week: 5
 lesson: 2
 description: jQuery & Plugins
-permalink: /week5/lesson2/
+permalink: /week5-2.html
 class: week5-2
 ---
 
