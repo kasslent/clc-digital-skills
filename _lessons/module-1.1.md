@@ -2,7 +2,7 @@
 layout: lessons
 module: 1
 lesson: 1
-title: Getting Started With Web Development
+title: Intro to Web Development & HTML
 permalink: module1-1.html
 ---
 
