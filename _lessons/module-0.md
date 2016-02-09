@@ -20,18 +20,13 @@ All examples going forward will be using Chrome.
 
 All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:
 
-**Option 1:** 
- 
-* right-click OR two-finger tap OR control + click anywhere and select **Inspect**.  
-
-**Option 2:**  
-
-* Click the menu <span class="menu-icon">![]({{ site.img }}/menu-icon.png)</span> icon
-* select **More Tools > Developer Tools**
-
-**Option 3:**  
-Keyboard shortcut
-
+* Option 1: Inspect
+  * **right-click** OR **two-finger tap** OR **control + click** on any webpage
+  * select **Inspect**
+* Option 2: Browser menu 
+  * Click the menu <span class="menu-icon">![]({{ site.img }}/menu-icon.png)</span> icon
+  * select **More Tools > Developer Tools**
+* Option 3: Keyboard shortcut
   * **CTRL + Shift + I** (PC)
   * **CMD + Option + I** (Mac)
 
@@ -55,25 +50,25 @@ Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [B
 
 In this course and in any examples, [Atom](https://atom.io/) will be referenced.
 
-###Get to know Atom
+##Get to know Atom
 
 Having a good text editor and learning how to use it to its full potential will help your work flow.  We'll be using [Atom](http://atom.io) during this program because it has some great integrated features and is totally free!
 
 Here are some feature to familiarize yourself with:
 
-####Columns
+###Columns
 
 * adds multiple column views, within the editor to allow for side by side editing
 * called "panes" in Atom  
   * `View > Panes > Split Up/Down/Left/Right`
 
 
-####Preferences
+###Preferences
 Under **Preferences**, there are many options for customizing your editor.
 
 ![atom preferences]({{ site.img }}/module0/atom-preferences.jpg)
 
-**Settings**
+####Settings
 
 The Settings include general options for personalizing your editor. 
 
@@ -81,7 +76,7 @@ The Settings include general options for personalizing your editor.
 
 A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
 
-**Packages**
+####Packages
 
 Packages are tool you can add to include even more features into your editor!
 

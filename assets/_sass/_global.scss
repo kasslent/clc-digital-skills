@@ -21,20 +21,27 @@ body {
   font-weight: 300;
 }
 h2, h3, h4, h5, h6 {
-  font-weight: 300;
   color: $gray-darker;
+  font-weight: 300;
 }
 h1 {
-  font-size: $font-size-xlrg;
+  font-size: $font-size-xxl;
   letter-spacing: -0.07em;
   color: $raspberry;
-  font-family: $sans-serif-brand;
+  font-family: $font-family-brand;
   text-transform: uppercase;
   line-height: $line-height-compact;
 }
 h2 {
-  font-size: $font-size-lrg;
+  font-size: $font-size-xl;
   color: $gray-darkest;
+  font-weight: 300;
+}
+h3 {
+  font-size: $font-size-l;
+}
+h4, h5, h6 {
+  font-size: $font-size-m;
 }
 a {
   color: $raspberry;
@@ -54,6 +61,10 @@ hr {
 ul, ol {
   padding: 0;
   margin-left: 18px;
+  
+  ul, ol {
+    margin-bottom: 15px;
+  }
 }
 
 
@@ -95,7 +106,7 @@ header {
   }
   nav a {
     text-transform: uppercase;
-    font-size: $font-size-xsml;
+    font-size: $font-size-xs;
     padding: 30px 15px 0 0;
     display: inline-block;
     
@@ -108,7 +119,7 @@ header {
 
 footer {
   border-top: 1px solid $gray-lighter;
-  font-size: $font-size-sml;
+  font-size: $font-size-s;
   
   ul {
     list-style-type: none;
@@ -124,9 +135,14 @@ article {
   max-width: 70%;
   padding-right: 20px;
   
-  h2 {
+  @media (max-width: 900px){
+    max-width: 100%;
+  }
+  
+  > h2 {
     margin-top: 100px;
-    border-bottom: 1px solid $gray-light;
+    border-top: 1px solid $gray-light;
+    padding-top: 15px;
   }
   h3 {
     margin: 50px 0 0;
@@ -136,6 +152,15 @@ article {
   }
   img {
     max-width: 100%;
+  }
+  a {
+    color: $gray-dark;
+    text-decoration: underline;
+    
+    &:hover {
+      color: $raspberry;
+      text-decoration: none;
+    }
   }
 }
 
@@ -158,20 +183,25 @@ code {
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: $font-size-l;
+  
+  @-moz-document url-prefix() {
+    font-size: $font-size-base;
+  }
+}
+article > pre {
+  margin-bottom: 50px;
 }
 
 // Use for class discussion callouts
 // and exercises instructions
 blockquote {
   border: 4px solid rgba($raspberry, 0.2);
-  padding: 0 20px;
-  margin: 35px 0;
+  padding: 0 30px;
+  margin: 35px 0 50px;
   
-  h2 {
-    margin-top: 15px;
-  }
   // &.note {
-  //   font-size: $font-size-sml;
+  //   font-size: $font-size-s;
   //   border-width: 1px;
   //   margin: 20px 0px;
   // }
@@ -191,16 +221,16 @@ blockquote {
   padding: 25px;
   border-radius: 8px;
   width: 28%;
-  font-size: $font-size-sml;
+  font-size: $font-size-s;
   
-  @media (max-width: 800px){
+  @media (max-width: 900px){
     display: none;
   }
   
   h3 {
     margin: 0;
     text-transform: uppercase;
-    font-size: $font-size-xsml;
+    font-size: $font-size-xs;
   }
   h4 {
     border-bottom: 1px solid $gray;
@@ -243,27 +273,30 @@ blockquote {
 .example {
   border: 1px solid $gray;
   padding: 15px; 
-   
-  h1, h2, h3 {
-    margin-top: 0;
-  }
-  h1 {
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 1.9rem;
-  }
-}
-.two-col {
-  overflow: hidden;
   
-  img {
-    float: left;
-    width: 49%;
-    margin-right: 1%;
+  hr {
+    border: inherit;
   }
+  // h1, h2, h3 {
+  //   margin-top: 0;
+  // }
+  // h1 {
+  //   font-size: 2.4rem;
+  //   margin-bottom: 10px;
+  // }
+  // h2 {
+  //   font-size: 1.9rem;
+  // }
 }
+// .two-col {
+//   overflow: hidden;
+//   
+//   img {
+//     float: left;
+//     width: 49%;
+//     margin-right: 1%;
+//   }
+// }
 
 
 // Lesson specific styles

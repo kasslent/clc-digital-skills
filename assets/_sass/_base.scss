@@ -27,13 +27,16 @@ $sans-serif:            $montserrat;
 $sans-serif-brand:      $quicksand;
 
 $font-family-base:      $sans-serif;
+$font-family-brand:     $sans-serif-brand;
 $font-color-base:       $gray;
 
 $font-size-base:        1.8rem;
-$font-size-xlrg:        $font-size-base * 2;
-$font-size-lrg:         $font-size-base * 1.5;
-$font-size-sml:         $font-size-base * 0.8;
-$font-size-xsml:        $font-size-base * 0.7;
+$font-size-xxl:         $font-size-base * 2.2;
+$font-size-xl:          $font-size-base * 1.6;
+$font-size-l:           $font-size-base * 1.3;
+$font-size-m:           $font-size-base * 1.1;
+$font-size-s:           $font-size-base * 0.8;
+$font-size-xs:          $font-size-base * 0.7;
 $line-height-base:      1.5;
 $line-height-compact:   1.3;
 

@@ -7,7 +7,7 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Intro to HTML</title>
+  <title>Getting Started With Web Development</title>
   <meta name="description" content="In 1989, Tim Berners-Lee, a physicist at CERN, beganexperimenting with ways to share research documentsacross different computer platforms. This wouldeventua...">
   
   <!-- Syntax highlighting with highlightjs.org -->
@@ -37,11 +37,11 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 1, Lesson 1</h3>
-        <h4>Intro to HTML</h4>
+        <h4>Getting Started With Web Development</h4>
       </nav>
       
       <article>
-        <h1>Intro to HTML</h1>
+        <h1>Getting Started With Web Development</h1>
         <p>In 1989, Tim Berners-Lee, a physicist at CERN, began
 experimenting with ways to share research documents
 across different computer platforms. This would
@@ -57,17 +57,21 @@ specifications, guidelines, tools and recommendations.</p>
 
 <p><strong>Web apps (applications)</strong> also run in the browser but usually allow the user to perform actions and tasks (e.g. Gmail). This is just a general rule of thumb, since informational sites can contain app-like features and vice versa.</p>
 
-<p><strong>Native apps (applications)</strong> must be downloaded to your computer or device and cannot be accessed in a web browser.</p>
+<p><strong>Native apps (applications)</strong> must be downloaded to your computer or device and cannot be accessed in a web browser. They are also specific to your operating system (e.g. Android, IOS).</p>
 
 <h3 id="front-end-languages">Front-end languages</h3>
 
-<p>Front-end generally refers to HTML, CSS and JavaScript. These three languages work together but perform different functions.</p>
+<ul>
+  <li>generally refers to HTML, CSS and JavaScript</li>
+  <li>can also be referred to as “client-side”</li>
+  <li>these languages handle everything you <em>see</em> in the web browser</li>
+</ul>
+
+<p>These three languages work together but perform different functions.</p>
 
 <p><strong>HTML</strong> (Hypertext Markup Language) defines the page structure and content.<br />
 <strong>CSS</strong> (Cascading Style Sheet) is responsible for presentation.<br />
 <strong>JavaScript</strong> is a programming language and controls the behavior and interactions.</p>
-
-<p>Front-end development can also be referred to as “client-side”.  These languages handle everything you <em>see</em> in the web browser such as colours, fonts, images and text.</p>
 
 <blockquote>
   <p>Go to any website and right-click or two-finger tap anywhere on the page. Select <strong>View Page Source</strong>.  That’s HTML, CSS and JavaScript!</p>
@@ -75,29 +79,43 @@ specifications, guidelines, tools and recommendations.</p>
 
 <h3 id="back-end-languages">Back-end languages</h3>
 
-<p>The back end of a website consists of a server, an application, and a database. This is what powers the website and makes it available on the web, stores and manipulates data and makes a website dynamic.</p>
+<ul>
+  <li>usually consists of a server, an application, and a database</li>
+  <li>powers the website and makes it available on the web</li>
+  <li>stores and manipulates data and  makes a website dynamic</li>
+  <li>handles all the things you <em>can’t</em> see in the browser</li>
+  <li>also referred to as “server-side”</li>
+</ul>
 
-<p>They handle all the things you <em>can’t</em> see in the browser. For example, dynamic sites, like Facebook and Twitter, have content that is constantly changing and updated in real-time and contains information like user profiles. The backend handles all of that data and functionality.</p>
+<p>For example, dynamic sites, like Facebook and Twitter, have content that is constantly changing and updated in real-time and contains information like user profiles. The backend handles all of that data and functionality.</p>
 
 <p>Some examples of back-end programming languages are PHP, Ruby, Java (totally different from JavaScript!) and Python.</p>
 
-<h3 id="native-apps">Native Apps</h3>
+<h3 id="native-apps-programming-languages">Native apps programming languages</h3>
 
-<p>Native apps are specific to the device or operating system (e.g. Photoshop for computers, Instagram for phones) and must be downloaded onto your computer or mobile device.</p>
+<ul>
+  <li>specific to the device or operating system</li>
+  <li>e.g. Photoshop for computers, Instagram app for phones</li>
+  <li>must be downloaded onto your computer or mobile device</li>
+</ul>
 
-<p>You don’t necessarily need to be connected to the Internet, though some apps may require it to display some types of content or features such as showing updated content feeds or syncing data.</p>
+<p>You don’t need to be connected to the Internet to use native apps, though some may require it to display some types of content or features such as showing updated content feeds or syncing data.</p>
 
-<p>Native apps are built in the specific programming language of the device/operating system (Objective-C or Swift for iOS, Java for Android) and are different from front and back-end programming languages.</p>
+<p>Native apps are built in the specific programming language of the device/operating system (e.g. Objective-C or Swift for iOS, Java for Android).</p>
 
 <blockquote>
   <p>What are some examples of websites, web apps and native apps?</p>
 </blockquote>
 
-<h2 id="creating-html-pages">Creating HTML pages</h2>
+<h2 id="intro-to-html">Intro to HTML</h2>
 
-<p>To create an HTML page, name your file using an <code>.html</code> extension. Just like .pdf is used for PDF files or .doc for Word files, using this extension will signal to the computer that this is a file that should run in a web browser.</p>
+<h3 id="creating-html-pages">Creating HTML pages</h3>
 
-<p><strong>Best practices for naming web files:</strong></p>
+<p>To create an HTML page, name your file using an <code>.html</code> extension. That’s it!</p>
+
+<p>Just like .pdf is used for PDF files or .doc for Word files, using this extension will signal to the computer that this is a file that should run in a web browser.</p>
+
+<h3 id="best-practices-for-naming-web-files">Best practices for naming web files</h3>
 
 <ul>
   <li>Use lowercase letters.
@@ -107,22 +125,21 @@ specifications, guidelines, tools and recommendations.</p>
   </li>
   <li>No spaces! Use underscores (<code>_</code>) or dashes (<code>-</code>).
     <ul>
-      <li><a href="http://searchengineland.com/9-seo-quirks-you-should-be-aware-of-146465">Dashes are preferred for SEO</a> (search engine optimization).</li>
+      <li><a href="http://searchengineland.com/9-seo-quirks-you-should-be-aware-of-146465">Dashes are better for SEO</a> (search engine optimization).</li>
       <li><strong>business-hours.html</strong> instead of <strong>business hours.html</strong></li>
       <li>The browser will interpret spaces as <strong>business%20hours.html</strong></li>
     </ul>
   </li>
-  <li>Avoid symbols like <code>#</code> <code>&amp;</code> <code>*</code> but numbers are ok.</li>
   <li>Keep your file names concise, yet meaningful.
     <ul>
       <li><strong>about.html</strong>, <strong>contact.html</strong> instead of <strong>page1.html</strong>, <strong>page2.html</strong></li>
     </ul>
   </li>
+  <li>Avoid symbols like <code>#</code> <code>&amp;</code> <code>*</code> but numbers are ok.</li>
 </ul>
 
-<p><strong>Pro tip!</strong> All the file naming tips also apply to other files such as folders, images, CSS files, etc.</p>
-
-<h2 id="html-basics">HTML Basics</h2>
+<p><em>Pro tip!</em><br />
+These naming tips also apply to other files such as folders, images, CSS files, etc.</p>
 
 <h3 id="html-vs-xhtml-vs-html5">HTML vs XHTML vs HTML5</h3>
 
@@ -148,7 +165,7 @@ same language. With each new version, new features and rules are added while oth
 &lt;p&gt;This tag is used for paragraphs.&lt;/p&gt;
 </code></pre>
 
-<h3 id="nested-tags--attributes">Nested tags &amp; attributes</h3>
+<h3 id="nesting-tags">Nesting tags</h3>
 
 <p>Tags can be <em>nested</em> within other tags like this:</p>
 
@@ -173,7 +190,7 @@ same language. With each new version, new features and rules are added while oth
 <pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre>
 
-<p>Whitespace through indentation (tabs) makes HTML easier to read. When nesting a tag, <em>add one tab space</em>.  Getting into this habit from the start will help keep the code organized, easier to read and look more professional.</p>
+<p>Whitespace through indentation (tabs) makes HTML easier to read. When nesting a tag, <em>add one tab space</em>.</p>
 
 <p>Below are the base HTML tags that should be included in <strong>all</strong> HTML documents.</p>
 
@@ -190,9 +207,14 @@ same language. With each new version, new features and rules are added while oth
 &lt;/html&gt;
 </code></pre>
 
+<p><em>Pro tip!</em><br />
+Getting into this habit from the start will help keep the code organized, easier to read, easier to find errors and look more professional.</p>
+
 <h3 id="attributes--html-comments">Attributes &amp; HTML Comments</h3>
 
-<p><strong>Attributes</strong> provide additional information or instruction for the element and is included <em>inside the opening HTML tag</em> in the form of <code>attribute="value"</code>. There are many different types of attributes.</p>
+<p><strong>Attributes</strong> provide additional information or instruction for the element and is included <em>inside the opening HTML tag</em> in the form of <code>attribute="value"</code>.</p>
+
+<p>There are many different types of attributes.</p>
 
 <pre><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;
 </code></pre>
@@ -243,13 +265,14 @@ same language. With each new version, new features and rules are added while oth
 <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 </code></pre>
 
-<p><strong>Pro tip!</strong> The W3C provides a free service to check if your markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
+<p><em>Pro tip!</em><br />
+The W3C provides a free service to check if your markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
 
 <h3 id="the-html-element">The <code>html</code> element</h3>
 
 <ul>
   <li>always the first HTML tag</li>
-  <li>root element &amp; ancestor of all other elements because everything is nested inside</li>
+  <li>root element, all other elements are nested inside</li>
   <li>identifies the document as HTML</li>
   <li>the <code>lang</code> <em>attribute</em> classifies the language</li>
 </ul>
@@ -297,8 +320,7 @@ same language. With each new version, new features and rules are added while oth
 
 <h3 id="the-body-element">The <code>body</code> element</h3>
 
-<p>All content to be displayed in the browser window goes between the <code>&lt;body&gt;&lt;/body&gt;</code> tags.<br />
-Also known as the <em>viewport</em>.</p>
+<p>All content to be displayed in the browser window goes between the <code>&lt;body&gt;&lt;/body&gt;</code> tags.  Also known as the <em>viewport</em>.</p>
 
 <pre><code class="opacity">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -322,11 +344,13 @@ Also known as the <em>viewport</em>.</p>
     <li>Open a new file and add in the basic HTML tags.</li>
     <li>Save file as <strong>index.html</strong></li>
     <li>Open <strong>index.html</strong> in the browser. You won’t see anything in the browser just yet! There’s no content, just the HTML page structure.</li>
-    <li>Add a relevant page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag. Save &amp; refresh the browser. Where do you see it?</li>
+    <li>Add a relevant page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag.</li>
+    <li>Save &amp; refresh the browser. Where do you see it?</li>
   </ol>
 </blockquote>
 
-<p><strong>Pro tip!</strong> Save all your projects in a common area.  For example, have a folder called <strong>“projects”</strong> or <strong>“sites”</strong> and save all your individual projects in there.  Your folder directory might look like this:</p>
+<p><em>Pro tip!</em><br />
+Save and organize all your projects in a common area.  For example, have a folder called <strong>“projects”</strong> or <strong>“sites”</strong> and save all your individual projects in there.  Your folder directory might look like this:</p>
 
 <pre><code>projects
   --- personal-site
@@ -340,19 +364,15 @@ Also known as the <em>viewport</em>.</p>
 
 <p>Get used to doing a lot of moving, deleting, changing and rewriting. This is the nature of programming!</p>
 
-<p>Bulding a website is like building a house. Start with a blueprint. Build a frame and walls and before painting and adding furniture.</p>
-
-<p>If you don’t have a web design to work from, a simple hand sketch also works. Also, websites have many common elements such as a navigation menu, intro/header area, main content, a footer and sometimes a sidebar area so you can at least start with that.</p>
-
-<p>For example, here is a simple wireframe for a basic web page.</p>
+<p>If you don’t have a web design to work from, a simple hand sketch also works. Also, websites have many common elements. For example, here is a simple wireframe for a basic web page.</p>
 
 <p><img class="print-wireframe" src="assets/img/wireframe-basic.jpg" /></p>
 
 <h3 id="grouping-elements">Grouping Elements</h3>
 
-<p>Structural tags and creating a page layout often involves grouping related content together.</p>
+<p>Creating a page layout using structural HTML tags and often involves grouping related content together.</p>
 
-<p>The <code>&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code>&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements into page sections to creating a page structure.</p>
+<p>The <code>&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code>&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements to page components.</p>
 
 <p>To create the page layout, the HTML could look something like this:</p>
 
@@ -377,38 +397,49 @@ Also known as the <em>viewport</em>.</p>
 
 <h3 class="clear">HTML5 Structural Elements</h3>
 
-<p>HTML5 introduced new semantic tags to better describe blocks of content such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code> and <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png">many more</a>. Using HTML5 tags, the previous example could look like this instead:</p>
+<p>HTML5 introduced new semantic tags to better describe blocks of content such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code> and <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png">many more</a>.</p>
+
+<p>Using HTML5 tags, the previous example could look like this instead:</p>
 
 <pre><code>&lt;nav&gt;
   nav links here
 &lt;/nav&gt;
+
 &lt;header&gt;
   header content here
 &lt;/header&gt;
+
 &lt;section&gt;
   about content here
 &lt;/section&gt;
+
 &lt;footer&gt;
   footer info here
 &lt;/footer&gt;
 </code></pre>
 
-<p><code>&lt;div&gt;</code> can and is still often used when no other tag properly describes the element.</p>
+<p>However, <code>&lt;div&gt;</code> can and is still often used, when no other HTML tag properly describes the content.</p>
 
-<p><a href="http://html5doctor.com">html5doctor.com</a> is a great reference for proper usage and the semantics of all the HTML tags and also provides this handy <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">HTML5 Element Flowchart</a>.</p>
+<p><em>Pro tip!</em><br />
+When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the HTML5 structural tags for content it was not intended for.</p>
 
-<p><strong>Pro tip!</strong> When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the HTML5 structural tags for content it was not intended for.</p>
+<h4 id="extra-resources">Extra Resources</h4>
+
+<ul>
+  <li><a href="http://html5doctor.com">html5doctor.com</a></li>
+  <li><a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf">HTML5 Element Flowchart</a>.</li>
+</ul>
 
 <blockquote>
-  <p>Let’s take a look at a couple websites and discuss what layout structures could be used to display the content in a meaningful &amp; semantic way.</p>
+  <p>Look at a couple different websites and discuss how the page can be grouped into related components to display the content in a meaningful &amp; semantic way. (e.g. Where is the nav? Is there a footer?)</p>
 </blockquote>
 
 <h2 id="html-content-tags">HTML Content Tags</h2>
 
-<p>There are also many different HTML tags for displaying different types of content.  Below are some common tags.</p>
+<p>There are also many different HTML tags for displaying different types of content.  Here are some common tags.</p>
 
 <h3 id="paragraphs">Paragraphs</h3>
-<p>Whether it's one sentence or more, each paragraph needs its own pair of <code>&lt;p&gt;&lt;/p&gt;</code> tags.</p>
+<p>Whether it’s one sentence or more, each paragraph needs its own set of <code>&lt;p&gt;&lt;/p&gt;</code> tags.</p>
 
 <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;p&gt;This is another paragraph. More than one sentence.&lt;/p&gt;
@@ -416,32 +447,13 @@ Also known as the <em>viewport</em>.</p>
 
 <h3 id="headings">Headings</h3>
 
-<p>There are six headings tags (not to be confused with the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure.</p>
+<p>There are six headings tags (different from the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure.</p>
 
-<p>To decide which heading to use, think about how you would arrange an essay or blog post using bold and sizing styles.</p>
-
-<div class="example essay">
-  <h1>All About Apples</h1>
-
-  <h2>Introduction</h2>
-  <p>There are many different types of apples. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur minus libero ut voluptatum voluptates obcaecati doloribus saepe nobis ipsa natus, assumenda possimus, laudantium in, iure. </p>
-
-  <h2>Apple varieties</h2>
-  <p>Paragraph. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-
-  <h3>Green apple varieties</h3>
-  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-  <h3>Red apple varieties</h3>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-
-  <h2>Conclusion</h2>
-  <p>Final paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur minus libero ut voluptatum voluptates obcaecati doloribus saepe nobis ipsa natus, assumenda possimus, laudantium in, iure. </p>
-</div>
-
-<p>Let’s look at how we could describe this hierarchy using HTML.</p>
+<p>Let’s say you’re writing an essay about apples.  How would describe the hierarchy of the main heading versus the subheadings for each section?</p>
 
 <p>Prior to the HTML5 rules, using only one <code>&lt;h1&gt;</code> was recommended per page.  With the introduction of HTML5 <em>sectioning</em> tags, each part of the document that uses a sectioning tag now gets its <em>own</em> outline.</p>
+
+<p>Let’s look at how this hierarchy could be described using HTML and HTML5.</p>
 
 <p><strong>Pre-HTML5 Heading Outline:</strong></p>
 
@@ -451,7 +463,6 @@ Also known as the <em>viewport</em>.</p>
   &lt;h2&gt;Introduction&lt;/h2&gt;
   &lt;p&gt;There are many different types of apples...&lt;/p&gt;
 &lt;/div&gt;
-
 
 &lt;div&gt;
   &lt;h2&gt;Apple varieties&lt;/h2&gt;
@@ -463,8 +474,7 @@ Also known as the <em>viewport</em>.</p>
   &lt;h3&gt;Red apple varieties&lt;/h3&gt;
   &lt;p&gt;Paragraph.&lt;/p&gt;
 &lt;/div&gt;
-
-
+  
 &lt;div&gt;
   &lt;h2&gt;Conclusion&lt;/h2&gt;
   &lt;p&gt;Final paragraph.&lt;/p&gt;
@@ -497,27 +507,7 @@ Also known as the <em>viewport</em>.</p>
 &lt;/section&gt;
 </code></pre>
 
-<p>What about the <code>&lt;header&gt;</code> tag? Why not do this?</p>
-
-<pre><code>&lt;header&gt;
-  &lt;h1&gt;Essay About Apples&lt;/h1&gt;
-&lt;/header&gt;
-
-&lt;section&gt;
-  &lt;h1&gt;Introduction&lt;/h1&gt;
-  &lt;p&gt;There are many different types of apples...&lt;/p&gt;
-&lt;/section&gt;
-...
-...
-</code></pre>
-
-<p>It’s best practice to be efficient with your code and try not to use “extra” code that may not be needed.  In this example, there was only one heading to be included in what would be assigned as the header area. However, you may add more content later or page styles that would require the addition of a sectioning element.</p>
-
-<p>There are no hard and fast rules for semantics, only best practices since assigning the “meaning” of content is based on context and the interpretation of the individual.</p>
-
-<p><strong>Pro tip!</strong> It’s best to start with minimal code and add on as needed. Sometimes that’s easier said then done so <em>refactoring</em> as you go along can also help. More tips on how to refactor later in the course.</p>
-
-<h4 id="extra-resources">Extra resources</h4>
+<h4 id="extra-resources-1">Extra resources</h4>
 
 <p>Read more about headings and HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">here</a> and <a href="http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824">here</a>.</p>
 
@@ -547,8 +537,6 @@ Also known as the <em>viewport</em>.</p>
 &lt;/ul&gt;
 </code></pre>
 
-<p>Note that only <code>&lt;li&gt;</code> can be contained within both the <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> tags.</p>
-
 <h3 id="nesting-lists">Nesting Lists</h3>
 <p>Lists can go inside of another list and must be nested inside of a list item element.
 Ordered &amp; unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.</p>
@@ -568,10 +556,13 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
 
 <blockquote>
   <h2 id="exercise-adding-content-part-1">Exercise: Adding Content, part 1</h2>
-  <p>In your <strong>index.html</strong> file, practice writing HTML and getting used to the syntax.  Make sure to open &amp; close the tags properly, use indentation to organize your code and just experiment!</p>
+  <p>In your <strong>index.html</strong> file, practice writing HTML and get used to the syntax.<br />
+Add some headings, paragraphs and lists.</p>
+
+  <p>Make sure to open &amp; close the tags properly, use indentation to organize your code and buidl good habits!</p>
 </blockquote>
 
-<h2 id="images--self-closing-tags">Images &amp; self-closing tags</h2>
+<h2 id="self-closing-tags">Self-closing tags</h2>
 
 <p>Self-closing tags don’t format content. Instead they are used to embed objects onto the page; they <em>are</em> the content. Because of this, they do not require a closing tag.</p>
 
@@ -590,39 +581,43 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
   <hr />
 </div>
 
-<p>Prior to HTML5, self-closing tags had to including a forward slash like this:</p>
+<p>Prior to HTML5, self-closing tags had to include a forward slash like this:</p>
 
 <pre><code>&lt;br/&gt;
 &lt;hr/&gt;
 </code></pre>
 
-<p>Though this is still valid in HTML5, it is <strong>no longer needed</strong>.</p>
+<p>Though this is still valid in HTML5, it is <strong>no longer needed</strong> but you may still see it in use.</p>
 
-<h3 id="images">Images</h3>
+<h2 id="images">Images</h2>
 
-<p>Images are another example of a self-closing tag but it <strong>requires</strong> an attribute to provide additonal info. A <code>src</code> <em>attribute</em> is used to tell the browser the location of the image file.</p>
+<p>Images are another example of a self-closing tag. Images also <strong>require</strong> an attribute to provide additional info.</p>
 
-<pre><code>&lt;img src="path/to/image/file"&gt;
+<p>A <code>src</code> <em>attribute</em> is used to tell the browser the location of the image file.</p>
+
+<pre><code>&lt;img src="folder/filename.jpg"&gt;
 </code></pre>
 
-<p>The <code>alt</code> attribute provides <em>alternative information</em> for visually impaired users using screen reader or if the images are disabled or unable to load.  This is highly recommended for your HTML to be valid and for accessibility.</p>
+<p>The <code>alt</code> attribute provides <em>alternative text</em> for visually impaired users, using screen readers or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility.</p>
 
-<p>This is what the <code>alt</code> information looks like, if the image doesn’t load:</p>
-
-<pre><code>&lt;img src="path/to/image/file" alt="description of image"&gt;
-
-&lt;img src="/fakepath/fake.jpg" alt="description of image"&gt;
+<pre><code>&lt;img src="folder/filename.jpg" alt="short description of image"&gt;
 </code></pre>
 
 <h3 id="image-file-types">Image file types</h3>
 
-<p>There are many different file types used for web. Each type is best suited for specific kinds of images. Use the format that maintains the best quality while reducing the file size.</p>
+<p>There are many different file types used for web. Use the format that maintains the best quality while reducing the file size.</p>
 
 <ul>
-  <li><strong>svg</strong> - used for 2D graphics and is scalable. Based on XML and can be used as a image file or as HTML. When included as HTML, CSS can be used to style the svg! More about SVG <a href="http://css-tricks.com/using-svg/">here</a>.</li>
   <li><strong>jpg</strong> - used for photographs with lots of rich colours or gradients</li>
   <li><strong>png</strong> - used for images with transparent or opaque backgrounds</li>
   <li><strong>gif</strong> - used for images with minimal colour variation and of course, for animated gifs!</li>
+  <li><strong>svg</strong> - used for 2D graphics and is scalable
+    <ul>
+      <li>based on XML and can be used as a image file or as HTML</li>
+      <li>when included as HTML, CSS can be used to style the svg</li>
+      <li>more about SVG <a href="http://css-tricks.com/using-svg/">here</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h4 id="extra-resource">Extra resource</h4>
@@ -630,7 +625,9 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
 <p>If your file extensions do not show by default, here are instructions for <a href="https://support.apple.com/kb/PH19072?locale=en_US">Mac</a> and for <a href="http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7">Windows</a>.</p>
 
 <h3 id="copyright">Copyright</h3>
-<p>Though images can be found all over the internet, use your own images or royalty free photos to ensure you don’t violate any copyright laws. There are many paid options ranging in price but there are also many resources for free stock photography.</p>
+<p>Though images can be found all over the internet, use your own images or royalty free photos to ensure you don’t violate any copyright laws.</p>
+
+<p>There are many paid options ranging in price but there are also many resources for free stock photography.</p>
 
 <h4 id="image-resources">Image resources</h4>
 
@@ -662,7 +659,8 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
   </ul>
 
   <p><br />
-<strong>Pro tip!</strong> While not required, it’s best practice to put image files into its own folder (as well as other related files like CSS and JavaScript) to keep your project directory organized.</p>
+<em>Pro tip!</em><br />
+While not required, it’s best practice to put image files into its own folder (as well as other related files like CSS and JavaScript) to keep your project directory organized.</p>
 </blockquote>
 
 <h2 id="links--anchor-tag">Links / Anchor tag</h2>
@@ -693,7 +691,7 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
 &lt;p id="go-here"&gt;This where you want the link to go TO.&lt;/p&gt;
 </code></pre>
 
-<p>It can be used in any order and in any HTML tag.  The <code>id</code> and <code>href</code> value has to match.</p>
+<p>It can be used in any order and in any HTML tag.  The <code>id</code> and <code>href</code> values have to match.</p>
 
 <pre><code>&lt;h1 id="top"&gt;Top of page&lt;/h1&gt;
 
@@ -728,9 +726,13 @@ Ordered &amp; unordered lists can also be mixed when nested. This is where inden
 
 <h3 id="image-as-a-link">Image as a link</h3>
 
-<p>Just like text, simply wrap the anchor tag around the image. However, when using an image or an icon, in addition to using the <code>alt</code> attribute, you can also add a <code>title</code> attribute to provide more info about the link.  This can be added in the anchor tag and will show as a tool tip when you hover over it.</p>
+<p>Instead of text, simply wrap the anchor tag around the image.</p>
 
-<pre><code>&lt;a href="http://twitter.com" title="Twitter"&gt;&lt;img src="images/twitter-logo.png" alt="Twitter logo"&gt;&lt;/a&gt;
+<p>When using an image or an icon, in addition to using the <code>alt</code> attribute, you can also add a <code>title</code> attribute to provide more info about the link.  It will also show as a “tool tip” when you hover over it (there’s a slight delay).</p>
+
+<pre><code>&lt;a href="http://twitter.com" title="Twitter"&gt;
+  &lt;img src="images/twitter-logo.png" alt="Twitter logo"&gt;
+&lt;/a&gt;
 </code></pre>
 
 <p><a href="http://twitter.com" title="Twitter"><img class="example-img" src="assets/img/twitter-logo.png" alt="Twitter logo" /></a></p>
@@ -766,9 +768,9 @@ ladieslearningcode
 
 <h3 id="relative-path">Relative Path</h3>
 
-<p>Points to files located in the project files (not an external source like http://website.com). The file that you are editing is <em>starting point</em>. Navigate to the desired directory from there.</p>
+<p>Points to files located in the project files (not an external source like http://website.com). The file that you are editing is the <em>starting point</em>. Navigate to the desired directory from there.</p>
 
-<p>Using the above directory example to add a link from <strong>index.html</strong> to <strong>about.html</strong>, the <code>href</code> value will look like this:</p>
+<p>Using the above directory example, to add a link from <strong>index.html</strong> to <strong>about.html</strong>, the <code>href</code> value will look like this:</p>
 
 <pre><code>&lt;a href="about.html"&gt;Menu&lt;/a&gt;
 </code></pre>
@@ -792,7 +794,7 @@ ladieslearningcode
 
 <blockquote>
   <h2 id="exercise-adding-content-part-3">Exercise: Adding Content, Part 3</h2>
-  <p>Here are some suggested content to add to practice all the concepts listed above.</p>
+  <p>Here are some suggestions to practice the concepts covered.</p>
 
   <ol>
     <li>create an additional HTML page</li>
