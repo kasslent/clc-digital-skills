@@ -30,7 +30,7 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 * select **More Tools > Developer Tools**
 
 **Option 3:**  
-Keyboard shortcut: 
+Keyboard shortcut
 
   * **CTRL + Shift + I** (PC)
   * **CMD + Option + I** (Mac)

@@ -15,7 +15,7 @@
 As the weeks progress, depending on the progress of the class you may need to do a small review at the beginning of each class.  If people are asking questions about certain things, do a small review at the beginning of class or ask people if they have questions about previous classes.  You many need to also review things like editor settings, general syntax and best practices.
 
 ## Lesson notes
-The notes are styled for regular viewing on laptop for students.
+The notes are styled for regular viewing on laptops for students.
 
 * currently not optimized for projectors
 * may need to zoom in on the notes in the browser, depending on projector size

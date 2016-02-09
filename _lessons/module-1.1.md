@@ -553,7 +553,6 @@ There are many different file types used for web. Each type is best suited for s
 * **png** - used for images with transparent or opaque backgrounds  
 * **gif** - used for images with minimal colour variation and of course, for animated gifs!
 
-<img src="{{ site.img }}/bey-boss.gif" class="print-hide">
 
 ####Extra resource
 
