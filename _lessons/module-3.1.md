@@ -7,7 +7,7 @@ permalink: module3-1.html
 class: module3-1
 ---
 
-##CSS Review
+<!-- ##CSS Review
 
 ###Adding CSS
 
@@ -43,7 +43,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
 
 > What are the pros & cons of each technique?
 
-**Reference:** [Module 1, lesson 2]({{site.baseurl}}/module1/lesson2/#referencing-css)
+
 
 ###Basic selectors
 
@@ -75,7 +75,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* more specific - applies only to a section element with this id */
     }
 
-**Reference:** [Module 1, lesson 2]({{site.baseurl}}/module1/lesson2/#basic-css-selectors)
+ -->
 
 ##Descendant selectors
 Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.

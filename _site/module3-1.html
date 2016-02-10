@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>CSS Fundamentals</title>
-  <meta name="description" content="CSS Review">
+  <meta name="description" content="&lt;!– ##CSS Review">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,19 +42,19 @@
       
       <article class="module3-1" >
         <h1>CSS Fundamentals</h1>
-        <h2 id="css-review">CSS Review</h2>
+        <!-- ##CSS Review
 
-<h3 id="adding-css">Adding CSS</h3>
+###Adding CSS
 
-<h4 id="inline">Inline</h4>
+####Inline 
 
-<p>CSS is added to a specific HTML element using the style <em>attribute</em>.</p>
+CSS is added to a specific HTML element using the style *attribute*.
 
 <pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
 </code></pre>
 
-<h4 id="internal">Internal</h4>
-<p>Included in the <code>&lt;head&gt;</code> with a <code>&lt;style&gt;</code> tag.</p>
+####Internal
+Included in the `<head>` with a `<style>` tag.
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
@@ -67,8 +67,8 @@
  &lt;/head&gt;
 </code></pre>
 
-<h4 id="external">External</h4>
-<p>Add the CSS to a separate stylesheet (<code>.css</code> file).  Use the <code>&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code>&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
+####External
+Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
@@ -76,47 +76,41 @@
 &lt;/head&gt;
 </code></pre>
 
-<blockquote>
-  <p>What are the pros &amp; cons of each technique?</p>
-</blockquote>
+> What are the pros & cons of each technique?
 
-<p><strong>Reference:</strong> <a href="/llc-digital-skills/module1/lesson2/#referencing-css">Module 1, lesson 2</a></p>
 
-<h3 id="basic-selectors">Basic selectors</h3>
 
-<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
+###Basic selectors
 
-<pre><code>p {
-  /* targets all paragraphs */
-}
-</code></pre>
+**Type selectors** target HTML elements by their element tag name. 
 
-<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element. Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
+    p {
+      /* targets all paragraphs */
+    }
 
-<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
-</code></pre>
+**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
 
-<hr />
+    <p class="special">This is a special paragraph</p>
 
-<pre><code>.special {
-  /* applies to any element with this class */ 
-}
-p.special {
-  /* more specific - applies only to paragraphs with this class */
-}
-</code></pre>
+---
+    
+    .special {
+      /* applies to any element with this class */ 
+    }
+    p.special {
+      /* more specific - applies only to paragraphs with this class */
+    }
 
-<p><strong>ID selectors</strong> work the same way as the class attributes for CSS styling but it can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
+**ID selectors** work the same way as the class attributes for CSS styling but it can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
 
-<pre><code>#about {
-  /* applies to any element with this id */ 
-}
-section#about {
-  /* more specific - applies only to a section element with this id */
-}
-</code></pre>
+    #about {
+      /* applies to any element with this id */ 
+    }
+    section#about {
+      /* more specific - applies only to a section element with this id */
+    }
 
-<p><strong>Reference:</strong> <a href="/llc-digital-skills/module1/lesson2/#basic-css-selectors">Module 1, lesson 2</a></p>
+ -->
 
 <h2 id="descendant-selectors">Descendant selectors</h2>
 <p>Descendant selectors can be used to target <em>nested</em> elements. To use a descendant selector, add a <em>space</em> between selectors.</p>

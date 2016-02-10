@@ -191,6 +191,10 @@ pre {
 }
 article > pre {
   margin-bottom: 50px;
+  
+  + hr {
+    margin-top: -35px;
+  }
 }
 
 // Use for class discussion callouts
@@ -200,19 +204,9 @@ blockquote {
   padding: 0 30px;
   margin: 35px 0 50px;
   
-  // &.note {
-  //   font-size: $font-size-s;
-  //   border-width: 1px;
-  //   margin: 20px 0px;
-  // }
-  // &.quote {
-  //   border: 1px solid $gray-light;
-  //   margin: 10px 0;
-  // }
-  // cite {
-  //   margin-bottom: 15px;
-  //   display: inline-block;
-  // }
+  + blockquote {
+    margin-top: -25px;
+  }
 }
 
 .table-of-contents {
@@ -339,6 +333,7 @@ blockquote {
     padding: 10px;
   }
 }
+
 
 
 

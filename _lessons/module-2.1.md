@@ -12,7 +12,76 @@ In a nutshell, web *design* is about creating the visuals. Web *development* tur
 
 There are even further specializations, such as back-end developers, front-end developers and interaction designers, just to name a few.
 
-##Brainstorm Ideas
+Before we launch into design and more CSS, let's do a review.
+
+
+##CSS Review: Adding CSS
+
+###Inline 
+
+CSS is added to a specific HTML element using the style *attribute*.
+
+<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
+</code></pre>
+
+###Internal
+Included in the `<head>` with a `<style>` tag.
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    <strong>&lt;style&gt;</strong>
+      p {
+        color: red;
+      }
+    <strong>&lt;/style&gt;</strong>
+ &lt;/head&gt;
+</code></pre>
+
+###External
+Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
+&lt;/head&gt;
+</code></pre>
+
+> What are the pros & cons of each technique?
+
+
+##CSS Review: Selectors
+
+**Type selectors** target HTML elements by their element tag name. 
+
+    p {
+      /* targets all paragraphs */
+    }
+
+**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
+
+    <p class="special">This is a special paragraph</p>
+
+---
+    
+    .special {
+      /* applies to any element with this class */ 
+    }
+    p.special {
+      /* more specific - applies only to paragraphs with this class */
+    }
+
+**ID selectors** can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
+
+    #about {
+      /* applies to any element with this id */ 
+    }
+    section#about {
+      /* more specific - applies only to a section element with this id */
+    }
+
+
+##Web Design: Brainstorm Ideas
 
 Before writing a line of code, it helps to define your goals for the website first.  
 
@@ -43,15 +112,13 @@ Design uses a combination of type, color, images and form to present content in 
 ##Purpose and Organizing Content
 What do you want your website to do? Who is your target audience? What is the purpose of the website?
 
-When thinking about how to organize and arrange the content on your website, think about how your eyes navigate a web page. 
-
-Our eyes tend to gravitate to larger elements first, such as: 
+When thinking about how to organize and arrange the content on your website, think about how your eyes navigate a web page. Our eyes tend to gravitate to larger elements first, such as: 
 
 * large images
 * large text
 * blocks of color
 
-Then we narrow in on interesting blocks of content to further to explore in detail. 
+Then we narrow in on interesting blocks of content to further explore in detail. 
 
 Use the layout of your website to guide the viewer’s eye and provide a clear path for viewers.
 
@@ -121,67 +188,6 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 >Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. 
 >
 >Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
-
-
-##Working with Images
-
-###Cropping and Saving Images
-When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).  
-
-Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the *largest* size you need for your website.  
-
-We'll be using CSS to make sure the image size scales & fits the page layout. 
-
-When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.
-
-Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to [Module 1, Lesson 1](module1-1.html#images) for reference.
-
-###Image editors
-You will need an image editor tool to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular paid options.
-
-[Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
-
-##Using Pixlr
-
-1. Navigate to <https://pixlr.com/>
-1. Choose the **Editor** version.
-1. In the popup, choose an option for adding the image to be edited.
-
-To add or change to another image, these options can also be accessed under the **File** menu.
-
-![Pixlr file menu]({{ site.img }}/module2/pixlr-file-menu.png)
-
-###The Crop Tool
-
-In [Pixlr](https://pixlr.com/editor/) (and in most image editors), select the crop tool to resize and crop out parts of your images. 
-
-Click & drag the cursor over the image to highlight the areas to be cropped out.
-
-![pixlr crop]({{ site.img }}/module2/pixlr-crop.jpg)
- 
-
-###Resizing images
-
-If you just need to resize an image to reduce the resolution size for web, go to:  
-**Image &rarr; Image Size...**
-
-Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.
-
-<img src="{{ site.img }}/module2/06-pxlr-imagesize.jpg">
-
-Choosing **Canvas size...** (the option under **Image size...**) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.
-
-
->##EXERCISE: Resizing Images
-> Using [Pixlr](https://pixlr.com/editor/), practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.
->
-> **Bonus:** Check out some of the other menu options to familiarize yourself with the tool.
-
-
-###Image resources
-
-* [Placeholder image sites](https://www.google.ca/search?q=placeholder+images)
-* [Stock Photos That Don't Suck](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
 
 
 ##Typography
@@ -277,7 +283,7 @@ Most decorative typefaces are one offs containing just one font file.
 
 ###Web Safe Fonts
 
-Fonts that are considered to be "web safe" refer to pre-installed fonts on a given computer or device.
+Fonts that are considered to be "web safe" refer to pre-installed fonts on a computer or device.
 
 Because not all operating systems have the same fonts installed, use a font *stack* in your CSS to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.
 
@@ -310,11 +316,11 @@ In CSS, to change the default typeface, use the `font-family` property.
 * monospace (fixed width fonts)
 
 
-##Custom Web Fonts
+###Custom Fonts
 
-###Free vs. Premium Fonts
+####Free vs. Premium Fonts
 
-There are thousands of fonts available to download and use to beyond the default web safe fonts.
+There are thousands of fonts available to download and use beyond the default web safe fonts.
 
 Free fonts:
 
@@ -329,9 +335,9 @@ Premium fonts:
 * typically better quality and elegantly designed
 * have a complete character set
 * usually have multiple styles
-* exclusive and unique
+* more exclusive and unique
 
-####Font Resources
+###Font Resources
 
 * Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
 * Google Font pairing resource - <http://femmebot.github.io/google-type/> 
@@ -360,7 +366,7 @@ Premium fonts:
       <link rel="stylesheet" href="css/styles.css">
     </head>
 
-Now you can use these new fonts with the `font-family` property as normal, using the font name listed in the example on the Google Fonts page.
+Now you can use these new fonts with the `font-family` property, using the font name listed in the example on the Google Fonts page.
 
 ![]({{ site.img }}/module2/google-fonts.png)
 
@@ -370,15 +376,58 @@ Now you can use these new fonts with the `font-family` property as normal, using
 1. Download the <a href="exercises/module2/typography.html" download>typography.html</a> exercise file.
 1. Add the Google Fonts CSS file to the **typography.html** exercise file downloaded in the previous step.
 1. Follow the instructions listed under the `TYPOGRAPHY EXERCISE #1` CSS comments.
+1. Review the answers together!
+>
+>*Pro tip!*  
+Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
+
+##More CSS typography
+
+###`font-weight` & `font-style`
+
+Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!
+
+    font-weight: bold; /* makes text bold */
+    font-weight: normal; /* removes bold style */
+
+---
+    font-style: italic; /* sets text to italic */
+    font-style: normal; /* removes italic style */
+    
+    
+###`text-` properties
+
+**`text-align`**  
+Used for aligning text and accepts five values: `left`, `right`, `center`, `justify` and `inherit`.
+
+**`text-decoration`**   
+Most commonly used to add or remove underlines but accepts these five values: `none`, `underline`, `overline`, `line-through` and `inherit`
+
+**`text-transform`**  
+Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit`.
+
+* `capitalize` capitalizes the first letter of each word 
+* `uppercase` value will capitalize every letter 
+* `lowercase` value will make every letter lowercase
+
+Note that when a CSS property accepts `inherit` as a value, it will inherit the style set in either the parent or nearest ancestor element. `none` usually removes the style defined by that property.
+
+>##CLASS EXERCISE: Typography & CodePen
+>Let's try out the above typography based CSS properties. Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to experiment.  
+>
+> <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
+
+>##EXERCISE: `type-` & `font-` properties
+>Back in **typography.html**, practice using these CSS techniques in your editor and complete the instructions listed under the `TYPOGRAPHY EXERCISE #2` comments.
+
+These are just a few type related CSS properties.  We'll be going over more in the next lesson.
 
 
+##Bonus: `@font-face`
 
+The `@font-face` CSS3 method can be used to embed and load fonts files that are not *hosted* online like Google Fonts.  These font files are downloaded and included in your folder directory.
 
-###Using Downloaded fonts 
-
-The `@font-face` CSS3 method can be used to embed and load fonts files.  Ensure these font files are saved in your folder directory.
-
-`@font-face` must be declared in your CSS files first before you can use it.  If you are targeting modern browsers, this should provide enough browser support.
+`@font-face` must be declared in your CSS files first *before* you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.
 
     @font-face {
       font-family: 'Font Name';
@@ -389,50 +438,19 @@ The `@font-face` CSS3 method can be used to embed and load fonts files.  Ensure 
 ---    
     font-family: 'Font Name', second-option, sans-serif;
 
-**Pro tip!** You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming coventions.
+This snippet links the font files to the CSS, as well as declares a `font-family` name.
 
-####Resources
+*Pro tip!*   
+You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.
+
+### Extra Resources
 
 * [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support 
 * [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
 * [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
 
 
-###Icon fonts
-Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
-
-There's many to choose from but [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
-
-Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
-
-**Pro tip!** When using CDNs, they are sometimes listed like this:
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
-
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
-
-####Resources
-
-* <https://css-tricks.com/html-for-icon-font-usage/>
-* <http://weloveiconfonts.com/>
-* <http://reference.sitepoint.com/css/typography>
-
->##EXERCISE: Typography
->Download the exercise file <a href="{{site.baseurl}}/exercises/module2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
->
-> [Answer key]({{site.exercises}}/module2/typography-answer.zip) (zip file).
-> 
->**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
-
-
->
->Define a style for your headlines, paragraph and navigation menu with your chosen fonts. Experiment with different styles, weights, and sizes.
-
-
+<br>
 ~ End ~
 
 

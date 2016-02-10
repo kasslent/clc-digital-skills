@@ -46,39 +46,6 @@
 
 <p>Last class we covered the role of typography in design.  Let’s go over how to implement these principles into your web pages using  various CSS properties.</p>
 
-<h2 id="text--properties">text- properties</h2>
-
-<p>Note that when a CSS property accepts <code>inherit</code> as a value, it will inherit the style set in either the parent or nearest ancestor element. <code>none</code> usually removes the style defined by that property.</p>
-
-<p><strong><code>text-align</code></strong><br />
-Used for aligning text and accepts five values: <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code> and <code>inherit</code>.</p>
-
-<p><strong><code>text-decoration</code></strong> <br />
-Most commonly used to add or remove underlines but accepts these five values: <code>none</code>, <code>underline</code>, <code>overline</code>, <code>line-through</code> and <code>inherit</code></p>
-
-<p><strong><code>text-transform</code></strong><br />
-Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase</code>, <code>lowercase</code> and <code>inherit</code>.</p>
-
-<ul>
-  <li><code>capitalize</code> capitalizes the first letter of each word</li>
-  <li><code>uppercase</code> value will capitalize every letter</li>
-  <li><code>lowercase</code> value will make every letter lowercase</li>
-</ul>
-
-<p data-height="290" data-theme-id="0" data-slug-hash="epybqM" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/epybqM/">text- properties</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-<blockquote class="note">
-<p><a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.</p>
-</blockquote>
-
-<blockquote>
-  <h2 id="exercise-codepen">EXERCISE: CodePen</h2>
-  <p>There are more typography related CSS properties but let’s try out the ones mentioned so far.</p>
-
-  <p>Use this example on <a href="http://codepen.io/learningcode/pen/yYpNej?editors=110">CodePen</a> to try out these properties.</p>
-</blockquote>
-
 <h2 id="length--measurement-units">Length / Measurement Units</h2>
 <p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
 
@@ -187,6 +154,96 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
 
 <p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="working-with-images">Working with Images</h2>
+
+<h3 id="cropping-and-saving-images">Cropping and Saving Images</h3>
+<p>When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).</p>
+
+<p>Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the <em>largest</em> size you need for your website.</p>
+
+<p>We’ll be using CSS to make sure the image size scales &amp; fits the page layout.</p>
+
+<p>When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.</p>
+
+<p>Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to <a href="module1-1.html#images">Module 1, Lesson 1</a> for reference.</p>
+
+<h3 id="image-editors">Image editors</h3>
+<p>You will need an image editor tool to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular paid options.</p>
+
+<p><a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
+
+<h2 id="using-pixlr">Using Pixlr</h2>
+
+<ol>
+  <li>Navigate to <a href="https://pixlr.com/">https://pixlr.com/</a></li>
+  <li>Choose the <strong>Editor</strong> version.</li>
+  <li>In the popup, choose an option for adding the image to be edited.</li>
+</ol>
+
+<p>To add or change to another image, these options can also be accessed under the <strong>File</strong> menu.</p>
+
+<p><img src="assets/img/module2/pixlr-file-menu.png" alt="Pixlr file menu" /></p>
+
+<h3 id="the-crop-tool">The Crop Tool</h3>
+
+<p>In <a href="https://pixlr.com/editor/">Pixlr</a> (and in most image editors), select the crop tool to resize and crop out parts of your images.</p>
+
+<p>Click &amp; drag the cursor over the image to highlight the areas to be cropped out.</p>
+
+<p><img src="assets/img/module2/pixlr-crop.jpg" alt="pixlr crop" /></p>
+
+<h3 id="resizing-images">Resizing images</h3>
+
+<p>If you just need to resize an image to reduce the resolution size for web, go to:<br />
+<strong>Image → Image Size…</strong></p>
+
+<p>Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.</p>
+
+<p><img src="assets/img/module2/06-pxlr-imagesize.jpg" /></p>
+
+<p>Choosing <strong>Canvas size…</strong> (the option under <strong>Image size…</strong>) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.</p>
+
+<blockquote>
+  <h2 id="exercise-resizing-images">EXERCISE: Resizing Images</h2>
+  <p>Using <a href="https://pixlr.com/editor/">Pixlr</a>, practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.</p>
+
+  <p><strong>Bonus:</strong> Check out some of the other menu options to familiarize yourself with the tool.</p>
+</blockquote>
+
+<h3 id="image-resources">Image resources</h3>
+
+<ul>
+  <li><a href="https://www.google.ca/search?q=placeholder+images">Placeholder image sites</a></li>
+  <li><a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">Stock Photos That Don’t Suck</a></li>
+</ul>
+
+<h3 id="icon-fonts">Icon fonts</h3>
+<p>Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they <em>are</em> fonts!</p>
+
+<p>There’s many to choose from but <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
+
+<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).</p>
+
+<p><strong>Pro tip!</strong> When using CDNs, they are sometimes listed like this:</p>
+
+<pre><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
+
+<pre><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://css-tricks.com/html-for-icon-font-usage/">https://css-tricks.com/html-for-icon-font-usage/</a></li>
+  <li><a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></li>
+  <li><a href="http://reference.sitepoint.com/css/typography">http://reference.sitepoint.com/css/typography</a></li>
+</ul>
 
 <h2 id="color">Color</h2>
 

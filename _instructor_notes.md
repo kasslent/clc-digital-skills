@@ -12,10 +12,13 @@
   * Keep in mind some people prefer to learn one thing at a time.
   * These extras can be an optional exercise if people want to come early or during the Office Hours.
 * Exercises
+  * anything labeled "Class Exercise" should be completed as a code-along
+  * anything labeled as "Exercise" is for independent or (optional) partner work
   * there's no specific time recommendations for the independent exercises
   * start with 10 minutes, then check on the progress of the students and gauge from there
   * encourage them to work in pairs and their mentors
   * review it together after
+  
 * Homework
   * There are no official homework assignments so encourage students to use exercise time to ask questions and attend drop in sessions.
   * No homework is assigned to make it possible for students to balance work and this course.

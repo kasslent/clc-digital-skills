@@ -56,6 +56,9 @@ Sites like these and other media sites such as Instagram and Twitter all offer e
 >Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
 >
 >It could be formatting issues like tabbing nested elements, to mismatched tags, to missing quotes or recommended attributes.
+>
+>*Pro tip!*  
+Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 ##Intro to CSS
 
