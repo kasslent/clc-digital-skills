@@ -119,7 +119,7 @@ To include it in the shorthand `background` property, it **must** be included af
 * `contain` scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions
 * `cover` scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped
 
->##Exercise: images & background images
+>##EXERCISE: images & background images
 >
 >Download <a href="{{site.exercises}}/module3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
 >Uncomment each property, change some values and see what happens!
@@ -306,7 +306,7 @@ However, `text-align: center;` will only center align the text *within* the `<li
 >Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
 
 
->##Exercise: Horizontal navigation
+>##EXERCISE: Horizontal navigation
 >
 >In the exercise files downloaded earlier, in the **project** folder, you will find a basic webpage.  Using the existing HTML & CSS files, try styling the list navigation using the techniques discussed so far.
 >
@@ -355,7 +355,7 @@ The `position` property can also be used to lay out HTML elements and has five d
 ####More examples here
 [https://css-tricks.com/almanac/properties/p/position/](https://css-tricks.com/almanac/properties/p/position/)
 
->##Exercise: Position Fixed nav
+>##EXERCISE: Position Fixed nav
 >
 >Go back to the **project** folder included in today's exercise files and try to make the navigation fixed to the top of the page using `position`.
 
@@ -463,7 +463,7 @@ Height and width can also be used together in the media query:
 
 These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
 
->##Exercise: Basic Media queries
+>##EXERCISE: Basic Media queries
 >
 >In the exercise folder, open **media-queries.html** in your editor.  
 >
@@ -503,7 +503,7 @@ Chrome has an emulator built right into the dev tools!
 There are also many many other tools, [free](http://lab.maltewassermann.com/viewport-resizer/) and [paid](https://www.browserstack.com/responsive), available for testing and emulating multiple devices and device sizes.
 
 
->##Exercise: Responsive Web page
+>##EXERCISE: Responsive Web page
 >
 >Let's go back to the webpage contained in the **project** folder in today's exercise files and make the Portfolio section fluid and responsive.
 >

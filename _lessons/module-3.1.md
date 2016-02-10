@@ -190,7 +190,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 * [The 30 CSS Selectors you Must Memorize](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 * [Taming Advanced CSS Selectors](http://www.smashingmagazine.com/2009/08/taming-advanced-css-selectors/)
 
->##Exercise: Selectors
+>##EXERCISE: Selectors
 >
 >Download the <a href="{{site.exercises}}/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
 >
@@ -373,7 +373,7 @@ But notice how the background color only extends the set width of the element?  
 
 To do that, we'll need to create a container just for the content to auto align it and use the outer container for the background styles.
 
->##Exercise: auto align content
+>##EXERCISE: auto align content
 >
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
@@ -464,7 +464,7 @@ The parent element (represented by the blue background) will wrap around its con
 
 However, to get elements to float side by side, the natural stacking order must be broken first, then put back together.
 
->##Exercise: Floats, part 1
+>##EXERCISE: Floats, part 1
 >Let's try instruction #1 in the following [CodePen example](http://codepen.io/learningcode/pen/gaedLj).
 
 ###Exercise 1 followup
@@ -509,7 +509,7 @@ On the element that comes *after* the last element to be floated can be used to 
       clear: both; /* clears any left or right float */
     }
 
->##Exercise: Floats, part 2
+>##EXERCISE: Floats, part 2
 >Let's go back to the previous CodePen example and complete instruction #2.
 
 Now it should look like this:
@@ -538,7 +538,7 @@ If there is no element following the floated elements, apply `overflow: hidden;`
       float: left;
     }
 
->##Exercise: Floats, part 3
+>##EXERCISE: Floats, part 3
 >Let's go back to the previous CodePen example and complete instruction #3-4.
     
 Though the `overflow` property can be used to self-clear floated elements, it is actually used to specify how to display content that flows longer or wider than its container.  The options are  whether to clip content, show scrollbars or just display content overflowing content.
@@ -624,7 +624,7 @@ How you organize your CSS is a personal choice and you will probably develop you
 
 Remember, good organization helps to reduce errors and makes for easier debugging!
 
->##Exercise: Putting it all together
+>##EXERCISE: Putting it all together
 >
 >Download the <a href="{{site.exercises}}/module3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
 

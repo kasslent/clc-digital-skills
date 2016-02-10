@@ -11,27 +11,7 @@ permalink: module2-2.html
 
 Last class we covered the role of typography in design.  Let's go over how to implement these principles into your web pages using  various CSS properties. 
 
-##`color`
 
-Use the `color` property to change the colour of your text. We talked about how to set the colour for background styles in [Module 1]({{site.baseurl}}/module1/lesson2/#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
-    
-    /* all the same colour */
-    body {
-      color: firebrick;
-      color: rgb(178,34,34);
-      color: #B22222;
-    }
-
-##font-weight & font-style
-
-Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!
-
-    font-weight: bold; /* makes text bold */
-    font-weight: normal; /* removes bold style */
-
----
-    font-style: italic; /* sets text to italic */
-    font-style: normal; /* removes italic style */
 
 ##text- properties
 
@@ -43,7 +23,7 @@ Used for aligning text and accepts five values: `left`, `right`, `center`, `just
 **`text-decoration`**   
 Most commonly used to add or remove underlines but accepts these five values: `none`, `underline`, `overline`, `line-through` and `inherit`
 
-**`text-tranform`**  
+**`text-transform`**  
 Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit`.
 
 * `capitalize` capitalizes the first letter of each word 
@@ -57,7 +37,7 @@ Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit
 <p><a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.</p>
 </blockquote>
 
->##Exercise: CodePen
+>##EXERCISE: CodePen
 >There are more typography related CSS properties but let's try out the ones mentioned so far.
 >
 >Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to try out these properties.  
@@ -146,115 +126,118 @@ To use multiple text shadows, separate each grouping with a comma.
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-##`font-family`
 
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+##Color
+
+###Terminology
+**Hue** is what we think of when we think about color. It is the characteristic that makes a color unique. 
+
+<img src="{{ site.img }}/module2/11-hue.jpg" class="print-50">
+
+**Saturation** refers to how weak or strong the color is. 
+
+<img src="{{ site.img }}/module2/12-saturation.jpg" class="print-50">
+
+**Value** refers to the lightness or darkness of a color. Think about it as adding white (lightness) or black (darkness) to a color. 
+
+<img src="{{ site.img }}/module2/13-value.jpg" class="print-50">
+
+
+###RGB vs CMYK
+
+####RGB
+
+* stands for red, green, blue
+* additive color system that is based on adding light
+* used to specify colors for the web.
+
+####CMYK
+
+* cyan, magenta, yellow and black
+* subtractive color system that is based on ink printing
+* used to specify colors for print.
+
+<img src="{{ site.img }}/module2/14-rgb-cmyk.jpg" class="print-50">
+
+You can specify RGB colors on the web using the `rgb(#,#,#)` format in CSS (where # is a value between 0 and 255) or with the Hex color code such as `#FFFFFF`.
+
+    p {
+      color: #FFFFFF;
+      /* or */
+      color: rgb(255, 255, 255);
     }
 
-* used to declare the font for displaying text 
-* best practice is to list at least 2 options
-* first font is the primary choice
-* alternative fonts are declared in order of preference and separated by a comma
-* font names with two or more words should be wrapped in quotation marks (single or double quotes)
-* last font should be the generic option
+###Designing with Color
+
+A good design should work in the absence of color and should communicate clearly in black and white. But color is a valuable tool and can be used:
+
+* to add meaning and evoke emotions
+* to distinguish between different pieces of content
+* to indicate the state of interactive elements
+* add harmony and rhythm to your design
 
 
-###Generic fonts
+Below are some items to consider when choosing colors.
 
-* sans-serif
-* serif
-* cursive - script fonts
-* fantasy - decorative fonts
-* monospace - fixed width fonts
+####Personality and Meaning
+Choose colors that reflect your personality or your brand. Consider the emotional responses of your target audience. Color communicates meaning. That meaning can vary across different cultures so it’s important to consider your target audience and how they perceive certain colors.
 
-###Web safe fonts
+Also, think about how your audience will interact with your page. Use color to distinguish between elements and interactive states. For example, you might choose a default color for your navigation elements and a “selected” color.
 
-Pre-installed fonts on a given computer or device. Because not all operating systems have the same fonts installed, use a font *stack* to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.
-
-####Resources 
-
-* [cssfontstack.com](http://www.cssfontstack.com) - list of web safe fonts
-* [Mozilla Developer Network: font-family](https://developer.mozilla.org/en-US/docs/CSS/font-family)
-
-##Custom fonts (Google, External and Icon fonts)
-
-###Using Google Fonts
-
-You can link directly to the [Google Fonts](https://www.google.com/fonts) CSS files, making the fonts available to your site visitors. This option relies on the CSS to include the fonts rather than system installed fonts.
-
-To use Google Fonts:
-
-Select the fonts you want to use and **Add to Collection**. **Review** to compare and try different options, then choose **Use** when ready.
-
- Some things to keep in mind when going through the Google **Use** options:
-
-* choose only the fonts & font weights that you need to reduce page loading time
-* the default Latin character set is usually all that is required unless you are specifically writing in the other languages listed
-* to add the CSS file to your website: 
-  * **Standard** HTML option (most common) - copy the `<link>` code snippet and add it the `<head>` of your page, *before your stylesheet*
-  * **import** CSS option - add the import code to the very top of your CSS file
-  * JavaScript option - this has specific usages, read more about it [here](http://billpatrianakos.me/blog/2014/12/05/should-i-load-google-web-fonts-js-api-or-the-css-link/) 
- 
-Now you can use these new fonts with the `font-family` property as normal, using the font name listed in the example on the Google Fonts page.
-
-![]({{ site.img }}/module2/google-fonts.png)
+Read more about color meaning and how to use color to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
 
 
-###Using Downloaded fonts 
+####Harmony and Rhythm
+Color can be used to attract attention and organize content, creating a visual hierarchy. 
+Repeating colors on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
 
-The `@font-face` CSS3 method can be used to embed and load fonts files.  Ensure these font files are saved in your folder directory.
-
-`@font-face` must be declared in your CSS files first before you can use it.  If you are targeting modern browsers, this should provide enough browser support.
-
-    @font-face {
-      font-family: 'Font Name';
-      src: url('file-path/font-file.woff2') format('woff2'),
-           url('file-path/font-file.woff') format('woff');
-    }
-    
----    
-    font-family: 'Font Name', second-option, sans-serif;
-
-**Pro tip!** You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming coventions.
-
-####Resources
-
-* [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support 
-* [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
-* [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
+####Less is More
+Consider the number of colors to use in your design. Color helps to reinforce your message and guide people throughout your design. Choosing too many colors may confuse people. When in doubt use one primary color and a secondary accent color. Vary the saturation and value of your colors to add variety while maintaining clarity.
 
 
-###Icon fonts
-Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
+###Color Accessibility
+It’s important to consider accessibility. Many people have some sort of visual color impairment such as being unable to distinguish certain colors from others. Remember that your design should work in the absence of color. Ensure sufficient contrast between colors to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
 
-There's many to choose from but [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
+Read more about color blindness and how to design for color accessibility [here](https://24ways.org/2012/color-accessibility/).
 
-Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
+####Color Resources
+* [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose color palettes
+* [Color Safe](http://colorsafe.co/) - helps you choose colors with appropriate contrast for text
+* [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colors from websites
 
-**Pro tip!** When using CDNs, they are sometimes listed like this:
+>##EXERCISE: Choosing colors
+Choose up to 2 colors for your website and define how they will be used. 
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
 
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+##Brand Identity
 
-To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
+Your website is a reflection of you and/or your business. Your website is is part of your brand.
 
-####Resources
+Your **brand** is how you are perceived by your audience.  
+Your **logo** is the visual expression of who you are to your audience.  
+Your **brand identity** is a consistent set of artifacts that tell people who you are. 
 
-* <https://css-tricks.com/html-for-icon-font-usage/>
-* <http://weloveiconfonts.com/>
-* <http://reference.sitepoint.com/css/typography>
+The fonts and colors you choose for your website becomes part of your brand identity. These can be carried through to the rest of your brand and serves as a foundation for your brand style guide. 
 
->##Exercise: Typography
->Download the exercise file <a href="{{site.baseurl}}/exercises/module2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
->
-> [Answer key]({{site.exercises}}/module2/typography-answer.zip) (zip file).
-> 
->**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
+A **style guide** defines the visual identity for you or your brand across *all* print and digital collateral.
 
+####Examples of brand style guides
+
+* [Jamie Oliver branding](http://issuu.com/bellfrog/docs/jamie-oliver-frv-brand-guidelines)
+* [Mailchimp brand guide](http://mailchimp.com/about/brand-assets/)
+* [Gov.uk web guidelines](http://govuk-elements.herokuapp.com/)
+
+In web design, a **style tile** is used in much the same way as a style guide except that it defines styles that are specific to your website.
+
+####Examples of style tiles
+
+<img src="{{ site.img }}/module2/15-styletile-bh.jpg" class="print-50 left"><img src="{{ site.img }}/module2/16-styletile-gen.jpg" class="print-50 left"><img src="{{ site.img }}/module2/17-styletile-IH.png" class="print-50 left"><img src="{{ site.img }}/module2/18-styletile-fpcaa.jpg" class="print-50 left">
+
+<br>
+Keep track of the different styles you use in a style guide or style tile. Use it as a reference as you build out your website and your brand collateral to maintain consistency and clarity.
+
+<br>
 
 
 ##Adding/Removing Space
@@ -320,7 +303,7 @@ In Chrome, you can access the tools in 3 ways:
 
 > Pick your favorite website and try it out!
 
-> ##Exercise: Margin & Padding
+> ##EXERCISE: Margin & Padding
 > Download the [exercise file]({{site.baseurl}}/exercises/module2/margin-padding.zip) (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!
 
 

@@ -126,7 +126,7 @@ WordPress specific hosting allows you to take advantage of the custom options no
 How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
 * [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
 
->##Exercise: Set up a Demo Site
+>##EXERCISE: Set up a Demo Site
 >Today we're going to look at a company called [Flywheel](https://getflywheel.com/) to try out some of the features included in a hosted WordPress site without setting up a local server. (14 day free trial)
 >
 >Visit [getflywheel.com](https://getflywheel.com/) to create an account.
@@ -224,7 +224,7 @@ If you're not ready to code yourself just yet but want more options, paid themes
 
 There are literally 1000s of free WordPress themes available for download in the WordPress directory found under **Appearance > Themes**, **Add New**. Click on the thumbnail to see a preview, get info or install a new theme.
 
-##Exercise: Getting to know WordPress
+##EXERCISE: Getting to know WordPress
 >Let's spend the remainder of the class trying out different themes, adding content and getting used to and exploring the WordPress framework.
 
 ####Resources

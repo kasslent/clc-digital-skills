@@ -113,7 +113,7 @@ Some other useful general computer tricks:
 * right-clicking or a two-finger tap in most apps often reveals more options
 * use the space bar & keyboard arrows to scroll
 
-> ##Exercise: Workflow practice
+> ##EXERCISE: Workflow practice
 >
 > Download and unzip (extra all if you're on a PC) [this exercise file](exercises/module0/workflow.zip) and practice some workflow exercises.  Here are some to try:
 >

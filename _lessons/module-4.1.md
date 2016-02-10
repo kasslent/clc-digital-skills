@@ -222,7 +222,7 @@ Note that this option requires you to write all the CSS yourself!
 
 View the presentation for this module [here](  https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166).
 
->##Exercise: Forms responses & Excel
+>##EXERCISE: Forms responses & Excel
 >View the form [here](https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#) for today's exercise.
 >
 >View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  Be sure to made a **copy** of this file into *your* Google Drive to make your own changes.

@@ -262,7 +262,7 @@ All content to be displayed in the browser window goes between the `<body></body
 &lt;/html&gt;
 </code></pre>
 
->##Exercise: Setting up a project
+>##EXERCISE: Setting up a project
 > Remember to apply the file naming best practices!
 >
 > 1. Create a project folder
@@ -476,7 +476,7 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
 
 
 
->##Exercise: Adding Content, part 1
+>##EXERCISE: Adding Content, part 1
 >In your **index.html** file, practice writing HTML and get used to the syntax.  
 >Add some headings, paragraphs and lists.
 >
@@ -550,7 +550,7 @@ There are many paid options ranging in price but there are also many resources f
 *  [http://blog.hubspot.com/marketing/free-stock-photos](http://blog.hubspot.com/marketing/free-stock-photos)
 
 
->##Exercise: Adding Content, Part 2
+>##EXERCISE: Adding Content, Part 2
 >
 >Back in **index.html**, add some content using the appropriate headings and paragraphs. This time, try to write the HTML with the page structure in mind. Here are some elements that could be added:
 >
@@ -694,7 +694,7 @@ Only link to web pages, not specific files such as images (unless it points to y
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
 
->##Exercise: Adding Content, Part 3
+>##EXERCISE: Adding Content, Part 3
 > Here are some suggestions to practice the concepts covered.
 >
 >1. create an additional HTML page

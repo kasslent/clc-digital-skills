@@ -46,7 +46,7 @@ If you want to get just a portion of the date, use a **method**. For example `ge
     > new Date().getFullYear()
     < 2015
 
->##Exercise: Add a dynamic date to your web page
+>##EXERCISE: Add a dynamic date to your web page
 >
 >To get the value to output onto your HTML page, follow the steps below.
 >

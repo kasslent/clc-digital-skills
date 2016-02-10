@@ -243,7 +243,7 @@ Also:
 	- Use these, then check in GAKP
 
 
->##Exercise: Keywords
+>##EXERCISE: Keywords
 >Let's find potential keywords to rank for!
 >
 >**1.&nbsp;Brainstorm**

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="assets/css/highlightjs/github.css">
   
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico?v2">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
 <body class="">
   <header>
@@ -93,7 +93,7 @@
 </blockquote>
 
 <blockquote>
-  <h2 id="exercise-html-review">Exercise: HTML Review</h2>
+  <h2 id="exercise-html-review">EXERCISE: HTML Review</h2>
 
   <p>Download the exercise file <a href="exercises/module1/errors.html" download="">here</a>.  Open <strong>errors.html</strong> in your editor and see if you can spot and correct all of the errors!</p>
 
@@ -415,20 +415,28 @@ h1 {
 <p>In the above example, all descendants of <code>&lt;body&gt;</code> will inherit the styles.  However, when a more <em>specific</em> selector is used (like <code>h1</code>), it overrides the inherited values.</p>
 
 <blockquote>
-  <h2 id="exercise-css-selectors">Exercise: CSS Selectors</h2>
+  <h2 id="exercise-css-selectors">EXERCISE: CSS Selectors</h2>
   <p>Practice using the different types of selectors. In your newly created <strong>styles.css</strong> file:</p>
 
   <ol>
-    <li>Change the text colour by adding a <code>color</code> property to the <code>body</code>.</li>
-    <li>Using a more specific selector, add a different text colour for the <code>h1</code> elements.</li>
-    <li>Create a <code>class</code> attribute and add it to 2 paragraphs and a link (anchor tag).
+    <li>change the text colour of all elements on the page
       <ul>
-        <li>add a colour value to the class</li>
-        <li>add a different colour value to the class ONLY when applied to links</li>
+        <li>use the <code>color</code> property and <code>body</code> as the selector</li>
+      </ul>
+    </li>
+    <li>use a more specific selector to change the <code>color</code> of just the the <code>h1</code> elements</li>
+    <li>create a <code>class</code> attribute and add it to 2 paragraphs
+      <ul>
+        <li>using the class name as the selector, change the <code>color</code></li>
       </ul>
     </li>
   </ol>
+
+  <p><strong>Bonus:</strong><br />
+Add the same <code>class</code> from step 3 to a link (anchor tag). Because links already have a default color (blue), you’ll need to use a more specific selector to change the color.</p>
 </blockquote>
+
+<p>If you want even more practice with selectors, try this game: <a href="http://flukeout.github.io/">http://flukeout.github.io/</a></p>
 
 <h2 id="workflow-tips--tools">Workflow Tips &amp; Tools</h2>
 <ul>

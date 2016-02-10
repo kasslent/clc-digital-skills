@@ -51,7 +51,7 @@ Sites like these and other media sites such as Instagram and Twitter all offer e
 > Let's check out the different embed options for [YouTube](http://youtube.com), [Instagram](http://instagram.com), [Twitter](http://twitter.com) and other media sites.
 
 
->##Exercise: HTML Review
+>##EXERCISE: HTML Review
 >
 >Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
 >
@@ -346,14 +346,19 @@ Read more about the DOM [here](https://css-tricks.com/dom/).
 
 In the above example, all descendants of `<body>` will inherit the styles.  However, when a more *specific* selector is used (like `h1`), it overrides the inherited values.
 
-> ##Exercise: CSS Selectors
+> ##EXERCISE: CSS Selectors
 > Practice using the different types of selectors. In your newly created **styles.css** file:
 > 
->1. Change the text colour by adding a `color` property to the `body`.
-1. Using a more specific selector, add a different text colour for the `h1` elements.
-1. Create a `class` attribute and add it to 2 paragraphs and a link (anchor tag).
-  - add a colour value to the class
-  - add a different colour value to the class ONLY when applied to links
+>1. change the text colour of all elements on the page
+  * use the `color` property and `body` as the selector
+1. use a more specific selector to change the `color` of just the the `h1` elements
+1. create a `class` attribute and add it to 2 paragraphs
+  - using the class name as the selector, change the `color`
+>
+> **Bonus:**  
+Add the same `class` from step 3 to a link (anchor tag). Because links already have a default color (blue), you'll need to use a more specific selector to change the color.
+
+If you want even more practice with selectors, try this game: <http://flukeout.github.io/>
 
 
 ##Workflow Tips & Tools
