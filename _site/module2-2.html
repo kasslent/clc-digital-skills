@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Design & the Browser</title>
-  <meta name="description" content="Typography &amp; CSS">
+  <title>Design & CSS</title>
+  <meta name="description" content="Working with Images">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -37,172 +37,31 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 2, Lesson 2</h3>
-        <h4>Design & the Browser</h4>
+        <h4>Design & CSS</h4>
       </nav>
       
       <article>
-        <h1>Design & the Browser</h1>
-        <h1 id="typography--css">Typography &amp; CSS</h1>
-
-<p>Last class we covered the role of typography in design.  Let’s go over how to implement these principles into your web pages using  various CSS properties.</p>
-
-<h2 id="length--measurement-units">Length / Measurement Units</h2>
-<p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
-
-<ul>
-  <li><strong>pixels</strong> (<code>px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
-    <ul>
-      <li>must use whole numbers (e.g. <code>12px</code>)</li>
-    </ul>
-  </li>
-  <li><strong>percentages</strong> (<code>%</code>) - useful for fluid and responsive layouts
-    <ul>
-      <li>can use any number (e.g. <code>20%</code>, <code>25.5%</code>)</li>
-    </ul>
-  </li>
-  <li><strong>ems</strong> (<code>em</code>) - originally a typographic measurement based on the letter “M”
-    <ul>
-      <li>relative unit, sizing is based on parent &amp; ancestor elements sizes</li>
-      <li>can use any number (e.g. <code>1em</code>, <code>1.275em</code>)</li>
-    </ul>
-  </li>
-  <li><strong>rems</strong> (<code>rem</code>)-  stands for “relative em”
-    <ul>
-      <li>relative unit like <code>em</code> but is only relative to the <em>root</em> element (<code>html</code> tag)</li>
-    </ul>
-  </li>
-</ul>
-
-<p>By default, with no other CSS, here’s how these units compare to each other:</p>
-
-<pre><code>1em = 1rem = 16px = 100% 
-</code></pre>
-
-<p>There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.</p>
-
-<p>Let’s look at how <code>em</code> and <code>rem</code> works.</p>
-
-<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-<h4 id="extra-resources">Extra resources</h4>
-
-<ul>
-  <li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">rem &amp; the 62.5% method</a></li>
-  <li><a href="http://www.tutorialspoint.com/css/css_measurement_units.htm">CSS - Measurement Units</a></li>
-  <li><a href="http://www.w3.org/Style/Examples/007/units.en.html">W3C - Units of length: px, em, cm, etc.</a></li>
-  <li><a href="https://css-tricks.com/the-lengths-of-css/">CSS Tricks - Lengths of CSS</a></li>
-  <li><a href="http://www.sitepoint.com/understanding-and-using-rem-units-in-css/">Understanding and Using rem Units in CSS</a></li>
-</ul>
-
-<h2 id="font-size--line-height"><code>font-size</code> &amp; <code>line-height</code></h2>
-
-<p>The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively bigger or smaller based on their hierarchy.</p>
-
-<p>Use <code>font-size</code> to change the size and <code>line-height</code> to adjust the space <em>between</em> lines of text.</p>
-
-<p>You can use any of the measurement units to declare the <code>font-size</code>.  For <code>line-height</code>, this property actually does <em>not</em> require the use of measurement units and works better without it.</p>
-
-<pre><code>p {
-  font-size: 20px;
-  line-height: 25px; /* fixed size */
-}
-</code></pre>
-
-<hr />
-<pre><code>p {
-  font-size: 20px;
-  line-height: 1.5; /* relative to font-size */
-}
-</code></pre>
-
-<h2 id="text-shadow"><code>text-shadow</code></h2>
-
-<p>Use this property to apply a shadow to your text.</p>
-
-<pre><code>p { 
-  text-shadow: 2px 4px 1px red;
-}
-</code></pre>
-
-<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
-
-<ul>
-  <li>first value - x-coordinate, horizontal distance of the shadow
-    <ul>
-      <li>positive numbers places the shadow to the right</li>
-      <li>negative numbers places the shadow to the left</li>
-    </ul>
-  </li>
-  <li>second value - y-coordinate, vertical distance
-    <ul>
-      <li>positive numbers places the shadow below the text</li>
-      <li>negative numbers places the shadow above the text</li>
-    </ul>
-  </li>
-  <li>third value - blur radius (optional), the higher the number, the bigger the blur</li>
-  <li>fourth value - color of the shadow</li>
-</ul>
-
-<p>To use multiple text shadows, separate each grouping with a comma.</p>
-
-<pre><code>p { 
-  text-shadow: 1px 1px 1px #000, 
-               5px 5px 5px red; 
-}
-</code></pre>
-
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-<h2 id="working-with-images">Working with Images</h2>
+        <h1>Design & CSS</h1>
+        <h2 id="working-with-images">Working with Images</h2>
 
 <h3 id="cropping-and-saving-images">Cropping and Saving Images</h3>
-<p>When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).</p>
+<p>When working with (raster) images and photos resize or crop the image to the largest size you need.</p>
 
-<p>Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the <em>largest</em> size you need for your website.</p>
+<p>Save your images in one of the following compressed file formats to keep file size low:</p>
 
-<p>We’ll be using CSS to make sure the image size scales &amp; fits the page layout.</p>
-
-<p>When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.</p>
-
-<p>Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to <a href="module1-1.html#images">Module 1, Lesson 1</a> for reference.</p>
+<ul>
+  <li>.jpg - for photographs with rich detail</li>
+  <li>.png - for images with transparent or opaque backgrounds</li>
+</ul>
 
 <h3 id="image-editors">Image editors</h3>
-<p>You will need an image editor tool to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular paid options.</p>
+<p>You will need an image editor tool to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular options but <a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
 
-<p><a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
+<p><img src="assets/img/module2/05-pxlr-crop.jpg" class="left" /> In <strong>Pixlr</strong> (and in most image editors), use the crop tool in the toolbar to crop your images.</p>
 
-<h2 id="using-pixlr">Using Pixlr</h2>
+<p>Then, go to <strong>Image → Image Size…</strong> to resize your images. Make sure “Constrain Proportions” is checked to maintain proper image proportions.</p>
 
-<ol>
-  <li>Navigate to <a href="https://pixlr.com/">https://pixlr.com/</a></li>
-  <li>Choose the <strong>Editor</strong> version.</li>
-  <li>In the popup, choose an option for adding the image to be edited.</li>
-</ol>
-
-<p>To add or change to another image, these options can also be accessed under the <strong>File</strong> menu.</p>
-
-<p><img src="assets/img/module2/pixlr-file-menu.png" alt="Pixlr file menu" /></p>
-
-<h3 id="the-crop-tool">The Crop Tool</h3>
-
-<p>In <a href="https://pixlr.com/editor/">Pixlr</a> (and in most image editors), select the crop tool to resize and crop out parts of your images.</p>
-
-<p>Click &amp; drag the cursor over the image to highlight the areas to be cropped out.</p>
-
-<p><img src="assets/img/module2/pixlr-crop.jpg" alt="pixlr crop" /></p>
-
-<h3 id="resizing-images">Resizing images</h3>
-
-<p>If you just need to resize an image to reduce the resolution size for web, go to:<br />
-<strong>Image → Image Size…</strong></p>
-
-<p>Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.</p>
-
-<p><img src="assets/img/module2/06-pxlr-imagesize.jpg" /></p>
-
-<p>Choosing <strong>Canvas size…</strong> (the option under <strong>Image size…</strong>) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.</p>
+<p><img src="assets/img/module2/06-pxlr-imagesize.jpg" class="full-width print-50" /></p>
 
 <blockquote>
   <h2 id="exercise-resizing-images">EXERCISE: Resizing Images</h2>
@@ -211,39 +70,19 @@
   <p><strong>Bonus:</strong> Check out some of the other menu options to familiarize yourself with the tool.</p>
 </blockquote>
 
-<h3 id="image-resources">Image resources</h3>
+<h4 id="image-resources">Image resources</h4>
 
 <ul>
   <li><a href="https://www.google.ca/search?q=placeholder+images">Placeholder image sites</a></li>
   <li><a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">Stock Photos That Don’t Suck</a></li>
 </ul>
 
-<h3 id="icon-fonts">Icon fonts</h3>
-<p>Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they <em>are</em> fonts!</p>
+<blockquote>
+  <h2 id="exercise-choosing-fonts">EXERCISE: Choosing fonts</h2>
+  <p>Choose one or two fonts for your website from Google Fonts to use for next class.</p>
 
-<p>There’s many to choose from but <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
-
-<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).</p>
-
-<p><strong>Pro tip!</strong> When using CDNs, they are sometimes listed like this:</p>
-
-<pre><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
-</code></pre>
-
-<p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
-
-<pre><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
-</code></pre>
-
-<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
-
-<h4 id="resources">Resources</h4>
-
-<ul>
-  <li><a href="https://css-tricks.com/html-for-icon-font-usage/">https://css-tricks.com/html-for-icon-font-usage/</a></li>
-  <li><a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></li>
-  <li><a href="http://reference.sitepoint.com/css/typography">http://reference.sitepoint.com/css/typography</a></li>
-</ul>
+  <p>Define a style for your headlines, paragraph and navigation menu with your chosen fonts. Experiment with different styles, weights, and sizes.</p>
+</blockquote>
 
 <h2 id="color">Color</h2>
 
@@ -362,7 +201,168 @@ Your <strong>brand identity</strong> is a consistent set of artifacts that tell 
 <p><br />
 Keep track of the different styles you use in a style guide or style tile. Use it as a reference as you build out your website and your brand collateral to maintain consistency and clarity.</p>
 
-<p><br /></p>
+<h1 id="typography--css">Typography &amp; CSS</h1>
+
+<p>Last class we covered the role of typography in design.  Let’s go over how to implement these principles into your web pages using  various CSS properties.</p>
+
+<h2 id="color-1"><code>color</code></h2>
+
+<p>Use the <code>color</code> property to change the colour of your text. We talked about how to set the colour for background styles in <a href="/llc-digital-skills/module1/lesson2/#css-colours">Module 1</a>.  Use the same value types (hex, keyword or rgb) for this property as well.</p>
+
+<pre><code>/* all the same colour */
+body {
+  color: firebrick;
+  color: rgb(178,34,34);
+  color: #B22222;
+}
+</code></pre>
+
+<h2 id="length--measurement-units">Length / Measurement Units</h2>
+<p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
+
+<ul>
+  <li><strong>pixels</strong> (<code>px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
+    <ul>
+      <li>must use whole numbers (e.g. <code>12px</code>)</li>
+    </ul>
+  </li>
+  <li><strong>percentages</strong> (<code>%</code>) - useful for fluid and responsive layouts
+    <ul>
+      <li>can use any number (e.g. <code>20%</code>, <code>25.5%</code>)</li>
+    </ul>
+  </li>
+  <li><strong>ems</strong> (<code>em</code>) - originally a typographic measurement based on the letter “M”
+    <ul>
+      <li>relative unit, sizing is based on parent &amp; ancestor elements sizes</li>
+      <li>can use any number (e.g. <code>1em</code>, <code>1.275em</code>)</li>
+    </ul>
+  </li>
+  <li><strong>rems</strong> (<code>rem</code>)-  stands for “relative em”
+    <ul>
+      <li>relative unit like <code>em</code> but is only relative to the <em>root</em> element (<code>html</code> tag)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>By default, with no other CSS, here’s how these units compare to each other:</p>
+
+<pre><code>1em = 1rem = 16px = 100% 
+</code></pre>
+
+<p>There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.</p>
+
+<p>Let’s look at how <code>em</code> and <code>rem</code> works.</p>
+
+<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="extra-resources">Extra resources</h4>
+
+<ul>
+  <li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">rem &amp; the 62.5% method</a></li>
+  <li><a href="http://www.tutorialspoint.com/css/css_measurement_units.htm">CSS - Measurement Units</a></li>
+  <li><a href="http://www.w3.org/Style/Examples/007/units.en.html">W3C - Units of length: px, em, cm, etc.</a></li>
+  <li><a href="https://css-tricks.com/the-lengths-of-css/">CSS Tricks - Lengths of CSS</a></li>
+  <li><a href="http://www.sitepoint.com/understanding-and-using-rem-units-in-css/">Understanding and Using rem Units in CSS</a></li>
+</ul>
+
+<h2 id="font-size--line-height"><code>font-size</code> &amp; <code>line-height</code></h2>
+
+<p>The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively bigger or smaller based on their hierarchy.</p>
+
+<p>Use <code>font-size</code> to change the size and <code>line-height</code> to adjust the space <em>between</em> lines of text.</p>
+
+<p>You can use any of the measurement units to declare the <code>font-size</code>.  For <code>line-height</code>, this property actually does <em>not</em> require the use of measurement units and works better without it.</p>
+
+<pre><code>p {
+  font-size: 20px;
+  line-height: 25px; /* fixed size */
+}
+</code></pre>
+
+<hr />
+<pre><code>p {
+  font-size: 20px;
+  line-height: 1.5; /* relative to font-size */
+}
+</code></pre>
+
+<h2 id="text-shadow"><code>text-shadow</code></h2>
+
+<p>Use this property to apply a shadow to your text.</p>
+
+<pre><code>p { 
+  text-shadow: 2px 4px 1px red;
+}
+</code></pre>
+
+<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
+
+<ul>
+  <li>first value - x-coordinate, horizontal distance of the shadow
+    <ul>
+      <li>positive numbers places the shadow to the right</li>
+      <li>negative numbers places the shadow to the left</li>
+    </ul>
+  </li>
+  <li>second value - y-coordinate, vertical distance
+    <ul>
+      <li>positive numbers places the shadow below the text</li>
+      <li>negative numbers places the shadow above the text</li>
+    </ul>
+  </li>
+  <li>third value - blur radius (optional), the higher the number, the bigger the blur</li>
+  <li>fourth value - color of the shadow</li>
+</ul>
+
+<p>To use multiple text shadows, separate each grouping with a comma.</p>
+
+<pre><code>p { 
+  text-shadow: 1px 1px 1px #000, 
+               5px 5px 5px red; 
+}
+</code></pre>
+
+<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="custom-fonts-google-external-and-icon-fonts">Custom fonts (Google, External and Icon fonts)</h2>
+
+<h3 id="icon-fonts">Icon fonts</h3>
+<p>Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they <em>are</em> fonts!</p>
+
+<p>There’s many to choose from but <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
+
+<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).</p>
+
+<p><strong>Pro tip!</strong> When using CDNs, they are sometimes listed like this:</p>
+
+<pre><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
+
+<pre><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://css-tricks.com/html-for-icon-font-usage/">https://css-tricks.com/html-for-icon-font-usage/</a></li>
+  <li><a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></li>
+  <li><a href="http://reference.sitepoint.com/css/typography">http://reference.sitepoint.com/css/typography</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="exercise-typography">EXERCISE: Typography</h2>
+  <p>Download the exercise file <a href="/llc-digital-skills/exercises/module2/typography.html" download="">here</a>.  Open <strong>typography.html</strong> in your editor and follow the instructions listed in the comments in the <code>&lt;head&gt;</code> of the page.</p>
+
+  <p><a href="/module2/typography-answer.zip">Answer key</a> (zip file).</p>
+
+  <p><strong>Pro tip!</strong> Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)</p>
+</blockquote>
 
 <h2 id="addingremoving-space">Adding/Removing Space</h2>
 
@@ -454,7 +454,9 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 
 <p>With these considerations in mind, let’s look at some of the rules listed in this article, <a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a>.</p>
 
-<p>~ end ~</p>
+<p><br />
+~ End ~</p>
+
 
       </article>
     </main>

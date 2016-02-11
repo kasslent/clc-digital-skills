@@ -2,39 +2,20 @@
 layout: lessons
 module: 1
 lesson: 2
-title: HTML Part 2 & Intro to CSS
+title: The Language of the Web
+description: HTML review and intro to CSS.
 permalink: module1-2.html
 ---
 
-##Text-based HTML tags
 
-###Italics, Bold & Semantics
-
-* `<em>` represents stress emphasis, i.e., something you would pronounce differently  
-* `<strong>` represents strong importance  
-* `<i>` represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
-* `<b>` stands for “stylistically offset” text, such as keywords
-
-
-####Older versions of HTML
-When XHTML was the latest version, `<b>` and `<i>` were *deprecated* since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.
-
-####HTML5 - new rules
-In HTML5, the `<b>` and `<i>` tags were re-introduced but with a slightly different meaning, though `<em>` or `<strong>` is more commonly used.
-
-Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags. 
-
-    <p>A paragraph with <strong>important</strong> text.</p>
-
-Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-element/).
-
-###sub, sup
-
-`<sub>` and `<sup>` represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation's sake. 
-
-    <p>Pretend this word is trademarked<sup>TM</sup>!</p>
-
-<p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
+>##EXERCISE: HTML Review
+>
+>Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
+>
+>It could be formatting issues like tabbing nested elements, to mismatched tags, to missing quotes or recommended attributes.
+>
+>*Pro tip!*  
+Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 
 ##Audio and Video
@@ -50,15 +31,6 @@ Sites like these and other media sites such as Instagram and Twitter all offer e
 
 > Let's check out the different embed options for [YouTube](http://youtube.com), [Instagram](http://instagram.com), [Twitter](http://twitter.com) and other media sites.
 
-
->##EXERCISE: HTML Review
->
->Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
->
->It could be formatting issues like tabbing nested elements, to mismatched tags, to missing quotes or recommended attributes.
->
->*Pro tip!*  
-Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 ##Intro to CSS
 

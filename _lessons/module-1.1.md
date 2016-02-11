@@ -2,7 +2,8 @@
 layout: lessons
 module: 1
 lesson: 1
-title: Intro to Web Development & HTML
+title: The Language of the Web
+description: Intro to web development fundamentals & HTML.
 permalink: module1-1.html
 ---
 
@@ -483,6 +484,35 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
 >Make sure to open & close the tags properly, use indentation to organize your code and buidl good habits!
 
 
+##Italics, Bold & Semantics
+
+* `<em>` represents stress emphasis, i.e., something you would pronounce differently  
+* `<strong>` represents strong importance  
+* `<i>` represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
+* `<b>` stands for “stylistically offset” text, such as keywords
+
+
+####Older versions of HTML
+When XHTML was the latest version, `<b>` and `<i>` were *deprecated* since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.
+
+####HTML5 - new rules
+In HTML5, the `<b>` and `<i>` tags were re-introduced but with a slightly different meaning, though `<em>` or `<strong>` is more commonly used.
+
+Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags. 
+
+    <p>A paragraph with <strong>important</strong> text.</p>
+
+Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-element/).
+
+###sub, sup
+
+`<sub>` and `<sup>` represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation's sake. 
+
+    <p>Pretend this word is trademarked<sup>TM</sup>!</p>
+
+<p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
+
+
 ##Self-closing tags
 
 Self-closing tags don't format content. Instead they are used to embed objects onto the page; they *are* the content. Because of this, they do not require a closing tag.
@@ -693,7 +723,7 @@ Only link to web pages, not specific files such as images (unless it points to y
 
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
-
+    
 >##EXERCISE: Adding Content, Part 3
 > Here are some suggestions to practice the concepts covered.
 >

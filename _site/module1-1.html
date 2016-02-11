@@ -7,7 +7,7 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Intro to Web Development & HTML</title>
+  <title>The Language of the Web</title>
   <meta name="description" content="In 1989, Tim Berners-Lee, a physicist at CERN, beganexperimenting with ways to share research documentsacross different computer platforms. This wouldeventua...">
   
   <!-- Syntax highlighting with highlightjs.org -->
@@ -37,11 +37,11 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 1, Lesson 1</h3>
-        <h4>Intro to Web Development & HTML</h4>
+        <h4>The Language of the Web</h4>
       </nav>
       
       <article>
-        <h1>Intro to Web Development & HTML</h1>
+        <h1>The Language of the Web</h1>
         <p>In 1989, Tim Berners-Lee, a physicist at CERN, began
 experimenting with ways to share research documents
 across different computer platforms. This would
@@ -561,6 +561,37 @@ Add some headings, paragraphs and lists.</p>
 
   <p>Make sure to open &amp; close the tags properly, use indentation to organize your code and buidl good habits!</p>
 </blockquote>
+
+<h2 id="italics-bold--semantics">Italics, Bold &amp; Semantics</h2>
+
+<ul>
+  <li><code>&lt;em&gt;</code> represents stress emphasis, i.e., something you would pronounce differently</li>
+  <li><code>&lt;strong&gt;</code> represents strong importance</li>
+  <li><code>&lt;i&gt;</code> represents text in an alternate voice, a technical term, a phrase from another language (e.g. <em>je ne sais quoi</em>)</li>
+  <li><code>&lt;b&gt;</code> stands for “stylistically offset” text, such as keywords</li>
+</ul>
+
+<h4 id="older-versions-of-html">Older versions of HTML</h4>
+<p>When XHTML was the latest version, <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> were <em>deprecated</em> since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.</p>
+
+<h4 id="html5---new-rules">HTML5 - new rules</h4>
+<p>In HTML5, the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags were re-introduced but with a slightly different meaning, though <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> is more commonly used.</p>
+
+<p>Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags.</p>
+
+<pre><code>&lt;p&gt;A paragraph with &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;
+</code></pre>
+
+<p>Read more about it on <a href="http://html5doctor.com/i-b-em-strong-element/">HTML5 Doctor</a>.</p>
+
+<h3 id="sub-sup">sub, sup</h3>
+
+<p><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation’s sake.</p>
+
+<pre><code>&lt;p&gt;Pretend this word is trademarked&lt;sup&gt;TM&lt;/sup&gt;!&lt;/p&gt;
+</code></pre>
+
+<p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
 
 <h2 id="self-closing-tags">Self-closing tags</h2>
 

@@ -2,7 +2,8 @@
 layout: lessons
 module: 0
 lesson: 0
-title: Tips, Recommendations & Cheatsheets
+title: Install Party!
+description: Tips, downloads, recommendations and cheatsheets to prep you for the next 7 weeks.
 permalink: module0.html
 ---
 

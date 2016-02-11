@@ -2,7 +2,8 @@
 layout: lessons
 module: 2
 lesson: 1
-title: Intro to Design & CSS Typography
+title: Design & CSS
+description: Intro to Design & CSS typography.
 permalink: module2-1.html
 ---
 
@@ -184,7 +185,7 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 * [Wireframe tools](http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302)
 
 
->##EXERCISE: Sketch out a website layout
+>##EXERCISE: Sketch a website layout
 >Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. 
 >
 >Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
@@ -193,7 +194,6 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 ##Typography
 Good writing and good typography can help your reader understand your message more clearly.
 
-###Terminology
 **Typography** is the art of arranging type to engage and guide your readers.  
 
 **Typeface** is what you think of when you think of Font. It is a set of fonts or a font family that is designed with common characteristics and features.  

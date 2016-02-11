@@ -5,13 +5,20 @@ class: home
 
   <section>
     <h1>Class notes</h1>
-    <ul>
+    <ul class="listing">
       {% for lesson in site.lessons %} 
-      <li><a href="{{ lesson.permalink }}">Module {{ lesson.module }}, Lesson {{ lesson.lesson }}</a> - {{ lesson.title }}</li>
+      <li>
+        
+        <h2>Module {{ lesson.module }}: {{ lesson.title }}</h2>
+        <p>{{ lesson.description }}</p>
+        <!-- <a href="{{ lesson.permalink }}">Module {{ lesson.module }}, Lesson {{ lesson.lesson }} &raquo;</a> -->
+        <a href="{{ lesson.permalink }}">Lesson {{ lesson.lesson }} &raquo;</a>
+      </li>
       {% endfor %}
     </ul>
-    
-    <h2>Office Hours</h2>
+  </section>
+  <section>  
+    <h1>Office Hours</h1>
     <ul>
       <li>October 25th: 1-4pm</li>
       <li>November 15th: 1-4pm</li>
