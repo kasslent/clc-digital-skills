@@ -14,11 +14,10 @@
 * Exercises
   * anything labeled "Class Exercise" should be completed as a code-along
   * anything labeled as "Exercise" is for independent or (optional) partner work
-  * there's no specific time recommendations for the independent exercises
-  * start with 10 minutes, then check on the progress of the students and gauge from there
+  * there's no specific time recommendations for the independent exercises and may vary
+  * trying starting with 10-15 minutes, then check on the progress of the students and gauge from there
   * encourage them to work in pairs and their mentors
   * review it together after
-  
 * Homework
   * There are no official homework assignments so encourage students to use exercise time to ask questions and attend drop in sessions.
   * No homework is assigned to make it possible for students to balance work and this course.
@@ -29,6 +28,7 @@
   * Take a break about halfway through class.
   * 20mins is ideal
   * adding a break onto an exercise would also be preferred (e.g. 10mins for the exercise + 20 min break) but break when the students need it
+* Feel free to use your own examples to demonstrate the different concepts (e.g. your favorite websites and tools).
   
 As the weeks progress, depending on the progress of the class you may need to do a small review at the beginning of each class.  If people are asking questions about certain things, do a small review at the beginning of class or ask people if they have questions about previous classes.  You many need to also review things like editor settings, general syntax and best practices.
 

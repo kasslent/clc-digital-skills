@@ -7,7 +7,153 @@ description: More CSS typography and working with images and colours.
 permalink: module2-2.html
 ---
 
+There are more ways to use CSS to create typography based styles in your web page designs.
+
+The last lesson covered text based CSS properties that used keywords for values (e.g. `font-weight: bold;`). But there are many other properties (typography based and other styles) that use length to define the values.
+
+
+## Length / Measurement Units
+The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:
+
+* **pixels** (`px`) - most commonly used because computer monitors and mobile devices are measured in pixels.
+  * must use whole numbers (e.g. `12px`)
+* **percentages** (`%`) - useful for fluid and responsive layouts
+  * can use any number (e.g. `20%`, `25.5%`)
+* **ems** (`em`) - originally a typographic measurement based on the letter "M"
+  * relative unit, sizing is based on parent & ancestor elements sizes
+  * can use any number (e.g. `1em`, `1.275em`)
+* **rems** (`rem`)-  stands for "relative em"
+  * relative unit but is only relative to the *root* element (`html` tag)
+
+By default, with no other CSS, here's how these units compare to each other:
+
+    1em = 1rem = 16px = 100% 
+
+There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.
+
+> Let's edit the below Codepen and see how `em` and `rem` works.
+
+<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### Extra resources
+
+* [rem & the 62.5% method](http://snook.ca/archives/html_and_css/font-size-with-rem)
+* [CSS - Measurement Units](http://www.tutorialspoint.com/css/css_measurement_units.htm)
+* [W3C - Units of length: px, em, cm, etc.](http://www.w3.org/Style/Examples/007/units.en.html)
+* [CSS Tricks - Lengths of CSS]( https://css-tricks.com/the-lengths-of-css/)
+* [Understanding and Using rem Units in CSS](http://www.sitepoint.com/understanding-and-using-rem-units-in-css/)
+
+
+## CSS & Typography
+
+### `font-size` & `line-height`
+
+The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.  
+
+Use `font-size` to change the size and `line-height` to adjust the space *between* the lines of text.
+
+You can use any of the measurement units to declare the `font-size`.  
+
+For `line-height`, this property actually does *not* require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.
+
+    p {
+      font-size: 20px;
+      line-height: 25px; /* fixed size*/
+    }
+
+---
+    p {
+      font-size: 20px;
+      line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
+    }
+
+### `text-shadow`
+
+Use this property to apply a shadow to your text.
+
+    p { 
+      text-shadow: 2px 4px 1px red;
+    }
+    
+<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
+  
+* first value - x-coordinate, horizontal distance of the shadow
+  * positive numbers places the shadow to the right
+  * negative numbers places the shadow to the left
+* second value - y-coordinate, vertical distance 
+  * positive numbers places the shadow below the text
+  * negative numbers places the shadow above the text
+* third value - blur radius (optional), the higher the number, the bigger the blur
+* fourth value - color of the shadow
+
+### Multiple text shadows
+  
+To use multiple text shadows, separate each grouping with a comma.
+
+    p { 
+      text-shadow: 1px 1px 1px #000, 
+                   5px 5px 5px red; 
+    }
+
+*Pro tip!*  
+Subtle effects work best.
+
+
+> Let's edit the CodePen below and experiment with these properties.
+
+<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### `color`
+
+To change the colour of the text, use the `color` property. 
+
+We've talked about how to set a background colour in [Module 1](module1-2.html#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
+    
+    /* all the same colour */
+    body {
+      color: firebrick;
+      color: rgb(178,34,34);
+      color: #B22222;
+    }
+    
+
+## Icon fonts
+
+Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties (like size and colour) using CSS since they *are* fonts!
+
+[Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great free option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
+
+Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
+
+
+###Watch out!
+When using CDNs, they are sometimes listed like this:
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
+
+####Resources
+
+* <https://css-tricks.com/html-for-icon-font-usage/>
+* <http://weloveiconfonts.com/>
+* <http://reference.sitepoint.com/css/typography>
+
+>##EXERCISE: Typography
+>Download the <a href="exercises/module2/typography-2.html" download>typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the `<head>` of the page.
+> 
+>*Pro tip!*  
+Move this exercise file from the downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
+
+
 ##Working with Images
+
 
 ###Cropping and Saving Images
 When working with (raster) images and photos resize or crop the image to the largest size you need.
@@ -161,135 +307,10 @@ Keep track of the different styles you use in a style guide or style tile. Use i
 
 Last class we covered the role of typography in design.  Let's go over how to implement these principles into your web pages using  various CSS properties. 
 
-##`color`
-
-Use the `color` property to change the colour of your text. We talked about how to set the colour for background styles in [Module 1]({{site.baseurl}}/module1/lesson2/#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
-    
-    /* all the same colour */
-    body {
-      color: firebrick;
-      color: rgb(178,34,34);
-      color: #B22222;
-    }
-
-
-## Length / Measurement Units
-The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:
-
-* **pixels** (`px`) - most commonly used because computer monitors and mobile devices are measured in pixels.
-  * must use whole numbers (e.g. `12px`)
-* **percentages** (`%`) - useful for fluid and responsive layouts
-  * can use any number (e.g. `20%`, `25.5%`)
-* **ems** (`em`) - originally a typographic measurement based on the letter "M"
-  * relative unit, sizing is based on parent & ancestor elements sizes
-  * can use any number (e.g. `1em`, `1.275em`)
-* **rems** (`rem`)-  stands for "relative em"
-  * relative unit like `em` but is only relative to the *root* element (`html` tag)
-
-By default, with no other CSS, here's how these units compare to each other:
-
-    1em = 1rem = 16px = 100% 
-
-There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.
-
-Let's look at how `em` and `rem` works.
-
-<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-####Extra resources
-
-* [rem & the 62.5% method](http://snook.ca/archives/html_and_css/font-size-with-rem)
-* [CSS - Measurement Units](http://www.tutorialspoint.com/css/css_measurement_units.htm)
-* [W3C - Units of length: px, em, cm, etc.](http://www.w3.org/Style/Examples/007/units.en.html)
-* [CSS Tricks - Lengths of CSS]( https://css-tricks.com/the-lengths-of-css/)
-* [Understanding and Using rem Units in CSS](http://www.sitepoint.com/understanding-and-using-rem-units-in-css/)
-
-
-##`font-size` & `line-height`
-
-The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively bigger or smaller based on their hierarchy.  
-
-Use `font-size` to change the size and `line-height` to adjust the space *between* lines of text.
-
-You can use any of the measurement units to declare the `font-size`.  For `line-height`, this property actually does *not* require the use of measurement units and works better without it.
-
-    p {
-      font-size: 20px;
-      line-height: 25px; /* fixed size */
-    }
-
----
-    p {
-      font-size: 20px;
-      line-height: 1.5; /* relative to font-size */
-    }
-
-##`text-shadow`
-
-Use this property to apply a shadow to your text.
-
-    p { 
-      text-shadow: 2px 4px 1px red;
-    }
-    
-<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
-  
-* first value - x-coordinate, horizontal distance of the shadow
-  * positive numbers places the shadow to the right
-  * negative numbers places the shadow to the left
-* second value - y-coordinate, vertical distance 
-  * positive numbers places the shadow below the text
-  * negative numbers places the shadow above the text
-* third value - blur radius (optional), the higher the number, the bigger the blur
-* fourth value - color of the shadow
-    
-To use multiple text shadows, separate each grouping with a comma.
-
-    p { 
-      text-shadow: 1px 1px 1px #000, 
-                   5px 5px 5px red; 
-    }
-
-
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 
 
-
-##Custom fonts (Google, External and Icon fonts)
-
-###Icon fonts
-Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
-
-There's many to choose from but [Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
-
-Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
-
-**Pro tip!** When using CDNs, they are sometimes listed like this:
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
-
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
-
-####Resources
-
-* <https://css-tricks.com/html-for-icon-font-usage/>
-* <http://weloveiconfonts.com/>
-* <http://reference.sitepoint.com/css/typography>
-
->##EXERCISE: Typography
->Download the exercise file <a href="{{site.baseurl}}/exercises/module2/typography.html" download>here</a>.  Open **typography.html** in your editor and follow the instructions listed in the comments in the `<head>` of the page.
->
-> [Answer key]({{site.exercises}}/module2/typography-answer.zip) (zip file).
-> 
->**Pro tip!** Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 
 

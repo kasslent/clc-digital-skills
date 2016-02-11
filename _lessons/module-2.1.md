@@ -373,8 +373,8 @@ Now you can use these new fonts with the `font-family` property, using the font 
 
 >##EXERCISE: Google Fonts
 >1. Choose two fonts from [Google Fonts](https://www.google.com/fonts) to use for the typography exercise.
-1. Download the <a href="exercises/module2/typography.html" download>typography.html</a> exercise file.
-1. Add the Google Fonts CSS file to the **typography.html** exercise file downloaded in the previous step.
+1. Download the <a href="exercises/module2/typography-1.html" download>typography-1.html</a> exercise file.
+1. Add the Google Fonts CSS file to the **typography-1.html** exercise file downloaded in the previous step.
 1. Follow the instructions listed under the `TYPOGRAPHY EXERCISE #1` CSS comments.
 1. Review the answers together!
 >
@@ -418,7 +418,7 @@ Note that when a CSS property accepts `inherit` as a value, it will inherit the 
 > <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
 
 >##EXERCISE: `type-` & `font-` properties
->Back in **typography.html**, practice using these CSS techniques in your editor and complete the instructions listed under the `TYPOGRAPHY EXERCISE #2` comments.
+>Back in **typography-1.html**, practice using these CSS techniques in your editor and complete the instructions listed under the `TYPOGRAPHY EXERCISE #2` comments.
 
 These are just a few type related CSS properties.  We'll be going over more in the next lesson.
 
