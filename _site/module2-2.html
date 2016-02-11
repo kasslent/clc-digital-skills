@@ -85,7 +85,7 @@
 </blockquote>
 
 <p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
 <h3 id="extra-resources">Extra resources</h3>
 
@@ -168,7 +168,7 @@ Subtle effects work best.</p>
 </blockquote>
 
 <p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
 <h3 id="color"><code>color</code></h3>
 
@@ -224,23 +224,51 @@ Move this exercise file from the downloads folder and add it somewhere you can f
 <h2 id="working-with-images">Working with Images</h2>
 
 <h3 id="cropping-and-saving-images">Cropping and Saving Images</h3>
-<p>When working with (raster) images and photos resize or crop the image to the largest size you need.</p>
+<p>When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).</p>
 
-<p>Save your images in one of the following compressed file formats to keep file size low:</p>
+<p>Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the <em>largest</em> size you need for your website.</p>
 
-<ul>
-  <li>.jpg - for photographs with rich detail</li>
-  <li>.png - for images with transparent or opaque backgrounds</li>
-</ul>
+<p>We’ll be using CSS to make sure the image size scales &amp; fits the page layout.</p>
+
+<p>When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.</p>
+
+<p>Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to <a href="module1-1.html#images">Module 1, Lesson 1</a> for reference.</p>
 
 <h3 id="image-editors">Image editors</h3>
-<p>You will need an image editor tool to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular options but <a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
+<p>You will need an image editor to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular paid options.</p>
 
-<p><img src="assets/img/module2/05-pxlr-crop.jpg" class="left" /> In <strong>Pixlr</strong> (and in most image editors), use the crop tool in the toolbar to crop your images.</p>
+<p><a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
 
-<p>Then, go to <strong>Image → Image Size…</strong> to resize your images. Make sure “Constrain Proportions” is checked to maintain proper image proportions.</p>
+<h2 id="using-pixlr">Using Pixlr</h2>
 
-<p><img src="assets/img/module2/06-pxlr-imagesize.jpg" class="full-width print-50" /></p>
+<ol>
+  <li>Navigate to <a href="https://pixlr.com/">https://pixlr.com/</a></li>
+  <li>Choose the <strong>Editor</strong> version.</li>
+  <li>In the popup, choose an option for adding the image to be edited.</li>
+</ol>
+
+<p>To add or change to another image, these options can also be accessed under the <strong>File</strong> menu.</p>
+
+<p><img src="assets/img/module2/pixlr-file-menu.png" alt="Pixlr file menu" /></p>
+
+<h3 id="the-crop-tool">The Crop Tool</h3>
+
+<p>In <a href="https://pixlr.com/editor/">Pixlr</a> (and in most image editors), select the crop tool to resize and crop out parts of your images.</p>
+
+<p>Click &amp; drag the cursor over the image to highlight the areas to be cropped out.</p>
+
+<p><img src="assets/img/module2/pixlr-crop.jpg" alt="pixlr crop" /></p>
+
+<h3 id="resizing-images">Resizing images</h3>
+
+<p>If you just need to resize an image to reduce the resolution size for web, go to:<br />
+<strong>Image → Image Size…</strong></p>
+
+<p>Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.</p>
+
+<p><img src="assets/img/module2/06-pxlr-imagesize.jpg" /></p>
+
+<p>Choosing <strong>Canvas size…</strong> (the option under <strong>Image size…</strong>) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.</p>
 
 <blockquote>
   <h2 id="exercise-resizing-images">EXERCISE: Resizing Images</h2>
@@ -249,95 +277,44 @@ Move this exercise file from the downloads folder and add it somewhere you can f
   <p><strong>Bonus:</strong> Check out some of the other menu options to familiarize yourself with the tool.</p>
 </blockquote>
 
-<h4 id="image-resources">Image resources</h4>
+<h3 id="image-resources">Image resources</h3>
 
 <ul>
   <li><a href="https://www.google.ca/search?q=placeholder+images">Placeholder image sites</a></li>
   <li><a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">Stock Photos That Don’t Suck</a></li>
 </ul>
 
-<blockquote>
-  <h2 id="exercise-choosing-fonts">EXERCISE: Choosing fonts</h2>
-  <p>Choose one or two fonts for your website from Google Fonts to use for next class.</p>
+<h2 id="designing-with-color">Designing with Color</h2>
 
-  <p>Define a style for your headlines, paragraph and navigation menu with your chosen fonts. Experiment with different styles, weights, and sizes.</p>
-</blockquote>
+<p>A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.</p>
 
-<h2 id="color-1">Color</h2>
+<h3 id="personality-and-meaning">Personality and Meaning</h3>
 
-<h3 id="terminology">Terminology</h3>
-<p><strong>Hue</strong> is what we think of when we think about color. It is the characteristic that makes a color unique.</p>
-
-<p><img src="assets/img/module2/11-hue.jpg" class="print-50" /></p>
-
-<p><strong>Saturation</strong> refers to how weak or strong the color is.</p>
-
-<p><img src="assets/img/module2/12-saturation.jpg" class="print-50" /></p>
-
-<p><strong>Value</strong> refers to the lightness or darkness of a color. Think about it as adding white (lightness) or black (darkness) to a color.</p>
-
-<p><img src="assets/img/module2/13-value.jpg" class="print-50" /></p>
-
-<h3 id="rgb-vs-cmyk">RGB vs CMYK</h3>
-
-<h4 id="rgb">RGB</h4>
+<p>Color communicates meaning.</p>
 
 <ul>
-  <li>stands for red, green, blue</li>
-  <li>additive color system that is based on adding light</li>
-  <li>used to specify colors for the web.</li>
+  <li>Choose colors that reflect your personality or your brand.</li>
+  <li>Consider the emotional responses of your target audience.</li>
+  <li>Use color to distinguish between elements and interactive states.</li>
 </ul>
 
-<h4 id="cmyk">CMYK</h4>
-
-<ul>
-  <li>cyan, magenta, yellow and black</li>
-  <li>subtractive color system that is based on ink printing</li>
-  <li>used to specify colors for print.</li>
-</ul>
-
-<p><img src="assets/img/module2/14-rgb-cmyk.jpg" class="print-50" /></p>
-
-<p>You can specify RGB colors on the web using the <code>rgb(#,#,#)</code> format in CSS (where # is a value between 0 and 255) or with the Hex color code such as <code>#FFFFFF</code>.</p>
-
-<pre><code>p {
-  color: #FFFFFF;
-  /* or */
-  color: rgb(255, 255, 255);
-}
-</code></pre>
-
-<h3 id="designing-with-color">Designing with Color</h3>
-
-<p>A good design should work in the absence of color and should communicate clearly in black and white. But color is a valuable tool and can be used:</p>
-
-<ul>
-  <li>to add meaning and evoke emotions</li>
-  <li>to distinguish between different pieces of content</li>
-  <li>to indicate the state of interactive elements</li>
-  <li>add harmony and rhythm to your design</li>
-</ul>
-
-<p>Below are some items to consider when choosing colors.</p>
-
-<h4 id="personality-and-meaning">Personality and Meaning</h4>
-<p>Choose colors that reflect your personality or your brand. Consider the emotional responses of your target audience. Color communicates meaning. That meaning can vary across different cultures so it’s important to consider your target audience and how they perceive certain colors.</p>
-
-<p>Also, think about how your audience will interact with your page. Use color to distinguish between elements and interactive states. For example, you might choose a default color for your navigation elements and a “selected” color.</p>
+<p>Colour meanings can vary across different cultures so it’s important to consider who your target audience.</p>
 
 <p>Read more about color meaning and how to use color to enhance your designs <a href="http://vanseodesign.com/web-design/color-meaning/">here</a>.</p>
 
-<h4 id="harmony-and-rhythm">Harmony and Rhythm</h4>
-<p>Color can be used to attract attention and organize content, creating a visual hierarchy. 
-Repeating colors on elements adds clarity by allowing the viewer to make visual connections between pieces of content.</p>
+<h3 id="harmony-and-rhythm">Harmony and Rhythm</h3>
+<p>Color can be used to attract attention and organize content, creating a visual hierarchy.</p>
 
-<h4 id="less-is-more">Less is More</h4>
-<p>Consider the number of colors to use in your design. Color helps to reinforce your message and guide people throughout your design. Choosing too many colors may confuse people. When in doubt use one primary color and a secondary accent color. Vary the saturation and value of your colors to add variety while maintaining clarity.</p>
+<p>Repeating colors on elements adds clarity by allowing the viewer to make visual connections between pieces of content.</p>
+
+<p><strong>Less is more.</strong> When in doubt use one primary color and a secondary accent color. Vary the saturation and value of your colors to add variety while maintaining clarity.</p>
 
 <h3 id="color-accessibility">Color Accessibility</h3>
-<p>It’s important to consider accessibility. Many people have some sort of visual color impairment such as being unable to distinguish certain colors from others. Remember that your design should work in the absence of color. Ensure sufficient contrast between colors to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.</p>
+<p>Many people have some sort of visual color impairment such as being unable to distinguish certain colors from others.</p>
 
-<p>Read more about color blindness and how to design for color accessibility <a href="https://24ways.org/2012/color-accessibility/">here</a>.</p>
+<p>Ensure sufficient contrast between colors to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.</p>
+
+<p>Read more about color blindness and designing for color accessibility <a href="https://24ways.org/2012/color-accessibility/">here</a>.</p>
 
 <h4 id="color-resources">Color Resources</h4>
 <ul>
@@ -346,51 +323,44 @@ Repeating colors on elements adds clarity by allowing the viewer to make visual 
   <li><a href="http://www.colorzilla.com/">ColorZilla</a> - Chrome &amp; Firefox plugin to help you pick colors from websites</li>
 </ul>
 
-<blockquote>
-  <h2 id="exercise-choosing-colors">EXERCISE: Choosing colors</h2>
-  <p>Choose up to 2 colors for your website and define how they will be used.</p>
-</blockquote>
+<h2 id="spacing-and-css">Spacing and CSS</h2>
 
-<h2 id="brand-identity">Brand Identity</h2>
+<p>Using space is a key part in design to ensure that the content is easy to read, view, find and aesthetically pleasing. Sometimes a few pixels can make all the difference!</p>
 
-<p>Your website is a reflection of you and/or your business. Your website is is part of your brand.</p>
+<p>By default, many HTML tags are styled with some default spacing. For example, there is extra space between two paragraphs. Headings also have extra space around them.</p>
 
-<p>Your <strong>brand</strong> is how you are perceived by your audience.<br />
-Your <strong>logo</strong> is the visual expression of who you are to your audience.<br />
-Your <strong>brand identity</strong> is a consistent set of artifacts that tell people who you are.</p>
+<p>CSS uses 5 properties to determine the size and spacing of these elements: <code>width</code>, <code>height</code>, <code>padding</code>, <code>margin</code> and <code>border</code>.</p>
 
-<p>The fonts and colors you choose for your website becomes part of your brand identity. These can be carried through to the rest of your brand and serves as a foundation for your brand style guide.</p>
+<p>This is referred to as <strong>The Box Model</strong>.</p>
 
-<p>A <strong>style guide</strong> defines the visual identity for you or your brand across <em>all</em> print and digital collateral.</p>
+<h2 id="intro-to-the-box-model">Intro to The Box Model</h2>
 
-<h4 id="examples-of-brand-style-guides">Examples of brand style guides</h4>
+<p>The browser looks at every HTML element on the page as a square/rectangular box. The <strong>CSS Box Model</strong> describes the way CSS handles the size and spacing of HTML elements.</p>
+
+<p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
 
 <ul>
-  <li><a href="http://issuu.com/bellfrog/docs/jamie-oliver-frv-brand-guidelines">Jamie Oliver branding</a></li>
-  <li><a href="http://mailchimp.com/about/brand-assets/">Mailchimp brand guide</a></li>
-  <li><a href="http://govuk-elements.herokuapp.com/">Gov.uk web guidelines</a></li>
+  <li><code>width</code> - change the default width</li>
+  <li><code>height</code> - change the default width</li>
+  <li><code>margin</code> - add or remove default space <em>around</em> the element</li>
+  <li><code>padding</code> - add or remove default space <em>inside</em> the element</li>
+  <li><code>border</code> -  add a border around the element</li>
 </ul>
 
-<p>In web design, a <strong>style tile</strong> is used in much the same way as a style guide except that it defines styles that are specific to your website.</p>
+<p>Each of these boxes can have different combinations of the above properties, which in turn changes the element’s size and how much space it takes up on the page.</p>
 
-<h4 id="examples-of-style-tiles">Examples of style tiles</h4>
+<h3 id="width--height">Width &amp; Height</h3>
 
-<p><img src="assets/img/module2/15-styletile-bh.jpg" class="print-50 left" /><img src="assets/img/module2/16-styletile-gen.jpg" class="print-50 left" /><img src="assets/img/module2/17-styletile-IH.png" class="print-50 left" /><img src="assets/img/module2/18-styletile-fpcaa.jpg" class="print-50 left" /></p>
+<p>The <code>width</code> &amp; <code>height</code> properties can be used to set specific heights and widths to only <em>block</em> level elements.  (More on block elements in Module 3.)</p>
 
-<p><br />
-Keep track of the different styles you use in a style guide or style tile. Use it as a reference as you build out your website and your brand collateral to maintain consistency and clarity.</p>
+<div style="background:lightgreen;">This is a div with default width &amp; height.</div>
+<div style="background:lightgreen;width:60%;height:80px;margin-top:10px;">This is a div with a set width &amp; height.</div>
 
-<h1 id="typography--css">Typography &amp; CSS</h1>
-
-<p>Last class we covered the role of typography in design.  Let’s go over how to implement these principles into your web pages using  various CSS properties.</p>
-
-<h2 id="addingremoving-space">Adding/Removing Space</h2>
-
-<p>Using space is a key part in design to ensure that the content is easy to read, view, find and aesthically pleasing. Sometimes a few pixels can make all the difference!</p>
-
-<p>The browser looks at every HTML element on the page as a rectangular box. The CSS <a href="https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/">Box Model</a> describes the way CSS styles the size and spacing of HTML elements.</p>
-
-<p>CSS uses 5 properties to determine the size and spacing of these boxes: width, height, padding, margin and border. Today, let’s look at padding and margin. (We’ll continue with these other properties in the next lesson.)</p>
+<pre><code>div {
+  width: 60%;
+  height: 80px;
+}
+</code></pre>
 
 <h3 id="padding">Padding</h3>
 
@@ -405,18 +375,17 @@ padding-bottom: 2px;
 padding-left: 2px;
 
 /* shorthand */
+padding: 2px; /* same on all sides */
+padding: 2px 10px; /* top &amp; bottom, right &amp; left */
+padding: 2px 10px 5px; /* top, right &amp; left, bottom */
 padding: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
 
-<p>The shorthand technique can be shortened even further.</p>
-
-<pre><code>padding: 2px; /* same on all sides */
-padding: 2px 10px; /* top &amp; bottom, right &amp; left */
-padding: 2px 10px 5px; /* top, right &amp; left, bottom */
-</code></pre>
+<p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
+<p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
 
 <h3 id="margin">Margin</h3>
-<p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding. Margin also accepts negative values.</p>
+<p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding.</p>
 
 <pre><code>/* longhand */
 margin-top: 2px;
@@ -431,8 +400,70 @@ margin: 2px 10px 5px; /* top, right &amp; left, bottom */
 margin: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
 
+<p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
+<p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
+
+<blockquote>
+  <p>Edit the CodePen below and try editing padding and margin.</p>
+</blockquote>
+
 <p data-height="268" data-theme-id="0" data-slug-hash="bVaymY" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/bVaymY/">margin &amp; padding</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+<h3 id="margin--negative-values">Margin &amp; Negative values</h3>
+
+<p>Margin also accepts negative values.  This will nudge it just outside of its stacked position.</p>
+
+<p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
+<p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
+
+<h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code>margin</code></h3>
+<p>The margin property can also be used to center align <em>block</em> level elements.</p>
+
+<p>First a width needs to be set. Then by setting the left &amp; right values to <code>auto</code>, it finds the center of the page. The <code>0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
+
+<pre><code>div {
+  background: lightblue;
+  width: 600px;
+  height: 60px;
+  margin: 0 auto; /* 0 on the top &amp; bottom, auto on the left &amp; right */
+}
+</code></pre>
+
+<div style="height:60px;width:600px;margin: 0 auto;background:lightblue;">
+  <p>Auto aligned!</p>
+</div>
+
+<blockquote>
+  <h2 id="class-exercise-auto-align-content">CLASS EXERCISE: auto align content</h2>
+
+  <p>Looking at this <a href="http://codepen.io/learningcode/pen/adPrym">CodePen example</a>, compare the difference when <code>margin</code> is used to auto align the content block.</p>
+</blockquote>
+
+<h3 id="border">Border</h3>
+<p>The <code>border</code> property resides between the <code>margin</code> and <code>padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
+
+<pre><code>/* longhand */
+border-width: 2px;
+border-style: solid;
+border-color: red;
+
+/* shorthand */
+border: 2px solid red;
+</code></pre>
+
+<p>Like padding and margin, a border can be added to a specific side of the element.</p>
+
+<pre><code>/* longhand */
+border-top-width: 2px;
+border-top-style: solid;
+border-top-color: red;
+
+/* shorthand */
+border-top: 2px solid red;
+</code></pre>
+
+<p>Read more about the Box Model <a href="https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/">here</a>.  We’ll also be revisiting it in Module 3.</p>
 
 <h2 id="dev-tools--designing-in-the-browser">Dev tools &amp; designing in the browser</h2>
 
@@ -456,23 +487,14 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 
 <blockquote>
   <h2 id="exercise-margin--padding">EXERCISE: Margin &amp; Padding</h2>
-  <p>Download the <a href="/llc-digital-skills/exercises/module2/margin-padding.zip">exercise file</a> (zip file).  In groups of two or three, try to find a good balance of margin and padding to make this web page look just a little bit nicer!</p>
+  <p>Download the <a href="exercises/module2/margin-padding.zip">exercise file</a> (zip file).  Base HTML &amp; CSS is already included.</p>
+
+  <p>With a partner, edit/add/remove some margin and padding to make this web page look just a little bit nicer and more balanced.</p>
+
+  <p>Using the class added to the HTML, <code>&lt;div class="wrapper"&gt;</code>, add <code>margin</code> and <code>width</code> to auto align the page content.</p>
+
+  <p><strong>solution.css</strong> has been included for reference.</p>
 </blockquote>
-
-<h2 id="intro-to-form-design">Intro to form design</h2>
-
-<p>When design a form, there are many things to consider such as:</p>
-
-<ul>
-  <li>space, padding and layout</li>
-  <li>icons and typography</li>
-  <li>simplicity &amp; ease of use</li>
-  <li>displaying validation error</li>
-  <li>form steps and progress</li>
-  <li>primary and secondary buttons</li>
-</ul>
-
-<p>With these considerations in mind, let’s look at some of the rules listed in this article, <a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a>.</p>
 
 <p><br />
 ~ End ~</p>

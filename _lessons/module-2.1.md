@@ -7,14 +7,8 @@ description: Intro to Design & CSS typography.
 permalink: module2-1.html
 ---
 
-**Web *design*** and **web *development*** are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.
 
-In a nutshell, web *design* is about creating the visuals. Web *development* turns those visuals into code, to be able to display it in a web browser.
-
-There are even further specializations, such as back-end developers, front-end developers and interaction designers, just to name a few.
-
-Before we launch into design and more CSS, let's do a review.
-
+Before we launch into design, let's do a CSS review.
 
 ##CSS Review: Adding CSS
 
@@ -81,12 +75,21 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* more specific - applies only to a section element with this id */
     }
 
+##Web Design vs Web development
 
-##Web Design: Brainstorm Ideas
+**Web *design*** and **web *development*** are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.
+
+In a nutshell, web *design* is about creating the visuals. Web *development* turns those visuals into code, to be able to display it in a web browser.
+
+There are even further specializations, such as back-end developers, front-end developers and interaction designers, just to name a few.
+
+
+
+##Brainstorming Ideas
 
 Before writing a line of code, it helps to define your goals for the website first.  
 
-Here are some brainstorming questions that can help you (or your clients) define your brand & goals.  You don't have to answer all of these questions but keeping these ideas in mind before starting the design process can help inform you decisions.
+Here are some brainstorming questions that can help you (or your clients) define your brand & goals.  You don't have to answer all of these questions but keeping these ideas in mind before and during the design process can help inform your decisions.
 
 *  What is the vision/mission for your business or the values that represent your business?
 *  Do you have/want a tagline or slogan? If so, what is it?
@@ -94,7 +97,23 @@ Here are some brainstorming questions that can help you (or your clients) define
 *  What should people think or feel when they see your brand / website?
 *  Use 5 adjectives to describe your brand / website's personality.
     
-    
+###Brand Identity
+
+Your website is a reflection of you and/or your business. Your website is is part of your brand.
+
+Your **brand** is how you are perceived by your audience.  
+Your **logo** is the visual expression of who you are to your audience.  
+Your **brand identity** is a consistent set of artifacts that tell people who you are.  
+A **style guide** defines the visual identity for you or your brand.
+
+The design choices you make for your website becomes part of your brand identity. 
+
+###Extra Resources
+
+* [Mailchimp brand guide](http://mailchimp.com/about/brand-assets/)
+* [Gov.uk web guidelines](http://govuk-elements.herokuapp.com/)
+
+
 ##What is Design?
 
 Design is problem solving. In web design, the problem to be solved is how to effectively communicate the content. 
@@ -189,6 +208,8 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 >Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. 
 >
 >Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
+
+**Note that many of the CSS techniques for creating page layout styles will be covered in Module 3.**
 
 
 ##Typography
