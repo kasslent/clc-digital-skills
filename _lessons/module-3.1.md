@@ -3,49 +3,16 @@ layout: lessons
 module: 3
 lesson: 1
 title: CSS Fundamentals
+description: CSS selectors, The Box Model and floats.
 permalink: module3-1.html
 class: module3-1
 ---
 
-<!-- ##CSS Review
 
-###Adding CSS
-
-####Inline 
-
-CSS is added to a specific HTML element using the style *attribute*.
-
-<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
-</code></pre>
-
-####Internal
-Included in the `<head>` with a `<style>` tag.
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    &lt;meta charset="utf-8"&gt;
-    <strong>&lt;style&gt;</strong>
-      p {
-        color: red;
-      }
-    <strong>&lt;/style&gt;</strong>
- &lt;/head&gt;
-</code></pre>
-
-####External
-Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
-&lt;/head&gt;
-</code></pre>
-
-> What are the pros & cons of each technique?
+In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let's do a review and look at a few more.
 
 
-
-###Basic selectors
+##Type, class and id Selectors
 
 **Type selectors** target HTML elements by their element tag name. 
 
@@ -53,7 +20,9 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* targets all paragraphs */
     }
 
-**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
+**Class selectors** are added using a class *attribute* to any element. 
+
+Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
 
     <p class="special">This is a special paragraph</p>
 
@@ -66,7 +35,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* more specific - applies only to paragraphs with this class */
     }
 
-**ID selectors** work the same way as the class attributes for CSS styling but it can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
+**ID selectors** can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
 
     #about {
       /* applies to any element with this id */ 
@@ -75,9 +44,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
       /* more specific - applies only to a section element with this id */
     }
 
- -->
-
-##Descendant selectors
+##Descendant Selectors
 Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
 
     <parent>
@@ -185,71 +152,19 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
 <br>
 There are **many** more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.
 
-####Resources
-
-* [The 30 CSS Selectors you Must Memorize](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
-* [Taming Advanced CSS Selectors](http://www.smashingmagazine.com/2009/08/taming-advanced-css-selectors/)
 
 >##EXERCISE: Selectors
 >
->Download the <a href="{{site.exercises}}/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until you're done! 
+>Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until really really need to! 
 >
 >All the instructions are contained in the comments at the very top of `selector.html`
 
 
-
-##Selectors - General Guidelines
-
-When building a web page, it's best to start with the HTML structure and as much content as possible. It's easier to style your page with "real" content to get a better idea of how the content should be presented.
-
-Then add CSS styles from general/shared styles to more specific styles.
-
-To avoid CSS specificity issues, here are some general guidelines:
-
-###HTML element selectors
-
-Use this to apply a style to all or most of that particular element on the page. (e.g. all links on the page).
-
-    a {
-      color: red;
-    }
-
- 
-###Descendant selectors
-
-Use this to apply a style to multiple elements within another element. (e.g. only links within the navigation)
-
-    nav a {
-      color: blue;
-    }
-
-
-###Class selectors
-
-Use this to apply a style to an element that can be anywhere on the page and will not be specific to the HTML element. (e.g. button styles used throughout the site, multiple times)
-
-    .button {
-      color: green;
-    }
-
-###ID selectors
-
-Use this sparingly or not at all.  If using it, it can only be used *once* per page and save it for major page structural blocks (e.g. page header)
-    
-    #main-header {
-      background: #cccccc;
-    }
-
-###Combine selectors
-
-Use this when specific selectors share the same styles. (e.g. just the h1 and h2 share the same styles)
-
-    h1, h2 {
-      font-weight: normal;
-    }
-
-
 ##Block vs Inline Elements
+
+
+Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
+
 
 Block level HTML elements default behaviour:
 
@@ -268,7 +183,7 @@ Inline level HTML elements default behaviour:
 * does not render CSS height and width at all, will apply margin and padding but with unexpected results
 * examples: `<a>`, `<span>`
 
-
+<br>
 **Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
 
 <div style="background:lightblue;">this is a div</div>
@@ -276,30 +191,45 @@ Inline level HTML elements default behaviour:
 <span style="background:lightgreen;">this is a span</span>
 
 
-###CSS Display Property
+##CSS Display
 
-CSS can be used to change the behavior of inline and block elements with the `display` property. There are three values we'll look at today: `block`, `inline` and `inline-block`.
+CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today: 
 
-Let's try this out in this [Codepen](http://codepen.io/learningcode/pen/vNRadg).
+* `block` - makes inline elements display as block elements
+* `inline` - makes block elements display as inline-block
+* `inline-block` - best of both worlds
 
-####Resource 
+This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
+
+###Resource 
 
 [CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
 
-##The Box Model: width, height, padding, margin, border
 
-The browser looks at every HTML element on the page as a square/rectangular box. The **CSS Box Model** describes the way CSS handles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout.
 
-CSS uses 5 properties to determine the size and spacing of these boxes: 
+##Box Model Review
 
+The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  Let's do a review and then dive a little deeper!
+
+* the browser looks at HTMLs element as a square/rectangular box
+* the box model describes the way CSS handles the size and spacing of HTML elements
 * `width` - change the default width
 * `height` - change the default width
 * `margin` - add or remove default space around the element
 * `padding` - add or remove default space inside the element
 * `border` -  add a border around the element
 
+###Seeing it all together
 
-Each of these boxes can have different combinations of margins, padding and borders, which in turn changes the element's size (width & height). This interaction is referred to as the box model.
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px; 
+    border: 5px solid black;
+
+<div style="width:80%;margin:50px auto;padding:40px;border:5px solid black;">
+  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
 
 ###Width & Height
 
@@ -308,8 +238,6 @@ The `width` & `height` properties can be used to set specific heights and widths
 ###Padding
 
 The `padding` property adds/removes space *inside* of the element. It only accepts positive numerical values.
-
-Setting the padding to "0" will remove any default space on an HTML element. Any positive value will add space *inside* of the element.
 
     /* longhand */
     padding-top: 2px;
@@ -324,7 +252,16 @@ Setting the padding to "0" will remove any default space on an HTML element. Any
     padding: 2px 2px 2px 2px; /* top right bottom left */
 
 <p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
-<p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
+<p style="background:lightgreen;padding:20px;">This is a paragraph with padding.</p>
+
+When adding padding to an *inline* element it will look like the below example.
+<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
+<a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a>
+
+<br>
+Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property. 
+
+More on this in the upcoming exercise.
 
 ###Margin
 Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. 
@@ -341,17 +278,27 @@ Margin adds/removes space *outside* of an element. However, the shorthand and lo
     margin: 2px 10px 5px; /* top, right & left, bottom */
     margin: 2px 2px 2px 2px; /* top right bottom left */
     
-<p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
+<p style="background:lightblue;margin:0px;">This is a paragraph without margin.</p>
 <p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
 
-###Margin & Negative values
+Just like padding, margin and spacing is not applied the same way to block and inline elements.
+
+<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
+<a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a>
+
+
+> ##Class Exercise: Box Model & `display`
+> In this [Codepen](http://codepen.io/learningcode/pen/vNRadg), let's try the different `display` property values and see how it affects inline & block HTML elements.
+
+
+##Margin & Negative values
 
 Margin also accepts negative values.  This will nudge it just outside of its stacked position.
 
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
-###Auto/Center Aligning with `margin`
+##Center Aligning with `margin`
 The margin property can also be used to center align *block* level elements. 
 
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
@@ -366,50 +313,23 @@ First a width needs to be set. Then by setting the left & right values to `auto`
   <p>Auto aligned!</p>
 </div>
 
-
+<br>
 But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?
 
 ![]({{ site.img }}/module3/content-align.jpg)
 
-To do that, we'll need to create a container just for the content to auto align it and use the outer container for the background styles.
+
+In the previous lesson, a wrapper was included around all of the page content.  
+
+But to create a style where different background styles apply to each section, we'll need to:
+
+* create a wrapper, just for the content, not the whole page
+* auto align the content wrapper
+* use the outer container for the background styles
 
 >##EXERCISE: auto align content
 >
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
-
-###Border
-The `border` property resides between the `margin` and `padding` and creates an outline around the element. Also has longhand and shorthand syntax.
-
-    /* longhand */
-    border-width: 2px;
-    border-style: solid;
-    border-color: red;
-
-    /* shorthand */
-    border: 2px solid red;
-
-Like padding and margin, a border can be added to a specific side of the element.
-
-    /* longhand */
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-top-color: red;
-
-    /* shorthand */
-    border-top: 2px solid red;
-
-
-###Seeing it all together
-
-    background: lightblue;
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px; 
-    border: 5px solid black;
-
-<div style="width:80%;margin:50px auto;padding:40px; background:lightblue;border:5px solid black;">
-  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
 
 
 ##The Box Model Problem and Fix
@@ -449,6 +369,9 @@ Here is the snippet:
 
 ####Resource
 Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+
+
+
 
 ##Positioning Elements: Floats
 
@@ -524,9 +447,7 @@ If there is no element following the floated elements, apply `overflow: hidden;`
 
     <div class="parent">
       <div class="floated">floated element</div>
-
       <div class="floated">floated element</div>
-
     </div>
 
     
@@ -555,12 +476,12 @@ Originally it looked like this:
 
     /* slightly enhanced, universal clearfix hack */
     .clearfix:after {
-         visibility: hidden;
-         display: block;
-         font-size: 0;
-         content: " ";
-         clear: both;
-         height: 0;
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
     }
     .clearfix { display: inline-block; }
     /* start commented backslash hack \*/
@@ -574,27 +495,25 @@ Note the use of a *psuedo-class*, `:after` added to the `clearfix` class.
 It now looks like this:
 
     .group:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
     }
     
 The class name was changed to "group" by some notable CSS Developers as they thought this gave it a better semantic meaning but it is just a class name so it can be changed! The below example would be the same thing.
 
     .clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
     }
     
     
 This snippet can be added to your css file and added to the **parent** of the floated element. To add multiple classes to the same element, separate each with a space.
 
     <div class="parent clearfix">
-        <div class="floated">floated element</div>
-
-        <div class="floated">floated element</div>
-
+      <div class="floated">floated element</div>
+      <div class="floated">floated element</div>
     </div>
 
 
@@ -610,24 +529,7 @@ Reminder, if you use this method, you do not need to use the `overflow` property
 * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
 
 
-##Organizing Your CSS
-
-How you organize your CSS is a personal choice and you will probably develop your own style but here are some tips for keeping your files organized.
-
-* start with general & global styles
-  * add box-sizing fix and clearfix hack at the top of the page
-  * use type selectors to set up general styles (body, h1, h2, etc)
-* write the CSS in the same order as it appears on your HTML page
-  * e.g. general styles, header styles, about styles, footer styles
-* use comments to break up and organize the CSS into sections
-* put related CSS together starting with generic to more specific
-
-Remember, good organization helps to reduce errors and makes for easier debugging!
-
->##EXERCISE: Putting it all together
->
->Download the <a href="{{site.exercises}}/module3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the **answer** folder.
-
+<br>
 ~ End ~
 
 

@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>CSS Fundamentals</title>
-  <meta name="description" content="&lt;!– ##CSS Review">
+  <meta name="description" content="In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let’s do a review and look at a few more.">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,77 +42,45 @@
       
       <article class="module3-1" >
         <h1>CSS Fundamentals</h1>
-        <!-- ##CSS Review
+        <p>In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let’s do a review and look at a few more.</p>
 
-###Adding CSS
+<h2 id="type-class-and-id-selectors">Type, class and id Selectors</h2>
 
-####Inline 
+<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
 
-CSS is added to a specific HTML element using the style *attribute*.
-
-<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
+<pre><code>p {
+  /* targets all paragraphs */
+}
 </code></pre>
 
-####Internal
-Included in the `<head>` with a `<style>` tag.
+<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element.</p>
 
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    &lt;meta charset="utf-8"&gt;
-    <strong>&lt;style&gt;</strong>
-      p {
-        color: red;
-      }
-    <strong>&lt;/style&gt;</strong>
- &lt;/head&gt;
+<p>Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
+
+<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
 </code></pre>
 
-####External
-Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
+<hr />
 
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
-&lt;/head&gt;
+<pre><code>.special {
+  /* applies to any element with this class */ 
+}
+p.special {
+  /* more specific - applies only to paragraphs with this class */
+}
 </code></pre>
 
-> What are the pros & cons of each technique?
+<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
 
+<pre><code>#about {
+  /* applies to any element with this id */ 
+}
+section#about {
+  /* more specific - applies only to a section element with this id */
+}
+</code></pre>
 
-
-###Basic selectors
-
-**Type selectors** target HTML elements by their element tag name. 
-
-    p {
-      /* targets all paragraphs */
-    }
-
-**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
-
-    <p class="special">This is a special paragraph</p>
-
----
-    
-    .special {
-      /* applies to any element with this class */ 
-    }
-    p.special {
-      /* more specific - applies only to paragraphs with this class */
-    }
-
-**ID selectors** work the same way as the class attributes for CSS styling but it can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
-
-    #about {
-      /* applies to any element with this id */ 
-    }
-    section#about {
-      /* more specific - applies only to a section element with this id */
-    }
-
- -->
-
-<h2 id="descendant-selectors">Descendant selectors</h2>
+<h2 id="descendant-selectors">Descendant Selectors</h2>
 <p>Descendant selectors can be used to target <em>nested</em> elements. To use a descendant selector, add a <em>space</em> between selectors.</p>
 
 <pre><code>&lt;parent&gt;
@@ -231,75 +199,17 @@ a:hover {
 <p><br />
 There are <strong>many</strong> more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.</p>
 
-<h4 id="resources">Resources</h4>
-
-<ul>
-  <li><a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></li>
-  <li><a href="http://www.smashingmagazine.com/2009/08/taming-advanced-css-selectors/">Taming Advanced CSS Selectors</a></li>
-</ul>
-
 <blockquote>
   <h2 id="exercise-selectors">EXERCISE: Selectors</h2>
 
-  <p>Download the <a href="/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking until you’re done!</p>
+  <p>Download the <a href="exercises/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking until really really need to!</p>
 
   <p>All the instructions are contained in the comments at the very top of <code>selector.html</code></p>
 </blockquote>
 
-<h2 id="selectors---general-guidelines">Selectors - General Guidelines</h2>
-
-<p>When building a web page, it’s best to start with the HTML structure and as much content as possible. It’s easier to style your page with “real” content to get a better idea of how the content should be presented.</p>
-
-<p>Then add CSS styles from general/shared styles to more specific styles.</p>
-
-<p>To avoid CSS specificity issues, here are some general guidelines:</p>
-
-<h3 id="html-element-selectors">HTML element selectors</h3>
-
-<p>Use this to apply a style to all or most of that particular element on the page. (e.g. all links on the page).</p>
-
-<pre><code>a {
-  color: red;
-}
-</code></pre>
-
-<h3 id="descendant-selectors-1">Descendant selectors</h3>
-
-<p>Use this to apply a style to multiple elements within another element. (e.g. only links within the navigation)</p>
-
-<pre><code>nav a {
-  color: blue;
-}
-</code></pre>
-
-<h3 id="class-selectors">Class selectors</h3>
-
-<p>Use this to apply a style to an element that can be anywhere on the page and will not be specific to the HTML element. (e.g. button styles used throughout the site, multiple times)</p>
-
-<pre><code>.button {
-  color: green;
-}
-</code></pre>
-
-<h3 id="id-selectors">ID selectors</h3>
-
-<p>Use this sparingly or not at all.  If using it, it can only be used <em>once</em> per page and save it for major page structural blocks (e.g. page header)</p>
-
-<pre><code>#main-header {
-  background: #cccccc;
-}
-</code></pre>
-
-<h3 id="combine-selectors">Combine selectors</h3>
-
-<p>Use this when specific selectors share the same styles. (e.g. just the h1 and h2 share the same styles)</p>
-
-<pre><code>h1, h2 {
-  font-weight: normal;
-}
-</code></pre>
-
 <h2 id="block-vs-inline-elements">Block vs Inline Elements</h2>
+
+<p>Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.</p>
 
 <p>Block level HTML elements default behaviour:</p>
 
@@ -322,29 +232,36 @@ There are <strong>many</strong> more ways to select elements such as position in
   <li>examples: <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code></li>
 </ul>
 
-<p><strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
+<p><br />
+<strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
 
 <div style="background:lightblue;">this is a div</div>
 
 <p><span style="background:lightgreen;">this is a span</span></p>
 
-<h3 id="css-display-property">CSS Display Property</h3>
+<h2 id="css-display">CSS Display</h2>
 
-<p>CSS can be used to change the behavior of inline and block elements with the <code>display</code> property. There are three values we’ll look at today: <code>block</code>, <code>inline</code> and <code>inline-block</code>.</p>
+<p>CSS can be used to change how inline and block elements display using the <code>display</code> property. There are three values we’ll look at today:</p>
 
-<p>Let’s try this out in this <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a>.</p>
+<ul>
+  <li><code>block</code> - makes inline elements display as block elements</li>
+  <li><code>inline</code> - makes block elements display as inline-block</li>
+  <li><code>inline-block</code> - best of both worlds</li>
+</ul>
 
-<h4 id="resource">Resource</h4>
+<p>This property will come in handy when using the Box Model properties.  Let’s do a review before we put display to use.</p>
+
+<h3 id="resource">Resource</h3>
 
 <p><a href="https://css-tricks.com/almanac/properties/d/display/">CSS Tricks: Display property</a></p>
 
-<h2 id="the-box-model-width-height-padding-margin-border">The Box Model: width, height, padding, margin, border</h2>
+<h2 id="box-model-review">Box Model Review</h2>
 
-<p>The browser looks at every HTML element on the page as a square/rectangular box. The <strong>CSS Box Model</strong> describes the way CSS handles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout.</p>
-
-<p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
+<p>The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  Let’s do a review and then dive a little deeper!</p>
 
 <ul>
+  <li>the browser looks at HTMLs element as a square/rectangular box</li>
+  <li>the box model describes the way CSS handles the size and spacing of HTML elements</li>
   <li><code>width</code> - change the default width</li>
   <li><code>height</code> - change the default width</li>
   <li><code>margin</code> - add or remove default space around the element</li>
@@ -352,7 +269,17 @@ There are <strong>many</strong> more ways to select elements such as position in
   <li><code>border</code> -  add a border around the element</li>
 </ul>
 
-<p>Each of these boxes can have different combinations of margins, padding and borders, which in turn changes the element’s size (width &amp; height). This interaction is referred to as the box model.</p>
+<h3 id="seeing-it-all-together">Seeing it all together</h3>
+
+<pre><code>width: 80%;
+margin: 50px auto;
+padding: 40px; 
+border: 5px solid black;
+</code></pre>
+
+<div style="width:80%;margin:50px auto;padding:40px;border:5px solid black;">
+  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
 <h3 id="width--height">Width &amp; Height</h3>
 
@@ -361,8 +288,6 @@ There are <strong>many</strong> more ways to select elements such as position in
 <h3 id="padding">Padding</h3>
 
 <p>The <code>padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
-
-<p>Setting the padding to “0” will remove any default space on an HTML element. Any positive value will add space <em>inside</em> of the element.</p>
 
 <pre><code>/* longhand */
 padding-top: 2px;
@@ -378,7 +303,16 @@ padding: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
 
 <p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
-<p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
+<p style="background:lightgreen;padding:20px;">This is a paragraph with padding.</p>
+
+<p>When adding padding to an <em>inline</em> element it will look like the below example.</p>
+<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
+<p><a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a></p>
+
+<p><br />
+Notice that there’s no space between the two element? Inline elements don’t apply padding the same way as block elements.  You will need to use the CSS <code>display</code> property.</p>
+
+<p>More on this in the upcoming exercise.</p>
 
 <h3 id="margin">Margin</h3>
 <p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding.</p>
@@ -396,17 +330,27 @@ margin: 2px 10px 5px; /* top, right &amp; left, bottom */
 margin: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
 
-<p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
+<p style="background:lightblue;margin:0px;">This is a paragraph without margin.</p>
 <p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
 
-<h3 id="margin--negative-values">Margin &amp; Negative values</h3>
+<p>Just like padding, margin and spacing is not applied the same way to block and inline elements.</p>
+
+<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
+<p><a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a></p>
+
+<blockquote>
+  <h2 id="class-exercise-box-model--display">Class Exercise: Box Model &amp; <code>display</code></h2>
+  <p>In this <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a>, let’s try the different <code>display</code> property values and see how it affects inline &amp; block HTML elements.</p>
+</blockquote>
+
+<h2 id="margin--negative-values">Margin &amp; Negative values</h2>
 
 <p>Margin also accepts negative values.  This will nudge it just outside of its stacked position.</p>
 
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
-<h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code>margin</code></h3>
+<h2 id="center-aligning-with-margin">Center Aligning with <code>margin</code></h2>
 <p>The margin property can also be used to center align <em>block</em> level elements.</p>
 
 <p>First a width needs to be set. Then by setting the left &amp; right values to <code>auto</code>, it finds the center of the page. The <code>0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
@@ -422,53 +366,26 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
   <p>Auto aligned!</p>
 </div>
 
-<p>But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?</p>
+<p><br />
+But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?</p>
 
 <p><img src="assets/img/module3/content-align.jpg" alt="" /></p>
 
-<p>To do that, we’ll need to create a container just for the content to auto align it and use the outer container for the background styles.</p>
+<p>In the previous lesson, a wrapper was included around all of the page content.</p>
+
+<p>But to create a style where different background styles apply to each section, we’ll need to:</p>
+
+<ul>
+  <li>create a wrapper, just for the content, not the whole page</li>
+  <li>auto align the content wrapper</li>
+  <li>use the outer container for the background styles</li>
+</ul>
 
 <blockquote>
   <h2 id="exercise-auto-align-content">EXERCISE: auto align content</h2>
 
   <p>Looking at this <a href="http://codepen.io/learningcode/pen/avYXvq">CodePen example</a>, compare the difference between using and not using a content wrapper.</p>
 </blockquote>
-
-<h3 id="border">Border</h3>
-<p>The <code>border</code> property resides between the <code>margin</code> and <code>padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
-
-<pre><code>/* longhand */
-border-width: 2px;
-border-style: solid;
-border-color: red;
-
-/* shorthand */
-border: 2px solid red;
-</code></pre>
-
-<p>Like padding and margin, a border can be added to a specific side of the element.</p>
-
-<pre><code>/* longhand */
-border-top-width: 2px;
-border-top-style: solid;
-border-top-color: red;
-
-/* shorthand */
-border-top: 2px solid red;
-</code></pre>
-
-<h3 id="seeing-it-all-together">Seeing it all together</h3>
-
-<pre><code>background: lightblue;
-width: 80%;
-margin: 50px auto;
-padding: 40px; 
-border: 5px solid black;
-</code></pre>
-
-<div style="width:80%;margin:50px auto;padding:40px; background:lightblue;border:5px solid black;">
-  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
 
 <h2 id="the-box-model-problem-and-fix">The Box Model Problem and Fix</h2>
 
@@ -585,9 +502,7 @@ Any element <em>after</em> the floated element will move up and flow around the 
 
 <pre><code>&lt;div class="parent"&gt;
   &lt;div class="floated"&gt;floated element&lt;/div&gt;
-
   &lt;div class="floated"&gt;floated element&lt;/div&gt;
-
 &lt;/div&gt;
 </code></pre>
 
@@ -619,12 +534,12 @@ Any element <em>after</em> the floated element will move up and flow around the 
 
 <pre><code>/* slightly enhanced, universal clearfix hack */
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/
@@ -639,28 +554,26 @@ Any element <em>after</em> the floated element will move up and flow around the 
 <p>It now looks like this:</p>
 
 <pre><code>.group:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 </code></pre>
 
 <p>The class name was changed to “group” by some notable CSS Developers as they thought this gave it a better semantic meaning but it is just a class name so it can be changed! The below example would be the same thing.</p>
 
 <pre><code>.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 </code></pre>
 
 <p>This snippet can be added to your css file and added to the <strong>parent</strong> of the floated element. To add multiple classes to the same element, separate each with a space.</p>
 
 <pre><code>&lt;div class="parent clearfix"&gt;
-    &lt;div class="floated"&gt;floated element&lt;/div&gt;
-
-    &lt;div class="floated"&gt;floated element&lt;/div&gt;
-
+  &lt;div class="floated"&gt;floated element&lt;/div&gt;
+  &lt;div class="floated"&gt;floated element&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -676,35 +589,8 @@ Any element <em>after</em> the floated element will move up and flow around the 
   <li><a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">Clearing Floats: An Overview of Different clearfix Methods</a></li>
 </ul>
 
-<h2 id="organizing-your-css">Organizing Your CSS</h2>
-
-<p>How you organize your CSS is a personal choice and you will probably develop your own style but here are some tips for keeping your files organized.</p>
-
-<ul>
-  <li>start with general &amp; global styles
-    <ul>
-      <li>add box-sizing fix and clearfix hack at the top of the page</li>
-      <li>use type selectors to set up general styles (body, h1, h2, etc)</li>
-    </ul>
-  </li>
-  <li>write the CSS in the same order as it appears on your HTML page
-    <ul>
-      <li>e.g. general styles, header styles, about styles, footer styles</li>
-    </ul>
-  </li>
-  <li>use comments to break up and organize the CSS into sections</li>
-  <li>put related CSS together starting with generic to more specific</li>
-</ul>
-
-<p>Remember, good organization helps to reduce errors and makes for easier debugging!</p>
-
-<blockquote>
-  <h2 id="exercise-putting-it-all-together">EXERCISE: Putting it all together</h2>
-
-  <p>Download the <a href="/module3/week3-exercise.zip">exercise zip file</a> and follow the instructions in the comments in index.html.  The answer key is contained in the <strong>answer</strong> folder.</p>
-</blockquote>
-
-<p>~ End ~</p>
+<p><br />
+~ End ~</p>
 
 
       </article>
