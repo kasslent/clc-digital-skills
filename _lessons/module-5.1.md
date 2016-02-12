@@ -3,28 +3,11 @@ layout: lessons
 module: 5
 lesson: 1
 title: Intro to JavaScript & jQuery
+description: JavaScript basics and getting started with jQuery.
 permalink: module5-1.html
 class: module5-1
 ---
 
-##Discussion: Steps for creating a basic website
-
-The process for creating a website is not going to be exactly the same for every project and can vary based on your personal preferences and work flow but here are is a general checklist you can follow when setting up a new basic web project.
-
-1. create project folders (i.e. css & image folders, index.html etc)
-1. add base HTML tags (required HTML tags for all web pages)
-1. add some content (as much "real" content as possible to give the page context)
-1. add base CSS (i.e. fixes like the clearfix hack and box-model fix)
-1. add generic/general CSS (i.e. reset stylesheet or your own CSS to reset the default styles to your liking)
-1. add page layout CSS and global page styles like font/text styles, colours and "content wrappers"
-1. add specific styles as needed (i.e. styles specific just to the header area), working on one portion at a time
-1. add responsive styles
-
-Refactor as you go along, test and keep tweaking!
-
-> Let's look at how we can use Emmet to speed up our work flow.
->
-> Refer to Lesson 0 for notes on adding Emmet and other packages to your editor.
 
 ## JavaScript vs jQuery
 
@@ -201,7 +184,7 @@ Declare variables with the keyword `var` and a name of your choosing and *assign
 >Try out the above example in the console.  What do you think the alert message will be?
 
 ###Objects
-If variables are boxes, objects can be thought of as a box with multiple compartments, like a bentobox!
+If variables are boxes, objects can be thought of as a box with multiple compartments, like a bento box!
 
 A basic variable only holds one value.
 
@@ -217,7 +200,7 @@ You can also declare and assign a variable and value in one line.
 
     var box = "Rice";
     
-An object holds a collection of values. Each value is a **property** of the object.
+An object holds a *collection* of values. Each value is a **property** of the object.
 
     /* create a new object */
     var bentobox = {};
@@ -238,17 +221,17 @@ An object holds a collection of values. Each value is a **property** of the obje
 
 Variables can also be treated as an object.  *Dot notation* can be used to set the property value of an object but can also be used to get information from an object using functions.
 
-When you apply a function to an oject, it's called a **method**.
+When you apply a function to an object, it's called a **method**.
 
 For example, the `length()` method can be used to find the number of characters in a string.
 
-    var firstname = "Christina";
-    alert(firstname.length);
+    var day = "Sunday";
+    alert(day.length);
 
 You can even make the length command into a variable.
     
-    var firstname = "Christina";
-    var numOfCharacters = firstname.length;
+    var day = "Sunday";
+    var numOfCharacters = day.length;
     alert(numOfCharacters);
 
 ####Extra resources:
@@ -285,7 +268,7 @@ When you store any amount of text, like words or sentences, the *type* is a **st
 
 You can join strings together using the `+` symbol. This is called **concatenation**.  You join actual strings or strings contained in a variable.
 
-    var name = "Christina";
+    var name = "Ladies Learning Code";
     var greeting = "Hello " + name + "!";
     
     
@@ -321,7 +304,7 @@ This syntax will be used for the remainder of the lessons.
 
 A common use for jQuery is selecting an HTML object and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
 
-To select all the paragraphs on the page, use `p` as the seletor. It is contained in quotes because it is a string.
+To select all the paragraphs on the page, use `p` as the selector. It is contained in quotes because it is a string.
 
     $("p");
 
@@ -408,13 +391,15 @@ Read more about `$( document ).ready()` [here](http://learn.jquery.com/using-jqu
 ###External
 Again, just like CSS, you can also write JavaScript in a separate file.  To make it JavaScript file, name it using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
 
-    <script src="path/to/file.js"></script> 
+    <script src="folder/file.js"></script> 
 
 ---
     <script src="js/global.js"></script> 
 
 ####jQuery vs JavaScript
-In the external file, you do **not** need to add the `<script>` tags but to right jQuery, the `$( document ).ready()` is still required.
+In the external file, you do **not** need to add the `<script>` tags.
+
+But to write jQuery specific code, the `$( document ).ready()` is still required.
 
 ##Referencing jQuery's library
 
@@ -442,9 +427,10 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
->##Exercise
+>##EXERCISE: Creating a project
 >
 >Practice creating a project with all three components: HTML, CSS, jQuery.
+>
 >Take the HTML, CSS and jQuery snippets from the last [CodePen](http://codepen.io/learningcode/pen/pjQePw#0) example and turn them into local project files.
 >
 > 1. Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)
@@ -462,7 +448,7 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 
 ##jQuery Click Events
 
-Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen insted of being executed right away.
+Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away.
 
 Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.
 

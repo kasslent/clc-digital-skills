@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>Intro to JavaScript & jQuery</title>
-  <meta name="description" content="Discussion: Steps for creating a basic website">
+  <meta name="description" content="JavaScript vs jQuery">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,30 +42,7 @@
       
       <article class="module5-1" >
         <h1>Intro to JavaScript & jQuery</h1>
-        <h2 id="discussion-steps-for-creating-a-basic-website">Discussion: Steps for creating a basic website</h2>
-
-<p>The process for creating a website is not going to be exactly the same for every project and can vary based on your personal preferences and work flow but here are is a general checklist you can follow when setting up a new basic web project.</p>
-
-<ol>
-  <li>create project folders (i.e. css &amp; image folders, index.html etc)</li>
-  <li>add base HTML tags (required HTML tags for all web pages)</li>
-  <li>add some content (as much “real” content as possible to give the page context)</li>
-  <li>add base CSS (i.e. fixes like the clearfix hack and box-model fix)</li>
-  <li>add generic/general CSS (i.e. reset stylesheet or your own CSS to reset the default styles to your liking)</li>
-  <li>add page layout CSS and global page styles like font/text styles, colours and “content wrappers”</li>
-  <li>add specific styles as needed (i.e. styles specific just to the header area), working on one portion at a time</li>
-  <li>add responsive styles</li>
-</ol>
-
-<p>Refactor as you go along, test and keep tweaking!</p>
-
-<blockquote>
-  <p>Let’s look at how we can use Emmet to speed up our work flow.</p>
-
-  <p>Refer to Lesson 0 for notes on adding Emmet and other packages to your editor.</p>
-</blockquote>
-
-<h2 id="javascript-vs-jquery">JavaScript vs jQuery</h2>
+        <h2 id="javascript-vs-jquery">JavaScript vs jQuery</h2>
 
 <h3 id="what-is-javascript">What is JavaScript?</h3>
 <p>JavaScript controls the <strong>behavior</strong> of your web page. It allows you to do things such as animate items, hide or show items, react to user input and even process data. Basically, if you need the user to do “something” first (i.e. scroll) to show a specific effect or even content, you’ll most likely need JavaScript.</p>
@@ -261,7 +238,7 @@ alert(favDay);
 </blockquote>
 
 <h3 id="objects">Objects</h3>
-<p>If variables are boxes, objects can be thought of as a box with multiple compartments, like a bentobox!</p>
+<p>If variables are boxes, objects can be thought of as a box with multiple compartments, like a bento box!</p>
 
 <p>A basic variable only holds one value.</p>
 
@@ -280,7 +257,7 @@ box = "Rice";
 <pre><code>var box = "Rice";
 </code></pre>
 
-<p>An object holds a collection of values. Each value is a <strong>property</strong> of the object.</p>
+<p>An object holds a <em>collection</em> of values. Each value is a <strong>property</strong> of the object.</p>
 
 <pre><code>/* create a new object */
 var bentobox = {};
@@ -303,18 +280,18 @@ bentobox.dessert = "Fruit";
 
 <p>Variables can also be treated as an object.  <em>Dot notation</em> can be used to set the property value of an object but can also be used to get information from an object using functions.</p>
 
-<p>When you apply a function to an oject, it’s called a <strong>method</strong>.</p>
+<p>When you apply a function to an object, it’s called a <strong>method</strong>.</p>
 
 <p>For example, the <code>length()</code> method can be used to find the number of characters in a string.</p>
 
-<pre><code>var firstname = "Christina";
-alert(firstname.length);
+<pre><code>var day = "Sunday";
+alert(day.length);
 </code></pre>
 
 <p>You can even make the length command into a variable.</p>
 
-<pre><code>var firstname = "Christina";
-var numOfCharacters = firstname.length;
+<pre><code>var day = "Sunday";
+var numOfCharacters = day.length;
 alert(numOfCharacters);
 </code></pre>
 
@@ -357,7 +334,7 @@ console.log("hi!"); /* will show in only the console */
 
 <p>You can join strings together using the <code>+</code> symbol. This is called <strong>concatenation</strong>.  You join actual strings or strings contained in a variable.</p>
 
-<pre><code>var name = "Christina";
+<pre><code>var name = "Ladies Learning Code";
 var greeting = "Hello " + name + "!";
 </code></pre>
 
@@ -395,7 +372,7 @@ var greeting = "Hello " + name + "!";
 
 <p>A common use for jQuery is selecting an HTML object and applying an effect or action to it. The <code>$()</code> function takes a single value: a string containing a selector that is similar to how items are selected in CSS.</p>
 
-<p>To select all the paragraphs on the page, use <code>p</code> as the seletor. It is contained in quotes because it is a string.</p>
+<p>To select all the paragraphs on the page, use <code>p</code> as the selector. It is contained in quotes because it is a string.</p>
 
 <pre><code>$("p");
 </code></pre>
@@ -491,7 +468,7 @@ $(".box").fadeOut(2000).fadeIn(500);
 <h3 id="external">External</h3>
 <p>Again, just like CSS, you can also write JavaScript in a separate file.  To make it JavaScript file, name it using a <code>.js</code> file extension.  Link to it using the same <code>&lt;script&gt;&lt;/script&gt;</code> tag pair but add the <code>src</code> attribute.</p>
 
-<pre><code>&lt;script src="path/to/file.js"&gt;&lt;/script&gt; 
+<pre><code>&lt;script src="folder/file.js"&gt;&lt;/script&gt; 
 </code></pre>
 
 <hr />
@@ -499,7 +476,9 @@ $(".box").fadeOut(2000).fadeIn(500);
 </code></pre>
 
 <h4 id="jquery-vs-javascript-1">jQuery vs JavaScript</h4>
-<p>In the external file, you do <strong>not</strong> need to add the <code>&lt;script&gt;</code> tags but to right jQuery, the <code>$( document ).ready()</code> is still required.</p>
+<p>In the external file, you do <strong>not</strong> need to add the <code>&lt;script&gt;</code> tags.</p>
+
+<p>But to write jQuery specific code, the <code>$( document ).ready()</code> is still required.</p>
 
 <h2 id="referencing-jquerys-library">Referencing jQuery’s library</h2>
 
@@ -529,10 +508,11 @@ $(".box").fadeOut(2000).fadeIn(500);
 </code></pre>
 
 <blockquote>
-  <h2 id="exercise">Exercise</h2>
+  <h2 id="exercise-creating-a-project">EXERCISE: Creating a project</h2>
 
-  <p>Practice creating a project with all three components: HTML, CSS, jQuery.
-Take the HTML, CSS and jQuery snippets from the last <a href="http://codepen.io/learningcode/pen/pjQePw#0">CodePen</a> example and turn them into local project files.</p>
+  <p>Practice creating a project with all three components: HTML, CSS, jQuery.</p>
+
+  <p>Take the HTML, CSS and jQuery snippets from the last <a href="http://codepen.io/learningcode/pen/pjQePw#0">CodePen</a> example and turn them into local project files.</p>
 
   <ol>
     <li>Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)</li>
@@ -553,7 +533,7 @@ Try adding more HTML elements and practice selecting elements and applying jQuer
 
 <h2 id="jquery-click-events">jQuery Click Events</h2>
 
-<p>Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control <em>when</em> the effects happen insted of being executed right away.</p>
+<p>Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control <em>when</em> the effects happen instead of being executed right away.</p>
 
 <p>Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.</p>
 

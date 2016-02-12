@@ -29,6 +29,14 @@
   * 20mins is ideal
   * adding a break onto an exercise would also be preferred (e.g. 10mins for the exercise + 20 min break) but break when the students need it
 * Feel free to use your own examples to demonstrate the different concepts (e.g. your favorite websites and tools).
+* each lesson is meant to be covered in one class
+* if you finish early, you can 
+  * start on the next lesson
+  * do a Q&A or work on exercises
+  * teach some "extras" like shortcuts and emmet
+  * if it's only 10mins or so, the students can go home early
+* if you cannot complete the lesson in one class, just stop at the regular class time and continue where you left of in the next class
+  * the last lesson only goes over FTP info so it's mean to either be a student suggested lesson or some time to catch up or do review
   
 As the weeks progress, depending on the progress of the class you may need to do a small review at the beginning of each class.  If people are asking questions about certain things, do a small review at the beginning of class or ask people if they have questions about previous classes.  You many need to also review things like editor settings, general syntax and best practices.
 

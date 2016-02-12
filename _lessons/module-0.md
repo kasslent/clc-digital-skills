@@ -3,7 +3,7 @@ layout: lessons
 module: 0
 lesson: 0
 title: Install Party!
-description: Tips, downloads and recommendations to prepare you for the next 7 weeks.
+description: Tips, downloads and recommendations to prepare you for the course.
 permalink: module0.html
 ---
 

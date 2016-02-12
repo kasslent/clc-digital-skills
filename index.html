@@ -8,11 +8,10 @@ class: home
     <ul class="listing">
       {% for lesson in site.lessons %} 
       <li>
-        
-        <h2>Module {{ lesson.module }}: {{ lesson.title }}</h2>
+        <h2>Module {{ lesson.module }}</h2>
+        <h3>{{ lesson.title }}</h3>
         <p>{{ lesson.description }}</p>
-        <a href="{{ lesson.permalink }}">Lesson {{ lesson.lesson }} &raquo;</a>
-        
+        <a class="btn" href="{{ lesson.permalink }}">Lesson {{ lesson.lesson }}</a>
       </li>
       {% endfor %}
     </ul>
