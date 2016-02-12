@@ -8,7 +8,7 @@ permalink: module1-2.html
 ---
 
 
->##EXERCISE: HTML Review
+>## EXERCISE: HTML Review
 >
 >Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
 >
@@ -18,13 +18,13 @@ permalink: module1-2.html
 Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 
-##Audio and Video
+## Audio and Video
 
 HTML5 introduced better support for media with `<audio>` and `<video>` tags.  However, with sites such as YouTube and Vimeo, it's often easier (and less bandwidth) to go with these options.  
 
 Sites like these and other media sites such as Instagram and Twitter all offer embed options.
 
-####Extra resources 
+#### Extra resources 
 
 * [http://html5doctor.com/native-audio-in-the-browser/](http://html5doctor.com/native-audio-in-the-browser/)
 * [http://html5doctor.com/the-video-element/](http://html5doctor.com/the-video-element/)
@@ -32,7 +32,7 @@ Sites like these and other media sites such as Instagram and Twitter all offer e
 > Let's check out the different embed options for [YouTube](http://youtube.com), [Instagram](http://instagram.com), [Twitter](http://twitter.com) and other media sites.
 
 
-##Intro to CSS
+## Intro to CSS
 
 * CSS = cascading stylesheet
 * stylesheet language with its own syntax rules, different from HTML
@@ -45,7 +45,7 @@ CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colo
 
 ![keyboard]({{ site.img }}/keyboard-css.png)
 
-##Syntax & Terminology
+## Syntax & Terminology
 
 **Selectors** determine which HTML element(s) to apply the styles to.  
 
@@ -67,7 +67,7 @@ A **Declaration block** holds all the declarations within curly brackets `{ }` f
 > In the above example, what is the selector? Property? Value?
 
 
-###Multiple CSS Declarations
+### Multiple CSS Declarations
 
 Multiple declarations can be added for one selector to add and modify multiple styles.
 
@@ -82,7 +82,7 @@ There are many CSS properties with new ones being added and old ones being retir
 * [http://caniuse.com](http://caniuse.com)
 * [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
-##CSS Comments
+## CSS Comments
 
 Just like HTML, use comments in CSS to leave notes, "comment out" code for later or for organization. Comments are written between a forward slash & asterisk and must close in the *opposite order*.
 
@@ -103,9 +103,9 @@ Just like HTML, use comments in CSS to leave notes, "comment out" code for later
     */
     
     
-##Basic CSS selectors
+## Basic CSS selectors
 
-###Type Selectors
+### Type Selectors
 
 Type selectors target HTML elements by their element tag name. For example, to target all paragraphs on the page, `p` would be used as the selector.
 
@@ -117,7 +117,7 @@ Type selectors target HTML elements by their element tag name. For example, to t
     }
 
 
-###Class Selectors
+### Class Selectors
 
 A `class` *attribute* can be added to any element but the value is defined by you.  The class value can then be used as a selector for *any* element that references the class attribute.
 
@@ -144,7 +144,7 @@ Classes can be used multiple times on the same page. In CSS, classes are denoted
 Note that the last example, `p.special`, does **not** have a space between the element selector and the class name.
 
 
-###ID Selectors
+### ID Selectors
 
 In addition to being used for in-page linking, `id` attributes can also be used for CSS.
 
@@ -156,7 +156,7 @@ In CSS, `id`s are denoted by a leading hash/number symbol (`#`).
       background: blue;
     }
 
-###Naming conventions
+### Naming conventions
 
 When choosing a `class` or `id` name, choose a descriptive, functional name and **do not use spaces**! Use hyphens `-`, underscores `_` or camel case to separate words.
 
@@ -171,11 +171,11 @@ It's important for organization (and for your own sanity as well) to pick one st
 There are many more selectors but the few outlined here will give you a good starting point. We'll be exploring more over the next few weeks. 
 
 
-##Referencing CSS
+## Referencing CSS
 
 There are three ways to reference (add) CSS to an HTML document.
 
-###Inline CSS
+### Inline CSS
 
 Can be included in any HTML element using the `style`
 *attribute*. 
@@ -192,7 +192,7 @@ attribute values. Multiple declarations can be contained in the value.
 
 > Let's try it out! Download the exercise file <a href="exercises/module1/reference-css.html" download>here</a>.
 
-###Internal CSS
+### Internal CSS
 
 Included in the `<head>` (not `<header>`) with a `<style>` *tag*.
 
@@ -218,7 +218,7 @@ Note that in XHTML, the `type` attribute was required.
 >
 >Be sure to remove the inline CSS or it will *override* the internal styles.
 
-###External
+### External
 
 This method links to a separate stylesheet file (uses a `.css` file extension) to separate the CSS from the HTML document. 
 
@@ -233,7 +233,7 @@ Remember, CSS files are often saved in a separate folder for organization, so ma
       <link rel="stylesheet" href="css/style.css">
     </head>
 
->##Class exercise
+>## Class exercise
 >Back in the text editor, create a new CSS file.  (**File > New File** or **ctrl/cmd + N**)
 >
 >Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc.
@@ -252,7 +252,7 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
 
 
 
-##CSS Colours
+## CSS Colours
 
 * **keywords** - use the actual name (e.g. `red`, `blue`, `papayaWhip`, `paleGoldenrod`, etc)
 * **RGB (red-green-blue)** - uses 3 numerical values between `0` (represents black) and `255` (represents white)
@@ -267,7 +267,7 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
     }
 
 
-####Colour resources:  
+#### Colour resources:  
   
 * [http://coolors.co](http://coolors.co)
 * [http://colours.neilorangepeel.com](http://colours.neilorangepeel.com)
@@ -278,7 +278,7 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
 * [http://color.hailpixel.com](http://color.hailpixel.com)
 
 
-##Cascading
+## Cascading
 
 CSS executes from top to bottom (hence "cascading") so the order of your CSS declarations matter. The declaration that comes after overrides the one that came before.
 
@@ -296,7 +296,7 @@ It's a common error to declare the same selector/property combo as your CSS file
 *Pro tip!*  
 Often, projects will use more than one CSS file. The ordering of CSS also applies the order of the referenced CSS files in the `<head>` of the HTML document.  
 
-##Inheritance and Specificity
+## Inheritance and Specificity
 One of the strengths of CSS is the styles can be inherited from parent elements to child/descendant elements. Remember the family tree relationship?  This family tree-like structure is often referred to as the **DOM** (Document Object Model). 
 
 Read more about the DOM [here](https://css-tricks.com/dom/).
@@ -321,7 +321,7 @@ Read more about the DOM [here](https://css-tricks.com/dom/).
 
 In the above example, all descendants of `<body>` will inherit the styles.  However, when a more *specific* selector is used (like `h1`), it overrides the inherited values.
 
-> ##EXERCISE: CSS Selectors
+> ## EXERCISE: CSS Selectors
 > Practice using the different types of selectors. In your newly created **styles.css** file:
 > 
 >1. change the text colour of all elements on the page
@@ -336,7 +336,7 @@ Add the same `class` from step 3 to a link (anchor tag). Because links already h
 If you want even more practice with selectors, try this game: <http://flukeout.github.io/>
 
 
-##Workflow Tips & Tools
+## Workflow Tips & Tools
 * Use a service like [Dropbox](https://db.tt/eCZX3yo) or [Google Drive](https://www.google.ca/drive/) to sync and save your work in the cloud.
 * Use a USB drive to save your work.
 * Use some kind of bookmarking service to store all your resources in one place. (You'll have many!) Here's a few to try out:

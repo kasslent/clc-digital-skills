@@ -13,7 +13,7 @@ Welcome to Ladies Learning Code's Digital Skills Program!
 Below are some tips and tricks to get you up and running and help with your work flow.
 
 
-##Web Browsers & Developer Tools
+## Web Browsers & Developer Tools
 
 Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
 
@@ -36,12 +36,12 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 > HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
 
 
-###Extra resources
+### Extra resources
   
 * [browsehappy.com](http://browsehappy.com) - more info about modern browsers. 
 * [http://discover-devtools.codeschool.com](http://discover-devtools.codeschool.com) - more about dev tools
 
-##Text Editors
+## Text Editors
 
 * Text editors are used to write and edit code.
 * Basic text editors come pre-installed on your computers &mdash; Notepad (Windows) or TextEdit (Apple) but don't have very many features.
@@ -51,25 +51,25 @@ Some great options to try out are [Notepad++](http://notepad-plus-plus.org/), [B
 
 In this course and in any examples, [Atom](https://atom.io/) will be referenced.
 
-##Get to know Atom
+## Get to know Atom
 
 Having a good text editor and learning how to use it to its full potential will help your work flow.  We'll be using [Atom](http://atom.io) during this program because it has some great integrated features and is totally free!
 
 Here are some feature to familiarize yourself with:
 
-###Columns
+### Columns
 
 * adds multiple column views, within the editor to allow for side by side editing
 * called "panes" in Atom  
   * `View > Panes > Split Up/Down/Left/Right`
 
 
-###Preferences
+### Preferences
 Under **Preferences**, there are many options for customizing your editor.
 
 ![atom preferences]({{ site.img }}/module0/atom-preferences.jpg)
 
-####Settings
+#### Settings
 
 The Settings include general options for personalizing your editor. 
 
@@ -77,7 +77,7 @@ The Settings include general options for personalizing your editor.
 
 A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
 
-####Packages
+#### Packages
 
 Packages are tool you can add to include even more features into your editor!
 
@@ -89,7 +89,7 @@ Packages are tool you can add to include even more features into your editor!
 
 Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) and [Emmet cheatsheet](http://docs.emmet.io/cheat-sheet/) to get up and running.
 
-###Extra resources
+### Extra resources
 * [Atom documenation](https://atom.io/docs)
 * [Atom Shortcuts cheat sheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
 * [Customizing Atom](https://atom.io/docs/v0.61.0/customizing-atom)
@@ -97,13 +97,13 @@ Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) a
 * [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
 
 
-##Folders & directories
+## Folders & directories
 Websites, at it's most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures. 
 
 You will need to create/move/add/edit/delete a lot of folders and files so get in some practice to prepare you for the remainder of this course.
 
 
-##Keyboard shortcuts
+## Keyboard shortcuts
 
 Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. (Or bring an external mouse!) Here are some recommended & commonly used shortcuts to get to know!
 
@@ -114,7 +114,7 @@ Some other useful general computer tricks:
 * right-clicking or a two-finger tap in most apps often reveals more options
 * use the space bar & keyboard arrows to scroll
 
-> ##EXERCISE: Workflow practice
+> ## EXERCISE: Workflow practice
 >
 > Download and unzip (extra all if you're on a PC) [this exercise file](exercises/module0/workflow.zip) and practice some workflow exercises.  Here are some to try:
 >
@@ -129,7 +129,7 @@ Some other useful general computer tricks:
 Finding a workflow that allows you to be organized and efficient lets you focus on learning to code rather than looking for files!
 
 
-##Using Slack 
+## Using Slack 
 Slack can be used in the browser but there are also desktop and mobile apps. Download them [here](https://slack.com/apps).
 
 Some things to explore:

@@ -17,7 +17,7 @@ In 1994, he founded the [World Wide Web Consortium](http://www.w3.org/)
 specifications, guidelines, tools and recommendations.
 
 
-##Websites, web apps, native apps
+## Websites, web apps, native apps
 
 **Websites** are generally informational (e.g. http://ladieslearningcode.com) and run in a web browser. They can (and should be) mobile friendly.
 
@@ -26,7 +26,7 @@ specifications, guidelines, tools and recommendations.
 **Native apps (applications)** must be downloaded to your computer or device and cannot be accessed in a web browser. They are also specific to your operating system (e.g. Android, IOS).
 
 
-###Front-end languages
+### Front-end languages
 
 * generally refers to HTML, CSS and JavaScript
 * can also be referred to as "client-side" 
@@ -42,7 +42,7 @@ These three languages work together but perform different functions.
 > Go to any website and right-click or two-finger tap anywhere on the page. Select **View Page Source**.  That's HTML, CSS and JavaScript!
 
 
-###Back-end languages
+### Back-end languages
 
 * usually consists of a server, an application, and a database
 * powers the website and makes it available on the web
@@ -55,7 +55,7 @@ For example, dynamic sites, like Facebook and Twitter, have content that is cons
 Some examples of back-end programming languages are PHP, Ruby, Java (totally different from JavaScript!) and Python.
 
 
-###Native apps programming languages
+### Native apps programming languages
 
 * specific to the device or operating system   
 * e.g. Photoshop for computers, Instagram app for phones 
@@ -68,15 +68,15 @@ Native apps are built in the specific programming language of the device/operati
 >What are some examples of websites, web apps and native apps?
 
 
-##Intro to HTML
+## Intro to HTML
 
-###Creating HTML pages
+### Creating HTML pages
 
 To create an HTML page, name your file using an `.html` extension. That's it!
 
 Just like .pdf is used for PDF files or .doc for Word files, using this extension will signal to the computer that this is a file that should run in a web browser.
 
-###Best practices for naming web files
+### Best practices for naming web files
 
 * Use lowercase letters.
     * **about.html** instead of **About.html** or **ABOUT.html**
@@ -91,7 +91,7 @@ Just like .pdf is used for PDF files or .doc for Word files, using this extensio
 *Pro tip!*  
 These naming tips also apply to other files such as folders, images, CSS files, etc.
 
-###HTML vs XHTML vs HTML5
+### HTML vs XHTML vs HTML5
 
 These terms refer to different versions of the
 same language. With each new version, new features and rules are added while other features become obsolete.
@@ -113,7 +113,7 @@ HTML tags describe the meaning of the content to the web browser.  This is refer
     <h1>This tag describes a heading</h1>
     <p>This tag is used for paragraphs.</p>
 
-###Nesting tags
+### Nesting tags
 
 Tags can be *nested* within other tags like this:
 
@@ -127,7 +127,7 @@ When nesting tags, they must always close in the *reverse order*. Failing to do 
 >
     <p>Paragraph with <strong>strong text.</p></strong>
 
-####Organizing your code
+#### Organizing your code
 
 Writing the HTML all in one line will work, but will make it more difficult to read (the browser doesn't care).
 
@@ -153,7 +153,7 @@ Below are the base HTML tags that should be included in **all** HTML documents.
 Getting into this habit from the start will help keep the code organized, easier to read, easier to find errors and look more professional.
 
 
-###Attributes & HTML Comments
+### Attributes & HTML Comments
 
 **Attributes** provide additional information or instruction for the element and is included *inside the opening HTML tag* in the form of `attribute="value"`. 
 
@@ -175,9 +175,9 @@ The syntax for comments start with `<!--` and ends with `-->`.
     <!-- Comments should ALWAYS be included between the dashes. -->
     
 
-##The HTML Document
+## The HTML Document
 
-###Doctype
+### Doctype
   
 * must be the first item
 * not an HTML tag
@@ -206,7 +206,7 @@ The above is the HTML5 doctype. The previous version, XHTML, looked like this:
 The W3C provides a free service to check if your markup is valid: [http://validator.w3.org/](http://validator.w3.org/)
 
 
-###The `html` element
+### The `html` element
 
 * always the first HTML tag
 * root element, all other elements are nested inside
@@ -225,7 +225,7 @@ The W3C provides a free service to check if your markup is valid: [http://valida
 <strong>&lt;/html&gt;</strong>
 </code></pre>
 
-###The `head` element
+### The `head` element
 
 * includes information about the page but does not display content
 * `<title></title>` is the only required tag inside of this element
@@ -247,7 +247,7 @@ The W3C provides a free service to check if your markup is valid: [http://valida
 </code></pre>
 
 
-###The `body` element
+### The `body` element
 
 All content to be displayed in the browser window goes between the `<body></body>` tags.  Also known as the *viewport*.
 
@@ -263,7 +263,7 @@ All content to be displayed in the browser window goes between the `<body></body
 &lt;/html&gt;
 </code></pre>
 
->##EXERCISE: Setting up a project
+>## EXERCISE: Setting up a project
 > Remember to apply the file naming best practices!
 >
 > 1. Create a project folder
@@ -282,7 +282,7 @@ Save and organize all your projects in a common area.  For example, have a folde
       --- ladieslearningcode
       --- client-name
 
-##HTML Page Structures
+## HTML Page Structures
 
 An important part of creating a web page is planning the page structure. Though you will likely make changes as you go along, creating a basic layout with semantic markup is a good way to start.
 
@@ -347,7 +347,7 @@ However, `<div>` can and is still often used, when no other HTML tag properly de
 *Pro tip!*  
 When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structural tags for content it was not intended for.
 
-####Extra Resources
+#### Extra Resources
 
 * [html5doctor.com](http://html5doctor.com)
 * [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf).
@@ -355,18 +355,18 @@ When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structur
 >Look at a couple different websites and discuss how the page can be grouped into related components to display the content in a meaningful & semantic way. (e.g. Where is the nav? Is there a footer?)
 
 
-##HTML Content Tags
+## HTML Content Tags
 
 There are also many different HTML tags for displaying different types of content.  Here are some common tags.
 
-###Paragraphs
+### Paragraphs
 Whether it's one sentence or more, each paragraph needs its own set of `<p></p>` tags.
 
     <p>This is a paragraph.</p>
     <p>This is another paragraph. More than one sentence.</p>
 
 
-###Headings
+### Headings
 
 There are six headings tags (different from the `<head>` tag) ranging from `<h1>` to `<h6>`. The different levels are used to describe the *hierarchy* of the page structure. 
 
@@ -428,14 +428,14 @@ Let's look at how this hierarchy could be described using HTML and HTML5.
     </section>
 
 
-####Extra resources
+#### Extra resources
 
 Read more about headings and HTML5 [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) and [here](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
 
 
-###Lists 
+### Lists 
 
-####Ordered Lists
+#### Ordered Lists
 
 Ordered lists are used to list items in a specific order. Two elements are required, an ordered list tag, `ol` and a list item tag, `li`.
 
@@ -448,7 +448,7 @@ Ordered lists are used to list items in a specific order. Two elements are requi
     </ol>
 
 
-####Unordered Lists
+#### Unordered Lists
 
 Use unordered lists for list items that do not need to be order sequentially. The syntax is the same as ordered list but use the unordered list tag, `<ul>` instead.
 
@@ -458,7 +458,7 @@ Use unordered lists for list items that do not need to be order sequentially. Th
       <li>Contact Me</li>
     </ul>
 
-###Nesting Lists
+### Nesting Lists
 Lists can go inside of another list and must be nested inside of a list item element.
 Ordered & unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.
 
@@ -477,14 +477,14 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
 
 
 
->##EXERCISE: Adding Content, part 1
+>## EXERCISE: Adding Content, part 1
 >In your **index.html** file, practice writing HTML and get used to the syntax.  
 >Add some headings, paragraphs and lists.
 >
 >Make sure to open & close the tags properly, use indentation to organize your code and buidl good habits!
 
 
-##Italics, Bold & Semantics
+## Italics, Bold & Semantics
 
 * `<em>` represents stress emphasis, i.e., something you would pronounce differently  
 * `<strong>` represents strong importance  
@@ -492,10 +492,10 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
 * `<b>` stands for “stylistically offset” text, such as keywords
 
 
-####Older versions of HTML
+#### Older versions of HTML
 When XHTML was the latest version, `<b>` and `<i>` were *deprecated* since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.
 
-####HTML5 - new rules
+#### HTML5 - new rules
 In HTML5, the `<b>` and `<i>` tags were re-introduced but with a slightly different meaning, though `<em>` or `<strong>` is more commonly used.
 
 Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags. 
@@ -504,7 +504,7 @@ Because these tags are most often used for small chunks of inline text, they are
 
 Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-element/).
 
-###sub, sup
+### sub, sup
 
 `<sub>` and `<sup>` represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation's sake. 
 
@@ -513,7 +513,7 @@ Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-elemen
 <p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
 
 
-##Self-closing tags
+## Self-closing tags
 
 Self-closing tags don't format content. Instead they are used to embed objects onto the page; they *are* the content. Because of this, they do not require a closing tag.
 
@@ -540,7 +540,7 @@ Prior to HTML5, self-closing tags had to include a forward slash like this:
 
 Though this is still valid in HTML5, it is **no longer needed** but you may still see it in use.
 
-##Images
+## Images
 
 Images are another example of a self-closing tag. Images also **require** an attribute to provide additional info. 
 
@@ -552,7 +552,7 @@ The `alt` attribute provides *alternative text* for visually impaired users, usi
 
     <img src="folder/filename.jpg" alt="short description of image">
 
-###Image file types
+### Image file types
 
 There are many different file types used for web. Use the format that maintains the best quality while reducing the file size.
 
@@ -565,7 +565,7 @@ There are many different file types used for web. Use the format that maintains 
   * more about SVG [here](http://css-tricks.com/using-svg/)
 
 
-####Extra resource
+#### Extra resource
 
 If your file extensions do not show by default, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
 
@@ -574,13 +574,13 @@ Though images can be found all over the internet, use your own images or royalty
  
 There are many paid options ranging in price but there are also many resources for free stock photography.
  
-####Image resources
+#### Image resources
 
 * [https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
 *  [http://blog.hubspot.com/marketing/free-stock-photos](http://blog.hubspot.com/marketing/free-stock-photos)
 
 
->##EXERCISE: Adding Content, Part 2
+>## EXERCISE: Adding Content, Part 2
 >
 >Back in **index.html**, add some content using the appropriate headings and paragraphs. This time, try to write the HTML with the page structure in mind. Here are some elements that could be added:
 >
@@ -604,17 +604,17 @@ While not required, it's best practice to put image files into its own folder (a
 
 Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` (hypertext reference) attribute to provide information about the the link.
 
-###Link to an external site
+### Link to an external site
 
     <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
 
 
-###Link to an HTML page
+### Link to an HTML page
 
     <a href="page-name.html">Another page</a>
 
 
-###Link to a specific spot on a page
+### Link to a specific spot on a page
 
 Add an `id` *attribute* to the tag where you would like the link to go *to*. In the `href` *attribute* value, use the `#` symbol followed by the id name, with **no spaces**.
 
@@ -638,14 +638,14 @@ It can be used in any order and in any HTML tag.  The `id` and `href` values hav
     
     <a href="#top">Back to top</a>
 
-###Link to a specific spot on another page
+### Link to a specific spot on another page
 
 When you use a link to navigate to an `id` value, it adds that value to end of the URL.  You can now use that url to navigate to a specific spot on *another* page.
 
     <a href="faq.html#question1">Click this link to navigate to question 1 on the FAQ page.</a>
 
 
-###Open link in a new window or tab
+### Open link in a new window or tab
 
 Add a second attribute, `target="_blank"` to make the link open in a new window or tab. Whether it opens in a new window or tab is based on the users' settings.
 
@@ -654,11 +654,11 @@ When using more than one attribute, order does not matter but make sure to inclu
     <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
 
 
-###Email link
+### Email link
 
     <a href="mailto:hello@myemail.com">hello@myemail.com</a>
 
-###Image as a link
+### Image as a link
 
 Instead of text, simply wrap the anchor tag around the image. 
 
@@ -672,12 +672,12 @@ When using an image or an icon, in addition to using the `alt` attribute, you ca
 
 <br>
 
-####Extra resource
+#### Extra resource
 
 More about `alt`, `title` and SEO (search engine optimization) [here](http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/).
 
 
-##Folder Structure, Relative & Absolute Paths
+## Folder Structure, Relative & Absolute Paths
 
 A website is basically a variety of files linked together.
 Understanding the folder structure & using proper file
@@ -700,7 +700,7 @@ ladieslearningcode
   |-- contact.html
 </pre>
 
-###Relative Path
+### Relative Path
 
 Points to files located in the project files (not an external source like http://website.com). The file that you are editing is the *starting point*. Navigate to the desired directory from there.
 
@@ -713,7 +713,7 @@ The `src` value for an image in the **images** folder would be:
     <img src="images/logo.png">
 
 
-###Absolute Path
+### Absolute Path
 
 Uses the exact address including domain, subdirectories and filename. Use this option when linking to an external or *hosted* source.
 
@@ -724,7 +724,7 @@ Only link to web pages, not specific files such as images (unless it points to y
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
     
->##EXERCISE: Adding Content, Part 3
+>## EXERCISE: Adding Content, Part 3
 > Here are some suggestions to practice the concepts covered.
 >
 >1. create an additional HTML page
