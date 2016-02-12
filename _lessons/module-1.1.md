@@ -266,10 +266,10 @@ All content to be displayed in the browser window goes between the `<body></body
 >## EXERCISE: Setting up a project
 > Remember to apply the file naming best practices!
 >
-> 1. Create a project folder
-1. Open the project folder in your text editor
+> 1. Create a project folder.
+1. Open the project folder in your text editor.
 1. Open a new file and add in the basic HTML tags.
-1. Save file as **index.html**
+1. Save file as **index.html**.
 1. Open **index.html** in the browser. You won't see anything in the browser just yet! There's no content, just the HTML page structure.
 1. Add a relevant page title to the `<title><title>` tag. 
 1. Save & refresh the browser. Where do you see it?
@@ -459,9 +459,9 @@ Use unordered lists for list items that do not need to be order sequentially. Th
     </ul>
 
 ### Nesting Lists
-Lists can go inside of another list and must be nested inside of a list item element.
-Ordered & unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.
+Lists can go inside of another list and must be nested inside of a list item `<li>`.
 
+Ordered & unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.
 
     <ul>
       <li>Home</li>
@@ -481,7 +481,7 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
 >In your **index.html** file, practice writing HTML and get used to the syntax.  
 >Add some headings, paragraphs and lists.
 >
->Make sure to open & close the tags properly, use indentation to organize your code and buidl good habits!
+>Make sure to open & close the tags properly, use indentation to organize your code and build good habits!
 
 
 ## Italics, Bold & Semantics

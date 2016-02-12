@@ -235,12 +235,26 @@ code {
     }
   }
 }
+
+code {
+  font-size: $font-size-m;
+  
+  @-moz-document url-prefix() {
+    font-size: $font-size-base;
+  }
+  
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 & {
+    font-size: inherit;
+  }
+}
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: $font-size-l;
   
-  @-moz-document url-prefix() {
+  code {
     font-size: $font-size-base;
   }
 }

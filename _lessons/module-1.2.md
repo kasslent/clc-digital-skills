@@ -51,14 +51,14 @@ CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colo
 
 **Declarations** are style rules written with `property:value` pairs. They must end with a semi-colon (`;`) to indicate that the instruction is complete. 
   
-A **Declaration block** holds all the declarations within curly brackets `{ }` for a specific selector.  
+A **declaration block** holds all the declarations within curly brackets `{ }` for a specific selector.  
 
     selector {
       property: value;
     }
 
-**Properties** determine the type of style to be applied (e.g. color).    
-**Values** are specific to the property (red). 
+**Properties** determine the type of style to be applied.    
+**Values** are specific to the property. 
 
     p {
       color: red;
@@ -107,7 +107,7 @@ Just like HTML, use comments in CSS to leave notes, "comment out" code for later
 
 ### Type Selectors
 
-Type selectors target HTML elements by their element tag name. For example, to target all paragraphs on the page, `p` would be used as the selector.
+Type selectors target HTML elements by their element tag name. 
 
     p {
       /* targets all paragraphs */
@@ -346,4 +346,5 @@ If you want even more practice with selectors, try this game: <http://flukeout.g
 * [Pixlr](https://pixlr.com/) is a free image editing tool.  This will coming handy for cropping and manipulating image files.
 
 
+<br>
 ~ End ~

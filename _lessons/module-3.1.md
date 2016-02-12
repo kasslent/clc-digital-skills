@@ -165,7 +165,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
 
 
-Block level HTML elements default behaviour:
+Block level HTML elements default behavior:
 
 * takes up 100% width of its container, no matter how long the actual content is
 * will be the same height as its content
@@ -174,7 +174,7 @@ Block level HTML elements default behaviour:
 * can apply sizing related CSS to it (margin, padding, height, width)
 * examples: `<p>`, `<div>`, `<ul>`
 
-Inline level HTML elements default behaviour:
+Inline level HTML elements default behavior:
 
 * will be the height and width of its content
 * always appears "in a line" with other inline level elements

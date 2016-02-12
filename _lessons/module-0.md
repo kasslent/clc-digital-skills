@@ -55,7 +55,7 @@ In this course and in any examples, [Atom](https://atom.io/) will be referenced.
 
 Having a good text editor and learning how to use it to its full potential will help your work flow.  We'll be using [Atom](http://atom.io) during this program because it has some great integrated features and is totally free!
 
-Here are some feature to familiarize yourself with:
+Here are some features to familiarize yourself with:
 
 ### Columns
 
@@ -79,7 +79,7 @@ A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exce
 
 #### Packages
 
-Packages are tool you can add to include even more features into your editor!
+Packages are tools that can be added to include even more features!
 
 ![atom install packages]({{ site.img }}/module0/atom-install-packages.jpg)
 
@@ -98,16 +98,16 @@ Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) a
 
 
 ## Folders & directories
-Websites, at it's most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures. 
+Websites at its most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures. 
 
 You will need to create/move/add/edit/delete a lot of folders and files so get in some practice to prepare you for the remainder of this course.
 
 
 ## Keyboard shortcuts
 
-Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. (Or bring an external mouse!) Here are some recommended & commonly used shortcuts to get to know!
+Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. (Or bring an external mouse!) 
 
-View printable cheatsheet [here]({{ site.baseurl }}/assets/keyboard-shortcuts.pdf).
+View the printable cheatsheet [here]({{ site.baseurl }}/assets/keyboard-shortcuts.pdf) to reference some commonly used shortcuts.
 
 Some other useful general computer tricks:
 
@@ -116,7 +116,7 @@ Some other useful general computer tricks:
 
 > ## EXERCISE: Workflow practice
 >
-> Download and unzip (extra all if you're on a PC) [this exercise file](exercises/module0/workflow.zip) and practice some workflow exercises.  Here are some to try:
+> Download [this exercise file](exercises/module0/workflow.zip) and unzip it (extract all if you're on a PC). Practice some workflow exercises.  Here are some to try:
 >
 > 1. Move the folder out of your Downloads folder and put it on your Desktop or your directory of choice.  Working on files in the default downloads folder will make it harder to stay organized.
 > 1. Open the entire exercise folder in the text editor.

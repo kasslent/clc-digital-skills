@@ -47,7 +47,7 @@ There are also other measurement units used for print and new experimental units
 
 ## CSS & Typography
 
-### `font-size` & `line-height`
+### CSS `font-size` & `line-height`
 
 The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.  
 
@@ -68,7 +68,7 @@ For `line-height`, this property actually does *not* require the use of measurem
       line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
     }
 
-### `text-shadow`
+### CSS `text-shadow`
 
 Use this property to apply a shadow to your text.
 
@@ -105,7 +105,7 @@ Subtle effects work best.
 <p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
-### `color`
+### CSS `color`
 
 To change the colour of the text, use the `color` property. 
 
