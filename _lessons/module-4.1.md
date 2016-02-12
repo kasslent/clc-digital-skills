@@ -2,24 +2,11 @@
 layout: lessons
 module: 4
 lesson: 1
-title: Forms & Data Manipulation with Sheets
+title: HTML Forms & Google Sheets
+description: Intro to HTML forms & data manipulation with Google Sheets
 permalink: module4-1.html
 ---
 
-
-<!-- 
-##Intro to form design
-
-When design a form, there are many things to consider such as:
-
-* space, padding and layout
-* icons and typography
-* simplicity & ease of use
-* displaying validation error
-* form steps and progress
-* primary and secondary buttons
-
-With these considerations in mind, let's look at some of the rules listed in this article, [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/). -->
 
 ##Intro to HTML Forms
 
@@ -166,9 +153,11 @@ What day is it today?<br>
 <br>
 In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.
 
-Also, the form related HTML only create the form in the browser.  To actually submit the information and process the data, a server side language is required.  
+###Processing a Form
 
-Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms]() to handle not only building the HTML & CSS of the form but also the form processing as well.
+The form related HTML only create the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
+
+Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle not only building the HTML & CSS of the form but also the form processing as well.
 
 #### Extra Resources
 * [sitepoint: form elements](http://www.sitepoint.com/web-foundations/form-elements/)
@@ -179,7 +168,7 @@ Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com
 
 ##Google Forms
 
-Use Google Forms to create your form and have all the repsonses sent to a handy spreadsheet.  Not only will this keep you from dealing with email responses, you can use the power of Sheets to manipulate & sort the data!
+Use Google Forms to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with email responses, you can use the power of Sheets to manipulate & sort the data!
 
 
 1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
@@ -240,7 +229,8 @@ View the presentation for this module [here](  https://docs.google.com/presentat
 >##EXERCISE: Forms responses & Excel
 >View the form [here](https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#) for today's exercise.
 >
->View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  Be sure to made a **copy** of this file into *your* Google Drive to make your own changes.
+>View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  
+>**Important!** Be sure to **make a copy** of this file into *your* Google Drive to make your own changes.
 
 
 ~ End ~

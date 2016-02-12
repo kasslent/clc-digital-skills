@@ -2,12 +2,12 @@
 layout: lessons
 module: 4
 lesson: 2
-title: SEO - Search Engine Optimization
+title: Search Engine Optimization
+description: 
 permalink: module4-2.html
 class: module4-2
 ---
 
-#Introduction to SEO
 
 SEO (Search Engine Optimization) is a different story for different kinds of websites!
 

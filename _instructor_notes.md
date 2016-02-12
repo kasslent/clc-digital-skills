@@ -69,9 +69,22 @@ Introduces some design theory but will also incorporate those theories into how 
 **Bring some paper & pens/pencils so students can sketch out a wireframe.  Graph paper would be ideal but not required.**
 
 ### Module 3
-Lesson 2 includes a class code-along to solidify the process of creating a web site from creating folders to updating CSS.  Some HTML is provided and a sample project is provided to save time and give direction.  Some students may feel frustrated with the file management (downloading, moving, renaming, etc) but reassure them and remind them that this is part of the process.
+
+#### Lesson 2 
+Includes a class code-along to solidify the process of creating a web site from creating folders to updating CSS.  Some HTML is provided and a sample project is provided to save time and give direction.  Some students may feel frustrated with the file management (downloading, moving, renaming, etc) but reassure them and remind them that this is part of the process.
 
 The lesson notes has step by step instructions for the code-along. It's a very basic site, not too fancy but should hopefully help solidify the process for the students. You can follow it exactly or just use it as a guide.  Share your completed copy after the lesson so students can use it as a reference.
 
+Remind students to create a Google account to be able to complete the exercises in the next module.
 
+### Module 4
+
+#### Lesson 1
+
+Check at the beginning of the class that people have a Google account to give them time to set up before the lesson starts.
+
+The Google form used in the class exercise links to one form.  Get the class to fill out the form to get some data.  There may already be some data in the responses from previous sessions. Either use the exiting data, clear it or create your own form.
+
+#### Lesson 2
+Expect and encourage a more discussion based lesson for SEO.
 
