@@ -8,11 +8,9 @@ permalink: module3-4.html
 ---
 
 
-#Fluid & Flexible Web Pages
+Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s review some best practices and tips.
 
-Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s review some best practices and tips for creating maintainable code.
-
-##Fluid images
+##Fluid images and components
 
 Use percentages to create flexible images.
 
@@ -25,17 +23,27 @@ Use percentages to create flexible images.
       max-width: 100%;
     }
 
-[See example here]({{site.exercises}}/module3/fluid-images/index.html).
+[See example here](exercises/module3/sample/fluid-images.html).
+
+<br>
+
+This can also apply to page components.
+
+    .wrapper {
+      max-width: 800px;
+      width: 80%;
+      margin: 0 auto;
+    }
 
 ##Background images
 
 So far we've used `background` for colours but it can also be used for setting background *images*.
 
     /* longhand */
-    background-image: url(path/to/file.jpg); 
+    background-image: url(folder/file.jpg); 
 
     /* shorthand */
-    background: url(path/to/file.jpg); 
+    background: url(folder/file.jpg); 
 
 
 ###Files Paths & Folder Directories
@@ -122,7 +130,7 @@ To include it in the shorthand `background` property, it **must** be included af
 
 >##EXERCISE: images & background images
 >
->Download <a href="{{site.exercises}}/module3/week3-lesson2.zip" download>today's exercise files</a> (zip) and open <strong>fluid-images.html</strong> in the text editor.
+>Download the exercise files <a href="exercises/module3/fluid-images.html" download>fluid-images.html</a> and in the text editor.
 >Uncomment each property, change some values and see what happens!
 
 ####Extra Resources
@@ -145,6 +153,35 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version. 
 
 While responsive web design has become a popular standard, a separate mobile site may still be the best option for content heavy sites that require more simplicity for mobile or a layout for mobile users that goes beyond shifting and scaling content.
+
+
+###Different types of web design
+
+In order to understand responsive web design and web development better, we have to understand what the options are:
+
+* Fixed/Static
+* Fluid/Liquid
+* Adaptive 
+* Responsive
+
+> Let's take a look at and discuss this example: <http://www.liquidapsive.com/>
+>
+> Make your browser window bigger and smaller. How do the different designs styles change?
+
+###Mobile-first design
+
+When responsive design was introduced, it was common to start with a desktop design, then make the design responsive for smaller screens.
+
+This has changed with smartphones and tablets, giving rise to another approach, mobile first design:
+
+* design an experience for mobile devices first, then desktop
+* make mobile integral, not an afterthought
+* graceful degradation and progressive enhancement
+
+###Resources
+
+* The [article](http://alistapart.com/article/responsive-web-design) that started the Responsive Design movement.
+* [Mobile First Design: Why It’s Great and Why It Sucks](https://codemyviews.com/blog/mobilefirst)
 
 
 ##Viewport Meta Tag
@@ -236,7 +273,7 @@ These are just general guidelines. There are no hard and fast rules. Depending o
 
 >##EXERCISE: Basic Media queries
 >
->In the exercise folder, open **media-queries.html** in your editor.  
+> Download <a href="exercises/module3/media-queries.html" download>media-queries.html</a> and open it in your editor.  
 >
 > In the `<head>` section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 > Change the background color and test it to make sure it works!
@@ -275,7 +312,9 @@ There are also many many other tools, [free](http://lab.maltewassermann.com/view
 
 
 >##EXERCISE: Responsive Web page
->
->Let's go back to the webpage contained in the **project** folder in today's exercise files and make the Portfolio section fluid and responsive.
->
->**Bonus!** Resize the browser to different sizes and see what else you could change!
+> Download the responsive exercise [here](exercises/module3/responsive.zip) (zip file). This also includes the solutions file. 
+> 
+> Follow the instructions in the comments in the `<head>` of **responsive.html** to make the 3 columns fluid and responsive.
+
+
+~ End ~
