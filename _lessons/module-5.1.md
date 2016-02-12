@@ -11,7 +11,7 @@ class: module5-1
 
 ## JavaScript vs jQuery
 
-###What is JavaScript?
+### What is JavaScript?
 JavaScript controls the **behavior** of your web page. It allows you to do things such as animate items, hide or show items, react to user input and even process data. Basically, if you need the user to do "something" first (i.e. scroll) to show a specific effect or even content, you'll most likely need JavaScript.
 
 
@@ -26,16 +26,16 @@ Here's what JavaScript looks like:
 Unlike HTML & CSS, JavaScript is a *programming* language, so the structure and syntax is more complex. JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops**, which are the basic building blocks for many different programming languages.
  
 
-###What is jQuery?
+### What is jQuery?
 
 jQuery *is* JavaScript.  
 jQuery is a cross-browser JavaScript *library* used to simplify your program. 
 
-####JavaScript example
+#### JavaScript example
 
     document.getElementById("status")
 
-####jQuery example
+#### jQuery example
 
     $("#status")
 
@@ -44,7 +44,7 @@ Though it has its own syntax, it is still JavaScript at its core. Because of thi
 Let's go through some high level JavaScript basics.  Some of these concepts may feel abstract but try to take note of the syntax. This will help to recognize the syntax patterns when using jQuery.
 
 
-##The Console
+## The Console
 
 The console is a browser tool used to interact directly with a web page and is useful for testing small snippets of code or for debugging errors.  You can type commands and test code directly in the console as well.
 
@@ -58,9 +58,9 @@ Note the `>` symbol. It is used by the console to represent a space for you to e
 * keyboard shortcut: **CMD + OPTION + J**  (MAC) / **CTRL + SHIFT + J** (WINDOWS)
 * from the menu: **View > Developer > JavaScript Console**
 
-##Intro to JavaScript
+## Intro to JavaScript
 
-###Types: Numbers
+### Types: Numbers
 
 JavaScript values can be one of several different data *types*. The most basic is a number. JavaScript can also do math. 
 
@@ -79,7 +79,7 @@ The `<` symbol is used by the console to represent the returned value of your in
 > What do you think numbers and math can be used for in a website?
 
 
-###Types: Strings
+### Types: Strings
 
 When you store any amount of text, like words or sentences, the *type* is a **string** value and must be contained in quotes.
 
@@ -88,11 +88,11 @@ When you store any amount of text, like words or sentences, the *type* is a **st
 
 > When do you think a string can be used with JavaScript?
 
-####Extra Resource 
-
+#### Extra Resource 
+ 
 There are more data types. View here: [Microsoft Developer Network Data Types (JavaScript)](https://msdn.microsoft.com/library/7wkd9z69%28v=vs.94%29.aspx).
 
-###Comments 
+### Comments 
 
 There are two ways to write comments.
 
@@ -106,7 +106,7 @@ There are two ways to write comments.
     CSS comments! 
     */
     
-###Intro to Functions
+### Intro to Functions
 
 JavaScript generally executes one line at a time from top to bottom. 
 
@@ -121,7 +121,7 @@ Also, commands end with a semi-colon `;` to indicate that the instruction is com
 
 >Go back to the console and type in `alert();`, and see what happens!
 
-###Functions and Arguments
+### Functions and Arguments
 
 <!-- We&#39;ve seen now that the `alert()` and `prompt()` functions create a pop-up in the browser.  But the pop-ups are blank.  *Pass* an `argument` into these functions by adding a value *within* the parentheses `()`.  -->
 We&#39;ve seen now that the `alert()` function creates a pop-up in the browser.  But the pop-up is blank.  *Pass* an `argument` into this function by adding a value *within* the parentheses `()`. 
@@ -139,7 +139,7 @@ We&#39;ve seen now that the `alert()` function creates a pop-up in the browser. 
 
 Whatever value you put within the parentheses will get *passed* into the function. That way, you can re-use the function with different arguments.
 
-###Make your own functions
+### Make your own functions
 
 To create your own functions, use the keyword `function` and give it a name.  See below for the syntax.
 
@@ -157,12 +157,12 @@ When you declare/create a function, it won't execute until you *call* it.
     // Call the function
     myGreeting();
 
-####Extra resources
+#### Extra resources
 
 * [MDN: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
 * [Tutorials Point](http://www.tutorialspoint.com/javascript/javascript_functions.htm)
 
-###Variables
+### Variables
 
 Variables are used to store values. It&#39;s like a box; put something in it to store and take it out when you&#39;re ready to use it.  
 
@@ -183,7 +183,7 @@ Declare variables with the keyword `var` and a name of your choosing and *assign
 
 >Try out the above example in the console.  What do you think the alert message will be?
 
-###Objects
+### Objects
 If variables are boxes, objects can be thought of as a box with multiple compartments, like a bento box!
 
 A basic variable only holds one value.
@@ -217,7 +217,7 @@ An object holds a *collection* of values. Each value is a **property** of the ob
 
 <hr class="clear">
 
-###(Almost) Everything in JS is an Object
+### (Almost) Everything in JS is an Object
 
 Variables can also be treated as an object.  *Dot notation* can be used to set the property value of an object but can also be used to get information from an object using functions.
 
@@ -234,12 +234,12 @@ You can even make the length command into a variable.
     var numOfCharacters = day.length;
     alert(numOfCharacters);
 
-####Extra resources:
+#### Extra resources:
 
 * [JavaScript values: not everything is an object ](http://www.2ality.com/2011/03/javascript-values-not-everything-is.html)
 * [The Secret Life of JavaScript Primitives](http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
 
-###Objects, Functions and Methods
+### Objects, Functions and Methods
 
 What&#39;s the difference between these two?  
 The second one kind of looks like a function right?
@@ -260,7 +260,7 @@ The second one kind of looks like a function right?
 >Try passing an argument into both `alert();` and `console.log();` in the console and see the difference.
 
 
-###Concatenation
+### Concatenation
 
 When you store any amount of text, like words or sentences, the *type* is a **string** value and must be contained in quotes.
 
@@ -272,7 +272,7 @@ You can join strings together using the `+` symbol. This is called **concatenati
     var greeting = "Hello " + name + "!";
     
     
-###Resources
+### Resources
 
 Here are some resources to dig deeper in to pure JavaScript.
 
@@ -282,7 +282,7 @@ Here are some resources to dig deeper in to pure JavaScript.
 * [Code School: JavaScript](https://www.codeschool.com/paths/javascript)
 
 
-##Functions & jQuery
+## Functions & jQuery
 
 A function is one of the most powerful tools in JavaScript and the one you're learning about today is:
 
@@ -298,9 +298,9 @@ In most cases, it's conventional to use the jQuery shortcut, `$`.
 
 This syntax will be used for the remainder of the lessons. 
 
-##Using jQuery
+## Using jQuery
 
-###How to select an HTML object/element 
+### How to select an HTML object/element 
 
 A common use for jQuery is selecting an HTML object and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
 
@@ -333,11 +333,11 @@ You can also chain them together to create multiple effects.
 
 > Let's try it out on CodePen: <http://codepen.io/learningcode/pen/pjQePw#0>
 
-##Adding JavaScript/jQuery to your files
+## Adding JavaScript/jQuery to your files
 
 There are two ways to add JavaScript to a page.
 
-###Inline
+### Inline
 Similar to internal CSS, add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
 
 However, it's often recommended to add the scripts to bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first. 
@@ -365,7 +365,7 @@ You might see the `type` attribute included as well. This was required before HT
     </script>
 
 
-####jQuery vs JavaScript
+#### jQuery vs JavaScript
 
 Including pure JavaScript into your web page only requires the code to be written between the `<script></script>` tags.
 
@@ -388,7 +388,7 @@ jQuery uses the `ready()` method to detect this state of readiness. This is a bi
 Read more about `$( document ).ready()` [here](http://learn.jquery.com/using-jquery-core/document-ready/).
       
       
-###External
+### External
 Again, just like CSS, you can also write JavaScript in a separate file.  To make it JavaScript file, name it using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
 
     <script src="folder/file.js"></script> 
@@ -396,12 +396,12 @@ Again, just like CSS, you can also write JavaScript in a separate file.  To make
 ---
     <script src="js/global.js"></script> 
 
-####jQuery vs JavaScript
+#### jQuery vs JavaScript
 In the external file, you do **not** need to add the `<script>` tags.
 
 But to write jQuery specific code, the `$( document ).ready()` is still required.
 
-##Referencing jQuery's library
+## Referencing jQuery's library
 
 Similar to Google Fonts or any third party tool, you have to reference the file to access all code required to make to make it work. 
 
@@ -427,7 +427,7 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
->##EXERCISE: Creating a project
+>## EXERCISE: Creating a project
 >
 >Practice creating a project with all three components: HTML, CSS, jQuery.
 >
@@ -440,13 +440,13 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 >**Bonus:**   
 >Try adding more HTML elements and practice selecting elements and applying jQuery effects to it. 
 
-####Resources
+#### Resources
 
 * [jQuery Selectors](http://api.jquery.com/category/selectors/)
 * [jQuery Effects](http://api.jquery.com/category/effects/)
 
 
-##jQuery Click Events
+## jQuery Click Events
 
 Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away.
 
@@ -454,15 +454,15 @@ Instead of the browser running the event right away, a click event is triggered 
 
 > When would this effect be useful?
 
-####Syntax
-
+#### Syntax
+ 
     $( "selector" ).click(function() {
       // code to be executed on click
     });
 
 Let's try this out in another [CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
 
-####Resource
+#### Resource
 
 <http://api.jquery.com/click/>
 

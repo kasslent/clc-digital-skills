@@ -8,7 +8,7 @@ permalink: module3-3.html
 ---
 
 
-##Display vs Floats
+## Display vs Floats
 
 In previous lessons, we talk about inline & block elements and how to use the `display` property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson's [Codepen](http://codepen.io/learningcode/pen/vNRadg) for a refresher.
 
@@ -20,11 +20,11 @@ It depends. This is widely debated among developers but both techniques come wit
 
 Let's take a look at using display vs floats for styling a horizontal navigation menu.
 
-##Horizontal Navigation
+## Horizontal Navigation
 
 Traditionally, navigation links were contained in a list like this:
 
-####Pre-HTML5
+#### Pre-HTML5
 
     <div class="nav">
       <ul>
@@ -36,7 +36,7 @@ Traditionally, navigation links were contained in a list like this:
     </div>
 
     
-####HTML5
+#### HTML5
 
     <nav>
       <ul>
@@ -100,7 +100,7 @@ Put some padding on the link, `a`, to make the links look less squished and impr
 > Use this [Codepen](http://codepen.io/learningcode/pen/meLJMZ) to explore these styles before moving on.
 
 
-###Getting to know your options
+### Getting to know your options
 If you put a background color on the list item, you'll see an extra space between the elements.  Here's the quirk!
 
     nav ul li {
@@ -125,7 +125,7 @@ But, float has it's own quirks too. What happened to the red background in the `
 
 Let's tackle the `display` example first.
 
-##Horizontal navigation: Display
+## Horizontal navigation: Display
 
 If your design does not require equal width "boxes" or you don't mind the space, visually, then leaving this as is would work just fine.  You can even add `text-align: center;` to automatically center align the list items containing the links.
 
@@ -157,7 +157,7 @@ You could be sneaky and set the width to something slightly less than 25% or use
 
 > Let's go back to the previous [Codepen](http://codepen.io/learningcode/pen/meLJMZ) and try this out.
 
-##Horizontal navigation: Float 
+## Horizontal navigation: Float 
 
 When you use float to align elements, there is no extra white space to worry about. But, remember, float has it's own quirks too.  The parent of the floated elements collapse, which can cause problems too. 
 
@@ -185,7 +185,7 @@ However, `text-align: center;` will only center align the text *within* the `<li
 >Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
 
 
->##EXERCISE: Horizontal navigation
+>## EXERCISE: Horizontal navigation
 >
 >In the exercise files downloaded earlier, in the **project** folder, you will find a basic webpage.  Using the existing HTML & CSS files, try styling the list navigation using the techniques discussed so far.
 >
@@ -195,43 +195,43 @@ However, `text-align: center;` will only center align the text *within* the `<li
 Remember, every HTML element is essentially just a "box" so the techniques discussed above are not limited to just navigations using a list.  
 
 
-##CSS Position property
+## CSS Position property
 The `position` property can also be used to lay out HTML elements and has five different values: `static`, `relative`, `absolute`, `fixed` and `inherit`.
 
 `position` is also used with a combination of box *offset properties*, `top`, `right`, `bottom` and `left`, to specify the direction and measurements for the positioned elements.
 
-###position: static;
+### position: static;
 
 * default value
 * elements are not positioned at all and in the normal page flow
 * offset properties are ignored
 
-###position: relative;
+### position: relative;
 
 * has the same behavior as `static` **but** box offset properties can be applied to it
 * use this to nudge the element within its stacked order
 
-###position: absolute;
+### position: absolute;
 
 * can be positioned anywhere, relative to its **nearest positioned ancestor** element
 * if no ancestor element is positioned, it will be relative to the body
 * to contain the element, use `position: relative` in a parent selector
 
-###position: fixed;
+### position: fixed;
 
 * positioned anywhere regardless of stacking order
 * not affected by any positioned ancestor element
 * always positioned to the body
 * stays in place when you scroll
 
-###position: inherit;
+### position: inherit;
 
 * takes the same value as its parent
 
 > Let's try these values in [CodePen](http://codepen.io/learningcode/pen/PPedPQ)
 
 
-###Extra resource
+### Extra resource
 
 [https://css-tricks.com/almanac/properties/p/position/](https://css-tricks.com/almanac/properties/p/position/)
 

@@ -11,7 +11,7 @@ permalink: module3-1.html
 In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let's do a review and look at a few more.
 
 
-##Type, class and id Selectors
+## Type, class and id Selectors
 
 **Type selectors** target HTML elements by their element tag name. 
 
@@ -43,7 +43,7 @@ Remember, any *attribute* is added to the opening HTML tag. The same class can b
       /* more specific - applies only to a section element with this id */
     }
 
-##Descendant Selectors
+## Descendant Selectors
 Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
 
     <parent>
@@ -78,10 +78,10 @@ You can even "skip" an element. The below example will work as well.
       color: blue;
     }
 
-###Descendant Selectors and Specificity
+### Descendant Selectors and Specificity
 A good rule of thumb for descendant selectors is to avoid going more than **three** levels deep.  Browsers read selectors from right to left and work its way up the [DOM](http://www.w3.org/TR/WD-DOM/introduction.html) tree.  Having many selectors can impact the site performance.
 
-####Yes
+#### Yes
     p a {
       /* targets anchor link tags nested inside of a p tag */
     }
@@ -89,7 +89,7 @@ A good rule of thumb for descendant selectors is to avoid going more than **thre
       /* targets paragraphs within an element with the .about class*/
     }
 
-####No!
+#### No!
     .about ul li a span {
       ...
     }
@@ -107,7 +107,7 @@ Also, a more *specific* selector will override the descendant selector, regardle
     }
 
 
-##Combining selectors
+## Combining selectors
 You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a *comma*. Any type of selector can be combined.
 
     .special, #special {
@@ -122,7 +122,7 @@ You can also combine selectors if you want the same style to be applied to multi
 
 > What is the difference is between combining `h1, h2` and `header h1, h2`?
 
-##Pseudo-class Selectors
+## Pseudo-class Selectors
 
 Pseudo-class selectors target an elements *state* or *action*. The most commonly used pseudo-class is `:hover`.  Note the syntax. It must start with a colon (`:`) and be attached to an HTML element, with no white-space.
 
@@ -136,7 +136,7 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
       color: black;
     }
 
-###Pseudo Class & links
+### Pseudo Class & links
 
 `:hover` - selects the link on mouse hover.  
 &nbsp; Can also be used to create hover effects for elements other than an `<a>`.
@@ -152,14 +152,14 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
 There are **many** more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.
 
 
->##EXERCISE: Selectors
+>## EXERCISE: Selectors
 >
 >Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
 >
 >All the instructions are contained in the comments at the very top of `selector.html`
 
 
-##Block vs Inline Elements
+## Block vs Inline Elements
 
 
 Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
@@ -190,7 +190,7 @@ Inline level HTML elements default behaviour:
 <span style="background:lightgreen;">this is a span</span>
 
 
-##CSS Display
+## CSS Display
 
 CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today: 
 
@@ -200,13 +200,13 @@ CSS can be used to change how inline and block elements display using the `displ
 
 This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
 
-###Resource 
+### Resource 
 
 [CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
 
 
 
-##Box Model Review
+## Box Model Review
 
 The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  Let's do a review and then dive a little deeper!
 
@@ -218,7 +218,7 @@ The last lesson introduced the Box Model and 5 CSS properties: width, height, pa
 * `padding` - add or remove default space inside the element
 * `border` -  add a border around the element
 
-###Seeing it all together
+### Seeing it all together
 
     width: 80%;
     margin: 50px auto;
@@ -230,11 +230,11 @@ The last lesson introduced the Box Model and 5 CSS properties: width, height, pa
 </div>
 
 
-###Width & Height
+### Width & Height
 
 The `width` & `height` properties can be used to set specific heights and widths to only *block* level elements.  It won't work for *inline* level elements unless you use `display` to change it to `block` or `inline-block`.
 
-###Padding
+### Padding
 
 The `padding` property adds/removes space *inside* of the element. It only accepts positive numerical values.
 
@@ -262,7 +262,7 @@ Notice that there's no space between the two element? Inline elements don't appl
 
 More on this in the upcoming exercise.
 
-###Margin
+### Margin
 Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. 
 
     /* longhand */
@@ -286,18 +286,18 @@ Just like padding, margin and spacing is not applied the same way to block and i
 <a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a>
 
 
-> ##Class Exercise: Box Model & `display`
+> ## Class Exercise: Box Model & `display`
 > In this [Codepen](http://codepen.io/learningcode/pen/vNRadg), let's try the different `display` property values and see how it affects inline & block HTML elements.
 
 
-##Margin & Negative values
+## Margin & Negative values
 
 Margin also accepts negative values.  This will nudge it just outside of its stacked position.
 
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
-##Center Aligning with `margin`
+## Center Aligning with `margin`
 The margin property can also be used to center align *block* level elements. 
 
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
@@ -329,7 +329,7 @@ But to create a style where different background styles apply to each section, w
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
 
-##The Box Model Problem and Fix
+## The Box Model Problem and Fix
 
 In CSS ,the relationship between the width, padding and border properties is not always straightforward.
 For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:
@@ -372,11 +372,11 @@ Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-b
 
 
 
-##Positioning Elements: Floats
+## Positioning Elements: Floats
 
 We saw earlier that we can use `display: inline-block` to get elements to line up side by side. We can also use another property, `float`, to align elements using the `left` or `right` value.
 
-###Stacking order, parent elements and floats
+### Stacking order, parent elements and floats
 
 Each element is seen as a "box" by the browser (represented by the red border). The natural stacking order means block elements will stack on top of each other.
 
@@ -386,10 +386,10 @@ The parent element (represented by the blue background) will wrap around its con
 
 However, to get elements to float side by side, the natural stacking order must be broken first, then put back together.
 
->##EXERCISE: Floats, part 1
+>## EXERCISE: Floats, part 1
 >Let's try instruction #1 in the following [CodePen example](http://codepen.io/learningcode/pen/gaedLj).
 
-###Exercise 1 followup
+### Exercise 1 followup
 
 Here's what it will look like:
 
@@ -410,7 +410,7 @@ Also, as long as there is space for elements flow around the floated element, it
 
 ![]({{ site.img }}/module3/floated-img.png) -->
 
-###Clearing Floats
+### Clearing Floats
 
 You may notice that floats have the ability to affect the rest of the web page in unexpected ways. The float must be "cleared" to get the rest of the page to go back to normal stacking order.
 
@@ -431,7 +431,7 @@ On the element that comes *after* the last element to be floated can be used to 
       clear: both; /* clears any left or right float */
     }
 
->##EXERCISE: Floats, part 2
+>## EXERCISE: Floats, part 2
 >Let's go back to the previous CodePen example and complete instruction #2.
 
 Now it should look like this:
@@ -441,7 +441,7 @@ Now it should look like this:
 Clearing the float on the `h1` element puts everything back to the normal stacking ordering starting from the h1 element and everything after.
 
 
-###Self Clearing Floats
+### Self Clearing Floats
 If there is no element following the floated elements, apply `overflow: hidden;` or `overflow: auto;` to the **parent** container to **self-clear** the floated children. This forces the element to 'contain' any floated children, so that they don't disrupt the elements after them.
 
     <div class="parent">
@@ -458,14 +458,14 @@ If there is no element following the floated elements, apply `overflow: hidden;`
       float: left;
     }
 
->##EXERCISE: Floats, part 3
+>## EXERCISE: Floats, part 3
 >Let's go back to the previous CodePen example and complete instruction #3-4.
     
 Though the `overflow` property can be used to self-clear floated elements, it is actually used to specify how to display content that flows longer or wider than its container.  The options are  whether to clip content, show scrollbars or just display content overflowing content.
 
 When this option can't be used, there is another option for self-clearing floats.
 
-###"Clearfix" hack
+### "Clearfix" hack
 
 This fix, often referred to as the "clearfix hack" can be used when `overflow` is not appropriate or in place of using the `overflow`.  It is simply a CSS code snippet contained in a `class` called `clearfix`.
 
@@ -522,7 +522,7 @@ See the documented clearfix hack changes here:
 
 Reminder, if you use this method, you do not need to use the `overflow` property.
 
-####Extra Resources
+#### Extra Resources
 
 * [Mozilla Developer Network: overflow property](https://developer.mozilla.org/en/docs/Web/CSS/overflow)
 * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)

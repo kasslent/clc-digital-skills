@@ -28,9 +28,9 @@ When your blog is new, the most efficient uses of your time fall into three broa
 	
 If you do these well, you'll get search traffic without doing anything.
 
-##Introduction to the search game
+## Introduction to the search game
 
-###Search Engine Marketing
+### Search Engine Marketing
 
 Two components:
 
@@ -42,7 +42,7 @@ Two components:
 - a.k.a. Natural/Organic search
 - People trust more--can't be bought! Gets more clicks.
 
-##Google search engine
+## Google search engine
 Google has a 65%-80% share of the world's search market.
 
 ![]({{ site.img }}/module4/search-engine-logos.jpg)
@@ -108,11 +108,11 @@ Average position = 5: 0.0%
 
 So the objective is to get to the top of the pile so you get the clicks!
 
-####Reference
+#### Reference
 [PPC Click-Through Rate by Position: Does Rank Matter?](http://searchenginewatch.com/sew/study/2345638/ppc-click-through-rate-by-position-does-rank-matter-data)
 
 
-##What winning the SEARCH GAME looks like
+## What winning the SEARCH GAME looks like
 
 A bit of background:
 
@@ -130,7 +130,7 @@ The Periodic Table of SEO Success Factors: <http://searchengineland.com/seotable
 
 ![]({{ site.img }}/module4/periodic-table-of-seo-2015.png)
 
-###Be aware - there's a "shady" side to SEO!
+### Be aware - there's a "shady" side to SEO!
 
 Black Hat: Cheating by buying a "fake" digital footprint
 
@@ -145,7 +145,7 @@ White Hat: Doing what's right, not what's easy
 - Safer: Meeting Google where they're trying to go
 
 	
-###You win at Organic Search by maintaining a robust "digital footprint".
+### You win at Organic Search by maintaining a robust "digital footprint".
 
 - Content optimized to meet user needs when they search
 - Links from other, relevant websites
@@ -153,7 +153,7 @@ White Hat: Doing what's right, not what's easy
 - Engaging social media presence
 - Coordination between digital properties
 
-###So you can't look at Search in isolation.
+### So you can't look at Search in isolation.
 
 Coordinate with:
 
@@ -185,22 +185,22 @@ as opposed to **Outbound Marketing**:
 According to HubSpot: especially effective for small businesses that deal with high dollar values, long research cycles and knowledge-based products.
 
 	
-##Getting started with search
+## Getting started with search
 	
-###How do I know if it's worth doing Paid Search ads?
+### How do I know if it's worth doing Paid Search ads?
 
 - It's all about ROI (return on investment)! Are you selling a product or service?
 - Part of your marketing budget
 - Are people searching?
 
-###How do I know if it's worth optimizing for Organic search (SEO)?
+### How do I know if it's worth optimizing for Organic search (SEO)?
 
 - Bare minimum: your site appears in Google unless you block it, so manage what it looks like
 	- Set `<title>` and `<meta name="description">` tags
 - Put in more effort: you get qualified traffic from your target market
 
 
-###It all starts with your marketing plan.
+### It all starts with your marketing plan.
 
 - What is your offering?
 - Who is your target market?
@@ -208,7 +208,7 @@ According to HubSpot: especially effective for small businesses that deal with h
 
 Step 1: Understand what and how your target market searches.
 
-####Keywords
+#### Keywords
 
 - "Clusters" of search queries
 e.g. "cell phone"
@@ -216,7 +216,7 @@ e.g. "cell phone"
 
 How do we find the right keywords to target?
 
-####Google Adwords Keyword Planner (GAKP)
+#### Google Adwords Keyword Planner (GAKP)
 Enter a search term and it shows you:
 
 - How many people search it in the location you specify
@@ -243,7 +243,7 @@ Also:
 	- Use these, then check in GAKP
 
 
->##EXERCISE: Keywords
+>## EXERCISE: Keywords
 >Let's find potential keywords to rank for!
 >
 >**1.&nbsp;Brainstorm**
@@ -290,7 +290,7 @@ Also:
 >Keep a list, and pick the best one(s).
 
 
-##On-Page SEO - How to optimize a web page for a keyword
+## On-Page SEO - How to optimize a web page for a keyword
 
 The "fundamental unit" in Search is the page. 
 
@@ -307,7 +307,7 @@ Ideal on-page optimization strategy&mdash;orient your content around a lucrative
 
 As much as Google tries to understand intent (through initiatives like Hummingbird)&mdash;it's still most effective to use exact keywords in your web page content
 
-###Where Google wants to see keywords:
+### Where Google wants to see keywords:
 
 `<title>` - Title tag 
 
@@ -326,7 +326,7 @@ As much as Google tries to understand intent (through initiatives like Hummingbi
 - Keyword inclusion doesn't help rankings, but bolded keyword drives clickthrough, which helps rankings
 
 
-####Page content
+#### Page content
 <div class="example page-content">
   <code>&lt;h1&gt;Header&lt;/h1&gt;</code> - use primary keyword in header
   <p>(body text)</p>
@@ -339,7 +339,7 @@ As much as Google tries to understand intent (through initiatives like Hummingbi
 
 
 
-###Keyword usage
+### Keyword usage
 
 - No more than 4-5% of the word count
 - Word count: Use pages that rank for your keyword as a benchmark
@@ -349,7 +349,7 @@ As much as Google tries to understand intent (through initiatives like Hummingbi
 
 >Exercise: Pick a page from your website and optimize it for a keyword
 
-##Pay-per-click Search ads (PPC)
+## Pay-per-click Search ads (PPC)
 
 (Learn this at <http://www.wordstream.com/learn>)
 
@@ -384,7 +384,7 @@ Example:
 Good Quality Score = pay less for the ad AND get the best placement!  
 Higher Quality Score = Higher ROI!
 
-###So what IS Quality Score? 
+### So what IS Quality Score? 
 
 (It's another Google secret!)
 
@@ -408,7 +408,7 @@ Consistent work on your account to optimize:
 
 Low Quality Scores are primarily the result of disconnect between keywords, ad groups, ad text, and landing page content.
 
-###Good to know...
+### Good to know...
 
 Match Type
 
@@ -427,9 +427,9 @@ Negative Keywords
 
 Eliminate more unnecessary clicks, improve Quality Score, improve ROI!
 
-##Making money/succeeding as a blogger
+## Making money/succeeding as a blogger
 
-###Different kinds of bloggers:
+### Different kinds of bloggers:
 
 
 - The part-time professional
@@ -447,10 +447,10 @@ Eliminate more unnecessary clicks, improve Quality Score, improve ROI!
 	- Blogs for a company they own
 	- Makes up 13% of blogs
 
-####Reference
+#### Reference
 [Can I Really Make a Living by Blogging?](http://lifehacker.com/can-i-really-make-a-living-by-blogging-1537783554)
 	
-###Earnings you can expect as a blogger
+### Earnings you can expect as a blogger
 
 You're essentially starting your own business. 
 You're in for the long haul, and it will be some time before you see any return on your investment.
@@ -465,10 +465,10 @@ Of ProBlogger.net readers:
 - 9% make $1,000-$9,999
 - 4% make $10,000+	
 
-####Reference
+#### Reference
 [Can You REALLY Make Money Blogging? [7 Things I Know About Making Money from Blogging]](http://www.problogger.net/archives/2012/11/28/can-you-really-make-money-blogging-7-things-i-know-about-making-money-from-blogging/)	
 	
-###How do you monetize a blog?--many ways!
+### How do you monetize a blog?--many ways!
 
 - Sell products
 - Continuity programs

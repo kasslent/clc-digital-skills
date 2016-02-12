@@ -10,7 +10,7 @@ permalink: module2-1.html
 
 
 
-##Web Design vs Web development
+## Web Design vs Web development
 
 **Web *design*** and **web *development*** are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.
 
@@ -20,7 +20,7 @@ There are even further specializations, such as back-end developers, front-end d
 
 
 
-##Brainstorming Ideas
+## Brainstorming Ideas
 
 Before writing a line of code, it helps to define your goals for the website first.  
 
@@ -32,7 +32,7 @@ Here are some brainstorming questions that can help you (or your clients) define
 *  What should people think or feel when they see your brand / website?
 *  Use 5 adjectives to describe your brand / website's personality.
     
-###Brand Identity
+### Brand Identity
 
 Your website is a reflection of you and/or your business. Your website is is part of your brand.
 
@@ -43,20 +43,20 @@ A **style guide** defines the visual identity for you or your brand.
 
 The design choices you make for your website becomes part of your brand identity. 
 
-###Extra Resources
+### Extra Resources
 
 * [Mailchimp brand guide](http://mailchimp.com/about/brand-assets/)
 * [Gov.uk web guidelines](http://govuk-elements.herokuapp.com/)
 
 
-##What is Design?
+## What is Design?
 
 Design is problem solving. In web design, the problem to be solved is how to effectively communicate the content. 
 
 Design uses a combination of type, color, images and form to present content in a clear and concise manner that is visually appealing and reiterates the ideas we want to communicate.
 
 
-###What Makes Good Design?
+### What Makes Good Design?
 
 1. Clear - the content is easy to read and the graphics and colors support the ideas
 1. Concise - content is presented in a concise manner and you can navigate the website to find the content you need easily
@@ -64,7 +64,7 @@ Design uses a combination of type, color, images and form to present content in 
 > What are some of your favorite websites? Let's look at a few different sites and compare designs.
 
 
-##Purpose and Organizing Content
+## Purpose and Organizing Content
 What do you want your website to do? Who is your target audience? What is the purpose of the website?
 
 When thinking about how to organize and arrange the content on your website, think about how your eyes navigate a web page. Our eyes tend to gravitate to larger elements first, such as: 
@@ -79,21 +79,21 @@ Use the layout of your website to guide the viewer’s eye and provide a clear p
 
 > Based on purpose and organization, how would a photographers website differ from a news outlet?
 
-##Layout Tips
+## Layout Tips
 
-###Size
+### Size
 
 * vary the size of your content areas to guide the viewer 
 * large content areas can be used to indicate prominent information
 * less important information are given smaller areas
 * create a visual hierarchy of importance
 
-###Alignment
+### Alignment
 
 * aligning items relative to each other makes visual connections
 * helps users understand the content flow and navigate more easily
 
-###Space
+### Space
 
 * make sure there is enough space around your content
 * spacing enhances the readability of your content
@@ -101,7 +101,7 @@ Use the layout of your website to guide the viewer’s eye and provide a clear p
 * gives content space to breathe, less clutter
 
 
-##Designing with a Grid
+## Designing with a Grid
 
 A popular technique for design layouts is to use a grid. A grid provides:
 
@@ -109,7 +109,7 @@ A popular technique for design layouts is to use a grid. A grid provides:
 * helps to create visual hierarchy
 * flexibility in design
 
-###Using a Grid
+### Using a Grid
 
 Using software like Photoshop or just paper & pencil:
 
@@ -124,7 +124,7 @@ Here's a handy tool for creating a grid: [Grid Calculator](http://gridcalculator
 Using graph paper can also help layout columns and gutters when doing a hand drawn sketch. Here are some examples: <http://bit.ly/1KbJbfZ>
 
 
-###Page Layouts with Grids
+### Page Layouts with Grids
 
 Some content blocks may span multiple columns, others may span only one. Not every page component needs to fit into the grid dimensions either.
 
@@ -132,14 +132,14 @@ For example, the [Food Sense Blog website]({{ site.img }}/module2/02-grid-fs.jpg
 
 In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs](https://designschool.canva.com/blog/grid-design/), you can see even more ways to lay out content with a wide variety of grids.
 
-####Resources
+#### Resources
 
 * [Grid Calculator](http://gridcalculator.dk/)
 * [Grid Based Web Design Resources](http://www.awwwards.com/grid-based-web-design-resources.html)
 * [Wireframe tools](http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302)
 
 
->##EXERCISE: Sketch a website layout
+>## EXERCISE: Sketch a website layout
 >Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. 
 >
 >Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
@@ -147,7 +147,7 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 **Note that many of the CSS techniques for creating page layout styles will be covered in Module 3.**
 
 
-##Typography
+## Typography
 Good writing and good typography can help your reader understand your message more clearly.
 
 **Typography** is the art of arranging type to engage and guide your readers.  
@@ -159,11 +159,11 @@ Good writing and good typography can help your reader understand your message mo
 For example, *Helvetica Neue* is the **typeface**. It is a font family which contains many **font** files from *Helvetica Neue Ultra Light* to *Helvetica Neue Extra Bold*. The decision to set your type in *Helvetica Neue* and how you arrange it on the page is **typography**.
 
 
-##Type Classification
+## Type Classification
 
 <img class="right" src="{{ site.img }}/module2/07-serif.jpg">
 
-###Serif Typefaces
+### Serif Typefaces
 
 * distinguished by the little "feet" or "hats" at the bottom or top of the letters 
 * grew out of the hand-lettering of scribes and roman or blackletter calligraphic writing.
@@ -172,7 +172,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 <img class="right" src="{{ site.img }}/module2/08-sansserif.jpg">
 
-###Sans Serif Typefaces
+### Sans Serif Typefaces
 
 * just like the name implies–no serifs at the end of the strokes
 * most are monoweight
@@ -189,7 +189,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 <img class="left" src="{{ site.img }}/module2/09-script.jpg">
 
-###Script Typefaces
+### Script Typefaces
 
 * appear to be hand-lettered with a calligraphy pen, brush or pencil or pen
 * use script typefaces sparingly and appropriately for your content
@@ -200,7 +200,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 <img class="left" src="{{ site.img }}/module2/10-display.jpg">
 
-###Decorative Typefaces
+### Decorative Typefaces
 
 * have the characteristic of being very distinct in their style
 * not great for long blocks of text, may become too consuming and unreadable
@@ -209,7 +209,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 Most decorative typefaces are one offs containing just one font file. 
 
 
-##Tips for Selecting and Pairing Fonts
+## Tips for Selecting and Pairing Fonts
 
 * Personality
   * select fonts to reflect your personality, tone of voice and/or your brand
@@ -231,13 +231,13 @@ Most decorative typefaces are one offs containing just one font file.
   * pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc 
   * missing characters may be a sign of an incomplete and poorly designed font
 
-####Resource
+#### Resource
 [Chrome extension](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm) for finding out what fonts are used on any website.
 
 
-##Typefaces, CSS and the Web
+## Typefaces, CSS and the Web
 
-###Web Safe Fonts
+### Web Safe Fonts
 
 Fonts that are considered to be "web safe" refer to pre-installed fonts on a computer or device.
 
@@ -249,7 +249,7 @@ See examples of web safe fonts here:
 * [cssfontstack.com](http://www.cssfontstack.com)
 
 
-###CSS `font-family`
+### CSS `font-family`
 
 In CSS, to change the default typeface, use the `font-family` property.
 
@@ -263,7 +263,7 @@ In CSS, to change the default typeface, use the `font-family` property.
 * font names with two or more words should be wrapped in quotation marks (single or double quotes)
 * last font should be the generic option
 
-####Generic fonts
+#### Generic fonts
 
 * sans-serif
 * serif
@@ -272,9 +272,9 @@ In CSS, to change the default typeface, use the `font-family` property.
 * monospace (fixed width fonts)
 
 
-###Custom Fonts
+### Custom Fonts
 
-####Free vs. Premium Fonts
+#### Free vs. Premium Fonts
 
 There are thousands of fonts available to download and use beyond the default web safe fonts.
 
@@ -293,7 +293,7 @@ Premium fonts:
 * usually have multiple styles
 * more exclusive and unique
 
-###Font Resources
+### Font Resources
 
 * Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
 * Google Font pairing resource - <http://femmebot.github.io/google-type/> 
@@ -302,7 +302,7 @@ Premium fonts:
 * Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
 
 
-##Google Fonts
+## Google Fonts
 
 [Google Fonts](https://www.google.com/fonts) is a free service. You can link directly to their CSS files, making the fonts available to your site visitors and does not rely on system installed fonts. To use:
 
@@ -331,16 +331,16 @@ Before going into the next exercise, let's do a CSS review.
 
 <br>
 
-##CSS Review: Adding CSS
+## CSS Review: Adding CSS
 
-###Inline 
+### Inline 
 
 CSS is added to a specific HTML element using the style *attribute*.
 
 <pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
 </code></pre>
 
-###Internal
+### Internal
 Included in the `<head>` with a `<style>` tag.
 
 <pre><code>&lt;head&gt;
@@ -354,7 +354,7 @@ Included in the `<head>` with a `<style>` tag.
  &lt;/head&gt;
 </code></pre>
 
-###External
+### External
 Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
 
 <pre><code>&lt;head&gt;
@@ -366,7 +366,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
 > What are the pros & cons of each technique?
 
 
-##CSS Review: Selectors
+## CSS Review: Selectors
 
 **Type selectors** target HTML elements by their element tag name. 
 
@@ -397,7 +397,7 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
     }
     
     
->##EXERCISE: Google Fonts
+>## EXERCISE: Google Fonts
 >1. Choose two fonts from [Google Fonts](https://www.google.com/fonts) to use for the typography exercise.
 1. Download the <a href="exercises/module2/typography-1.html" download>typography-1.html</a> exercise file.
 1. Add the Google Fonts CSS file to the **typography-1.html** exercise file downloaded in the previous step.
@@ -407,9 +407,9 @@ Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to ref
 >*Pro tip!*  
 Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
-##More CSS typography
+## More CSS typography
 
-###`font-weight` & `font-style`
+### `font-weight` & `font-style`
 
 Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!
 
@@ -421,7 +421,7 @@ Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter i
     font-style: normal; /* removes italic style */
     
     
-###`text-` properties
+### `text-` properties
 
 **`text-align`**  
 Used for aligning text and accepts five values: `left`, `right`, `center`, `justify` and `inherit`.
@@ -438,18 +438,18 @@ Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit
 
 Note that when a CSS property accepts `inherit` as a value, it will inherit the style set in either the parent or nearest ancestor element. `none` usually removes the style defined by that property.
 
->##CLASS EXERCISE: Typography & CodePen
+>## CLASS EXERCISE: Typography & CodePen
 >Let's try out the above typography based CSS properties. Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to experiment.  
 >
 > <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
 
->##EXERCISE: `type-` & `font-` properties
+>## EXERCISE: `type-` & `font-` properties
 >Back in **typography-1.html**, practice using these CSS techniques in your editor and complete the instructions listed under the `TYPOGRAPHY EXERCISE #2` comments.
 
 These are just a few type related CSS properties.  We'll be going over more in the next lesson.
 
 
-##Bonus: `@font-face`
+## Bonus: `@font-face`
 
 The `@font-face` CSS3 method can be used to embed and load fonts files that are not *hosted* online like Google Fonts.  These font files are downloaded and included in your folder directory.
 

@@ -10,7 +10,7 @@ permalink: module3-4.html
 
 Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s review some best practices and tips.
 
-##Fluid images and components
+## Fluid images and components
 
 Use percentages to create flexible images.
 
@@ -35,7 +35,7 @@ This can also apply to page components.
       margin: 0 auto;
     }
 
-##Background images
+## Background images
 
 So far we've used `background` for colours but it can also be used for setting background *images*.
 
@@ -46,7 +46,7 @@ So far we've used `background` for colours but it can also be used for setting b
     background: url(folder/file.jpg); 
 
 
-###Files Paths & Folder Directories
+### Files Paths & Folder Directories
 
     project-folder
       |---css (folder)
@@ -66,7 +66,7 @@ To find the correct file path to add a background image using CSS, the starting 
 
 To navigate *up and out* of a folder, the syntax is always `../`  to represent moving up the directory by *one* folder, regardless of the folder name.
 
-###`background-repeat`
+### `background-repeat`
 
 If the image file is *smaller* than the element with the background image applied to it, the image will automatically repeat to fill up the space. 
 
@@ -81,7 +81,7 @@ To keep the image from repeating, use the `background-repeat` property **or** ad
     background-image: url(../images/picture.jpg); 
     background-repeat: no-repeat;
 
-###`background-attachment`
+### `background-attachment`
 
 When the page scrolls, all the content scrolls with it including the background image.  Adding `background-attachment: fixed;` will change that. 
 
@@ -93,7 +93,7 @@ When the page scrolls, all the content scrolls with it including the background 
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-###Background-size
+### Background-size
 
 CSS3 introduced the `background-size` property which can be used to change the size. The syntax is:
 
@@ -128,18 +128,18 @@ To include it in the shorthand `background` property, it **must** be included af
 * `contain` scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions
 * `cover` scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped
 
->##EXERCISE: images & background images
+>## EXERCISE: images & background images
 >
 >Download the exercise files <a href="exercises/module3/fluid-images.html" download>fluid-images.html</a> and in the text editor.
 >Uncomment each property, change some values and see what happens!
 
-####Extra Resources
+#### Extra Resources
 * [Mozilla Developer Network - background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 * [CSS Background Shorthand Property](http://sixrevisions.com/css/background-css-shorthand/)
 
 
 
-##Intro to Responsive Web Design
+## Intro to Responsive Web Design
 
 When Ethan Marcotte introduced the [responsive web design](http://alistapart.com/article/responsive-web-design) approach in 2010, the idea that one website could target multiple screens got the dev community really excited. 
 
@@ -155,7 +155,7 @@ If a mobile version was required, a separate website was created, often under a 
 While responsive web design has become a popular standard, a separate mobile site may still be the best option for content heavy sites that require more simplicity for mobile or a layout for mobile users that goes beyond shifting and scaling content.
 
 
-###Different types of web design
+### Different types of web design
 
 In order to understand responsive web design and web development better, we have to understand what the options are:
 
@@ -168,7 +168,7 @@ In order to understand responsive web design and web development better, we have
 >
 > Make your browser window bigger and smaller. How do the different designs styles change?
 
-###Mobile-first design
+### Mobile-first design
 
 When responsive design was introduced, it was common to start with a desktop design, then make the design responsive for smaller screens.
 
@@ -178,13 +178,13 @@ This has changed with smartphones and tablets, giving rise to another approach, 
 * make mobile integral, not an afterthought
 * graceful degradation and progressive enhancement
 
-###Resources
+### Resources
 
 * The [article](http://alistapart.com/article/responsive-web-design) that started the Responsive Design movement.
 * [Mobile First Design: Why It’s Great and Why It Sucks](https://codemyviews.com/blog/mobilefirst)
 
 
-##Viewport Meta Tag
+## Viewport Meta Tag
 
 The viewport meta tag is **required** in the `<head>` of the HTML document to ensure that the page responds on mobile devices. 
 
@@ -200,7 +200,7 @@ If you forget to include this tag, it will **not** render properly on a mobile d
 * `user-scalable=no` (not shown in example tag above) will limit users from being able to zoom in
 * `minimum-scale, maximum-scale` will limit how far in or out a user is allowed to scale/zoom
 
-##Media queries
+## Media queries
 
 Media queries allows you to apply CSS to your document only when the screen has reach a certain size (also referred to as a breakpoint).
 
@@ -244,7 +244,7 @@ To limit the CSS to a range of pixel values, use a combination of `min-width` an
 The above media query will only be applied when the width of the browser is greater or equal to 768px **and** less or equal to 940px.
 
 
-###Height
+### Height
 
 Most responsive techniques target width but it is possible to target device heights.
 
@@ -260,7 +260,7 @@ Height and width can also be used together in the media query:
 
 **Note:** Relying on height-based media queries can be inconsistent and most of the time, it's better to let the content flow downward as the width of the device gets smaller. 
 
-###Common breakpoints
+### Common breakpoints
 
     320px — Mobile portrait
     480px — Mobile landscape
@@ -271,7 +271,7 @@ Height and width can also be used together in the media query:
 
 These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
 
->##EXERCISE: Basic Media queries
+>## EXERCISE: Basic Media queries
 >
 > Download <a href="exercises/module3/media-queries.html" download>media-queries.html</a> and open it in your editor.  
 >
@@ -280,7 +280,7 @@ These are just general guidelines. There are no hard and fast rules. Depending o
 >
 >**Bonus:** Try using `min-width` or a combination of `min-` and `max-width` to create a range.
 
-##RWD Best Practices
+## RWD Best Practices
 
 It’s best practice not to use too many breakpoints. Two to four should be fine. Up to six as an absolute max but if you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.
 
@@ -300,7 +300,7 @@ When writing media queries and adding responsive changes, only add the specific 
       }
     }
 
-###Testing Mobile in the Browser
+### Testing Mobile in the Browser
 
 When creating mobile friendly sites, it’s always best to test on an actual device. However, there are a lot of interesting tools available to allow us to test in the browser. 
 
@@ -311,7 +311,7 @@ Chrome has an emulator built right into the dev tools!
 There are also many many other tools, [free](http://lab.maltewassermann.com/viewport-resizer/) and [paid](https://www.browserstack.com/responsive), available for testing and emulating multiple devices and device sizes.
 
 
->##EXERCISE: Responsive Web page
+>## EXERCISE: Responsive Web page
 > Download the responsive exercise [here](exercises/module3/responsive.zip) (zip file). This also includes the solutions file. 
 > 
 > Follow the instructions in the comments in the `<head>` of **responsive.html** to make the 3 columns fluid and responsive.

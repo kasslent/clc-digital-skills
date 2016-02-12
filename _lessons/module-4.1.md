@@ -8,7 +8,7 @@ permalink: module4-1.html
 ---
 
 
-##Intro to HTML Forms
+## Intro to HTML Forms
 
 * used to capture information from users
 * information processing & form submission requires a server-side language (e.g. PHP, Ruby or Python)
@@ -19,7 +19,7 @@ permalink: module4-1.html
 **Extra resource:** [Get vs Post](http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29)
 
 
-###Form Controls
+### Form Controls
 * users interact with forms through controls (e.g. checkboxes, buttons)
 * data add into these controls are processed by the server when the form is submitted
 
@@ -89,7 +89,7 @@ The example below does not include any additional CSS and a complete form will r
 >
 >Note that clicking "submit" will not process any information because this example is only in HTML and is not attached to any server side processing.
 
-###`<label>` and the `for` attribute
+### `<label>` and the `for` attribute
 
 
 Use the `for` attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the `id` value of the related form control.
@@ -112,7 +112,7 @@ Use the `for` attribute in the label to create an association with the related i
 >
 >Try clicking on the labels in the examples above.
 
-###`name` attribute
+### `name` attribute
 
 The `name` attribute is used to reference the form fields *after* the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.
 
@@ -153,7 +153,7 @@ What day is it today?<br>
 <br>
 In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.
 
-###Processing a Form
+### Processing a Form
 
 The form related HTML only create the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
 
@@ -166,7 +166,7 @@ Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com
 * [Bring Your Forms Up to Date With CSS3 and HTML5 Validation](http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738)
 
 
-##Google Forms
+## Google Forms
 
 Use Google Forms to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with email responses, you can use the power of Sheets to manipulate & sort the data!
 
@@ -184,7 +184,7 @@ Use Google Forms to create your form and have all the responses sent to a handy 
   * To embed the form onto your web page, select **File > Embed** and copy the HTML onto your web page.<br>
   ![]({{ site.img }}/module4/gforms-embed.png)
   
-##Styling Google Forms
+## Styling Google Forms
 
 Choose from existing themes!
 
@@ -216,17 +216,17 @@ Then right-click anywhere and select **View source** and look for the `<form>` t
 
 Note that this option requires you to write all the CSS yourself!
 
-####Resources
+#### Resources
 
 * [Google Drive Blog: Your Forms, Your Way](http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html)
 * [How to style Google Forms](http://morning.am/tutorials/how-to-style-google-forms/)
   
   
-##Google Forms + Analysis with Excel
+## Google Forms + Analysis with Excel
 
 View the presentation for this module [here](  https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166).
 
->##EXERCISE: Forms responses & Excel
+>## EXERCISE: Forms responses & Excel
 >View the form [here](https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#) for today's exercise.
 >
 >View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  

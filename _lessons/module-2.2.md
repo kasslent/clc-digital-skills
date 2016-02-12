@@ -128,7 +128,7 @@ Icon fonts are an easy way to add imagery to your web page but still have the fl
 Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
 
 
-###Watch out!
+### Watch out!
 When using CDNs, they are sometimes listed like this:
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -139,22 +139,22 @@ Remember to add the "http" to make it work when you run your page "locally" (on 
 
 To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
 
-####Resources
+#### Resources
 
 * <https://css-tricks.com/html-for-icon-font-usage/>
 * <http://weloveiconfonts.com/>
 * <http://reference.sitepoint.com/css/typography>
 
->##EXERCISE: Typography
+>## EXERCISE: Typography
 >Download the <a href="exercises/module2/typography-2.html" download>typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the `<head>` of the page.
 > 
 >*Pro tip!*  
 Move this exercise file from the downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
 
 
-##Working with Images
+## Working with Images
 
-###Cropping and Saving Images
+### Cropping and Saving Images
 When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).  
 
 Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the *largest* size you need for your website.  
@@ -165,12 +165,12 @@ When working with responsive images (one image made to fit difference screen siz
 
 Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to [Module 1, Lesson 1](module1-1.html#images) for reference.
 
-###Image editors
+### Image editors
 You will need an image editor to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular paid options.
 
 [Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
 
-##Using Pixlr
+## Using Pixlr
 
 1. Navigate to <https://pixlr.com/>
 1. Choose the **Editor** version.
@@ -180,7 +180,7 @@ To add or change to another image, these options can also be accessed under the 
 
 ![Pixlr file menu]({{ site.img }}/module2/pixlr-file-menu.png)
 
-###The Crop Tool
+### The Crop Tool
 
 In [Pixlr](https://pixlr.com/editor/) (and in most image editors), select the crop tool to resize and crop out parts of your images. 
 
@@ -189,7 +189,7 @@ Click & drag the cursor over the image to highlight the areas to be cropped out.
 ![pixlr crop]({{ site.img }}/module2/pixlr-crop.jpg)
  
 
-###Resizing images
+### Resizing images
 
 If you just need to resize an image to reduce the resolution size for web, go to:  
 **Image &rarr; Image Size...**
@@ -201,24 +201,24 @@ Make sure “Constrain Proportions” is checked in the popup to maintain proper
 Choosing **Canvas size...** (the option under **Image size...**) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.
 
 
->##EXERCISE: Resizing Images
+>## EXERCISE: Resizing Images
 > Using [Pixlr](https://pixlr.com/editor/), practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.
 >
 > **Bonus:** Check out some of the other menu options to familiarize yourself with the tool.
 
 
-###Image resources
+### Image resources
 
 * [Placeholder image sites](https://www.google.ca/search?q=placeholder+images)
 * [Stock Photos That Don't Suck](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
 
 
 
-##Designing with Color
+## Designing with Color
 
 A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.
 
-###Personality and Meaning
+### Personality and Meaning
 
 Color communicates meaning. 
 
@@ -233,7 +233,7 @@ Colour meanings can vary across different cultures so it’s important to consid
 Read more about color meaning and how to use color to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
 
 
-###Harmony and Rhythm
+### Harmony and Rhythm
 Color can be used to attract attention and organize content, creating a visual hierarchy. 
 
 Repeating colors on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
@@ -241,20 +241,20 @@ Repeating colors on elements adds clarity by allowing the viewer to make visual 
 **Less is more.** When in doubt use one primary color and a secondary accent color. Vary the saturation and value of your colors to add variety while maintaining clarity.
 
 
-###Color Accessibility
+### Color Accessibility
 Many people have some sort of visual color impairment such as being unable to distinguish certain colors from others. 
 
 Ensure sufficient contrast between colors to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
 
 Read more about color blindness and designing for color accessibility [here](https://24ways.org/2012/color-accessibility/).
 
-####Color Resources
+#### Color Resources
 * [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose color palettes
 * [Color Safe](http://colorsafe.co/) - helps you choose colors with appropriate contrast for text
 * [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colors from websites
 
 
-##Spacing and CSS
+## Spacing and CSS
 
 Using space is a key part in design to ensure that the content is easy to read, view, find and aesthetically pleasing. Sometimes a few pixels can make all the difference!
 
@@ -265,7 +265,7 @@ CSS uses 5 properties to determine the size and spacing of these elements: `widt
 This is referred to as **The Box Model**.
 
 
-##Intro to The Box Model
+## Intro to The Box Model
 
 The browser looks at every HTML element on the page as a square/rectangular box. The **CSS Box Model** describes the way CSS handles the size and spacing of HTML elements. 
 
@@ -280,7 +280,7 @@ CSS uses 5 properties to determine the size and spacing of these boxes:
 
 Each of these boxes can have different combinations of the above properties, which in turn changes the element's size and how much space it takes up on the page.
 
-###Width & Height
+### Width & Height
 
 The `width` & `height` properties can be used to set specific heights and widths to only *block* level elements.  (More on block elements in Module 3.)
 
@@ -292,7 +292,7 @@ The `width` & `height` properties can be used to set specific heights and widths
       height: 80px;
     }
 
-###Padding
+### Padding
 
 The `padding` property adds/removes space *inside* of the element. It only accepts positive numerical values.
 
@@ -313,7 +313,7 @@ Setting the padding to "0" will remove any default space on an HTML element. Any
 <p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
 <p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
 
-###Margin
+### Margin
 Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. 
 
     /* longhand */
@@ -337,14 +337,14 @@ Margin adds/removes space *outside* of an element. However, the shorthand and lo
 <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
 
-###Margin & Negative values
+### Margin & Negative values
 
 Margin also accepts negative values.  This will nudge it just outside of its stacked position.
 
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
-###Auto/Center Aligning with `margin`
+### Auto/Center Aligning with `margin`
 The margin property can also be used to center align *block* level elements. 
 
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
@@ -360,12 +360,12 @@ First a width needs to be set. Then by setting the left & right values to `auto`
   <p>Auto aligned!</p>
 </div>
 
->##CLASS EXERCISE: auto align content
+>## CLASS EXERCISE: auto align content
 >
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/adPrym), compare the difference when `margin` is used to auto align the content block.
 
 
-###Border
+### Border
 The `border` property resides between the `margin` and `padding` and creates an outline around the element. Also has longhand and shorthand syntax.
 
     /* longhand */
@@ -390,7 +390,7 @@ Like padding and margin, a border can be added to a specific side of the element
 Read more about the Box Model [here](https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/).  We'll also be revisiting it in Module 3.
 
 
-##Dev tools & designing in the browser
+## Dev tools & designing in the browser
 
 Getting to know your browser dev tools will be super handy when tweaking styles on your web page.  You'll be able to try out different CSS styles right in the browser and see the changes update right away rather than flipping back and forth between your editor and browser.
 
@@ -406,7 +406,7 @@ In Chrome, you can access the tools in 3 ways:
 
 > Pick your favorite website and try it out!
 
-> ##EXERCISE: Margin & Padding
+> ## EXERCISE: Margin & Padding
 > Download the [exercise file](exercises/module2/margin-padding.zip) (zip file).  Base HTML & CSS is already included.
 >
 >With a partner, edit/add/remove some margin and padding to make this web page look just a little bit nicer and more balanced.

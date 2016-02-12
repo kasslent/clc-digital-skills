@@ -8,7 +8,7 @@ permalink: module3-2.html
 ---
 
 
-##HTML & CSS Review
+## HTML & CSS Review
 
 Let's review the concepts and techniques covered in all of the previous lessons by creating a basic one page site, similar to this [example](exercises/module3/sample/index.html), from scratch.  
 
