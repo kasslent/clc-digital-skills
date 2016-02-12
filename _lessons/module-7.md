@@ -3,6 +3,7 @@ layout: lessons
 module: 7
 lesson: 1
 title: Domains, Hosting & FTP
+description: Student sugggested lesson or review.
 permalink: module7.html
 class: module7
 ---

@@ -3,7 +3,7 @@ layout: lessons
 module: 2
 lesson: 2
 title: Design & CSS
-description: More CSS typography, working with images, colours and intro to the box model.
+description: CSS typography, intro to the box model, working with images and colors.
 permalink: module2-2.html
 ---
 

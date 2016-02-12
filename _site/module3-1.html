@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
-<body class="module3-1">
+<body class="">
   <header>
     <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
     <h1>Digital Skills Program</h1>
@@ -40,7 +40,7 @@
         <h4>CSS Fundamentals</h4>
       </nav>
       
-      <article class="module3-1" >
+      <article>
         <h1>CSS Fundamentals</h1>
         <p>In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let’s do a review and look at a few more.</p>
 
@@ -202,7 +202,7 @@ There are <strong>many</strong> more ways to select elements such as position in
 <blockquote>
   <h2 id="exercise-selectors">EXERCISE: Selectors</h2>
 
-  <p>Download the <a href="exercises/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking until really really need to!</p>
+  <p>Download the <a href="exercises/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to!</p>
 
   <p>All the instructions are contained in the comments at the very top of <code>selector.html</code></p>
 </blockquote>
@@ -382,8 +382,6 @@ But notice how the background color only extends the set width of the element?  
 </ul>
 
 <blockquote>
-  <h2 id="exercise-auto-align-content">EXERCISE: auto align content</h2>
-
   <p>Looking at this <a href="http://codepen.io/learningcode/pen/avYXvq">CodePen example</a>, compare the difference between using and not using a content wrapper.</p>
 </blockquote>
 
@@ -394,7 +392,7 @@ For example, if you set the width of a box to 480px and added 20px of padding an
 
 <p>480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width</p>
 
-<p>But, there’s a fix! Let’s first compare how this works with and without the fix, looking at the CSS example below.</p>
+<p>But, there’s a fix! Let’s first compare how the element’s sizing differs with and without the fix, looking at the CSS example below.</p>
 
 <pre><code>background: lightblue;
 width: 480px;
@@ -410,6 +408,9 @@ border: 15px solid green;
   <p>This example DOES have the border box fix.</p>
 </div>
 
+<p><br />
+Notice that without the fix, the element is larger than the set <code>width</code>.</p>
+
 <p>The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.</p>
 
 <p>Here is the snippet:</p>
@@ -423,7 +424,6 @@ html {
 }
 </code></pre>
 
-<h4 id="resource-1">Resource</h4>
 <p>Read more about the fix <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">here</a>.</p>
 
 <h2 id="positioning-elements-floats">Positioning Elements: Floats</h2>
@@ -577,7 +577,7 @@ Any element <em>after</em> the floated element will move up and flow around the 
 &lt;/div&gt;
 </code></pre>
 
-<p>See the docmented clearfix hack changes here:<br />
+<p>See the documented clearfix hack changes here:<br />
 <a href="http://css-tricks.com/snippets/css/clear-fix/">CSS Tricks: Force Element To Self-Clear its Children</a></p>
 
 <p>Reminder, if you use this method, you do not need to use the <code>overflow</code> property.</p>

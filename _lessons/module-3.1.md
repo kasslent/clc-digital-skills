@@ -3,9 +3,8 @@ layout: lessons
 module: 3
 lesson: 1
 title: CSS Fundamentals
-description: CSS selectors, The Box Model and floats.
+description: CSS selectors, block and inline elements, the Box Model and floats.
 permalink: module3-1.html
-class: module3-1
 ---
 
 
@@ -155,7 +154,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 
 >##EXERCISE: Selectors
 >
->Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking until really really need to! 
+>Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
 >
 >All the instructions are contained in the comments at the very top of `selector.html`
 
@@ -327,8 +326,6 @@ But to create a style where different background styles apply to each section, w
 * auto align the content wrapper
 * use the outer container for the background styles
 
->##EXERCISE: auto align content
->
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
 
@@ -339,7 +336,7 @@ For example, if you set the width of a box to 480px and added 20px of padding an
 
 480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width
 
-But, there's a fix! Let's first compare how this works with and without the fix, looking at the CSS example below.
+But, there's a fix! Let's first compare how the element's sizing differs with and without the fix, looking at the CSS example below.
 
     background: lightblue;
     width: 480px;
@@ -355,6 +352,9 @@ But, there's a fix! Let's first compare how this works with and without the fix,
 </div>
 
 
+<br>
+Notice that without the fix, the element is larger than the set `width`.
+
 The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.
 
 Here is the snippet:
@@ -367,7 +367,6 @@ Here is the snippet:
       box-sizing: inherit;
     }
 
-####Resource
 Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
 
@@ -518,7 +517,7 @@ This snippet can be added to your css file and added to the **parent** of the fl
 
 
 
-See the docmented clearfix hack changes here:  
+See the documented clearfix hack changes here:  
 [CSS Tricks: Force Element To Self-Clear its Children](http://css-tricks.com/snippets/css/clear-fix/)
 
 Reminder, if you use this method, you do not need to use the `overflow` property.

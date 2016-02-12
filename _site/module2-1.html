@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>Design & CSS</title>
-  <meta name="description" content="Before we launch into design, let’s do a CSS review.">
+  <meta name="description" content="Web Design vs Web development">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,79 +42,7 @@
       
       <article>
         <h1>Design & CSS</h1>
-        <p>Before we launch into design, let’s do a CSS review.</p>
-
-<h2 id="css-review-adding-css">CSS Review: Adding CSS</h2>
-
-<h3 id="inline">Inline</h3>
-
-<p>CSS is added to a specific HTML element using the style <em>attribute</em>.</p>
-
-<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
-</code></pre>
-
-<h3 id="internal">Internal</h3>
-<p>Included in the <code>&lt;head&gt;</code> with a <code>&lt;style&gt;</code> tag.</p>
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    &lt;meta charset="utf-8"&gt;
-    <strong>&lt;style&gt;</strong>
-      p {
-        color: red;
-      }
-    <strong>&lt;/style&gt;</strong>
- &lt;/head&gt;
-</code></pre>
-
-<h3 id="external">External</h3>
-<p>Add the CSS to a separate stylesheet (<code>.css</code> file).  Use the <code>&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code>&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
-&lt;/head&gt;
-</code></pre>
-
-<blockquote>
-  <p>What are the pros &amp; cons of each technique?</p>
-</blockquote>
-
-<h2 id="css-review-selectors">CSS Review: Selectors</h2>
-
-<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
-
-<pre><code>p {
-  /* targets all paragraphs */
-}
-</code></pre>
-
-<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element. Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
-
-<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
-</code></pre>
-
-<hr />
-
-<pre><code>.special {
-  /* applies to any element with this class */ 
-}
-p.special {
-  /* more specific - applies only to paragraphs with this class */
-}
-</code></pre>
-
-<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
-
-<pre><code>#about {
-  /* applies to any element with this id */ 
-}
-section#about {
-  /* more specific - applies only to a section element with this id */
-}
-</code></pre>
-
-<h2 id="web-design-vs-web-development">Web Design vs Web development</h2>
+        <h2 id="web-design-vs-web-development">Web Design vs Web development</h2>
 
 <p><strong>Web <em>design</em></strong> and <strong>web <em>development</em></strong> are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.</p>
 
@@ -484,6 +412,80 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
 <p>Now you can use these new fonts with the <code>font-family</code> property, using the font name listed in the example on the Google Fonts page.</p>
 
 <p><img src="assets/img/module2/google-fonts.png" alt="" /></p>
+
+<p>Before going into the next exercise, let’s do a CSS review.</p>
+
+<p><br /></p>
+
+<h2 id="css-review-adding-css">CSS Review: Adding CSS</h2>
+
+<h3 id="inline">Inline</h3>
+
+<p>CSS is added to a specific HTML element using the style <em>attribute</em>.</p>
+
+<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
+</code></pre>
+
+<h3 id="internal">Internal</h3>
+<p>Included in the <code>&lt;head&gt;</code> with a <code>&lt;style&gt;</code> tag.</p>
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    <strong>&lt;style&gt;</strong>
+      p {
+        color: red;
+      }
+    <strong>&lt;/style&gt;</strong>
+ &lt;/head&gt;
+</code></pre>
+
+<h3 id="external">External</h3>
+<p>Add the CSS to a separate stylesheet (<code>.css</code> file).  Use the <code>&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code>&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
+&lt;/head&gt;
+</code></pre>
+
+<blockquote>
+  <p>What are the pros &amp; cons of each technique?</p>
+</blockquote>
+
+<h2 id="css-review-selectors">CSS Review: Selectors</h2>
+
+<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
+
+<pre><code>p {
+  /* targets all paragraphs */
+}
+</code></pre>
+
+<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element. Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
+
+<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
+</code></pre>
+
+<hr />
+
+<pre><code>.special {
+  /* applies to any element with this class */ 
+}
+p.special {
+  /* more specific - applies only to paragraphs with this class */
+}
+</code></pre>
+
+<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
+
+<pre><code>#about {
+  /* applies to any element with this id */ 
+}
+section#about {
+  /* more specific - applies only to a section element with this id */
+}
+</code></pre>
 
 <blockquote>
   <h2 id="exercise-google-fonts">EXERCISE: Google Fonts</h2>

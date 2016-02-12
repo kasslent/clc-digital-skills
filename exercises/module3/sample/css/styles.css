@@ -1,0 +1,81 @@
+/* MAIN STYLES
+-----------------------------------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, 
+h2 {
+  font-family: Georgia, serif;
+}
+header, 
+section, 
+footer {
+  padding: 40px;
+}
+header,
+footer {
+  text-align: center;
+}
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+
+/* NAV STYLES
+-----------------------------------------*/
+nav {
+  background: #333;
+  padding: 20px 40px;
+  text-align: right;
+}
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px;
+}
+nav a:hover {
+  color: black;
+}
+
+
+/* HEADER STYLES
+-----------------------------------------*/
+header {
+  background: #9dadc4;
+}
+
+
+/* ABOUT STYLES
+-----------------------------------------*/
+.about {
+  background: #c9c6d7;
+  overflow: hidden;
+}
+.profile {
+  float: left;
+  margin-right: 20px;
+}
+
+
+/* FOOTER STYLES
+-----------------------------------------*/
+footer {
+  background: #333;
+  color: #ccc;
+}
+footer a {
+  color: #ccc;
+}

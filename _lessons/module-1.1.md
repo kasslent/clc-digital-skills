@@ -3,7 +3,7 @@ layout: lessons
 module: 1
 lesson: 1
 title: The Language of the Web
-description: Intro to web development fundamentals & HTML.
+description: Intro to web development & HTML fundamentals.
 permalink: module1-1.html
 ---
 

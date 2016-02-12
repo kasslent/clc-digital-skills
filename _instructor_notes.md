@@ -68,5 +68,10 @@ Introduces some design theory but will also incorporate those theories into how 
 
 **Bring some paper & pens/pencils so students can sketch out a wireframe.  Graph paper would be ideal but not required.**
 
+### Module 3
+Lesson 2 includes a class code-along to solidify the process of creating a web site from creating folders to updating CSS.  Some HTML is provided and a sample project is provided to save time and give direction.  Some students may feel frustrated with the file management (downloading, moving, renaming, etc) but reassure them and remind them that this is part of the process.
+
+The lesson notes has step by step instructions for the code-along. It's a very basic site, not too fancy but should hopefully help solidify the process for the students. You can follow it exactly or just use it as a guide.  Share your completed copy after the lesson so students can use it as a reference.
+
 
 

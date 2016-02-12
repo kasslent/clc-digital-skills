@@ -1,0 +1,318 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page is public but not meant to show up in search engine results -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>CSS Fundamentals</title>
+  <meta name="description" content="Display vs Floats">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
+</head>
+<body class="">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
+    <h1>Digital Skills Program</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Module 3, Lesson 3</h2>
+  </header>
+
+
+    <main role="main" class="lessons" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <h3>Module 3, Lesson 3</h3>
+        <h4>CSS Fundamentals</h4>
+      </nav>
+      
+      <article>
+        <h1>CSS Fundamentals</h1>
+        <h2 id="display-vs-floats">Display vs Floats</h2>
+
+<p>In previous lessons, we talk about inline &amp; block elements and how to use the <code>display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
+
+<p><code>float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
+
+<p>So which one is better for page layouts?</p>
+
+<p>It depends. This is widely debated among developers but both techniques come with their own quirks.  Understanding how to use each technique is the key to choosing which one is right for job.</p>
+
+<p>Let’s take a look at using display vs floats for styling a horizontal navigation menu.</p>
+
+<h2 id="horizontal-navigation">Horizontal Navigation</h2>
+
+<p>Traditionally, navigation links were contained in a list like this:</p>
+
+<h4 id="pre-html5">Pre-HTML5</h4>
+
+<pre><code>&lt;div class="nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact Me&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4 id="html5">HTML5</h4>
+
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact Me&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<blockquote class="note">
+  <p>This is another topic where there is much debate. Are lists necessary for accessibility and semantics or should links be used on it’s own?  You can read more about it <a href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/">here</a> and <a href="http://www.sitepoint.com/are-navigation-lists-necessary/">here</a>.</p>
+</blockquote>
+
+<p>To style a list navigation, first you’ll need to reset the list styles.  You’ll probably also want to remove the default underline of the links.</p>
+
+<p>Putting a background color on the <code>ul</code> will help to visually see the space the element is occupying.
+Using the HTML5 markup example above, the CSS will looks like this:</p>
+
+<pre><code>nav a {
+  text-decoration: none; /* remove default underline */
+}
+nav ul {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+  list-style-type: none; /* removes default bullets */
+  background: red;
+}
+</code></pre>
+
+<p>Using <code>display</code>, there are two values that can be used to align the list items horizontally.</p>
+
+<p><code>inline</code> will line up side by side but does not accept height and width values.</p>
+
+<pre><code>nav ul li {
+  display: inline;
+}
+</code></pre>
+
+<p><code>inline-block</code> will also display the items side by side but accepts height and width values.</p>
+
+<pre><code>nav ul li {
+  display: inline-block; 
+} 
+</code></pre>
+
+<blockquote>
+  <p>Which one is better to use?</p>
+</blockquote>
+
+<p>At this point, the nav will be aligned horizontally but could use some spacing.</p>
+
+<p><img src="assets/img/module3/horizontal-nav-no-padding.png" alt="" /></p>
+
+<p>Put some padding on the link, <code>a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
+
+<pre><code>nav a {
+  text-decoration: none;
+  display: inline-block; /* add block behavior to use padding */
+  padding: 10px;
+}
+</code></pre>
+
+<blockquote>
+  <p>Use this <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> to explore these styles before moving on.</p>
+</blockquote>
+
+<h3 id="getting-to-know-your-options">Getting to know your options</h3>
+<p>If you put a background color on the list item, you’ll see an extra space between the elements.  Here’s the quirk!</p>
+
+<pre><code>nav ul li {
+  display: inline-block; 
+  background: lightblue;
+}
+</code></pre>
+
+<p><img src="assets/img/module3/horizontal-nav-display.png" alt="" /></p>
+
+<p>The extra space is caused by the line break in the HTML used to put the <code>&lt;li&gt;</code> on separate lines.</p>
+
+<p>If you use <code>float</code> instead of <code>display</code>, you won’t see this quirk.</p>
+
+<pre><code>nav ul li {
+    float: left;
+    background: lightblue;
+}
+</code></pre>
+
+<p><img src="assets/img/module3/horizontal-nav-float.png" alt="" /></p>
+
+<p>But, float has it’s own quirks too. What happened to the red background in the <code>ul</code>?</p>
+
+<p>Let’s tackle the <code>display</code> example first.</p>
+
+<h2 id="horizontal-navigation-display">Horizontal navigation: Display</h2>
+
+<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code>text-align: center;</code> to automatically center align the list items containing the links.</p>
+
+<pre><code>nav ul {
+  text-align: center;
+}
+</code></pre>
+
+<p><img src="assets/img/module3/horizontal-nav-centered.png" alt="" /></p>
+
+<p>Let’s say you wanted 4 equal width boxes for the nav.  You could set the list items to a width of 25%.</p>
+
+<pre><code>nav ul li {
+  background: lightblue;
+  width: 25%;
+}
+</code></pre>
+
+<p>However, the space between the <code>&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
+<img src="assets/img/module3/horizontal-nav-spaces.jpg" alt="" /></p>
+
+<p>You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here’s another fix.</p>
+
+<pre><code>nav ul {
+  font-size: 0; /* removes space between li elements */
+}
+nav ul li {
+  font-size: 16px; /* reset the inherited font-size */
+}
+</code></pre>
+
+<blockquote>
+  <p>Let’s go back to the previous <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> and try this out.</p>
+</blockquote>
+
+<h2 id="horizontal-navigation-float">Horizontal navigation: Float</h2>
+
+<p>When you use float to align elements, there is no extra white space to worry about. But, remember, float has it’s own quirks too.  The parent of the floated elements collapse, which can cause problems too.</p>
+
+<p>Suppose you had some content after the navigation?  It will look like this:</p>
+
+<p data-height="175" data-theme-id="0" data-slug-hash="qOYbYX" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/qOYbYX/">Horizontal nav &amp; floats</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>No worries, just remember to clear your floats! Since this example requires all the list items to float, you’ll need to <em>self-clear</em> the floated elements.</p>
+
+<pre><code>nav ul {
+  overflow: hidden;
+}
+</code></pre>
+
+<p>(You can also use the “clearfix hack” instead of <code>overflow</code>.)</p>
+
+<p>With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.</p>
+
+<pre><code>nav ul li {
+  width: 25%;
+}
+</code></pre>
+
+<p>However, <code>text-align: center;</code> will only center align the text <em>within</em> the <code>&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code>display</code> example.</p>
+
+<blockquote>
+  <p>Let’s try these techniques out in this <a href="http://codepen.io/learningcode/pen/qOYbYX?editors=110#0">CodePen</a>.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-horizontal-navigation">EXERCISE: Horizontal navigation</h2>
+
+  <p>In the exercise files downloaded earlier, in the <strong>project</strong> folder, you will find a basic webpage.  Using the existing HTML &amp; CSS files, try styling the list navigation using the techniques discussed so far.</p>
+
+  <p><strong>Pro tip!</strong> There is already existing CSS in the exercise so be sure to put your CSS in some kind of logical &amp; organized order.</p>
+</blockquote>
+
+<p><br />
+Remember, every HTML element is essentially just a “box” so the techniques discussed above are not limited to just navigations using a list.</p>
+
+<h2 id="css-position-property">CSS Position property</h2>
+<p>The <code>position</code> property can also be used to lay out HTML elements and has five different values: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> and <code>inherit</code>.</p>
+
+<p><code>position</code> is also used with a combination of box <em>offset properties</em>, <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code>, to specify the direction and measurements for the positioned elements.</p>
+
+<h3 id="position-static">position: static;</h3>
+
+<ul>
+  <li>default value</li>
+  <li>elements are not positioned at all and in the normal page flow</li>
+  <li>offset properties are ignored</li>
+</ul>
+
+<h3 id="position-relative">position: relative;</h3>
+
+<ul>
+  <li>has the same behavior as <code>static</code> <strong>but</strong> box offset properties can be applied to it</li>
+  <li>use this to nudge the element within its stacked order</li>
+</ul>
+
+<h3 id="position-absolute">position: absolute;</h3>
+
+<ul>
+  <li>can be positioned anywhere, relative to its <strong>nearest positioned ancestor</strong> element</li>
+  <li>if no ancestor element is positioned, it will be relative to the body</li>
+  <li>to contain the element, use <code>position: relative</code> in a parent selector</li>
+</ul>
+
+<h3 id="position-fixed">position: fixed;</h3>
+
+<ul>
+  <li>positioned anywhere regardless of stacking order</li>
+  <li>not affected by any positioned ancestor element</li>
+  <li>always positioned to the body</li>
+  <li>stays in place when you scroll</li>
+</ul>
+
+<h3 id="position-inherit">position: inherit;</h3>
+
+<ul>
+  <li>takes the same value as its parent</li>
+</ul>
+
+<blockquote>
+  <p>Let’s try these values in <a href="http://codepen.io/learningcode/pen/PPedPQ">CodePen</a></p>
+</blockquote>
+
+<h3 id="extra-resource">Extra resource</h3>
+
+<p><a href="https://css-tricks.com/almanac/properties/p/position/">https://css-tricks.com/almanac/properties/p/position/</a></p>
+
+<p>~ End ~</p>
+
+
+      </article>
+    </main>
+
+      <footer>
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+  </footer>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/global.js"></script>
+</body>
+</html>
+
+

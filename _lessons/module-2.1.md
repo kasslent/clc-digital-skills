@@ -8,72 +8,7 @@ permalink: module2-1.html
 ---
 
 
-Before we launch into design, let's do a CSS review.
 
-##CSS Review: Adding CSS
-
-###Inline 
-
-CSS is added to a specific HTML element using the style *attribute*.
-
-<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
-</code></pre>
-
-###Internal
-Included in the `<head>` with a `<style>` tag.
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    &lt;meta charset="utf-8"&gt;
-    <strong>&lt;style&gt;</strong>
-      p {
-        color: red;
-      }
-    <strong>&lt;/style&gt;</strong>
- &lt;/head&gt;
-</code></pre>
-
-###External
-Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
-
-<pre><code>&lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
-&lt;/head&gt;
-</code></pre>
-
-> What are the pros & cons of each technique?
-
-
-##CSS Review: Selectors
-
-**Type selectors** target HTML elements by their element tag name. 
-
-    p {
-      /* targets all paragraphs */
-    }
-
-**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
-
-    <p class="special">This is a special paragraph</p>
-
----
-    
-    .special {
-      /* applies to any element with this class */ 
-    }
-    p.special {
-      /* more specific - applies only to paragraphs with this class */
-    }
-
-**ID selectors** can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
-
-    #about {
-      /* applies to any element with this id */ 
-    }
-    section#about {
-      /* more specific - applies only to a section element with this id */
-    }
 
 ##Web Design vs Web development
 
@@ -392,6 +327,76 @@ Now you can use these new fonts with the `font-family` property, using the font 
 ![]({{ site.img }}/module2/google-fonts.png)
 
 
+Before going into the next exercise, let's do a CSS review.
+
+<br>
+
+##CSS Review: Adding CSS
+
+###Inline 
+
+CSS is added to a specific HTML element using the style *attribute*.
+
+<pre><code>&lt;p <strong>style="color:red;</strong>"&gt;This paragraph will be red.&lt;/p&gt;
+</code></pre>
+
+###Internal
+Included in the `<head>` with a `<style>` tag.
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    <strong>&lt;style&gt;</strong>
+      p {
+        color: red;
+      }
+    <strong>&lt;/style&gt;</strong>
+ &lt;/head&gt;
+</code></pre>
+
+###External
+Add the CSS to a separate stylesheet (`.css` file).  Use the `<link>` tag to reference the css file in the HTML page. Note that the `<style>` tag is **not** required for this method.
+
+<pre><code>&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    <strong>&lt;link rel="stylesheet" href="filepath/filename.css"&gt;</strong>
+&lt;/head&gt;
+</code></pre>
+
+> What are the pros & cons of each technique?
+
+
+##CSS Review: Selectors
+
+**Type selectors** target HTML elements by their element tag name. 
+
+    p {
+      /* targets all paragraphs */
+    }
+
+**Class selectors** are added using a class *attribute* to any element. Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
+
+    <p class="special">This is a special paragraph</p>
+
+---
+    
+    .special {
+      /* applies to any element with this class */ 
+    }
+    p.special {
+      /* more specific - applies only to paragraphs with this class */
+    }
+
+**ID selectors** can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
+
+    #about {
+      /* applies to any element with this id */ 
+    }
+    section#about {
+      /* more specific - applies only to a section element with this id */
+    }
+    
+    
 >##EXERCISE: Google Fonts
 >1. Choose two fonts from [Google Fonts](https://www.google.com/fonts) to use for the typography exercise.
 1. Download the <a href="exercises/module2/typography-1.html" download>typography-1.html</a> exercise file.

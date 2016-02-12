@@ -6,6 +6,21 @@ title: Forms & Data Manipulation with Sheets
 permalink: module4-1.html
 ---
 
+
+<!-- 
+##Intro to form design
+
+When design a form, there are many things to consider such as:
+
+* space, padding and layout
+* icons and typography
+* simplicity & ease of use
+* displaying validation error
+* form steps and progress
+* primary and secondary buttons
+
+With these considerations in mind, let's look at some of the rules listed in this article, [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/). -->
+
 ##Intro to HTML Forms
 
 * used to capture information from users

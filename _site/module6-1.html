@@ -292,6 +292,237 @@ Tags: eggs, kid friendly, under 30mins
   <li><a href="https://en.support.wordpress.com/video-quick-start/#find-a-theme">https://en.support.wordpress.com/video-quick-start/#find-a-theme</a></li>
 </ul>
 
+<h2 id="theme-development-options">Theme Development options</h2>
+
+<p>There are three options for adding themes to your WordPress site.</p>
+
+<h3 id="option-1-free--premium-themes">Option 1: Free &amp; Premium Themes</h3>
+
+<ul>
+  <li>only pay for domain, hosting &amp; cost of theme (from free to ~ $300)</li>
+  <li>does not require any coding (though you still have access to the codebase)</li>
+  <li>includes some theme options that can be updated in the WordPress admin area</li>
+</ul>
+
+<h3 id="option-2-child-themes">Option 2: Child themes</h3>
+
+<ul>
+  <li>used to modify a theme without making any changes to the parent theme’s files</li>
+  <li>inherits the features of its parent theme including updates</li>
+  <li>will require some knowledge of HTML, CSS and PHP</li>
+  <li>should develop locally using a local server</li>
+</ul>
+
+<h3 id="option-3-custom-themes">Option 3: Custom themes</h3>
+
+<ul>
+  <li>built from scratch or from a starter template</li>
+  <li>requires a deeper knowledge of HTML, CSS, PHP or get really good at following the <a href="https://codex.wordpress.org/">WordPress documentation</a>!</li>
+  <li>should develop locally using a local server</li>
+</ul>
+
+<p>We’ll be sticking to Option 1 for the remainder of this lesson but there are some extra <a href="#bonus-local-wordpress-theme-development">resources and information</a> included at the end of this lesson for further exploration.</p>
+
+<h2 id="choosing-a-theme">Choosing a Theme</h2>
+
+<p>There a many different themes to choose from with different styles. Here are some features and options to look for when picking a theme:</p>
+
+<h3 id="responsive">Responsive</h3>
+
+<p>Look for a responsive theme so the design can adapt to different screen sizes for various devices. A separate mobile site or mobile plugin will not be needed to resize or rearrange content for different sized screens.</p>
+
+<h3 id="columns">Columns</h3>
+
+<p>Columns are basic website design elements. They allow you to display your content in chunks that are visually appealing. For example, you can have a larger main content area and a sidebar or use a layout that look like magazines and newspapers with more equal column widths.</p>
+
+<h3 id="page-layouts">Page Layouts</h3>
+
+<p>Layout determines the overall look and feel of your blog. Consider how (or if) certain content is displayed such as the site title, subheading, tags, categories, main menu, etc.</p>
+
+<h3 id="theme-support">Theme support</h3>
+
+<p>Some themes don’t include support for certain types of content (e.g. the tagline in the previous example). When choosing a theme, you can view and test out different customization options</p>
+
+<h2 id="configure-basic-site-settings">Configure basic site settings</h2>
+
+<p>In the admin panel, go to <strong>Settings &gt; General</strong>.</p>
+
+<p>Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select <strong>Save Changes</strong>!</p>
+
+<h2 id="adding-content">Adding content</h2>
+
+<blockquote>
+  <p>Open a post or page and try out some of the options listed below in the editor.</p>
+</blockquote>
+
+<p>When adding content into your <strong>Post</strong> or <strong>Page</strong>, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the <strong>Toolbar Toggle</strong> to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.</p>
+
+<p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.</p>
+
+<p><img src="assets/img/module6/adding-content-wysiwyg.png" alt="" /></p>
+
+<h3 id="wordpress-and-html">WordPress and HTML</h3>
+
+<p>You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
+
+<p>In WordPress, you don’t need to add the <code>&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
+
+<p><img src="assets/img/module6/editor-visual-p.png" alt="" /></p>
+
+<p>In the <strong>Text</strong> editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into <code>&lt;p&gt;</code> tags via Wordpress magic!</p>
+
+<p><img src="assets/img/module6/editor-text-p.png" alt="" /></p>
+
+<p>Also, break tags <code>&lt;br&gt;</code> are also not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
+
+<p><img src="assets/img/module6/editor-line-break.png" alt="" /></p>
+
+<h2 id="slug-posts--pages">Slug: Posts &amp; Pages</h2>
+
+<p>A WordPress slug is a few words used to describe a post, page, category, or tag within WordPress.</p>
+
+<p>In posts and pages, the slug appears in the URL and is generated automatically based on the title. It can be changed manually to something different from the title but it’s best to keep them simple and relevant.</p>
+
+<p>Select <strong>Edit</strong> to change it manually.</p>
+
+<p><img src="assets/img/module6/dashboard-slug-automatic.png" alt="" /></p>
+
+<h2 id="slug-categories--tags">Slug: Categories &amp; Tags</h2>
+
+<p>Slugs can also be used in categories and tags and are also automatically generated.</p>
+
+<p>Note that the <strong>WordPress.com</strong> version does not have an option to manually update the slug for categories and tags but the <strong>WordPress.org</strong> version does.</p>
+
+<p>Slugs can be found under the <strong>Post &gt; Categories</strong> and <strong>Post &gt; Tags</strong> menu.</p>
+
+<p>Though your tag &amp; category names can contain spaces and special characters, it will be converted to a dash for the slug to make it URL friendly.</p>
+
+<p><img src="assets/img/module6/dashboard-slugs-tags-categories.png" alt="" /></p>
+
+<h2 id="default-home-page-settings">Default Home page settings</h2>
+
+<p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content. These template files are also used to display just a specific <em>portion</em> of a page.</p>
+
+<p><img src="assets/img/module6/wp-theme-files.jpg" alt="" /></p>
+
+<p><br />
+Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
+
+<p>To update these settings, follow these steps:</p>
+
+<ol>
+  <li>If you don’t already have a page to use as your home page, create one</li>
+  <li>
+    <p>Create a <em>blank</em> blog page</p>
+
+    <p>This page does not need any content because there is already a template file used to display the blog post listing.</p>
+
+    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code>http://yoursite.com/blog</code> or <code>http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
+  </li>
+  <li>
+    <p>Change the settings</p>
+
+    <p>Under <strong>Settings &gt; Reading</strong>, select whichever page you want to show as the <strong>Front page</strong> (your homepage) and the blank page you created for the blog under <strong>Posts page</strong>.</p>
+
+    <p><img src="assets/img/module6/homepage-custom.jpg" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="create-a-custom-menu">Create a custom menu</h2>
+
+<p>Menus are a list of links, usually displayed as the navigation for your site. You can choose from Pages or Categories from within your WordPress site or a custom link (can link to an external site).</p>
+
+<p>The menu location may vary depending on the theme. Some themes also offer additional menus such as social links menus.</p>
+
+<p><img src="assets/img/module6/wp-menus.png" alt="" /></p>
+
+<p>You can also reorder the menus by dragging the menu options as well as make submenus by dragging it underneath another item.</p>
+
+<p><img src="assets/img/module6/menu-additions.gif" alt="" /></p>
+
+<h3 id="changing-themes--menus">Changing themes &amp; menus:</h3>
+
+<p>If you change your theme, you may have to go back to your Appearance &gt; Menus to add in the Menu Settings in again.</p>
+
+<p><img src="assets/img/module6/change-theme-menu.png" alt="" /></p>
+
+<h2 id="editor-menu">Editor menu</h2>
+
+<p>The Editor menu (<strong>Appearance &gt; Editor</strong>) allows access to the theme files where you can add edits to the template files.</p>
+
+<p><strong>Be careful when editing these files.</strong></p>
+
+<p>Normally, it would be best practice to edit these files <em>locally</em> so any changes made won’t be “live” before it’s ready but since the Flywheel demo site is password protected, the general public won’t be able to view it.</p>
+
+<p><strong>Pro tip!</strong> Make a backup copy of the file before editing it in case you need to put it back!</p>
+
+<p><img src="assets/img/module6/wp-editor-menu.png" alt="" /></p>
+
+<h3 id="template-tags">Template tags</h3>
+
+<p>WordPress uses <strong>template tags</strong> to pull data from the database and output it onto the page.  It is often mixed in with HTML so the data can be outputted into semantic HTML page layouts.</p>
+
+<p>Template tags are basically PHP functions (and look similar to JavaScript functions.) Note that WordPress (and most PHP developers) use the underscore naming convention and looks something like this:</p>
+
+<pre><code>template_tag()
+</code></pre>
+
+<p>Here’s a couple of common template tags:</p>
+
+<p><code>get_header()</code> - gets the header.php file and includes it in the current theme file<br />
+<code>the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
+
+<p><br />
+How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code>h2</code> heading.</p>
+
+<p><code>bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
+
+<pre><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
+</code></pre>
+
+<p><img src="assets/img/module6/site-title-settings.jpg" alt="" /></p>
+
+<h2 id="bonus-local-wordpress-theme-development">Bonus: Local WordPress Theme Development</h2>
+
+<p>Developing a WordPress theme <em>locally</em> requires downloading the WordPress core files and setting up a local server.</p>
+
+<h3 id="wordpress-core-files">WordPress Core Files</h3>
+
+<p>The core files can be downloaded here: <a href="https://wordpress.org/download/">https://wordpress.org/download/</a></p>
+
+<p>Though you can access all of these files, there are some that should never be edited. The majority of your edits will be contained in the <strong>wp-content</strong> folder since those files are specific to the WordPress theme.</p>
+
+<p>The one file outside of <strong>wp-content</strong> that you may need to edit is the <strong>wp-config.php</strong> file. It contains the website’s base configuration details, such as database connection information.</p>
+
+<p><img src="assets/img/module6/wp-core-files.jpg" alt="" /></p>
+
+<h3 id="setting-up-your-local-server">Setting up your local server</h3>
+
+<p>There are many ways to set up a local server.  Here are the instructions for using the <strong>DesktopServer App</strong>:</p>
+
+<ol>
+  <li>Download the DesktopServer app here: <a href="https://serverpress.com/get-desktopserver/">https://serverpress.com/get-desktopserver/</a>
+    <ul>
+      <li>View the video for downloading and installing the DesktopServer app: <a href="https://www.youtube.com/watch?v=d_MoCUKv3TI">https://www.youtube.com/watch?v=d_MoCUKv3TI</a></li>
+    </ul>
+  </li>
+  <li>Open the DesktopServer app and follow the steps outlined in the getting started video (<a href="https://www.youtube.com/embed/Po0MkaL8Fgc">https://www.youtube.com/embed/Po0MkaL8Fgc</a>) or using the written instructions <a href="https://serverpress.com/getting-started-with-desktopserver/">here</a>.</li>
+  <li>Once you’ve created a local WordPress site, you can access it with the <strong>Sites</strong> button.</li>
+</ol>
+
+<p>Another popular option is the  <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">Mamp</a> app.</p>
+
+<p><strong>Important!</strong> You will need to run a local server anytime you’re developing WordPress locally.</p>
+
+<h4 id="resources-2">Resources</h4>
+
+<ul>
+  <li><a href="https://codex.wordpress.org/">WordPress Codex</a></li>
+  <li><a href="https://developer.wordpress.org/themes/getting-started/">WordPress Theme Development Handbook</a></li>
+  <li><a href="https://managewp.com/edit-wordpress-website">How to Edit Your WordPress Website (Without Hacking Core Files)</a></li>
+  <li><a href="https://codex.wordpress.org/Editing_wp-config.php">Editing wp-config.php</a></li>
+</ul>
+
       </article>
     </main>
 
