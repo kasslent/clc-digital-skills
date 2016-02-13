@@ -8,12 +8,40 @@ permalink: module5-1.html
 class: module5-1
 ---
 
+##CSS vs JavaScript
 
-## JavaScript vs jQuery
+With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
+
+Some guidelines:
+
+If it can be accomplished with CSS, usually it's better to go with CSS.
+
+* keep in mind that HTML semantics and efficient & clean code comes first
+* if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!
+
+If it's a visual effect, that happens on page load, you *might* be able to use CSS
+
+* CSS is executed as soon as the page loads
+* new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
+* if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
+
+####Extra Resources
+
+* [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
+* [Animate.css](https://daneden.github.io/animate.css/)
+
+
+
+
+##JavaScript vs jQuery
 
 ### What is JavaScript?
-JavaScript controls the **behavior** of your web page. It allows you to do things such as animate items, hide or show items, react to user input and even process data. Basically, if you need the user to do "something" first (i.e. scroll) to show a specific effect or even content, you'll most likely need JavaScript.
+JavaScript controls the **behavior** of your web page. It allows you to do things such as:
 
+* animate items
+* hide or show items
+* react to user input (on scroll, on click)
+* and even process data 
 
 Here's what JavaScript looks like:
 
@@ -23,7 +51,10 @@ Here's what JavaScript looks like:
     }
     sayHello();
 
-Unlike HTML & CSS, JavaScript is a *programming* language, so the structure and syntax is more complex. JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops**, which are the basic building blocks for many different programming languages.
+<br>
+Unlike HTML & CSS, JavaScript is a *programming* language, so the structure and syntax is more complex. 
+
+JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops**, which are the basic building blocks for many different programming languages.
  
 
 ### What is jQuery?
@@ -39,10 +70,9 @@ jQuery is a cross-browser JavaScript *library* used to simplify your program.
 
     $("#status")
 
-Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have at least a basic understanding of JavaScript principles to make sense of how jQuery works.
+Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have a base understanding of JavaScript principles to make sense of how jQuery works.
 
-Let's go through some high level JavaScript basics.  Some of these concepts may feel abstract but try to take note of the syntax. This will help to recognize the syntax patterns when using jQuery.
-
+Let's go through some JavaScript basics.
 
 ## The Console
 
@@ -62,8 +92,9 @@ Note the `>` symbol. It is used by the console to represent a space for you to e
 
 ### Types: Numbers
 
-JavaScript values can be one of several different data *types*. The most basic is a number. JavaScript can also do math. 
+JavaScript values can be one of several different data *types*. The most basic is a number. 
 
+JavaScript can also do math.  
 Use `+` for addition, `-` for subtraction, `*` for multiplication and `/` for division.
 
 > Let's try out a couple math exercises in the console. 
@@ -108,11 +139,10 @@ There are two ways to write comments.
     
 ### Intro to Functions
 
-JavaScript generally executes one line at a time from top to bottom. 
+JavaScript generally executes one line at a time, from top to bottom. 
 
 Functions can be used to execute a repetitive set of instructions by grouping multiple commands into one name.  There are functions built into the language and you can also create your own.
 
-<!-- Let&#39;s look at two built-in functions, `alert()` and `prompt()`. -->
 Let&#39;s look at the `alert()` function.
 
 Note the syntax for functions, the parentheses `()`, must be included.
@@ -123,9 +153,9 @@ Also, commands end with a semi-colon `;` to indicate that the instruction is com
 
 ### Functions and Arguments
 
-<!-- We&#39;ve seen now that the `alert()` and `prompt()` functions create a pop-up in the browser.  But the pop-ups are blank.  *Pass* an `argument` into these functions by adding a value *within* the parentheses `()`.  -->
 We&#39;ve seen now that the `alert()` function creates a pop-up in the browser.  But the pop-up is blank.  *Pass* an `argument` into this function by adding a value *within* the parentheses `()`. 
 
+Note the use of quotes for string types.
 
 >Try this in the console:
 >
@@ -133,15 +163,12 @@ We&#39;ve seen now that the `alert()` function creates a pop-up in the browser. 
 >
 >Try using the function again but with a different argument.
 
-<!-- 
-    prompt("What day is it today?"); -->
-
 
 Whatever value you put within the parentheses will get *passed* into the function. That way, you can re-use the function with different arguments.
 
 ### Make your own functions
 
-To create your own functions, use the keyword `function` and give it a name.  See below for the syntax.
+To create your own functions, use the keyword `function` and give it a name.
 
     function nameOfFunction(){
       // instructions go here
@@ -250,9 +277,11 @@ The second one kind of looks like a function right?
 
 `alert()` is a **function** that works on its own.
 
-`log()` is also a function as well but it is attached to the `console` *object*, using dot notation described in the previous section. So when a function is attached to an object, it's considered a method. It will **log a message** into the **console**.
+`log()` is also a function but it is attached to the `console` *object*, using dot notation described in the previous section. 
 
-`console.log()` can be used to test and debug by outputting values in the console itself rather than using `alert()`. No more pesky pop-ups!
+When a function is attached to an object, it's referred to as a method. It will **log a message** into the **console**.
+
+`console.log()` can be used to test and debug by outputting values in the browser console itself rather than using `alert()`. No more pesky pop-ups!
 
     alert("hello!"); /* will show as a popup */
     console.log("hi!"); /* will show in only the console */
@@ -266,7 +295,7 @@ When you store any amount of text, like words or sentences, the *type* is a **st
 
     var myVariable = "Hello class!";
 
-You can join strings together using the `+` symbol. This is called **concatenation**.  You join actual strings or strings contained in a variable.
+You can join strings together using the `+` symbol. This is called **concatenation**.  You can join actual strings or strings contained in a variable.
 
     var name = "Ladies Learning Code";
     var greeting = "Hello " + name + "!";
@@ -338,7 +367,7 @@ You can also chain them together to create multiple effects.
 There are two ways to add JavaScript to a page.
 
 ### Inline
-Similar to internal CSS, add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
+Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
 
 However, it's often recommended to add the scripts to bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first. 
 
@@ -381,15 +410,21 @@ In jQuery, the document needs to be "ready" first.
       });
     </script>
 
-jQuery uses the `ready()` method to detect this state of readiness. This is a bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly. It only needs to be included once and add all the jQuery code in between the curly brackets `{}`. 
+#### $(document).ready()
+
+jQuery uses the `ready()` method to detect this state of readiness. 
+
+This is a bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly. 
+
+It only needs to be included *once*. Add all the jQuery code in *between* the curly brackets `{}`. 
   
 (In CodePen, you don't have to add it because it's already integrated into the tool.)
 
-Read more about `$( document ).ready()` [here](http://learn.jquery.com/using-jquery-core/document-ready/).
+**Extra resource**: <http://learn.jquery.com/using-jquery-core/document-ready/>
       
       
 ### External
-Again, just like CSS, you can also write JavaScript in a separate file.  To make it JavaScript file, name it using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
+Just like CSS, you can also write JavaScript/jQuery in a separate file using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
 
     <script src="folder/file.js"></script> 
 
@@ -409,7 +444,7 @@ Similar to Google Fonts or any third party tool, you have to reference the file 
 
 [Download](http://jquery.com/download/) the latest version of jQuery and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.
 
-Use the `<script>` tag to reference the file but in the src, link to where the file is saved in your project's directory and the *exact file name*.  Make sure to add it *before* your custom JavaScript file.
+Use the `<script>` tag to reference the file but in the `src`, link to where the file is saved in your project's directory and the *exact file name*.  Make sure to add it *before* your JavaScript file.
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/custom.js"></script>

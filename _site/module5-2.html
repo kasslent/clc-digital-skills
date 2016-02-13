@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>jQuery & Plugins</title>
-  <meta name="description" content="CSS vs JavaScript">
+  <meta name="description" content="jQuery Click Events">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
-<body class="module5-2">
+<body class="">
   <header>
     <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
     <h1>Digital Skills Program</h1>
@@ -40,39 +40,37 @@
         <h4>jQuery & Plugins</h4>
       </nav>
       
-      <article class="module5-2" >
+      <article>
         <h1>jQuery & Plugins</h1>
-        <h2 id="css-vs-javascript">CSS vs JavaScript</h2>
+        <h2 id="jquery-click-events">jQuery Click Events</h2>
 
-<p>With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.</p>
+<p>Let’s do a review of the jQuery click events from the last lesson.</p>
 
-<p>Some guidelines:</p>
+<h4 id="syntax">Syntax</h4>
 
-<p>If it can be accomplished with CSS, usually it’s better to go with CSS.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$( "selector" ).click(function() {
+  // code to be executed on click
+});
+</code></pre>
+</div>
 
-<ul>
-  <li>keep in mind that HTML semantics and efficient &amp; clean code comes first</li>
-  <li>if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!</li>
-</ul>
+<p><a href="http://codepen.io/learningcode/pen/WQYpxG">CodePen example</a>.</p>
 
-<p>If it’s a visual effect, that happens on page load, you <em>might</em> be able to use CSS</p>
+<p><strong>Resource</strong>: <a href="http://api.jquery.com/click/">http://api.jquery.com/click/</a></p>
 
-<ul>
-  <li>CSS is executed as soon as the page loads</li>
-  <li>new CSS3 property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"><code class="highlighter-rouge">@keyframes</code></a>, allows for timing delays but still not attached to user actions</li>
-  <li>if it requires user interaction (e.g. when user clicks, when user scrolls), then it’s usually JS</li>
-</ul>
+<h2 id="documentation--finding-answers">Documentation &amp; Finding Answers</h2>
 
-<h4 id="extra-resources">Extra Resources</h4>
+<p>A part of web development is reading tutorials, articles and documentation.</p>
 
-<ul>
-  <li><a href="http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html">Getting Started with CSS3 Transitions and Animation</a></li>
-  <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
-</ul>
+<p>Another important part is knowing how to ask directed questions to find the answers.</p>
+
+<blockquote>
+  <p>Discussion: What are some search techniques or resources that can be used to find answers?</p>
+</blockquote>
 
 <h2 id="click-event--an-active-menu">Click event &amp; an “active” menu</h2>
 
-<p>Here’s an example of a navigation effect that can be added to a website.</p>
+<p>Here’s an example of a navigation effect that can be added to a one page website.</p>
 
 <p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/XJwKBb/">XJwKBb</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
@@ -81,16 +79,41 @@
 
 <ol>
   <li>Select the elements to be clicked.</li>
+  <li>Test if you have correctly selected the element with <code class="highlighter-rouge">console.log()</code>.</li>
   <li>Add a class of “active” to the active link (the link that was clicked) using <code class="highlighter-rouge">addClass()</code>.</li>
   <li>Add the “active” class style to the CSS file.</li>
   <li>When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.</li>
 </ol>
 
+<blockquote>
+  <h2 id="class-exercise-active-menu">Class Exercise: “Active” menu</h2>
+  <p>Download the <a href="exercises/module5/javascript.html" download="">javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user’s click.</p>
+</blockquote>
+
 <h2 id="plugins">Plugins</h2>
 
-<p>The jQuery library contains many methods and lots of other features but you can extend it even further by creating a <strong>plugins</strong> or using many of the plugins made by the jQuery team or created by other people.</p>
+<p>A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress).</p>
 
-<p>Let’s take a look at a basic smooth scroll plugin (<a href="https://github.com/cferdinandi/smooth-scroll">https://github.com/cferdinandi/smooth-scroll</a>) and add it to our project. (This one is all JavaScript, no jQuery!)</p>
+<p>The jQuery library contains many methods and features but you can extend it even further by using plugins.</p>
+
+<p>Let’s take a look at one of many <a href="https://github.com/cferdinandi/smooth-scroll">smooth scroll plugins</a>. (This one is all JavaScript, no jQuery!)</p>
+
+<blockquote>
+  <h2 id="class-exercise-smooth-scroll">Class Exercise: Smooth scroll</h2>
+  <p>Using the previous exercise file, add the smooth scroll plugin.<br />
+Let’s follow the instructions listed in the plugin developers <a href="https://github.com/cferdinandi/smooth-scroll">site</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Bonus exercises:</p>
+
+  <ol>
+    <li>Set the navigation to be fixed at the top of the page.</li>
+    <li>Use the <a href="https://github.com/cferdinandi/smooth-scroll#options-and-settings">plugin options</a> to add an “offset” option, so you can position where the page scrolls to.</li>
+  </ol>
+
+  <p>Solution file for both exercises can be <a href="exercises/module5/javascript-solution.zip">downloaded here</a>.</p>
+</blockquote>
 
 <h2 id="more-plugins">More Plugins!</h2>
 
@@ -100,7 +123,8 @@
   <li><a href="http://www.woothemes.com/flexslider/">Flexslider</a> (photo slider)</li>
 </ul>
 
-<p>~ end ~</p>
+<p><br />
+~ end ~</p>
 
       </article>
     </main>

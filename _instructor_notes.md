@@ -18,6 +18,7 @@
   * trying starting with 10-15 minutes, then check on the progress of the students and gauge from there
   * encourage them to work in pairs and their mentors
   * review it together after
+  * exercises sometimes include creating external CSS & JS files so students can practice file management, others include inline CSS & JS file just to reduce the switching between multiple files and also give students practice for using both techniques.
 * Homework
   * There are no official homework assignments so encourage students to use exercise time to ask questions and attend drop in sessions.
   * No homework is assigned to make it possible for students to balance work and this course.
@@ -96,4 +97,14 @@ The Google form used in the class exercise links to one form.  Get the class to 
 
 #### Lesson 2
 Expect and encourage a more discussion based lesson for SEO.
+
+
+### Module 5
+####Lesson 2 
+
+For the smoothscroll exercise, use the plugin's readme file to get the students used to reading documentation.
+
+If there is time, the bonus exercise is to make the nav fixed so you can add additional plugin options such as the offset. A solutions file is included in the exercise. 
+
+If you still have time at the end of the class, let the students pick what they want to go over from any of the plugin resources listed in the the lesson or one of your choice.
 

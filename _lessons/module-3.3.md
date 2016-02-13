@@ -228,7 +228,7 @@ The `position` property can also be used to lay out HTML elements and has five d
 
 * takes the same value as its parent
 
-> Let's try these values in [CodePen](http://codepen.io/learningcode/pen/PPedPQ)
+> Let's try these values in [CodePen](http://codepen.io/learningcode/pen/PPedPQ).
 
 
 ### Extra resource

@@ -3,53 +3,73 @@ layout: lessons
 module: 5
 lesson: 2
 title: jQuery & Plugins
+description: Exploring jQuery and extending the library with Plugins.
 permalink: module5-2.html
-class: module5-2
 ---
 
-##CSS vs JavaScript
+## jQuery Click Events
 
-With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
+Let's do a review of the jQuery click events from the last lesson.
 
-Some guidelines:
+#### Syntax
+ 
+    $( "selector" ).click(function() {
+      // code to be executed on click
+    });
 
-If it can be accomplished with CSS, usually it's better to go with CSS.
+[CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
 
-* keep in mind that HTML semantics and efficient & clean code comes first
-* if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!
+**Resource**: <http://api.jquery.com/click/>
 
-If it's a visual effect, that happens on page load, you *might* be able to use CSS
+## Documentation & Finding Answers
 
-* CSS is executed as soon as the page loads
-* new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
-* if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
+A part of web development is reading tutorials, articles and documentation.  
 
-####Extra Resources
+Another important part is knowing how to ask directed questions to find the answers.
 
-* [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
-* [Animate.css](https://daneden.github.io/animate.css/)
-
+> Discussion: What are some search techniques or resources that can be used to find answers?
 
 
 ##Click event & an "active" menu
 
-Here's an example of a navigation effect that can be added to a website.
+Here's an example of a navigation effect that can be added to a one page website.
 
 <p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/XJwKBb/'>XJwKBb</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
 Here's how to do it, broken down into steps.
 
-1. Select the elements to be clicked.
+1. Select the elements to be clicked. 
+1. Test if you have correctly selected the element with `console.log()`.
 1. Add a class of “active” to the active link (the link that was clicked) using `addClass()`.
 1. Add the “active” class style to the CSS file.
 1. When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.
 
+> ##Class Exercise: "Active" menu
+> Download the <a href="exercises/module5/javascript.html" download>javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user's click.
+
+
 ##Plugins
 
-The jQuery library contains many methods and lots of other features but you can extend it even further by creating a **plugins** or using many of the plugins made by the jQuery team or created by other people.
+A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress). 
 
-Let's take a look at a basic smooth scroll plugin (<https://github.com/cferdinandi/smooth-scroll>) and add it to our project. (This one is all JavaScript, no jQuery!) 
+The jQuery library contains many methods and features but you can extend it even further by using plugins.
+
+Let's take a look at one of many [smooth scroll plugins](https://github.com/cferdinandi/smooth-scroll). (This one is all JavaScript, no jQuery!) 
+
+
+> ##Class Exercise: Smooth scroll
+> Using the previous exercise file, add the smooth scroll plugin.  
+> Let's follow the instructions listed in the plugin developers [site](https://github.com/cferdinandi/smooth-scroll).
+
+> Bonus exercises:
+>
+> 1. Set the navigation to be fixed at the top of the page.
+> 1. Use the [plugin options](https://github.com/cferdinandi/smooth-scroll#options-and-settings) to add an "offset" option, so you can position where the page scrolls to.
+>
+> Solution file for both exercises can be [downloaded here](exercises/module5/javascript-solution.zip).
+
+
 
 ##More Plugins!
 
@@ -57,4 +77,5 @@ Let's take a look at a basic smooth scroll plugin (<https://github.com/cferdinan
 * [The jQuery Plugin Registry](https://plugins.jquery.com/)
 * [Flexslider](http://www.woothemes.com/flexslider/) (photo slider)
 
+<br>
 ~ end ~

@@ -2,7 +2,7 @@
 layout: lessons
 module: 1
 lesson: 2
-title: The Language of the Web
+title: HTML Fundamentals
 description: HTML review and introduction to CSS.
 permalink: module1-2.html
 ---
