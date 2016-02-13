@@ -324,14 +324,15 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
   <li><a href="http://www.cssfontstack.com">cssfontstack.com</a></li>
 </ul>
 
-<h3 id="css-font-family">CSS <code>font-family</code></h3>
+<h3 id="css-font-family">CSS <code class="highlighter-rouge">font-family</code></h3>
 
-<p>In CSS, to change the default typeface, use the <code>font-family</code> property.</p>
+<p>In CSS, to change the default typeface, use the <code class="highlighter-rouge">font-family</code> property.</p>
 
-<pre><code>body {
+<div class="highlighter-rouge"><pre class="highlight"><code>body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 </code></pre>
+</div>
 
 <ul>
   <li>best practice is to list at least 2 options</li>
@@ -397,19 +398,20 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
   <li>Review to compare selections and <strong>Use</strong> to get the code.
 <img src="assets/img/module2/google-fonts-2.jpg" alt="" /></li>
   <li>Select font weights. The more you choose, the more it will slow down page load time.</li>
-  <li>Copy the <code>&lt;link&gt;</code> code snippet and add it to the <code>&lt;head&gt;</code> of your page to reference their CSS.</li>
+  <li>Copy the <code class="highlighter-rouge">&lt;link&gt;</code> code snippet and add it to the <code class="highlighter-rouge">&lt;head&gt;</code> of your page to reference their CSS.</li>
 </ol>
 
 <hr />
-<pre><code>&lt;head&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;My Website Title&lt;/title&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'&gt;
   &lt;link rel="stylesheet" href="css/styles.css"&gt;
 &lt;/head&gt;
 </code></pre>
+</div>
 
-<p>Now you can use these new fonts with the <code>font-family</code> property, using the font name listed in the example on the Google Fonts page.</p>
+<p>Now you can use these new fonts with the <code class="highlighter-rouge">font-family</code> property, using the font name listed in the example on the Google Fonts page.</p>
 
 <p><img src="assets/img/module2/google-fonts.png" alt="" /></p>
 
@@ -427,7 +429,7 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
 </code></pre>
 
 <h3 id="internal">Internal</h3>
-<p>Included in the <code>&lt;head&gt;</code> with a <code>&lt;style&gt;</code> tag.</p>
+<p>Included in the <code class="highlighter-rouge">&lt;head&gt;</code> with a <code class="highlighter-rouge">&lt;style&gt;</code> tag.</p>
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
@@ -441,7 +443,7 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
 </code></pre>
 
 <h3 id="external">External</h3>
-<p>Add the CSS to a separate stylesheet (<code>.css</code> file).  Use the <code>&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code>&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
+<p>Add the CSS to a separate stylesheet (<code class="highlighter-rouge">.css</code> file).  Use the <code class="highlighter-rouge">&lt;link&gt;</code> tag to reference the css file in the HTML page. Note that the <code class="highlighter-rouge">&lt;style&gt;</code> tag is <strong>not</strong> required for this method.</p>
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
@@ -457,35 +459,39 @@ A <strong>style guide</strong> defines the visual identity for you or your brand
 
 <p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
 
-<pre><code>p {
+<div class="highlighter-rouge"><pre class="highlight"><code>p {
   /* targets all paragraphs */
 }
 </code></pre>
+</div>
 
 <p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element. Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
 
-<pre><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
 </code></pre>
+</div>
 
 <hr />
 
-<pre><code>.special {
+<div class="highlighter-rouge"><pre class="highlight"><code>.special {
   /* applies to any element with this class */ 
 }
 p.special {
   /* more specific - applies only to paragraphs with this class */
 }
 </code></pre>
+</div>
 
-<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code>#</code>).</p>
+<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code class="highlighter-rouge">#</code>).</p>
 
-<pre><code>#about {
+<div class="highlighter-rouge"><pre class="highlight"><code>#about {
   /* applies to any element with this id */ 
 }
 section#about {
   /* more specific - applies only to a section element with this id */
 }
 </code></pre>
+</div>
 
 <blockquote>
   <h2 id="exercise-google-fonts">EXERCISE: Google Fonts</h2>
@@ -493,7 +499,7 @@ section#about {
     <li>Choose two fonts from <a href="https://www.google.com/fonts">Google Fonts</a> to use for the typography exercise.</li>
     <li>Download the <a href="exercises/module2/typography-1.html" download="">typography-1.html</a> exercise file.</li>
     <li>Add the Google Fonts CSS file to the <strong>typography-1.html</strong> exercise file downloaded in the previous step.</li>
-    <li>Follow the instructions listed under the <code>TYPOGRAPHY EXERCISE #1</code> CSS comments.</li>
+    <li>Follow the instructions listed under the <code class="highlighter-rouge">TYPOGRAPHY EXERCISE #1</code> CSS comments.</li>
     <li>Review the answers together!</li>
   </ol>
 
@@ -503,37 +509,39 @@ Move this exercise file from your downloads folder and add it somewhere you can 
 
 <h2 id="more-css-typography">More CSS typography</h2>
 
-<h3 id="font-weight--font-style"><code>font-weight</code> &amp; <code>font-style</code></h3>
+<h3 id="font-weight--font-style"><code class="highlighter-rouge">font-weight</code> &amp; <code class="highlighter-rouge">font-style</code></h3>
 
 <p>Remember, use HTML for <em>meaning</em> and CSS for <em>presentation</em>. It doesn’t matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!</p>
 
-<pre><code>font-weight: bold; /* makes text bold */
+<div class="highlighter-rouge"><pre class="highlight"><code>font-weight: bold; /* makes text bold */
 font-weight: normal; /* removes bold style */
 </code></pre>
+</div>
 
 <hr />
-<pre><code>font-style: italic; /* sets text to italic */
+<div class="highlighter-rouge"><pre class="highlight"><code>font-style: italic; /* sets text to italic */
 font-style: normal; /* removes italic style */
 </code></pre>
+</div>
 
-<h3 id="text--properties"><code>text-</code> properties</h3>
+<h3 id="text--properties"><code class="highlighter-rouge">text-</code> properties</h3>
 
-<p><strong><code>text-align</code></strong><br />
-Used for aligning text and accepts five values: <code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code> and <code>inherit</code>.</p>
+<p><strong><code class="highlighter-rouge">text-align</code></strong><br />
+Used for aligning text and accepts five values: <code class="highlighter-rouge">left</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">justify</code> and <code class="highlighter-rouge">inherit</code>.</p>
 
-<p><strong><code>text-decoration</code></strong> <br />
-Most commonly used to add or remove underlines but accepts these five values: <code>none</code>, <code>underline</code>, <code>overline</code>, <code>line-through</code> and <code>inherit</code></p>
+<p><strong><code class="highlighter-rouge">text-decoration</code></strong> <br />
+Most commonly used to add or remove underlines but accepts these five values: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">underline</code>, <code class="highlighter-rouge">overline</code>, <code class="highlighter-rouge">line-through</code> and <code class="highlighter-rouge">inherit</code></p>
 
-<p><strong><code>text-transform</code></strong><br />
-Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase</code>, <code>lowercase</code> and <code>inherit</code>.</p>
+<p><strong><code class="highlighter-rouge">text-transform</code></strong><br />
+Accepts five values: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">capitalize</code>, <code class="highlighter-rouge">uppercase</code>, <code class="highlighter-rouge">lowercase</code> and <code class="highlighter-rouge">inherit</code>.</p>
 
 <ul>
-  <li><code>capitalize</code> capitalizes the first letter of each word</li>
-  <li><code>uppercase</code> value will capitalize every letter</li>
-  <li><code>lowercase</code> value will make every letter lowercase</li>
+  <li><code class="highlighter-rouge">capitalize</code> capitalizes the first letter of each word</li>
+  <li><code class="highlighter-rouge">uppercase</code> value will capitalize every letter</li>
+  <li><code class="highlighter-rouge">lowercase</code> value will make every letter lowercase</li>
 </ul>
 
-<p>Note that when a CSS property accepts <code>inherit</code> as a value, it will inherit the style set in either the parent or nearest ancestor element. <code>none</code> usually removes the style defined by that property.</p>
+<p>Note that when a CSS property accepts <code class="highlighter-rouge">inherit</code> as a value, it will inherit the style set in either the parent or nearest ancestor element. <code class="highlighter-rouge">none</code> usually removes the style defined by that property.</p>
 
 <blockquote>
   <h2 id="class-exercise-typography--codepen">CLASS EXERCISE: Typography &amp; CodePen</h2>
@@ -543,30 +551,32 @@ Accepts five values: <code>none</code>, <code>capitalize</code>, <code>uppercase
 </blockquote>
 
 <blockquote>
-  <h2 id="exercise-type---font--properties">EXERCISE: <code>type-</code> &amp; <code>font-</code> properties</h2>
-  <p>Back in <strong>typography-1.html</strong>, practice using these CSS techniques in your editor and complete the instructions listed under the <code>TYPOGRAPHY EXERCISE #2</code> comments.</p>
+  <h2 id="exercise-type---font--properties">EXERCISE: <code class="highlighter-rouge">type-</code> &amp; <code class="highlighter-rouge">font-</code> properties</h2>
+  <p>Back in <strong>typography-1.html</strong>, practice using these CSS techniques in your editor and complete the instructions listed under the <code class="highlighter-rouge">TYPOGRAPHY EXERCISE #2</code> comments.</p>
 </blockquote>
 
 <p>These are just a few type related CSS properties.  We’ll be going over more in the next lesson.</p>
 
-<h2 id="bonus-font-face">Bonus: <code>@font-face</code></h2>
+<h2 id="bonus-font-face">Bonus: <code class="highlighter-rouge">@font-face</code></h2>
 
-<p>The <code>@font-face</code> CSS3 method can be used to embed and load fonts files that are not <em>hosted</em> online like Google Fonts.  These font files are downloaded and included in your folder directory.</p>
+<p>The <code class="highlighter-rouge">@font-face</code> CSS3 method can be used to embed and load fonts files that are not <em>hosted</em> online like Google Fonts.  These font files are downloaded and included in your folder directory.</p>
 
-<p><code>@font-face</code> must be declared in your CSS files first <em>before</em> you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.</p>
+<p><code class="highlighter-rouge">@font-face</code> must be declared in your CSS files first <em>before</em> you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.</p>
 
-<pre><code>@font-face {
+<div class="highlighter-rouge"><pre class="highlight"><code>@font-face {
   font-family: 'Font Name';
   src: url('file-path/font-file.woff2') format('woff2'),
        url('file-path/font-file.woff') format('woff');
 }
 </code></pre>
+</div>
 
 <hr />
-<pre><code>font-family: 'Font Name', second-option, sans-serif;
+<div class="highlighter-rouge"><pre class="highlight"><code>font-family: 'Font Name', second-option, sans-serif;
 </code></pre>
+</div>
 
-<p>This snippet links the font files to the CSS, as well as declares a <code>font-family</code> name.</p>
+<p>This snippet links the font files to the CSS, as well as declares a <code class="highlighter-rouge">font-family</code> name.</p>
 
 <p><em>Pro tip!</em> <br />
 You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.</p>
@@ -574,8 +584,8 @@ You can choose any font name and rename the font files to anything you wish, so 
 <h3 id="extra-resources-1">Extra Resources</h3>
 
 <ul>
-  <li><a href="https://css-tricks.com/snippets/css/using-font-face/">CSS Tricks</a> - more about <code>font-face</code> and older browser support</li>
-  <li><a href="http://www.fontsquirrel.com/">Font Squirrel</a> - free fonts for downloads and <code>@font-face</code> generator (for creating cross-browser font file types)</li>
+  <li><a href="https://css-tricks.com/snippets/css/using-font-face/">CSS Tricks</a> - more about <code class="highlighter-rouge">font-face</code> and older browser support</li>
+  <li><a href="http://www.fontsquirrel.com/">Font Squirrel</a> - free fonts for downloads and <code class="highlighter-rouge">@font-face</code> generator (for creating cross-browser font file types)</li>
   <li><a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts: Getting Started</a></li>
 </ul>
 
@@ -587,12 +597,14 @@ You can choose any font name and rename the font files to anything you wish, so 
     </main>
 
       <footer>
-    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
   </footer>
   <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>

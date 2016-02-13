@@ -37,3 +37,4 @@ Refer to **[_instructor_notes.md](_instructor_notes.md)** for general notes, tip
 
 ---
 Created by [Christina Truong](http://christinatruong.com) for Ladies Learning Code.
+SEO content created by [Daniel Butterfield](https://twitter.com/DanielButterf) for Ladies Learning Code.

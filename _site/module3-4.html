@@ -42,13 +42,13 @@
       
       <article>
         <h1>CSS Fundamentals</h1>
-        <p>Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s review some best practices and tips.</p>
+        <p>Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s go over some best practices and tips.</p>
 
 <h2 id="fluid-images-and-components">Fluid images and components</h2>
 
 <p>Use percentages to create flexible images.</p>
 
-<pre><code>img {
+<div class="highlighter-rouge"><pre class="highlight"><code>img {
   /* image stretches full width of its container */
   width: 100%;
 
@@ -57,76 +57,82 @@
   max-width: 100%;
 }
 </code></pre>
+</div>
 
-<p><a href="exercises/module3/sample/fluid-images.html">See example here</a>.</p>
+<p><a href="exercises/module3/sample/fluid-images.html" target="_blank">See example here</a>.</p>
 
 <p><br /></p>
 
 <p>This can also apply to page components.</p>
 
-<pre><code>.wrapper {
+<div class="highlighter-rouge"><pre class="highlight"><code>.wrapper {
   max-width: 800px;
   width: 80%;
   margin: 0 auto;
 }
 </code></pre>
+</div>
 
 <h2 id="background-images">Background images</h2>
 
-<p>So far we’ve used <code>background</code> for colours but it can also be used for setting background <em>images</em>.</p>
+<p>So far we’ve used <code class="highlighter-rouge">background</code> for colours but it can also be used for setting background <em>images</em>.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 background-image: url(folder/file.jpg); 
 
 /* shorthand */
 background: url(folder/file.jpg); 
 </code></pre>
+</div>
 
 <h3 id="files-paths--folder-directories">Files Paths &amp; Folder Directories</h3>
 
-<pre><code>project-folder
+<div class="highlighter-rouge"><pre class="highlight"><code>project-folder
   |---css (folder)
        |---styles.css
   |---images (folder) 
        |---picture.jpg
   |---index.html    
 </code></pre>
+</div>
 
 <p>To find the correct file path to add a background image using CSS, the starting point is <strong>styles.css</strong>.  If your folder directory looks like the above example, the steps to follow are:</p>
 
 <ol>
-  <li>navigate up and out of the css folder (<code>../</code>)</li>
-  <li>go into the images folder (<code>../images/</code>)</li>
-  <li>image file name (<code>../images/picture.jpg</code>)</li>
+  <li>navigate up and out of the css folder (<code class="highlighter-rouge">../</code>)</li>
+  <li>go into the images folder (<code class="highlighter-rouge">../images/</code>)</li>
+  <li>image file name (<code class="highlighter-rouge">../images/picture.jpg</code>)</li>
 </ol>
 
 <hr />
-<pre><code>background-image: url(../images/picture.jpg); 
+<div class="highlighter-rouge"><pre class="highlight"><code>background-image: url(../images/picture.jpg); 
 </code></pre>
+</div>
 
-<p>To navigate <em>up and out</em> of a folder, the syntax is always <code>../</code>  to represent moving up the directory by <em>one</em> folder, regardless of the folder name.</p>
+<p>To navigate <em>up and out</em> of a folder, the syntax is always <code class="highlighter-rouge">../</code>  to represent moving up the directory by <em>one</em> folder, regardless of the folder name.</p>
 
-<h3 id="background-repeat"><code>background-repeat</code></h3>
+<h3 id="background-repeat"><code class="highlighter-rouge">background-repeat</code></h3>
 
 <p>If the image file is <em>smaller</em> than the element with the background image applied to it, the image will automatically repeat to fill up the space.</p>
 
 <p><img src="assets/img/module3/background-repeat.jpg" alt="" /></p>
 
-<p>To keep the image from repeating, use the <code>background-repeat</code> property <strong>or</strong> add it to the shorthand <code>background</code> property.</p>
+<p>To keep the image from repeating, use the <code class="highlighter-rouge">background-repeat</code> property <strong>or</strong> add it to the shorthand <code class="highlighter-rouge">background</code> property.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/picture.jpg) no-repeat; 
 
 /* longhand */
 background-image: url(../images/picture.jpg); 
 background-repeat: no-repeat;
 </code></pre>
+</div>
 
-<h3 id="background-attachment"><code>background-attachment</code></h3>
+<h3 id="background-attachment"><code class="highlighter-rouge">background-attachment</code></h3>
 
-<p>When the page scrolls, all the content scrolls with it including the background image.  Adding <code>background-attachment: fixed;</code> will change that.</p>
+<p>When the page scrolls, all the content scrolls with it including the background image.  Adding <code class="highlighter-rouge">background-attachment: fixed;</code> will change that.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/picture.jpg) no-repeat fixed; 
 
 /* longhand */
@@ -134,45 +140,50 @@ background-image: url(../images/picture.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 </code></pre>
+</div>
 
 <h3 id="background-size">Background-size</h3>
 
-<p>CSS3 introduced the <code>background-size</code> property which can be used to change the size. The syntax is:</p>
+<p>CSS3 introduced the <code class="highlighter-rouge">background-size</code> property which can be used to change the size. The syntax is:</p>
 
-<pre><code>background-size: width height;
+<div class="highlighter-rouge"><pre class="highlight"><code>background-size: width height;
 </code></pre>
+</div>
 
-<p>The default values for width and height are <code>auto</code> and retains the original image dimensions. If only one value is defined, it is assumed to be the <code>width</code>.</p>
+<p>The default values for width and height are <code class="highlighter-rouge">auto</code> and retains the original image dimensions. If only one value is defined, it is assumed to be the <code class="highlighter-rouge">width</code>.</p>
 
 <p>There are several sizing dimensions: pixels, percentages and keywords.</p>
 
-<p><code>background-size</code> is the longhand property.</p>
+<p><code class="highlighter-rouge">background-size</code> is the longhand property.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 background-image: url(../images/background-1.jpg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: 50%;
 background-size: 100%;
 </code></pre>
+</div>
 
-<p>To include it in the shorthand <code>background</code> property, it <strong>must</strong> be included after <code>background-position</code>, separated with the <code>/</code> character.</p>
+<p>To include it in the shorthand <code class="highlighter-rouge">background</code> property, it <strong>must</strong> be included after <code class="highlighter-rouge">background-position</code>, separated with the <code class="highlighter-rouge">/</code> character.</p>
 
-<pre><code>/* shorthand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
 background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
 </code></pre>
+</div>
 
-<p><strong>Important</strong>: If no <code>background-position</code> value is being used, <code>background-size</code> will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.</p>
+<p><strong>Important</strong>: If no <code class="highlighter-rouge">background-position</code> value is being used, <code class="highlighter-rouge">background-size</code> will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.</p>
 
-<pre><code>background: url(../images/background-1.jpg) no-repeat fixed 50%;
+<div class="highlighter-rouge"><pre class="highlight"><code>background: url(../images/background-1.jpg) no-repeat fixed 50%;
 background-size: 100%;
 </code></pre>
+</div>
 
-<p><code>background-size</code> also accepts keyword values, <code>contain</code> and <code>cover</code>.</p>
+<p><code class="highlighter-rouge">background-size</code> also accepts keyword values, <code class="highlighter-rouge">contain</code> and <code class="highlighter-rouge">cover</code>.</p>
 
 <ul>
-  <li><code>contain</code> scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions</li>
-  <li><code>cover</code> scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped</li>
+  <li><code class="highlighter-rouge">contain</code> scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions</li>
+  <li><code class="highlighter-rouge">cover</code> scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped</li>
 </ul>
 
 <blockquote>
@@ -197,7 +208,7 @@ Uncomment each property, change some values and see what happens!</p>
 <p><a href="http://mediaqueri.es">mediaqueri.es</a> houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.</p>
 
 <p><img src="assets/img/module3/rwd-example.png" alt="" />
-Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (<code>1024px x 768px</code> or <code>1280px x 1024px</code>).</p>
+Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (<code class="highlighter-rouge">1024px x 768px</code> or <code class="highlighter-rouge">1280px x 1024px</code>).</p>
 
 <p>If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version.</p>
 
@@ -241,21 +252,22 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <h2 id="viewport-meta-tag">Viewport Meta Tag</h2>
 
-<p>The viewport meta tag is <strong>required</strong> in the <code>&lt;head&gt;</code> of the HTML document to ensure that the page responds on mobile devices.</p>
+<p>The viewport meta tag is <strong>required</strong> in the <code class="highlighter-rouge">&lt;head&gt;</code> of the HTML document to ensure that the page responds on mobile devices.</p>
 
 <p>If you forget to include this tag, it will <strong>not</strong> render properly on a mobile device.</p>
 
-<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 </code></pre>
+</div>
 
 <ul>
-  <li><code>name=”viewport”</code> differentiates it from other meta tags</li>
-  <li><code>viewport</code> gives the browser information about the sizing abilities of the site</li>
-  <li><code>content</code> provides info about the viewport, separate key value pairs with a comma</li>
-  <li><code>width=value</code> sets the width of the web page</li>
-  <li><code>initial-scale</code> is the zoom value at which the site is zoomed in/out by default</li>
-  <li><code>user-scalable=no</code> (not shown in example tag above) will limit users from being able to zoom in</li>
-  <li><code>minimum-scale, maximum-scale</code> will limit how far in or out a user is allowed to scale/zoom</li>
+  <li><code class="highlighter-rouge">name=”viewport”</code> differentiates it from other meta tags</li>
+  <li><code class="highlighter-rouge">viewport</code> gives the browser information about the sizing abilities of the site</li>
+  <li><code class="highlighter-rouge">content</code> provides info about the viewport, separate key value pairs with a comma</li>
+  <li><code class="highlighter-rouge">width=value</code> sets the width of the web page</li>
+  <li><code class="highlighter-rouge">initial-scale</code> is the zoom value at which the site is zoomed in/out by default</li>
+  <li><code class="highlighter-rouge">user-scalable=no</code> (not shown in example tag above) will limit users from being able to zoom in</li>
+  <li><code class="highlighter-rouge">minimum-scale, maximum-scale</code> will limit how far in or out a user is allowed to scale/zoom</li>
 </ul>
 
 <h2 id="media-queries">Media queries</h2>
@@ -264,16 +276,17 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <p>Basic media query:</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   /* CSS for that screen size goes here */
 }
 </code></pre>
+</div>
 
 <p>The above example targets a browser with the maximum width of 940px (anything equal or less than 940px).</p>
 
 <p>All rules for a specific screen size is required to be nested <em>within</em> the media query.</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   body {
     background: red;
   }
@@ -282,27 +295,30 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
   }
 }
 </code></pre>
+</div>
 
-<p>You can also use <code>min-width</code> in media queries.</p>
+<p>You can also use <code class="highlighter-rouge">min-width</code> in media queries.</p>
 
-<pre><code>@media (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
   /* any screen 940px and below */
 }
 @media (min-width: 941px) {
   /* any screen 941px and above */
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Why do you think 941px was used for min-width instead of 940px?</p>
 </blockquote>
 
-<p>To limit the CSS to a range of pixel values, use a combination of <code>min-width</code> and <code>max-width</code>. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.</p>
+<p>To limit the CSS to a range of pixel values, use a combination of <code class="highlighter-rouge">min-width</code> and <code class="highlighter-rouge">max-width</code>. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.</p>
 
-<pre><code>@media (min-width: 768px) and (max-width: 940px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-width: 768px) and (max-width: 940px) {
 
 }
 </code></pre>
+</div>
 
 <p>The above media query will only be applied when the width of the browser is greater or equal to 768px <strong>and</strong> less or equal to 940px.</p>
 
@@ -310,29 +326,32 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
 <p>Most responsive techniques target width but it is possible to target device heights.</p>
 
-<pre><code>@media (min-height: 568px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) {
   /* anything as high or higher than the iPhone 5 */
 }
 </code></pre>
+</div>
 
 <p>Height and width can also be used together in the media query:</p>
 
-<pre><code>@media (min-height: 568px) and (min-width:320px) {
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) and (min-width:320px) {
   /* anything as high or higher than the iPhone 5 */
 }
 </code></pre>
+</div>
 
 <p><strong>Note:</strong> Relying on height-based media queries can be inconsistent and most of the time, it’s better to let the content flow downward as the width of the device gets smaller.</p>
 
 <h3 id="common-breakpoints">Common breakpoints</h3>
 
-<pre><code>320px — Mobile portrait
+<div class="highlighter-rouge"><pre class="highlight"><code>320px — Mobile portrait
 480px — Mobile landscape
 600px — Small tablet
 768px — Tablet portrait
 940px - 1024px — Tablet landscape, netbook, small desktop
 1280px &amp; greater — Desktop
 </code></pre>
+</div>
 
 <p>These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.</p>
 
@@ -341,19 +360,21 @@ Prior to responsive and mobile web designs, the rule of thumb was to optimize fo
 
   <p>Download <a href="exercises/module3/media-queries.html" download="">media-queries.html</a> and open it in your editor.</p>
 
-  <p>In the <code>&lt;head&gt;</code> section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
+  <p>In the <code class="highlighter-rouge">&lt;head&gt;</code> section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 Change the background color and test it to make sure it works!</p>
 
-  <p><strong>Bonus:</strong> Try using <code>min-width</code> or a combination of <code>min-</code> and <code>max-width</code> to create a range.</p>
+  <p><strong>Bonus:</strong> Try using <code class="highlighter-rouge">min-width</code> or a combination of <code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-width</code> to create a range.</p>
 </blockquote>
 
 <h2 id="rwd-best-practices">RWD Best Practices</h2>
 
-<p>It’s best practice not to use too many breakpoints. Two to four should be fine. Up to six as an absolute max but if you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.</p>
+<p>Try not to use too many breakpoints. Two to four works, maybe up to six for complex designs.</p>
+
+<p>If you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.</p>
 
 <p>When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.</p>
 
-<pre><code>.wrapper {
+<div class="highlighter-rouge"><pre class="highlight"><code>.wrapper {
   max-width: 1140px;
   font-family: helvetica, arial, sans-serif;
   background: white;
@@ -367,6 +388,7 @@ Change the background color and test it to make sure it works!</p>
   }
 }
 </code></pre>
+</div>
 
 <h3 id="testing-mobile-in-the-browser">Testing Mobile in the Browser</h3>
 
@@ -382,7 +404,7 @@ Change the background color and test it to make sure it works!</p>
   <h2 id="exercise-responsive-web-page">EXERCISE: Responsive Web page</h2>
   <p>Download the responsive exercise <a href="exercises/module3/responsive.zip">here</a> (zip file). This also includes the solutions file.</p>
 
-  <p>Follow the instructions in the comments in the <code>&lt;head&gt;</code> of <strong>responsive.html</strong> to make the 3 columns fluid and responsive.</p>
+  <p>Follow the instructions in the comments in the <code class="highlighter-rouge">&lt;head&gt;</code> of <strong>responsive.html</strong> to make the 3 columns fluid and responsive.</p>
 </blockquote>
 
 <p>~ End ~</p>
@@ -391,12 +413,14 @@ Change the background color and test it to make sure it works!</p>
     </main>
 
       <footer>
-    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
   </footer>
   <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>

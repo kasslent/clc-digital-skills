@@ -3,7 +3,7 @@ layout: lessons
 module: 4
 lesson: 2
 title: Search Engine Optimization
-description: 
+description: Intro to SEO, tips and tricks for optimization.
 permalink: module4-2.html
 class: module4-2
 ---

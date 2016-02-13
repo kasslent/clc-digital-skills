@@ -8,7 +8,7 @@ permalink: module3-4.html
 ---
 
 
-Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s review some best practices and tips.
+Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s go over some best practices and tips.
 
 ## Fluid images and components
 
@@ -23,7 +23,7 @@ Use percentages to create flexible images.
       max-width: 100%;
     }
 
-[See example here](exercises/module3/sample/fluid-images.html).
+<a href="exercises/module3/sample/fluid-images.html" target="_blank">See example here</a>.
 
 <br>
 
@@ -282,7 +282,9 @@ These are just general guidelines. There are no hard and fast rules. Depending o
 
 ## RWD Best Practices
 
-It’s best practice not to use too many breakpoints. Two to four should be fine. Up to six as an absolute max but if you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.
+Try not to use too many breakpoints. Two to four works, maybe up to six for complex designs.
+ 
+If you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.
 
 When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.
 

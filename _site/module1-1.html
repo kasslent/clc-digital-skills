@@ -111,7 +111,7 @@ specifications, guidelines, tools and recommendations.</p>
 
 <h3 id="creating-html-pages">Creating HTML pages</h3>
 
-<p>To create an HTML page, name your file using an <code>.html</code> extension. That’s it!</p>
+<p>To create an HTML page, name your file using an <code class="highlighter-rouge">.html</code> extension. That’s it!</p>
 
 <p>Just like .pdf is used for PDF files or .doc for Word files, using this extension will signal to the computer that this is a file that should run in a web browser.</p>
 
@@ -123,7 +123,7 @@ specifications, guidelines, tools and recommendations.</p>
       <li><strong>about.html</strong> instead of <strong>About.html</strong> or <strong>ABOUT.html</strong></li>
     </ul>
   </li>
-  <li>No spaces! Use underscores (<code>_</code>) or dashes (<code>-</code>).
+  <li>No spaces! Use underscores (<code class="highlighter-rouge">_</code>) or dashes (<code class="highlighter-rouge">-</code>).
     <ul>
       <li><a href="http://searchengineland.com/9-seo-quirks-you-should-be-aware-of-146465">Dashes are better for SEO</a> (search engine optimization).</li>
       <li><strong>business-hours.html</strong> instead of <strong>business hours.html</strong></li>
@@ -135,7 +135,7 @@ specifications, guidelines, tools and recommendations.</p>
       <li><strong>about.html</strong>, <strong>contact.html</strong> instead of <strong>page1.html</strong>, <strong>page2.html</strong></li>
     </ul>
   </li>
-  <li>Avoid symbols like <code>#</code> <code>&amp;</code> <code>*</code> but numbers are ok.</li>
+  <li>Avoid symbols like <code class="highlighter-rouge">#</code> <code class="highlighter-rouge">&amp;</code> <code class="highlighter-rouge">*</code> but numbers are ok.</li>
 </ul>
 
 <p><em>Pro tip!</em><br />
@@ -148,29 +148,32 @@ same language. With each new version, new features and rules are added while oth
 
 <p>HTML5 is the latest version.</p>
 
-<p>HTML <strong>tags</strong> are used to create the web page structure are written with left <code>&lt;</code> and right angled brackets <code>&gt;</code> and a forward slash <code>/</code> for the closing tag.</p>
+<p>HTML <strong>tags</strong> are used to create the web page structure are written with left <code class="highlighter-rouge">&lt;</code> and right angled brackets <code class="highlighter-rouge">&gt;</code> and a forward slash <code class="highlighter-rouge">/</code> for the closing tag.</p>
 
 <p><img src="assets/img/keyboard-html.png" class="print-hide" /></p>
 
-<p>Tags <em>usually</em> come in pairs — an opening tag and a closing tag — to <em>wrap</em> the content.  Note that the closing tag has a forward slash (<code>/</code>).</p>
+<p>Tags <em>usually</em> come in pairs — an opening tag and a closing tag — to <em>wrap</em> the content.  Note that the closing tag has a forward slash (<code class="highlighter-rouge">/</code>).</p>
 
-<pre><code>&lt;tag&gt;Content that shows on page.&lt;/tag&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;tag&gt;Content that shows on page.&lt;/tag&gt;
   |                               |
   |--opening tag                  |--closing tag
 </code></pre>
+</div>
 
 <p>HTML tags describe the meaning of the content to the web browser.  This is referred to as <a href="http://html5doctor.com/lets-talk-about-semantics/">semantics</a>.</p>
 
-<pre><code>&lt;h1&gt;This tag describes a heading&lt;/h1&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;This tag describes a heading&lt;/h1&gt;
 &lt;p&gt;This tag is used for paragraphs.&lt;/p&gt;
 </code></pre>
+</div>
 
 <h3 id="nesting-tags">Nesting tags</h3>
 
 <p>Tags can be <em>nested</em> within other tags like this:</p>
 
-<pre><code>&lt;outertag&gt;outer content &lt;innertag&gt;inner content&lt;/innertag&gt; outer content&lt;/outertag&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;outertag&gt;outer content &lt;innertag&gt;inner content&lt;/innertag&gt; outer content&lt;/outertag&gt;
 </code></pre>
+</div>
 
 <p>Nested tags create a <em>family tree-like</em> relationship and is often referred to as the <em>parent</em> node and <em>child</em> nodes.  The inner tag is the child of the outer tag.</p>
 
@@ -179,45 +182,49 @@ same language. With each new version, new features and rules are added while oth
 <blockquote>
   <p>Can you spot the error?</p>
 
-  <pre><code>&lt;p&gt;Paragraph with &lt;strong&gt;strong text.&lt;/p&gt;&lt;/strong&gt;
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;Paragraph with &lt;strong&gt;strong text.&lt;/p&gt;&lt;/strong&gt;
 </code></pre>
+  </div>
 </blockquote>
 
 <h4 id="organizing-your-code">Organizing your code</h4>
 
 <p>Writing the HTML all in one line will work, but will make it more difficult to read (the browser doesn’t care).</p>
 
-<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;&lt;head&gt;&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</span>
 </code></pre>
+</div>
 
 <p>Whitespace through indentation (tabs) makes HTML easier to read. When nesting a tag, <em>add one tab space</em>.</p>
 
 <p>Below are the base HTML tags that should be included in <strong>all</strong> HTML documents.</p>
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!-- page content here --&gt;
-    &lt;!-- (this is an HTML comment by the way) --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- page content here --&gt;</span>
+    <span class="c">&lt;!-- (this is an HTML comment by the way) --&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre>
+</div>
 
 <p><em>Pro tip!</em><br />
 Getting into this habit from the start will help keep the code organized, easier to read, easier to find errors and look more professional.</p>
 
 <h3 id="attributes--html-comments">Attributes &amp; HTML Comments</h3>
 
-<p><strong>Attributes</strong> provide additional information or instruction for the element and is included <em>inside the opening HTML tag</em> in the form of <code>attribute="value"</code>.</p>
+<p><strong>Attributes</strong> provide additional information or instruction for the element and is included <em>inside the opening HTML tag</em> in the form of <code class="highlighter-rouge">attribute="value"</code>.</p>
 
 <p>There are many different types of attributes.</p>
 
-<pre><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;tag attribute="value"&gt;content&lt;/tag&gt;
 </code></pre>
+</div>
 
 <blockquote>
   <p>Looking at the example of the base HTML document tags above, can you pick out the two attributes?</p>
@@ -231,10 +238,11 @@ Getting into this habit from the start will help keep the code organized, easier
   <li>organizing the document</li>
 </ul>
 
-<p>The syntax for comments start with <code>&lt;!--</code> and ends with <code>--&gt;</code>.</p>
+<p>The syntax for comments start with <code class="highlighter-rouge">&lt;!--</code> and ends with <code class="highlighter-rouge">--&gt;</code>.</p>
 
-<pre><code>&lt;!-- Comments should ALWAYS be included between the dashes. --&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- Comments should ALWAYS be included between the dashes. --&gt;
 </code></pre>
+</div>
 
 <h2 id="the-html-document">The HTML Document</h2>
 
@@ -262,19 +270,20 @@ Getting into this habit from the start will help keep the code organized, easier
 
 <p>The above is the HTML5 doctype. The previous version, XHTML, looked like this:</p>
 
-<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
 </code></pre>
+</div>
 
 <p><em>Pro tip!</em><br />
 The W3C provides a free service to check if your markup is valid: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
 
-<h3 id="the-html-element">The <code>html</code> element</h3>
+<h3 id="the-html-element">The <code class="highlighter-rouge">html</code> element</h3>
 
 <ul>
   <li>always the first HTML tag</li>
   <li>root element, all other elements are nested inside</li>
   <li>identifies the document as HTML</li>
-  <li>the <code>lang</code> <em>attribute</em> classifies the language</li>
+  <li>the <code class="highlighter-rouge">lang</code> <em>attribute</em> classifies the language</li>
 </ul>
 
 <pre><code class="opacity">&lt;!DOCTYPE html&gt;
@@ -289,11 +298,11 @@ The W3C provides a free service to check if your markup is valid: <a href="http:
 <strong>&lt;/html&gt;</strong>
 </code></pre>
 
-<h3 id="the-head-element">The <code>head</code> element</h3>
+<h3 id="the-head-element">The <code class="highlighter-rouge">head</code> element</h3>
 
 <ul>
   <li>includes information about the page but does not display content</li>
-  <li><code>&lt;title&gt;&lt;/title&gt;</code> is the only required tag inside of this element
+  <li><code class="highlighter-rouge">&lt;title&gt;&lt;/title&gt;</code> is the only required tag inside of this element
     <ul>
       <li>defines the title of the web page/document</li>
       <li>displayed in the browser toolbar, bookmarks and search engine results</li>
@@ -301,7 +310,7 @@ The W3C provides a free service to check if your markup is valid: <a href="http:
   </li>
   <li>CSS, JavaScript &amp; <a href="searchenginewatch.com/sew/how-to/2067564/how-to-use-html-meta-tags">metadata</a> can also be included here
     <ul>
-      <li><code>&lt;meta charset="UTF-8"&gt;</code> sets the <a href="https://code.google.com/p/doctype-mirror/wiki/MetaCharsetAttribute">character encoding</a> of an HTML document</li>
+      <li><code class="highlighter-rouge">&lt;meta charset="UTF-8"&gt;</code> sets the <a href="https://code.google.com/p/doctype-mirror/wiki/MetaCharsetAttribute">character encoding</a> of an HTML document</li>
     </ul>
   </li>
 </ul>
@@ -318,9 +327,9 @@ The W3C provides a free service to check if your markup is valid: <a href="http:
 &lt;/html&gt;
 </code></pre>
 
-<h3 id="the-body-element">The <code>body</code> element</h3>
+<h3 id="the-body-element">The <code class="highlighter-rouge">body</code> element</h3>
 
-<p>All content to be displayed in the browser window goes between the <code>&lt;body&gt;&lt;/body&gt;</code> tags.  Also known as the <em>viewport</em>.</p>
+<p>All content to be displayed in the browser window goes between the <code class="highlighter-rouge">&lt;body&gt;&lt;/body&gt;</code> tags.  Also known as the <em>viewport</em>.</p>
 
 <pre><code class="opacity">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -344,7 +353,7 @@ The W3C provides a free service to check if your markup is valid: <a href="http:
     <li>Open a new file and add in the basic HTML tags.</li>
     <li>Save file as <strong>index.html</strong>.</li>
     <li>Open <strong>index.html</strong> in the browser. You won’t see anything in the browser just yet! There’s no content, just the HTML page structure.</li>
-    <li>Add a relevant page title to the <code>&lt;title&gt;&lt;title&gt;</code> tag.</li>
+    <li>Add a relevant page title to the <code class="highlighter-rouge">&lt;title&gt;&lt;title&gt;</code> tag.</li>
     <li>Save &amp; refresh the browser. Where do you see it?</li>
   </ol>
 </blockquote>
@@ -352,11 +361,12 @@ The W3C provides a free service to check if your markup is valid: <a href="http:
 <p><em>Pro tip!</em><br />
 Save and organize all your projects in a common area.  For example, have a folder called <strong>“projects”</strong> or <strong>“sites”</strong> and save all your individual projects in there.  Your folder directory might look like this:</p>
 
-<pre><code>projects
+<div class="highlighter-rouge"><pre class="highlight"><code>projects
   --- personal-site
   --- ladieslearningcode
   --- client-name
 </code></pre>
+</div>
 
 <h2 id="html-page-structures">HTML Page Structures</h2>
 
@@ -372,13 +382,13 @@ Save and organize all your projects in a common area.  For example, have a folde
 
 <p>Creating a page layout using structural HTML tags and often involves grouping related content together.</p>
 
-<p>The <code>&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code>&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements to page components.</p>
+<p>The <code class="highlighter-rouge">&lt;div&gt;</code> tag is one of two HTML tags that have no semantic meaning. (<code class="highlighter-rouge">&lt;span&gt;</code> is the other. More on this later.) It is used purely for grouping related elements to page components.</p>
 
 <p>To create the page layout, the HTML could look something like this:</p>
 
 <p><img class="grouping-elements print-hide" src="assets/img/wireframe-basic.jpg" /></p>
 
-<pre><code>&lt;div&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div&gt;
   nav links here
 &lt;/div&gt;
 
@@ -394,14 +404,15 @@ Save and organize all your projects in a common area.  For example, have a folde
   footer info here
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <h3 class="clear">HTML5 Structural Elements</h3>
 
-<p>HTML5 introduced new semantic tags to better describe blocks of content such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code> and <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png">many more</a>.</p>
+<p>HTML5 introduced new semantic tags to better describe blocks of content such as <code class="highlighter-rouge">&lt;header&gt;</code>, <code class="highlighter-rouge">&lt;footer&gt;</code>, <code class="highlighter-rouge">&lt;nav&gt;</code>, <code class="highlighter-rouge">&lt;section&gt;</code> and <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.png">many more</a>.</p>
 
 <p>Using HTML5 tags, the previous example could look like this instead:</p>
 
-<pre><code>&lt;nav&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
   nav links here
 &lt;/nav&gt;
 
@@ -417,11 +428,12 @@ Save and organize all your projects in a common area.  For example, have a folde
   footer info here
 &lt;/footer&gt;
 </code></pre>
+</div>
 
-<p>However, <code>&lt;div&gt;</code> can and is still often used, when no other HTML tag properly describes the content.</p>
+<p>However, <code class="highlighter-rouge">&lt;div&gt;</code> can and is still often used, when no other HTML tag properly describes the content.</p>
 
 <p><em>Pro tip!</em><br />
-When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the HTML5 structural tags for content it was not intended for.</p>
+When in doubt, it's better use <code class="highlighter-rouge">&lt;div&gt;</code> than to use one of the HTML5 structural tags for content it was not intended for.</p>
 
 <h4 id="extra-resources">Extra Resources</h4>
 
@@ -439,25 +451,26 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
 <p>There are also many different HTML tags for displaying different types of content.  Here are some common tags.</p>
 
 <h3 id="paragraphs">Paragraphs</h3>
-<p>Whether it’s one sentence or more, each paragraph needs its own set of <code>&lt;p&gt;&lt;/p&gt;</code> tags.</p>
+<p>Whether it’s one sentence or more, each paragraph needs its own set of <code class="highlighter-rouge">&lt;p&gt;&lt;/p&gt;</code> tags.</p>
 
-<pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;p&gt;This is another paragraph. More than one sentence.&lt;/p&gt;
 </code></pre>
+</div>
 
 <h3 id="headings">Headings</h3>
 
-<p>There are six headings tags (different from the <code>&lt;head&gt;</code> tag) ranging from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure.</p>
+<p>There are six headings tags (different from the <code class="highlighter-rouge">&lt;head&gt;</code> tag) ranging from <code class="highlighter-rouge">&lt;h1&gt;</code> to <code class="highlighter-rouge">&lt;h6&gt;</code>. The different levels are used to describe the <em>hierarchy</em> of the page structure.</p>
 
 <p>Let’s say you’re writing an essay about apples.  How would describe the hierarchy of the main heading versus the subheadings for each section?</p>
 
-<p>Prior to the HTML5 rules, using only one <code>&lt;h1&gt;</code> was recommended per page.  With the introduction of HTML5 <em>sectioning</em> tags, each part of the document that uses a sectioning tag now gets its <em>own</em> outline.</p>
+<p>Prior to the HTML5 rules, using only one <code class="highlighter-rouge">&lt;h1&gt;</code> was recommended per page.  With the introduction of HTML5 <em>sectioning</em> tags, each part of the document that uses a sectioning tag now gets its <em>own</em> outline.</p>
 
 <p>Let’s look at how this hierarchy could be described using HTML and HTML5.</p>
 
 <p><strong>Pre-HTML5 Heading Outline:</strong></p>
 
-<pre><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
 
 &lt;div&gt;
   &lt;h2&gt;Introduction&lt;/h2&gt;
@@ -480,10 +493,11 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
   &lt;p&gt;Final paragraph.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <p><strong>HTML5 Heading Outline:</strong></p>
 
-<pre><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;Essay About Apples&lt;/h1&gt;
 
 &lt;section&gt;
   &lt;h1&gt;Introduction&lt;/h1&gt;
@@ -506,6 +520,7 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
   &lt;p&gt;Final paragraph.&lt;/p&gt;
 &lt;/section&gt;
 </code></pre>
+</div>
 
 <h4 id="extra-resources-1">Extra resources</h4>
 
@@ -515,9 +530,9 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
 
 <h4 id="ordered-lists">Ordered Lists</h4>
 
-<p>Ordered lists are used to list items in a specific order. Two elements are required, an ordered list tag, <code>ol</code> and a list item tag, <code>li</code>.</p>
+<p>Ordered lists are used to list items in a specific order. Two elements are required, an ordered list tag, <code class="highlighter-rouge">ol</code> and a list item tag, <code class="highlighter-rouge">li</code>.</p>
 
-<pre><code>&lt;p&gt;Getting self-serve yogurt&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;Getting self-serve yogurt&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Take a cup&lt;/li&gt;
   &lt;li&gt;Fill cup with yogurt&lt;/li&gt;
@@ -525,24 +540,26 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
   &lt;li&gt;Weigh and pay&lt;/il&gt;
 &lt;/ol&gt;
 </code></pre>
+</div>
 
 <h4 id="unordered-lists">Unordered Lists</h4>
 
-<p>Use unordered lists for list items that do not need to be order sequentially. The syntax is the same as ordered list but use the unordered list tag, <code>&lt;ul&gt;</code> instead.</p>
+<p>Use unordered lists for list items that do not need to be order sequentially. The syntax is the same as ordered list but use the unordered list tag, <code class="highlighter-rouge">&lt;ul&gt;</code> instead.</p>
 
-<pre><code>&lt;ul&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
   &lt;li&gt;Home&lt;/li&gt;
   &lt;li&gt;Portfolio&lt;/li&gt;
   &lt;li&gt;Contact Me&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+</div>
 
 <h3 id="nesting-lists">Nesting Lists</h3>
-<p>Lists can go inside of another list and must be nested inside of a list item <code>&lt;li&gt;</code>.</p>
+<p>Lists can go inside of another list and must be nested inside of a list item <code class="highlighter-rouge">&lt;li&gt;</code>.</p>
 
 <p>Ordered &amp; unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.</p>
 
-<pre><code>&lt;ul&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
   &lt;li&gt;Home&lt;/li&gt;
   &lt;li&gt;Recipes
     &lt;ul&gt;
@@ -554,6 +571,7 @@ When in doubt, it's better use <code>&lt;div&gt;</code> than to use one of the H
   &lt;li&gt;Contact&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+</div>
 
 <blockquote>
   <h2 id="exercise-adding-content-part-1">EXERCISE: Adding Content, part 1</h2>
@@ -566,31 +584,33 @@ Add some headings, paragraphs and lists.</p>
 <h2 id="italics-bold--semantics">Italics, Bold &amp; Semantics</h2>
 
 <ul>
-  <li><code>&lt;em&gt;</code> represents stress emphasis, i.e., something you would pronounce differently</li>
-  <li><code>&lt;strong&gt;</code> represents strong importance</li>
-  <li><code>&lt;i&gt;</code> represents text in an alternate voice, a technical term, a phrase from another language (e.g. <em>je ne sais quoi</em>)</li>
-  <li><code>&lt;b&gt;</code> stands for “stylistically offset” text, such as keywords</li>
+  <li><code class="highlighter-rouge">&lt;em&gt;</code> represents stress emphasis, i.e., something you would pronounce differently</li>
+  <li><code class="highlighter-rouge">&lt;strong&gt;</code> represents strong importance</li>
+  <li><code class="highlighter-rouge">&lt;i&gt;</code> represents text in an alternate voice, a technical term, a phrase from another language (e.g. <em>je ne sais quoi</em>)</li>
+  <li><code class="highlighter-rouge">&lt;b&gt;</code> stands for “stylistically offset” text, such as keywords</li>
 </ul>
 
 <h4 id="older-versions-of-html">Older versions of HTML</h4>
-<p>When XHTML was the latest version, <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> were <em>deprecated</em> since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.</p>
+<p>When XHTML was the latest version, <code class="highlighter-rouge">&lt;b&gt;</code> and <code class="highlighter-rouge">&lt;i&gt;</code> were <em>deprecated</em> since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.</p>
 
 <h4 id="html5---new-rules">HTML5 - new rules</h4>
-<p>In HTML5, the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags were re-introduced but with a slightly different meaning, though <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> is more commonly used.</p>
+<p>In HTML5, the <code class="highlighter-rouge">&lt;b&gt;</code> and <code class="highlighter-rouge">&lt;i&gt;</code> tags were re-introduced but with a slightly different meaning, though <code class="highlighter-rouge">&lt;em&gt;</code> or <code class="highlighter-rouge">&lt;strong&gt;</code> is more commonly used.</p>
 
 <p>Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags.</p>
 
-<pre><code>&lt;p&gt;A paragraph with &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;A paragraph with &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;
 </code></pre>
+</div>
 
 <p>Read more about it on <a href="http://html5doctor.com/i-b-em-strong-element/">HTML5 Doctor</a>.</p>
 
 <h3 id="sub-sup">sub, sup</h3>
 
-<p><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code> represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation’s sake.</p>
+<p><code class="highlighter-rouge">&lt;sub&gt;</code> and <code class="highlighter-rouge">&lt;sup&gt;</code> represents subscript and superscript, respectively. These elements must be used only to mark up typographical conventions with specific meanings, not for presentation’s sake.</p>
 
-<pre><code>&lt;p&gt;Pretend this word is trademarked&lt;sup&gt;TM&lt;/sup&gt;!&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;Pretend this word is trademarked&lt;sup&gt;TM&lt;/sup&gt;!&lt;/p&gt;
 </code></pre>
+</div>
 
 <p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
 
@@ -598,12 +618,13 @@ Add some headings, paragraphs and lists.</p>
 
 <p>Self-closing tags don’t format content. Instead they are used to embed objects onto the page; they <em>are</em> the content. Because of this, they do not require a closing tag.</p>
 
-<p>Two common self-closing tags are the line break (<code>&lt;br&gt;</code>) and horizontal rule (<code>&lt;hr&gt;</code>).</p>
+<p>Two common self-closing tags are the line break (<code class="highlighter-rouge">&lt;br&gt;</code>) and horizontal rule (<code class="highlighter-rouge">&lt;hr&gt;</code>).</p>
 
-<pre><code>&lt;p&gt;Paragraph with a line break,&lt;br&gt; this is on a new line.&lt;/p&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;Paragraph with a line break,&lt;br&gt; this is on a new line.&lt;/p&gt;
 &lt;p&gt;Another paragraph.&lt;/p&gt;
 &lt;hr&gt;
 </code></pre>
+</div>
 
 <p>The above code snippet will look like this in the browser:</p>
 
@@ -615,9 +636,10 @@ Add some headings, paragraphs and lists.</p>
 
 <p>Prior to HTML5, self-closing tags had to include a forward slash like this:</p>
 
-<pre><code>&lt;br/&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;br/&gt;
 &lt;hr/&gt;
 </code></pre>
+</div>
 
 <p>Though this is still valid in HTML5, it is <strong>no longer needed</strong> but you may still see it in use.</p>
 
@@ -625,15 +647,17 @@ Add some headings, paragraphs and lists.</p>
 
 <p>Images are another example of a self-closing tag. Images also <strong>require</strong> an attribute to provide additional info.</p>
 
-<p>A <code>src</code> <em>attribute</em> is used to tell the browser the location of the image file.</p>
+<p>A <code class="highlighter-rouge">src</code> <em>attribute</em> is used to tell the browser the location of the image file.</p>
 
-<pre><code>&lt;img src="folder/filename.jpg"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;img src="folder/filename.jpg"&gt;
 </code></pre>
+</div>
 
-<p>The <code>alt</code> attribute provides <em>alternative text</em> for visually impaired users, using screen readers or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility.</p>
+<p>The <code class="highlighter-rouge">alt</code> attribute provides <em>alternative text</em> for visually impaired users, using screen readers or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility.</p>
 
-<pre><code>&lt;img src="folder/filename.jpg" alt="short description of image"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;img src="folder/filename.jpg" alt="short description of image"&gt;
 </code></pre>
+</div>
 
 <h3 id="image-file-types">Image file types</h3>
 
@@ -697,23 +721,25 @@ While not required, it’s best practice to put image files into its own folder 
 
 <h2 id="links--anchor-tag">Links / Anchor tag</h2>
 
-<p>Links (hyperlinks) are represented by the anchor tag, <code>&lt;a&gt;</code>. It also needs an <code>href</code> (hypertext reference) attribute to provide information about the the link.</p>
+<p>Links (hyperlinks) are represented by the anchor tag, <code class="highlighter-rouge">&lt;a&gt;</code>. It also needs an <code class="highlighter-rouge">href</code> (hypertext reference) attribute to provide information about the the link.</p>
 
 <h3 id="link-to-an-external-site">Link to an external site</h3>
 
-<pre><code>&lt;a href="http://ladieslearningcode.com"&gt;Ladies Learning Code&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://ladieslearningcode.com"&gt;Ladies Learning Code&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="link-to-an-html-page">Link to an HTML page</h3>
 
-<pre><code>&lt;a href="page-name.html"&gt;Another page&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="page-name.html"&gt;Another page&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="link-to-a-specific-spot-on-a-page">Link to a specific spot on a page</h3>
 
-<p>Add an <code>id</code> <em>attribute</em> to the tag where you would like the link to go <em>to</em>. In the <code>href</code> <em>attribute</em> value, use the <code>#</code> symbol followed by the id name, with <strong>no spaces</strong>.</p>
+<p>Add an <code class="highlighter-rouge">id</code> <em>attribute</em> to the tag where you would like the link to go <em>to</em>. In the <code class="highlighter-rouge">href</code> <em>attribute</em> value, use the <code class="highlighter-rouge">#</code> symbol followed by the id name, with <strong>no spaces</strong>.</p>
 
-<pre><code>&lt;a href="#go-here"&gt;Click this link to navigate to a spot on the page&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="#go-here"&gt;Click this link to navigate to a spot on the page&lt;/a&gt;
 
 &lt;p&gt;Content in between.&lt;/p&gt;
 &lt;p&gt;More content.&lt;/p&gt;
@@ -722,10 +748,11 @@ While not required, it’s best practice to put image files into its own folder 
 
 &lt;p id="go-here"&gt;This where you want the link to go TO.&lt;/p&gt;
 </code></pre>
+</div>
 
-<p>It can be used in any order and in any HTML tag.  The <code>id</code> and <code>href</code> values have to match.</p>
+<p>It can be used in any order and in any HTML tag.  The <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">href</code> values have to match.</p>
 
-<pre><code>&lt;h1 id="top"&gt;Top of page&lt;/h1&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1 id="top"&gt;Top of page&lt;/h1&gt;
 
 &lt;p&gt;Content in between.&lt;/p&gt;
 &lt;p&gt;More content.&lt;/p&gt;
@@ -734,38 +761,43 @@ While not required, it’s best practice to put image files into its own folder 
 
 &lt;a href="#top"&gt;Back to top&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="link-to-a-specific-spot-on-another-page">Link to a specific spot on another page</h3>
 
-<p>When you use a link to navigate to an <code>id</code> value, it adds that value to end of the URL.  You can now use that url to navigate to a specific spot on <em>another</em> page.</p>
+<p>When you use a link to navigate to an <code class="highlighter-rouge">id</code> value, it adds that value to end of the URL.  You can now use that url to navigate to a specific spot on <em>another</em> page.</p>
 
-<pre><code>&lt;a href="faq.html#question1"&gt;Click this link to navigate to question 1 on the FAQ page.&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="faq.html#question1"&gt;Click this link to navigate to question 1 on the FAQ page.&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="open-link-in-a-new-window-or-tab">Open link in a new window or tab</h3>
 
-<p>Add a second attribute, <code>target="_blank"</code> to make the link open in a new window or tab. Whether it opens in a new window or tab is based on the users’ settings.</p>
+<p>Add a second attribute, <code class="highlighter-rouge">target="_blank"</code> to make the link open in a new window or tab. Whether it opens in a new window or tab is based on the users’ settings.</p>
 
 <p>When using more than one attribute, order does not matter but make sure to include a space <em>between</em> the attributes.</p>
 
-<pre><code>&lt;a href="http://ladieslearningcode.com" target="_blank"&gt;Ladies Learning Code&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://ladieslearningcode.com" target="_blank"&gt;Ladies Learning Code&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="email-link">Email link</h3>
 
-<pre><code>&lt;a href="mailto:hello@myemail.com"&gt;hello@myemail.com&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="mailto:hello@myemail.com"&gt;hello@myemail.com&lt;/a&gt;
 </code></pre>
+</div>
 
 <h3 id="image-as-a-link">Image as a link</h3>
 
 <p>Instead of text, simply wrap the anchor tag around the image.</p>
 
-<p>When using an image or an icon, in addition to using the <code>alt</code> attribute, you can also add a <code>title</code> attribute to provide more info about the link.  It will also show as a “tool tip” when you hover over it (there’s a slight delay).</p>
+<p>When using an image or an icon, in addition to using the <code class="highlighter-rouge">alt</code> attribute, you can also add a <code class="highlighter-rouge">title</code> attribute to provide more info about the link.  It will also show as a “tool tip” when you hover over it (there’s a slight delay).</p>
 
-<pre><code>&lt;a href="http://twitter.com" title="Twitter"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://twitter.com" title="Twitter"&gt;
   &lt;img src="images/twitter-logo.png" alt="Twitter logo"&gt;
 &lt;/a&gt;
 </code></pre>
+</div>
 
 <p><a href="http://twitter.com" title="Twitter"><img class="example-img" src="assets/img/twitter-logo.png" alt="Twitter logo" /></a></p>
 
@@ -773,7 +805,7 @@ While not required, it’s best practice to put image files into its own folder 
 
 <h4 id="extra-resource-1">Extra resource</h4>
 
-<p>More about <code>alt</code>, <code>title</code> and SEO (search engine optimization) <a href="http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/">here</a>.</p>
+<p>More about <code class="highlighter-rouge">alt</code>, <code class="highlighter-rouge">title</code> and SEO (search engine optimization) <a href="http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/">here</a>.</p>
 
 <h2 id="folder-structure-relative--absolute-paths">Folder Structure, Relative &amp; Absolute Paths</h2>
 
@@ -802,27 +834,31 @@ ladieslearningcode
 
 <p>Points to files located in the project files (not an external source like http://website.com). The file that you are editing is the <em>starting point</em>. Navigate to the desired directory from there.</p>
 
-<p>Using the above directory example, to add a link from <strong>index.html</strong> to <strong>about.html</strong>, the <code>href</code> value will look like this:</p>
+<p>Using the above directory example, to add a link from <strong>index.html</strong> to <strong>about.html</strong>, the <code class="highlighter-rouge">href</code> value will look like this:</p>
 
-<pre><code>&lt;a href="about.html"&gt;Menu&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="about.html"&gt;Menu&lt;/a&gt;
 </code></pre>
+</div>
 
-<p>The <code>src</code> value for an image in the <strong>images</strong> folder would be:</p>
+<p>The <code class="highlighter-rouge">src</code> value for an image in the <strong>images</strong> folder would be:</p>
 
-<pre><code>&lt;img src="images/logo.png"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;img src="images/logo.png"&gt;
 </code></pre>
+</div>
 
 <h3 id="absolute-path">Absolute Path</h3>
 
 <p>Uses the exact address including domain, subdirectories and filename. Use this option when linking to an external or <em>hosted</em> source.</p>
 
-<pre><code>&lt;a href="http://ladieslearningcode.com/"&gt;Ladies Learning Code&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://ladieslearningcode.com/"&gt;Ladies Learning Code&lt;/a&gt;
 </code></pre>
+</div>
 
 <p>Only link to web pages, not specific files such as images (unless it points to your own server). This would be considered <em>hotlinking</em>.</p>
 
-<pre><code>&lt;a href="http://ladieslearningcode.com/imagefile.jpg"&gt;Hotlinking an image. No!&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="http://ladieslearningcode.com/imagefile.jpg"&gt;Hotlinking an image. No!&lt;/a&gt;
 </code></pre>
+</div>
 
 <blockquote>
   <h2 id="exercise-adding-content-part-3">EXERCISE: Adding Content, Part 3</h2>
@@ -830,7 +866,7 @@ ladieslearningcode
 
   <ol>
     <li>create an additional HTML page</li>
-    <li>add links to the <code>&lt;nav&gt;</code> block to link to your new page or within the same page</li>
+    <li>add links to the <code class="highlighter-rouge">&lt;nav&gt;</code> block to link to your new page or within the same page</li>
     <li>add some images (e.g. logo or profile image)</li>
     <li>update the copy to reflect your bio and contact info</li>
   </ol>
@@ -847,12 +883,14 @@ ladieslearningcode
     </main>
 
       <footer>
-    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
   </footer>
   <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>

@@ -156,7 +156,7 @@ There are **many** more ways to select elements such as position in the HTML doc
 >
 >Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
 >
->All the instructions are contained in the comments at the very top of `selector.html`
+>All the instructions are contained in the comments at the very top of `selector.html`.
 
 
 ## Block vs Inline Elements

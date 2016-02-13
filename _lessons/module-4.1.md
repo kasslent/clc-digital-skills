@@ -168,15 +168,17 @@ Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com
 
 ## Google Forms
 
-Use Google Forms to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with email responses, you can use the power of Sheets to manipulate & sort the data!
+Use **Google Forms** to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with writing HTML forms and email responses, you can use the power of **Sheets** to manipulate & sort the data!
 
+### Using Google Forms:
 
-1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
+1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. 
+1. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
   ![]({{ site.img }}/module4/gforms-new.png)
 1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  
 
 1. Once you've completed your form, you can either send out the form or embed it into your web page. 
-  * To send the form. Select **Send form** to see options.<br>
+  * To send the form, select **Send form** to see options.<br>
   ![]({{ site.img }}/module4/gforms-send.png)
   <br><br>
   You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br>
@@ -202,7 +204,7 @@ And that's it!
 
 If you're feeling adventurous, you can also edit the HTML & CSS yourself.
 
-The embed code is simply an `<iframe>` which is a common way to insert content from another source (i.e. youtube embeds). But you can **View Source** and grab the actual HTML and embed that into your site instead of the `<iframe>`.
+The embed code is an `<iframe>` which is a common way to insert content from another source (i.e. YouTube embeds). But you can **View Source** and grab the actual HTML and embed that into your site instead of the `<iframe>`.
 
 If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.  
 

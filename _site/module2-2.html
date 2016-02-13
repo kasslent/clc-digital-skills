@@ -44,44 +44,45 @@
         <h1>Design & CSS</h1>
         <p>There are more ways to use CSS to create typography based styles in your web page designs.</p>
 
-<p>The last lesson covered text based CSS properties that used keywords for values (e.g. <code>font-weight: bold;</code>). But there are many other properties (typography based and other styles) that use length to define the values.</p>
+<p>The last lesson covered text based CSS properties that used keywords for values (e.g. <code class="highlighter-rouge">font-weight: bold;</code>). But there are many other properties (typography based and other styles) that use length to define the values.</p>
 
 <h2 id="length--measurement-units">Length / Measurement Units</h2>
 <p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
 
 <ul>
-  <li><strong>pixels</strong> (<code>px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
+  <li><strong>pixels</strong> (<code class="highlighter-rouge">px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
     <ul>
-      <li>must use whole numbers (e.g. <code>12px</code>)</li>
+      <li>must use whole numbers (e.g. <code class="highlighter-rouge">12px</code>)</li>
     </ul>
   </li>
-  <li><strong>percentages</strong> (<code>%</code>) - useful for fluid and responsive layouts
+  <li><strong>percentages</strong> (<code class="highlighter-rouge">%</code>) - useful for fluid and responsive layouts
     <ul>
-      <li>can use any number (e.g. <code>20%</code>, <code>25.5%</code>)</li>
+      <li>can use any number (e.g. <code class="highlighter-rouge">20%</code>, <code class="highlighter-rouge">25.5%</code>)</li>
     </ul>
   </li>
-  <li><strong>ems</strong> (<code>em</code>) - originally a typographic measurement based on the letter “M”
+  <li><strong>ems</strong> (<code class="highlighter-rouge">em</code>) - originally a typographic measurement based on the letter “M”
     <ul>
       <li>relative unit, sizing is based on parent &amp; ancestor elements sizes</li>
-      <li>can use any number (e.g. <code>1em</code>, <code>1.275em</code>)</li>
+      <li>can use any number (e.g. <code class="highlighter-rouge">1em</code>, <code class="highlighter-rouge">1.275em</code>)</li>
     </ul>
   </li>
-  <li><strong>rems</strong> (<code>rem</code>)-  stands for “relative em”
+  <li><strong>rems</strong> (<code class="highlighter-rouge">rem</code>)-  stands for “relative em”
     <ul>
-      <li>relative unit but is only relative to the <em>root</em> element (<code>html</code> tag)</li>
+      <li>relative unit but is only relative to the <em>root</em> element (<code class="highlighter-rouge">html</code> tag)</li>
     </ul>
   </li>
 </ul>
 
 <p>By default, with no other CSS, here’s how these units compare to each other:</p>
 
-<pre><code>1em = 1rem = 16px = 100% 
+<div class="highlighter-rouge"><pre class="highlight"><code>1em = 1rem = 16px = 100% 
 </code></pre>
+</div>
 
 <p>There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.</p>
 
 <blockquote>
-  <p>Let’s edit the below Codepen and see how <code>em</code> and <code>rem</code> works.</p>
+  <p>Let’s edit the below Codepen and see how <code class="highlighter-rouge">em</code> and <code class="highlighter-rouge">rem</code> works.</p>
 </blockquote>
 
 <p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -99,37 +100,40 @@
 
 <h2 id="css--typography">CSS &amp; Typography</h2>
 
-<h3 id="css-font-size--line-height">CSS <code>font-size</code> &amp; <code>line-height</code></h3>
+<h3 id="css-font-size--line-height">CSS <code class="highlighter-rouge">font-size</code> &amp; <code class="highlighter-rouge">line-height</code></h3>
 
 <p>The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.</p>
 
-<p>Use <code>font-size</code> to change the size and <code>line-height</code> to adjust the space <em>between</em> the lines of text.</p>
+<p>Use <code class="highlighter-rouge">font-size</code> to change the size and <code class="highlighter-rouge">line-height</code> to adjust the space <em>between</em> the lines of text.</p>
 
-<p>You can use any of the measurement units to declare the <code>font-size</code>.</p>
+<p>You can use any of the measurement units to declare the <code class="highlighter-rouge">font-size</code>.</p>
 
-<p>For <code>line-height</code>, this property actually does <em>not</em> require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.</p>
+<p>For <code class="highlighter-rouge">line-height</code>, this property actually does <em>not</em> require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.</p>
 
-<pre><code>p {
+<div class="highlighter-rouge"><pre class="highlight"><code>p {
   font-size: 20px;
   line-height: 25px; /* fixed size*/
 }
 </code></pre>
+</div>
 
 <hr />
-<pre><code>p {
+<div class="highlighter-rouge"><pre class="highlight"><code>p {
   font-size: 20px;
   line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
 }
 </code></pre>
+</div>
 
-<h3 id="css-text-shadow">CSS <code>text-shadow</code></h3>
+<h3 id="css-text-shadow">CSS <code class="highlighter-rouge">text-shadow</code></h3>
 
 <p>Use this property to apply a shadow to your text.</p>
 
-<pre><code>p { 
+<div class="highlighter-rouge"><pre class="highlight"><code>p { 
   text-shadow: 2px 4px 1px red;
 }
 </code></pre>
+</div>
 
 <p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
 
@@ -154,11 +158,12 @@
 
 <p>To use multiple text shadows, separate each grouping with a comma.</p>
 
-<pre><code>p { 
+<div class="highlighter-rouge"><pre class="highlight"><code>p { 
   text-shadow: 1px 1px 1px #000, 
                5px 5px 5px red; 
 }
 </code></pre>
+</div>
 
 <p><em>Pro tip!</em><br />
 Subtle effects work best.</p>
@@ -170,19 +175,20 @@ Subtle effects work best.</p>
 <p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
-<h3 id="css-color">CSS <code>color</code></h3>
+<h3 id="css-color">CSS <code class="highlighter-rouge">color</code></h3>
 
-<p>To change the colour of the text, use the <code>color</code> property.</p>
+<p>To change the colour of the text, use the <code class="highlighter-rouge">color</code> property.</p>
 
 <p>We’ve talked about how to set a background colour in <a href="module1-2.html#css-colours">Module 1</a>.  Use the same value types (hex, keyword or rgb) for this property as well.</p>
 
-<pre><code>/* all the same colour */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* all the same colour */
 body {
   color: firebrick;
   color: rgb(178,34,34);
   color: #B22222;
 }
 </code></pre>
+</div>
 
 <h2 id="icon-fonts">Icon fonts</h2>
 
@@ -195,13 +201,15 @@ body {
 <h3 id="watch-out">Watch out!</h3>
 <p>When using CDNs, they are sometimes listed like this:</p>
 
-<pre><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
 </code></pre>
+</div>
 
 <p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
 
-<pre><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
 </code></pre>
+</div>
 
 <p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
 
@@ -215,7 +223,7 @@ body {
 
 <blockquote>
   <h2 id="exercise-typography">EXERCISE: Typography</h2>
-  <p>Download the <a href="exercises/module2/typography-2.html" download="">typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the <code>&lt;head&gt;</code> of the page.</p>
+  <p>Download the <a href="exercises/module2/typography-2.html" download="">typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the <code class="highlighter-rouge">&lt;head&gt;</code> of the page.</p>
 
   <p><em>Pro tip!</em><br />
 Move this exercise file from the downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)</p>
@@ -329,7 +337,7 @@ Move this exercise file from the downloads folder and add it somewhere you can f
 
 <p>By default, many HTML tags are styled with some default spacing. For example, there is extra space between two paragraphs. Headings also have extra space around them.</p>
 
-<p>CSS uses 5 properties to determine the size and spacing of these elements: <code>width</code>, <code>height</code>, <code>padding</code>, <code>margin</code> and <code>border</code>.</p>
+<p>CSS uses 5 properties to determine the size and spacing of these elements: <code class="highlighter-rouge">width</code>, <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">padding</code>, <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">border</code>.</p>
 
 <p>This is referred to as <strong>The Box Model</strong>.</p>
 
@@ -340,35 +348,36 @@ Move this exercise file from the downloads folder and add it somewhere you can f
 <p>CSS uses 5 properties to determine the size and spacing of these boxes:</p>
 
 <ul>
-  <li><code>width</code> - change the default width</li>
-  <li><code>height</code> - change the default width</li>
-  <li><code>margin</code> - add or remove default space <em>around</em> the element</li>
-  <li><code>padding</code> - add or remove default space <em>inside</em> the element</li>
-  <li><code>border</code> -  add a border around the element</li>
+  <li><code class="highlighter-rouge">width</code> - change the default width</li>
+  <li><code class="highlighter-rouge">height</code> - change the default width</li>
+  <li><code class="highlighter-rouge">margin</code> - add or remove default space <em>around</em> the element</li>
+  <li><code class="highlighter-rouge">padding</code> - add or remove default space <em>inside</em> the element</li>
+  <li><code class="highlighter-rouge">border</code> -  add a border around the element</li>
 </ul>
 
 <p>Each of these boxes can have different combinations of the above properties, which in turn changes the element’s size and how much space it takes up on the page.</p>
 
 <h3 id="width--height">Width &amp; Height</h3>
 
-<p>The <code>width</code> &amp; <code>height</code> properties can be used to set specific heights and widths to only <em>block</em> level elements.  (More on block elements in Module 3.)</p>
+<p>The <code class="highlighter-rouge">width</code> &amp; <code class="highlighter-rouge">height</code> properties can be used to set specific heights and widths to only <em>block</em> level elements.  (More on block elements in Module 3.)</p>
 
 <div style="background:lightgreen;">This is a div with default width &amp; height.</div>
 <div style="background:lightgreen;width:60%;height:80px;margin-top:10px;">This is a div with a set width &amp; height.</div>
 
-<pre><code>div {
+<div class="highlighter-rouge"><pre class="highlight"><code>div {
   width: 60%;
   height: 80px;
 }
 </code></pre>
+</div>
 
 <h3 id="padding">Padding</h3>
 
-<p>The <code>padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
+<p>The <code class="highlighter-rouge">padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
 
 <p>Setting the padding to “0” will remove any default space on an HTML element. Any positive value will add space <em>inside</em> of the element.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 padding-top: 2px;
 padding-right: 2px;
 padding-bottom: 2px;
@@ -380,6 +389,7 @@ padding: 2px 10px; /* top &amp; bottom, right &amp; left */
 padding: 2px 10px 5px; /* top, right &amp; left, bottom */
 padding: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
+</div>
 
 <p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
 <p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
@@ -387,7 +397,7 @@ padding: 2px 2px 2px 2px; /* top right bottom left */
 <h3 id="margin">Margin</h3>
 <p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 margin-top: 2px;
 margin-right: 2px;
 margin-bottom: 2px;
@@ -399,6 +409,7 @@ margin: 2px 10px; /* top &amp; bottom, right &amp; left */
 margin: 2px 10px 5px; /* top, right &amp; left, bottom */
 margin: 2px 2px 2px 2px; /* top right bottom left */
 </code></pre>
+</div>
 
 <p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
 <p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
@@ -417,18 +428,19 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
-<h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code>margin</code></h3>
+<h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code class="highlighter-rouge">margin</code></h3>
 <p>The margin property can also be used to center align <em>block</em> level elements.</p>
 
-<p>First a width needs to be set. Then by setting the left &amp; right values to <code>auto</code>, it finds the center of the page. The <code>0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
+<p>First a width needs to be set. Then by setting the left &amp; right values to <code class="highlighter-rouge">auto</code>, it finds the center of the page. The <code class="highlighter-rouge">0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
 
-<pre><code>div {
+<div class="highlighter-rouge"><pre class="highlight"><code>div {
   background: lightblue;
   width: 600px;
   height: 60px;
   margin: 0 auto; /* 0 on the top &amp; bottom, auto on the left &amp; right */
 }
 </code></pre>
+</div>
 
 <div style="height:60px;width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
@@ -437,13 +449,13 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <blockquote>
   <h2 id="class-exercise-auto-align-content">CLASS EXERCISE: auto align content</h2>
 
-  <p>Looking at this <a href="http://codepen.io/learningcode/pen/adPrym">CodePen example</a>, compare the difference when <code>margin</code> is used to auto align the content block.</p>
+  <p>Looking at this <a href="http://codepen.io/learningcode/pen/adPrym">CodePen example</a>, compare the difference when <code class="highlighter-rouge">margin</code> is used to auto align the content block.</p>
 </blockquote>
 
 <h3 id="border">Border</h3>
-<p>The <code>border</code> property resides between the <code>margin</code> and <code>padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
+<p>The <code class="highlighter-rouge">border</code> property resides between the <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 border-width: 2px;
 border-style: solid;
 border-color: red;
@@ -451,10 +463,11 @@ border-color: red;
 /* shorthand */
 border: 2px solid red;
 </code></pre>
+</div>
 
 <p>Like padding and margin, a border can be added to a specific side of the element.</p>
 
-<pre><code>/* longhand */
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
 border-top-width: 2px;
 border-top-style: solid;
 border-top-color: red;
@@ -462,6 +475,7 @@ border-top-color: red;
 /* shorthand */
 border-top: 2px solid red;
 </code></pre>
+</div>
 
 <p>Read more about the Box Model <a href="https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/">here</a>.  We’ll also be revisiting it in Module 3.</p>
 
@@ -491,7 +505,7 @@ border-top: 2px solid red;
 
   <p>With a partner, edit/add/remove some margin and padding to make this web page look just a little bit nicer and more balanced.</p>
 
-  <p>Using the class added to the HTML, <code>&lt;div class="wrapper"&gt;</code>, add <code>margin</code> and <code>width</code> to auto align the page content.</p>
+  <p>Using the class added to the HTML, <code class="highlighter-rouge">&lt;div class="wrapper"&gt;</code>, add <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">width</code> to auto align the page content.</p>
 
   <p><strong>solution.css</strong> has been included for reference.</p>
 </blockquote>
@@ -504,12 +518,14 @@ border-top: 2px solid red;
     </main>
 
       <footer>
-    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
   </footer>
   <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>

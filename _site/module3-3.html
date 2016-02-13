@@ -44,9 +44,9 @@
         <h1>CSS Fundamentals</h1>
         <h2 id="display-vs-floats">Display vs Floats</h2>
 
-<p>In previous lessons, we talk about inline &amp; block elements and how to use the <code>display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
+<p>In previous lessons, we talk about inline &amp; block elements and how to use the <code class="highlighter-rouge">display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
 
-<p><code>float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
+<p><code class="highlighter-rouge">float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
 
 <p>So which one is better for page layouts?</p>
 
@@ -60,7 +60,7 @@
 
 <h4 id="pre-html5">Pre-HTML5</h4>
 
-<pre><code>&lt;div class="nav"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="nav"&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -69,10 +69,11 @@
   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
+</div>
 
 <h4 id="html5">HTML5</h4>
 
-<pre><code>&lt;nav&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
@@ -81,6 +82,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 </code></pre>
+</div>
 
 <blockquote class="note">
   <p>This is another topic where there is much debate. Are lists necessary for accessibility and semantics or should links be used on it’s own?  You can read more about it <a href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/">here</a> and <a href="http://www.sitepoint.com/are-navigation-lists-necessary/">here</a>.</p>
@@ -88,10 +90,10 @@
 
 <p>To style a list navigation, first you’ll need to reset the list styles.  You’ll probably also want to remove the default underline of the links.</p>
 
-<p>Putting a background color on the <code>ul</code> will help to visually see the space the element is occupying.
+<p>Putting a background color on the <code class="highlighter-rouge">ul</code> will help to visually see the space the element is occupying.
 Using the HTML5 markup example above, the CSS will looks like this:</p>
 
-<pre><code>nav a {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
   text-decoration: none; /* remove default underline */
 }
 nav ul {
@@ -101,22 +103,25 @@ nav ul {
   background: red;
 }
 </code></pre>
+</div>
 
-<p>Using <code>display</code>, there are two values that can be used to align the list items horizontally.</p>
+<p>Using <code class="highlighter-rouge">display</code>, there are two values that can be used to align the list items horizontally.</p>
 
-<p><code>inline</code> will line up side by side but does not accept height and width values.</p>
+<p><code class="highlighter-rouge">inline</code> will line up side by side but does not accept height and width values.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline;
 }
 </code></pre>
+</div>
 
-<p><code>inline-block</code> will also display the items side by side but accepts height and width values.</p>
+<p><code class="highlighter-rouge">inline-block</code> will also display the items side by side but accepts height and width values.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline-block; 
 } 
 </code></pre>
+</div>
 
 <blockquote>
   <p>Which one is better to use?</p>
@@ -126,14 +131,15 @@ nav ul {
 
 <p><img src="assets/img/module3/horizontal-nav-no-padding.png" alt="" /></p>
 
-<p>Put some padding on the link, <code>a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
+<p>Put some padding on the link, <code class="highlighter-rouge">a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
 
-<pre><code>nav a {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
   text-decoration: none;
   display: inline-block; /* add block behavior to use padding */
   padding: 10px;
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Use this <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> to explore these styles before moving on.</p>
@@ -142,61 +148,66 @@ nav ul {
 <h3 id="getting-to-know-your-options">Getting to know your options</h3>
 <p>If you put a background color on the list item, you’ll see an extra space between the elements.  Here’s the quirk!</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   display: inline-block; 
   background: lightblue;
 }
 </code></pre>
+</div>
 
 <p><img src="assets/img/module3/horizontal-nav-display.png" alt="" /></p>
 
-<p>The extra space is caused by the line break in the HTML used to put the <code>&lt;li&gt;</code> on separate lines.</p>
+<p>The extra space is caused by the line break in the HTML used to put the <code class="highlighter-rouge">&lt;li&gt;</code> on separate lines.</p>
 
-<p>If you use <code>float</code> instead of <code>display</code>, you won’t see this quirk.</p>
+<p>If you use <code class="highlighter-rouge">float</code> instead of <code class="highlighter-rouge">display</code>, you won’t see this quirk.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
     float: left;
     background: lightblue;
 }
 </code></pre>
+</div>
 
 <p><img src="assets/img/module3/horizontal-nav-float.png" alt="" /></p>
 
-<p>But, float has it’s own quirks too. What happened to the red background in the <code>ul</code>?</p>
+<p>But, float has it’s own quirks too. What happened to the red background in the <code class="highlighter-rouge">ul</code>?</p>
 
-<p>Let’s tackle the <code>display</code> example first.</p>
+<p>Let’s tackle the <code class="highlighter-rouge">display</code> example first.</p>
 
 <h2 id="horizontal-navigation-display">Horizontal navigation: Display</h2>
 
-<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code>text-align: center;</code> to automatically center align the list items containing the links.</p>
+<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code class="highlighter-rouge">text-align: center;</code> to automatically center align the list items containing the links.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   text-align: center;
 }
 </code></pre>
+</div>
 
 <p><img src="assets/img/module3/horizontal-nav-centered.png" alt="" /></p>
 
 <p>Let’s say you wanted 4 equal width boxes for the nav.  You could set the list items to a width of 25%.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   background: lightblue;
   width: 25%;
 }
 </code></pre>
+</div>
 
-<p>However, the space between the <code>&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
+<p>However, the space between the <code class="highlighter-rouge">&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
 <img src="assets/img/module3/horizontal-nav-spaces.jpg" alt="" /></p>
 
 <p>You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here’s another fix.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   font-size: 0; /* removes space between li elements */
 }
 nav ul li {
   font-size: 16px; /* reset the inherited font-size */
 }
 </code></pre>
+</div>
 
 <blockquote>
   <p>Let’s go back to the previous <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> and try this out.</p>
@@ -213,21 +224,23 @@ nav ul li {
 
 <p>No worries, just remember to clear your floats! Since this example requires all the list items to float, you’ll need to <em>self-clear</em> the floated elements.</p>
 
-<pre><code>nav ul {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
   overflow: hidden;
 }
 </code></pre>
+</div>
 
-<p>(You can also use the “clearfix hack” instead of <code>overflow</code>.)</p>
+<p>(You can also use the “clearfix hack” instead of <code class="highlighter-rouge">overflow</code>.)</p>
 
 <p>With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.</p>
 
-<pre><code>nav ul li {
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
   width: 25%;
 }
 </code></pre>
+</div>
 
-<p>However, <code>text-align: center;</code> will only center align the text <em>within</em> the <code>&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code>display</code> example.</p>
+<p>However, <code class="highlighter-rouge">text-align: center;</code> will only center align the text <em>within</em> the <code class="highlighter-rouge">&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code class="highlighter-rouge">display</code> example.</p>
 
 <blockquote>
   <p>Let’s try these techniques out in this <a href="http://codepen.io/learningcode/pen/qOYbYX?editors=110#0">CodePen</a>.</p>
@@ -245,9 +258,9 @@ nav ul li {
 Remember, every HTML element is essentially just a “box” so the techniques discussed above are not limited to just navigations using a list.</p>
 
 <h2 id="css-position-property">CSS Position property</h2>
-<p>The <code>position</code> property can also be used to lay out HTML elements and has five different values: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> and <code>inherit</code>.</p>
+<p>The <code class="highlighter-rouge">position</code> property can also be used to lay out HTML elements and has five different values: <code class="highlighter-rouge">static</code>, <code class="highlighter-rouge">relative</code>, <code class="highlighter-rouge">absolute</code>, <code class="highlighter-rouge">fixed</code> and <code class="highlighter-rouge">inherit</code>.</p>
 
-<p><code>position</code> is also used with a combination of box <em>offset properties</em>, <code>top</code>, <code>right</code>, <code>bottom</code> and <code>left</code>, to specify the direction and measurements for the positioned elements.</p>
+<p><code class="highlighter-rouge">position</code> is also used with a combination of box <em>offset properties</em>, <code class="highlighter-rouge">top</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">bottom</code> and <code class="highlighter-rouge">left</code>, to specify the direction and measurements for the positioned elements.</p>
 
 <h3 id="position-static">position: static;</h3>
 
@@ -260,7 +273,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <h3 id="position-relative">position: relative;</h3>
 
 <ul>
-  <li>has the same behavior as <code>static</code> <strong>but</strong> box offset properties can be applied to it</li>
+  <li>has the same behavior as <code class="highlighter-rouge">static</code> <strong>but</strong> box offset properties can be applied to it</li>
   <li>use this to nudge the element within its stacked order</li>
 </ul>
 
@@ -269,7 +282,7 @@ Remember, every HTML element is essentially just a “box” so the techniques d
 <ul>
   <li>can be positioned anywhere, relative to its <strong>nearest positioned ancestor</strong> element</li>
   <li>if no ancestor element is positioned, it will be relative to the body</li>
-  <li>to contain the element, use <code>position: relative</code> in a parent selector</li>
+  <li>to contain the element, use <code class="highlighter-rouge">position: relative</code> in a parent selector</li>
 </ul>
 
 <h3 id="position-fixed">position: fixed;</h3>
@@ -302,12 +315,14 @@ Remember, every HTML element is essentially just a “box” so the techniques d
     </main>
 
       <footer>
-    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
     <ul>
       <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
       <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
       <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
     </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
   </footer>
   <script src="assets/js/jquery-1.11.3.min.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>

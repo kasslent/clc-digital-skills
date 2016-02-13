@@ -51,7 +51,8 @@ The notes are styled for regular viewing on laptops for students so the font-siz
 
 The notes are more detailed than the LLC workshops because they are meant for the students to use as a reference & deeper exploration than single workshops but not too detailed to replace in-class instruction and discussion.  The notes also include extra resources for further exploration.
 
-Go at the pace of the learners.  If you don't get through the entire lesson in the time slot, just continue where you left off in the next class.  The last module is light and also includes a "Student suggested lesson" so you can use that time to review or catch up.
+Each lesson is meant to be covered in on 2.5 hr class, including breaks. Though you may find some some lessons may take longer or shorter, based on level of the students, amount of questions, some weeks have more complex topics, etc.
+If you don't get through the entire lesson in the time slot, just continue where you left off in the next class.  The last lesson is light and also includes a "Student suggested lesson" so you can use that time to review or catch up.
 
 ##Lesson specific notes
 ### Module "0"
