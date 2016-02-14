@@ -8,7 +8,7 @@ permalink: module5-1.html
 class: module5-1
 ---
 
-##CSS vs JavaScript
+## CSS vs JavaScript
 
 With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
 
@@ -25,15 +25,14 @@ If it's a visual effect, that happens on page load, you *might* be able to use C
 * new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
 * if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
 
-####Extra Resources
+#### Extra Resources
 
 * [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
 * [Animate.css](https://daneden.github.io/animate.css/)
 
 
 
-
-##JavaScript vs jQuery
+## JavaScript vs jQuery
 
 ### What is JavaScript?
 JavaScript controls the **behavior** of your web page. It allows you to do things such as:

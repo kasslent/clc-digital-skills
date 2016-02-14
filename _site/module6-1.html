@@ -1,0 +1,482 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page is public but not meant to show up in search engine results -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Intro to CMS & WordPress</title>
+  <meta name="description" content="Blogs, Websites and CMS">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
+</head>
+<body class="">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
+    <h1>Digital Skills Program</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Module 6, Lesson 1</h2>
+  </header>
+
+
+    <main role="main" class="lessons" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <h3>Module 6, Lesson 1</h3>
+        <h4>Intro to CMS & WordPress</h4>
+      </nav>
+      
+      <article>
+        <h1>Intro to CMS & WordPress</h1>
+        <h2 id="blogs-websites-and-cms">Blogs, Websites and CMS</h2>
+
+<p>How are blogs different from websites?</p>
+
+<ul>
+  <li>the term blog is an abbreviation for weblog</li>
+  <li>blogs often contain an ongoing collection of posts and articles presented in chronological order</li>
+  <li>often (but not always) written in a diary-style of commentary</li>
+  <li>a website can also contain a blog <strong>and</strong> standard informational pages</li>
+</ul>
+
+<p>A <strong>Content Management System (CMS)</strong>, is an application used to edit content and manage a website using a graphical user interface instead of editing the code or database.</p>
+
+<p>A CMS usually includes features such as:</p>
+
+<ul>
+  <li>database management</li>
+  <li>themes and templates for page layouts</li>
+  <li>making content searchable and indexable</li>
+  <li>and much more!</li>
+</ul>
+
+<h2 id="what-is-wordpress">What is WordPress?</h2>
+
+<ul>
+  <li>one of many types of blogging software and CMS</li>
+  <li>an online, open source (a.k.a. free) website creation tool</li>
+  <li>can edit, publish content and manage the website using a graphical user interface, without editing the code or database (though you can!)</li>
+  <li>customizable core, can be extended and modified in anyway</li>
+  <li>written primarily in PHP but also requires HTML, CSS, JavaScript</li>
+  <li>uses PHP templates &amp; a database to create and store content (with static HTML, you have to manually create a new document for every new page)</li>
+</ul>
+
+<p>Depending on your needs and level of customization, you may not need to edit any of the code to get up and running.</p>
+
+<p>There are two options for using WordPress, <a href="http://wordpress.org">WordPress.org</a> and <a href="http://wordpress.com">WordPress.com</a>.</p>
+
+<h2 id="wordpresscom-vs-wordpressorg">WordPress.com vs WordPress.org</h2>
+
+<h3 id="wordpresscom">WordPress.com</h3>
+
+<ul>
+  <li>hosted and all technical maintenance handled by WordPress</li>
+  <li>your domain will be “yoursite.<strong>wordpress.com</strong>” (paid upgrade for a customized domain)</li>
+  <li>don’t need to write any PHP to get up and running</li>
+  <li>no access to the code (without an upgrade)</li>
+  <li>theme options are included but cannot upload your own themes</li>
+  <li>different plans ranging from free - $299 with added features</li>
+  <li>no plugins</li>
+</ul>
+
+<h3 id="wordpressorg">WordPress.org</h3>
+
+<ul>
+  <li>must register and pay for a domain &amp; web hosting</li>
+  <li>you are responsible for technical maintenance</li>
+  <li>requires web development knowledge (how much depends on level of customization desired)</li>
+  <li>written on PHP (back-end programming language)</li>
+  <li>also requires HTML &amp; CSS and usually JavaScript</li>
+  <li>full control over themes files and code</li>
+  <li>more theme options or customize it yourself</li>
+  <li>1000s of plugins for adding features &amp; functionality or create your own</li>
+</ul>
+
+<p>Both versions basically work the same but the <code class="highlighter-rouge">.com</code> version doesn’t require any technical knowledge and is limited on the level of customization.</p>
+
+<p>The <code class="highlighter-rouge">.org</code> version can be customized in any way but requires more technical knowledge.  How much depends on the level of complexity of the customizations required.</p>
+
+<h2 id="web-hosting-servers-and-domain">Web Hosting, Servers and Domain</h2>
+
+<p>A <strong>server</strong> is the computer that will “host” your website files.  A <em>server</em> is a like a computer, but they never turn off and are always connected to the internet.</p>
+
+<p><strong>Web hosts</strong> own many different servers and their job is to make sure the servers run properly, so that our websites are always available.</p>
+
+<p>The <strong>domain</strong> is the internet address (e.g. www.mywebsite.com) used to website files on the server.</p>
+
+<p>Developing <em>locally</em> refers to working on your site on your own computer.</p>
+
+<h3 id="local-wordpress-development--server">Local WordPress Development &amp; server</h3>
+
+<p>If you decide to use the WordPress.org version, you should also develop the site using a <em>local</em> server. It’s better to develop your site &amp; make changes locally rather than on your live web server, so you get a chance to test it before the world sees it.</p>
+
+<p>Since WordPress runs on PHP, which is a server-side language, a local server is needed to run the files before you can view the content in a web browser.</p>
+
+<p>Purchasing hosting is required to make any type of website live. Some hosting companies provide hosting specifically for WordPress to handle WordPress specific things! (See resources for some articles comparing various hosts.)</p>
+
+<h4 id="resources">Resources</h4>
+<ul>
+  <li><a href="http://www.wpbeginner.com/wordpress-hosting/">WPBeginner: 
+How to Choose the Best WordPress Hosting?</a></li>
+  <li><a href="http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/">Performance of the Best WordPress Hosting Companies Compared</a></li>
+</ul>
+
+<h2 id="wordpress-and-flywheel">WordPress and Flywheel</h2>
+
+<p>Some WordPress specific hosting companies allow you to take advantage of the custom options not available on WordPress.com but manage some of the technical details like database management.</p>
+
+<p>Today we’re going to look at a company called <a href="https://getflywheel.com/">Flywheel</a> to try out some of the features included in a hosted WordPress site without setting up a local server. (14 day free trial)</p>
+
+<p>Visit <a href="https://getflywheel.com/">getflywheel.com</a> to create an account.</p>
+
+<h3 id="creating-a-project-in-flywheel">Creating a Project in Flywheel</h3>
+
+<p>To create a new project, login and select <strong>new site</strong> in the top navigation bar.</p>
+
+<p><img src="assets/img/module6/1-flywheel.jpg" alt="" /></p>
+
+<p><br />
+Fill out the required information and then choose the “My client will pay later” option to activate the 14 day free trial for creating a demo account.</p>
+
+<p><img src="assets/img/module6/2-flywheel.jpg" alt="" /></p>
+
+<p><br />
+To view your demo site, go to yoursite.flywheelsites.com and end the username and password provided in your account.</p>
+
+<p><img src="assets/img/module6/3-flywheel.jpg" alt="" /></p>
+
+<p><br />
+To access the WordPress admin panel for your site, select the <strong>WordPress Login</strong> button.</p>
+
+<p><img src="assets/img/module6/4-flywheel.jpg" alt="" /></p>
+
+<h3 id="wordpress-settings">WordPress Settings</h3>
+
+<p>When you log into the WordPress admin area, the first thing you’ll see is the Dashboard. Here you can view your drafts, check out basic stats, respond to comments and get a general overview of your blog.</p>
+
+<p>The other menus in the left sidebar allows access to additional settings such as:</p>
+
+<ul>
+  <li>adding blog posts (Posts)</li>
+  <li>adding pages (Pages)</li>
+  <li>changing themes (Appearance)</li>
+  <li>uploading media (Media)</li>
+  <li>other general site settings</li>
+</ul>
+
+<h2 id="configure-basic-site-settings">Configure basic site settings</h2>
+
+<p>In the admin panel, go to <strong>Settings &gt; General</strong>.</p>
+
+<p>Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select <strong>Save Changes</strong>!</p>
+
+<blockquote>
+  <p>Go to <strong>Settings &gt; General</strong> and update your Site Title and Tagline and another general settings.</p>
+</blockquote>
+
+<h2 id="posts-vs-pages">Posts vs Pages</h2>
+<p>Posts</p>
+
+<ul>
+  <li>used for date-based content</li>
+  <li>posts are listed chronologically</li>
+  <li>can also be assigned <em>categories</em> and <em>tags</em> (also referred to as <em>taxonomies</em>)</li>
+  <li>permalink (URL) will include the date (can change this in the settings)<br />(e.g. http://your-project-name.dev/2015/09/28/my-catchy-title/)</li>
+</ul>
+
+<p>Pages</p>
+
+<ul>
+  <li>used for single pages of static content (e.g. about or contact page)</li>
+  <li>cannot have <em>taxonomies</em></li>
+  <li>can have a hierarchical structure (e.g. Travel &gt; Beach vacations)</li>
+  <li>permalink (url) will not include the date<br />(e.g. http://your-project-name.dev/about/)</li>
+</ul>
+
+<h2 id="content-options-and-settings">Content Options and Settings</h2>
+
+<p>When adding content into your <strong>Post</strong> or <strong>Page</strong>, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the <strong>Toolbar Toggle</strong> to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.</p>
+
+<p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.</p>
+
+<p><img src="assets/img/module6/adding-content-wysiwyg.png" alt="" /></p>
+
+<h3 id="wordpress-and-html">WordPress and HTML</h3>
+
+<p>You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
+
+<p>In WordPress, you don’t need to add the <code class="highlighter-rouge">&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
+
+<p><img src="assets/img/module6/editor-visual-p.png" alt="" /></p>
+
+<p>In the <strong>Text</strong> editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into <code class="highlighter-rouge">&lt;p&gt;</code> tags via Wordpress magic!</p>
+
+<p><img src="assets/img/module6/editor-text-p.png" alt="" /></p>
+
+<p>Also, break tags <code class="highlighter-rouge">&lt;br&gt;</code> are also not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
+
+<p><img src="assets/img/module6/editor-line-break.png" alt="" /></p>
+
+<h3 id="categories">Categories</h3>
+
+<p>Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.</p>
+
+<p>To add categories, go to <strong>Posts &gt; Categories</strong> or within the post itself.
+<img src="assets/img/module6/dashboard-categories-post.png" alt="" /></p>
+
+<p>Sub-categories can also be created by selecting a Parent in the <strong>Categories</strong> menu.</p>
+
+<p><img src="assets/img/module6/dashboard-categories.png" alt="" /></p>
+
+<h3 id="tags">Tags</h3>
+
+<p>Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Category: Breakfast
+Tags: eggs, kid friendly, under 30mins
+</code></pre>
+</div>
+
+<p>Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.</p>
+
+<blockquote>
+  <h2 id="exercise-add-content">EXERCISE: Add Content</h2>
+  <ol>
+    <li>Create a post and page and add some content.</li>
+    <li>Add some categories and tags to your posts and pages.</li>
+  </ol>
+
+  <p>Having content to work with will make it easier to pick a theme in the upcoming exercise.</p>
+</blockquote>
+
+<h2 id="default-home-page-settings">Default Home page settings</h2>
+
+<p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content. These template files are also used to display just a specific <em>portion</em> of a page.</p>
+
+<p><img src="assets/img/module6/wp-theme-files.jpg" alt="" /></p>
+
+<p><br />
+Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
+
+<p>To update these settings, follow these steps:</p>
+
+<ol>
+  <li>If you don’t already have a page to use as your home page, create one</li>
+  <li>
+    <p>Create a <em>blank</em> blog page</p>
+
+    <p>This page does not need any content because there is already a template file used to display the blog post listing.</p>
+
+    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code class="highlighter-rouge">http://yoursite.com/blog</code> or <code class="highlighter-rouge">http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
+  </li>
+  <li>
+    <p>Change the settings</p>
+
+    <p>Under <strong>Settings &gt; Reading</strong>, select whichever page you want to show as the <strong>Front page</strong> (your homepage) and the blank page you created for the blog under <strong>Posts page</strong>.</p>
+
+    <p><img src="assets/img/module6/homepage-custom.jpg" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="create-a-custom-menu">Create a custom menu</h2>
+
+<p>Menus are a list of links, usually displayed as the navigation for your site. You can choose from Pages or Categories from within your WordPress site or a custom link (can link to an external site).</p>
+
+<p>The menu location may vary depending on the theme. Some themes also offer additional menus such as social links menus.</p>
+
+<p><img src="assets/img/module6/wp-menus.png" alt="" /></p>
+
+<p>You can also reorder the menus by dragging the menu options as well as make submenus by dragging it underneath another item.</p>
+
+<p><img src="assets/img/module6/menu-additions.gif" alt="" /></p>
+
+<h2 id="wordpress-themes">WordPress Themes</h2>
+
+<p>A theme provides all of the graphical styles for your site. You can use existing themes from the WordPress theme directory, from theme developers or create your own.</p>
+
+<p>Most themes include:</p>
+
+<ul>
+  <li>overall page layouts &amp; colour scheme</li>
+  <li>styles for blog posts and blog archives</li>
+  <li>typography styles</li>
+  <li>different types of widgets and where they are located on the page</li>
+</ul>
+
+<h3 id="theme-development-options">Theme Development options</h3>
+
+<p>There are three options for adding themes to your WordPress site.</p>
+
+<p><strong>Option 1: Free &amp; Premium Themes</strong></p>
+
+<ul>
+  <li>only pay for domain, hosting &amp; cost of theme (from free to ~ $300)</li>
+  <li>does not require any coding (though you still have access to the codebase)</li>
+  <li>includes some theme options that can be updated in the WordPress admin area</li>
+</ul>
+
+<p><strong>Option 2: Child themes</strong></p>
+
+<ul>
+  <li>used to modify a theme without making any changes to the parent theme’s files</li>
+  <li>inherits the features of its parent theme including updates</li>
+  <li>will require some knowledge of HTML, CSS and PHP</li>
+  <li>should develop locally using a local server</li>
+</ul>
+
+<p><strong>Option 3: Custom themes</strong></p>
+
+<ul>
+  <li>built from scratch or from a starter template</li>
+  <li>requires a deeper knowledge of HTML, CSS, PHP or get really good at following the <a href="https://codex.wordpress.org/">WordPress documentation</a>!</li>
+  <li>should develop locally using a local server</li>
+</ul>
+
+<p>We’ve been exploring Option 1 in this lesson but there are some extra <a href="#bonus-editing-theme-files">resources and information</a> included at the end of this lesson for further exploration.</p>
+
+<h3 id="free--paid-themes">Free &amp; Paid Themes</h3>
+
+<p>Why would you code your own theme or pay for a theme if there are so many free, functional templates to choose from? Well, that all depends on how unique and customized you need your site to be.</p>
+
+<p>Pre-built themes are a great way to get up and running and to try it out, and can help determine what you need before investing in development or paid themes.</p>
+
+<p>If you’re not ready to code yourself just yet but want more options, paid themes often offer premium plugins, more customization options and customer support.</p>
+
+<p>There are literally 1000s of free WordPress themes available for download in the WordPress directory found under <strong>Appearance &gt; Themes</strong>, <strong>Add New</strong>. Click on the thumbnail to see a preview, get info or install a new theme.</p>
+
+<h4 id="resources-1">Resources</h4>
+
+<ul>
+  <li><a href="https://getflywheel.com/design-and-wordpress-resources/">https://getflywheel.com/design-and-wordpress-resources/</a></li>
+  <li><a href="https://en.support.wordpress.com/video-quick-start/#find-a-theme">https://en.support.wordpress.com/video-quick-start/#find-a-theme</a></li>
+</ul>
+
+<blockquote>
+  <h2 id="exercise-choose-a-theme">EXERCISE: Choose a theme</h2>
+  <p>Under <strong>Appearance &gt; Themes</strong>, let’s look the different theme options.</p>
+</blockquote>
+
+<h3 id="watch-out">Watch Out!</h3>
+
+<p>If you change your theme, you may have to go back to your Appearance &gt; Menus to add in the Menu Settings in again.</p>
+
+<p><img src="assets/img/module6/change-theme-menu.png" alt="" /></p>
+
+<h2 id="bonus-editing-theme-files">Bonus: Editing Theme Files</h2>
+
+<h3 id="editor-menu">Editor menu</h3>
+
+<p>The Editor menu (<strong>Appearance &gt; Editor</strong>) allows access to the theme files where you can add edits to the template files.</p>
+
+<p><strong>Be careful when editing these files.</strong></p>
+
+<p>Normally, it would be best practice to edit these files <em>locally</em> so any changes made won’t be “live” before it’s ready but since the Flywheel demo site is password protected, the general public won’t be able to view it.</p>
+
+<p><strong>Pro tip!</strong> Make a backup copy of the file before editing it in case you need to put it back!</p>
+
+<p><img src="assets/img/module6/wp-editor-menu.png" alt="" /></p>
+
+<h3 id="template-tags">Template tags</h3>
+
+<p>WordPress uses <strong>template tags</strong> to pull data from the database and output it onto the page.  It is often mixed in with HTML so the data can be outputted into semantic HTML page layouts.</p>
+
+<p>Template tags are basically PHP functions (and look similar to JavaScript functions.) Note that WordPress (and most PHP developers) use the underscore naming convention and looks something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>template_tag()
+</code></pre>
+</div>
+
+<p>Here’s a couple of common template tags:</p>
+
+<p><code class="highlighter-rouge">get_header()</code> - gets the header.php file and includes it in the current theme file<br />
+<code class="highlighter-rouge">the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
+
+<p><br />
+How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code class="highlighter-rouge">h2</code> heading.</p>
+
+<p><code class="highlighter-rouge">bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
+</code></pre>
+</div>
+
+<p><img src="assets/img/module6/site-title-settings.jpg" alt="" /></p>
+
+<h3 id="local-wordpress-theme-development">Local WordPress Theme Development</h3>
+
+<p>Developing a WordPress theme <em>locally</em> requires downloading the WordPress core files and setting up a local server.</p>
+
+<h3 id="wordpress-core-files">WordPress Core Files</h3>
+
+<p>The core files can be downloaded here: <a href="https://wordpress.org/download/">https://wordpress.org/download/</a></p>
+
+<p>Though you can access all of these files, there are some that should never be edited. The majority of your edits will be contained in the <strong>wp-content</strong> folder since those files are specific to the WordPress theme.</p>
+
+<p>The one file outside of <strong>wp-content</strong> that you may need to edit is the <strong>wp-config.php</strong> file. It contains the website’s base configuration details, such as database connection information.</p>
+
+<p><img src="assets/img/module6/wp-core-files.jpg" alt="" /></p>
+
+<h3 id="setting-up-your-local-server">Setting up your local server</h3>
+
+<p>There are many ways to set up a local server.  Here are the instructions for using the <strong>DesktopServer App</strong>:</p>
+
+<ol>
+  <li>Download the DesktopServer app here: <a href="https://serverpress.com/get-desktopserver/">https://serverpress.com/get-desktopserver/</a>
+    <ul>
+      <li>View the video for downloading and installing the DesktopServer app: <a href="https://www.youtube.com/watch?v=d_MoCUKv3TI">https://www.youtube.com/watch?v=d_MoCUKv3TI</a></li>
+    </ul>
+  </li>
+  <li>Open the DesktopServer app and follow the steps outlined in the getting started video (<a href="https://www.youtube.com/embed/Po0MkaL8Fgc">https://www.youtube.com/embed/Po0MkaL8Fgc</a>) or using the written instructions <a href="https://serverpress.com/getting-started-with-desktopserver/">here</a>.</li>
+  <li>Once you’ve created a local WordPress site, you can access it with the <strong>Sites</strong> button.</li>
+</ol>
+
+<p>Another popular option is the  <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">Mamp</a> app.</p>
+
+<p><strong>Important!</strong> You will need to run a local server anytime you’re developing WordPress locally.</p>
+
+<h4 id="resources-2">Resources</h4>
+
+<ul>
+  <li><a href="https://codex.wordpress.org/">WordPress Codex</a></li>
+  <li><a href="https://developer.wordpress.org/themes/getting-started/">WordPress Theme Development Handbook</a></li>
+  <li><a href="https://managewp.com/edit-wordpress-website">How to Edit Your WordPress Website (Without Hacking Core Files)</a></li>
+  <li><a href="https://codex.wordpress.org/Editing_wp-config.php">Editing wp-config.php</a></li>
+</ul>
+
+<p><br />
+~ end ~</p>
+
+      </article>
+    </main>
+
+      <footer>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+  </footer>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/global.js"></script>
+</body>
+</html>
+
+

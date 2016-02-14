@@ -108,3 +108,5 @@ If there is time, the bonus exercise is to make the nav fixed so you can add add
 
 If you still have time at the end of the class, let the students pick what they want to go over from any of the plugin resources listed in the the lesson or one of your choice.
 
+###Module 6
+Make sure everyone has a wordpress.com account before class.

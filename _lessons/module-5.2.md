@@ -30,7 +30,7 @@ Another important part is knowing how to ask directed questions to find the answ
 > Discussion: What are some search techniques or resources that can be used to find answers?
 
 
-##Click event & an "active" menu
+## Click event & an "active" menu
 
 Here's an example of a navigation effect that can be added to a one page website.
 
@@ -45,11 +45,11 @@ Here's how to do it, broken down into steps.
 1. Add the “active” class style to the CSS file.
 1. When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.
 
-> ##Class Exercise: "Active" menu
+> ## Class Exercise: "Active" menu
 > Download the <a href="exercises/module5/javascript.html" download>javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user's click.
 
 
-##Plugins
+## Plugins
 
 A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress). 
 
@@ -58,7 +58,7 @@ The jQuery library contains many methods and features but you can extend it even
 Let's take a look at one of many [smooth scroll plugins](https://github.com/cferdinandi/smooth-scroll). (This one is all JavaScript, no jQuery!) 
 
 
-> ##Class Exercise: Smooth scroll
+> ## Class Exercise: Smooth scroll
 > Using the previous exercise file, add the smooth scroll plugin.  
 > Let's follow the instructions listed in the plugin developers [site](https://github.com/cferdinandi/smooth-scroll).
 
@@ -71,7 +71,7 @@ Let's take a look at one of many [smooth scroll plugins](https://github.com/cfer
 
 
 
-##More Plugins!
+## More Plugins!
 
 * [jQuery UI](https://jqueryui.com/)
 * [The jQuery Plugin Registry](https://plugins.jquery.com/)
