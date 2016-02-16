@@ -299,17 +299,10 @@ blockquote {
 
 @media print {
   .print-hide,
-  iframe {
+  iframe,
+  header, footer,
+  .table-of-contents {
     display: none; }
-
-  .print-50 {
-    width: 46%; }
-
-  .print-30 {
-    width: 30%; }
-
-  .print-15 {
-    width: 15%; }
 
   @page {
     margin: 2cm; }
@@ -327,31 +320,40 @@ blockquote {
 
   article {
     max-width: 100%; }
-    article h2,
-    article .example h2 {
-      margin-top: 10px;
-      font-size: 11pt;
-      text-decoration: underline; }
-    article h3,
-    article .example h3 {
-      margin-top: 10px;
+
+  header.print-only {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent; }
+    header.print-only h1 {
+      color: black;
+      font-size: 20pt; }
+    header.print-only h2 {
+      margin-bottom: 30px;
       font-size: 10pt; }
 
-  h1,
-  .example h1 {
-    font-size: 14pt;
-    margin: 0; }
+  h1 {
+    font-size: 18pt; }
+
+  h2 {
+    font-size: 14pt; }
+
+  h3 {
+    font-size: 12pt; }
 
   h1, h2, h3 {
     page-break-inside: avoid;
     page-break-after: avoid;
-    font-weight: bold;
-    margin: 0; }
-    h1 + p, h2 + p, h3 + p {
-      margin-top: 4px; }
+    font-weight: bold; }
 
-  img {
-    max-width: 100% !important; }
+  article > h2,
+  article > h3 {
+    margin: 20px 0 0 0; }
+
+  img,
+  article img {
+    max-width: 50%; }
 
   blockquote {
     margin: 0 0 20px;
@@ -366,33 +368,5 @@ blockquote {
     font-size: 10pt; }
 
   .hljs {
-    font-size: 8pt; }
-
-  header.print-only {
-    display: block;
-    padding: 0;
-    margin: 0; }
-    header.print-only h2 {
-      margin: 0;
-      font-size: 10pt; }
-    header.print-only h3 {
-      font-size: 14pt; }
-
-  header, footer,
-  .table-of-contents {
-    display: none; }
-
-  .print-wireframe,
-  .grouping-elements {
-    width: 6cm; }
-
-  .module3-1 img,
-  .module3-2 img,
-  .module4-2 img,
-  .module6-1 img,
-  .module6-2 img,
-  .module7 img {
-    width: 8cm; }
-
-  .module6-1 .two-col img {
-    width: 5cm; } }
+    font-size: 9.5pt;
+    background: transparent; } }
