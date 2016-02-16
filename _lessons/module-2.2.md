@@ -196,7 +196,7 @@ If you just need to resize an image to reduce the resolution size for web, go to
 
 Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.
 
-<img src="{{ site.img }}/module2/06-pxlr-imagesize.jpg">
+<img src="{{ site.img }}/module2/pxlr-imagesize.jpg">
 
 Choosing **Canvas size...** (the option under **Image size...**) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.
 

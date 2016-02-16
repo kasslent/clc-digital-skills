@@ -128,7 +128,7 @@ Using graph paper can also help layout columns and gutters when doing a hand dra
 
 Some content blocks may span multiple columns, others may span only one. Not every page component needs to fit into the grid dimensions either.
 
-For example, the [Food Sense Blog website]({{ site.img }}/module2/02-grid-fs.jpg) uses the 12 column grid to organize the content in different ways. 
+For example, the [Food Sense Blog website]({{ site.img }}/module2/grid-fs.jpg) uses the 12 column grid to organize the content in different ways. 
 
 In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs](https://designschool.canva.com/blog/grid-design/), you can see even more ways to lay out content with a wide variety of grids.
 
@@ -161,7 +161,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 ## Type Classification
 
-<img class="right" src="{{ site.img }}/module2/07-serif.jpg">
+<img class="right" src="{{ site.img }}/module2/serif.jpg">
 
 ### Serif Typefaces
 
@@ -170,7 +170,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 <hr class="clear">
 
-<img class="right" src="{{ site.img }}/module2/08-sansserif.jpg">
+<img class="right" src="{{ site.img }}/module2/sansserif.jpg">
 
 ### Sans Serif Typefaces
 
@@ -187,7 +187,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 > Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need.
 
 
-<img class="left" src="{{ site.img }}/module2/09-script.jpg">
+<img class="left" src="{{ site.img }}/module2/script.jpg">
 
 ### Script Typefaces
 
@@ -198,7 +198,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 <hr class="clear">
 
 
-<img class="left" src="{{ site.img }}/module2/10-display.jpg">
+<img class="left" src="{{ site.img }}/module2/decorative.jpg">
 
 ### Decorative Typefaces
 

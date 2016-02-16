@@ -100,7 +100,7 @@ HTML5 is the latest version.
 
 HTML **tags** are used to create the web page structure are written with left `<` and right angled brackets `>` and a forward slash `/` for the closing tag.
 
-<img src="{{ site.img }}/keyboard-html.png" class="print-hide">
+<img src="{{ site.img }}/module1/keyboard-html.png" class="print-hide">
 
 Tags *usually* come in pairs &mdash; an opening tag and a closing tag &mdash; to *wrap* the content.  Note that the closing tag has a forward slash (`/`).
 
@@ -290,7 +290,7 @@ Get used to doing a lot of moving, deleting, changing and rewriting. This is the
 
 If you don't have a web design to work from, a simple hand sketch also works. Also, websites have many common elements. For example, here is a simple wireframe for a basic web page. 
 
-<img class="print-wireframe" src="{{ site.img }}/wireframe-basic.jpg">
+<img class="print-wireframe" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
 ### Grouping Elements
 
@@ -300,7 +300,7 @@ The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>`
 
 To create the page layout, the HTML could look something like this:
 
-<img class="grouping-elements print-hide" src="{{ site.img }}/wireframe-basic.jpg">
+<img class="grouping-elements print-hide" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
     <div>
       nav links here
@@ -668,7 +668,7 @@ When using an image or an icon, in addition to using the `alt` attribute, you ca
       <img src="images/twitter-logo.png" alt="Twitter logo">
     </a>
 
-<a href="http://twitter.com" title="Twitter"><img class="example-img"  src="{{ site.img }}/twitter-logo.png" alt="Twitter logo"></a>
+<a href="http://twitter.com" title="Twitter"><img class="example-img"  src="{{ site.img }}/module1/twitter-logo.png" alt="Twitter logo"></a>
 
 <br>
 

@@ -25,7 +25,7 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
   * **right-click** OR **two-finger tap** OR **control + click** on any webpage
   * select **Inspect**
 * Option 2: Browser menu 
-  * Click the menu <span class="menu-icon">![]({{ site.img }}/menu-icon.png)</span> icon
+  * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
   * select **More Tools > Developer Tools**
 * Option 3: Keyboard shortcut
   * **CTRL + Shift + I** (PC)

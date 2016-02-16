@@ -43,7 +43,7 @@ Sites like these and other media sites such as Instagram and Twitter all offer e
 
 CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colon `;`
 
-![keyboard]({{ site.img }}/keyboard-css.png)
+![keyboard]({{ site.img }}/module1/keyboard-css.png)
 
 ## Syntax & Terminology
 
