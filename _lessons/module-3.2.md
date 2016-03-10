@@ -17,7 +17,7 @@ Let's review the concepts and techniques covered in all of the previous lessons 
 >
 >1. Create a project "root" folder. 
 1. Within the project root folder, add a folder for CSS files and for images.
-1. Download this [index.html]() file and add it to your project folder.
+1. Download this [exercises/module3/index.html]() file and add it to your project folder.
 1. Personalize the HTML
   * Update the `<title>` tag, headings, email and any other content.
   * Add a profile picture.  Make sure images are added to the **image** folder.
