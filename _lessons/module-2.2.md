@@ -222,7 +222,7 @@ SVG is an image file type that stands for <em>Scalable Vector Graphics</em> and 
 
 So what's the difference? Let's compare a vector graphic (JPG / PNG) and a raster (sometimes called "bitmap") graphic:
 
-<img src="assets/img/module2/vector-vs-raster.png" />
+<img src="{{ site.img }}/module2/vector-vs-raster.png" />
 
 The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic. A major difference between SVG and other file types is size - an SVG will usually be a smaller file size and therefore easier for a browser to load. If a graphic is vector, it should be in SVG format for use on the web.
 
