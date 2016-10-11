@@ -44,42 +44,87 @@
         <h1>CSS Fundamentals</h1>
         <h2 id="html--css-review">HTML &amp; CSS Review</h2>
 
-<p>Let’s review the concepts and techniques covered in all of the previous lessons by creating a basic one page site, similar to this <a href="exercises/module3/sample/index.html">example</a>, from scratch.</p>
+<p>Let’s review the concepts and techniques covered in all of the previous lessons by creating a basic one page site, similar to this <a href="exercises/module3/susans-site/index-final.html">example</a>, from scratch.</p>
 
 <blockquote>
-  <h2 id="class-exercise-putting-it-all-together">CLASS EXERCISE: Putting it all together!</h2>
+  <h2 id="code-along-putting-it-all-together">CODE-ALONG: Putting it all together!</h2>
 
   <ol>
-    <li>Create a project “root” folder.</li>
-    <li>Within the project root folder, add a folder for CSS files and for images.</li>
-    <li>Download this <a href="">index.html</a> file and add it to your project folder.</li>
-    <li>Personalize the HTML
+    <li>Class Exercise: Let’s get set up!
       <ul>
-        <li>Update the <code class="highlighter-rouge">&lt;title&gt;</code> tag, headings, email and any other content.</li>
-        <li>Add a profile picture.  Make sure images are added to the <strong>image</strong> folder.</li>
+        <li>Open up the “root” project folder where you keep your projects/sites.</li>
+        <li>Within the root folder, create a new folder and name it <strong>susans-site</strong>.</li>
+        <li>The projects we’ve been working on so far may look different from one another - so let’s download and use <a href="exercises/module3/susans-site.zip">these example files</a> to build off of today, just so everything is consistent.</li>
+        <li>Add the example files to your new folder and open it in Atom.</li>
       </ul>
     </li>
-    <li>Add a <code class="highlighter-rouge">&lt;nav&gt;</code> with two links, “About” and “Contact” and make them link to the corresponding portions of the page.</li>
-    <li>Create a CSS file and link it to <strong>index.html</strong></li>
-    <li>Update the font typeface for the page using either Google fonts or web safe fonts.</li>
-    <li>Choose and add a different font typeface for the headings.</li>
-    <li>Add a background color to each block on the page: nav, header, about section, footer.</li>
-    <li>Remove default padding &amp; margin from the body element.</li>
-    <li>Adjust the padding for each section so the content/text doesn’t go right to the edge of it’s container.  Where do you think the space between the sections are coming from?  Try inspecting the element!</li>
-    <li>Float the image in the About section to the left.</li>
-    <li>Add some margin on the right of the floated image.</li>
-    <li>Clear the float!  Which technique should you use?  Check the notes!</li>
-    <li>Create a “content wrapper” around just the content in each section, in the HTML. Then use CSS ‘margin’ to auto center align the content to ensure that the background color still spans the entire width of the page.</li>
-    <li>Center align the text in the header and footer.</li>
-    <li>Right align the text in the nav.</li>
-    <li>Remove the underline &amp; change the color of the nav links.</li>
-    <li>On mouse hover, change the color of the nav links.</li>
-    <li>Add some space around the links so the text is not too close to each other.  Remember… links are ‘inline’ elements by default.</li>
+    <li>Solo Exercise: Personalize the HTML (5 mins)
+      <ul>
+        <li>Update the <code class="highlighter-rouge">&lt;title&gt;</code> tag, headings, email and any other content.</li>
+        <li>Replace the profile picture. Make sure your images are added to the <strong>img</strong> folder.</li>
+      </ul>
+    </li>
+    <li>Solo Exercise: Update General Styles (15 mins)
+      <ul>
+        <li>Add a background colour to the following elements on the page:
+          <ul>
+            <li>nav</li>
+            <li>header</li>
+            <li>aside</li>
+            <li>social section</li>
+            <li>footer</li>
+          </ul>
+        </li>
+        <li>Remove default padding &amp; margin from the body element.</li>
+        <li>Update the font typeface for the page using either Google fonts or web safe fonts.</li>
+        <li>Choose and add a different font typeface for the headings.</li>
+        <li>Increase the font-size for all h1’s.</li>
+        <li>Change the colour and increase the font-size for the h1 in the header.</li>
+        <li>Center align the text in the header, footer and social media section.</li>
+        <li>Change the colour and increase the font-size for the links in the social media section.</li>
+        <li>Add padding around links in the social media section.</li>
+        <li>On mouse hover, change the color of the social media links.</li>
+        <li>Decrease the font-size and italicize of the fine-print in the footer.</li>
+      </ul>
+    </li>
+    <li>Class Exercise: Add a wrapper, intro to <strong>Flexbox</strong>
+      <ul>
+        <li>In HTML, create a “content wrapper” around the content inside the:
+          <ul>
+            <li><code class="highlighter-rouge">&lt;header&gt;</code></li>
+            <li><code class="highlighter-rouge">&lt;main&gt;</code></li>
+            <li><code class="highlighter-rouge">&lt;section class="social"&gt;</code></li>
+            <li><code class="highlighter-rouge">&lt;footer&gt;</code></li>
+          </ul>
+        </li>
+        <li>Use CSS <code class="highlighter-rouge">margin</code> to auto center align the wrapper to ensure that the background colour still spans the entire width of the page.</li>
+        <li>Use CSS to give the <code class="highlighter-rouge">&lt;aside&gt;</code> a width of 30% and <code class="highlighter-rouge">&lt;section id="about"&gt;</code> a width of 60%</li>
+        <li>Use CSS to give the <code class="highlighter-rouge">&lt;div class="wrapper"&gt;</code> inside of <code class="highlighter-rouge">&lt;main&gt;</code> a display value of “flex”.</li>
+        <li>On the wrapper inside of main, use flexbox reverse the direction - put the sidebar on the right.</li>
+        <li>On the wrapper inside of main, use flexbox to justify the content so there is space in-between the about section and the aside.</li>
+      </ul>
+    </li>
+    <li>Class Exercise: Adjust the Spacing
+      <ul>
+        <li>Adjust the padding so the content/text doesn’t go right to the edge of it’s container. Try to make it look like the <a href="exercises/module3/susans-site/index-final.html">example</a>. Where do you think the space between the sections are coming from? Try inspecting the element!</li>
+        <li>In the sidebar, center the profile image using margin, to and make it circular using border-radius.</li>
+        <li>In the sidebar, give the paragraph justified text alignment.</li>
+        <li>In the about section, ensure the image is always the full-width of the container.</li>
+      </ul>
+    </li>
+    <li>Exercise: Style the Nav
+      <ul>
+        <li>Right align the text in the nav.</li>
+        <li>Remove the underline &amp; change the colour of the nav links.</li>
+        <li>On mouse hover, change the colour of the nav links.</li>
+        <li>Add some space around the links so the text is not too close to each other. Remember… links are ‘inline’ elements by default.</li>
+      </ul>
+    </li>
   </ol>
 </blockquote>
 
 <blockquote>
-  <p>What else can we add?</p>
+  <p>What else can we add? Any requests?</p>
 </blockquote>
 
       </article>

@@ -3,12 +3,12 @@ layout: lessons
 module: 3
 lesson: 3
 title: CSS Fundamentals
-description: Display vs floats and positioning.
+description: Display, flexbox and positioning.
 permalink: module3-3.html
 ---
 
 
-## Display vs Floats
+## Display vs Floats (notes under construction)
 
 In previous lessons, we talk about inline & block elements and how to use the `display` property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson's [Codepen](http://codepen.io/learningcode/pen/vNRadg) for a refresher.
 

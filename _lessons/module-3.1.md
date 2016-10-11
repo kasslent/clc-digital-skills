@@ -3,7 +3,7 @@ layout: lessons
 module: 3
 lesson: 1
 title: CSS Fundamentals
-description: CSS selectors, block and inline elements, the Box Model and floats.
+description: CSS selectors, block and inline elements, and the Box Model.
 permalink: module3-1.html
 ---
 

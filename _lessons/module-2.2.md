@@ -3,7 +3,7 @@ layout: lessons
 module: 2
 lesson: 2
 title: Design & CSS
-description: CSS typography, intro to the box model, working with images and colors.
+description: CSS typography, intro to the box model, working with images and colours.
 permalink: module2-2.html
 ---
 
@@ -213,45 +213,84 @@ Choosing **Canvas size...** (the option under **Image size...**) will have a sim
 * [Stock Photos That Don't Suck](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
 
 
+## SVG and the Noun Project
 
-## Designing with Color
+SVG is an image file type that stands for <em>Scalable Vector Graphics</em> and you can use it the same way you would use JPG, PNG or GIF, inside an `<img>` element:
+
+    <img src="cat.svg" alt="a cute cat">
+    <img src="cat.png" alt="a cute cat">
+
+So what's the difference? Let's compare a vector graphic (JPG / PNG) and a raster (sometimes called "bitmap") graphic:
+
+<img src="assets/img/module2/vector-vs-raster.png" />
+
+The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic. A major difference between SVG and other file types is size - an SVG will usually be a smaller file size and therefore easier for a browser to load. If a graphic is vector, it should be in SVG format for use on the web.
+
+SVGs can be created using design software such as <a href="http://www.adobe.com/ca/products/illustrator.html" target="_blank">Adobe Illustrator</a> (monthly subscription), <a href="https://www.sketchapp.com/" target="_blank">Sketch</a>, (mac only) or <a href="https://inkscape.org/en/" target="_blank">Inkscape</a> (free).
+
+They can also be found online - a great resource is a website called <a href="https://thenounproject.com/" target="_blank">The Noun Project</a>.
+
+>## CLASS EXERCISE: The Noun Project
+>
+>As a class, we will use [The Noun Project](http://thenounproject.com) to search for, download and include an SVG graphic in our project as our logo.
+>
+>Once you have your SVG in your **img** folder, open it up in Atom. Proceed to comment out the entire **`<text>`** element from the SVG file. Once you've hidden it, save the SVG file and close it. 
+>
+>By omitting the **`<text>`** element from the SVG, we are removing the credit to the designer - so let's credit them in our footer instead.
+>
+>Now, let's include our SVG as the src in an **`<img>`** element. It will always be scalable, but this doesn't provide us with much control over the look of our SVG.
+>
+>It's huge! Give your **`<img>`** a class of "logo" and size it accordingly.
+>
+>If you would like to change the SVG's colour or animate it, you will need to use the SVG **"inline"** in your HTML file.
+>
+>[Read how to include SVG inline and manipulate with CSS](https://css-tricks.com/using-svg/#article-header-id-7)
+
+
+#### For more resources on learning SVG, check out:
+* [CSS Tricks - "Using SVG"](https://css-tricks.com/using-svg/)
+* [CodePen Example - Inline SVG](http://codepen.io/chriscoyier/pen/evcBu)
+* [Styling and Animating SVG with CSS - Sara Soueidan](https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/)
+
+
+## Designing with Colour
 
 A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.
 
 ### Personality and Meaning
 
-Color communicates meaning. 
+Colour communicates meaning. 
 
-* Choose colors that reflect your personality or your brand. 
+* Choose colours that reflect your personality or your brand. 
 * Consider the emotional responses of your target audience. 
-* Use color to distinguish between elements and interactive states.
+* Use colour to distinguish between elements and interactive states.
 
 
 Colour meanings can vary across different cultures so it’s important to consider who your target audience.
 
 
-Read more about color meaning and how to use color to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
+Read more about colour meaning and how to use colour to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
 
 
 ### Harmony and Rhythm
-Color can be used to attract attention and organize content, creating a visual hierarchy. 
+Colour can be used to attract attention and organize content, creating a visual hierarchy. 
 
-Repeating colors on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
+Repeating colours on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
 
-**Less is more.** When in doubt use one primary color and a secondary accent color. Vary the saturation and value of your colors to add variety while maintaining clarity.
+**Less is more.** When in doubt use one primary colour and a secondary accent colour. Vary the saturation and value of your colours to add variety while maintaining clarity.
 
 
-### Color Accessibility
-Many people have some sort of visual color impairment such as being unable to distinguish certain colors from others. 
+### Colour Accessibility
+Many people have some sort of visual colour impairment such as being unable to distinguish certain colours from others. 
 
-Ensure sufficient contrast between colors to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
+Ensure sufficient contrast between colours to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
 
-Read more about color blindness and designing for color accessibility [here](https://24ways.org/2012/color-accessibility/).
+Read more about colour blindness and designing for colour accessibility [here](https://24ways.org/2012/color-accessibility/).
 
-#### Color Resources
-* [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose color palettes
-* [Color Safe](http://colorsafe.co/) - helps you choose colors with appropriate contrast for text
-* [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colors from websites
+#### Colour Resources
+* [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose colour palettes
+* [Color Safe](http://colorsafe.co/) - helps you choose colours with appropriate contrast for text
+* [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colours from websites
 
 
 ## Spacing and CSS
