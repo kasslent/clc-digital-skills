@@ -8,17 +8,47 @@ permalink: module3-3.html
 ---
 
 
-## Display vs Floats (notes under construction)
+## Inline-block vs Flexbox
 
 In previous lessons, we talk about inline & block elements and how to use the `display` property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson's [Codepen](http://codepen.io/learningcode/pen/vNRadg) for a refresher.
 
-`float` can also be used to align elements side by side as well. Refer to the previous lesson's [Codepen](http://codepen.io/learningcode/pen/gaedLj) for a refresher.
+And in the code-along we did together last class, we were introduced to a relatively new CSS property - [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes). The Flexible Box Layout Module has become more widely supported and used by developers, provided that they do not have to support Internet Explorer 10 and below. 
 
-So which one is better for page layouts?
+![]({{ site.img }}/module3/flexbox-support.png)
 
-It depends. This is widely debated among developers but both techniques come with their own quirks.  Understanding how to use each technique is the key to choosing which one is right for job.
+That being said, the [Browser Support](http://caniuse.com/#search=flex) for Flexbox has certainly improved and will work on all modern browsers. If you need to support older browsers, then you would have to use **floats**.
 
-Let's take a look at using display vs floats for styling a horizontal navigation menu.
+## Let's talk about Floats
+
+The CSS `float` property is another way to align elements side by side. 
+
+To get block level elements to line up side by side using floats, the stacking flow has to be *broken* first. 
+
+Use the `float` property with a value of `left` or `right` to align an element to either side. Any element after the floated element will move up beside it.
+
+![]({{ site.img }}/module3/float-recording.gif)
+
+But floating elements like this may have unexpected results.
+
+![]({{ site.img }}/module3/float-unexpectedresults.png)
+
+If your content is the same size or longer than the floated element (the left image in the above example), then you won't see this problem.
+
+Adding content won't fix the issue unfortunately. First, we had to break the stacking order and now we have to put it back together.
+
+To restore the regular stacking flow after the floated element, it needs to be reset. There are a couple ways to do it... but this is a concept that requires much more discussion outside of the scope for today. For more information, check out these extra resources:
+
+### Float resources
+
+* [CSS Fundamentals: Containing Children](https://code.tutsplus.com/tutorials/css-fundamentals-containing-children--net-5664)
+* [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
+* [Force Element To Self-Clear its Children](https://css-tricks.com/snippets/css/clear-fix/)
+
+Also feel free to check out this [Codepen](http://codepen.io/learningcode/pen/gaedLj) to see how floats work.
+
+<br>
+
+Today we're going to dive deeper into using **display** with both **inline-block** and **flexbox** to style a horizontal navigation menu.
 
 ## Horizontal Navigation
 
@@ -112,20 +142,13 @@ If you put a background color on the list item, you'll see an extra space betwee
 
 The extra space is caused by the line break in the HTML used to put the `<li>` on separate lines.
 
-If you use `float` instead of `display`, you won't see this quirk.
+If you use `display:flex;` on the **ul** instead, you won't see this quirk. More on that soon!
 
-    nav ul li {
-        float: left;
-        background: lightblue;
-    }
+<!-- But, float has it's own quirks too. What happened to the red background in the `ul`? -->
 
-![]({{ site.img }}/module3/horizontal-nav-float.png)
+Let's tackle the `display:inline-block;` example first.
 
-But, float has it's own quirks too. What happened to the red background in the `ul`?
-
-Let's tackle the `display` example first.
-
-## Horizontal navigation: Display
+## Horizontal navigation using inline-block
 
 If your design does not require equal width "boxes" or you don't mind the space, visually, then leaving this as is would work just fine.  You can even add `text-align: center;` to automatically center align the list items containing the links.
 
@@ -147,7 +170,6 @@ However, the space between the `<li>` tags are taking up space so the boxes won'
 
 You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here's another fix.
 
-
     nav ul {
       font-size: 0; /* removes space between li elements */
     }
@@ -157,9 +179,70 @@ You could be sneaky and set the width to something slightly less than 25% or use
 
 > Let's go back to the previous [Codepen](http://codepen.io/learningcode/pen/meLJMZ) and try this out.
 
-## Horizontal navigation: Float 
+## Horizontal navigation using flexbox 
 
-When you use float to align elements, there is no extra white space to worry about. But, remember, float has it's own quirks too.  The parent of the floated elements collapse, which can cause problems too. 
+With the introduction of **flexbox**, styling a horizontal navigation is made much easier. To ensure the list items are all sitting next to each other, simply add `display: flex;` to the `<ul>`:
+
+    nav ul {
+        display: flex;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-flex.png)
+<br><br>
+
+What if you want to center your links in the middle of your nav? 
+<br>Enter: `justify-content`
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-center.png)
+<br><br>
+
+The CSS property `justify-content` is super powerful. Let's say you want to align your nav on the right:
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-end.png)
+<br><br>
+
+On the left:
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-start.png)
+<br><br>
+
+Okay that's kinda boring. We could've used text-align on the `<nav>` to achieve that too, right? Well - can `text-align` do this?! 
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-space-between.png)
+(P.S. the answer is no - `text-align` can't do that)
+<br><br>
+
+What if you don't want your links to go all the way to the edge? Let's say you want equal space around all the link items...
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+![]({{ site.img }}/module3/flexbox-nav-space-around.png)
+
+
+<!-- When you use float to align elements, there is no extra white space to worry about. But, remember, float has it's own quirks too.  The parent of the floated elements collapse, which can cause problems too. 
 
 Suppose you had some content after the navigation?  It will look like this:
 
@@ -183,13 +266,21 @@ With float, you could set equal widths without adding additional hacks. The belo
 However, `text-align: center;` will only center align the text *within* the `<li>` tags, not automatically center align the list items itself, like in the `display` example.
 
 >Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
-
+ -->
 
 >## EXERCISE: Horizontal navigation
 >
->In the exercise files downloaded earlier, in the **project** folder, you will find a basic webpage.  Using the existing HTML & CSS files, try styling the list navigation using the techniques discussed so far.
+>In the exercise files downloaded from the previous class code-along, we used `inline-block` to style our `<nav>`. Go back into that project file now and try styling the list navigation using `flexbox` instead.
 >
->**Pro tip!** There is already existing CSS in the exercise so be sure to put your CSS in some kind of logical & organized order.
+
+These are just some benefits to using `flexbox` to lay out your site, and we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more. This becomes even more powerful when re-arragning your desktop site for mobile devices.
+
+### Read more about Flexbox!
+
+* [CSS Tricks - Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Joni Bologna - Flexbox Cheatsheet](http://jonibologna.com/flexbox-cheatsheet/)
+* [What the Flexbox?! - Free 20-video course on CSS Flexbox](http://flexbox.io/)
+* [Flexbox Reference (Codrops)](http://tympanus.net/codrops/css_reference/flexbox/)
 
 <br>
 Remember, every HTML element is essentially just a "box" so the techniques discussed above are not limited to just navigations using a list.  

@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>CSS Fundamentals</title>
-  <meta name="description" content="Display vs Floats (notes under construction)">
+  <meta name="description" content="Inline-block vs Flexbox">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,17 +42,49 @@
       
       <article>
         <h1>CSS Fundamentals</h1>
-        <h2 id="display-vs-floats-notes-under-construction">Display vs Floats (notes under construction)</h2>
+        <h2 id="inline-block-vs-flexbox">Inline-block vs Flexbox</h2>
 
 <p>In previous lessons, we talk about inline &amp; block elements and how to use the <code class="highlighter-rouge">display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
 
-<p><code class="highlighter-rouge">float</code> can also be used to align elements side by side as well. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> for a refresher.</p>
+<p>And in the code-along we did together last class, we were introduced to a relatively new CSS property - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Flexbox</a>. The Flexible Box Layout Module has become more widely supported and used by developers, provided that they do not have to support Internet Explorer 10 and below.</p>
 
-<p>So which one is better for page layouts?</p>
+<p><img src="assets/img/module3/flexbox-support.png" alt="" /></p>
 
-<p>It depends. This is widely debated among developers but both techniques come with their own quirks.  Understanding how to use each technique is the key to choosing which one is right for job.</p>
+<p>That being said, the <a href="http://caniuse.com/#search=flex">Browser Support</a> for Flexbox has certainly improved and will work on all modern browsers. If you need to support older browsers, then you would have to use <strong>floats</strong>.</p>
 
-<p>Let’s take a look at using display vs floats for styling a horizontal navigation menu.</p>
+<h2 id="lets-talk-about-floats">Let’s talk about Floats</h2>
+
+<p>The CSS <code class="highlighter-rouge">float</code> property is another way to align elements side by side.</p>
+
+<p>To get block level elements to line up side by side using floats, the stacking flow has to be <em>broken</em> first.</p>
+
+<p>Use the <code class="highlighter-rouge">float</code> property with a value of <code class="highlighter-rouge">left</code> or <code class="highlighter-rouge">right</code> to align an element to either side. Any element after the floated element will move up beside it.</p>
+
+<p><img src="assets/img/module3/float-recording.gif" alt="" /></p>
+
+<p>But floating elements like this may have unexpected results.</p>
+
+<p><img src="assets/img/module3/float-unexpectedresults.png" alt="" /></p>
+
+<p>If your content is the same size or longer than the floated element (the left image in the above example), then you won’t see this problem.</p>
+
+<p>Adding content won’t fix the issue unfortunately. First, we had to break the stacking order and now we have to put it back together.</p>
+
+<p>To restore the regular stacking flow after the floated element, it needs to be reset. There are a couple ways to do it… but this is a concept that requires much more discussion outside of the scope for today. For more information, check out these extra resources:</p>
+
+<h3 id="float-resources">Float resources</h3>
+
+<ul>
+  <li><a href="https://code.tutsplus.com/tutorials/css-fundamentals-containing-children--net-5664">CSS Fundamentals: Containing Children</a></li>
+  <li><a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">Clearing Floats: An Overview of Different clearfix Methods</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/clear-fix/">Force Element To Self-Clear its Children</a></li>
+</ul>
+
+<p>Also feel free to check out this <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> to see how floats work.</p>
+
+<p><br /></p>
+
+<p>Today we’re going to dive deeper into using <strong>display</strong> with both <strong>inline-block</strong> and <strong>flexbox</strong> to style a horizontal navigation menu.</p>
 
 <h2 id="horizontal-navigation">Horizontal Navigation</h2>
 
@@ -159,22 +191,13 @@ nav ul {
 
 <p>The extra space is caused by the line break in the HTML used to put the <code class="highlighter-rouge">&lt;li&gt;</code> on separate lines.</p>
 
-<p>If you use <code class="highlighter-rouge">float</code> instead of <code class="highlighter-rouge">display</code>, you won’t see this quirk.</p>
+<p>If you use <code class="highlighter-rouge">display:flex;</code> on the <strong>ul</strong> instead, you won’t see this quirk. More on that soon!</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
-    float: left;
-    background: lightblue;
-}
-</code></pre>
-</div>
+<!-- But, float has it's own quirks too. What happened to the red background in the `ul`? -->
 
-<p><img src="assets/img/module3/horizontal-nav-float.png" alt="" /></p>
+<p>Let’s tackle the <code class="highlighter-rouge">display:inline-block;</code> example first.</p>
 
-<p>But, float has it’s own quirks too. What happened to the red background in the <code class="highlighter-rouge">ul</code>?</p>
-
-<p>Let’s tackle the <code class="highlighter-rouge">display</code> example first.</p>
-
-<h2 id="horizontal-navigation-display">Horizontal navigation: Display</h2>
+<h2 id="horizontal-navigation-using-inline-block">Horizontal navigation using inline-block</h2>
 
 <p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code class="highlighter-rouge">text-align: center;</code> to automatically center align the list items containing the links.</p>
 
@@ -213,46 +236,123 @@ nav ul li {
   <p>Let’s go back to the previous <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> and try this out.</p>
 </blockquote>
 
-<h2 id="horizontal-navigation-float">Horizontal navigation: Float</h2>
+<h2 id="horizontal-navigation-using-flexbox">Horizontal navigation using flexbox</h2>
 
-<p>When you use float to align elements, there is no extra white space to worry about. But, remember, float has it’s own quirks too.  The parent of the floated elements collapse, which can cause problems too.</p>
-
-<p>Suppose you had some content after the navigation?  It will look like this:</p>
-
-<p data-height="175" data-theme-id="0" data-slug-hash="qOYbYX" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/qOYbYX/">Horizontal nav &amp; floats</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-<p>No worries, just remember to clear your floats! Since this example requires all the list items to float, you’ll need to <em>self-clear</em> the floated elements.</p>
+<p>With the introduction of <strong>flexbox</strong>, styling a horizontal navigation is made much easier. To ensure the list items are all sitting next to each other, simply add <code class="highlighter-rouge">display: flex;</code> to the <code class="highlighter-rouge">&lt;ul&gt;</code>:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
-  overflow: hidden;
+    display: flex;
 }
 </code></pre>
 </div>
 
-<p>(You can also use the “clearfix hack” instead of <code class="highlighter-rouge">overflow</code>.)</p>
+<p><img src="assets/img/module3/flexbox-nav-flex.png" alt="" />
+<br /><br /></p>
 
-<p>With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.</p>
+<p>What if you want to center your links in the middle of your nav? 
+<br />Enter: <code class="highlighter-rouge">justify-content</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
-  width: 25%;
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: center;
 }
 </code></pre>
 </div>
 
-<p>However, <code class="highlighter-rouge">text-align: center;</code> will only center align the text <em>within</em> the <code class="highlighter-rouge">&lt;li&gt;</code> tags, not automatically center align the list items itself, like in the <code class="highlighter-rouge">display</code> example.</p>
+<p><img src="assets/img/module3/flexbox-nav-center.png" alt="" />
+<br /><br /></p>
 
-<blockquote>
-  <p>Let’s try these techniques out in this <a href="http://codepen.io/learningcode/pen/qOYbYX?editors=110#0">CodePen</a>.</p>
-</blockquote>
+<p>The CSS property <code class="highlighter-rouge">justify-content</code> is super powerful. Let’s say you want to align your nav on the right:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-end.png" alt="" />
+<br /><br /></p>
+
+<p>On the left:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-start.png" alt="" />
+<br /><br /></p>
+
+<p>Okay that’s kinda boring. We could’ve used text-align on the <code class="highlighter-rouge">&lt;nav&gt;</code> to achieve that too, right? Well - can <code class="highlighter-rouge">text-align</code> do this?!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-space-between.png" alt="" />
+(P.S. the answer is no - <code class="highlighter-rouge">text-align</code> can’t do that)
+<br /><br /></p>
+
+<p>What if you don’t want your links to go all the way to the edge? Let’s say you want equal space around all the link items…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-space-around.png" alt="" /></p>
+
+<!-- When you use float to align elements, there is no extra white space to worry about. But, remember, float has it's own quirks too.  The parent of the floated elements collapse, which can cause problems too. 
+
+Suppose you had some content after the navigation?  It will look like this:
+
+<p data-height="175" data-theme-id="0" data-slug-hash="qOYbYX" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/qOYbYX/'>Horizontal nav & floats</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+No worries, just remember to clear your floats! Since this example requires all the list items to float, you'll need to *self-clear* the floated elements.
+
+    nav ul {
+      overflow: hidden;
+    }
+    
+(You can also use the "clearfix hack" instead of `overflow`.)
+
+With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.
+
+    nav ul li {
+      width: 25%;
+    }
+
+However, `text-align: center;` will only center align the text *within* the `<li>` tags, not automatically center align the list items itself, like in the `display` example.
+
+>Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
+ -->
 
 <blockquote>
   <h2 id="exercise-horizontal-navigation">EXERCISE: Horizontal navigation</h2>
 
-  <p>In the exercise files downloaded earlier, in the <strong>project</strong> folder, you will find a basic webpage.  Using the existing HTML &amp; CSS files, try styling the list navigation using the techniques discussed so far.</p>
+  <p>In the exercise files downloaded from the previous class code-along, we used <code class="highlighter-rouge">inline-block</code> to style our <code class="highlighter-rouge">&lt;nav&gt;</code>. Go back into that project file now and try styling the list navigation using <code class="highlighter-rouge">flexbox</code> instead.</p>
 
-  <p><strong>Pro tip!</strong> There is already existing CSS in the exercise so be sure to put your CSS in some kind of logical &amp; organized order.</p>
 </blockquote>
+
+<p>These are just some benefits to using <code class="highlighter-rouge">flexbox</code> to lay out your site, and we’ve only just scratched the surface. Using <code class="highlighter-rouge">flexbox</code>, you can alter the <strong>order</strong> in which items appear, and much more. This becomes even more powerful when re-arragning your desktop site for mobile devices.</p>
+
+<h3 id="read-more-about-flexbox">Read more about Flexbox!</h3>
+
+<ul>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks - Guide to Flexbox</a></li>
+  <li><a href="http://jonibologna.com/flexbox-cheatsheet/">Joni Bologna - Flexbox Cheatsheet</a></li>
+  <li><a href="http://flexbox.io/">What the Flexbox?! - Free 20-video course on CSS Flexbox</a></li>
+  <li><a href="http://tympanus.net/codrops/css_reference/flexbox/">Flexbox Reference (Codrops)</a></li>
+</ul>
 
 <p><br />
 Remember, every HTML element is essentially just a “box” so the techniques discussed above are not limited to just navigations using a list.</p>
