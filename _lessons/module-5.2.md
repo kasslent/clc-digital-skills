@@ -76,6 +76,7 @@ Let's take a look at one of many [smooth scroll plugins](https://github.com/cfer
 * [jQuery UI](https://jqueryui.com/)
 * [The jQuery Plugin Registry](https://plugins.jquery.com/)
 * [Flexslider](http://www.woothemes.com/flexslider/) (photo slider)
+* [Flickity](http://flickity.metafizzy.co/) (another photo slider)
 
 <br>
 ~ end ~

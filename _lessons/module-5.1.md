@@ -469,7 +469,7 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 >
 > 1. Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)
 > 1. Link the CSS & JS files to the HTML file.
-> 1. Reference the jQuery library file to make sure your jQuery code with work.
+> 1. Reference the jQuery library file to make sure your jQuery code will work.
 >
 >**Bonus:**   
 >Try adding more HTML elements and practice selecting elements and applying jQuery effects to it. 
