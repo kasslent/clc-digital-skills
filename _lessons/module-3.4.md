@@ -319,4 +319,11 @@ There are also many many other tools, [free](http://lab.maltewassermann.com/view
 > Follow the instructions in the comments in the `<head>` of **responsive.html** to make the 3 columns fluid and responsive.
 
 
+
+>## EXERCISE: Making Your Website Responsive
+> Continue working on your website's layout.If you have it working on desktop,try creating some media queries to improve the layout on different widths. 
+>**Don't forget your Viewport Metatag!**
+>
+>Does your website design call for any background images? Go ahead and try it out on your project! 
+
 ~ End ~

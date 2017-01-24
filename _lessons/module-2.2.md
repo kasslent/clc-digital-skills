@@ -454,6 +454,10 @@ In Chrome, you can access the tools in 3 ways:
 >
 >**solution.css** has been included for reference.
 
+> ## EXERCISE: Margin & Padding on Your Project
+> Open up your project files and based on the last exercise, add margin and padding to make your website look more balanced.
+>
+>Wrap your content with a <div class="wrapper">`, and add `margin` and `width` to auto align the page content.
 
 <br>
 ~ End ~

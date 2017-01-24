@@ -268,10 +268,11 @@ However, `text-align: center;` will only center align the text *within* the `<li
 >Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
  -->
 
->## EXERCISE: Horizontal navigation
+>## EXERCISE: Horizontal navigation on your project
 >
->In the exercise files downloaded from the previous class code-along, we used `inline-block` to style our `<nav>`. Go back into that project file now and try styling the list navigation using `flexbox` instead.
+>In the exercise files downloaded from the previous class code-along, we used `inline-block` to style our `<nav>`. Now open up your own project file and try styling the list navigation using `flexbox` instead. If you don't have a navigation on your own website, create one!
 >
+>Use some of the layout techniques we've learned the last couple of classes and apply them to your website as needed.
 
 These are just some benefits to using `flexbox` to lay out your site, and we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more. This becomes even more powerful when re-arragning your desktop site for mobile devices.
 

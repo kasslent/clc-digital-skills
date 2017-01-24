@@ -77,51 +77,48 @@ The **domain** is the internet address (e.g. www.mywebsite.com) used to website 
 
 Developing *locally* refers to working on your site on your own computer.
 
-### Local WordPress Development & server
+###Setting up our WordPress coding environment
+WordPress is a collection of files, just like our index.html file. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page.
+These are the steps we normally take to set up a WordPress website:
 
-If you decide to use the WordPress.org version, you should also develop the site using a *local* server. It's better to develop your site & make changes locally rather than on your live web server, so you get a chance to test it before the world sees it.
+1. We download the WordPress files.
+1. We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).
+1. We connect the WP files to the database so they can communicate with each other.
 
-Since WordPress runs on PHP, which is a server-side language, a local server is needed to run the files before you can view the content in a web browser.
-
-Purchasing hosting is required to make any type of website live. Some hosting companies provide hosting specifically for WordPress to handle WordPress specific things! (See resources for some articles comparing various hosts.)
-
+That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
 
 #### Resources
 * [WPBeginner: 
 How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
 * [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
+*Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).
 
 
-## WordPress and Flywheel
+## WordPress and Cloud9
 
-Some WordPress specific hosting companies allow you to take advantage of the custom options not available on WordPress.com but manage some of the technical details like database management.
+Cloud9 is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others, and for learning. 
 
-Today we're going to look at a company called [Flywheel](https://getflywheel.com/) to try out some of the features included in a hosted WordPress site without setting up a local server. (14 day free trial)
+Cloud9(c9.io) is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.
 
-Visit [getflywheel.com](https://getflywheel.com/) to create an account.
+### Let's set up c9.io!
+
+1. Go to your e-mail and find the link invitation that was sent to you to register for c9. Though c9 is free, they still require you to use a credit card on their site. The link we e-mailed you prevents you from needing to enter your credit card info. 
+
+![]({{site.img}}/module6/c9-welcome-email.png)
+
+
+1. Once there, please register for your account indicating that you are a student. 
+![]({{site.img}}/module6/c9-create-account-student.png)
+1. Once you're in, you'll have access to your main dashboard. On the left, a menu will allow you switch from your personal dashboard, to the class dashboard showcasing all the projects made by other students. 
+1. In the horizontal top navigation, click on the plus sign on the right hand side. 
+1. Now we will fill out our site's information and select WordPress as our type of project.
+![]({{site.img}}/module6/c9-spin-up-wp.gif)
+1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
+1. Click on "Run Project" to start the server. ![]({{site.img}}/module6/c9-run-project.png)
 
 
 
-### Creating a Project in Flywheel
 
-To create a new project, login and select **new site** in the top navigation bar.
-
-![]({{site.img}}/module6/1-flywheel.jpg)
-
-<br>
-Fill out the required information and then choose the "My client will pay later" option to activate the 14 day free trial for creating a demo account.
-
-![]({{site.img}}/module6/2-flywheel.jpg)
-
-<br>
-To view your demo site, go to yoursite.flywheelsites.com and end the username and password provided in your account.
-
-![]({{site.img}}/module6/3-flywheel.jpg)
-
-<br>
-To access the WordPress admin panel for your site, select the **WordPress Login** button.
-
-![]({{site.img}}/module6/4-flywheel.jpg)
 
 ### WordPress Settings
 

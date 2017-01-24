@@ -724,17 +724,22 @@ Only link to web pages, not specific files such as images (unless it points to y
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
     
->## EXERCISE: Adding Content, Part 3
-> Here are some suggestions to practice the concepts covered.
->
->1. create an additional HTML page
->1. add links to the `<nav>` block to link to your new page or within the same page
->1. add some images (e.g. logo or profile image)
->1. update the copy to reflect your bio and contact info
->
->**Bonus:**  For the email link, how do you set a default subject line?
->
->See example [here](http://stackoverflow.com/questions/4782068/can-i-set-subject-content-of-email-with-using-mailto).
+>## EXERCISE: Starting Your Class Project!
+>Over the course of the program, you will be creating your very own website. The index.html file that you have been playing around with today can be the starting file for your website. You will have time to work on it every day in class, each week adding features to it incrementally.
+As we have discussed today, HTML is all about content. Essentially, what you want to communicate with your website. Between now and next class, your exercise is to think about what you want the website you'll build over the next few weeks to be about. More specifically ask yourself the following:
+>1. What type of website do I want to build? Examples of possible projects are:
+  * A personal blog or resume/portfolio website.
+  * A Travel Journal
+  * An interest page about something you're knowledgeable about or really love. (e.g. Ethiopian Food)</li>
+  * A business website for a business you know, own, or want to own.
+  [Here's an example](exercises/module1/project-one-sample) of a website you could build.
+>1. Who do you think will most likely want to visit your site? (i.e. What is your target demographic: age, personality, relevant characteristics)
+>1. How can you best communicate with your intended audience? (i.e. What voice should your copy be written in? What types of content do you need? Words? Photos? Videos? Audio? Statistical Data? Etc...)
+> Once you have answered the above do the following: 
+	1. Sketch out a rough outline of your website (e.g.header, about section, footer) on a peace of paper. Don't dwell too much on how the website will look. We will get to design over the next couple of weeks! Right now it's just about content. 
+	1. Edit the content on your index.html file to match your sketch. 
+	1. If your website will have more than one page, create a new html file for each page and add content to them.
+>**Bonus:**  For the email link, how do you set a default subject line? See example [here](http://stackoverflow.com/questions/4782068/can-i-set-subject-content-of-email-with-using-mailto).
 
 ~ End ~
 

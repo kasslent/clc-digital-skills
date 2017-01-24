@@ -140,7 +140,7 @@ In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs
 
 
 >## EXERCISE: Sketch a website layout
->Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. 
+>Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. Be sure to refer to the content for your website that you worked on in our first class. You will now explore what you want this content to look like on the page.s
 >
 >Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
 
@@ -468,6 +468,13 @@ This snippet links the font files to the CSS, as well as declares a `font-family
 
 *Pro tip!*   
 You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.
+
+
+>## CLASS EXERCISE: Apply Styles to Your Project
+>1. Open up your website files from day one. 
+1. Create a style.css file for your website and link it to each of your pages. 
+1. Choose a couple fonts for your website and apply them to your typographical elements. 
+
 
 ### Extra Resources
 
