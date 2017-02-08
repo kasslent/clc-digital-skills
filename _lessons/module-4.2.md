@@ -1,82 +1,245 @@
 ---
 layout: lessons
-module: 5
+module: 4
 lesson: 2
-title: jQuery & Plugins
-description: Exploring jQuery and extending the library with Plugins.
-permalink: module5-2.html
+title: HTML Forms & Google Sheets
+description: Intro to HTML forms & data manipulation with Google Sheets
+permalink: module4-2.html
 ---
 
-## jQuery Click Events
 
-Let's do a review of the jQuery click events from the last lesson.
+## Intro to HTML Forms
 
-#### Syntax
- 
-    $( "selector" ).click(function() {
-      // code to be executed on click
-    });
+* used to capture information from users
+* information processing & form submission requires a server-side language (e.g. PHP, Ruby or Python)
+* all forms begin with the `<form>` element and requires two *attributes*, `method` and `action`
+  * **`method`** defines how the form will communicate with the web server using `get` or `post` (more secure)
+  * **`action`** provides the path to where the form script is processed
 
-[CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
-
-**Resource**: <http://api.jquery.com/click/>
-
-## Documentation & Finding Answers
-
-A part of web development is reading tutorials, articles and documentation.  
-
-Another important part is knowing how to ask directed questions to find the answers.
-
-> Discussion: What are some search techniques or resources that can be used to find answers?
+**Extra resource:** [Get vs Post](http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29)
 
 
-## Click event & an "active" menu
+### Form Controls
+* users interact with forms through controls (e.g. checkboxes, buttons)
+* data add into these controls are processed by the server when the form is submitted
 
-Here's an example of a navigation effect that can be added to a one page website.
+`<label></label>` - Represents a caption associated with a specific form control.
 
-<p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/XJwKBb/'>XJwKBb</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+`<textarea></textarea>` - Used for multi-line text.
 
-Here's how to do it, broken down into steps.
+`<input>` - This element is where the user fills out the form. Also:
 
-1. Select the elements to be clicked. 
-1. Test if you have correctly selected the element with `console.log()`.
-1. Add a class of “active” to the active link (the link that was clicked) using `addClass()`.
-1. Add the “active” class style to the CSS file.
-1. When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.
+* used for various data types by changing the `type` attribute value 
+* common values include `text`, `password`, `submit`, `reset`, `button`, `radio` and `checkbox`
+* use with `label` to add a caption to each input
+* doesn't require a closing tag!
 
-> ## Class Exercise: "Active" menu
-> Download the <a href="exercises/module5/javascript.html" download>javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user's click.
+`<button></button>` - Button tags can be used within the form element or on its own.
+Though you can create buttons with the `input` tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the `value` attribute to add text to the button.
+
+There are three `type` attribute values: `submit`, `button`, `reset`.
+
+    <button type="submit">button tag</button>
+    <input type="submit" value="input tag">
+    
+<div class="example">    
+  <button type="submit">button tag</button>
+  <input type="submit" value="input tag">
+</div>
 
 
-## Plugins
 
-A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress). 
+The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific `type` value.
 
-The jQuery library contains many methods and features but you can extend it even further by using plugins.
+<pre><code>&lt;form method="POST" action="#"&gt;
+  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
+  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
+  &lt;br&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;input type="reset" value="reset"&gt;
+  &lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;
+</code></pre>
 
-Let's take a look at one of many [smooth scroll plugins](https://github.com/cferdinandi/smooth-scroll). (This one is all JavaScript, no jQuery!) 
+<form class="example">
+  <label>Name </label>
+  <input type="text">
+  <label>Password </label>
+  <input type="password">
+  <br>
+  <input type="radio" name="radio-example"><label>yes</label>
+  <input type="radio" name="radio-example"><label>no</label>
+  <input type="checkbox"><label>option 1</label>
+  <input type="checkbox"><label>option 2</label>
+  <br>
+  <label>Leave a comment</label> <textarea></textarea>
+  <input type="reset" value="reset">
+  <input type="submit" value="submit">
+</form>
 
 
-> ## Class Exercise: Smooth scroll
-> Using the previous exercise file, add the smooth scroll plugin.  
-> Let's follow the instructions listed in the plugin developers [site](https://github.com/cferdinandi/smooth-scroll).
-
-> Bonus exercises:
+>Try typing in the **Name** and **Password** fields to compare how the `type` attributes, `text` and `password` differ. 
 >
-> 1. Set the navigation to be fixed at the top of the page.
-> 1. Use the [plugin options](https://github.com/cferdinandi/smooth-scroll#options-and-settings) to add an "offset" option, so you can position where the page scrolls to.
+>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?
 >
-> Solution file for both exercises can be [downloaded here](exercises/module5/javascript-solution.zip).
+>Note that clicking "submit" will not process any information because this example is only in HTML and is not attached to any server side processing.
+
+### `<label>` and the `for` attribute
 
 
+Use the `for` attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the `id` value of the related form control.
 
-## More Plugins!
+<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
+&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
+</code></pre>
 
-* [jQuery UI](https://jqueryui.com/)
-* [The jQuery Plugin Registry](https://plugins.jquery.com/)
-* [Flexslider](http://www.woothemes.com/flexslider/) (photo slider)
-* [Flickity](http://flickity.metafizzy.co/) (another photo slider)
+**label association** 
+
+<label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname">
+<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname">
+
+**no label association**
+
+<label>First Name</label> <input type="text" name="firstname">
+<label>Last Name</label> <input type="text" name="lastname">
+
+>When labels and inputs are associated, select either the label OR the input to focus on the related input.
+>
+>Try clicking on the labels in the examples above.
+
+### `name` attribute
+
+The `name` attribute is used to reference the form fields *after* the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.
+
+<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
+&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
+</code></pre>
+
+The `name` attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.
+  
+    <p>What day is it today?</p>
+    <input type="radio" name="days" id="mon"><label for="mon">Monday</label><br>
+    <input type="radio" name="days" id="tues"><label for="tues">Tuesday</label><br>
+    <input type="radio" name="days" id="wed"><label for="wed">Wednesday</label><br>
+    <input type="radio" name="days" id="thurs"><label for="thurs">Thursday</label><br>
+    <input type="radio" name="days" id="fri"><label for="fri">Friday</label>
+
+What day is it today?<br>
+<input type="radio" name="days" id="mon"><label for="mon">Monday</label><br>
+<input type="radio" name="days" id="tues"><label for="tues">Tuesday</label><br>
+<input type="radio" name="days" id="wed"><label for="wed">Wednesday</label><br>
+<input type="radio" name="days" id="thurs"><label for="thurs">Thursday</label><br>
+<input type="radio" name="days" id="fri"><label for="fri">Friday</label>
+    
+    <p>What day do you attend class?</p>
+    <input type="checkbox" name="days" id="mon"><label for="mon">Monday</label><br>
+    <input type="checkbox" name="days" id="tues"><label for="tues">Tuesday</label><br>
+    <input type="checkbox" name="days" id="wed"><label for="wed">Wednesday</label><br>
+    <input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
+    <input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
+
+<p>What day do you attend class?</p>
+<input type="checkbox" name="days" id="mon"><label for="mon">Monday</label><br>
+<input type="checkbox" name="days" id="tues"><label for="tues">Tuesday</label><br>
+<input type="checkbox" name="days" id="wed"><label for="wed">Wednesday</label><br>
+<input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
+<input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
 
 <br>
-~ end ~
+In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.
+
+### Processing a Form
+
+The form related HTML only create the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
+
+Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle not only building the HTML & CSS of the form but also the form processing as well.
+
+#### Extra Resources
+* [sitepoint: form elements](http://www.sitepoint.com/web-foundations/form-elements/)
+* [Dive Into HTML5 forms](http://diveintohtml5.info/forms.html)
+* [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/)
+* [Bring Your Forms Up to Date With CSS3 and HTML5 Validation](http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738)
+
+
+## Google Forms
+
+Use **Google Forms** to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with writing HTML forms and email responses, you can use the power of **Sheets** to manipulate & sort the data!
+
+### Using Google Forms:
+
+1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. 
+1. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
+  ![]({{ site.img }}/module4/gforms-new.png)
+1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  
+
+1. Once you've completed your form, you can either send out the form or embed it into your web page. 
+  * To send the form, select **Send form** to see options.<br>
+  ![]({{ site.img }}/module4/gforms-send.png)
+  <br><br>
+  You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br>
+  ![]({{ site.img }}/module4/gforms-send-options.png)
+  * To embed the form onto your web page, select **File > Embed** and copy the HTML onto your web page.<br>
+  ![]({{ site.img }}/module4/gforms-embed.png)
+  
+## Styling Google Forms
+
+Choose from existing themes!
+
+Select **Change themes** to see available themes.  (Select **Edit questions** to go back to the questions.)
+
+![]({{ site.img }}/module4/gforms-themes.png)
+
+Choose a theme on the right and select **Customize** for additional options.
+
+![]({{ site.img }}/module4/gforms-themes-customize.png)
+
+And that's it!
+
+<br>
+
+If you're feeling adventurous, you can also edit the HTML & CSS yourself.
+
+The embed code is an `<iframe>` which is a common way to insert content from another source (i.e. YouTube embeds). But you can **View Source** and grab the actual HTML and embed that into your site instead of the `<iframe>`.
+
+If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.  
+
+First, select **View live form** to see the form out of edit mode, in the browser.
+
+![]({{ site.img }}/module4/gforms-live.png)
+
+Then right-click anywhere and select **View source** and look for the `<form>` tag.
+
+**Pro tip!** Use **cmd/ctrl + F** (find) and do a search for `form` on the page and copy everything from the opening `<form>` to the closing `</form>` tags.
+
+Note that this option requires you to write all the CSS yourself!
+
+#### Resources
+
+* [Google Drive Blog: Your Forms, Your Way](http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html)
+* [How to style Google Forms](http://morning.am/tutorials/how-to-style-google-forms/)
+  
+  
+## Google Forms + Analysis with Excel
+
+View the presentation for this module [here](  https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166).
+
+>## EXERCISE: Forms responses & Excel
+>View the form [here](https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#) for today's exercise.
+>
+>View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  
+>**Important!** Be sure to **make a copy** of this file into *your* Google Drive to make your own changes.
+
+
+~ End ~
+
+
+
+
+
+
+

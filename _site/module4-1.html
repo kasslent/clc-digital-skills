@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>HTML Forms & Google Sheets</title>
-  <meta name="description" content="Intro to HTML Forms">
+  <title>Search Engine Optimization</title>
+  <meta name="description" content="SEO (Search Engine Optimization) is a different story for different kinds of websites!">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
-<body class="">
+<body class="module4-1">
   <header>
     <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
     <h1>Digital Skills Program</h1>
@@ -37,263 +37,664 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 4, Lesson 1</h3>
-        <h4>HTML Forms & Google Sheets</h4>
+        <h4>Search Engine Optimization</h4>
       </nav>
       
-      <article>
-        <h1>HTML Forms & Google Sheets</h1>
-        <h2 id="intro-to-html-forms">Intro to HTML Forms</h2>
+      <article class="module4-1" >
+        <h1>Search Engine Optimization</h1>
+        <p>SEO (Search Engine Optimization) is a different story for different kinds of websites!</p>
+
+<p>What kind of website are you looking to drive traffic to?<br />
+What are your goals?<br />
+Why do you want to learn this?</p>
+
+<p><a href="http://boostblogtraffic.com/make-money-blogging/">Blogger Jon Morrow advises</a>…</p>
+
+<p>If you’re an independent blogger — Ignore SEO for the first year.</p>
+
+<p>When your blog is new, the most efficient uses of your time fall into three broad categories:</p>
 
 <ul>
-  <li>used to capture information from users</li>
-  <li>information processing &amp; form submission requires a server-side language (e.g. PHP, Ruby or Python)</li>
-  <li>all forms begin with the <code class="highlighter-rouge">&lt;form&gt;</code> element and requires two <em>attributes</em>, <code class="highlighter-rouge">method</code> and <code class="highlighter-rouge">action</code>
-    <ul>
-      <li><strong><code class="highlighter-rouge">method</code></strong> defines how the form will communicate with the web server using <code class="highlighter-rouge">get</code> or <code class="highlighter-rouge">post</code> (more secure)</li>
-      <li><strong><code class="highlighter-rouge">action</code></strong> provides the path to where the form script is processed</li>
-    </ul>
-  </li>
+  <li>Building relationships with influencers (including guest blogging)</li>
+  <li>Creating content worth linking to</li>
+  <li>Selling your products and services</li>
 </ul>
 
-<p><strong>Extra resource:</strong> <a href="http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29">Get vs Post</a></p>
+<p>If you do these well, you’ll get search traffic without doing anything.</p>
 
-<h3 id="form-controls">Form Controls</h3>
-<ul>
-  <li>users interact with forms through controls (e.g. checkboxes, buttons)</li>
-  <li>data add into these controls are processed by the server when the form is submitted</li>
-</ul>
+<h2 id="introduction-to-the-search-game">Introduction to the search game</h2>
 
-<p><code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
+<h3 id="search-engine-marketing">Search Engine Marketing</h3>
 
-<p><code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
-
-<p><code class="highlighter-rouge">&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
-
-<ul>
-  <li>used for various data types by changing the <code class="highlighter-rouge">type</code> attribute value</li>
-  <li>common values include <code class="highlighter-rouge">text</code>, <code class="highlighter-rouge">password</code>, <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">reset</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">radio</code> and <code class="highlighter-rouge">checkbox</code></li>
-  <li>use with <code class="highlighter-rouge">label</code> to add a caption to each input</li>
-  <li>doesn’t require a closing tag!</li>
-</ul>
-
-<p><code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
-Though you can create buttons with the <code class="highlighter-rouge">input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code class="highlighter-rouge">value</code> attribute to add text to the button.</p>
-
-<p>There are three <code class="highlighter-rouge">type</code> attribute values: <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">reset</code>.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
-&lt;input type="submit" value="input tag"&gt;
-</code></pre>
-</div>
-
-<div class="example">    
-  <button type="submit">button tag</button>
-  <input type="submit" value="input tag" />
-</div>
-
-<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code class="highlighter-rouge">type</code> value.</p>
-
-<pre><code>&lt;form method="POST" action="#"&gt;
-  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
-  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
-  &lt;br&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
-  &lt;br&gt;
-  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;input type="reset" value="reset"&gt;
-  &lt;input type="submit" value="submit"&gt;
-&lt;/form&gt;
-</code></pre>
-
-<form class="example">
-  <label>Name </label>
-  <input type="text" />
-  <label>Password </label>
-  <input type="password" />
-  <br />
-  <input type="radio" name="radio-example" /><label>yes</label>
-  <input type="radio" name="radio-example" /><label>no</label>
-  <input type="checkbox" /><label>option 1</label>
-  <input type="checkbox" /><label>option 2</label>
-  <br />
-  <label>Leave a comment</label> <textarea></textarea>
-  <input type="reset" value="reset" />
-  <input type="submit" value="submit" />
-</form>
-
-<blockquote>
-  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code class="highlighter-rouge">type</code> attributes, <code class="highlighter-rouge">text</code> and <code class="highlighter-rouge">password</code> differ.</p>
-
-  <p>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?</p>
-
-  <p>Note that clicking “submit” will not process any information because this example is only in HTML and is not attached to any server side processing.</p>
-</blockquote>
-
-<h3 id="label-and-the-for-attribute"><code class="highlighter-rouge">&lt;label&gt;</code> and the <code class="highlighter-rouge">for</code> attribute</h3>
-
-<p>Use the <code class="highlighter-rouge">for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code class="highlighter-rouge">id</code> value of the related form control.</p>
-
-<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
-&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
-</code></pre>
-
-<p><strong>label association</strong></p>
-
-<p><label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname" />
-<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname" /></p>
-
-<p><strong>no label association</strong></p>
-
-<p><label>First Name</label> <input type="text" name="firstname" />
-<label>Last Name</label> <input type="text" name="lastname" /></p>
-
-<blockquote>
-  <p>When labels and inputs are associated, select either the label OR the input to focus on the related input.</p>
-
-  <p>Try clicking on the labels in the examples above.</p>
-</blockquote>
-
-<h3 id="name-attribute"><code class="highlighter-rouge">name</code> attribute</h3>
-
-<p>The <code class="highlighter-rouge">name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
-
-<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
-&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
-</code></pre>
-
-<p>The <code class="highlighter-rouge">name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day is it today?&lt;/p&gt;
-&lt;input type="radio" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
-</code></pre>
-</div>
-
-<p>What day is it today?<br />
-<input type="radio" name="days" id="mon" /><label for="mon">Monday</label><br />
-<input type="radio" name="days" id="tues" /><label for="tues">Tuesday</label><br />
-<input type="radio" name="days" id="wed" /><label for="wed">Wednesday</label><br />
-<input type="radio" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
-<input type="radio" name="days" id="fri" /><label for="fri">Friday</label></p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
-&lt;input type="checkbox" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
-</code></pre>
-</div>
-
-<p>What day do you attend class?</p>
-<p><input type="checkbox" name="days" id="mon" /><label for="mon">Monday</label><br />
-<input type="checkbox" name="days" id="tues" /><label for="tues">Tuesday</label><br />
-<input type="checkbox" name="days" id="wed" /><label for="wed">Wednesday</label><br />
-<input type="checkbox" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
-<input type="checkbox" name="days" id="fri" /><label for="fri">Friday</label></p>
-
-<p><br />
-In addition to the form controls, any HTML tags can be contained within the <code class="highlighter-rouge">&lt;form&gt;</code> element (e.g. <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
-
-<h3 id="processing-a-form">Processing a Form</h3>
-
-<p>The form related HTML only create the form in the browser.  To actually submit the information and process the data, a <em>server side</em> language is required (e.g. PHP).</p>
-
-<p>Another option is to use 3rd party services such as <a href="http://www.wufoo.com/">Wufoo</a> or <a href="https://www.google.ca/forms/about/">Google Forms</a> to handle not only building the HTML &amp; CSS of the form but also the form processing as well.</p>
-
-<h4 id="extra-resources">Extra Resources</h4>
-<ul>
-  <li><a href="http://www.sitepoint.com/web-foundations/form-elements/">sitepoint: form elements</a></li>
-  <li><a href="http://diveintohtml5.info/forms.html">Dive Into HTML5 forms</a></li>
-  <li><a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a></li>
-  <li><a href="http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738">Bring Your Forms Up to Date With CSS3 and HTML5 Validation</a></li>
-</ul>
-
-<h2 id="google-forms">Google Forms</h2>
-
-<p>Use <strong>Google Forms</strong> to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with writing HTML forms and email responses, you can use the power of <strong>Sheets</strong> to manipulate &amp; sort the data!</p>
-
-<h3 id="using-google-forms">Using Google Forms:</h3>
+<p>Two components:</p>
 
 <ol>
-  <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account.</li>
-  <li>The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
-  <img src="assets/img/module4/gforms-new.png" alt="" /></li>
-  <li>
-    <p>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).</p>
-  </li>
-  <li>Once you’ve completed your form, you can either send out the form or embed it into your web page.
+  <li>Paid
     <ul>
-      <li>To send the form, select <strong>Send form</strong> to see options.<br />
-  <img src="assets/img/module4/gforms-send.png" alt="" />
-  <br /><br />
-  You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br />
-  <img src="assets/img/module4/gforms-send-options.png" alt="" /></li>
-      <li>To embed the form onto your web page, select <strong>File &gt; Embed</strong> and copy the HTML onto your web page.<br />
-  <img src="assets/img/module4/gforms-embed.png" alt="" /></li>
+      <li>Some call it “SEM”: not accurate; (marketing is not just advertising!)</li>
+      <li>In the industry, it’s called “PPC”: pay-per-click ads</li>
+    </ul>
+  </li>
+  <li>Free
+    <ul>
+      <li>SEO: Search Engine Optimization</li>
+      <li>a.k.a. Natural/Organic search</li>
+      <li>People trust more–can’t be bought! Gets more clicks.</li>
     </ul>
   </li>
 </ol>
 
-<h2 id="styling-google-forms">Styling Google Forms</h2>
+<h2 id="google-search-engine">Google search engine</h2>
+<p>Google has a 65%-80% share of the world’s search market.</p>
 
-<p>Choose from existing themes!</p>
+<p><img src="assets/img/module4/search-engine-logos.jpg" alt="" /></p>
 
-<p>Select <strong>Change themes</strong> to see available themes.  (Select <strong>Edit questions</strong> to go back to the questions.)</p>
+<p>A Google search results page:</p>
 
-<p><img src="assets/img/module4/gforms-themes.png" alt="" /></p>
+<ul>
+  <li>PPC text ads</li>
+  <li>Organic listings</li>
+  <li>Google Maps</li>
+  <li>Product Listing Ads</li>
+  <li>Knowledge panel</li>
+  <li>Answer box</li>
+  <li>Image results</li>
+  <li>Video results</li>
+  <li>News results</li>
+  <li>Social media results</li>
+  <li>Reviews</li>
+</ul>
 
-<p>Choose a theme on the right and select <strong>Customize</strong> for additional options.</p>
+<p><img src="assets/img/module4/google-results-page.jpg" alt="" /></p>
 
-<p><img src="assets/img/module4/gforms-themes-customize.png" alt="" /></p>
+<p>Google uses algorithms to determine which results come up at the top.</p>
 
-<p>And that’s it!</p>
+<ul>
+  <li>Organic:
+    <ul>
+      <li>Desktop, Mobile Phone, Tablet</li>
+      <li>Local search (Google Maps)</li>
+      <li>Other types of results
+        <ul>
+          <li>“Hummingbird”</li>
+          <li>Knowledge Graph</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Paid:
+    <ul>
+      <li>PPC “auction” rankings</li>
+      <li>Product listing ads</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Organic listings click curve:</p>
+
+<ul>
+  <li>The top rankings get the most clicks</li>
+  <li>More pronounced on mobile devices</li>
+</ul>
+
+<p><img src="assets/img/module4/click-curve.png" alt="" /></p>
+
+<p>Position 1: 32.5%<br />
+Position 2: 17.6%<br />
+Position 3: 11.4%<br />
+Position 4: 8.1%<br />
+Position 5: 6.1%<br />
+Position 6: 4.4%<br />
+Position 7: 3.5%<br />
+Position 8: 3.1%<br />
+Position 9: 2.6%<br />
+Position 10: 2.4%</p>
+
+<p>Few users go past page one!</p>
+
+<p>PPC click curve:
+Average position = 1: 12.2%<br />
+Average position = 1.5: 4.3%<br />
+Average position = 2: 1.5%<br />
+Average position = 2.5: 0.5%<br />
+Average position = 3: 0.2%<br />
+Average position = 3.5: 0.1%<br />
+Average position = 4: 0.0%<br />
+Average position = 5: 0.0%</p>
+
+<p>So the objective is to get to the top of the pile so you get the clicks!</p>
+
+<h4 id="reference">Reference</h4>
+<p><a href="http://searchenginewatch.com/sew/study/2345638/ppc-click-through-rate-by-position-does-rank-matter-data">PPC Click-Through Rate by Position: Does Rank Matter?</a></p>
+
+<h2 id="what-winning-the-search-game-looks-like">What winning the SEARCH GAME looks like</h2>
+
+<p>A bit of background:</p>
+
+<ul>
+  <li>Google’s objective is to give users the best user experience no matter what words they enter into the search box.</li>
+  <li>Anyone can put words on a website, but who is a reliable, authoritative source?</li>
+  <li>Google’s algorithms sort that out!</li>
+</ul>
+
+<p>There are over 200 factors in Google’s organic search algorithm.</p>
+
+<ul>
+  <li>It changes over 500 times a year.</li>
+  <li>It’s a secret–we know what we know from analysis and knowledge sharing.</li>
+  <li>Only 20-25% of the factors relate to “On-page” factors; rest is “Off-page” - i.e. external to your website</li>
+</ul>
+
+<p>The Periodic Table of SEO Success Factors: <a href="http://searchengineland.com/seotable">http://searchengineland.com/seotable</a></p>
+
+<p><img src="assets/img/module4/periodic-table-of-seo-2015.png" alt="" /></p>
+
+<h3 id="be-aware---theres-a-shady-side-to-seo">Be aware - there’s a “shady” side to SEO!</h3>
+
+<p>Black Hat: Cheating by buying a “fake” digital footprint</p>
+
+<ul>
+  <li>Cheap and easy</li>
+  <li>Risky: Google is always fighting it</li>
+  <li>“Web spam”: paid links, dropped domains, free directories, blog comments</li>
+  <li>Many agencies offer to rank you for cheap!</li>
+</ul>
+
+<p>White Hat: Doing what’s right, not what’s easy</p>
+
+<ul>
+  <li>More time, more effort, slower to see results</li>
+  <li>Safer: Meeting Google where they’re trying to go</li>
+</ul>
+
+<h3 id="you-win-at-organic-search-by-maintaining-a-robust-digital-footprint">You win at Organic Search by maintaining a robust “digital footprint”.</h3>
+
+<ul>
+  <li>Content optimized to meet user needs when they search</li>
+  <li>Links from other, relevant websites</li>
+  <li>Regular updates to content</li>
+  <li>Engaging social media presence</li>
+  <li>Coordination between digital properties</li>
+</ul>
+
+<h3 id="so-you-cant-look-at-search-in-isolation">So you can’t look at Search in isolation.</h3>
+
+<p>Coordinate with:</p>
+
+<ul>
+  <li>Paid Search strategy</li>
+  <li>Local Search strategy</li>
+  <li>Social media</li>
+  <li>Public relations</li>
+  <li>All things digital!</li>
+  <li>Dominate the results page!</li>
+</ul>
+
+<p>If possible: align with offline channels as well!</p>
+
+<ul>
+  <li>Ideal: Integrated Marketing Communications</li>
+</ul>
 
 <p><br /></p>
 
-<p>If you’re feeling adventurous, you can also edit the HTML &amp; CSS yourself.</p>
-
-<p>The embed code is an <code class="highlighter-rouge">&lt;iframe&gt;</code> which is a common way to insert content from another source (i.e. YouTube embeds). But you can <strong>View Source</strong> and grab the actual HTML and embed that into your site instead of the <code class="highlighter-rouge">&lt;iframe&gt;</code>.</p>
-
-<p>If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.</p>
-
-<p>First, select <strong>View live form</strong> to see the form out of edit mode, in the browser.</p>
-
-<p><img src="assets/img/module4/gforms-live.png" alt="" /></p>
-
-<p>Then right-click anywhere and select <strong>View source</strong> and look for the <code class="highlighter-rouge">&lt;form&gt;</code> tag.</p>
-
-<p><strong>Pro tip!</strong> Use <strong>cmd/ctrl + F</strong> (find) and do a search for <code class="highlighter-rouge">form</code> on the page and copy everything from the opening <code class="highlighter-rouge">&lt;form&gt;</code> to the closing <code class="highlighter-rouge">&lt;/form&gt;</code> tags.</p>
-
-<p>Note that this option requires you to write all the CSS yourself!</p>
-
-<h4 id="resources">Resources</h4>
+<p><strong>Inbound Marketing</strong>:</p>
 
 <ul>
-  <li><a href="http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html">Google Drive Blog: Your Forms, Your Way</a></li>
-  <li><a href="http://morning.am/tutorials/how-to-style-google-forms/">How to style Google Forms</a></li>
+  <li>Pulling people into your sales flow by fulfilling their needs</li>
+  <li>“Earn your way in”</li>
+  <li>Demonstrate expertise
+    <ul>
+      <li>white papers, blog content, free tools</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="google-forms--analysis-with-excel">Google Forms + Analysis with Excel</h2>
+<p>as opposed to <strong>Outbound Marketing</strong>:</p>
 
-<p>View the presentation for this module <a href="https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166">here</a>.</p>
+<ul>
+  <li>Pushing messages out to people</li>
+  <li>“Buy, beg, or bug your way in”</li>
+</ul>
+
+<p>According to HubSpot: especially effective for small businesses that deal with high dollar values, long research cycles and knowledge-based products.</p>
+
+<h2 id="getting-started-with-search">Getting started with search</h2>
+
+<h3 id="how-do-i-know-if-its-worth-doing-paid-search-ads">How do I know if it’s worth doing Paid Search ads?</h3>
+
+<ul>
+  <li>It’s all about ROI (return on investment)! Are you selling a product or service?</li>
+  <li>Part of your marketing budget</li>
+  <li>Are people searching?</li>
+</ul>
+
+<h3 id="how-do-i-know-if-its-worth-optimizing-for-organic-search-seo">How do I know if it’s worth optimizing for Organic search (SEO)?</h3>
+
+<ul>
+  <li>Bare minimum: your site appears in Google unless you block it, so manage what it looks like
+    <ul>
+      <li>Set <code class="highlighter-rouge">&lt;title&gt;</code> and <code class="highlighter-rouge">&lt;meta name="description"&gt;</code> tags</li>
+    </ul>
+  </li>
+  <li>Put in more effort: you get qualified traffic from your target market</li>
+</ul>
+
+<h3 id="it-all-starts-with-your-marketing-plan">It all starts with your marketing plan.</h3>
+
+<ul>
+  <li>What is your offering?</li>
+  <li>Who is your target market?</li>
+  <li>What benefits do you provide for them?</li>
+</ul>
+
+<p>Step 1: Understand what and how your target market searches.</p>
+
+<h4 id="keywords">Keywords</h4>
+
+<ul>
+  <li>“Clusters” of search queries
+e.g. “cell phone”</li>
+  <li>cell phone, cell phones, cell phone plans, cell phone stores, cell phone accessories, best cell phone, cell phone reviews, new cell phones, rugged cell phone, cell phone for seniors</li>
+</ul>
+
+<p>How do we find the right keywords to target?</p>
+
+<h4 id="google-adwords-keyword-planner-gakp">Google Adwords Keyword Planner (GAKP)</h4>
+<p>Enter a search term and it shows you:</p>
+
+<ul>
+  <li>How many people search it in the location you specify</li>
+  <li>The intensity of competition for PPC ads</li>
+  <li>The suggested bid for a paid search ad</li>
+</ul>
+
+<p>High volume:</p>
+
+<ul>
+  <li>More people will see you if you rank</li>
+</ul>
+
+<p>High competition:</p>
+
+<ul>
+  <li>Lots of advertisers! Highly qualified searcher</li>
+</ul>
+
+<p>High suggested bid:</p>
+
+<ul>
+  <li>Valuable conversions to be had from the searcher</li>
+</ul>
+
+<p>Also:</p>
+
+<ul>
+  <li>Google Trends</li>
+  <li>Auto-complete suggestions</li>
+  <li>Related searches
+    <ul>
+      <li>Use these, then check in GAKP</li>
+    </ul>
+  </li>
+</ul>
 
 <blockquote>
-  <h2 id="exercise-forms-responses--excel">EXERCISE: Forms responses &amp; Excel</h2>
-  <p>View the form <a href="https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#">here</a> for today’s exercise.</p>
+  <h2 id="exercise-keywords">EXERCISE: Keywords</h2>
+  <p>Let’s find potential keywords to rank for!</p>
 
-  <p>View the <a href="https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981">form responses here</a>.<br />
-<strong>Important!</strong> Be sure to <strong>make a copy</strong> of this file into <em>your</em> Google Drive to make your own changes.</p>
+  <p><strong>1. Brainstorm</strong></p>
+
+  <p>What words might people use? The competition?
+<br /><br />
+<strong>2. Evaluate using Google AdWords Keyword Planner</strong></p>
+
+  <ul>
+    <li>Go to <a href="https://adwords.google.ca/KeywordPlanner">https://adwords.google.ca/KeywordPlanner</a></li>
+    <li>Create an account using your Gmail address/Google account (can only have one AdWords account per Gmail account)</li>
+    <li>Click <strong>“Tools” &gt; “Keyword Planner”</strong></li>
+    <li>Select tab <strong>Search for new keywords using a phrase, website or category</strong></li>
+    <li>Under <strong>targeting</strong> - Choose your target area, e.g. “Canada”, “Ontario”, “Toronto”</li>
+    <li>Enter your keyword in the box and click <strong>Get ideas</strong></li>
+    <li>Click the <strong>Keyword ideas</strong> tab</li>
+  </ul>
+
+  <p>What is the search volume? Competition level? Suggested bid?</p>
+
+  <p><strong>3. Evaluate same keyword using Google Trends</strong></p>
+
+  <ul>
+    <li>Go to <a href="https://www.google.ca/trends/">https://www.google.ca/trends/</a></li>
+    <li>Enter your search keyword</li>
+    <li>Adjust geographic target and timeframe to suit your needs</li>
+  </ul>
+
+  <p>Are there any seasonal patterns to be aware of? Is interest growing or dwindling?</p>
+
+  <p><strong>4. Check out your search keyword on Google</strong></p>
+
+  <ul>
+    <li>Go to <a href="https://www.google.ca/">https://www.google.ca/</a></li>
+    <li>Enter your search keyword
+<strong>5. What are the odds you can rank for it?</strong></li>
+    <li>What kinds of websites/pages come up? What kinds of results are returned?</li>
+    <li>Competition - who ranks on page one?</li>
+    <li>Domain authority, page authority</li>
+  </ul>
+
+  <p><strong>6. Compare to other keywords</strong></p>
+  <ul>
+    <li>In AdWords–what related keywords are listed?</li>
+    <li>In Google Trends–what related searches are listed?</li>
+    <li>On Google–what other searches come up in auto-fill?</li>
+    <li>On Google–at the bottom of the results page, what related searches are listed?</li>
+  </ul>
+
+  <p><strong>7. Evaluate other searches in Google AdWords Keyword Planner and compare.</strong></p>
+
+  <p>Keep a list, and pick the best one(s).</p>
 </blockquote>
 
-<p>~ End ~</p>
+<h2 id="on-page-seo---how-to-optimize-a-web-page-for-a-keyword">On-Page SEO - How to optimize a web page for a keyword</h2>
 
+<p>The “fundamental unit” in Search is the page.</p>
+
+<ul>
+  <li>Search engines (generally) return links to web pages as results for queries.</li>
+  <li>A page is identified by its URL.</li>
+  <li>“Duplicate content issues” - multiple URLs with the same content
+    <ul>
+      <li><code class="highlighter-rouge">&lt;link rel="canonical"&gt;</code> tag</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Search engines are supposed to return the best page for a query</p>
+
+<p>“What’s the best page about &lt;…&gt;?”</p>
+
+<p>Ideal on-page optimization strategy—orient your content around a lucrative keyword</p>
+
+<p>As much as Google tries to understand intent (through initiatives like Hummingbird)—it’s still most effective to use exact keywords in your web page content</p>
+
+<h3 id="where-google-wants-to-see-keywords">Where Google wants to see keywords:</h3>
+
+<p><code class="highlighter-rouge">&lt;title&gt;</code> - Title tag</p>
+
+<ul>
+  <li>Title at top of browser (in the tab)</li>
+  <li>Link text on Search results</li>
+  <li>Title when shared on social media</li>
+  <li>Gets cut off after approximately 60 characters</li>
+  <li>Presence of keyword is a strong ranking factor</li>
+</ul>
+
+<p><code class="highlighter-rouge">&lt;meta name="description&gt;</code> - Meta description tag</p>
+
+<ul>
+  <li>Blurb that appears under a search result</li>
+  <li>Also appears when shared on social media</li>
+  <li>Goal is to entice the user to click through to your web page
+    <ul>
+      <li>This is your chance to pitch your prospect</li>
+    </ul>
+  </li>
+  <li>Keyword inclusion doesn’t help rankings, but bolded keyword drives clickthrough, which helps rankings</li>
+</ul>
+
+<h4 id="page-content">Page content</h4>
+<div class="example page-content">
+  <code>&lt;h1&gt;Header&lt;/h1&gt;</code> - use primary keyword in header
+  <p>(body text)</p>
+  <p><code>&lt;h2&gt;Subsection #1&lt;/h2&gt;</code> - use related keyword in header</p>
+  <p>(body text)</p>
+  <p><code>&lt;h2&gt;Subsection #2&lt;/h2&gt;</code></p>
+  <p>(body text)</p>
+  <code>&lt;h3&gt;Subsection of Subsection #2&lt;/h3&gt;</code>
+</div>
+
+<h3 id="keyword-usage">Keyword usage</h3>
+
+<ul>
+  <li>No more than 4-5% of the word count</li>
+  <li>Word count: Use pages that rank for your keyword as a benchmark</li>
+  <li>Blogs: At least 500 words
+    <ul>
+      <li>Google tends to prefer in-depth content, discourages “thin” content</li>
+      <li>Enough to fulfill the needs of the audience; be the best answer!</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Exercise: Pick a page from your website and optimize it for a keyword</p>
+</blockquote>
+
+<h2 id="pay-per-click-search-ads-ppc">Pay-per-click Search ads (PPC)</h2>
+
+<p>(Learn this at <a href="http://www.wordstream.com/learn">http://www.wordstream.com/learn</a>)</p>
+
+<p>Google AdWords–most popular platform</p>
+
+<ul>
+  <li>Works like an auction</li>
+</ul>
+
+<p>How it works:</p>
+
+<ul>
+  <li>Create an ad group</li>
+  <li>Add a keyword to the ad group</li>
+  <li>Write a text ad you’d like to appear when someone searches that keyword</li>
+  <li>Bid on the keyword–how much you’ll be willing to pay for a click</li>
+  <li>Google looks at all the advertisers and chooses a set of “winners” to appear on the search results pages, ranked on a combination of factors.</li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>Ad Rank = CPC bid x Quality Score</strong></p>
+
+<p>You pay…</p>
+
+<p><strong>Your price = Ad Rank of advertiser below you / Your Quality Score + $0.01</strong></p>
+
+<p>Example:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Advertiser I</td>
+      <td>$2.00 max bid</td>
+      <td>QS = 10</td>
+      <td>Ad Rank = 20</td>
+      <td>Actual CPC = $1.61</td>
+    </tr>
+    <tr>
+      <td>Advertiser II</td>
+      <td>$4.00 max bid</td>
+      <td>QS = 4</td>
+      <td>Ad Rank = 16</td>
+      <td>Actual CPC = $3.01</td>
+    </tr>
+    <tr>
+      <td>Advertiser III</td>
+      <td>$6.00 max bid</td>
+      <td>QS = 2</td>
+      <td>Ad Rank = 12</td>
+      <td>Actual CPC = $4.01</td>
+    </tr>
+    <tr>
+      <td>Advertiser IV</td>
+      <td>$8.00 max bid</td>
+      <td>QS = 1</td>
+      <td>Ad Rank = 8</td>
+      <td>Actual CPC = highest!</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Good Quality Score = pay less for the ad AND get the best placement!<br />
+Higher Quality Score = Higher ROI!</p>
+
+<h3 id="so-what-is-quality-score">So what IS Quality Score?</h3>
+
+<p>(It’s another Google secret!)</p>
+
+<p>Multiple factors:</p>
+
+<ul>
+  <li>Your click-through rate (CTR) - most important factor!</li>
+  <li>Relevance of each keyword to its ad group</li>
+  <li>Landing page quality and relevance</li>
+  <li>The relevance of your ad text</li>
+  <li>Your historical AdWords account performance</li>
+</ul>
+
+<p>How do you improve Quality Score?</p>
+
+<p>Consistent work on your account to optimize:</p>
+
+<ul>
+  <li>Keyword research: New, relevant keywords</li>
+  <li>Keyword organization: Tight, organized groups tied to individual ad campaigns</li>
+  <li>Refining ad text: Test ad copy and use the one(s) with the best CTR</li>
+  <li>Optimize landing pages: Provide a cohesive experience from keyword to conversion</li>
+  <li>Add negative keywords - Exclude irrelevant search terms that waste budget</li>
+</ul>
+
+<p>Low Quality Scores are primarily the result of disconnect between keywords, ad groups, ad text, and landing page content.</p>
+
+<h3 id="good-to-know">Good to know…</h3>
+
+<p>Match Type</p>
+
+<ul>
+  <li>Broad match: Query includes any word in your key phrase in any order</li>
+  <li>Modified broad match: “+” parameter added to word; search query must include that word</li>
+  <li>Phrase match: Query must include entire key phrase in order (can have words before and after)</li>
+  <li>Exact match: Query must match exactly</li>
+</ul>
+
+<p>Optimize match type to avoid unnecessary spend on irrelevant clicks.</p>
+
+<p>Negative Keywords</p>
+
+<ul>
+  <li>Use keyword research to identify searches that don’t apply to your offering
+    <ul>
+      <li>Same tactics we used to find relevant searches!</li>
+    </ul>
+  </li>
+  <li>Build a list of terms to exclude</li>
+</ul>
+
+<p>Eliminate more unnecessary clicks, improve Quality Score, improve ROI!</p>
+
+<h2 id="making-moneysucceeding-as-a-blogger">Making money/succeeding as a blogger</h2>
+
+<h3 id="different-kinds-of-bloggers">Different kinds of bloggers:</h3>
+
+<ul>
+  <li>The part-time professional
+    <ul>
+      <li>uses blogging to supplement income</li>
+    </ul>
+  </li>
+  <li>The hobbyist
+    <ul>
+      <li>Blogs for fun and doesn’t earn an income</li>
+      <li>Most blogs personal musings</li>
+      <li>60% spend less than three hours a week blogging</li>
+    </ul>
+  </li>
+  <li>The full-time professional
+    <ul>
+      <li>Blogs as a full-time job</li>
+    </ul>
+  </li>
+  <li>The corporate
+    <ul>
+      <li>Blogs as part of their full-time job or full time for an organization</li>
+      <li>Makes up 8% of blogs</li>
+    </ul>
+  </li>
+  <li>The entrepreneur
+    <ul>
+      <li>Blogs for a company they own</li>
+      <li>Makes up 13% of blogs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="reference-1">Reference</h4>
+<p><a href="http://lifehacker.com/can-i-really-make-a-living-by-blogging-1537783554">Can I Really Make a Living by Blogging?</a></p>
+
+<h3 id="earnings-you-can-expect-as-a-blogger">Earnings you can expect as a blogger</h3>
+
+<p>You’re essentially starting your own business. 
+You’re in for the long haul, and it will be some time before you see any return on your investment.</p>
+
+<p>Of ProBlogger.net readers:</p>
+
+<ul>
+  <li>10% make $0 a month</li>
+  <li>28% make under $10</li>
+  <li>25% make $10-$99</li>
+  <li>17% make $100-$499</li>
+  <li>7% make $500-$999</li>
+  <li>9% make $1,000-$9,999</li>
+  <li>4% make $10,000+</li>
+</ul>
+
+<h4 id="reference-2">Reference</h4>
+<p><a href="http://www.problogger.net/archives/2012/11/28/can-you-really-make-money-blogging-7-things-i-know-about-making-money-from-blogging/">Can You REALLY Make Money Blogging? [7 Things I Know About Making Money from Blogging]</a></p>
+
+<h3 id="how-do-you-monetize-a-blogmany-ways">How do you monetize a blog?–many ways!</h3>
+
+<ul>
+  <li>Sell products</li>
+  <li>Continuity programs
+    <ul>
+      <li>e.g. premium content, communities, coaching</li>
+    </ul>
+  </li>
+  <li>Affiliate marketing</li>
+  <li>Providing services</li>
+  <li>Advertising</li>
+  <li>Combinations of income streams</li>
+</ul>
+
+<p>There are no formulas!</p>
+
+<p>But here’s <a href="http://amylynnandrews.com/how-to-make-money-blogging/">Amy Lynn Andrews</a>…</p>
+
+<p>Five basic steps if you want to make money blogging:</p>
+
+<ol>
+  <li>Establish your home base</li>
+  <li>Produce valuable content</li>
+  <li>Build relationships</li>
+  <li>Grow your platform</li>
+  <li>Choose and implement streams of income</li>
+</ol>
+
+<p><a href="http://boostblogtraffic.com/make-money-blogging/">Jon Morrow</a> advises…</p>
+
+<p>(If you’re an independent blogger) – Ignore SEO for the first year.</p>
+
+<p>When your blog is new, the most efficient uses of your time fall into three broad categories:</p>
+
+<ul>
+  <li>Building relationships with influencers (including guest blogging)</li>
+  <li>Creating content worth linking to</li>
+  <li>Selling your products and services</li>
+</ul>
+
+<p>If you do these well, you’ll get search traffic without doing anything.</p>
+
+<blockquote>
+  <p>You’ve seen a lot–what do you want to discuss?</p>
+</blockquote>
 
       </article>
     </main>
