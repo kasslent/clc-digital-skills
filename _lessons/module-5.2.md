@@ -113,7 +113,9 @@ For this code-along, you can use the original project demo files if you would li
     	color: white;
     }
 >
-> Alright, that should be pretty good for the styles. you can finesse them later. The next step is adding the click events using jQuery, that will add and remove the class of `open-nav`. To do this we will use a jQuery method called toggleClass();
+> Alright, that should be pretty good for the styles. You can finesse them later. The next step is adding the click events using jQuery that will add and remove the class of `open-nav`. This next bit of code goes in your main.js file that we added to our projcets [last week](http://127.0.0.1:4000/llc-digital-skills/module5-1.html#adding-javascriptjquery-to-your-files). If you haven't done that already, be sure to add both jQuery and your own js file to your project. 
+>
+To add and remove the class of `open-nav` we will use a jQuery method called `toggleClass();`.
 >
     $(".close, .hamburger").click(function(e){
       e.preventDefault();

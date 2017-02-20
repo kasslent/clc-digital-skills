@@ -183,7 +183,9 @@ As you can see, it doesn’t look amazing right now. It looks too narrow, and bo
 </code></pre>
   </div>
 
-  <p>Alright, that should be pretty good for the styles. you can finesse them later. The next step is adding the click events using jQuery, that will add and remove the class of <code class="highlighter-rouge">open-nav</code>. To do this we will use a jQuery method called toggleClass();</p>
+  <p>Alright, that should be pretty good for the styles. You can finesse them later. The next step is adding the click events using jQuery that will add and remove the class of <code class="highlighter-rouge">open-nav</code>. This next bit of code goes in your main.js file that we added to our projcets <a href="http://127.0.0.1:4000/llc-digital-skills/module5-1.html#adding-javascriptjquery-to-your-files">last week</a>. If you haven’t done that already, be sure to add both jQuery and your own js file to your project.</p>
+
+  <p>To add and remove the class of <code class="highlighter-rouge">open-nav</code> we will use a jQuery method called <code class="highlighter-rouge">toggleClass();</code>.</p>
 
   <div class="highlighter-rouge"><pre class="highlight"><code>$(".close, .hamburger").click(function(e){
   e.preventDefault();
