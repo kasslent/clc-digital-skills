@@ -10,6 +10,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 img {
   max-width:100%;
   height: auto;
@@ -34,7 +36,6 @@ h1, h2 {
 	color: #550165;
 	display: inline-block;
 	margin: 0;
-	margin-bottom: 20px;
 }
 
 
@@ -78,8 +79,7 @@ cite {
 
 header .wrapper{
 	display: flex;
-	align-content: space-around;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 
 }
@@ -105,8 +105,12 @@ nav {
 nav ul {
 	padding: 0;
 	list-style-type: none;
+
 }
 
+ul.main-nav {
+  display:block;
+}
 nav li {
 	display: inline-block;
 }
@@ -126,7 +130,7 @@ nav li a:hover {
 .banner {
 	padding: 150px;
 	/*Change the banner image by changing the url below*/
-	background-image: url(images/strawberries.jpeg);
+	background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -219,4 +223,40 @@ footer {
 	}
 }
 
+.hamburger, .close{
+  display: none;
+}
+
+@media (max-width: 650px){
+
+  .banner {
+    padding: 50px 0px;
+    background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
+    background-position: center;
+  }
+
+  .about {
+    padding: 50px 0px;
+  }
+  blockquote {
+    margin: 0;
+  }
+
+
+  .third {
+    padding-top: 50px;;
+  }
+  .third:last-child{
+    padding-bottom: 50px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  /*HAMBURGER NAVIGATION GOES HERE:*/
+
+
+
+}
 

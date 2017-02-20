@@ -3,7 +3,7 @@ layout: lessons
 module: 4
 lesson: 2
 title: HTML Forms & Google Sheets
-description: Intro to HTML forms & data manipulation with Google Sheets
+description: Intro to HTML forms with Google Sheets
 permalink: module4-2.html
 ---
 
@@ -153,9 +153,27 @@ What day is it today?<br>
 <br>
 In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.
 
+>## Exercise: Let's Create A Form for Our Website!
+>
+>Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. [Here's an example](exercises/module1/project-one-sample/contact.html) of a form you could build.
+>
+>This is the HTML for the example site's form: 
+>
+    <form action="">
+        <label for="comfort">Name</label>
+        <input name="" type="text" id="name"/>
+        <label for="">E-mail Address</label>
+        <input name="" type="email" id="email"/>
+        <label for="explain">Explain why you are getting in touch.</label>
+        <textarea name="" id="explain"></textarea>
+        <input class="button" type="submit" value="Submit">
+    </form>
+>
+>Feel free to add other fields to your form. 
+
 ### Processing a Form
 
-The form related HTML only create the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
+The form-related HTML only creates the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
 
 Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle not only building the HTML & CSS of the form but also the form processing as well.
 
@@ -166,74 +184,71 @@ Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com
 * [Bring Your Forms Up to Date With CSS3 and HTML5 Validation](http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738)
 
 
+
 ## Google Forms
 
-Use **Google Forms** to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with writing HTML forms and email responses, you can use the power of **Sheets** to manipulate & sort the data!
+You can use **Google Forms** to process your website's new form and save all the responses sent to a handy Google spreadsheet.  This will enable you to use the power of **Sheets** to manipulate & sort the data!
 
-### Using Google Forms:
+>## Code-Along: Using Google Forms:
+>
+>1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. 
+>1. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
+>  ![]({{ site.img }}/module4/gforms-new.png)
+> <br>
+1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  Make sure you create a Google Form that is an exact replica of your own new form. 
+Note: Google Forms don't have "e-mail" inputs so use a general "short answer" input for e-mail. You won't be using the google form itself in the end so it doesn't matter. 
+  <br>
+  ![]({{ site.img }}/module4/gforms-contactform.png)
+1. Now that your form is ready, click on the eyeball. 
+    ![]({{ site.img }}/module4/gforms-eyeball.gif)
+  <br>
+1. Now that we're in the preview screen for the form we will open up the web inspector to find the information we need to connect our form to the Google Form. 
+* We will need the action value for the form element. 
+* The names of each of the form inputs. 
+  <br>
+Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs.
+  ![]({{ site.img }}/module4/gforms-inspectelement.gif)
+  <br>
+1. Once you have the names and action link for your form, add them to your own form in your site.
+  <br>
+1. Lastly, test your site's form. Go back to Google Forms and create a spreadsheet for your responses as shown below. Then in the browser open up your contact page and fill out your form. Finally, open up the excel sheet you just created to capture your forms' entries. 
+>
+  ![]({{ site.img }}/module4/gforms-excel.gif)
+>
 
-1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. 
-1. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
-  ![]({{ site.img }}/module4/gforms-new.png)
-1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  
+## Styling Forms
 
-1. Once you've completed your form, you can either send out the form or embed it into your web page. 
-  * To send the form, select **Send form** to see options.<br>
-  ![]({{ site.img }}/module4/gforms-send.png)
-  <br><br>
-  You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br>
-  ![]({{ site.img }}/module4/gforms-send-options.png)
-  * To embed the form onto your web page, select **File > Embed** and copy the HTML onto your web page.<br>
-  ![]({{ site.img }}/module4/gforms-embed.png)
+You can style form elements the same way you style any other element with CSS. Simply select the input you want to style, and give it some styles. 
+
+When it comes to inputs, try selecting the input you want using the type attribute in your CSS selector. For example: 
+
+    input[type="text"] {
+      padding: 6px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+Here are a couple of tricks to keep in mind though: 
+
+1. Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change include the border, padding, background, color and font-size. 
+2. Form elements usually come with an 'outline' when they are selected. This state is called "focus". Remember when we learned about hover states? Focus states can be targeted in the same way using CSS Pseudo-classes. The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it. 
+
+>Give it a try based on the example below:
+
+    input:focus {
+      outline: red;
+    }
+
+> ## Exercise: Style Your Form
+>
+>Take a look at some examples of styled [forms in CodePen](https://codepen.io/search/pens/?limit=all&page=2&q=forms) for inspiration and style your form! 
   
-## Styling Google Forms
-
-Choose from existing themes!
-
-Select **Change themes** to see available themes.  (Select **Edit questions** to go back to the questions.)
-
-![]({{ site.img }}/module4/gforms-themes.png)
-
-Choose a theme on the right and select **Customize** for additional options.
-
-![]({{ site.img }}/module4/gforms-themes-customize.png)
-
-And that's it!
-
-<br>
-
-If you're feeling adventurous, you can also edit the HTML & CSS yourself.
-
-The embed code is an `<iframe>` which is a common way to insert content from another source (i.e. YouTube embeds). But you can **View Source** and grab the actual HTML and embed that into your site instead of the `<iframe>`.
-
-If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.  
-
-First, select **View live form** to see the form out of edit mode, in the browser.
-
-![]({{ site.img }}/module4/gforms-live.png)
-
-Then right-click anywhere and select **View source** and look for the `<form>` tag.
-
-**Pro tip!** Use **cmd/ctrl + F** (find) and do a search for `form` on the page and copy everything from the opening `<form>` to the closing `</form>` tags.
-
-Note that this option requires you to write all the CSS yourself!
-
 #### Resources
 
-* [Google Drive Blog: Your Forms, Your Way](http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html)
-* [How to style Google Forms](http://morning.am/tutorials/how-to-style-google-forms/)
-  
-  
-## Google Forms + Analysis with Excel
-
-View the presentation for this module [here](  https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166).
-
->## EXERCISE: Forms responses & Excel
->View the form [here](https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#) for today's exercise.
->
->View the [form responses here](https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981).  
->**Important!** Be sure to **make a copy** of this file into *your* Google Drive to make your own changes.
-
+* [CSS Pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
+* [Customize a Google Form for Your Website](http://codepen.io/learningcode/post/customize-a-google-form-for-your-website)
 
 ~ End ~
 

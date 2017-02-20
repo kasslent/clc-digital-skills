@@ -8,33 +8,72 @@ permalink: module5-1.html
 class: module5-1
 ---
 
-## CSS vs JavaScript
+## Introduction to Computer Programming
 
-With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
+Up until now we have been working with HTML5 and CSS3. Both of these are coding languages but they're not considered programming languages per se. They are presentation-oriented languages and what makes them different than programming languages is that they cannot solve the problems that programming languages can. By contrast, all programming languages can write all programs. What that means is that what programming language A can solve, so can B. That doesn't mean they're the same. They could be very different in syntax (the symbols used in each language). But they can solve the same problems and both will share the same computational theories. This is why once you understand the basics of one programming language, you're likely to more easily pick up another. 
 
-Some guidelines:
+In web development we use several programming languages. For example, PHP, Ruby, Python and JavaScript. JavaScript is the language we will be learning today because it's a language closely associated with HTML & CSS in that it can be executed in the browser. It's considered a front-end and a back-end language. The other programming languages mentioned do not run in the browser and they are considered back-end languages.
 
-If it can be accomplished with CSS, usually it's better to go with CSS.
+ While HTML & CSS determine the presentation of content on a website, JavaScript will determine the functionality and interactions of a website. Before we sink our teeth into JavaScript proper, we will learn some basics of computational thinking using a syntax-less language called Scratch. 
 
-* keep in mind that HTML semantics and efficient & clean code comes first
-* if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!
+## Computational Thinking with Scratch
 
-If it's a visual effect, that happens on page load, you *might* be able to use CSS
+Simply put, when we write a computer program, we give instructions to our computer to carry out a set of instructions that will help us solve a problem. And while it may seem somewhat intimidating when we look at the syntax of a programming language like JavaScript, you need to always keep in mind that the computer is not smart. You are. Computers are just very fast at performing the tasks we tell them to perform. 
 
-* CSS is executed as soon as the page loads
-* new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
-* if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
+The first thing you need to become a great programmer, is to think like a computer. That means breaking solutions down into clear simple steps that a computer can perform. 
 
-#### Extra Resources
+If you were asking a human to walk from point A to point B you might say:
 
-* [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
-* [Animate.css](https://daneden.github.io/animate.css/)
+"Please walk over to point B"
+
+If you were to ask a robot to do the same thing you might need to be more clear and break things down in a way it will understand:
+
+Robot, please do the following:
+1. Bring your right leg forward 50cm.
+1. Bring your left leg forward 50cm past the right leg.
+1. Bring your right leg forward 50cm past the left leg.
+1. Repeat 2 and 3 until you reach Point B, then stop. 
+ 
+We're going to learn about some of the basic components of programming languages creating a simple game with Scratch: 
+
+Take a look at the demo of our game here: 
+
+<iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/145973347/?autostart=false" frameborder="0" allowfullscreen></iframe>
+
+> ## Class Discussion: 
+> Computer games are usually made up of players, goals and rules.
+>
+>In your own english words, describe all the instructions we might need to give the computer to make this game work. In other words, what are the players, goals and rules of this game? How would you communicate the goals and rules to the computer?
 
 
 
-## JavaScript vs jQuery
+## Programming with Scratch
+ 1. Go to [this URL](https://scratch.mit.edu/projects/72180312/#editor) for our starter project and click on the orange "remix" button on the upper right hand corner of the screen. 
+ 1. The interface that you're on is Scratch. On the left hand side we have the game area where you should now see a planet, a rocket and steroid filled space background. In the middle you will see a bunch of colourful blocks. These are instructions you can give to the computer. In other words, these are little bits of code we can use to program our game. 
+ 1. To give an instruction to an object, select it from the Sprites section on the bottom left hand side of the screen (right below the game), and then drag any blocks you want to use, to the right hand side. 
+ 1. We will code the game together. 
 
-### What is JavaScript?
+ > ## Code-Along: Let's create our own game.
+> Using blocks:
+> 1. Make the rocket follow the mouse, when it's clicked.
+> 1. Make the rocket say "Hooray" if it touches the planet and then go back to its starting position.
+> 1. Make the rocket play a losing sound and return to its starting position when it touches an asteroid. 
+> 1. Make the rocket return to its starting position when the green(start) flag is clicked.
+> 1. Create a Points variable and add 1 point each time the rocket touches the planet. 
+> 1. Bonus: Add a winning sound each time the rocket reaches the planet.
+> 
+> ### Resources
+> Watch the [Solution Video Walkthrough](https://www.youtube.com/watch?v=apx0WcL09ss)
+
+
+## Intro to JavaScript
+
+In our Scratch game we used some of the more common parts of any programming language. These include: Data types like Strings and Numbers; variables; Loops, conditional statements, functions, events, and even methods. 
+
+JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops** just like Scratch. More on each of these later...
+
+### What do we use JavaScript for?
+
 JavaScript controls the **behavior** of your web page. It allows you to do things such as:
 
 * animate items
@@ -51,27 +90,15 @@ Here's what JavaScript looks like:
     sayHello();
 
 <br>
-Unlike HTML & CSS, JavaScript is a *programming* language, so the structure and syntax is more complex. 
 
-JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops**, which are the basic building blocks for many different programming languages.
- 
+It might look intimidating with all the JavaScript syntax but it's not much different from this set of instructions in Scratch:
 
-### What is jQuery?
+![]({{ site.img }}/module5/helloworld.png) 
+![]({{ site.img }}/module5/catsayshello.png) 
 
-jQuery *is* JavaScript.  
-jQuery is a cross-browser JavaScript *library* used to simplify your program. 
+Both, the JavaScript function and the set of Scratch blocks, are sets of instructions. The JavaScript function will make a box pop up with the words "Hello World" when the website loads. 
 
-#### JavaScript example
-
-    document.getElementById("status")
-
-#### jQuery example
-
-    $("#status")
-
-Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have a base understanding of JavaScript principles to make sense of how jQuery works.
-
-Let's go through some JavaScript basics.
+Let's try some JavaScript.
 
 ## The Console
 
@@ -87,7 +114,6 @@ Note the `>` symbol. It is used by the console to represent a space for you to e
 * keyboard shortcut: **CMD + OPTION + J**  (MAC) / **CTRL + SHIFT + J** (WINDOWS)
 * from the menu: **View > Developer > JavaScript Console**
 
-## Intro to JavaScript
 
 ### Types: Numbers
 
@@ -106,7 +132,11 @@ After the `>` symbol, try adding any two numbers together using the `+` symbol a
 The `>` symbol is used by the console to represent a space for your input.  
 The `<` symbol is used by the console to represent the returned value of your input.
 
-> What do you think numbers and math can be used for in a website?
+> **Fun Fact:** The order of operations is BEDMAS. Remember BEDMAS? (Brackets, Exponents, Division, Multiplication, Addition, Subtraction)
+
+> In Scratch, we used numbers in our Space game to count points, and to make the rocket go back to the starting coordinates on the x and y grid. 
+>
+>**What do you think numbers and math can be used for in a website?**
 
 
 ### Types: Strings
@@ -116,7 +146,9 @@ When you store any amount of text, like words or sentences, the *type* is a **st
     > "hello"
     < "hello"
 
-> When do you think a string can be used with JavaScript?
+> In our Scratch game we had the rocket say "Hooray!" when it reached its goal. "Hooray" was a string. 
+>
+>**When do you think a string can be used with JavaScript?**
 
 #### Extra Resource 
  
@@ -142,7 +174,14 @@ JavaScript generally executes one line at a time, from top to bottom.
 
 Functions can be used to execute a repetitive set of instructions by grouping multiple commands into one name.  There are functions built into the language and you can also create your own.
 
-Let&#39;s look at the `alert()` function.
+In Scratch we created our own set of instructions for when our rocket was clicked. That was a function that looked like this:
+<br>
+![]({{ site.img }}/module5/scratch-function.png) 
+
+We also used built-in functions in Scratch like this:
+![]({{ site.img }}/module5/scratch-builtin.png) 
+
+Let&#39;s look at the `alert()` function in JavaScript.
 
 Note the syntax for functions, the parentheses `()`, must be included.
 
@@ -190,7 +229,9 @@ When you declare/create a function, it won't execute until you *call* it.
 
 ### Variables
 
-Variables are used to store values. It&#39;s like a box; put something in it to store and take it out when you&#39;re ready to use it.  
+Variables are used to store values. Remember ![]({{ site.img }}/module5/scratch-variable.png) ?
+
+It&#39;s like a box; put something in it to store and take it out when you&#39;re ready to use it.  
 
 Declare variables with the keyword `var` and a name of your choosing and *assign* a value. The name cannot contain spaces.
 
@@ -241,6 +282,16 @@ An object holds a *collection* of values. Each value is a **property** of the ob
     bentobox.sauce = "Soya";
     bentobox.dessert = "Fruit";
 
+Enter the above in the console. And then type `bentobox` to see the object returned. You'll see each of the object's name:value pairs: 
+
+    bentobox = {
+    	main: "Teriyaki",
+    	side: "Tempura",
+    	salad: "Seaweed Salad",
+    	soup: "Miso",
+    	sauce: "Soya",
+    	dessert: "Fruit" //Notice there's no comma on the last name:value pair. 
+    }
 <hr class="clear">
 
 ### (Almost) Everything in JS is an Object
@@ -309,6 +360,48 @@ Here are some resources to dig deeper in to pure JavaScript.
 * [JavaScript Methods](http://www.scribd.com/doc/19457597/Javascript-Methods)
 * [Code School: JavaScript](https://www.codeschool.com/paths/javascript)
 
+## CSS vs JavaScript
+
+With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
+
+Some guidelines:
+
+If it can be accomplished with CSS, usually it's better to go with CSS.
+
+* keep in mind that HTML semantics and efficient & clean code comes first
+* if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!
+
+If it's a visual effect, that happens on page load, you *might* be able to use CSS
+
+* CSS is executed as soon as the page loads
+* new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
+* if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
+
+#### Extra Resources
+
+* [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
+* [Animate.css](https://daneden.github.io/animate.css/)
+* [GreenSock is a popular JS-based animation library.](https://greensock.com/gsap)
+* [ScrollMagic is a JS library that works with GSAP and is good for scrolling animations](http://scrollmagic.io)
+* [ihatetomatoes has excellent free beginner workshops on GreenSock](https://ihatetomatoes.net/)
+
+
+## JavaScript vs jQuery
+
+### What is jQuery?
+
+jQuery *is* JavaScript.  
+jQuery is a cross-browser JavaScript *library* used to simplify your program. 
+
+#### JavaScript example
+
+    document.getElementById("status")
+
+#### jQuery example
+
+    $("#status")
+
+Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have a base understanding of JavaScript principles to make sense of how jQuery works.
 
 ## Functions & jQuery
 
@@ -368,7 +461,7 @@ There are two ways to add JavaScript to a page.
 ### Inline
 Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
 
-However, it's often recommended to add the scripts to bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first. 
+However, it's often recommended to add the scripts to the bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first. 
 
 
     <!DOCTYPE html>
@@ -446,7 +539,7 @@ Similar to Google Fonts or any third party tool, you have to reference the file 
 Use the `<script>` tag to reference the file but in the `src`, link to where the file is saved in your project's directory and the *exact file name*.  Make sure to add it *before* your JavaScript file.
 
     <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
 
 
 **Option 2** - Use a CDN
@@ -455,24 +548,31 @@ CDNs can offer a performance benefit by hosting jQuery on servers spread across 
 
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
 
 Be sure to include the `http://` when viewing the site locally (on your computer).
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
->## EXERCISE: Creating a project
+>## EXERCISE: Adding JS To Our Own Projects
 >
->Practice creating a project with all three components: HTML, CSS, jQuery.
+>We are going to add jQuery and our own JavaScript file to our projects. Feel free to use the [sample project](exercises/module1/project-one-sample.zip) if you don't want to add JS to your own project yet: 
 >
->Take the HTML, CSS and jQuery snippets from the last [CodePen](http://codepen.io/learningcode/pen/pjQePw#0) example and turn them into local project files.
 >
-> 1. Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)
-> 1. Link the CSS & JS files to the HTML file.
-> 1. Reference the jQuery library file to make sure your jQuery code will work.
+> 1. Create a JS folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins. (we'll learn more about plugins next class).
+> 1. Go to https://jquery.com/ and download the latest version of jQuery by clicking on the "Download jQuery" button and then selecting *Download the compressed, production jQuery 3.1.1*. Save your downloaded jQuery file into your new JS folder from step 1.
+> 1. Create your own js file and name it *main.js*
+> 1. Add the jQuery script followed by your own script using `<script></script>` tags to the end of your HTML file, right before the closing body tag.
+> 
+>        <script src="js/jquery-3.1.1.min.js"></script>
+>        <script src="js/main.js"></script>
+> 1. Be sure to add your `document.ready` function to your main.js file. Reminder: 
 >
->**Bonus:**   
->Try adding more HTML elements and practice selecting elements and applying jQuery effects to it. 
+        $(document).ready(function(){
+           //jQuery code here
+        });
+> 1. Add a `console.log()` or `alert()` function where it says `//jQuery code here` above. For example `alert('Hello World!');`
+> 1. Open up your HTML page where the scripts are linked and test to see if the alert or console.log worked. If they did, that means you've successfully added jQuery and JavaScript to your website! 
 
 #### Resources
 
@@ -482,11 +582,11 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 
 ## jQuery Click Events
 
-Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away.
+Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same. Just like this little guy: ![]({{ site.img }}/module5/scratch-events.png)
 
 Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.
 
-> When would this effect be useful?
+> When would this effect be useful? 
 
 #### Syntax
  
@@ -495,6 +595,8 @@ Instead of the browser running the event right away, a click event is triggered 
     });
 
 Let's try this out in another [CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
+
+Next week we'll use click events and objects in more depth with practical applications to our projects.
 
 #### Resource
 

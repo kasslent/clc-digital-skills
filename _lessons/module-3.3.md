@@ -274,7 +274,7 @@ However, `text-align: center;` will only center align the text *within* the `<li
 >
 >Use some of the layout techniques we've learned the last couple of classes and apply them to your website as needed.
 
-These are just some benefits to using `flexbox` to lay out your site, and we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more. This becomes even more powerful when re-arragning your desktop site for mobile devices.
+These are just some benefits to using `flexbox` to lay out your site, and we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more. This becomes even more powerful when re-arranging your desktop site for mobile devices.d
 
 ### Read more about Flexbox!
 

@@ -201,9 +201,31 @@ Though you can create buttons with the <code class="highlighter-rouge">input</co
 <p><br />
 In addition to the form controls, any HTML tags can be contained within the <code class="highlighter-rouge">&lt;form&gt;</code> element (e.g. <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
 
+<blockquote>
+  <h2 id="exercise-lets-create-a-form-for-our-website">Exercise: Let’s Create A Form for Our Website!</h2>
+
+  <p>Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. <a href="exercises/module1/project-one-sample/contact.html">Here’s an example</a> of a form you could build.</p>
+
+  <p>This is the HTML for the example site’s form:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;form action=""&gt;
+    &lt;label for="comfort"&gt;Name&lt;/label&gt;
+    &lt;input name="" type="text" id="name"/&gt;
+    &lt;label for=""&gt;E-mail Address&lt;/label&gt;
+    &lt;input name="" type="email" id="email"/&gt;
+    &lt;label for="explain"&gt;Explain why you are getting in touch.&lt;/label&gt;
+    &lt;textarea name="" id="explain"&gt;&lt;/textarea&gt;
+    &lt;input class="button" type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</code></pre>
+  </div>
+
+  <p>Feel free to add other fields to your form.</p>
+</blockquote>
+
 <h3 id="processing-a-form">Processing a Form</h3>
 
-<p>The form related HTML only create the form in the browser.  To actually submit the information and process the data, a <em>server side</em> language is required (e.g. PHP).</p>
+<p>The form-related HTML only creates the form in the browser.  To actually submit the information and process the data, a <em>server side</em> language is required (e.g. PHP).</p>
 
 <p>Another option is to use 3rd party services such as <a href="http://www.wufoo.com/">Wufoo</a> or <a href="https://www.google.ca/forms/about/">Google Forms</a> to handle not only building the HTML &amp; CSS of the form but also the form processing as well.</p>
 
@@ -217,80 +239,87 @@ In addition to the form controls, any HTML tags can be contained within the <cod
 
 <h2 id="google-forms">Google Forms</h2>
 
-<p>Use <strong>Google Forms</strong> to create your form and have all the responses sent to a handy spreadsheet.  Not only will this keep you from dealing with writing HTML forms and email responses, you can use the power of <strong>Sheets</strong> to manipulate &amp; sort the data!</p>
+<p>You can use <strong>Google Forms</strong> to process your website’s new form and save all the responses sent to a handy Google spreadsheet.  This will enable you to use the power of <strong>Sheets</strong> to manipulate &amp; sort the data!</p>
 
-<h3 id="using-google-forms">Using Google Forms:</h3>
+<blockquote>
+  <h2 id="code-along-using-google-forms">Code-Along: Using Google Forms:</h2>
+
+  <ol>
+    <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account.</li>
+    <li>The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
+ <img src="assets/img/module4/gforms-new.png" alt="" />
+<br /></li>
+    <li>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  Make sure you create a Google Form that is an exact replica of your own new form. 
+Note: Google Forms don’t have “e-mail” inputs so use a general “short answer” input for e-mail. You won’t be using the google form itself in the end so it doesn’t matter. 
+  <br />
+  <img src="assets/img/module4/gforms-contactform.png" alt="" /></li>
+    <li>Now that your form is ready, click on the eyeball. 
+ <img src="assets/img/module4/gforms-eyeball.gif" alt="" />
+  <br /></li>
+    <li>Now that we’re in the preview screen for the form we will open up the web inspector to find the information we need to connect our form to the Google Form.
+      <ul>
+        <li>We will need the action value for the form element.</li>
+        <li>The names of each of the form inputs. 
+<br />
+Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs.
+<img src="assets/img/module4/gforms-inspectelement.gif" alt="" />
+<br /></li>
+      </ul>
+    </li>
+    <li>Once you have the names and action link for your form, add them to your own form in your site.
+  <br /></li>
+    <li>Lastly, test your site’s form. Go back to Google Forms and create a spreadsheet for your responses as shown below. Then in the browser open up your contact page and fill out your form. Finally, open up the excel sheet you just created to capture your forms’ entries.</li>
+  </ol>
+
+  <p><img src="assets/img/module4/gforms-excel.gif" alt="" /></p>
+
+</blockquote>
+
+<h2 id="styling-forms">Styling Forms</h2>
+
+<p>You can style form elements the same way you style any other element with CSS. Simply select the input you want to style, and give it some styles.</p>
+
+<p>When it comes to inputs, try selecting the input you want using the type attribute in your CSS selector. For example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>input[type="text"] {
+  padding: 6px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+</code></pre>
+</div>
+
+<p>Here are a couple of tricks to keep in mind though:</p>
 
 <ol>
-  <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account.</li>
-  <li>The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
-  <img src="assets/img/module4/gforms-new.png" alt="" /></li>
-  <li>
-    <p>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).</p>
-  </li>
-  <li>Once you’ve completed your form, you can either send out the form or embed it into your web page.
-    <ul>
-      <li>To send the form, select <strong>Send form</strong> to see options.<br />
-  <img src="assets/img/module4/gforms-send.png" alt="" />
-  <br /><br />
-  You can email a link to the form, send the whole form via email or share the link using various social media accounts.<br />
-  <img src="assets/img/module4/gforms-send-options.png" alt="" /></li>
-      <li>To embed the form onto your web page, select <strong>File &gt; Embed</strong> and copy the HTML onto your web page.<br />
-  <img src="assets/img/module4/gforms-embed.png" alt="" /></li>
-    </ul>
-  </li>
+  <li>Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change include the border, padding, background, color and font-size.</li>
+  <li>Form elements usually come with an ‘outline’ when they are selected. This state is called “focus”. Remember when we learned about hover states? Focus states can be targeted in the same way using CSS Pseudo-classes. The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it.</li>
 </ol>
 
-<h2 id="styling-google-forms">Styling Google Forms</h2>
+<blockquote>
+  <p>Give it a try based on the example below:</p>
+</blockquote>
 
-<p>Choose from existing themes!</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>input:focus {
+  outline: red;
+}
+</code></pre>
+</div>
 
-<p>Select <strong>Change themes</strong> to see available themes.  (Select <strong>Edit questions</strong> to go back to the questions.)</p>
+<blockquote>
+  <h2 id="exercise-style-your-form">Exercise: Style Your Form</h2>
 
-<p><img src="assets/img/module4/gforms-themes.png" alt="" /></p>
-
-<p>Choose a theme on the right and select <strong>Customize</strong> for additional options.</p>
-
-<p><img src="assets/img/module4/gforms-themes-customize.png" alt="" /></p>
-
-<p>And that’s it!</p>
-
-<p><br /></p>
-
-<p>If you’re feeling adventurous, you can also edit the HTML &amp; CSS yourself.</p>
-
-<p>The embed code is an <code class="highlighter-rouge">&lt;iframe&gt;</code> which is a common way to insert content from another source (i.e. YouTube embeds). But you can <strong>View Source</strong> and grab the actual HTML and embed that into your site instead of the <code class="highlighter-rouge">&lt;iframe&gt;</code>.</p>
-
-<p>If you decide to go this route, make sure you have the default theme selected so you find the form HTML easier.</p>
-
-<p>First, select <strong>View live form</strong> to see the form out of edit mode, in the browser.</p>
-
-<p><img src="assets/img/module4/gforms-live.png" alt="" /></p>
-
-<p>Then right-click anywhere and select <strong>View source</strong> and look for the <code class="highlighter-rouge">&lt;form&gt;</code> tag.</p>
-
-<p><strong>Pro tip!</strong> Use <strong>cmd/ctrl + F</strong> (find) and do a search for <code class="highlighter-rouge">form</code> on the page and copy everything from the opening <code class="highlighter-rouge">&lt;form&gt;</code> to the closing <code class="highlighter-rouge">&lt;/form&gt;</code> tags.</p>
-
-<p>Note that this option requires you to write all the CSS yourself!</p>
+  <p>Take a look at some examples of styled <a href="https://codepen.io/search/pens/?limit=all&amp;page=2&amp;q=forms">forms in CodePen</a> for inspiration and style your form!</p>
+</blockquote>
 
 <h4 id="resources">Resources</h4>
 
 <ul>
-  <li><a href="http://googledrive.blogspot.ca/2014/09/custom-forms-themes.html">Google Drive Blog: Your Forms, Your Way</a></li>
-  <li><a href="http://morning.am/tutorials/how-to-style-google-forms/">How to style Google Forms</a></li>
+  <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-classes</a></li>
+  <li><a href="http://codepen.io/learningcode/post/customize-a-google-form-for-your-website">Customize a Google Form for Your Website</a></li>
 </ul>
-
-<h2 id="google-forms--analysis-with-excel">Google Forms + Analysis with Excel</h2>
-
-<p>View the presentation for this module <a href="https://docs.google.com/presentation/d/1OwTcaMJ4_cDAzd1Bj3NE6AKLiXQaUx8u84IaupUJwjo/edit#slide=id.gbd56464a5_0_166">here</a>.</p>
-
-<blockquote>
-  <h2 id="exercise-forms-responses--excel">EXERCISE: Forms responses &amp; Excel</h2>
-  <p>View the form <a href="https://docs.google.com/a/ladieslearningcode.com/forms/d/13B95NmtUIynwWmj-uY0G3T5_0Y_bs-PL0sOjLz0inKU/edit?ts=562edea9#">here</a> for today’s exercise.</p>
-
-  <p>View the <a href="https://docs.google.com/spreadsheets/d/1lAVH_dHeH4yvQV-JCoYExWPMf4W0zfd6WtRZePM8WY8/edit#gid=1778532981">form responses here</a>.<br />
-<strong>Important!</strong> Be sure to <strong>make a copy</strong> of this file into <em>your</em> Google Drive to make your own changes.</p>
-</blockquote>
 
 <p>~ End ~</p>
 

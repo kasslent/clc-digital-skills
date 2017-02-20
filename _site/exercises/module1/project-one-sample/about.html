@@ -27,11 +27,6 @@
 
 			<div class="wrapper">
 					<h1>My Story</h1>
-					<div class="popup-gallery">
-						<a href="images/startup.jpg" title="My favourite place on earth."><img src="images/startup.jpg" width="175"  data-pin-nopin="true"></a>
-						<a href="images/chemex-coffee.jpg" title="My favourite beverage"><img src="images/chemex-coffee.jpg" width="175"  data-pin-nopin="true"></a>
-						<a href="images/strawberries.jpeg" title="Peace of Mind"><img src="images/strawberries.jpeg" width="175" data-pin-nopin="true"></a>
-					</div>
 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatibus repudiandae quasi quos quisquam consequuntur iure beatae distinctio modi delectus dicta iusto similique qui excepturi magni ea, voluptatem voluptas ratione.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quasi fugit corporis, ab, doloremque nemo saepe dolorem! Ullam odit, fugiat voluptas libero harum, saepe repudiandae ipsum, consectetur minima commodi alias.</p>
@@ -84,31 +79,6 @@
 			<p>&copy; Anne Shirley 2016</p>
 		</div>
 	</footer>
-	<script
-  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-  crossorigin="anonymous"></script>
-  <script src="jquery.magnific-popup.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('.popup-gallery').magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				tLoading: 'Loading image #%curr%...',
-				mainClass: 'mfp-img-mobile',
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-				},
-				image: {
-					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-					titleSrc: function(item) {
-						return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-					}
-				}
-			});
-		});
-	</script>
+
 </body>
 </html>

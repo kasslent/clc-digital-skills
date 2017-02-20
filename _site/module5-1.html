@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
 
   <title>Intro to JavaScript & jQuery</title>
-  <meta name="description" content="CSS vs JavaScript">
+  <meta name="description" content="Introduction to Computer Programming">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -42,37 +42,79 @@
       
       <article class="module5-1" >
         <h1>Intro to JavaScript & jQuery</h1>
-        <h2 id="css-vs-javascript">CSS vs JavaScript</h2>
+        <h2 id="introduction-to-computer-programming">Introduction to Computer Programming</h2>
 
-<p>With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.</p>
+<p>Up until now we have been working with HTML5 and CSS3. Both of these are coding languages but they’re not considered programming languages per se. They are presentation-oriented languages and what makes them different than programming languages is that they cannot solve the problems that programming languages can. By contrast, all programming languages can write all programs. What that means is that what programming language A can solve, so can B. That doesn’t mean they’re the same. They could be very different in syntax (the symbols used in each language). But they can solve the same problems and both will share the same computational theories. This is why once you understand the basics of one programming language, you’re likely to more easily pick up another.</p>
 
-<p>Some guidelines:</p>
+<p>In web development we use several programming languages. For example, PHP, Ruby, Python and JavaScript. JavaScript is the language we will be learning today because it’s a language closely associated with HTML &amp; CSS in that it can be executed in the browser. It’s considered a front-end and a back-end language. The other programming languages mentioned do not run in the browser and they are considered back-end languages.</p>
 
-<p>If it can be accomplished with CSS, usually it’s better to go with CSS.</p>
+<p>While HTML &amp; CSS determine the presentation of content on a website, JavaScript will determine the functionality and interactions of a website. Before we sink our teeth into JavaScript proper, we will learn some basics of computational thinking using a syntax-less language called Scratch.</p>
 
-<ul>
-  <li>keep in mind that HTML semantics and efficient &amp; clean code comes first</li>
-  <li>if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!</li>
-</ul>
+<h2 id="computational-thinking-with-scratch">Computational Thinking with Scratch</h2>
 
-<p>If it’s a visual effect, that happens on page load, you <em>might</em> be able to use CSS</p>
+<p>Simply put, when we write a computer program, we give instructions to our computer to carry out a set of instructions that will help us solve a problem. And while it may seem somewhat intimidating when we look at the syntax of a programming language like JavaScript, you need to always keep in mind that the computer is not smart. You are. Computers are just very fast at performing the tasks we tell them to perform.</p>
 
-<ul>
-  <li>CSS is executed as soon as the page loads</li>
-  <li>new CSS3 property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"><code class="highlighter-rouge">@keyframes</code></a>, allows for timing delays but still not attached to user actions</li>
-  <li>if it requires user interaction (e.g. when user clicks, when user scrolls), then it’s usually JS</li>
-</ul>
+<p>The first thing you need to become a great programmer, is to think like a computer. That means breaking solutions down into clear simple steps that a computer can perform.</p>
 
-<h4 id="extra-resources">Extra Resources</h4>
+<p>If you were asking a human to walk from point A to point B you might say:</p>
 
-<ul>
-  <li><a href="http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html">Getting Started with CSS3 Transitions and Animation</a></li>
-  <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
-</ul>
+<p>“Please walk over to point B”</p>
 
-<h2 id="javascript-vs-jquery">JavaScript vs jQuery</h2>
+<p>If you were to ask a robot to do the same thing you might need to be more clear and break things down in a way it will understand:</p>
 
-<h3 id="what-is-javascript">What is JavaScript?</h3>
+<p>Robot, please do the following:</p>
+<ol>
+  <li>Bring your right leg forward 50cm.</li>
+  <li>Bring your left leg forward 50cm past the right leg.</li>
+  <li>Bring your right leg forward 50cm past the left leg.</li>
+  <li>Repeat 2 and 3 until you reach Point B, then stop.</li>
+</ol>
+
+<p>We’re going to learn about some of the basic components of programming languages creating a simple game with Scratch:</p>
+
+<p>Take a look at the demo of our game here:</p>
+
+<iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/145973347/?autostart=false" frameborder="0" allowfullscreen=""></iframe>
+
+<blockquote>
+  <h2 id="class-discussion">Class Discussion:</h2>
+  <p>Computer games are usually made up of players, goals and rules.</p>
+
+  <p>In your own english words, describe all the instructions we might need to give the computer to make this game work. In other words, what are the players, goals and rules of this game? How would you communicate the goals and rules to the computer?</p>
+</blockquote>
+
+<h2 id="programming-with-scratch">Programming with Scratch</h2>
+<ol>
+  <li>Go to <a href="https://scratch.mit.edu/projects/72180312/#editor">this URL</a> for our starter project and click on the orange “remix” button on the upper right hand corner of the screen.</li>
+  <li>The interface that you’re on is Scratch. On the left hand side we have the game area where you should now see a planet, a rocket and steroid filled space background. In the middle you will see a bunch of colourful blocks. These are instructions you can give to the computer. In other words, these are little bits of code we can use to program our game.</li>
+  <li>To give an instruction to an object, select it from the Sprites section on the bottom left hand side of the screen (right below the game), and then drag any blocks you want to use, to the right hand side.</li>
+  <li>We will code the game together.</li>
+</ol>
+
+<blockquote>
+  <h2 id="code-along-lets-create-our-own-game">Code-Along: Let’s create our own game.</h2>
+  <p>Using blocks:</p>
+  <ol>
+    <li>Make the rocket follow the mouse, when it’s clicked.</li>
+    <li>Make the rocket say “Hooray” if it touches the planet and then go back to its starting position.</li>
+    <li>Make the rocket play a losing sound and return to its starting position when it touches an asteroid.</li>
+    <li>Make the rocket return to its starting position when the green(start) flag is clicked.</li>
+    <li>Create a Points variable and add 1 point each time the rocket touches the planet.</li>
+    <li>Bonus: Add a winning sound each time the rocket reaches the planet.</li>
+  </ol>
+
+  <h3 id="resources">Resources</h3>
+  <p>Watch the <a href="https://www.youtube.com/watch?v=apx0WcL09ss">Solution Video Walkthrough</a></p>
+</blockquote>
+
+<h2 id="intro-to-javascript">Intro to JavaScript</h2>
+
+<p>In our Scratch game we used some of the more common parts of any programming language. These include: Data types like Strings and Numbers; variables; Loops, conditional statements, functions, events, and even methods.</p>
+
+<p>JavaScript includes <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong> or <strong>control structures</strong> such as <strong>if</strong> statements or <strong>loops</strong> just like Scratch. More on each of these later…</p>
+
+<h3 id="what-do-we-use-javascript-for">What do we use JavaScript for?</h3>
+
 <p>JavaScript controls the <strong>behavior</strong> of your web page. It allows you to do things such as:</p>
 
 <ul>
@@ -92,31 +134,16 @@ sayHello();
 </code></pre>
 </div>
 
-<p><br />
-Unlike HTML &amp; CSS, JavaScript is a <em>programming</em> language, so the structure and syntax is more complex.</p>
+<p><br /></p>
 
-<p>JavaScript includes <strong>variables</strong>, <strong>functions</strong>, <strong>objects</strong> or <strong>control structures</strong> such as <strong>if</strong> statements or <strong>loops</strong>, which are the basic building blocks for many different programming languages.</p>
+<p>It might look intimidating with all the JavaScript syntax but it’s not much different from this set of instructions in Scratch:</p>
 
-<h3 id="what-is-jquery">What is jQuery?</h3>
+<p><img src="assets/img/module5/helloworld.png" alt="" /> 
+<img src="assets/img/module5/catsayshello.png" alt="" /></p>
 
-<p>jQuery <em>is</em> JavaScript.<br />
-jQuery is a cross-browser JavaScript <em>library</em> used to simplify your program.</p>
+<p>Both, the JavaScript function and the set of Scratch blocks, are sets of instructions. The JavaScript function will make a box pop up with the words “Hello World” when the website loads.</p>
 
-<h4 id="javascript-example">JavaScript example</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>document.getElementById("status")
-</code></pre>
-</div>
-
-<h4 id="jquery-example">jQuery example</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$("#status")
-</code></pre>
-</div>
-
-<p>Though it has its own syntax, it is still JavaScript at its core. Because of this, it’s important to have a base understanding of JavaScript principles to make sense of how jQuery works.</p>
-
-<p>Let’s go through some JavaScript basics.</p>
+<p>Let’s try some JavaScript.</p>
 
 <h2 id="the-console">The Console</h2>
 
@@ -133,8 +160,6 @@ The console in Chrome looks like this:</p>
   <li>keyboard shortcut: <strong>CMD + OPTION + J</strong>  (MAC) / <strong>CTRL + SHIFT + J</strong> (WINDOWS)</li>
   <li>from the menu: <strong>View &gt; Developer &gt; JavaScript Console</strong></li>
 </ul>
-
-<h2 id="intro-to-javascript">Intro to JavaScript</h2>
 
 <h3 id="types-numbers">Types: Numbers</h3>
 
@@ -158,7 +183,13 @@ Use <code class="highlighter-rouge">+</code> for addition, <code class="highligh
 The <code class="highlighter-rouge">&lt;</code> symbol is used by the console to represent the returned value of your input.</p>
 
 <blockquote>
-  <p>What do you think numbers and math can be used for in a website?</p>
+  <p><strong>Fun Fact:</strong> The order of operations is BEDMAS. Remember BEDMAS? (Brackets, Exponents, Division, Multiplication, Addition, Subtraction)</p>
+</blockquote>
+
+<blockquote>
+  <p>In Scratch, we used numbers in our Space game to count points, and to make the rocket go back to the starting coordinates on the x and y grid.</p>
+
+  <p><strong>What do you think numbers and math can be used for in a website?</strong></p>
 </blockquote>
 
 <h3 id="types-strings">Types: Strings</h3>
@@ -171,7 +202,9 @@ The <code class="highlighter-rouge">&lt;</code> symbol is used by the console to
 </div>
 
 <blockquote>
-  <p>When do you think a string can be used with JavaScript?</p>
+  <p>In our Scratch game we had the rocket say “Hooray!” when it reached its goal. “Hooray” was a string.</p>
+
+  <p><strong>When do you think a string can be used with JavaScript?</strong></p>
 </blockquote>
 
 <h4 id="extra-resource">Extra Resource</h4>
@@ -200,7 +233,14 @@ CSS comments!
 
 <p>Functions can be used to execute a repetitive set of instructions by grouping multiple commands into one name.  There are functions built into the language and you can also create your own.</p>
 
-<p>Let's look at the <code class="highlighter-rouge">alert()</code> function.</p>
+<p>In Scratch we created our own set of instructions for when our rocket was clicked. That was a function that looked like this:
+<br />
+<img src="assets/img/module5/scratch-function.png" alt="" /></p>
+
+<p>We also used built-in functions in Scratch like this:
+<img src="assets/img/module5/scratch-builtin.png" alt="" /></p>
+
+<p>Let's look at the <code class="highlighter-rouge">alert()</code> function in JavaScript.</p>
 
 <p>Note the syntax for functions, the parentheses <code class="highlighter-rouge">()</code>, must be included.</p>
 
@@ -250,7 +290,7 @@ myGreeting();
 </code></pre>
 </div>
 
-<h4 id="extra-resources-1">Extra resources</h4>
+<h4 id="extra-resources">Extra resources</h4>
 
 <ul>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions">MDN: Functions</a></li>
@@ -259,7 +299,9 @@ myGreeting();
 
 <h3 id="variables">Variables</h3>
 
-<p>Variables are used to store values. It's like a box; put something in it to store and take it out when you're ready to use it.</p>
+<p>Variables are used to store values. Remember <img src="assets/img/module5/scratch-variable.png" alt="" /> ?</p>
+
+<p>It's like a box; put something in it to store and take it out when you're ready to use it.</p>
 
 <p>Declare variables with the keyword <code class="highlighter-rouge">var</code> and a name of your choosing and <em>assign</em> a value. The name cannot contain spaces.</p>
 
@@ -325,6 +367,18 @@ bentobox.dessert = "Fruit";
 </code></pre>
 </div>
 
+<p>Enter the above in the console. And then type <code class="highlighter-rouge">bentobox</code> to see the object returned. You’ll see each of the object’s name:value pairs:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bentobox = {
+	main: "Teriyaki",
+	side: "Tempura",
+	salad: "Seaweed Salad",
+	soup: "Miso",
+	sauce: "Soya",
+	dessert: "Fruit" //Notice there's no comma on the last name:value pair. 
+}
+</code></pre>
+</div>
 <hr class="clear" />
 
 <h3 id="almost-everything-in-js-is-an-object">(Almost) Everything in JS is an Object</h3>
@@ -348,7 +402,7 @@ alert(numOfCharacters);
 </code></pre>
 </div>
 
-<h4 id="extra-resources-2">Extra resources:</h4>
+<h4 id="extra-resources-1">Extra resources:</h4>
 
 <ul>
   <li><a href="http://www.2ality.com/2011/03/javascript-values-not-everything-is.html">JavaScript values: not everything is an object </a></li>
@@ -397,7 +451,7 @@ var greeting = "Hello " + name + "!";
 </code></pre>
 </div>
 
-<h3 id="resources">Resources</h3>
+<h3 id="resources-1">Resources</h3>
 
 <p>Here are some resources to dig deeper in to pure JavaScript.</p>
 
@@ -407,6 +461,58 @@ var greeting = "Hello " + name + "!";
   <li><a href="http://www.scribd.com/doc/19457597/Javascript-Methods">JavaScript Methods</a></li>
   <li><a href="https://www.codeschool.com/paths/javascript">Code School: JavaScript</a></li>
 </ul>
+
+<h2 id="css-vs-javascript">CSS vs JavaScript</h2>
+
+<p>With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.</p>
+
+<p>Some guidelines:</p>
+
+<p>If it can be accomplished with CSS, usually it’s better to go with CSS.</p>
+
+<ul>
+  <li>keep in mind that HTML semantics and efficient &amp; clean code comes first</li>
+  <li>if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!</li>
+</ul>
+
+<p>If it’s a visual effect, that happens on page load, you <em>might</em> be able to use CSS</p>
+
+<ul>
+  <li>CSS is executed as soon as the page loads</li>
+  <li>new CSS3 property, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"><code class="highlighter-rouge">@keyframes</code></a>, allows for timing delays but still not attached to user actions</li>
+  <li>if it requires user interaction (e.g. when user clicks, when user scrolls), then it’s usually JS</li>
+</ul>
+
+<h4 id="extra-resources-2">Extra Resources</h4>
+
+<ul>
+  <li><a href="http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html">Getting Started with CSS3 Transitions and Animation</a></li>
+  <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+  <li><a href="https://greensock.com/gsap">GreenSock is a popular JS-based animation library.</a></li>
+  <li><a href="http://scrollmagic.io">ScrollMagic is a JS library that works with GSAP and is good for scrolling animations</a></li>
+  <li><a href="https://ihatetomatoes.net/">ihatetomatoes has excellent free beginner workshops on GreenSock</a></li>
+</ul>
+
+<h2 id="javascript-vs-jquery">JavaScript vs jQuery</h2>
+
+<h3 id="what-is-jquery">What is jQuery?</h3>
+
+<p>jQuery <em>is</em> JavaScript.<br />
+jQuery is a cross-browser JavaScript <em>library</em> used to simplify your program.</p>
+
+<h4 id="javascript-example">JavaScript example</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>document.getElementById("status")
+</code></pre>
+</div>
+
+<h4 id="jquery-example">jQuery example</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$("#status")
+</code></pre>
+</div>
+
+<p>Though it has its own syntax, it is still JavaScript at its core. Because of this, it’s important to have a base understanding of JavaScript principles to make sense of how jQuery works.</p>
 
 <h2 id="functions--jquery">Functions &amp; jQuery</h2>
 
@@ -481,7 +587,7 @@ $(".box").fadeOut(2000).fadeIn(500);
 <h3 id="inline">Inline</h3>
 <p>Add a pair of <code class="highlighter-rouge">&lt;script&gt;&lt;/script&gt;</code> tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!</p>
 
-<p>However, it’s often recommended to add the scripts to bottom of the page, just before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to allow all the page content to load first.</p>
+<p>However, it’s often recommended to add the scripts to the bottom of the page, just before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to allow all the page content to load first.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
@@ -568,7 +674,7 @@ $(".box").fadeOut(2000).fadeIn(500);
 <p>Use the <code class="highlighter-rouge">&lt;script&gt;</code> tag to reference the file but in the <code class="highlighter-rouge">src</code>, link to where the file is saved in your project’s directory and the <em>exact file name</em>.  Make sure to add it <em>before</em> your JavaScript file.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
 </code></pre>
 </div>
 
@@ -577,7 +683,7 @@ $(".box").fadeOut(2000).fadeIn(500);
 <p>CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the <a href="http://jquery.com/download/">Downloads</a> page.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="//code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
 </code></pre>
 </div>
 
@@ -588,23 +694,37 @@ $(".box").fadeOut(2000).fadeIn(500);
 </div>
 
 <blockquote>
-  <h2 id="exercise-creating-a-project">EXERCISE: Creating a project</h2>
+  <h2 id="exercise-adding-js-to-our-own-projects">EXERCISE: Adding JS To Our Own Projects</h2>
 
-  <p>Practice creating a project with all three components: HTML, CSS, jQuery.</p>
-
-  <p>Take the HTML, CSS and jQuery snippets from the last <a href="http://codepen.io/learningcode/pen/pjQePw#0">CodePen</a> example and turn them into local project files.</p>
+  <p>We are going to add jQuery and our own JavaScript file to our projects. Feel free to use the <a href="exercises/module1/project-one-sample.zip">sample project</a> if you don’t want to add JS to your own project yet:</p>
 
   <ol>
-    <li>Create the proper folder structure and use best practices (i.e. index.html, separate css folder, etc)</li>
-    <li>Link the CSS &amp; JS files to the HTML file.</li>
-    <li>Reference the jQuery library file to make sure your jQuery code will work.</li>
-  </ol>
+    <li>Create a JS folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins. (we’ll learn more about plugins next class).</li>
+    <li>Go to https://jquery.com/ and download the latest version of jQuery by clicking on the “Download jQuery” button and then selecting <em>Download the compressed, production jQuery 3.1.1</em>. Save your downloaded jQuery file into your new JS folder from step 1.</li>
+    <li>Create your own js file and name it <em>main.js</em></li>
+    <li>
+      <p>Add the jQuery script followed by your own script using <code class="highlighter-rouge">&lt;script&gt;&lt;/script&gt;</code> tags to the end of your HTML file, right before the closing body tag.</p>
 
-  <p><strong>Bonus:</strong> <br />
-Try adding more HTML elements and practice selecting elements and applying jQuery effects to it.</p>
+      <div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="js/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
+</code></pre>
+      </div>
+    </li>
+    <li>
+      <p>Be sure to add your <code class="highlighter-rouge">document.ready</code> function to your main.js file. Reminder:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> $(document).ready(function(){
+    //jQuery code here
+ });
+</code></pre>
+      </div>
+    </li>
+    <li>Add a <code class="highlighter-rouge">console.log()</code> or <code class="highlighter-rouge">alert()</code> function where it says <code class="highlighter-rouge">//jQuery code here</code> above. For example <code class="highlighter-rouge">alert('Hello World!');</code></li>
+    <li>Open up your HTML page where the scripts are linked and test to see if the alert or console.log worked. If they did, that means you’ve successfully added jQuery and JavaScript to your website!</li>
+  </ol>
 </blockquote>
 
-<h4 id="resources-1">Resources</h4>
+<h4 id="resources-2">Resources</h4>
 
 <ul>
   <li><a href="http://api.jquery.com/category/selectors/">jQuery Selectors</a></li>
@@ -613,7 +733,7 @@ Try adding more HTML elements and practice selecting elements and applying jQuer
 
 <h2 id="jquery-click-events">jQuery Click Events</h2>
 
-<p>Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control <em>when</em> the effects happen instead of being executed right away.</p>
+<p>Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control <em>when</em> the effects happen instead of being executed right away. Remember when we talked about “Events” in Scratch? This is exactly the same. Just like this little guy: <img src="assets/img/module5/scratch-events.png" alt="" /></p>
 
 <p>Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.</p>
 
@@ -630,6 +750,8 @@ Try adding more HTML elements and practice selecting elements and applying jQuer
 </div>
 
 <p>Let’s try this out in another <a href="http://codepen.io/learningcode/pen/WQYpxG">CodePen example</a>.</p>
+
+<p>Next week we’ll use click events and objects in more depth with practical applications to our projects.</p>
 
 <h4 id="resource">Resource</h4>
 
