@@ -160,9 +160,9 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
 >This is the HTML for the example site's form: 
 >
     <form action="">
-        <label for="comfort">Name</label>
+        <label for="name">Name</label>
         <input name="" type="text" id="name"/>
-        <label for="">E-mail Address</label>
+        <label for="email">E-mail Address</label>
         <input name="" type="email" id="email"/>
         <label for="explain">Explain why you are getting in touch.</label>
         <textarea name="" id="explain"></textarea>
