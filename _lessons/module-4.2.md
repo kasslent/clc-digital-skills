@@ -161,11 +161,11 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
 >
     <form action="">
         <label for="name">Name</label>
-        <input name="" type="text" id="name"/>
+        <input name="lead-name" type="text" id="name"/>
         <label for="email">E-mail Address</label>
-        <input name="" type="email" id="email"/>
+        <input name="lead-email" type="email" id="email"/>
         <label for="explain">Explain why you are getting in touch.</label>
-        <textarea name="" id="explain"></textarea>
+        <textarea name="lead-message" id="explain"></textarea>
         <input class="button" type="submit" value="Submit">
     </form>
 >
