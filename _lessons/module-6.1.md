@@ -512,5 +512,23 @@ And there are many many more...
 Today we are going to work with Jetpack.
 > Let's get over to Plugins in the Dashboard and find Jetpack to install.                                    
 
+## More WordPress
 
+We have built our very own custom WordPress theme. We did it this way to leanr how WordPress really works.
+
+It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, an agency that also contributes to WordPress Core. 
+
+Other topics for later include: 
+
+### Advanced Subjects in WordPress to Look Forward To
+
+1. Custom Post Types
+1. Custom Fields
+1. WordPress and JavaScript
+1. WP-REST API
+And more...
+                                                                                                                                                                                                                                                                                  2
+### WordPress Community
+
+http://make.wordpress.org
 ~ end ~
