@@ -110,18 +110,30 @@
 
 <p>The <code class="highlighter-rouge">.org</code> version can be customized in any way but requires more technical knowledge.  How much depends on the level of complexity of the customizations required.</p>
 
-<h2 id="web-hosting-servers-and-domain">Web Hosting, Servers and Domain</h2>
+<h2 id="communicating-with-wordpress-servers-and-files">Communicating with WordPress: Servers and Files</h2>
+<p><img src="assets/img/module6/wpservers-01.svg" alt="" /></p>
 
-<p>A <strong>server</strong> is the computer that will “host” your website files.  A <em>server</em> is a like a computer, but they never turn off and are always connected to the internet.</p>
+<p>A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Cloud9 (c9.io).</p>
 
-<p><strong>Web hosts</strong> own many different servers and their job is to make sure the servers run properly, so that our websites are always available.</p>
+<p>How does WP work with a server?</p>
 
-<p>The <strong>domain</strong> is the internet address (e.g. www.mywebsite.com) used to website files on the server.</p>
+<p style="text-align: left;">1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from wP (including our theme.)</p>
 
-<p>Developing <em>locally</em> refers to working on your site on your own computer.</p>
+<p style="text-align: left;">2. We visit the WP dashboard to add content to the database on the server. </p>
 
-<p>###Setting up our WordPress coding environment
-WordPress is a collection of files, just like our index.html file. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page.
+<p style="text-align: left;">3. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)</p>
+
+<p style="text-align: left;">4. We visit the website and our server shows us the website according to what our theme files have requested it show us.</p>
+<h4 id="resources">Resources</h4>
+<ul>
+  <li><a href="http://www.wpbeginner.com/wordpress-hosting/">WPBeginner: 
+How to Choose the Best WordPress Hosting?</a></li>
+  <li><a href="http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/">Performance of the Best WordPress Hosting Companies Compared</a>
+*Check <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">this link</a> for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).</li>
+</ul>
+
+<h3 id="setting-up-our-wordpress-coding-environment">Setting up our WordPress coding environment</h3>
+<p>WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See digram above)
 These are the steps we normally take to set up a WordPress website:</p>
 
 <ol>
@@ -131,14 +143,6 @@ These are the steps we normally take to set up a WordPress website:</p>
 </ol>
 
 <p>That’s it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we’re going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!</p>
-
-<h4 id="resources">Resources</h4>
-<ul>
-  <li><a href="http://www.wpbeginner.com/wordpress-hosting/">WPBeginner: 
-How to Choose the Best WordPress Hosting?</a></li>
-  <li><a href="http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/">Performance of the Best WordPress Hosting Companies Compared</a>
-*Check <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">this link</a> for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).</li>
-</ul>
 
 <h2 id="wordpress-and-cloud9">WordPress and Cloud9</h2>
 
@@ -163,6 +167,9 @@ How to Choose the Best WordPress Hosting?</a></li>
 <img src="assets/img/module6/c9-spin-up-wp.gif" alt="" /></li>
   <li>What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let’s run our WP website to explore the dashboard.</li>
   <li>Click on “Run Project” to start the server. <img src="assets/img/module6/c9-run-project.png" alt="" /></li>
+  <li>Next, you’ll notice in the console at the bottom of the page, that the words “Starting Apache” come up followed by a link to a long URL. This URL is the link to your website. Go ahead and click on it.</li>
+  <li>This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you’ll have to log in immediately after.</li>
+  <li>Log into your dashboard.</li>
 </ol>
 
 <h3 id="wordpress-settings">WordPress Settings</h3>
@@ -186,7 +193,7 @@ How to Choose the Best WordPress Hosting?</a></li>
 <p>Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select <strong>Save Changes</strong>!</p>
 
 <blockquote>
-  <p>Go to <strong>Settings &gt; General</strong> and update your Site Title and Tagline and another general settings.</p>
+  <p>Go to <strong>Settings &gt; General</strong> and update your Site Title and Tagline and another general setting if you’d like.</p>
 </blockquote>
 
 <h2 id="posts-vs-pages">Posts vs Pages</h2>
@@ -196,7 +203,7 @@ How to Choose the Best WordPress Hosting?</a></li>
   <li>used for date-based content</li>
   <li>posts are listed chronologically</li>
   <li>can also be assigned <em>categories</em> and <em>tags</em> (also referred to as <em>taxonomies</em>)</li>
-  <li>permalink (URL) will include the date (can change this in the settings)<br />(e.g. http://your-project-name.dev/2015/09/28/my-catchy-title/)</li>
+  <li>permalink (URL) will include the date (can change this in the settings&gt;reading)<br />(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)</li>
 </ul>
 
 <p>Pages</p>
@@ -228,7 +235,7 @@ How to Choose the Best WordPress Hosting?</a></li>
 
 <p><img src="assets/img/module6/editor-text-p.png" alt="" /></p>
 
-<p>Also, break tags <code class="highlighter-rouge">&lt;br&gt;</code> are also not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
+<p>Also, break tags <code class="highlighter-rouge">&lt;br&gt;</code> are not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
 
 <p><img src="assets/img/module6/editor-line-break.png" alt="" /></p>
 
@@ -257,209 +264,356 @@ Tags: eggs, kid friendly, under 30mins
 <blockquote>
   <h2 id="exercise-add-content">EXERCISE: Add Content</h2>
   <ol>
-    <li>Create a post and page and add some content.</li>
+    <li>Create a couple of random blog posts in the Posts section. Don’t dwell too much on the content. <a href="http://meettheipsums.com">Dummy text</a> is fine for now.</li>
     <li>Add some categories and tags to your posts and pages.</li>
+    <li>Create a page for each of your project’s menu pages. In the example project that would be three pages: About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you’ve added one like the sample project), and put it in the content editor after the title of each page.</li>
   </ol>
 
-  <p>Having content to work with will make it easier to pick a theme in the upcoming exercise.</p>
+  <p>Having content to work with will make it easier to work with our theme files.</p>
 </blockquote>
 
-<h2 id="default-home-page-settings">Default Home page settings</h2>
+<h2 id="the-guts-of-wordpress">THE GUTS OF WORDPRESS</h2>
 
-<p>WordPress includes many core files to make this framework run.  The theme related files include <a href="https://codex.wordpress.org/Theme_Development#Template_Files_List">php template files</a> that are used to determine how and where to display certain types of content. These template files are also used to display just a specific <em>portion</em> of a page.</p>
+<p>Now that we’ve poked around a bit in the dashboard, let’s go deeper and take a look at the files back in c9.</p>
 
-<p><img src="assets/img/module6/wp-theme-files.jpg" alt="" /></p>
+<p>At first glance, it’s overwhelming to see how many folders and files WP needs to run. But on closer look, we’ll be ignoring the majority of the files which just make up the core of WP. The files we’ll use are in the wp-content folder.</p>
 
-<p><br />
-Based on this template hierarchy, by default, a chronological listing of your blog posts will show as your home page.  To change that, you’ll need to make sure you have a <strong>Page</strong> to set as your home page and another <strong>Page</strong> for your blog.</p>
+<p>Inside of wp-content there is a folder named themes. That’ll be our most used folder.</p>
 
-<p>To update these settings, follow these steps:</p>
+<p>Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.</p>
+
+<h3 id="what-is-a-theme">WHAT IS A THEME?</h3>
+
+<p>A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.</p>
+
+<p>Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.</p>
+
+<h3 id="whats-in-a-theme">WHAT’S IN A THEME?</h3>
+
+<p>The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.</p>
+
+<h3 id="uploading-our-theme-to-wp">UPLOADING OUR THEME TO WP</h3>
+
+<p>Currently there are three default themes inside the themes folder. These always come with WordPress.
+Under Appearance&gt;Themes we can see how these default themes look and even test them out on our website.
+But today we’re not interested in a default theme. We want to build our very own.</p>
 
 <ol>
-  <li>If you don’t already have a page to use as your home page, create one</li>
+  <li>Let’s begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the <a href="exercises/module5/javascript-solution.zip">sample starter project folder.</a>.</li>
+  <li>To upload your project folder, click on the <code class="highlighter-rouge">themes</code> folder inside <code class="highlighter-rouge">wp-content</code> so that it’s highlighted. Then go to <code class="highlighter-rouge">File&gt;Upload Local Files</code> and find your folder. 
+<img src="assets/img/module6/c9-upload-theme-folder.gif" alt="" /></li>
   <li>
-    <p>Create a <em>blank</em> blog page</p>
+    <p>Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project’s css file:</p>
 
-    <p>This page does not need any content because there is already a template file used to display the blog post listing.</p>
-
-    <p>Creating this blog <strong>Page</strong> will create a url/permalink to point the blog page to similar to:  <code class="highlighter-rouge">http://yoursite.com/blog</code> or <code class="highlighter-rouge">http://yoursite.flywheelsites.com/blog/</code> if using the Flywheel demo site.</p>
+    <div class="highlighter-rouge"><pre class="highlight"><code> /*
+ Theme Name: Twenty 
+ Theme URI: http://wordpress.org/themes/twentythirteen
+ Author: the WordPress team
+ Author URI: http://wordpress.org/
+ Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, edisplayed              beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matchheader images,              beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-widcustom-header,              custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-potranslation-ready
+ Text Domain: twentythirteen
+ This theme, like WordPress, is licensed under the GPL.
+ Use it to make something cool, have fun, and share what you've learned with others. 
+ */
+</code></pre>
+    </div>
   </li>
-  <li>
-    <p>Change the settings</p>
-
-    <p>Under <strong>Settings &gt; Reading</strong>, select whichever page you want to show as the <strong>Front page</strong> (your homepage) and the blank page you created for the blog under <strong>Posts page</strong>.</p>
-
-    <p><img src="assets/img/module6/homepage-custom.jpg" alt="" /></p>
-  </li>
+  <li>The next thing we must do is rename index.html to index.php (right click on file to rename in c9)</li>
+  <li>Make sure to check under Appearance&gt;Themes whether your own theme shows up! If it does, go ahead and activate it.
+How does it look?</li>
 </ol>
 
-<h2 id="create-a-custom-menu">Create a custom menu</h2>
+<h3 id="why-isnt-any-of-our-css-showing-up">WHY ISN’T ANY OF OUR CSS SHOWING UP?</h3>
 
-<p>Menus are a list of links, usually displayed as the navigation for your site. You can choose from Pages or Categories from within your WordPress site or a custom link (can link to an external site).</p>
+<p>This is because our stylesheet link is no longer working. It’s looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don’t work the same way as our basic html project from this morning.</p>
 
-<p>The menu location may vary depending on the theme. Some themes also offer additional menus such as social links menus.</p>
+<p>WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder. 
+To fix this issue, we could write a really long path to the stylesheet. Let’s try it.
+Replace our href in the stylesheet link with :</p>
 
-<p><img src="assets/img/module6/wp-menus.png" alt="" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link rel="stylesheet" href="wp-content/themes/your-theme-folder-name/style.css"&gt;
+</code></pre>
+</div>
 
-<p>You can also reorder the menus by dragging the menu options as well as make submenus by dragging it underneath another item.</p>
+<p>Does it work?</p>
 
-<p><img src="assets/img/module6/menu-additions.gif" alt="" /></p>
+<p>There is a better way to link to our CSS.</p>
 
-<h2 id="wordpress-themes">WordPress Themes</h2>
+<h3 id="communicating-with-wordpress-php--template-tags">COMMUNICATING WITH WORDPRESS: PHP &amp; TEMPLATE TAGS</h3>
 
-<p>A theme provides all of the graphical styles for your site. You can use existing themes from the WordPress theme directory, from theme developers or create your own.</p>
+<p>Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.</p>
 
-<p>Most themes include:</p>
+<p>The way we communicate with WordPress is by using <strong>Template Tags</strong>.</p>
 
-<ul>
-  <li>overall page layouts &amp; colour scheme</li>
-  <li>styles for blog posts and blog archives</li>
-  <li>typography styles</li>
-  <li>different types of widgets and where they are located on the page</li>
-</ul>
+<p>Template Tags are bits of PHP that will communicate with the WordPress database and print out the things we want on the page.</p>
 
-<h3 id="theme-development-options">Theme Development options</h3>
+<h4 id="anatomy-of-a-template-tag">Anatomy of a Template Tag</h4>
 
-<p>There are three options for adding themes to your WordPress site.</p>
+<p>Template Tags are written in PHP</p>
 
-<p><strong>Option 1: Free &amp; Premium Themes</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php /*template tag goes here*/ ?&gt;
+</code></pre>
+</div>
 
-<ul>
-  <li>only pay for domain, hosting &amp; cost of theme (from free to ~ $300)</li>
-  <li>does not require any coding (though you still have access to the codebase)</li>
-  <li>includes some theme options that can be updated in the WordPress admin area</li>
-</ul>
+<p>Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will yell at you.
+The template tags we put in between these PHP brackets vary.
+Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core.</p>
 
-<p><strong>Option 2: Child themes</strong></p>
+<p>In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember <code class="highlighter-rouge">alert();</code> in JavaScript or <img src="assets/img/module5/scratch-builtin.png" alt="" /> in Scratch? WordPress Template Tags are exactly the same.</p>
 
-<ul>
-  <li>used to modify a theme without making any changes to the parent theme’s files</li>
-  <li>inherits the features of its parent theme including updates</li>
-  <li>will require some knowledge of HTML, CSS and PHP</li>
-  <li>should develop locally using a local server</li>
-</ul>
+<p>Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example</p>
 
-<p><strong>Option 3: Custom themes</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php bloginfo(); ?&gt;
+</code></pre>
+</div>
 
-<ul>
-  <li>built from scratch or from a starter template</li>
-  <li>requires a deeper knowledge of HTML, CSS, PHP or get really good at following the <a href="https://codex.wordpress.org/">WordPress documentation</a>!</li>
-  <li>should develop locally using a local server</li>
-</ul>
+<p>Inside of those brackets we can add arguments that WordPress recognizes to pull specific data from the database.</p>
 
-<p>We’ve been exploring Option 1 in this lesson but there are some extra <a href="#bonus-editing-theme-files">resources and information</a> included at the end of this lesson for further exploration.</p>
-
-<h3 id="free--paid-themes">Free &amp; Paid Themes</h3>
-
-<p>Why would you code your own theme or pay for a theme if there are so many free, functional templates to choose from? Well, that all depends on how unique and customized you need your site to be.</p>
-
-<p>Pre-built themes are a great way to get up and running and to try it out, and can help determine what you need before investing in development or paid themes.</p>
-
-<p>If you’re not ready to code yourself just yet but want more options, paid themes often offer premium plugins, more customization options and customer support.</p>
-
-<p>There are literally 1000s of free WordPress themes available for download in the WordPress directory found under <strong>Appearance &gt; Themes</strong>, <strong>Add New</strong>. Click on the thumbnail to see a preview, get info or install a new theme.</p>
-
+<p>We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the dashboard.</p>
 <h4 id="resources-1">Resources</h4>
-
-<ul>
-  <li><a href="https://getflywheel.com/design-and-wordpress-resources/">https://getflywheel.com/design-and-wordpress-resources/</a></li>
-  <li><a href="https://en.support.wordpress.com/video-quick-start/#find-a-theme">https://en.support.wordpress.com/video-quick-start/#find-a-theme</a></li>
-</ul>
+<p><a href="https://codex.wordpress.org/Template_Tags">WordPress Codex</a></p>
 
 <blockquote>
-  <h2 id="exercise-choose-a-theme">EXERCISE: Choose a theme</h2>
-  <p>Under <strong>Appearance &gt; Themes</strong>, let’s look the different theme options.</p>
+  <h2 id="exercise-header-template-tags">Exercise: Header Template Tags</h2>
+  <p>Let’s put some of these template tags in use to replace our static HTML content with data coming from WordPress.</p>
+
+  <p>We will begin with the &lt;head&gt;&lt;/head&gt; of the HTML.</p>
+
+  <p>Open up your index.php file in c9. We’ll be adding the following template tags to dynamically pull information from WP :</p>
+
+  <p>Where should these go?</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>1. &lt;?php bloginfo( 'charset' ); ?&gt;
+
+2. &lt;?php bloginfo( 'name' ); ?&gt;
+
+3. &lt;?php language_attributes(); ?&gt;
+
+4. &lt;?php echo get_stylesheet_uri(); ?&gt;
+</code></pre>
+  </div>
+
+  <p>In the end, our header should be looking like this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="err">&lt;?</span><span class="na">php</span> <span class="na">language_attributes</span><span class="err">();</span> <span class="err">?</span><span class="nt">&gt;</span>&gt;
+<span class="nt">&lt;head&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"&lt;?php bloginfo( 'charset' );?&gt;"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;title&gt;</span><span class="cp">&lt;?php bloginfo( 'name' ); ?&gt;</span><span class="nt">&lt;/title&gt;</span>
+ <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Patua+One|Raleway:300,400,800"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"&lt;?php echo get_stylesheet_uri(); ?&gt;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+  </div>
+
+  <p>Notice how much cleaner it is to add the stylesheet using the <code class="highlighter-rouge">get_stylesheet_uri</code> template tag?</p>
 </blockquote>
 
-<h3 id="watch-out">Watch Out!</h3>
+<h3 id="resources-2">Resources</h3>
 
-<p>If you change your theme, you may have to go back to your Appearance &gt; Menus to add in the Menu Settings in again.</p>
+<p><a href="https://developer.wordpress.org/reference/functions/bloginfo/">https://developer.wordpress.org/reference/functions/bloginfo/</a></p>
 
-<p><img src="assets/img/module6/change-theme-menu.png" alt="" /></p>
+<h2 id="the-loop">THE LOOP</h2>
 
-<h2 id="bonus-editing-theme-files">Bonus: Editing Theme Files</h2>
+<p>Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called “The Loop”.</p>
 
-<h3 id="editor-menu">Editor menu</h3>
+<p>The Loop is a conditional statement in PHP that tells the database something along the lines of <em>“Hey, Database! How’s it going? If you’ve got any content over there for this page, or for this blogm post, as long as you’ve got it, qprint it out for me right here, would ya? Thanks.”</em></p>
 
-<p>The Editor menu (<strong>Appearance &gt; Editor</strong>) allows access to the theme files where you can add edits to the template files.</p>
+<p>In PHP it looks like this:</p>
 
-<p><strong>Be careful when editing these files.</strong></p>
-
-<p>Normally, it would be best practice to edit these files <em>locally</em> so any changes made won’t be “live” before it’s ready but since the Flywheel demo site is password protected, the general public won’t be able to view it.</p>
-
-<p><strong>Pro tip!</strong> Make a backup copy of the file before editing it in case you need to put it back!</p>
-
-<p><img src="assets/img/module6/wp-editor-menu.png" alt="" /></p>
-
-<h3 id="template-tags">Template tags</h3>
-
-<p>WordPress uses <strong>template tags</strong> to pull data from the database and output it onto the page.  It is often mixed in with HTML so the data can be outputted into semantic HTML page layouts.</p>
-
-<p>Template tags are basically PHP functions (and look similar to JavaScript functions.) Note that WordPress (and most PHP developers) use the underscore naming convention and looks something like this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>template_tag()
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+	&lt;!-- content goes here --&gt;
+&lt;?php endwhile; else : ?&gt;
+	&lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+&lt;?php endif; ?&gt; 
 </code></pre>
 </div>
 
-<p>Here’s a couple of common template tags:</p>
+<p>You’ve seen a statement like this beforehand. Do you remember this guy?</p>
 
-<p><code class="highlighter-rouge">get_header()</code> - gets the header.php file and includes it in the current theme file<br />
-<code class="highlighter-rouge">the_title()</code> - tells WordPress to get the title of the page or post from the database</p>
+<p><img src="assets/img/module6/c9_scratch_conditional.png" alt="" /></p>
 
-<p><br />
-How do the template tags work? This example below shows how the site tagline could be outputted on to the page, into ann <code class="highlighter-rouge">h2</code> heading.</p>
+<p>We need to add our loop to our index.php page
+So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page?</p>
 
-<p><code class="highlighter-rouge">bloginfo('description')</code> will get the Tagline value, from the database. The value is whatever you entered in your General Settings.</p>
+<p>We’ll put it after the banner, and before the horizontal sidebar.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h2 class="site-tagline"&gt;&lt;?php bloginfo( 'description' ); ?&gt;&lt;/h2&gt;
+<h3 id="the-content">THE CONTENT</h3>
+
+<p>So what goes inside the loop? Template tags!</p>
+
+<p>Specifically, we’ll be using the following template tags:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php the_content(); ?&gt;
+&lt;?php the_title(); ?&gt;
 </code></pre>
 </div>
 
-<p><img src="assets/img/module6/site-title-settings.jpg" alt="" /></p>
+<blockquote>
+  <h3 id="exercise-add-your-template-tags">Exercise: Add your template tags</h3>
 
-<h3 id="local-wordpress-theme-development">Local WordPress Theme Development</h3>
+  <p>Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through?</p>
+</blockquote>
 
-<p>Developing a WordPress theme <em>locally</em> requires downloading the WordPress core files and setting up a local server.</p>
+<p>Yay! We’re communicating with WP now.</p>
 
-<h3 id="wordpress-core-files">WordPress Core Files</h3>
+<h2 id="template-files">TEMPLATE FILES</h2>
 
-<p>The core files can be downloaded here: <a href="https://wordpress.org/download/">https://wordpress.org/download/</a></p>
+<p>We’ve talked about template tags but in WordPress there are also Template Files. - It’s possible that you will not want every single page on your website to be identical. In fact, in post websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.</p>
 
-<p>Though you can access all of these files, there are some that should never be edited. The majority of your edits will be contained in the <strong>wp-content</strong> folder since those files are specific to the WordPress theme.</p>
+<p>It also enables us to put code that we need more than once, in its own file so that we don’t need to repeat it.</p>
 
-<p>The one file outside of <strong>wp-content</strong> that you may need to edit is the <strong>wp-config.php</strong> file. It contains the website’s base configuration details, such as database connection information.</p>
+<blockquote>
+  <p>Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?</p>
+</blockquote>
 
-<p><img src="assets/img/module6/wp-core-files.jpg" alt="" /></p>
+<blockquote>
+  <h3 id="class-exercise">Class Exercise:</h3>
+  <ol>
+    <li>Create 4 new files in your theme folder: 
+ a. header.php
+ b. footer.php
+ c. sidebar.php 
+ d. page.php</li>
+    <li>Together we will now take each of the corresponding parts from index.php and paste them into one of these files.</li>
+    <li>Then into index.php and page.php we’ll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();</li>
+    <li>Now that you’ve split off your repeated code into tidy new files, let’s also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following:
+      <ol>
+        <li>Create a special template file for the About page. Call it <strong>page-about.php</strong>.</li>
+        <li>In page-about.php, write the following <code class="highlighter-rouge">Template Name: About</code></li>
+        <li>In the dashboard go to Pages&gt;About. Find the box on the right, below the update button, to change your template file from the default, to the special About templae you coded.</li>
+      </ol>
+    </li>
+  </ol>
+</blockquote>
 
-<h3 id="setting-up-your-local-server">Setting up your local server</h3>
+<h3 id="resources-3">Resources</h3>
 
-<p>There are many ways to set up a local server.  Here are the instructions for using the <strong>DesktopServer App</strong>:</p>
+<p>On Temple Heirarchy <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">https://developer.wordpress.org/themes/basics/template-hierarchy/</a></p>
 
-<ol>
-  <li>Download the DesktopServer app here: <a href="https://serverpress.com/get-desktopserver/">https://serverpress.com/get-desktopserver/</a>
-    <ul>
-      <li>View the video for downloading and installing the DesktopServer app: <a href="https://www.youtube.com/watch?v=d_MoCUKv3TI">https://www.youtube.com/watch?v=d_MoCUKv3TI</a></li>
-    </ul>
-  </li>
-  <li>Open the DesktopServer app and follow the steps outlined in the getting started video (<a href="https://www.youtube.com/embed/Po0MkaL8Fgc">https://www.youtube.com/embed/Po0MkaL8Fgc</a>) or using the written instructions <a href="https://serverpress.com/getting-started-with-desktopserver/">here</a>.</li>
-  <li>Once you’ve created a local WordPress site, you can access it with the <strong>Sites</strong> button.</li>
-</ol>
+<h2 id="wordpress-functions">WORDPRESS FUNCTIONS</h2>
 
-<p>Another popular option is the  <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">Mamp</a> app.</p>
+<p>So you could call it a day right now. There’s your theme. Great job! You’ve built your own simple theme and it works. But let’s go a little deeper and add even more functionality!</p>
 
-<p><strong>Important!</strong> You will need to run a local server anytime you’re developing WordPress locally.</p>
+<p>There is another very powerful file we can add to theme and it’s called the Functions file. It’s a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more…</p>
 
-<h4 id="resources-2">Resources</h4>
+<blockquote>
+  <h3 id="class-exercise-1">Class Exercise</h3>
+
+  <ol>
+    <li>In your own custom theme folder, create a  new file named <code class="highlighter-rouge">functions.php</code>.</li>
+    <li>
+      <p>Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> &lt;?php
+   function register_my_menus() {
+register_nav_menus(
+array(
+ 'primary-menu' =&gt; __( 'Header Menu' ),
+ 'extra-menu' =&gt; __( 'Extra Menu' )d
+)
+);
+    }
+    add_action( 'init', 'register_my_menus' );
+ ?&gt;
+</code></pre>
+      </div>
+    </li>
+    <li>Go to the Dashboard and navigate to Appearance&gt;Menus - now this is available! d</li>
+    <li>Create a Menu with the three links to the 3 pages, make sure to pick Header Menu as the location when you create the menu.</li>
+    <li>Replace the ul inside the nav with the following</li>
+  </ol>
+
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php wp_nav_menu( array( 'theme_location' =&gt; 'primary-menu' ) ); ?&gt;
+</code></pre>
+</div>
+
+<blockquote>
+
+  <p>Refresh your page and now you should have a perfectly working Navigation again.</p>
+
+  <p><strong>Bonus:</strong> WordPress gives menu items of the currently visited page, the class of <em>current_page_item</em>. You can style it differently.</p>
+</blockquote>
+
+<h3 id="resources-4">Resources</h3>
+
+<p><a href="https://codex.wordpress.org/Navigation_Menus">Codex Navigations</a></p>
+
+<h2 id="sidebars-and-widgets">Sidebars and Widgets</h2>
+
+<p>Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We’ll be converting our current sidebar into a dynamic WP sidebar.</p>
+
+<blockquote>
+  <h3 id="class-exercise-2">Class Exercise</h3>
+  <ol>
+    <li>
+      <p>First off, we must register our sidebar inside functions.php so that we can enable Widgets on the website.
+Enter this into your functions file :</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>function themename_widgets_init() {
+  register_sidebar( array(    'name'    =&gt; __( 'Primary Sidebar', 'mammaspizza' ),    'id'
+ =&gt; 'sidebar-1',    'before_widget' =&gt; '&lt;div id="%1$s" class="third widget %2$s"&gt;',    'after_widget'  =&gt; '&lt;/div&gt;',    'before_title'  =&gt; '&lt;h2 class="widget-title"&gt;',    'after_title'   =&gt; '&lt;/h2&gt;',
+  ) );   }   add_action( 'widgets_init', 'themename_widgets_init' );
+</code></pre>
+      </div>
+    </li>
+    <li>Go to Appearance&gt;Widgets and add 3 widgets to your sidebar.</li>
+    <li>
+      <p>Delete all thirds and replace them with:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php dynamic_sidebar(); ?&gt;
+</code></pre>
+      </div>
+    </li>
+  </ol>
+</blockquote>
+
+<h2 id="featured-images">Featured Images</h2>
+
+<p>We can add featured image functionality to our pages and posts by adding the following to our functions file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php add_theme_support( 'post-thumbnails' ); ?&gt;
+</code></pre>
+</div>
+
+<p>Once you’ve done that, go back into your home page and add a featured image. It will show up on the right hand side.</p>
+
+<blockquote>
+  <p>##Class Exercise: Adding a featured image to a page</p>
+
+  <p>We can add featured images anywhere inside the loop in various default sizes:</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>the_post_thumbnail(); // Without parameter -&gt;; Thumbnail
+the_post_thumbnail( 'thumbnail' ); // Thumbnail (default 150px x 150px max)
+the_post_thumbnail( 'medium' ); // Medium resolution (default 300px x 300px max)
+the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
+the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
+</code></pre>
+</div>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Popular plugins include:</p>
 
 <ul>
-  <li><a href="https://codex.wordpress.org/">WordPress Codex</a></li>
-  <li><a href="https://developer.wordpress.org/themes/getting-started/">WordPress Theme Development Handbook</a></li>
-  <li><a href="https://managewp.com/edit-wordpress-website">How to Edit Your WordPress Website (Without Hacking Core Files)</a></li>
-  <li><a href="https://codex.wordpress.org/Editing_wp-config.php">Editing wp-config.php</a></li>
+  <li>Jetpack</li>
+  <li>Mailchimp</li>
+  <li>Google Analytics</li>
 </ul>
 
-<p><br />
-~ end ~</p>
+<p>And there are many many more…
+Today we are going to work with Jetpack.</p>
+<blockquote>
+  <p>Let’s get over to Plugins in the Dashboard and find Jetpack to install.</p>
+</blockquote>
+
+<p>~ end ~</p>
 
       </article>
     </main>
