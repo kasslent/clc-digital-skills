@@ -245,7 +245,7 @@ Under Appearance>Themes we can see how these default themes look and even test t
 But today we're not interested in a default theme. We want to build our very own.
 
 
-1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/javascript-solution.zip). 
+1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip). 
 1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then go to `File>Upload Local Files` and find your folder. 
 ![]({{site.img}}/module6/c9-upload-theme-folder.gif)
 1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project's css file:
