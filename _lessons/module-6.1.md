@@ -89,12 +89,12 @@ How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-h
 
 
 ### Setting up our WordPress coding environment
-WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See digram above)
+WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See diagram above)
 These are the steps we normally take to set up a WordPress website:
 
-1. We download the WordPress files.
+1. We download the WordPress files from wordpress.org
 1. We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).
-1. We connect the WP files to the database so they can communicate with each other.
+1. We connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
 
 That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
 
@@ -210,11 +210,11 @@ Tags are best used to create groups of content that can apply to multiple catego
 Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.
 
 
-> ## EXERCISE: Add Content
+> ## Exercise: Add Content
 > 1. Create a couple of random blog posts in the Posts section. Don't dwell too much on the content. [Dummy text](http://meettheipsums.com) is fine for now.
-> 1. Add some categories and tags to your posts and pages.  
-> 1. Create a page for each of your project's menu pages. In the example project that would be three pages: About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. 
->
+> 1. Add some categories and tags to your posts.  
+> 1. Create a page for each of your project's menu pages. In the example project that would be three pages: About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
+> 1. Go to Settings>Reading and set the About page as your home page and the Blog page as your blog page. 
 > Having content to work with will make it easier to work with our theme files. 
 
 
@@ -338,7 +338,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
     <head>
      <meta charset="<?php bloginfo( 'charset' );?>">
      <title><?php bloginfo( 'name' ); ?></title>
-     <link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway:300,400,800" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne" rel="stylesheet">
      <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     </head>
 >
@@ -352,7 +352,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 
 Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called "The Loop".
 
-The Loop is a conditional statement in PHP that tells the database something along the lines of *"Hey, Database! How's it going? If you've got any content over there for this page, or for this blogm post, as long as you've got it, qprint it out for me right here, would ya? Thanks."*
+The Loop is a conditional statement in PHP that tells the database something along the lines of *"Hey, Database! If you've got any content over there for this page, or for this blog post, as long as you've got it, print it out for me right here, would ya? Thanks."*
 
 In PHP it looks like this:
 
@@ -389,7 +389,7 @@ Yay! We're communicating with WP now.
 
 ## Template Files
 
-We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in post websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking. 
+We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking. 
 
 It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it. 
 
@@ -402,25 +402,157 @@ It also enables us to put code that we need more than once, in its own file so t
 	- sidebar.php 
 	- page.php
 > 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
+> 
+> #### index.php should now look like this:
+>
+>	    <main>
+>	    	<section class="banner">
+>	    		<div class="wrapper">
+>	    			<h1>An island girl around towndd</h1>
+>	    		</div>
+>	    	</section>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+>	    	<section class="about">
+>	    		<div class="wrapper">
+>	    			<?php the_content(); ?>
+>	    		</div>
+>	    	</section>
+>	    	<?php endwhile; else : ?>
+>	    		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+>	    	<?php endif; ?> 
+>	    </main>
+>
+>
+> #### header.php should look like this: 
+>
+>		    <!DOCTYPE html>
+>		    <html <?php language_attributes(); ?>>
+>		    <head>
+>		     <meta charset="<?php bloginfo( 'charset' );?>">
+>		     <title><?php bloginfo( 'name' ); ?></title>
+>		     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne" rel="stylesheet">
+>		     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+>		    </head>
+>		    
+>		    <body>
+>		    	<header>
+>		    		<div class="wrapper">
+>		    			<div>
+>		    
+>		    			<h1>Anne Shirley's Musings</h1>
+>		    			</div>
+>		    			<nav>
+>		    				<ul>
+>		    					<li><a href="about.html">About</a></li>
+>		    					<li><a href="index.html">Blog</a></li>
+>		    					<li><a href="contact.html">Contact</a></li>
+>		    				</ul>
+>		    			</nav>
+>		    		</div>
+>		    	</header>
+>
+> ####  sidebar.php should look like this: 
+> 
+>		    <aside>
+>		    	<div class="wrapper aside">
+>		    		<div class="third">
+>		    			<h2>From My Blog</h2>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt,porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!</p>
+>		    			<a href="#">Continue reading</a>
+>		    		</div>
+>		    
+>		    		<div class="third">
+>		    			<h2>Me on Social Media</h2>
+>		    			<!-- Insert Twitter Feed -->
+>		    			<a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl">Tweets by anneofgreengabl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+>		    		</div>
+>		    		<div class="third">
+>		    			<h2>Subscribe to my Blog</h2>
+>		    			<form action="">
+>		    
+>		    				<input type="text" placeholder="E-mail Address">
+>		    				<input type="submit">
+>		    			</form>
+>		    		</div>
+>		    	</div>
+>		    </aside>
+>
+> #### footer.php should look like this: 
+>
+>	    	<footer>
+>	    		<div class="wrapper">
+>	    			<p>&copy; Anne Shirley 2016</p>
+>	    		</div>
+>	    	</footer>
+>	    </body>
+>	    </html>
+>
 > 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template. 
 > 1. Then into index.php and page.php we'll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();
+>
+> #### index.php should look like this.
+>
+>	       <?php get_header(); ?>
+>	       <main>
+>	    	    	
+>	    	    	<section class="banner">
+>	    	    		<div class="wr>apper">
+>	    	    			<h1><?php the_title(); ?></h1>
+>	    	    		</div>
+>	    	    	</section>
+> 	    		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+>	       	<section class="about">
+>	       		<div class="wrapper">
+>	    	    			<?php the_content(); ?>
+>	    	    		</div>
+>	    	    	</section>
+>	    	    	<?php endwhile; else : ?>
+>	        		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+>	    	    	<?php endif; ?>
+>	    	    	<?php get_sidebar(); ?>
+>	    	    </main>
+<?php get_footer();?>
+>
 > 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following: 
-	1. Create a special template file for the About page. Call it **page-about.php**.
-	1. In page-about.php, write the following 
-
-        <?php /* Template Name: About */ ?>
-
+>
+>	1. Create a special template file for the About page. Call it **page-about.php**.
+>	1. In page-about.php, write the following 
+>
+>	    <?php /* Template Name: About */ ?>
+>
 >
 3. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
 4. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
->
+
 
 ### Resources
 
 On Temple Heirarchy [https://developer.wordpress.org/themes/basics/template-hierarchy/](https://developer.wordpress.org/themes/basics/template-hierarchy/)
 
-## WordPress Functions
 
+<aside>
+			<div class="wrapper aside">
+				<div class="third">
+					<h2>From My Blog</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt, porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!</p>
+					<a href="#">Continue reading</a>
+				</div>
+
+				<div class="third">
+					<h2>Me on Social Media</h2>
+					<!-- Insert Twitter Feed -->
+					<a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl">Tweets by anneofgreengabl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				<div class="third">
+					<h2>Subscribe to my Blog</h2>
+					<form action="">
+
+						<input type="text" placeholder="E-mail Address">
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+		</aside>
 So you could call it a day right now. There's your theme. Great job! You've built your own simple theme and it works. But let's go a little deeper and add even more functionality!
 
 There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
