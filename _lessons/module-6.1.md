@@ -213,8 +213,8 @@ Just like categories, tags can be added from the menu or when editing a post. Bu
 > ## Exercise: Add Content
 > 1. Create a couple of random blog posts in the Posts section. Don't dwell too much on the content. [Dummy text](http://meettheipsums.com) is fine for now.
 > 1. Add some categories and tags to your posts.  
-> 1. Create a page for each of your project's menu pages. In the example project that would be three pages: About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
-> 1. Go to Settings>Reading and set the About page as your home page and the Blog page as your blog page. 
+> 1. Create a page for each of your project's pages. In the example project that would be three pages: Home, About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
+> 1. Go to Settings>Reading and set the Home page as your home page and the Blog page as your blog page. 
 > Having content to work with will make it easier to work with our theme files. 
 
 
@@ -518,41 +518,35 @@ It also enables us to put code that we need more than once, in its own file so t
 >	1. Create a special template file for the About page. Call it **page-about.php**.
 >	1. In page-about.php, write the following 
 >
->	    <?php /* Template Name: About */ ?>
+		    <?php /* Template Name: About */ ?>
 >
 >
-3. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
-4. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
+> 1. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
+> 1. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
+
+> ## Bonus: Tweaking the blog
+> You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php. 
+> This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out: 
+> 		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
+>		    <?php the_author(); ?> This one will print out the author of your posts.
+>
+>		    <?php the_category(); ?> This one will print out the categories for a blog post
+>		    <?php the_tags(); ?> This one will print out the tags for a blog post. 
+>
+>		    <?php the_date(); ?> This will print out the date published.
+>
+>		    <?php the_excerpt(); ?> This will print out a truncated part of the body of the blog post.
+> 
+> Play around with these in index.php for better customization of your blog feed. 
+> Also, consider creating a **single.php** template to control the way your single view of each blog post looks like. 
 
 
 ### Resources
 
-On Temple Heirarchy [https://developer.wordpress.org/themes/basics/template-hierarchy/](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+- [On Template Tags](https://codex.wordpress.org/Template_Tags)
+- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
 
-
-<aside>
-			<div class="wrapper aside">
-				<div class="third">
-					<h2>From My Blog</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt, porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!</p>
-					<a href="#">Continue reading</a>
-				</div>
-
-				<div class="third">
-					<h2>Me on Social Media</h2>
-					<!-- Insert Twitter Feed -->
-					<a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl">Tweets by anneofgreengabl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div>
-				<div class="third">
-					<h2>Subscribe to my Blog</h2>
-					<form action="">
-
-						<input type="text" placeholder="E-mail Address">
-						<input type="submit">
-					</form>
-				</div>
-			</div>
-		</aside>
 So you could call it a day right now. There's your theme. Great job! You've built your own simple theme and it works. But let's go a little deeper and add even more functionality!
 
 There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
