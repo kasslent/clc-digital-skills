@@ -272,7 +272,7 @@ Tags: eggs, kid friendly, under 30mins
   <p>Having content to work with will make it easier to work with our theme files.</p>
 </blockquote>
 
-<h2 id="the-guts-of-wordpress">THE GUTS OF WORDPRESS</h2>
+<h2 id="the-guts-of-wordpress">The Guts of WordPress</h2>
 
 <p>Now that we’ve poked around a bit in the dashboard, let’s go deeper and take a look at the files back in c9.</p>
 
@@ -282,17 +282,17 @@ Tags: eggs, kid friendly, under 30mins
 
 <p>Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.</p>
 
-<h3 id="what-is-a-theme">WHAT IS A THEME?</h3>
+<h3 id="what-is-a-theme">What is a theme?</h3>
 
 <p>A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.</p>
 
 <p>Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.</p>
 
-<h3 id="whats-in-a-theme">WHAT’S IN A THEME?</h3>
+<h3 id="whats-in-a-theme">What’s in a theme?</h3>
 
 <p>The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.</p>
 
-<h3 id="uploading-our-theme-to-wp">UPLOADING OUR THEME TO WP</h3>
+<h3 id="uploading-our-theme-to-wp">Uploading our Theme to WP</h3>
 
 <p>Currently there are three default themes inside the themes folder. These always come with WordPress.
 Under Appearance&gt;Themes we can see how these default themes look and even test them out on our website.
@@ -327,7 +327,7 @@ But today we’re not interested in a default theme. We want to build our very o
 How does it look?</li>
 </ol>
 
-<h3 id="why-isnt-any-of-our-css-showing-up">WHY ISN’T ANY OF OUR CSS SHOWING UP?</h3>
+<h3 id="why-isnt-any-of-our-css-showing-up">Why isn’t any of our CSS showing up?</h3>
 
 <p>This is because our stylesheet link is no longer working. It’s looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don’t work the same way as our basic html project from this morning.</p>
 
@@ -343,7 +343,7 @@ Replace our href in the stylesheet link with :</p>
 
 <p>There is a better way to link to our CSS.</p>
 
-<h3 id="communicating-with-wordpress-php--template-tags">COMMUNICATING WITH WORDPRESS: PHP &amp; TEMPLATE TAGS</h3>
+<h3 id="communicating-with-wordpress-php--template-tags">Communicating with WordPress: PHP &amp; Template Tags</h3>
 
 <p>Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.</p>
 
@@ -416,7 +416,7 @@ Template tags are easy for us to use but they represent more complex bits of PHP
 
 <p><a href="https://developer.wordpress.org/reference/functions/bloginfo/">https://developer.wordpress.org/reference/functions/bloginfo/</a></p>
 
-<h2 id="the-loop">THE LOOP</h2>
+<h2 id="the-loop">The Loop</h2>
 
 <p>Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called “The Loop”.</p>
 
@@ -441,7 +441,7 @@ So where should the loop go in our page if we want it to ask for content? In oth
 
 <p>We’ll put it after the banner, and before the horizontal sidebar.</p>
 
-<h3 id="the-content">THE CONTENT</h3>
+<h3 id="the-content">The Content</h3>
 
 <p>So what goes inside the loop? Template tags!</p>
 
@@ -460,7 +460,7 @@ So where should the loop go in our page if we want it to ask for content? In oth
 
 <p>Yay! We’re communicating with WP now.</p>
 
-<h2 id="template-files">TEMPLATE FILES</h2>
+<h2 id="template-files">Template Files</h2>
 
 <p>We’ve talked about template tags but in WordPress there are also Template Files. - It’s possible that you will not want every single page on your website to be identical. In fact, in post websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.</p>
 
@@ -473,28 +473,44 @@ So where should the loop go in our page if we want it to ask for content? In oth
 <blockquote>
   <h3 id="class-exercise">Class Exercise:</h3>
   <ol>
-    <li>Create 4 new files in your theme folder: 
- a. header.php
- b. footer.php
- c. sidebar.php 
- d. page.php</li>
-    <li>Together we will now take each of the corresponding parts from index.php and paste them into one of these files.</li>
+    <li>Create 4 new files in your theme folder:
+      <ul>
+        <li>header.php</li>
+        <li>footer.php</li>
+        <li>sidebar.php</li>
+        <li>page.php</li>
+      </ul>
+    </li>
+    <li>Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)</li>
+    <li>In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.</li>
     <li>Then into index.php and page.php we’ll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();</li>
     <li>Now that you’ve split off your repeated code into tidy new files, let’s also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following:
       <ol>
         <li>Create a special template file for the About page. Call it <strong>page-about.php</strong>.</li>
-        <li>In page-about.php, write the following <code class="highlighter-rouge">Template Name: About</code></li>
-        <li>In the dashboard go to Pages&gt;About. Find the box on the right, below the update button, to change your template file from the default, to the special About templae you coded.</li>
+        <li>In page-about.php, write the following</li>
       </ol>
     </li>
   </ol>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;?php /* Template Name: About */ ?&gt;
+</code></pre>
+</div>
+
+<blockquote>
+
+  <ol>
+    <li>Below this, copy over everything from your index.php file there and delete what you don’t want. For example, the banner.</li>
+    <li>In the dashboard go to Pages&gt;About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.</li>
+  </ol>
+
 </blockquote>
 
 <h3 id="resources-3">Resources</h3>
 
 <p>On Temple Heirarchy <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">https://developer.wordpress.org/themes/basics/template-hierarchy/</a></p>
 
-<h2 id="wordpress-functions">WORDPRESS FUNCTIONS</h2>
+<h2 id="wordpress-functions">WordPress Functions</h2>
 
 <p>So you could call it a day right now. There’s your theme. Great job! You’ve built your own simple theme and it works. But let’s go a little deeper and add even more functionality!</p>
 
@@ -562,9 +578,9 @@ Enter this into your functions file :</p>
 </code></pre>
       </div>
     </li>
-    <li>Go to Appearance&gt;Widgets and add 3 widgets to your sidebar.</li>
+    <li>Go to Appearance&gt;Widgets and add 3 widgets to your sidebar. <strong>Tip:</strong> If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed.</li>
     <li>
-      <p>Delete all thirds and replace them with:</p>
+      <p>Delete all the elements with the class of <code class="highlighter-rouge">third</code> inside your aside element in page.php and replace them with:</p>
 
       <div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php dynamic_sidebar(); ?&gt;
 </code></pre>
@@ -597,9 +613,15 @@ the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 </code></pre>
 </div>
 
+<blockquote>
+  <p>Try adding it to one of your template files. for example your custom <code class="highlighter-rouge">page-about.php</code> file.</p>
+</blockquote>
+
 <h2 id="plugins">Plugins</h2>
 
-<p>Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Popular plugins include:</p>
+<p>Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of <code class="highlighter-rouge">wp-content</code>.</p>
+
+<p>Popular plugins include:</p>
 
 <ul>
   <li>Jetpack</li>
@@ -610,10 +632,71 @@ the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 <p>And there are many many more…
 Today we are going to work with Jetpack.</p>
 <blockquote>
-  <p>Let’s get over to Plugins in the Dashboard and find Jetpack to install.</p>
+  <p>Exercise: Installing a plugin.</p>
+  <ol>
+    <li>Let’s get over to Plugins in the Dashboard and find Jetpack to install.</li>
+    <li>Click Add New inside of the Plugins area.</li>
+    <li>Jetpack should should up on the main page of the Add plugins page because it’s one of the most popular plugins out there. You’ll see this:</li>
+  </ol>
+
+  <p><img src="assets/img/module6/wp-jetpack.png" alt="" /></p>
+
+  <p>Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it’s compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you’ll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It’s also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).</p>
+
+  <p><strong>Rule of thumb:</strong> Don’t download plugins that have few reviews, and few installations. And definitely don’t download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website.</p>
+  <ol>
+    <li>Click the Install Now button to install Jetpack. When it has finished installing, click on Activate.</li>
+    <li>You’ll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don’t have one yet. This will be the account you’ll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums.</li>
+    <li>Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog.</li>
+    <li>Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out.</li>
+  </ol>
 </blockquote>
 
-<p>~ end ~</p>
+<blockquote>
+  <h2 id="bonus-exercise-swap-out-your-form-with-a-jetpack-form">Bonus Exercise: Swap out your form with a JetPack form.</h2>
+  <p>Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don’t need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the “Add Contact Form” button and follow the instructions.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="bonus-exercise-add-a-carousel-with-jetpack-to-your-posts-or-pages">Bonus Exercise: Add a carousel with Jetpack to your posts or pages</h2>
+  <p>Now that you’ve installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can <code class="highlighter-rouge">Create Gallery</code> instead of just Insert Media. Test out some of the available Galleries available.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="bonus-exercise-enabling-social-media-sharing-for-your-posts">Bonus Exercise: Enabling Social Media sharing for your posts</h2>
+  <p>JetPack makes it really easy for your visitors to share your posts on social media.</p>
+  <ol>
+    <li>Head over to Jetpack&gt;Settings from the side navigation in the Dashboard.</li>
+    <li>Click on Engagement.</li>
+    <li>Scroll down to Sharing and click on <code class="highlighter-rouge">Configure your Sharing Settings</code> after you expand it.</li>
+    <li>Set up your sharing buttons under the <code class="highlighter-rouge">Sharing Buttons</code> section. 
+There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It’s not uncommon for people to download JetPack and only use this feature of the plugin.</li>
+  </ol>
+</blockquote>
+
+<h2 id="more-wordpress">More WordPress</h2>
+
+<p>We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.</p>
+
+<p>It’s important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. <a href="http://underscoes.me">Underscores</a> is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.</p>
+
+<p>Other topics for later include:</p>
+
+<h3 id="advanced-subjects-in-wordpress-to-look-forward-to">Advanced Subjects in WordPress to Look Forward To</h3>
+
+<ol>
+  <li>Custom Post Types</li>
+  <li>Custom Fields</li>
+  <li>WordPress and JavaScript</li>
+  <li>WP-REST API
+And more…
+                                                                                                                                                                                                                                                                               2
+    <h3 id="wordpress-community">WordPress Community</h3>
+  </li>
+</ol>
+
+<p>http://make.wordpress.org
+~ end ~</p>
 
       </article>
     </main>

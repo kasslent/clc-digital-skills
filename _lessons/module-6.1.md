@@ -218,7 +218,7 @@ Just like categories, tags can be added from the menu or when editing a post. Bu
 > Having content to work with will make it easier to work with our theme files. 
 
 
-## THE GUTS OF WORDPRESS
+## The Guts of WordPress
 
 Now that we've poked around a bit in the dashboard, let's go deeper and take a look at the files back in c9.
 
@@ -228,17 +228,17 @@ Inside of wp-content there is a folder named themes. That'll be our most used fo
 
 Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.
 
-### WHAT IS A THEME?
+### What is a theme?
 
 A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.
 
 Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.
 
-### WHAT'S IN A THEME?
+### What's in a theme?
 
 The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.
 
-### UPLOADING OUR THEME TO WP
+### Uploading our Theme to WP
 
 Currently there are three default themes inside the themes folder. These always come with WordPress.
 Under Appearance>Themes we can see how these default themes look and even test them out on our website.
@@ -270,7 +270,7 @@ But today we're not interested in a default theme. We want to build our very own
 How does it look?
 
 
-### WHY ISN'T ANY OF OUR CSS SHOWING UP?
+### Why isn't any of our CSS showing up?
 
 This is because our stylesheet link is no longer working. It's looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic html project from this morning.
 
@@ -284,7 +284,7 @@ Does it work?
 
 There is a better way to link to our CSS.
 
-### COMMUNICATING WITH WORDPRESS: PHP & TEMPLATE TAGS
+### Communicating with WordPress: PHP & Template Tags
 
 Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.
 
@@ -348,7 +348,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 
 [https://developer.wordpress.org/reference/functions/bloginfo/](https://developer.wordpress.org/reference/functions/bloginfo/)
 
-## THE LOOP
+## The Loop
 
 Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called "The Loop".
 
@@ -372,7 +372,7 @@ So where should the loop go in our page if we want it to ask for content? In oth
 We'll put it after the banner, and before the horizontal sidebar. 
 
 
-### THE CONTENT
+### The Content
 
 So what goes inside the loop? Template tags!
 
@@ -387,7 +387,7 @@ Specifically, we'll be using the following template tags:
 
 Yay! We're communicating with WP now. 
 
-## TEMPLATE FILES
+## Template Files
 
 We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in post websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking. 
 
@@ -397,23 +397,29 @@ It also enables us to put code that we need more than once, in its own file so t
 
 > ### Class Exercise: 
 > 1. Create 4 new files in your theme folder: 
-	a. header.php
-	b. footer.php
-	c. sidebar.php 
-	d. page.php
-> 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files.
+	- header.php
+	- footer.php
+	- sidebar.php 
+	- page.php
+> 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
+> 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template. 
 > 1. Then into index.php and page.php we'll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();
 > 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following: 
-> 	1. Create a special template file for the About page. Call it **page-about.php**.
-	1. In page-about.php, write the following `Template Name: About`
-	1. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About templae you coded.
+	1. Create a special template file for the About page. Call it **page-about.php**.
+	1. In page-about.php, write the following 
 
+        <?php /* Template Name: About */ ?>
+
+>
+3. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
+4. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
+>
 
 ### Resources
 
 On Temple Heirarchy [https://developer.wordpress.org/themes/basics/template-hierarchy/](https://developer.wordpress.org/themes/basics/template-hierarchy/)
 
-## WORDPRESS FUNCTIONS
+## WordPress Functions
 
 So you could call it a day right now. There's your theme. Great job! You've built your own simple theme and it works. But let's go a little deeper and add even more functionality!
 
@@ -475,8 +481,8 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 >      }
 >      add_action( 'widgets_init', 'themename_widgets_init' );
 >
->2. Go to Appearance>Widgets and add 3 widgets to your sidebar. 
-> 3. Delete all thirds and replace them with: 
+> 2. Go to Appearance>Widgets and add 3 widgets to your sidebar. **Tip:** If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed. 
+> 3. Delete all the elements with the class of `third` inside your aside element in page.php and replace them with: 
 >
 >        <?php dynamic_sidebar(); ?>
 
@@ -499,10 +505,14 @@ Once you've done that, go back into your home page and add a featured image. It 
     the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
     the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 
+> Try adding it to one of your template files. for example your custom `page-about.php` file. 
+
 ## Plugins
 
 
-Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Popular plugins include:
+Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`. 
+
+Popular plugins include:
 
 - Jetpack
 - Mailchimp
@@ -510,13 +520,40 @@ Plugins enable us to add incredible functionality to a website without having to
 
 And there are many many more...
 Today we are going to work with Jetpack.
-> Let's get over to Plugins in the Dashboard and find Jetpack to install.                                    
+> Exercise: Installing a plugin.
+>1. Let's get over to Plugins in the Dashboard and find Jetpack to install.
+>1. Click Add New inside of the Plugins area. 
+> 1. Jetpack should should up on the main page of the Add plugins page because it's one of the most popular plugins out there. You'll see this: 
+>
+> ![]({{site.img}}/module6/wp-jetpack.png)
+> 
+> Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it's compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you'll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It's also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).
+> 
+> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. And definitely don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website. 
+> 1. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate. 
+> 1. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums. 
+> 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog. 
+> 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out. 
+
+> ## Bonus Exercise: Swap out your form with a JetPack form. 
+> Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions. 
+
+> ## Bonus Exercise: Add a carousel with Jetpack to your posts or pages
+> Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available. 
+
+> ## Bonus Exercise: Enabling Social Media sharing for your posts
+> JetPack makes it really easy for your visitors to share your posts on social media. 
+> 1. Head over to Jetpack>Settings from the side navigation in the Dashboard. 
+> 1. Click on Engagement. 
+> 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it. 
+> 1. Set up your sharing buttons under the `Sharing Buttons` section. 
+> There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin. 
 
 ## More WordPress
 
-We have built our very own custom WordPress theme. We did it this way to leanr how WordPress really works.
+We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
 
-It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, an agency that also contributes to WordPress Core. 
+It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class. 
 
 Other topics for later include: 
 
