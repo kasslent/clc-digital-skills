@@ -567,5 +567,9 @@ And more...
                                                                                                                                                                                                                                                                                   2
 ### WordPress Community
 
-http://make.wordpress.org
+If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout: 
+
+[http://make.wordpress.org](http://make.wordpress.org)
+
+
 ~ end ~
