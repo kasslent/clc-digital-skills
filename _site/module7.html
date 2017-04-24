@@ -64,6 +64,49 @@
   <li>an FTP client - software/app to upload files to the server</li>
 </ul>
 
+<h2 id="removing-your-files-from-c9io">Removing your files from c9.io</h2>
+
+<p>Before we explore the subject of moving files more, let’s see how we can remove our files from Cloud9 to be able to move them.</p>
+
+<p>First, remember that WordPress websites have the theme files and overall WordPress core files to deal with AND a database file. To launch a WordPress website on your own server you’ll need both of these.</p>
+
+<p>Here’s how to remove them from c9.io.</p>
+
+<blockquote>
+  <h2 id="class-code-along-accessing-your-files-on-cloud-9">Class Code-Along: Accessing your files on Cloud 9</h2>
+  <h3 id="getting-the-database">Getting the database</h3>
+
+  <p>To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases.</p>
+
+  <ol>
+    <li>Open up a terminal: Watch this video of how: 
+<img src="assets/img/module7/c9-opening-terminal.gif" alt="" /></li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>Enter the following in a terminal.<br />
+         mysql-ctl install</p>
+    </li>
+    <li>
+      <p>Then this:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>     phpmyadmin-ctl install
+</code></pre>
+      </div>
+    </li>
+    <li>
+      <p>Then this:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>     mysql-ctl start
+</code></pre>
+      </div>
+    </li>
+  </ol>
+</blockquote>
+
 <h2 id="server-vs-domain">Server vs Domain</h2>
 
 <p>A <strong>server</strong> is the computer that will “host” the folder with your files.</p>
