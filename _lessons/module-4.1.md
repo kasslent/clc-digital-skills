@@ -8,6 +8,12 @@ permalink: module4-1.html
 class: module4-1
 ---
 
+## Tools for this class
+
+Students will need to download and install
+- [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) - it's a free tool for SEO audits.
+- They will also need [Keywords Everywhere](https://keywordseverywhere.com/) browser extension, also free. Once they install it, they will need to activate it by entering their email and receiving an API key. 
+
 
 Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine's unpaid results—often referred to as "natural," "organic," or "earned" results.
  
