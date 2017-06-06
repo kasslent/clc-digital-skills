@@ -15,6 +15,8 @@ Students will need to download and install
 - They will also need [Keywords Everywhere](https://keywordseverywhere.com/) browser extension, also free. Once they install it, they will need to activate it by entering their email and receiving an API key. 
 
 
+## What is SEO? 
+
 Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine's unpaid results—often referred to as "natural," "organic," or "earned" results.
  
 ## Why spend time working on SEO for your website?
