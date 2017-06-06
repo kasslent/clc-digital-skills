@@ -9,497 +9,188 @@ class: module4-1
 ---
 
 
-SEO (Search Engine Optimization) is a different story for different kinds of websites!
-
-What kind of website are you looking to drive traffic to?  
-What are your goals?  
-Why do you want to learn this?  
-
-
-[Blogger Jon Morrow advises](http://boostblogtraffic.com/make-money-blogging/)...
-
-If you're an independent blogger &mdash; Ignore SEO for the first year.
-
-When your blog is new, the most efficient uses of your time fall into three broad categories:
-
-- Building relationships with influencers (including guest blogging)
-- Creating content worth linking to
-- Selling your products and services
-	
-If you do these well, you'll get search traffic without doing anything.
-
-## Introduction to the search game
-
-### Search Engine Marketing
-
-Two components:
-
-1. Paid
-- Some call it "SEM": not accurate; (marketing is not just advertising!)
-- In the industry, it's called "PPC": pay-per-click ads
-1. Free
-- SEO: Search Engine Optimization
-- a.k.a. Natural/Organic search
-- People trust more--can't be bought! Gets more clicks.
-
-## Google search engine
-Google has a 65%-80% share of the world's search market.
-
-![]({{ site.img }}/module4/search-engine-logos.jpg)
-
-A Google search results page:
-
-- PPC text ads
-- Organic listings
-- Google Maps
-- Product Listing Ads
-- Knowledge panel
-- Answer box
-- Image results
-- Video results
-- News results
-- Social media results
-- Reviews
-
-![]({{ site.img }}/module4/google-results-page.jpg)
-
-Google uses algorithms to determine which results come up at the top.
-
-- Organic: 
-	- Desktop, Mobile Phone, Tablet
-	- Local search (Google Maps)
-	- Other types of results
-		- "Hummingbird"
-		- Knowledge Graph
-- Paid:
-	- PPC "auction" rankings
-	- Product listing ads
-
-
-Organic listings click curve:
-
-- The top rankings get the most clicks
-- More pronounced on mobile devices
-
-![]({{ site.img }}/module4/click-curve.png)
-
-Position 1: 32.5%  
-Position 2: 17.6%  
-Position 3: 11.4%  
-Position 4: 8.1%  
-Position 5: 6.1%  
-Position 6: 4.4%  
-Position 7: 3.5%  
-Position 8: 3.1%  
-Position 9: 2.6%  
-Position 10: 2.4%
-
-Few users go past page one!
-
-PPC click curve:
-Average position = 1: 12.2%  
-Average position = 1.5: 4.3%  
-Average position = 2: 1.5%  
-Average position = 2.5: 0.5%  
-Average position = 3: 0.2%  
-Average position = 3.5: 0.1%  
-Average position = 4: 0.0%  
-Average position = 5: 0.0%
-
-So the objective is to get to the top of the pile so you get the clicks!
-
-#### Reference
-[PPC Click-Through Rate by Position: Does Rank Matter?](http://searchenginewatch.com/sew/study/2345638/ppc-click-through-rate-by-position-does-rank-matter-data)
-
-
-## What winning the SEARCH GAME looks like
-
-A bit of background:
-
-- Google's objective is to give users the best user experience no matter what words they enter into the search box.
-- Anyone can put words on a website, but who is a reliable, authoritative source?
-- Google's algorithms sort that out!
-
-There are over 200 factors in Google's organic search algorithm.
-
-- It changes over 500 times a year.
-- It's a secret--we know what we know from analysis and knowledge sharing.
-- Only 20-25% of the factors relate to "On-page" factors; rest is "Off-page" - i.e. external to your website
-
-The Periodic Table of SEO Success Factors: <http://searchengineland.com/seotable>
-
-![]({{ site.img }}/module4/periodic-table-of-seo-2015.png)
-
-### Be aware - there's a "shady" side to SEO!
-
-Black Hat: Cheating by buying a "fake" digital footprint
-
-- Cheap and easy
-- Risky: Google is always fighting it
-- "Web spam": paid links, dropped domains, free directories, blog comments
-- Many agencies offer to rank you for cheap!
-
-White Hat: Doing what's right, not what's easy
-
-- More time, more effort, slower to see results
-- Safer: Meeting Google where they're trying to go
-
-	
-### You win at Organic Search by maintaining a robust "digital footprint".
-
-- Content optimized to meet user needs when they search
-- Links from other, relevant websites
-- Regular updates to content
-- Engaging social media presence
-- Coordination between digital properties
-
-### So you can't look at Search in isolation.
-
-Coordinate with:
-
-- Paid Search strategy
-- Local Search strategy
-- Social media
-- Public relations
-- All things digital!
-- Dominate the results page!
-
-If possible: align with offline channels as well!
-
-- Ideal: Integrated Marketing Communications
-
-<br>
-
-**Inbound Marketing**:
-
-- Pulling people into your sales flow by fulfilling their needs
-- "Earn your way in"
-- Demonstrate expertise
-	- white papers, blog content, free tools
-  
-as opposed to **Outbound Marketing**:
-
-- Pushing messages out to people
-- "Buy, beg, or bug your way in"
-
-According to HubSpot: especially effective for small businesses that deal with high dollar values, long research cycles and knowledge-based products.
-
-	
-## Getting started with search
-	
-### How do I know if it's worth doing Paid Search ads?
-
-- It's all about ROI (return on investment)! Are you selling a product or service?
-- Part of your marketing budget
-- Are people searching?
-
-### How do I know if it's worth optimizing for Organic search (SEO)?
-
-- Bare minimum: your site appears in Google unless you block it, so manage what it looks like
-	- Set `<title>` and `<meta name="description">` tags
-- Put in more effort: you get qualified traffic from your target market
-
-
-### It all starts with your marketing plan.
-
-- What is your offering?
-- Who is your target market?
-- What benefits do you provide for them?
-
-Step 1: Understand what and how your target market searches.
-
-#### Keywords
-
-- "Clusters" of search queries
-e.g. "cell phone"
-- cell phone, cell phones, cell phone plans, cell phone stores, cell phone accessories, best cell phone, cell phone reviews, new cell phones, rugged cell phone, cell phone for seniors
-
-How do we find the right keywords to target?
-
-#### Google Adwords Keyword Planner (GAKP)
-Enter a search term and it shows you:
-
-- How many people search it in the location you specify
-- The intensity of competition for PPC ads
-- The suggested bid for a paid search ad
-	
-High volume: 
-
-- More people will see you if you rank
-
-High competition:
-
-- Lots of advertisers! Highly qualified searcher
-
-High suggested bid:
-
-- Valuable conversions to be had from the searcher
-
-Also:
-
-- Google Trends
-- Auto-complete suggestions
-- Related searches
-	- Use these, then check in GAKP
-
-
->## EXERCISE: Keywords
->Let's find potential keywords to rank for!
+Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine's unpaid results—often referred to as "natural," "organic," or "earned" results.
+ 
+## Why spend time working on SEO for your website?
+ 
+Gaining high positions in rankings for valuable keywords can provide you with consistent high-quality traffic that will result in visitors taking preferred action on your website. 
+ 
+### Pros of SEO:
+- Consistent traffic flow
+- “Free” traffic
+- High conversion rates
+
+ 
+### Cons of SEO:
+- Initial time investment can be quite heavy
+- Volatile to search engine algorithm updates
+- Depending on the niche, can be quite competitive
+ 
+### Goals of the website:
+- Sales (E-commerce)
+- Leads (Get a quote, Request a demo, Learn more)
+- Donations (NGOs, NPOs, Charities)
+- Advertising revenue (Blogs)
+- Partnerships (Getting involved, Volunteering, etc.)
+- Job (Personal portfolio & resume website)
+- Brand awareness (Viral campaigns)
+
+## How do we know that SEO is working?
+
+### SEO Metrics:
+ 
+- Rankings (aka SERP - Search Engine Ranking Position) - how high does the website appear in the search results for a particular keyword. 
+	- Example goal: Increase SERP from 12 to 5 for [keyword]
+![]({{ site.img }}/module4/seo-searchresult-analysis.png)
+ 
+- Organic Traffic - how many visits did the website get through organic search engine results. Use Google Analytics to track. 
+	- Example goal: Increase organic traffic to the site by 15% in 2017
+ 
+![]({{ site.img }}/module4/seo-analytics-report.png)
+ 
+- Conversions - how successful is the website at getting visitors to take action on the website. Use [Google Analytics](https://www.google.com/analytics/) to track.
+	- Example goal: Increase the conversion rate of the page by 0.5%
+ 
+![]({{ site.img }}/module4/seo-goal-completion.png)
+ 
+- Domain Authority - (DA) is a score developed by Moz that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high Domain authority score means your complete website / all the pages on your domain have the potential to rank well in search engine results. Use Moz Bar Extension to find.
+	- Example goal: Increase DA from 29 to 35
+
+## What can we do to optimize the website?
+
+1. Technical SEO
+1. Content & Keywords
+1. Authority Building
+
+## Technical SEO
+- how to make sure search engines can access, “read” and evaluate your website.
+ 
+Since search engine robots (aka spiders, bots, crawlers) can’t see the website the way you or your visitors can, it’s important to ensure they can access your website and its contents, process them and be able to make a decision about what position you should rank for.
+ 
+### How can we do so?
+ 
+1. Sitemap - make sure you have one. Use [Google Search Console](https://www.google.com/webmasters/tools/) or [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to submit.
+ 
+1. On-page elements - help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
+	- Title tags (<title>...</title>) - this is one of the first elements search engine bots will look at to determine what each page is about. 
+		- Make sure it includes your target keywords for that page. 
+		- There shouldn’t be pages with the same title tags. 
+		- None of the pages should be missing title tags.
+ 
+	- H1 tags - (<h1>...</h1>) - similar to title tags, this is one of the first things bots check. 
+		- Make sure you include keywords that describe the page contents. 
+		- There shouldn’t be pages with the same h1 tags. 
+		- None of the pages should be missing title h1 tags. 
+		- There should only be one h1 tag on the page. 
+ 
+	- URL structure - makes it easier for the bots to understand the hierarchy of your website.
+		- Make sure you use subdomains and folders appropriately
+		- Include keywords in urls
+ 
+	Example URL: [http://www.example.com/category-keyword/subcategory-keyword/primary-keyword](http://www.example.com/category-keyword/subcategory-keyword/primary-keyword)
+
+	![]({{ site.img }}/module4/seo-cheatsheet.jpg)
+
+ 
+	- Word count - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words. 
+ 
+	- Images - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags. 
+		- Make sure your alt tags include your targeted keywords
+ 
+1. Errors - The absence of errors show search engines that your website can be easily accessed by people
+ 
+	- 3xx Issues (301, 302, etc. ) - Redirects. Use Screaming Frog to find them
+	- 4xx Issues (404 is the most common one) - Client error. Use Google Search Console or Screaming Frog to find them
+	- 5xx Issues (500, 502, etc.) – Server error. Use Google Search Console to find them.
+	- Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on [Google Manual Actions.](http://onlineownership.com/google-manual-action-google-wmt-explained/)
+ 
+> ## Technical SEO Exercise: 
+Visit the following websites and use Screaming Frog to fill out the [Technical SEO Audit spreadsheet:](https://docs.google.com/spreadsheets/d/11VFZxEqHV0i9MlQyHFvOHs01BWTzJ2TdWQ4CDoAzTpk/edit#gid=0)
 >
->**1.&nbsp;Brainstorm**
->
->What words might people use? The competition?
-<br><br>
->**2.&nbsp;Evaluate using Google AdWords Keyword Planner**
-> 
-- Go to <https://adwords.google.ca/KeywordPlanner>
-- Create an account using your Gmail address/Google account (can only have one AdWords account per Gmail account)
-- Click **"Tools" > "Keyword Planner"**
-- Select tab **Search for new keywords using a phrase, website or category**
-- Under **targeting** - Choose your target area, e.g. "Canada", "Ontario", "Toronto"
-- Enter your keyword in the box and click **Get ideas**
-- Click the **Keyword ideas** tab
->
->What is the search volume? Competition level? Suggested bid?
->
->**3.&nbsp;Evaluate same keyword using Google Trends**
->
-- Go to <https://www.google.ca/trends/>
-- Enter your search keyword
-- Adjust geographic target and timeframe to suit your needs
->
-> Are there any seasonal patterns to be aware of? Is interest growing or dwindling?
->
->**4.&nbsp;Check out your search keyword on Google**
->
->- Go to <https://www.google.ca/>
-- Enter your search keyword
->**5.&nbsp;What are the odds you can rank for it?**
-- What kinds of websites/pages come up? What kinds of results are returned?
-- Competition - who ranks on page one? 
-- Domain authority, page authority
->
->**6.&nbsp;Compare to other keywords**
-- In AdWords--what related keywords are listed?
-- In Google Trends--what related searches are listed?
-- On Google--what other searches come up in auto-fill?
-- On Google--at the bottom of the results page, what related searches are listed?
->
->**7.&nbsp;Evaluate other searches in Google AdWords Keyword Planner and compare.** 
->
->Keep a list, and pick the best one(s).
-
-
-## On-Page SEO - How to optimize a web page for a keyword
-
-The "fundamental unit" in Search is the page. 
-
-- Search engines (generally) return links to web pages as results for queries.
-- A page is identified by its URL.
-- "Duplicate content issues" - multiple URLs with the same content
-	- `<link rel="canonical">` tag
-
-Search engines are supposed to return the best page for a query
-
-"What's the best page about <...>?"
-
-Ideal on-page optimization strategy&mdash;orient your content around a lucrative keyword
-
-As much as Google tries to understand intent (through initiatives like Hummingbird)&mdash;it's still most effective to use exact keywords in your web page content
-
-### Where Google wants to see keywords:
-
-`<title>` - Title tag 
-
-- Title at top of browser (in the tab)
-- Link text on Search results
-- Title when shared on social media
-- Gets cut off after approximately 60 characters
-- Presence of keyword is a strong ranking factor
-
-`<meta name="description>` - Meta description tag
-
-- Blurb that appears under a search result
-- Also appears when shared on social media
-- Goal is to entice the user to click through to your web page
-	- This is your chance to pitch your prospect
-- Keyword inclusion doesn't help rankings, but bolded keyword drives clickthrough, which helps rankings
-
-
-#### Page content
-<div class="example page-content">
-  <code>&lt;h1&gt;Header&lt;/h1&gt;</code> - use primary keyword in header
-  <p>(body text)</p>
-  <p><code>&lt;h2&gt;Subsection #1&lt;/h2&gt;</code> - use related keyword in header</p>
-  <p>(body text)</p>
-  <p><code>&lt;h2&gt;Subsection #2&lt;/h2&gt;</code></p>
-  <p>(body text)</p>
-  <code>&lt;h3&gt;Subsection of Subsection #2&lt;/h3&gt;</code>
-</div>
-
-
-
-### Keyword usage
-
-- No more than 4-5% of the word count
-- Word count: Use pages that rank for your keyword as a benchmark
-- Blogs: At least 500 words
-  - Google tends to prefer in-depth content, discourages "thin" content
-  - Enough to fulfill the needs of the audience; be the best answer!
-
->Exercise: Pick a page from your website and optimize it for a keyword
-
-## Pay-per-click Search ads (PPC)
-
-(Learn this at <http://www.wordstream.com/learn>)
-
-Google AdWords--most popular platform
-
-- Works like an auction
-
-How it works:
-
-- Create an ad group
-- Add a keyword to the ad group
-- Write a text ad you'd like to appear when someone searches that keyword
-- Bid on the keyword--how much you'll be willing to pay for a click
-- Google looks at all the advertisers and chooses a set of "winners" to appear on the search results pages, ranked on a combination of factors.
-
-<br>
-
-**Ad Rank = CPC bid x Quality Score**
-
-You pay...
-
-**Your price = Ad Rank of advertiser below you / Your Quality Score + $0.01**
-
-Example:
-
-|---|---|---|---|---|
-| Advertiser I | $2.00 max bid | QS = 10 | Ad Rank = 20 | Actual CPC = $1.61 | 
-| Advertiser II | $4.00 max bid | QS = 4 | Ad Rank = 16 | Actual CPC = $3.01 | 
-| Advertiser III | $6.00 max bid | QS = 2 | Ad Rank = 12 | Actual CPC = $4.01 | 
-| Advertiser IV | $8.00 max bid | QS = 1 | Ad Rank = 8 | Actual CPC = highest! | 
-
-Good Quality Score = pay less for the ad AND get the best placement!  
-Higher Quality Score = Higher ROI!
-
-### So what IS Quality Score? 
-
-(It's another Google secret!)
-
-Multiple factors:
-
-- Your click-through rate (CTR) - most important factor!
-- Relevance of each keyword to its ad group
-- Landing page quality and relevance
-- The relevance of your ad text
-- Your historical AdWords account performance
-
-How do you improve Quality Score?
-
-Consistent work on your account to optimize:
-
-- Keyword research: New, relevant keywords
-- Keyword organization: Tight, organized groups tied to individual ad campaigns
-- Refining ad text: Test ad copy and use the one(s) with the best CTR
-- Optimize landing pages: Provide a cohesive experience from keyword to conversion
-- Add negative keywords - Exclude irrelevant search terms that waste budget
-
-Low Quality Scores are primarily the result of disconnect between keywords, ad groups, ad text, and landing page content.
-
-### Good to know...
-
-Match Type
-
-- Broad match: Query includes any word in your key phrase in any order
-- Modified broad match: "+" parameter added to word; search query must include that word
-- Phrase match: Query must include entire key phrase in order (can have words before and after)
-- Exact match: Query must match exactly
-
-Optimize match type to avoid unnecessary spend on irrelevant clicks.
-
-Negative Keywords
-
-- Use keyword research to identify searches that don't apply to your offering
-	- Same tactics we used to find relevant searches!
-- Build a list of terms to exclude
-
-Eliminate more unnecessary clicks, improve Quality Score, improve ROI!
-
-## Making money/succeeding as a blogger
-
-### Different kinds of bloggers:
-
-
-- The part-time professional
-	- uses blogging to supplement income
-- The hobbyist
-	- Blogs for fun and doesn't earn an income
-	- Most blogs personal musings
-	- 60% spend less than three hours a week blogging
-- The full-time professional
-	- Blogs as a full-time job
-- The corporate
-	- Blogs as part of their full-time job or full time for an organization
-	- Makes up 8% of blogs
-- The entrepreneur
-	- Blogs for a company they own
-	- Makes up 13% of blogs
-
-#### Reference
-[Can I Really Make a Living by Blogging?](http://lifehacker.com/can-i-really-make-a-living-by-blogging-1537783554)
-	
-### Earnings you can expect as a blogger
-
-You're essentially starting your own business. 
-You're in for the long haul, and it will be some time before you see any return on your investment.
-
-Of ProBlogger.net readers:
-
-- 10% make $0 a month
-- 28% make under $10
-- 25% make $10-$99
-- 17% make $100-$499
-- 7% make $500-$999
-- 9% make $1,000-$9,999
-- 4% make $10,000+	
-
-#### Reference
-[Can You REALLY Make Money Blogging? [7 Things I Know About Making Money from Blogging]](http://www.problogger.net/archives/2012/11/28/can-you-really-make-money-blogging-7-things-i-know-about-making-money-from-blogging/)	
-	
-### How do you monetize a blog?--many ways!
-
-- Sell products
-- Continuity programs
-	- e.g. premium content, communities, coaching
-- Affiliate marketing
-- Providing services
-- Advertising
-- Combinations of income streams
-
-There are no formulas!
-
-But here's [Amy Lynn Andrews](http://amylynnandrews.com/how-to-make-money-blogging/)...
-
-Five basic steps if you want to make money blogging:
-
-1. Establish your home base
-2. Produce valuable content
-3. Build relationships
-4. Grow your platform
-5. Choose and implement streams of income
-
-[Jon Morrow](http://boostblogtraffic.com/make-money-blogging/) advises...
-
-(If you're an independent blogger) -- Ignore SEO for the first year.
-
-When your blog is new, the most efficient uses of your time fall into three broad categories:
-
-- Building relationships with influencers (including guest blogging)
-- Creating content worth linking to
-- Selling your products and services
-	
-If you do these well, you'll get search traffic without doing anything.
-
->You've seen a lot--what do you want to discuss?
+>- [www.tabbedout.com](www.tabbedout.com) 
+>- [www.gsnh.com](www.gsnh.com)
+
+## Content & Keywords 
+You want to structure your website’s content in a way that’s easy for search engines and people to navigate.
+ 
+### How can we do that?
+ 
+1. Keyword Research
+Before you start writing and publishing content you need to figure out what your target keywords are. 
+ 
+	Find keywords that:
+
+	- Highly relevant to what you do - For example, if you are a bakery in Barrie, don’t pick “cake recipes” as your major keyword. “bakery barrie” will probably get you more relevant traffic and is not as competitive
+	- Have search volume - ranking #1 for “bikes for pets” can be super relevant to what you do, however if nobody is searching for it, it doesn’t matter. Go for something like “dog bike basket” instead (3,600 monthly searches).
+	- Have reasonable competition levels - usually, the more general your keywords are, the more web pages compete for them. For example, “risk management” will be much more competitive than “risk management software” or “risk management services”. Evaluate your website and decide what your chances are at competing for the keywords you’ve picked. 
+ 
+1. Evaluate Competition
+	Once you determined your keywords, enter them to search engines and see what results come up.
+ 
+	- What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels. 
+	- What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page. 
+	- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.
+ 
+	> ## Keyword Research Exercise: 
+	>
+	> Use your website as an example.
+	> 
+	>1. Come up with 3 keywords that describe what your home page is about.
+	>1. Use Keywords Everywhere to find search volume for those keywords 
+	>1. Pick the keyword with the highest search volume
+	>1. Look at the websites that already rank for that keyword
+	>1. Confirm that the keyword you’ve picked is relevant
+	>1. Use [serps.com/tools/keyword-research/](http://serps.com/tools/keyword-research/) to find other keywords that might be relevant
+	>1. Choose 1 major keyword for the page and 1-2 secondary keywords
+ 
+ 
+1. Content Creation
+Once you’ve identified your keywords it’s time to create content for your website. Depending on the type of website you’re building you will focus on different types of content.
+ 
+	- Business website - You should focus on pages that you expect will bring you the most revenue. Usually, they are Product, Service or Location pages. Start with pages that tell others what you do. 
+	- Ecommerce website - Start with Product pages you expect will bring you the most revenue. 
+	- Blog - Start with those blog posts that you think will be the easiest to rank well for.
+ 
+You can read more about the different types of content [here](https://www.troyfawkes.com/advanced-seo-pareto-pages-content-classifications-market-demand/).
+
+## Authority Building 
+
+Show search engines that you’re considered to be an expert by others
+ 
+To win at the SEO game you need to do some authority building aka “link building”. Essentially, you need others to link back to your website. Why? Because search engines track those links and think your website is more valuable the more people link to you. 
+ 
+### A few rules:
+1. Partner up with websites that have a high DA - the higher the DA of a website is the more link value it can pass to you. 
+1. Make sure the links you get are “do follow” links meaning that they are setup to pass value and not keep it. More on “do follow” vs “no follow” links [here](http://www.wordstream.com/blog/ws/2013/07/24/follow-nofollow-links).
+1. DO NOT get involved in spammy link building schemes such as cloaking, hidden text, blog networks, etc. If you do, most likely you will get a manual penalty from search engines that will prevent your website from ranking at all for a very long time. 
+1. DO plan and execute link building campaigns that build long-term partnerships. Examples of link building tactics: Influencer Marketing Campaigns, Directories, Digital PR. For a very long list and very good list of link building activities check here. 
+ 
+ 
+## Next Steps:
+If you wish to learn more about SEO, here are some resources you will find useful:
+ 
+### SEO Resources - guides
+ 
+- The Beginner’s Guide to SEO
+[https://moz.com/beginners-guide-to-seo](https://moz.com/beginners-guide-to-seo)
+ 
+- Google Search Engine Optimization Starter Guide
+[http://static.googleusercontent.com/media/](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf)
+ 
+- The Advanced Guide to SEO
+[https://www.quicksprout.com/the-advanced-guide-to-seo/](https://www.quicksprout.com/the-advanced-guide-to-seo/)
+
+### SEO Resources - blogs
+ 
+- [https://moz.com/blog](https://moz.com/blog ) 
+- [http://searchengineland.com/](http://searchengineland.com/) - SEO/Digtial Marketing news
+- [https://www.searchenginejournal.com/](https://www.searchenginejournal.com/)- SEO/Digtial Marketing news
+- [https://inbound.org/](https://inbound.org/) - a community of digital marketers sharing articles and asking questions. Good if you don't have much time but want to see what's happening in the industry overall
+- [http://www.seobook.com/blog](http://www.seobook.com/blog)- SEO/Digtial Marketing news
+- [https://ahrefs.com/blog/](https://ahrefs.com/blog/) - ahrefs is one of the tools mentioned above. They have a pretty good blog section with some high quality content
+- [http://backlinko.com/blog](http://backlinko.com/blog) - really good actionable SEO content
+- [http://pointblankseo.com/link-building-strategies](http://pointblankseo.com/link-building-strategies) - a huge collection of link building strategies mentioned above
+- [http://www.annielytics.com/blog/](http://www.annielytics.com/blog/) - Blog about analytics which goes hand in hand with SEO
+ 
+ 
+**Content created by [Katya Bovykina](https://twitter.com/katyabovykina?lang=en)** 
