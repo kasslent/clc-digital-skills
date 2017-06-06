@@ -115,8 +115,8 @@ Since search engine robots (aka spiders, bots, crawlers) can’t see the website
 > ## Technical SEO Exercise: 
 Visit the following websites and use Screaming Frog to fill out the [Technical SEO Audit spreadsheet:](https://docs.google.com/spreadsheets/d/11VFZxEqHV0i9MlQyHFvOHs01BWTzJ2TdWQ4CDoAzTpk/edit#gid=0)
 >
->- [www.tabbedout.com](www.tabbedout.com) 
->- [www.gsnh.com](www.gsnh.com)
+>- [www.tabbedout.com](http://www.tabbedout.com) 
+>- [www.gsnh.com](http://www.gsnh.com)
 
 ## Content & Keywords 
 You want to structure your website’s content in a way that’s easy for search engines and people to navigate.
