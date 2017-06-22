@@ -44,17 +44,21 @@ Here's how to remove them from c9.io.
 > 
 > 1. Open up a terminal: Watch this video of how: 
 > ![]({{site.img}}/module7/c9-opening-terminal.gif)
-
-> 1. Enter the following in a terminal.  
->		    mysql-ctl install
 >
-> 2. Then this: 
+> 1. Enter the following in the terminal.
 > 
 >		    phpmyadmin-ctl install
 >
-> 3. Then this: 
->
->		    mysql-ctl start
+> You will see a url generated to access your phpMyAdmin dashboard where you'll download the database.
+> You'll select the database c9 on the sidebar and the go to "Export" to download the database for your website.
+> Follow the instructions in this gif: 
+
+> ![]({{site.img}}/module7/downloading-database-from-c9.gif)
+> 
+> 1. Once you're done downloading the database, go back to c9, select your entire project folder, right click on it and select download. 
+> You will use the files and the database to upload them to a hosting service/server. 
+> ### Resources
+Watch this awesome video walkthrough of [how to launch a wordpress website](http://wesbos.com/migrate-wordpress/) by Wes Bos:
 
 ## Server vs Domain
 
@@ -186,3 +190,42 @@ Here's a tutorial to get your files online using FileZilla: [FileZilla Client Tu
 <br>
 Feeling adventurous? Want to try a free hosting option?  
 Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
+
+>## Final Class exercise: launching your website on github
+> Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free. This is how:
+> 1. Go to [http://github.io](http://github.io) and create an account or sign in. 
+> 1. Create a new repo: 
+>
+> ![]({{site.img}}/module7/github-repo.gif)
+> 1. Fill in your repo info and initialize it with a Read Me. 
+> 1. Select "Upload Files"
+> 1. From your Finder or File Explorer drag and drop the index.html, css folder, js folder and any images for your website into the uploader.
+> 1. Write a commit message such as "Added files" and submit your commit message.(Commit messages help you keep track of when you make file changes in github).
+> 1. Go into the settings of your repository and enable Github Pages.
+> 1. Go to your-username.github.io/your-repo-name and you should see your site! 
+
+## Resources
+To set up your custom domain with github pages [read here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
+
+Deploying websites can be tricky at first. It's always good to find a buddy to help you through it if it's your first time. Ladies Learning Code hosts free "Coffee & Code" sessions every third Sunday of the month. This is exactly the kind of thing you can get help with there. 
+
+Most importantly, don't stop coding and have fun! 
+
+## Resources
+
+For more advanced training, there are numerous institutions in Toronto that run in-person classes: 
+1. [HackerYou](http://hackeryou.com)
+1. [Bitmaker Labs](http://bitmaker.co)
+1. [Lighthouse Labs](http://lighthouselabs.com)
+1. [Brainstation](http://brainstation.io)
+1. Colleges and universities
+1. Maker Spaces: For example, [SteamLabs](steamlabs.ca)
+1. [Dames Making Games](https://dmg.to/)
+
+For free online training: 
+
+1. [Free Code Camp](http://freecodecamp.com)
+1. [Lynda](http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&R=EDB0187) This is free through Toronto Libraries
+
+
+
