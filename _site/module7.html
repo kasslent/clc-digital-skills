@@ -79,30 +79,32 @@
   <p>To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases.</p>
 
   <ol>
-    <li>Open up a terminal: Watch this video of how: 
-<img src="assets/img/module7/c9-opening-terminal.gif" alt="" /></li>
-  </ol>
-</blockquote>
-
-<blockquote>
-  <ol>
     <li>
-      <p>Enter the following in a terminal.<br />
-         mysql-ctl install</p>
+      <p>Open up a terminal: Watch this video of how: 
+<img src="assets/img/module7/c9-opening-terminal.gif" alt="" /></p>
     </li>
     <li>
-      <p>Then this:</p>
+      <p>Enter the following in the terminal.</p>
 
       <div class="highlighter-rouge"><pre class="highlight"><code>     phpmyadmin-ctl install
 </code></pre>
       </div>
     </li>
-    <li>
-      <p>Then this:</p>
+  </ol>
 
-      <div class="highlighter-rouge"><pre class="highlight"><code>     mysql-ctl start
-</code></pre>
-      </div>
+  <p>You will see a url generated to access your phpMyAdmin dashboard where you’ll download the database.
+You’ll select the database c9 on the sidebar and the go to “Export” to download the database for your website.
+Follow the instructions in this gif:</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="assets/img/module7/downloading-database-from-c9.gif" alt="" /></p>
+
+  <ol>
+    <li>Once you’re done downloading the database, go back to c9, select your entire project folder, right click on it and select download. 
+You will use the files and the database to upload them to a hosting service/server.
+      <h3 id="resources">Resources</h3>
+      <p>Watch this awesome video walkthrough of <a href="http://wesbos.com/migrate-wordpress/">how to launch a wordpress website</a> by Wes Bos:</p>
     </li>
   </ol>
 </blockquote>
@@ -245,6 +247,53 @@ ns3.dreamhost.com
 <p><br />
 Feeling adventurous? Want to try a free hosting option?<br />
 Try <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">Hosting Static Sites on Github for Beginners</a>.</p>
+
+<blockquote>
+  <h2 id="final-class-exercise-launching-your-website-on-github">Final Class exercise: launching your website on github</h2>
+  <p>Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free. This is how:</p>
+  <ol>
+    <li>Go to <a href="http://github.io">http://github.io</a> and create an account or sign in.</li>
+    <li>Create a new repo:</li>
+  </ol>
+
+  <p><img src="assets/img/module7/github-repo.gif" alt="" /></p>
+  <ol>
+    <li>Fill in your repo info and initialize it with a Read Me.</li>
+    <li>Select “Upload Files”</li>
+    <li>From your Finder or File Explorer drag and drop the index.html, css folder, js folder and any images for your website into the uploader.</li>
+    <li>Write a commit message such as “Added files” and submit your commit message.(Commit messages help you keep track of when you make file changes in github).</li>
+    <li>Go into the settings of your repository and enable Github Pages.</li>
+    <li>Go to your-username.github.io/your-repo-name and you should see your site!</li>
+  </ol>
+</blockquote>
+
+<h2 id="resources-1">Resources</h2>
+<p>To set up your custom domain with github pages <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">read here</a></p>
+
+<p>Deploying websites can be tricky at first. It’s always good to find a buddy to help you through it if it’s your first time. Ladies Learning Code hosts free “Coffee &amp; Code” sessions every third Sunday of the month. This is exactly the kind of thing you can get help with there.</p>
+
+<p>Most importantly, don’t stop coding and have fun!</p>
+
+<h2 id="resources-2">Resources</h2>
+
+<p>For more advanced training, there are numerous institutions in Toronto that run in-person classes:</p>
+<ol>
+  <li><a href="http://hackeryou.com">HackerYou</a></li>
+  <li><a href="http://bitmaker.co">Bitmaker Labs</a></li>
+  <li><a href="http://lighthouselabs.com">Lighthouse Labs</a></li>
+  <li><a href="http://brainstation.io">Brainstation</a></li>
+  <li>Colleges and universities</li>
+  <li>Maker Spaces: For example, <a href="steamlabs.ca">SteamLabs</a></li>
+  <li><a href="https://dmg.to/">Dames Making Games</a></li>
+</ol>
+
+<p>For free online training:</p>
+
+<ol>
+  <li><a href="http://freecodecamp.com">Free Code Camp</a></li>
+  <li><a href="http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&amp;R=EDB0187">Lynda</a> This is free through Toronto Libraries</li>
+</ol>
+
 
       </article>
     </main>
