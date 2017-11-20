@@ -192,7 +192,7 @@ Feeling adventurous? Want to try a free hosting option?
 Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
 
 >## Final Class exercise: launching your website on github
-> Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free. This is how:
+> Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free if it's just a plain HTML & CSS website. Let's try doing it with our plain websites, without the WP parts we worked on. Those will need more work anyhow before we can launch them:
 > 1. Go to [http://github.io](http://github.io) and create an account or sign in. 
 > 1. Create a new repo: 
 >
@@ -207,7 +207,9 @@ Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/developme
 ## Resources
 To set up your custom domain with github pages [read here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
 
-Deploying websites can be tricky at first. It's always good to find a buddy to help you through it if it's your first time. Ladies Learning Code hosts free "Coffee & Code" sessions every third Sunday of the month. This is exactly the kind of thing you can get help with there. 
+Here's another more effective way of managing your website on Github if you want to keep making changes and uploading them. In fact, this is a better way in the long run: [Sharing your website on Github](https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5)
+
+Deploying websites can be tricky at first. It's always good to find a buddy to help you through it if it's your first time. In some Chapters Ladies Learning Code hosts free "Coffee & Code" sessions. This is exactly the kind of thing you can get help with there. 
 
 Most importantly, don't stop coding and have fun! 
 
@@ -226,6 +228,7 @@ For free online training:
 
 1. [Free Code Camp](http://freecodecamp.com)
 1. [Lynda](http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&R=EDB0187) This is free through Toronto Libraries
+1. [Glitch](http://glitch.com)
 
 
 
