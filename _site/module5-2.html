@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>jQuery & Plugins</title>
-  <meta name="description" content="jQuery Click Events">
+  <title>HTML Forms & Google Sheets</title>
+  <meta name="description" content="Intro to HTML Forms">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -37,300 +37,292 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 5, Lesson 2</h3>
-        <h4>jQuery & Plugins</h4>
+        <h4>HTML Forms & Google Sheets</h4>
       </nav>
       
       <article>
-        <h1>jQuery & Plugins</h1>
-        <h2 id="jquery-click-events">jQuery Click Events</h2>
-
-<p>Let’s do a review of the jQuery click events from the last lesson.</p>
-
-<h4 id="syntax">Syntax</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$( "selector" ).click(function() {
-  // code to be executed on click
-});
-</code></pre>
-</div>
-
-<p><a href="http://codepen.io/learningcode/pen/WQYpxG">CodePen example</a>.</p>
-
-<p><strong>Resource</strong>: <a href="http://api.jquery.com/click/">http://api.jquery.com/click/</a></p>
-
-<h2 id="click-event--mobile-navigation-aka-hamburger-menu">Click Event &amp; Mobile Navigation (a.k.a. Hamburger Menu)</h2>
-
-<p>A few classes ago we learned how to use Media Queries to make our website responsive. One really helpful thing we can use JS click events for is a fancy mobile navigation. Today we will be creating a simple one you can then use for your own website.</p>
-
-<p>Let’s take a look at the example below:</p>
-<p data-height="265" data-theme-id="dark" data-slug-hash="oBrYMV" data-default-tab="js,result" data-user="jessynd" data-embed-version="2" data-pen-title="oBrYMV" class="codepen">See the Pen <a href="http://codepen.io/jessynd/pen/oBrYMV/">oBrYMV</a> by jessica duarte (<a href="http://codepen.io/jessynd">@jessynd</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-<p>Let’s figure out what we need to do in English (tip: be sure to try resizing the codepen example to see what happens in bigger and smaller browser widths):</p>
-
-<ol>
-  <li>When the browser resizes to less than 650px, the menu items must disappear, and a tri-bar or hamburger (≡), will appear instead.</li>
-  <li>When we click on the hamburger, the menu items will appear again, and instead of a hamburger, we will see an “X” symbol to close the navigation in the upper right hand corner.</li>
-</ol>
-
-<blockquote>
-  <h2 id="class-code-along-creating-a-mobile-navigation-with-jquery-click-events">Class Code-Along: Creating a mobile navigation with jQuery click events.</h2>
-
-  <p>For this code-along, you can use the original project demo files if you would like, <a href="exercises/module1/project-one-sample.zip">here</a>. Otherwise, use your own project files if you prefer.</p>
-
-  <p>This exercise is based on an HTML navigation markup that looks like this:</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="index.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/nav&gt;
-</code></pre>
-  </div>
-
-  <ol>
-    <li>In order to create our fancy mobile navigation we first need to add a few things to our plain nav above.
-      <ul>
-        <li>We need a hamburger to open the mobile nav, and we need an × to close the navigation.</li>
-        <li>We need to give a class to our ul so that we can target it with JS.</li>
-      </ul>
-    </li>
-  </ol>
-
-</blockquote>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;nav&gt;
-    	&lt;a href="#" class="hamburger"&gt;&amp;#8801;&lt;/a&gt;
-    	&lt;ul class="main-nav"&gt;
-    		&lt;a href="#" class="close"&gt;&amp;times;&lt;/a&gt;
-    		&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
-    		&lt;li&gt;&lt;a href="index.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    		&lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-    	&lt;/ul&gt;
-    &lt;/nav&gt;
-</code></pre>
-</div>
-
-<blockquote>
-  <h4 id="quick-tip--the-symbols-we-used-above-are-called-html-entities-check-out-some-of-the-available-ones-here">Quick tip : The symbols we used above are called HTML entities. Check out some of the available ones <a href="http://character-code.com/">here</a></h4>
-
-  <ol>
-    <li>
-      <p>Next, in our CSS files, we are going to create a media query for all widths 650px and lower. We are going to hide the hamburger and ‘close’ links unless we are inside the media query. We are also going to use a font-family that makes our symbols look better.</p>
-
-      <div class="highlighter-rouge"><pre class="highlight"><code> @media(max-width: 650px){
- 	.hamburger, .close{
-         display: block;
-         font-size: 24px;
-         font-family: "Lucida Sans Unicode", "Arial Unicode MS";
- 	}
- }
-</code></pre>
-      </div>
-    </li>
-    <li>
-      <p>Outside of our media query we want to hide <code class="highlighter-rouge">.hamburger</code> and <code class="highlighter-rouge">.close</code>.</p>
-
-      <div class="highlighter-rouge"><pre class="highlight"><code> 	.hamburger, .close{
-         display: none;
- 	}
-</code></pre>
-      </div>
-    </li>
-    <li>
-      <p>Now we need to hide ul.main-nav when the browser is smaller than 650px because we just want the hamburger to show up in its place. We could use <code class="highlighter-rouge">display-none</code> to hide our ul but that would not be accessible for screen readers. Add the following inside our mobile media query. We will make our <code class="highlighter-rouge">ul</code> position fixed because we will make it take up the whole screen and want it to be fixed overlayed on top of the website. We will also position it off-sight above the top edge of the viewport.</p>
-
-      <div class="highlighter-rouge"><pre class="highlight"><code> .main-nav {
- 	position: fixed;
- 	top: -100vh;
- }
-</code></pre>
-      </div>
-    </li>
-    <li>
-      <p>Next we’ll create a new class for our main-nav that we will trigger to display the menu items again once we click on the hamburger. We will call the class <code class="highlighter-rouge">open-nav</code>.</p>
-
-      <div class="highlighter-rouge"><pre class="highlight"><code> .main-nav.open-nav {
- 	top: 0;
- }
-</code></pre>
-      </div>
-    </li>
-  </ol>
-
-  <p>Let’s try adding both classes to our ul.main-nav to see what it would look like once it’s open. Be sure to have your viewport at 650px or less. 
-As you can see, it doesn’t look amazing right now. It looks too narrow, and boring. So let’s add some more styles to our .open-nav class inside of the media-query.</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>.main-nav.open-nav {
-	top: 0;
-	left: 0;
-	padding: 2% 10%;
-	z-index: 2;
-	background: #550165;
-	width: 100%;
-	height: 100vh;
-}
-</code></pre>
-  </div>
-
-  <p>Let’s also give the anchors inside of the ul.main-nav in the media-query, the colour white, to contrast better with the purple background.</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>.main-nav a {
-	color: white;
-}
-</code></pre>
-  </div>
-
-  <p>Alright, that should be pretty good for the styles. You can finesse them later. The next step is adding the click events using jQuery that will add and remove the class of <code class="highlighter-rouge">open-nav</code>. This next bit of code goes in your main.js file that we added to our projcets <a href="http://127.0.0.1:4000/llc-digital-skills/module5-1.html#adding-javascriptjquery-to-your-files">last week</a>. If you haven’t done that already, be sure to add both jQuery and your own js file to your project.</p>
-
-  <p>To add and remove the class of <code class="highlighter-rouge">open-nav</code> we will use a jQuery method called <code class="highlighter-rouge">toggleClass();</code>.</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>$(".close, .hamburger").click(function(e){
-  e.preventDefault();
-  $(".main-nav").toggleClass('open-nav');
-});
-</code></pre>
-  </div>
-
-  <p>Now let’s test! Isn’t it a little bit magical?
-Don’t forget to add the JS files and the new navigation markup to all your HTML documents in your project.
-Checkout the full solution for your reference, <a href="exercises/module5/project-one-sample-w-js.zip">here</a></p>
-</blockquote>
-
-<h2 id="documentation--finding-answers">Documentation &amp; Finding Answers</h2>
-
-<p>A part of web development is reading tutorials, articles and documentation.</p>
-
-<p>Another important part is knowing how to ask directed questions to find the answers.</p>
-
-<blockquote>
-  <p>Discussion: What are some search techniques or resources that can be used to find answers?</p>
-</blockquote>
-
-<h2 id="below-are-some-bonus-activities-if-you-have-a-website-that-needs-any-of-these-features">Below are some bonus activities if you have a website that needs any of these features.</h2>
-
-<h3 id="bonus-click-event--an-active-menu">Bonus Click event &amp; an “active” menu</h3>
-
-<p>Here’s an example of a navigation effect that can be added to a one page website.</p>
-
-<p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/XJwKBb/">XJwKBb</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-<p>Here’s how to do it, broken down into steps.</p>
-
-<ol>
-  <li>Select the elements to be clicked.</li>
-  <li>Test if you have correctly selected the element with <code class="highlighter-rouge">console.log()</code>.</li>
-  <li>Add a class of “active” to the active link (the link that was clicked) using <code class="highlighter-rouge">addClass()</code>.</li>
-  <li>Add the “active” class style to the CSS file.</li>
-  <li>When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.</li>
-</ol>
-
-<blockquote>
-  <h3 id="bonus-class-exercise-active-menu">Bonus Class Exercise: “Active” menu</h3>
-  <p>Download the <a href="exercises/module5/javascript.html" download="">javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user’s click.</p>
-</blockquote>
-
-<h2 id="plugins">Plugins</h2>
-
-<p>A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress).</p>
-
-<p>The jQuery library contains many methods and features but you can extend it even further by using plugins. To add a plugin to your website, all you need to do is add the plugin’s js file, possibly a css file as well, and then add a little bit of code you can usually copy straight from their webpage, into your own javascript file.</p>
-
-<p>How easy or hard it is to implement a JavaScript plugin depends on how detailed and simple to follow is the documentation of that plugin. Learning to understand plugin documentation is one of the most important skills to hone as a web developer. And the more you practice, the easier it will become. But don’t be discouraged if it looks way too technical and over your head when you first start out reading plugin documentation.</p>
-
-<p>Let’s try a couple!</p>
-
-<blockquote>
-  <h3 id="bonus-class-exercise-smooth-scroll">Bonus Class Exercise: Smooth scroll</h3>
-  <p>Using the previous exercise file, add the smooth scroll plugin.<br />
-Let’s follow the instructions listed in the plugin developers <a href="https://github.com/cferdinandi/smooth-scroll">site</a>.</p>
-</blockquote>
-
-<blockquote>
-  <p>Bonus exercises:</p>
-
-  <ol>
-    <li>Set the navigation to be fixed at the top of the page.</li>
-    <li>Use the <a href="https://github.com/cferdinandi/smooth-scroll#options-and-settings">plugin options</a> to add an “offset” option, so you can position where the page scrolls to.</li>
-  </ol>
-
-  <p>Solution file for both exercises can be <a href="exercises/module5/javascript-solution.zip">downloaded here</a>.</p>
-</blockquote>
-
-<h3 id="bonus-magnific-popup-implementation">Bonus Magnific Popup Implementation</h3>
-
-<p>Let’s take a look at another plugin, <a href="http://dimsemenov.com/plugins/magnific-popup/">magnific popup</a>.</p>
-
-<p>Magnific Popup creates a <em>lightbox</em> that opens up to view a small thumbnail image, large. From the link above you can take a look at some demos.</p>
-
-<p>To create a gallery with lightbox pop-ups, we need to do the following:</p>
-<ol>
-  <li>Download the Magnific Popup JavaScript file from the website and add it to the javascript.html file after the jQuery link but above your own js code.</li>
-  <li>
-    <p>Create the thumbnail gallery exactly the way Magnific Popup tells you to in the Magnific Popup section. You’ll notice that each one of the small images is wrapped in an anchor tag that links that small image to the large image. The JavaScript we’ll add from Magnific Popup, makes that larger image open up in a lightbox. Below is a selection of sample Nicolas Cage photos but you can replace them with your own.</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> &lt;div class="popup-gallery"&gt;
- 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
- 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
- 	&lt;/a&gt;
- 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
- 		&lt;img src="http://placecage.com/200/200"  data-pin-nopin="true"&gt;
- 	&lt;/a&gt;
- 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
- 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
- 	&lt;/a&gt;
- 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
- 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
- 	&lt;/a&gt;
- &lt;/div&gt;
-</code></pre>
-    </div>
-  </li>
-  <li>
-    <p>Then add the jQuery code it gives you in the source</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> $(document).ready(function() {
- 	$('.popup-gallery').magnificPopup({
- 		delegate: 'a',
- 		type: 'image',
- 		tLoading: 'Loading image #%curr%...',
- 		mainClass: 'mfp-img-mobile',
- 		gallery: {
- 			enabled: true,
- 			navigateByImgClick: true,
- 			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
- 		},
- 		image: {
- 			tError: '&lt;a href="%url%"&gt;The image #%curr%&lt;/a&gt; could not be loaded.',
- 			titleSrc: function(item) {
- 				return item.el.attr('title');
- 			}
- 		}
- 	});
- });
-</code></pre>
-    </div>
-  </li>
-  <li>Last, but not least, be sure to link the magnific popup css sheet that comes in the files you downloaded with the plugin, in the head of your html file. Othewrise your lightbox may look a little undressed.</li>
-</ol>
-
-<h2 id="more-plugins">More Plugins!</h2>
-
-<p>Why don’t you go ahead and try another plugin!</p>
+        <h1>HTML Forms & Google Sheets</h1>
+        <h2 id="intro-to-html-forms">Intro to HTML Forms</h2>
 
 <ul>
-  <li><a href="https://jqueryui.com/">jQuery UI</a></li>
-  <li><a href="https://plugins.jquery.com/">The jQuery Plugin Registry</a></li>
-  <li><a href="http://www.woothemes.com/flexslider/">Flexslider</a> (photo slider)</li>
-  <li><a href="http://flickity.metafizzy.co/">Flickity</a> (another photo slider)</li>
-  <li><a href="http://fitvidsjs.com/">Fitvidsjs</a> (fluid width video embeds, makes your youtube videos resize properly and create great video backgrounds)</li>
+  <li>used to capture information from users</li>
+  <li>information processing &amp; form submission requires a server-side language (e.g. PHP, Ruby or Python)</li>
+  <li>all forms begin with the <code class="highlighter-rouge">&lt;form&gt;</code> element and requires two <em>attributes</em>, <code class="highlighter-rouge">method</code> and <code class="highlighter-rouge">action</code>
+    <ul>
+      <li><strong><code class="highlighter-rouge">method</code></strong> defines how the form will communicate with the web server using <code class="highlighter-rouge">get</code> or <code class="highlighter-rouge">post</code> (more secure)</li>
+      <li><strong><code class="highlighter-rouge">action</code></strong> provides the path to where the form script is processed</li>
+    </ul>
+  </li>
 </ul>
 
+<p><strong>Extra resource:</strong> <a href="http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29">Get vs Post</a></p>
+
+<h3 id="form-controls">Form Controls</h3>
+<ul>
+  <li>users interact with forms through controls (e.g. checkboxes, buttons)</li>
+  <li>data add into these controls are processed by the server when the form is submitted</li>
+</ul>
+
+<p><code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
+
+<p><code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
+
+<p><code class="highlighter-rouge">&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
+
+<ul>
+  <li>used for various data types by changing the <code class="highlighter-rouge">type</code> attribute value</li>
+  <li>common values include <code class="highlighter-rouge">text</code>, <code class="highlighter-rouge">password</code>, <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">reset</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">radio</code> and <code class="highlighter-rouge">checkbox</code></li>
+  <li>use with <code class="highlighter-rouge">label</code> to add a caption to each input</li>
+  <li>doesn’t require a closing tag!</li>
+</ul>
+
+<p><code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
+Though you can create buttons with the <code class="highlighter-rouge">input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code class="highlighter-rouge">value</code> attribute to add text to the button.</p>
+
+<p>There are three <code class="highlighter-rouge">type</code> attribute values: <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">reset</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
+&lt;input type="submit" value="input tag"&gt;
+</code></pre>
+</div>
+
+<div class="example">    
+  <button type="submit">button tag</button>
+  <input type="submit" value="input tag" />
+</div>
+
+<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code class="highlighter-rouge">type</code> value.</p>
+
+<pre><code>&lt;form method="POST" action="#"&gt;
+  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
+  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
+  &lt;br&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
+  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
+  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;input type="reset" value="reset"&gt;
+  &lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<form class="example">
+  <label>Name </label>
+  <input type="text" />
+  <label>Password </label>
+  <input type="password" />
+  <br />
+  <input type="radio" name="radio-example" /><label>yes</label>
+  <input type="radio" name="radio-example" /><label>no</label>
+  <input type="checkbox" /><label>option 1</label>
+  <input type="checkbox" /><label>option 2</label>
+  <br />
+  <label>Leave a comment</label> <textarea></textarea>
+  <input type="reset" value="reset" />
+  <input type="submit" value="submit" />
+</form>
+
+<blockquote>
+  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code class="highlighter-rouge">type</code> attributes, <code class="highlighter-rouge">text</code> and <code class="highlighter-rouge">password</code> differ.</p>
+
+  <p>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?</p>
+
+  <p>Note that clicking “submit” will not process any information because this example is only in HTML and is not attached to any server side processing.</p>
+</blockquote>
+
+<h3 id="label-and-the-for-attribute"><code class="highlighter-rouge">&lt;label&gt;</code> and the <code class="highlighter-rouge">for</code> attribute</h3>
+
+<p>Use the <code class="highlighter-rouge">for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code class="highlighter-rouge">id</code> value of the related form control.</p>
+
+<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
+&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
+</code></pre>
+
+<p><strong>label association</strong></p>
+
+<p><label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname" />
+<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname" /></p>
+
+<p><strong>no label association</strong></p>
+
+<p><label>First Name</label> <input type="text" name="firstname" />
+<label>Last Name</label> <input type="text" name="lastname" /></p>
+
+<blockquote>
+  <p>When labels and inputs are associated, select either the label OR the input to focus on the related input.</p>
+
+  <p>Try clicking on the labels in the examples above.</p>
+</blockquote>
+
+<h3 id="name-attribute"><code class="highlighter-rouge">name</code> attribute</h3>
+
+<p>The <code class="highlighter-rouge">name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
+
+<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
+&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
+</code></pre>
+
+<p>The <code class="highlighter-rouge">name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day is it today?&lt;/p&gt;
+&lt;input type="radio" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
+&lt;input type="radio" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
+</code></pre>
+</div>
+
+<p>What day is it today?<br />
+<input type="radio" name="days" id="mon" /><label for="mon">Monday</label><br />
+<input type="radio" name="days" id="tues" /><label for="tues">Tuesday</label><br />
+<input type="radio" name="days" id="wed" /><label for="wed">Wednesday</label><br />
+<input type="radio" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
+<input type="radio" name="days" id="fri" /><label for="fri">Friday</label></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
+&lt;input type="checkbox" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
+&lt;input type="checkbox" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
+</code></pre>
+</div>
+
+<p>What day do you attend class?</p>
+<p><input type="checkbox" name="days" id="mon" /><label for="mon">Monday</label><br />
+<input type="checkbox" name="days" id="tues" /><label for="tues">Tuesday</label><br />
+<input type="checkbox" name="days" id="wed" /><label for="wed">Wednesday</label><br />
+<input type="checkbox" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
+<input type="checkbox" name="days" id="fri" /><label for="fri">Friday</label></p>
+
 <p><br />
-~ end ~</p>
+In addition to the form controls, any HTML tags can be contained within the <code class="highlighter-rouge">&lt;form&gt;</code> element (e.g. <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
+
+<blockquote>
+  <h2 id="exercise-lets-create-a-form-for-our-website">Exercise: Let’s Create A Form for Our Website!</h2>
+
+  <p>Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. <a href="exercises/module1/project-one-sample/contact.html">Here’s an example</a> of a form you could build.</p>
+
+  <p>This is the HTML for the example site’s form:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;form action=""&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input name="lead-name" type="text" id="name"/&gt;
+    &lt;label for="email"&gt;E-mail Address&lt;/label&gt;
+    &lt;input name="lead-email" type="email" id="email"/&gt;
+    &lt;label for="explain"&gt;Explain why you are getting in touch.&lt;/label&gt;
+    &lt;textarea name="lead-message" id="explain"&gt;&lt;/textarea&gt;
+    &lt;input class="button" type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</code></pre>
+  </div>
+
+  <p>Feel free to add other fields to your form.</p>
+</blockquote>
+
+<h3 id="processing-a-form">Processing a Form</h3>
+
+<p>The form-related HTML only creates the form in the browser.  To actually submit the information and process the data, a <em>server side</em> language is required (e.g. PHP).</p>
+
+<p>Another option is to use 3rd party services such as <a href="http://www.wufoo.com/">Wufoo</a> or <a href="https://www.google.ca/forms/about/">Google Forms</a> to handle not only building the HTML &amp; CSS of the form but also the form processing as well.</p>
+
+<h4 id="extra-resources">Extra Resources</h4>
+<ul>
+  <li><a href="http://www.sitepoint.com/web-foundations/form-elements/">sitepoint: form elements</a></li>
+  <li><a href="http://diveintohtml5.info/forms.html">Dive Into HTML5 forms</a></li>
+  <li><a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a></li>
+  <li><a href="http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738">Bring Your Forms Up to Date With CSS3 and HTML5 Validation</a></li>
+</ul>
+
+<h2 id="google-forms">Google Forms</h2>
+
+<p>You can use <strong>Google Forms</strong> to process your website’s new form and save all the responses sent to a handy Google spreadsheet.  This will enable you to use the power of <strong>Sheets</strong> to manipulate &amp; sort the data!</p>
+
+<blockquote>
+  <h2 id="code-along-using-google-forms">Code-Along: Using Google Forms:</h2>
+
+  <ol>
+    <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account.</li>
+    <li>The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
+ <img src="assets/img/module4/gforms-new.png" alt="" />
+<br /></li>
+    <li>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  Make sure you create a Google Form that is an exact replica of your own new form. 
+Note: Google Forms don’t have “e-mail” inputs so use a general “short answer” input for e-mail. You won’t be using the google form itself in the end so it doesn’t matter. 
+  <br />
+  <img src="assets/img/module4/gforms-contactform.png" alt="" /></li>
+    <li>Now that your form is ready, click on the eyeball. 
+ <img src="assets/img/module4/gforms-eyeball.gif" alt="" />
+  <br /></li>
+    <li>Now that we’re in the preview screen for the form we will open up the web inspector to find the information we need to connect our form to the Google Form.
+      <ul>
+        <li>We will need the action value for the form element.</li>
+        <li>The names of each of the form inputs. 
+<br />
+Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs.
+<img src="assets/img/module4/gforms-inspectelement.gif" alt="" />
+<br /></li>
+      </ul>
+    </li>
+    <li>Once you have the names and action link for your form, add them to your own form in your site.
+  <br /></li>
+    <li>Lastly, test your site’s form. Go back to Google Forms and create a spreadsheet for your responses as shown below. Then in the browser open up your contact page and fill out your form. Finally, open up the excel sheet you just created to capture your forms’ entries.</li>
+  </ol>
+
+  <p><img src="assets/img/module4/gforms-excel.gif" alt="" /></p>
+
+</blockquote>
+
+<h2 id="styling-forms">Styling Forms</h2>
+
+<p>You can style form elements the same way you style any other element with CSS. Simply select the input you want to style, and give it some styles.</p>
+
+<p>When it comes to inputs, try selecting the input you want using the type attribute in your CSS selector. For example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>input[type="text"] {
+  padding: 6px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+</code></pre>
+</div>
+
+<p>Here are a couple of tricks to keep in mind though:</p>
+
+<ol>
+  <li>Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change include the border, padding, background, color and font-size.</li>
+  <li>Form elements usually come with an ‘outline’ when they are selected. This state is called “focus”. Remember when we learned about hover states? Focus states can be targeted in the same way using CSS Pseudo-classes. The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it.</li>
+</ol>
+
+<blockquote>
+  <p>Give it a try based on the example below:</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>input:focus {
+  outline: red;
+}
+</code></pre>
+</div>
+
+<blockquote>
+  <h2 id="exercise-style-your-form">Exercise: Style Your Form</h2>
+
+  <p>Take a look at some examples of styled <a href="https://codepen.io/search/pens/?limit=all&amp;page=2&amp;q=forms">forms in CodePen</a> for inspiration and style your form!</p>
+</blockquote>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-classes</a></li>
+  <li><a href="http://codepen.io/learningcode/post/customize-a-google-form-for-your-website">Customize a Google Form for Your Website</a></li>
+</ul>
+
+<p>~ End ~</p>
+
 
       </article>
     </main>

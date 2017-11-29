@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>HTML Forms & Google Sheets</title>
-  <meta name="description" content="Intro to HTML Forms">
+  <title>CSS Responsive Design</title>
+  <meta name="description" content="Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes eas...">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -37,292 +37,385 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 4, Lesson 2</h3>
-        <h4>HTML Forms & Google Sheets</h4>
+        <h4>CSS Responsive Design</h4>
       </nav>
       
       <article>
-        <h1>HTML Forms & Google Sheets</h1>
-        <h2 id="intro-to-html-forms">Intro to HTML Forms</h2>
+        <h1>CSS Responsive Design</h1>
+        <p>Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s go over some best practices and tips.</p>
+
+<h2 id="fluid-images-and-components">Fluid images and components</h2>
+
+<p>Use percentages to create flexible images.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>img {
+  /* image stretches full width of its container */
+  width: 100%;
+
+  /* image will stretch full width of its container until it
+  reaches 100% width of the image file itself */
+  max-width: 100%;
+}
+</code></pre>
+</div>
+
+<p><a href="exercises/module3/sample/fluid-images.html" target="_blank">See example here</a>.</p>
+
+<p><br /></p>
+
+<p>This can also apply to page components.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.wrapper {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+}
+</code></pre>
+</div>
+
+<h2 id="background-images">Background images</h2>
+
+<p>So far we’ve used <code class="highlighter-rouge">background</code> for colours but it can also be used for setting background <em>images</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
+background-image: url(folder/file.jpg); 
+
+/* shorthand */
+background: url(folder/file.jpg); 
+</code></pre>
+</div>
+
+<h3 id="files-paths--folder-directories">Files Paths &amp; Folder Directories</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>project-folder
+  |---css (folder)
+       |---styles.css
+  |---images (folder) 
+       |---picture.jpg
+  |---index.html    
+</code></pre>
+</div>
+
+<p>To find the correct file path to add a background image using CSS, the starting point is <strong>styles.css</strong>.  If your folder directory looks like the above example, the steps to follow are:</p>
+
+<ol>
+  <li>navigate up and out of the css folder (<code class="highlighter-rouge">../</code>)</li>
+  <li>go into the images folder (<code class="highlighter-rouge">../images/</code>)</li>
+  <li>image file name (<code class="highlighter-rouge">../images/picture.jpg</code>)</li>
+</ol>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>background-image: url(../images/picture.jpg); 
+</code></pre>
+</div>
+
+<p>To navigate <em>up and out</em> of a folder, the syntax is always <code class="highlighter-rouge">../</code>  to represent moving up the directory by <em>one</em> folder, regardless of the folder name.</p>
+
+<h3 id="background-repeat"><code class="highlighter-rouge">background-repeat</code></h3>
+
+<p>If the image file is <em>smaller</em> than the element with the background image applied to it, the image will automatically repeat to fill up the space.</p>
+
+<p><img src="assets/img/module3/background-repeat.jpg" alt="" /></p>
+
+<p>To keep the image from repeating, use the <code class="highlighter-rouge">background-repeat</code> property <strong>or</strong> add it to the shorthand <code class="highlighter-rouge">background</code> property.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
+background: url(../images/picture.jpg) no-repeat; 
+
+/* longhand */
+background-image: url(../images/picture.jpg); 
+background-repeat: no-repeat;
+</code></pre>
+</div>
+
+<h3 id="background-attachment"><code class="highlighter-rouge">background-attachment</code></h3>
+
+<p>When the page scrolls, all the content scrolls with it including the background image.  Adding <code class="highlighter-rouge">background-attachment: fixed;</code> will change that.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
+background: url(../images/picture.jpg) no-repeat fixed; 
+
+/* longhand */
+background-image: url(../images/picture.jpg); 
+background-repeat: no-repeat;
+background-attachment: fixed;
+</code></pre>
+</div>
+
+<h3 id="background-size">Background-size</h3>
+
+<p>CSS3 introduced the <code class="highlighter-rouge">background-size</code> property which can be used to change the size. The syntax is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>background-size: width height;
+</code></pre>
+</div>
+
+<p>The default values for width and height are <code class="highlighter-rouge">auto</code> and retains the original image dimensions. If only one value is defined, it is assumed to be the <code class="highlighter-rouge">width</code>.</p>
+
+<p>There are several sizing dimensions: pixels, percentages and keywords.</p>
+
+<p><code class="highlighter-rouge">background-size</code> is the longhand property.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
+background-image: url(../images/background-1.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: 50%;
+background-size: 100%;
+</code></pre>
+</div>
+
+<p>To include it in the shorthand <code class="highlighter-rouge">background</code> property, it <strong>must</strong> be included after <code class="highlighter-rouge">background-position</code>, separated with the <code class="highlighter-rouge">/</code> character.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* shorthand */
+background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
+</code></pre>
+</div>
+
+<p><strong>Important</strong>: If no <code class="highlighter-rouge">background-position</code> value is being used, <code class="highlighter-rouge">background-size</code> will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>background: url(../images/background-1.jpg) no-repeat fixed 50%;
+background-size: 100%;
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">background-size</code> also accepts keyword values, <code class="highlighter-rouge">contain</code> and <code class="highlighter-rouge">cover</code>.</p>
 
 <ul>
-  <li>used to capture information from users</li>
-  <li>information processing &amp; form submission requires a server-side language (e.g. PHP, Ruby or Python)</li>
-  <li>all forms begin with the <code class="highlighter-rouge">&lt;form&gt;</code> element and requires two <em>attributes</em>, <code class="highlighter-rouge">method</code> and <code class="highlighter-rouge">action</code>
-    <ul>
-      <li><strong><code class="highlighter-rouge">method</code></strong> defines how the form will communicate with the web server using <code class="highlighter-rouge">get</code> or <code class="highlighter-rouge">post</code> (more secure)</li>
-      <li><strong><code class="highlighter-rouge">action</code></strong> provides the path to where the form script is processed</li>
-    </ul>
-  </li>
+  <li><code class="highlighter-rouge">contain</code> scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions</li>
+  <li><code class="highlighter-rouge">cover</code> scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped</li>
 </ul>
 
-<p><strong>Extra resource:</strong> <a href="http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29">Get vs Post</a></p>
-
-<h3 id="form-controls">Form Controls</h3>
-<ul>
-  <li>users interact with forms through controls (e.g. checkboxes, buttons)</li>
-  <li>data add into these controls are processed by the server when the form is submitted</li>
-</ul>
-
-<p><code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code> - Represents a caption associated with a specific form control.</p>
-
-<p><code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code> - Used for multi-line text.</p>
-
-<p><code class="highlighter-rouge">&lt;input&gt;</code> - This element is where the user fills out the form. Also:</p>
-
-<ul>
-  <li>used for various data types by changing the <code class="highlighter-rouge">type</code> attribute value</li>
-  <li>common values include <code class="highlighter-rouge">text</code>, <code class="highlighter-rouge">password</code>, <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">reset</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">radio</code> and <code class="highlighter-rouge">checkbox</code></li>
-  <li>use with <code class="highlighter-rouge">label</code> to add a caption to each input</li>
-  <li>doesn’t require a closing tag!</li>
-</ul>
-
-<p><code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code> - Button tags can be used within the form element or on its own.
-Though you can create buttons with the <code class="highlighter-rouge">input</code> tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the <code class="highlighter-rouge">value</code> attribute to add text to the button.</p>
-
-<p>There are three <code class="highlighter-rouge">type</code> attribute values: <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">button</code>, <code class="highlighter-rouge">reset</code>.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;button type="submit"&gt;button tag&lt;/button&gt;
-&lt;input type="submit" value="input tag"&gt;
-</code></pre>
-</div>
-
-<div class="example">    
-  <button type="submit">button tag</button>
-  <input type="submit" value="input tag" />
-</div>
-
-<p>The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific <code class="highlighter-rouge">type</code> value.</p>
-
-<pre><code>&lt;form method="POST" action="#"&gt;
-  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
-  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
-  &lt;br&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
-  &lt;br&gt;
-  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;input type="reset" value="reset"&gt;
-  &lt;input type="submit" value="submit"&gt;
-&lt;/form&gt;
-</code></pre>
-
-<form class="example">
-  <label>Name </label>
-  <input type="text" />
-  <label>Password </label>
-  <input type="password" />
-  <br />
-  <input type="radio" name="radio-example" /><label>yes</label>
-  <input type="radio" name="radio-example" /><label>no</label>
-  <input type="checkbox" /><label>option 1</label>
-  <input type="checkbox" /><label>option 2</label>
-  <br />
-  <label>Leave a comment</label> <textarea></textarea>
-  <input type="reset" value="reset" />
-  <input type="submit" value="submit" />
-</form>
-
 <blockquote>
-  <p>Try typing in the <strong>Name</strong> and <strong>Password</strong> fields to compare how the <code class="highlighter-rouge">type</code> attributes, <code class="highlighter-rouge">text</code> and <code class="highlighter-rouge">password</code> differ.</p>
+  <h2 id="exercise-images--background-images">EXERCISE: images &amp; background images</h2>
 
-  <p>Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?</p>
-
-  <p>Note that clicking “submit” will not process any information because this example is only in HTML and is not attached to any server side processing.</p>
+  <p>Download the exercise files <a href="exercises/module3/fluid-images.html" download="">fluid-images.html</a> and in the text editor.
+Uncomment each property, change some values and see what happens!</p>
 </blockquote>
-
-<h3 id="label-and-the-for-attribute"><code class="highlighter-rouge">&lt;label&gt;</code> and the <code class="highlighter-rouge">for</code> attribute</h3>
-
-<p>Use the <code class="highlighter-rouge">for</code> attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the <code class="highlighter-rouge">id</code> value of the related form control.</p>
-
-<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
-&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
-</code></pre>
-
-<p><strong>label association</strong></p>
-
-<p><label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname" />
-<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname" /></p>
-
-<p><strong>no label association</strong></p>
-
-<p><label>First Name</label> <input type="text" name="firstname" />
-<label>Last Name</label> <input type="text" name="lastname" /></p>
-
-<blockquote>
-  <p>When labels and inputs are associated, select either the label OR the input to focus on the related input.</p>
-
-  <p>Try clicking on the labels in the examples above.</p>
-</blockquote>
-
-<h3 id="name-attribute"><code class="highlighter-rouge">name</code> attribute</h3>
-
-<p>The <code class="highlighter-rouge">name</code> attribute is used to reference the form fields <em>after</em> the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.</p>
-
-<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
-&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
-</code></pre>
-
-<p>The <code class="highlighter-rouge">name</code> attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day is it today?&lt;/p&gt;
-&lt;input type="radio" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
-&lt;input type="radio" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
-</code></pre>
-</div>
-
-<p>What day is it today?<br />
-<input type="radio" name="days" id="mon" /><label for="mon">Monday</label><br />
-<input type="radio" name="days" id="tues" /><label for="tues">Tuesday</label><br />
-<input type="radio" name="days" id="wed" /><label for="wed">Wednesday</label><br />
-<input type="radio" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
-<input type="radio" name="days" id="fri" /><label for="fri">Friday</label></p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;What day do you attend class?&lt;/p&gt;
-&lt;input type="checkbox" name="days" id="mon"&gt;&lt;label for="mon"&gt;Monday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="tues"&gt;&lt;label for="tues"&gt;Tuesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="wed"&gt;&lt;label for="wed"&gt;Wednesday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="thurs"&gt;&lt;label for="thurs"&gt;Thursday&lt;/label&gt;&lt;br&gt;
-&lt;input type="checkbox" name="days" id="fri"&gt;&lt;label for="fri"&gt;Friday&lt;/label&gt;
-</code></pre>
-</div>
-
-<p>What day do you attend class?</p>
-<p><input type="checkbox" name="days" id="mon" /><label for="mon">Monday</label><br />
-<input type="checkbox" name="days" id="tues" /><label for="tues">Tuesday</label><br />
-<input type="checkbox" name="days" id="wed" /><label for="wed">Wednesday</label><br />
-<input type="checkbox" name="days" id="thurs" /><label for="thurs">Thursday</label><br />
-<input type="checkbox" name="days" id="fri" /><label for="fri">Friday</label></p>
-
-<p><br />
-In addition to the form controls, any HTML tags can be contained within the <code class="highlighter-rouge">&lt;form&gt;</code> element (e.g. <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.</p>
-
-<blockquote>
-  <h2 id="exercise-lets-create-a-form-for-our-website">Exercise: Let’s Create A Form for Our Website!</h2>
-
-  <p>Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. <a href="exercises/module1/project-one-sample/contact.html">Here’s an example</a> of a form you could build.</p>
-
-  <p>This is the HTML for the example site’s form:</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;form action=""&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input name="lead-name" type="text" id="name"/&gt;
-    &lt;label for="email"&gt;E-mail Address&lt;/label&gt;
-    &lt;input name="lead-email" type="email" id="email"/&gt;
-    &lt;label for="explain"&gt;Explain why you are getting in touch.&lt;/label&gt;
-    &lt;textarea name="lead-message" id="explain"&gt;&lt;/textarea&gt;
-    &lt;input class="button" type="submit" value="Submit"&gt;
-&lt;/form&gt;
-</code></pre>
-  </div>
-
-  <p>Feel free to add other fields to your form.</p>
-</blockquote>
-
-<h3 id="processing-a-form">Processing a Form</h3>
-
-<p>The form-related HTML only creates the form in the browser.  To actually submit the information and process the data, a <em>server side</em> language is required (e.g. PHP).</p>
-
-<p>Another option is to use 3rd party services such as <a href="http://www.wufoo.com/">Wufoo</a> or <a href="https://www.google.ca/forms/about/">Google Forms</a> to handle not only building the HTML &amp; CSS of the form but also the form processing as well.</p>
 
 <h4 id="extra-resources">Extra Resources</h4>
 <ul>
-  <li><a href="http://www.sitepoint.com/web-foundations/form-elements/">sitepoint: form elements</a></li>
-  <li><a href="http://diveintohtml5.info/forms.html">Dive Into HTML5 forms</a></li>
-  <li><a href="http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/">The 10 Commandments of Good Form Design on the Web</a></li>
-  <li><a href="http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738">Bring Your Forms Up to Date With CSS3 and HTML5 Validation</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">Mozilla Developer Network - background-size</a></li>
+  <li><a href="http://sixrevisions.com/css/background-css-shorthand/">CSS Background Shorthand Property</a></li>
 </ul>
 
-<h2 id="google-forms">Google Forms</h2>
+<h2 id="intro-to-responsive-web-design">Intro to Responsive Web Design</h2>
 
-<p>You can use <strong>Google Forms</strong> to process your website’s new form and save all the responses sent to a handy Google spreadsheet.  This will enable you to use the power of <strong>Sheets</strong> to manipulate &amp; sort the data!</p>
+<p>When Ethan Marcotte introduced the <a href="http://alistapart.com/article/responsive-web-design">responsive web design</a> approach in 2010, the idea that one website could target multiple screens got the dev community really excited.</p>
 
-<blockquote>
-  <h2 id="code-along-using-google-forms">Code-Along: Using Google Forms:</h2>
+<p>Fluid websites are not new. Using percentage based widths in the base CSS will make the page fluid as the page is resized. Responsive techniques take it a step further and is used to rearrange and restyle elements based on the device’s screen size using <strong>media queries</strong>.</p>
 
-  <ol>
-    <li>Go to Google Drive, <a href="https://drive.google.com">drive.google.com</a>, and sign into your account.</li>
-    <li>The select <strong>New</strong> &gt; <strong>More</strong> &gt; <strong>Google Forms</strong> to create a new form. (You can also go straight to the form option here: <a href="https://docs.google.com/forms/">docs.google.com/forms</a>)<br /><br />
- <img src="assets/img/module4/gforms-new.png" alt="" />
-<br /></li>
-    <li>From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  Make sure you create a Google Form that is an exact replica of your own new form. 
-Note: Google Forms don’t have “e-mail” inputs so use a general “short answer” input for e-mail. You won’t be using the google form itself in the end so it doesn’t matter. 
-  <br />
-  <img src="assets/img/module4/gforms-contactform.png" alt="" /></li>
-    <li>Now that your form is ready, click on the eyeball. 
- <img src="assets/img/module4/gforms-eyeball.gif" alt="" />
-  <br /></li>
-    <li>Now that we’re in the preview screen for the form we will open up the web inspector to find the information we need to connect our form to the Google Form.
-      <ul>
-        <li>We will need the action value for the form element.</li>
-        <li>The names of each of the form inputs. 
-<br />
-Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs.
-<img src="assets/img/module4/gforms-inspectelement.gif" alt="" />
-<br /></li>
-      </ul>
-    </li>
-    <li>Once you have the names and action link for your form, add them to your own form in your site.
-  <br /></li>
-    <li>Lastly, test your site’s form. Go back to Google Forms and create a spreadsheet for your responses as shown below. Then in the browser open up your contact page and fill out your form. Finally, open up the excel sheet you just created to capture your forms’ entries.</li>
-  </ol>
+<p><a href="http://mediaqueri.es">mediaqueri.es</a> houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.</p>
 
-  <p><img src="assets/img/module4/gforms-excel.gif" alt="" /></p>
+<p><img src="assets/img/module3/rwd-example.png" alt="" />
+Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (<code class="highlighter-rouge">1024px x 768px</code> or <code class="highlighter-rouge">1280px x 1024px</code>).</p>
 
-</blockquote>
+<p>If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version.</p>
 
-<h2 id="styling-forms">Styling Forms</h2>
+<p>While responsive web design has become a popular standard, a separate mobile site may still be the best option for content heavy sites that require more simplicity for mobile or a layout for mobile users that goes beyond shifting and scaling content.</p>
 
-<p>You can style form elements the same way you style any other element with CSS. Simply select the input you want to style, and give it some styles.</p>
+<h3 id="different-types-of-web-design">Different types of web design</h3>
 
-<p>When it comes to inputs, try selecting the input you want using the type attribute in your CSS selector. For example:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>input[type="text"] {
-  padding: 6px;
-}
-
-input[type="checkbox"] {
-  margin-right: 5px;
-}
-</code></pre>
-</div>
-
-<p>Here are a couple of tricks to keep in mind though:</p>
-
-<ol>
-  <li>Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change include the border, padding, background, color and font-size.</li>
-  <li>Form elements usually come with an ‘outline’ when they are selected. This state is called “focus”. Remember when we learned about hover states? Focus states can be targeted in the same way using CSS Pseudo-classes. The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it.</li>
-</ol>
-
-<blockquote>
-  <p>Give it a try based on the example below:</p>
-</blockquote>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>input:focus {
-  outline: red;
-}
-</code></pre>
-</div>
-
-<blockquote>
-  <h2 id="exercise-style-your-form">Exercise: Style Your Form</h2>
-
-  <p>Take a look at some examples of styled <a href="https://codepen.io/search/pens/?limit=all&amp;page=2&amp;q=forms">forms in CodePen</a> for inspiration and style your form!</p>
-</blockquote>
-
-<h4 id="resources">Resources</h4>
+<p>In order to understand responsive web design and web development better, we have to understand what the options are:</p>
 
 <ul>
-  <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-classes</a></li>
-  <li><a href="http://codepen.io/learningcode/post/customize-a-google-form-for-your-website">Customize a Google Form for Your Website</a></li>
+  <li>Fixed/Static</li>
+  <li>Fluid/Liquid</li>
+  <li>Adaptive</li>
+  <li>Responsive</li>
 </ul>
 
-<p>~ End ~</p>
+<blockquote>
+  <p>Let’s take a look at and discuss this example: <a href="http://www.liquidapsive.com/">http://www.liquidapsive.com/</a></p>
 
+  <p>Make your browser window bigger and smaller. How do the different designs styles change?</p>
+</blockquote>
+
+<h3 id="mobile-first-design">Mobile-first design</h3>
+
+<p>When responsive design was introduced, it was common to start with a desktop design, then make the design responsive for smaller screens.</p>
+
+<p>This has changed with smartphones and tablets, giving rise to another approach, mobile first design:</p>
+
+<ul>
+  <li>design an experience for mobile devices first, then desktop</li>
+  <li>make mobile integral, not an afterthought</li>
+  <li>graceful degradation and progressive enhancement</li>
+</ul>
+
+<h3 id="resources">Resources</h3>
+
+<ul>
+  <li>The <a href="http://alistapart.com/article/responsive-web-design">article</a> that started the Responsive Design movement.</li>
+  <li><a href="https://codemyviews.com/blog/mobilefirst">Mobile First Design: Why It’s Great and Why It Sucks</a></li>
+</ul>
+
+<h2 id="viewport-meta-tag">Viewport Meta Tag</h2>
+
+<p>The viewport meta tag is <strong>required</strong> in the <code class="highlighter-rouge">&lt;head&gt;</code> of the HTML document to ensure that the page responds on mobile devices.</p>
+
+<p>If you forget to include this tag, it will <strong>not</strong> render properly on a mobile device.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code></pre>
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">name=”viewport”</code> differentiates it from other meta tags</li>
+  <li><code class="highlighter-rouge">viewport</code> gives the browser information about the sizing abilities of the site</li>
+  <li><code class="highlighter-rouge">content</code> provides info about the viewport, separate key value pairs with a comma</li>
+  <li><code class="highlighter-rouge">width=value</code> sets the width of the web page</li>
+  <li><code class="highlighter-rouge">initial-scale</code> is the zoom value at which the site is zoomed in/out by default</li>
+  <li><code class="highlighter-rouge">user-scalable=no</code> (not shown in example tag above) will limit users from being able to zoom in</li>
+  <li><code class="highlighter-rouge">minimum-scale, maximum-scale</code> will limit how far in or out a user is allowed to scale/zoom</li>
+</ul>
+
+<h2 id="media-queries">Media queries</h2>
+
+<p>Media queries allows you to apply CSS to your document only when the screen has reach a certain size (also referred to as a breakpoint).</p>
+
+<p>Basic media query:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
+  /* CSS for that screen size goes here */
+}
+</code></pre>
+</div>
+
+<p>The above example targets a browser with the maximum width of 940px (anything equal or less than 940px).</p>
+
+<p>All rules for a specific screen size is required to be nested <em>within</em> the media query.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
+  body {
+    background: red;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+</code></pre>
+</div>
+
+<p>You can also use <code class="highlighter-rouge">min-width</code> in media queries.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (max-width: 940px) {
+  /* any screen 940px and below */
+}
+@media (min-width: 941px) {
+  /* any screen 941px and above */
+}
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Why do you think 941px was used for min-width instead of 940px?</p>
+</blockquote>
+
+<p>To limit the CSS to a range of pixel values, use a combination of <code class="highlighter-rouge">min-width</code> and <code class="highlighter-rouge">max-width</code>. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-width: 768px) and (max-width: 940px) {
+
+}
+</code></pre>
+</div>
+
+<p>The above media query will only be applied when the width of the browser is greater or equal to 768px <strong>and</strong> less or equal to 940px.</p>
+
+<h3 id="height">Height</h3>
+
+<p>Most responsive techniques target width but it is possible to target device heights.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) {
+  /* anything as high or higher than the iPhone 5 */
+}
+</code></pre>
+</div>
+
+<p>Height and width can also be used together in the media query:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@media (min-height: 568px) and (min-width:320px) {
+  /* anything as high or higher than the iPhone 5 */
+}
+</code></pre>
+</div>
+
+<p><strong>Note:</strong> Relying on height-based media queries can be inconsistent and most of the time, it’s better to let the content flow downward as the width of the device gets smaller.</p>
+
+<h3 id="common-breakpoints">Common breakpoints</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>320px — Mobile portrait
+480px — Mobile landscape
+600px — Small tablet
+768px — Tablet portrait
+940px - 1024px — Tablet landscape, netbook, small desktop
+1280px &amp; greater — Desktop
+</code></pre>
+</div>
+
+<p>These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.</p>
+
+<blockquote>
+  <h2 id="exercise-basic-media-queries">EXERCISE: Basic Media queries</h2>
+
+  <p>Download <a href="exercises/module3/media-queries.html" download="">media-queries.html</a> and open it in your editor.</p>
+
+  <p>In the <code class="highlighter-rouge">&lt;head&gt;</code> section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
+Change the background color and test it to make sure it works!</p>
+
+  <p><strong>Bonus:</strong> Try using <code class="highlighter-rouge">min-width</code> or a combination of <code class="highlighter-rouge">min-</code> and <code class="highlighter-rouge">max-width</code> to create a range.</p>
+</blockquote>
+
+<h2 id="rwd-best-practices">RWD Best Practices</h2>
+
+<p>Try not to use too many breakpoints. Two to four works, maybe up to six for complex designs.</p>
+
+<p>If you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.</p>
+
+<p>When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.wrapper {
+  max-width: 1140px;
+  font-family: helvetica, arial, sans-serif;
+  background: white;
+  padding: 20px;
+}
+
+@media (max-width: 940px) {
+  .wrapper {
+    max-width: 900px;
+    padding-top: 10px;
+  }
+}
+</code></pre>
+</div>
+
+<h3 id="testing-mobile-in-the-browser">Testing Mobile in the Browser</h3>
+
+<p>When creating mobile friendly sites, it’s always best to test on an actual device. However, there are a lot of interesting tools available to allow us to test in the browser.</p>
+
+<p>Chrome has an emulator built right into the dev tools!</p>
+
+<p><img src="assets/img/module3/chrome-emulator.png" alt="" /></p>
+
+<p>There are also many many other tools, <a href="http://lab.maltewassermann.com/viewport-resizer/">free</a> and <a href="https://www.browserstack.com/responsive">paid</a>, available for testing and emulating multiple devices and device sizes.</p>
+
+<blockquote>
+  <h2 id="exercise-responsive-web-page">EXERCISE: Responsive Web page</h2>
+  <p>Download the responsive exercise <a href="exercises/module3/responsive.zip">here</a> (zip file). This also includes the solutions file.</p>
+
+  <p>Follow the instructions in the comments in the <code class="highlighter-rouge">&lt;head&gt;</code> of <strong>responsive.html</strong> to make the 3 columns fluid and responsive.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-making-your-website-responsive">EXERCISE: Making Your Website Responsive</h2>
+  <p>Continue working on your website’s layout.If you have it working on desktop,try creating some media queries to improve the layout on different widths. 
+<strong>Don’t forget your Viewport Metatag!</strong></p>
+
+  <p>Does your website design call for any background images? Go ahead and try it out on your project!</p>
+</blockquote>
+
+<p>~ End ~</p>
 
       </article>
     </main>

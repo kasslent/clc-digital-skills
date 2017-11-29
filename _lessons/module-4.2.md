@@ -2,259 +2,328 @@
 layout: lessons
 module: 4
 lesson: 2
-title: HTML Forms & Google Sheets
-description: Intro to HTML forms with Google Sheets
+title: CSS Responsive Design
+description: Intro to fluid and responsive web design.
 permalink: module4-2.html
 ---
 
 
-## Intro to HTML Forms
+Even before adding responsive web techniques, it’s important to create fluid layouts and maintainable code beforehand to make the transitions and changes easier to handle. Let’s go over some best practices and tips.
 
-* used to capture information from users
-* information processing & form submission requires a server-side language (e.g. PHP, Ruby or Python)
-* all forms begin with the `<form>` element and requires two *attributes*, `method` and `action`
-  * **`method`** defines how the form will communicate with the web server using `get` or `post` (more secure)
-  * **`action`** provides the path to where the form script is processed
+## Fluid images and components
 
-**Extra resource:** [Get vs Post](http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29)
+Use percentages to create flexible images.
 
+    img {
+      /* image stretches full width of its container */
+      width: 100%;
 
-### Form Controls
-* users interact with forms through controls (e.g. checkboxes, buttons)
-* data add into these controls are processed by the server when the form is submitted
+      /* image will stretch full width of its container until it
+      reaches 100% width of the image file itself */
+      max-width: 100%;
+    }
 
-`<label></label>` - Represents a caption associated with a specific form control.
-
-`<textarea></textarea>` - Used for multi-line text.
-
-`<input>` - This element is where the user fills out the form. Also:
-
-* used for various data types by changing the `type` attribute value 
-* common values include `text`, `password`, `submit`, `reset`, `button`, `radio` and `checkbox`
-* use with `label` to add a caption to each input
-* doesn't require a closing tag!
-
-`<button></button>` - Button tags can be used within the form element or on its own.
-Though you can create buttons with the `input` tag, the button element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the `value` attribute to add text to the button.
-
-There are three `type` attribute values: `submit`, `button`, `reset`.
-
-    <button type="submit">button tag</button>
-    <input type="submit" value="input tag">
-    
-<div class="example">    
-  <button type="submit">button tag</button>
-  <input type="submit" value="input tag">
-</div>
-
-
-
-The example below does not include any additional CSS and a complete form will require a few more attributes but take a look at how the input displays based on the specific `type` value.
-
-<pre><code>&lt;form method="POST" action="#"&gt;
-  &lt;label&gt;Name &lt;/label&gt; &lt;input type="text"&gt;
-  &lt;label&gt;Password &lt;/label&gt; &lt;input type="password"&gt;
-  &lt;br&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;yes&lt;/label&gt;
-  &lt;input type="radio" name="radio-example"&gt;&lt;label&gt;no&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 1&lt;/label&gt;
-  &lt;input type="checkbox"&gt;&lt;label&gt;option 2&lt;/label&gt;
-  &lt;br&gt;
-  &lt;label&gt;Leave a comment&lt;/label&gt; &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;input type="reset" value="reset"&gt;
-  &lt;input type="submit" value="submit"&gt;
-&lt;/form&gt;
-</code></pre>
-
-<form class="example">
-  <label>Name </label>
-  <input type="text">
-  <label>Password </label>
-  <input type="password">
-  <br>
-  <input type="radio" name="radio-example"><label>yes</label>
-  <input type="radio" name="radio-example"><label>no</label>
-  <input type="checkbox"><label>option 1</label>
-  <input type="checkbox"><label>option 2</label>
-  <br>
-  <label>Leave a comment</label> <textarea></textarea>
-  <input type="reset" value="reset">
-  <input type="submit" value="submit">
-</form>
-
-
->Try typing in the **Name** and **Password** fields to compare how the `type` attributes, `text` and `password` differ. 
->
->Try selecting both the radio and checkbox options.  Can you spot the difference in the behaviour?
->
->Note that clicking "submit" will not process any information because this example is only in HTML and is not attached to any server side processing.
-
-### `<label>` and the `for` attribute
-
-
-Use the `for` attribute in the label to create an association with the related input. This is needed for accessibility reasons. It must match the `id` value of the related form control.
-
-<pre><code>&lt;label <strong>for="firstname"</strong>&gt;First Name&lt;/label&gt;&lt;input type="text" name="firstname" <strong>id="firstname"</strong>&gt;
-&lt;label <strong>for="lastname"</strong>&gt;Last Name&lt;/label&gt;&lt;input type="text" name="lastname" <strong>id="lastname"</strong>&gt;
-</code></pre>
-
-**label association** 
-
-<label for="firstname">First Name</label> <input type="text" name="firstname" id="firstname">
-<label for="lastname">Last Name</label> <input type="text" name="lastname" id="lastname">
-
-**no label association**
-
-<label>First Name</label> <input type="text" name="firstname">
-<label>Last Name</label> <input type="text" name="lastname">
-
->When labels and inputs are associated, select either the label OR the input to focus on the related input.
->
->Try clicking on the labels in the examples above.
-
-### `name` attribute
-
-The `name` attribute is used to reference the form fields *after* the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.
-
-<pre><code>&lt;label for="firstname"&gt;First Name&lt;/label&gt;&lt;input type="text" <strong>name="firstname"</strong> id="firstname"&gt;
-&lt;label for="lastname"&gt;Last Name&lt;/label&gt;&lt;input type="text" <strong>name="lastname"</strong> id="lastname"&gt;
-</code></pre>
-
-The `name` attribute is also be used to group radio and checkbox options together. Also, for radio inputs, grouping them together ensures that the user can only select one option at a time.
-  
-    <p>What day is it today?</p>
-    <input type="radio" name="days" id="mon"><label for="mon">Monday</label><br>
-    <input type="radio" name="days" id="tues"><label for="tues">Tuesday</label><br>
-    <input type="radio" name="days" id="wed"><label for="wed">Wednesday</label><br>
-    <input type="radio" name="days" id="thurs"><label for="thurs">Thursday</label><br>
-    <input type="radio" name="days" id="fri"><label for="fri">Friday</label>
-
-What day is it today?<br>
-<input type="radio" name="days" id="mon"><label for="mon">Monday</label><br>
-<input type="radio" name="days" id="tues"><label for="tues">Tuesday</label><br>
-<input type="radio" name="days" id="wed"><label for="wed">Wednesday</label><br>
-<input type="radio" name="days" id="thurs"><label for="thurs">Thursday</label><br>
-<input type="radio" name="days" id="fri"><label for="fri">Friday</label>
-    
-    <p>What day do you attend class?</p>
-    <input type="checkbox" name="days" id="mon"><label for="mon">Monday</label><br>
-    <input type="checkbox" name="days" id="tues"><label for="tues">Tuesday</label><br>
-    <input type="checkbox" name="days" id="wed"><label for="wed">Wednesday</label><br>
-    <input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
-    <input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
-
-<p>What day do you attend class?</p>
-<input type="checkbox" name="days" id="mon"><label for="mon">Monday</label><br>
-<input type="checkbox" name="days" id="tues"><label for="tues">Tuesday</label><br>
-<input type="checkbox" name="days" id="wed"><label for="wed">Wednesday</label><br>
-<input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
-<input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
+<a href="exercises/module3/sample/fluid-images.html" target="_blank">See example here</a>.
 
 <br>
-In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  Also to style the form, apply CSS in the same way you would for any HTML element.
 
->## Exercise: Let's Create A Form for Our Website!
->
->Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. [Here's an example](exercises/module1/project-one-sample/contact.html) of a form you could build.
->
->This is the HTML for the example site's form: 
->
-    <form action="">
-        <label for="name">Name</label>
-        <input name="lead-name" type="text" id="name"/>
-        <label for="email">E-mail Address</label>
-        <input name="lead-email" type="email" id="email"/>
-        <label for="explain">Explain why you are getting in touch.</label>
-        <textarea name="lead-message" id="explain"></textarea>
-        <input class="button" type="submit" value="Submit">
-    </form>
->
->Feel free to add other fields to your form. 
+This can also apply to page components.
 
-### Processing a Form
+    .wrapper {
+      max-width: 800px;
+      width: 80%;
+      margin: 0 auto;
+    }
 
-The form-related HTML only creates the form in the browser.  To actually submit the information and process the data, a *server side* language is required (e.g. PHP).  
+## Background images
 
-Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle not only building the HTML & CSS of the form but also the form processing as well.
+So far we've used `background` for colours but it can also be used for setting background *images*.
+
+    /* longhand */
+    background-image: url(folder/file.jpg); 
+
+    /* shorthand */
+    background: url(folder/file.jpg); 
+
+
+### Files Paths & Folder Directories
+
+    project-folder
+      |---css (folder)
+           |---styles.css
+      |---images (folder) 
+           |---picture.jpg
+      |---index.html    
+
+To find the correct file path to add a background image using CSS, the starting point is **styles.css**.  If your folder directory looks like the above example, the steps to follow are:
+
+1. navigate up and out of the css folder (`../`)
+1. go into the images folder (`../images/`)
+1. image file name (`../images/picture.jpg`)
+
+---
+    background-image: url(../images/picture.jpg); 
+
+To navigate *up and out* of a folder, the syntax is always `../`  to represent moving up the directory by *one* folder, regardless of the folder name.
+
+### `background-repeat`
+
+If the image file is *smaller* than the element with the background image applied to it, the image will automatically repeat to fill up the space. 
+
+![]({{ site.img }}/module3/background-repeat.jpg)
+
+To keep the image from repeating, use the `background-repeat` property **or** add it to the shorthand `background` property.
+
+    /* shorthand */
+    background: url(../images/picture.jpg) no-repeat; 
+
+    /* longhand */
+    background-image: url(../images/picture.jpg); 
+    background-repeat: no-repeat;
+
+### `background-attachment`
+
+When the page scrolls, all the content scrolls with it including the background image.  Adding `background-attachment: fixed;` will change that. 
+
+    /* shorthand */
+    background: url(../images/picture.jpg) no-repeat fixed; 
+
+    /* longhand */
+    background-image: url(../images/picture.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+### Background-size
+
+CSS3 introduced the `background-size` property which can be used to change the size. The syntax is:
+
+    background-size: width height;
+
+The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. 
+
+There are several sizing dimensions: pixels, percentages and keywords.
+
+`background-size` is the longhand property.
+
+    /* longhand */
+    background-image: url(../images/background-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: 100%;
+
+To include it in the shorthand `background` property, it **must** be included after `background-position`, separated with the `/` character.  
+
+    /* shorthand */
+    background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
+
+**Important**: If no `background-position` value is being used, `background-size` will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.
+
+    background: url(../images/background-1.jpg) no-repeat fixed 50%;
+    background-size: 100%;
+
+
+`background-size` also accepts keyword values, `contain` and `cover`.
+
+* `contain` scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions
+* `cover` scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped
+
+>## EXERCISE: images & background images
+>
+>Download the exercise files <a href="exercises/module3/fluid-images.html" download>fluid-images.html</a> and in the text editor.
+>Uncomment each property, change some values and see what happens!
 
 #### Extra Resources
-* [sitepoint: form elements](http://www.sitepoint.com/web-foundations/form-elements/)
-* [Dive Into HTML5 forms](http://diveintohtml5.info/forms.html)
-* [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/)
-* [Bring Your Forms Up to Date With CSS3 and HTML5 Validation](http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738)
+* [Mozilla Developer Network - background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+* [CSS Background Shorthand Property](http://sixrevisions.com/css/background-css-shorthand/)
 
 
 
-## Google Forms
+## Intro to Responsive Web Design
 
-You can use **Google Forms** to process your website's new form and save all the responses sent to a handy Google spreadsheet.  This will enable you to use the power of **Sheets** to manipulate & sort the data!
+When Ethan Marcotte introduced the [responsive web design](http://alistapart.com/article/responsive-web-design) approach in 2010, the idea that one website could target multiple screens got the dev community really excited. 
 
->## Code-Along: Using Google Forms:
+Fluid websites are not new. Using percentage based widths in the base CSS will make the page fluid as the page is resized. Responsive techniques take it a step further and is used to rearrange and restyle elements based on the device’s screen size using **media queries**.
+
+[mediaqueri.es](http://mediaqueri.es) houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.
+
+![]({{ site.img }}/module3/rwd-example.png)
+Prior to responsive and mobile web designs, the rule of thumb was to optimize for the most common resolution (`1024px x 768px` or `1280px x 1024px`). 
+
+If a mobile version was required, a separate website was created, often under a sub-domain (ex. m.mysite.com). It would have its own design and code base separate from the desktop version. 
+
+While responsive web design has become a popular standard, a separate mobile site may still be the best option for content heavy sites that require more simplicity for mobile or a layout for mobile users that goes beyond shifting and scaling content.
+
+
+### Different types of web design
+
+In order to understand responsive web design and web development better, we have to understand what the options are:
+
+* Fixed/Static
+* Fluid/Liquid
+* Adaptive 
+* Responsive
+
+> Let's take a look at and discuss this example: <http://www.liquidapsive.com/>
 >
->1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account. 
->1. The select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
->  ![]({{ site.img }}/module4/gforms-new.png)
-> <br>
-1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. There are a wide array of the type of questions available (free form, multiple choice using radio or checkboxes, etc).  Make sure you create a Google Form that is an exact replica of your own new form. 
-Note: Google Forms don't have "e-mail" inputs so use a general "short answer" input for e-mail. You won't be using the google form itself in the end so it doesn't matter. 
-  <br>
-  ![]({{ site.img }}/module4/gforms-contactform.png)
-1. Now that your form is ready, click on the eyeball. 
-    ![]({{ site.img }}/module4/gforms-eyeball.gif)
-  <br>
-1. Now that we're in the preview screen for the form we will open up the web inspector to find the information we need to connect our form to the Google Form. 
-* We will need the action value for the form element. 
-* The names of each of the form inputs. 
-  <br>
-Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs.
-  ![]({{ site.img }}/module4/gforms-inspectelement.gif)
-  <br>
-1. Once you have the names and action link for your form, add them to your own form in your site.
-  <br>
-1. Lastly, test your site's form. Go back to Google Forms and create a spreadsheet for your responses as shown below. Then in the browser open up your contact page and fill out your form. Finally, open up the excel sheet you just created to capture your forms' entries. 
->
-  ![]({{ site.img }}/module4/gforms-excel.gif)
->
+> Make your browser window bigger and smaller. How do the different designs styles change?
 
-## Styling Forms
+### Mobile-first design
 
-You can style form elements the same way you style any other element with CSS. Simply select the input you want to style, and give it some styles. 
+When responsive design was introduced, it was common to start with a desktop design, then make the design responsive for smaller screens.
 
-When it comes to inputs, try selecting the input you want using the type attribute in your CSS selector. For example: 
+This has changed with smartphones and tablets, giving rise to another approach, mobile first design:
 
-    input[type="text"] {
-      padding: 6px;
+* design an experience for mobile devices first, then desktop
+* make mobile integral, not an afterthought
+* graceful degradation and progressive enhancement
+
+### Resources
+
+* The [article](http://alistapart.com/article/responsive-web-design) that started the Responsive Design movement.
+* [Mobile First Design: Why It’s Great and Why It Sucks](https://codemyviews.com/blog/mobilefirst)
+
+
+## Viewport Meta Tag
+
+The viewport meta tag is **required** in the `<head>` of the HTML document to ensure that the page responds on mobile devices. 
+
+If you forget to include this tag, it will **not** render properly on a mobile device.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+* `name=”viewport”` differentiates it from other meta tags
+* `viewport` gives the browser information about the sizing abilities of the site
+* `content` provides info about the viewport, separate key value pairs with a comma
+* `width=value` sets the width of the web page
+* `initial-scale` is the zoom value at which the site is zoomed in/out by default
+* `user-scalable=no` (not shown in example tag above) will limit users from being able to zoom in
+* `minimum-scale, maximum-scale` will limit how far in or out a user is allowed to scale/zoom
+
+## Media queries
+
+Media queries allows you to apply CSS to your document only when the screen has reach a certain size (also referred to as a breakpoint).
+
+Basic media query:
+
+    @media (max-width: 940px) {
+      /* CSS for that screen size goes here */
     }
 
-    input[type="checkbox"] {
-      margin-right: 5px;
+The above example targets a browser with the maximum width of 940px (anything equal or less than 940px).
+
+All rules for a specific screen size is required to be nested *within* the media query.
+
+    @media (max-width: 940px) {
+      body {
+        background: red;
+      }
+      h2 {
+        font-size: 20px;
+      }
     }
 
-Here are a couple of tricks to keep in mind though: 
+You can also use `min-width` in media queries.
 
-1. Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change include the border, padding, background, color and font-size. 
-2. Form elements usually come with an 'outline' when they are selected. This state is called "focus". Remember when we learned about hover states? Focus states can be targeted in the same way using CSS Pseudo-classes. The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it. 
-
->Give it a try based on the example below:
-
-    input:focus {
-      outline: red;
+    @media (max-width: 940px) {
+      /* any screen 940px and below */
+    }
+    @media (min-width: 941px) {
+      /* any screen 941px and above */
     }
 
-> ## Exercise: Style Your Form
+> Why do you think 941px was used for min-width instead of 940px?
+
+
+To limit the CSS to a range of pixel values, use a combination of `min-width` and `max-width`. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.
+
+    @media (min-width: 768px) and (max-width: 940px) {
+
+    }
+
+The above media query will only be applied when the width of the browser is greater or equal to 768px **and** less or equal to 940px.
+
+
+### Height
+
+Most responsive techniques target width but it is possible to target device heights.
+
+    @media (min-height: 568px) {
+      /* anything as high or higher than the iPhone 5 */
+    }
+
+Height and width can also be used together in the media query:
+
+    @media (min-height: 568px) and (min-width:320px) {
+      /* anything as high or higher than the iPhone 5 */
+    }
+
+**Note:** Relying on height-based media queries can be inconsistent and most of the time, it's better to let the content flow downward as the width of the device gets smaller. 
+
+### Common breakpoints
+
+    320px — Mobile portrait
+    480px — Mobile landscape
+    600px — Small tablet
+    768px — Tablet portrait
+    940px - 1024px — Tablet landscape, netbook, small desktop
+    1280px & greater — Desktop
+
+These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
+
+>## EXERCISE: Basic Media queries
 >
->Take a look at some examples of styled [forms in CodePen](https://codepen.io/search/pens/?limit=all&page=2&q=forms) for inspiration and style your form! 
-  
-#### Resources
+> Download <a href="exercises/module3/media-queries.html" download>media-queries.html</a> and open it in your editor.  
+>
+> In the `<head>` section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
+> Change the background color and test it to make sure it works!
+>
+>**Bonus:** Try using `min-width` or a combination of `min-` and `max-width` to create a range.
 
-* [CSS Pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
-* [Customize a Google Form for Your Website](http://codepen.io/learningcode/post/customize-a-google-form-for-your-website)
+## RWD Best Practices
+
+Try not to use too many breakpoints. Two to four works, maybe up to six for complex designs.
+ 
+If you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.
+
+When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.
+
+    .wrapper {
+      max-width: 1140px;
+      font-family: helvetica, arial, sans-serif;
+      background: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 940px) {
+      .wrapper {
+        max-width: 900px;
+        padding-top: 10px;
+      }
+    }
+
+### Testing Mobile in the Browser
+
+When creating mobile friendly sites, it’s always best to test on an actual device. However, there are a lot of interesting tools available to allow us to test in the browser. 
+
+Chrome has an emulator built right into the dev tools!
+
+![]({{ site.img }}/module3/chrome-emulator.png)
+
+There are also many many other tools, [free](http://lab.maltewassermann.com/viewport-resizer/) and [paid](https://www.browserstack.com/responsive), available for testing and emulating multiple devices and device sizes.
+
+
+>## EXERCISE: Responsive Web page
+> Download the responsive exercise [here](exercises/module3/responsive.zip) (zip file). This also includes the solutions file. 
+> 
+> Follow the instructions in the comments in the `<head>` of **responsive.html** to make the 3 columns fluid and responsive.
+
+
+
+>## EXERCISE: Making Your Website Responsive
+> Continue working on your website's layout.If you have it working on desktop,try creating some media queries to improve the layout on different widths. 
+>**Don't forget your Viewport Metatag!**
+>
+>Does your website design call for any background images? Go ahead and try it out on your project! 
 
 ~ End ~
-
-
-
-
-
-
-

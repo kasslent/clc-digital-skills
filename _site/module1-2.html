@@ -248,10 +248,6 @@ attribute values. Multiple declarations can be contained in the value.</p>
 </code></pre>
 </div>
 
-<blockquote>
-  <p>Let’s try it out! Download the exercise file <a href="exercises/module1/reference-css.html" download="">here</a>.</p>
-</blockquote>
-
 <h3 id="internal-css">Internal CSS</h3>
 
 <p>Included in the <code class="highlighter-rouge">&lt;head&gt;</code> (not <code class="highlighter-rouge">&lt;header&gt;</code>) with a <code class="highlighter-rouge">&lt;style&gt;</code> <em>tag</em>.</p>
@@ -278,12 +274,6 @@ attribute values. Multiple declarations can be contained in the value.</p>
 </code></pre>
 </div>
 
-<blockquote>
-  <p>Go back to <strong>reference-css.html</strong> and try adding some internal CSS.</p>
-
-  <p>Be sure to remove the inline CSS or it will <em>override</em> the internal styles.</p>
-</blockquote>
-
 <h3 id="external">External</h3>
 
 <p>This method links to a separate stylesheet file (uses a <code class="highlighter-rouge">.css</code> file extension) to separate the CSS from the HTML document.</p>
@@ -305,9 +295,9 @@ attribute values. Multiple declarations can be contained in the value.</p>
   <h2 id="class-exercise">Class exercise</h2>
   <p>Back in the text editor, create a new CSS file.  (<strong>File &gt; New File</strong> or <strong>ctrl/cmd + N</strong>)</p>
 
-  <p>Some common file names are “global.css”, “main.css”, custom.css”, “project-name.css”, “styles.css”, etc.</p>
-
-  <p>Next, add it to <strong>index.html</strong> using the <code class="highlighter-rouge">&lt;link&gt;</code> tag.</p>
+  <p>Some common file names are “global.css”, “main.css”, custom.css”, “project-name.css”, “styles.css”, etc.
+Be sure to save it inside the same project folder that your index.html file from last week is in. You can create a css folder if you want or just leave the css file right next to index.html.
+Next, add it to <strong>index.html</strong> using the <code class="highlighter-rouge">&lt;link&gt;</code> tag.</p>
 
   <div class="highlighter-rouge"><pre class="highlight"><code>&lt;link rel="stylesheet" href="css/styles.css"&gt;
 </code></pre>
@@ -427,6 +417,242 @@ Add the same <code class="highlighter-rouge">class</code> from step 3 to a link 
 
 <p>If you want even more practice with selectors, try this game: <a href="http://flukeout.github.io/">http://flukeout.github.io/</a></p>
 
+<h2 id="typography">Typography</h2>
+<p>Good writing and good typography can help your reader understand your message more clearly.</p>
+
+<p><strong>Typography</strong> is the art of arranging type to engage and guide your readers.</p>
+
+<p><strong>Typeface</strong> is what you think of when you think of Font. It is a set of fonts or a font family that is designed with common characteristics and features.</p>
+
+<p><strong>Font</strong> is the individual font file that is part of the font family or typeface.</p>
+
+<p>For example, <em>Helvetica Neue</em> is the <strong>typeface</strong>. It is a font family which contains many <strong>font</strong> files from <em>Helvetica Neue Ultra Light</em> to <em>Helvetica Neue Extra Bold</em>. The decision to set your type in <em>Helvetica Neue</em> and how you arrange it on the page is <strong>typography</strong>.</p>
+
+<h2 id="type-classification">Type Classification</h2>
+
+<p><img class="right" src="assets/img/module2/serif.jpg" /></p>
+
+<h3 id="serif-typefaces">Serif Typefaces</h3>
+
+<ul>
+  <li>distinguished by the little “feet” or “hats” at the bottom or top of the letters</li>
+  <li>grew out of the hand-lettering of scribes and roman or blackletter calligraphic writing.</li>
+</ul>
+
+<hr class="clear" />
+
+<p><img class="right" src="assets/img/module2/sansserif.jpg" /></p>
+
+<h3 id="sans-serif-typefaces">Sans Serif Typefaces</h3>
+
+<ul>
+  <li>just like the name implies–no serifs at the end of the strokes</li>
+  <li>most are monoweight</li>
+  <li>the strokes of the letterform appears to be all one weight</li>
+</ul>
+
+<hr class="clear" />
+
+<blockquote>
+  <p>Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes.</p>
+
+  <p>Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs.</p>
+
+  <p>Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need.</p>
+</blockquote>
+
+<p><img class="left" src="assets/img/module2/script.jpg" /></p>
+
+<h3 id="script-typefaces">Script Typefaces</h3>
+
+<ul>
+  <li>appear to be hand-lettered with a calligraphy pen, brush or pencil or pen</li>
+  <li>use script typefaces sparingly and appropriately for your content</li>
+  <li>can be unreadable in small sizes, all caps and long blocks of text</li>
+</ul>
+
+<hr class="clear" />
+
+<p><img class="left" src="assets/img/module2/decorative.jpg" /></p>
+
+<h3 id="decorative-typefaces">Decorative Typefaces</h3>
+
+<ul>
+  <li>have the characteristic of being very distinct in their style</li>
+  <li>not great for long blocks of text, may become too consuming and unreadable</li>
+  <li>can be great for decorative touches and add character to a design</li>
+</ul>
+
+<p>Most decorative typefaces are one offs containing just one font file.</p>
+
+<h2 id="tips-for-selecting-and-pairing-fonts">Tips for Selecting and Pairing Fonts</h2>
+
+<ul>
+  <li>Personality
+    <ul>
+      <li>select fonts to reflect your personality, tone of voice and/or your brand</li>
+    </ul>
+  </li>
+  <li>Readability
+    <ul>
+      <li>choose fonts that are easy to read</li>
+      <li>try them in various sizes, weights and styles</li>
+    </ul>
+  </li>
+  <li>Contrast
+    <ul>
+      <li>when pairing fonts, strive for sufficient contrast</li>
+      <li>choose typefaces of different types or styles</li>
+      <li>contrast with a serif and a sans serif, or</li>
+      <li>a thick condensed sans-serif with a thin sans-serif</li>
+    </ul>
+  </li>
+  <li>Flexibility
+    <ul>
+      <li>Select fonts that have multiple styles to give you the most flexibility</li>
+    </ul>
+  </li>
+  <li>Clarity
+    <ul>
+      <li>select only one or two typefaces for your content</li>
+      <li>too many typefaces may make your design unclear</li>
+    </ul>
+  </li>
+  <li>Completeness
+    <ul>
+      <li>look for fonts that have a complete character set</li>
+      <li>pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc</li>
+      <li>missing characters may be a sign of an incomplete and poorly designed font</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="resource">Resource</h4>
+<p><a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm">Chrome extension</a> for finding out what fonts are used on any website.</p>
+
+<h2 id="typefaces-css-and-the-web">Typefaces, CSS and the Web</h2>
+
+<h3 id="web-safe-fonts">Web Safe Fonts</h3>
+
+<p>Fonts that are considered to be “web safe” refer to pre-installed fonts on a computer or device.</p>
+
+<p>Because not all operating systems have the same fonts installed, use a font <em>stack</em> in your CSS to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.</p>
+
+<p>See examples of web safe fonts here:</p>
+
+<ul>
+  <li><a href="http://www.webdesigndev.com/16-gorgeous-web-safe-fonts-to-use-with-css/">16 Gorgeous Web Safe Fonts To Use With CSS</a></li>
+  <li><a href="http://www.cssfontstack.com">cssfontstack.com</a></li>
+</ul>
+
+<h3 id="css-font-family">CSS <code class="highlighter-rouge">font-family</code></h3>
+
+<p>In CSS, to change the default typeface, use the <code class="highlighter-rouge">font-family</code> property.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+</code></pre>
+</div>
+
+<ul>
+  <li>best practice is to list at least 2 options</li>
+  <li>first font is the primary choice</li>
+  <li>alternative fonts are declared in order of preference and separated by a comma</li>
+  <li>font names with two or more words should be wrapped in quotation marks (single or double quotes)</li>
+  <li>last font should be the generic option</li>
+</ul>
+
+<h4 id="generic-fonts">Generic fonts</h4>
+
+<ul>
+  <li>sans-serif</li>
+  <li>serif</li>
+  <li>cursive (script fonts)</li>
+  <li>fantasy (decorative fonts)</li>
+  <li>monospace (fixed width fonts)</li>
+</ul>
+
+<h3 id="custom-fonts">Custom Fonts</h3>
+
+<h4 id="free-vs-premium-fonts">Free vs. Premium Fonts</h4>
+
+<p>There are thousands of fonts available to download and use beyond the default web safe fonts.</p>
+
+<p>Free fonts:</p>
+
+<ul>
+  <li>free, no cost to use (sometimes free for personal use but need to be paid for commercial use)</li>
+  <li>may have missing characters</li>
+  <li>limited in the number of styles (generally one or two styles)</li>
+  <li>are commonly used</li>
+</ul>
+
+<p>Premium fonts:</p>
+
+<ul>
+  <li>can be costly; prices vary</li>
+  <li>typically better quality and elegantly designed</li>
+  <li>have a complete character set</li>
+  <li>usually have multiple styles</li>
+  <li>more exclusive and unique</li>
+</ul>
+
+<h3 id="font-resources">Font Resources</h3>
+
+<ul>
+  <li>Google Fonts is a great source of quality &amp; free fonts for the web - <a href="https://www.google.com/fonts">https://www.google.com/fonts</a></li>
+  <li>Google Font pairing resource - <a href="http://femmebot.github.io/google-type/">http://femmebot.github.io/google-type/</a></li>
+  <li>Typekit is a Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <a href="http://typekit.com/">http://typekit.com/</a></li>
+  <li>Fonts.com has a wide library of premium fonts to choose from including a web font delivery service - <a href="http://www.fonts.com/">http://www.fonts.com/</a></li>
+  <li>Monotype has a history of providing quality premium fonts - <a href="http://www.monotype.com/">http://www.monotype.com/</a></li>
+</ul>
+
+<h2 id="google-fonts">Google Fonts</h2>
+
+<p><a href="https://www.google.com/fonts">Google Fonts</a> is a free service. You can link directly to their CSS files, making the fonts available to your site visitors and does not rely on system installed fonts. To use:</p>
+
+<ol>
+  <li>Go to <a href="https://www.google.com/fonts">Google Fonts</a>.</li>
+  <li><strong>Click on the red and white plus sign</strong> to select a font.
+<img src="assets/img/module2/google-fonts-1.jpg" alt="" /></li>
+  <li>In the drawer that appears at the bottom of the page, customize your selections.
+<img src="assets/img/module2/font-review.jpg" alt="" /></li>
+  <li>Be sure to avoid a heavy load!<br />
+<img src="assets/img/module2/load-time.png" alt="" /></li>
+  <li>Copy the <code class="highlighter-rouge">&lt;link&gt;</code> code snippet in the embed tab and add it to the <code class="highlighter-rouge">&lt;head&gt;</code> of your page to reference their CSS.</li>
+</ol>
+
+<p><img src="assets/img/module2/embed-font.png" alt="" /></p>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Website Title&lt;/title&gt;
+  &lt;link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'&gt;
+  &lt;link rel="stylesheet" href="css/styles.css"&gt;
+&lt;/head&gt;
+</code></pre>
+</div>
+
+<p>Now you can use these new fonts with the <code class="highlighter-rouge">font-family</code> property, using the font name listed in the example on the Google Fonts page.</p>
+
+<p><img src="assets/img/module2/specify-font.png" alt="" /></p>
+<blockquote>
+  <h2 id="exercise-google-fonts">EXERCISE: Google Fonts</h2>
+  <ol>
+    <li>Choose two fonts from <a href="https://www.google.com/fonts">Google Fonts</a> to use for the typography exercise.</li>
+    <li>Open up your style.css project file.</li>
+    <li>Add the Google Fonts CSS file to the head.<br />
+      <h3 id="follow-the-following-instructions">Follow the following instructions:</h3>
+    </li>
+    <li>Using the ‘body’ selector, set the font family to your first Google font choice.</li>
+    <li>For the h1 &amp; h2 headings only, set the font family to your second Google font choice.</li>
+    <li>Review the answers together!</li>
+  </ol>
+
+</blockquote>
+
 <h2 id="workflow-tips--tools">Workflow Tips &amp; Tools</h2>
 <ul>
   <li>Use a service like <a href="https://db.tt/eCZX3yo">Dropbox</a> or <a href="https://www.google.ca/drive/">Google Drive</a> to sync and save your work in the cloud.</li>
@@ -439,6 +665,104 @@ Add the same <code class="highlighter-rouge">class</code> from step 3 to a link 
     </ul>
   </li>
   <li><a href="https://pixlr.com/">Pixlr</a> is a free image editing tool.  This will coming handy for cropping and manipulating image files.</li>
+</ul>
+
+<h2 id="more-css-typography">More CSS typography</h2>
+
+<h3 id="font-weight--font-style"><code class="highlighter-rouge">font-weight</code> &amp; <code class="highlighter-rouge">font-style</code></h3>
+
+<p>Remember, use HTML for <em>meaning</em> and CSS for <em>presentation</em>. It doesn’t matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>font-weight: bold; /* makes text bold */
+font-weight: normal; /* removes bold style */
+</code></pre>
+</div>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>font-style: italic; /* sets text to italic */
+font-style: normal; /* removes italic style */
+</code></pre>
+</div>
+
+<h3 id="text--properties"><code class="highlighter-rouge">text-</code> properties</h3>
+
+<p><strong><code class="highlighter-rouge">text-align</code></strong><br />
+Used for aligning text and accepts five values: <code class="highlighter-rouge">left</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">justify</code> and <code class="highlighter-rouge">inherit</code>.</p>
+
+<p><strong><code class="highlighter-rouge">text-decoration</code></strong> <br />
+Most commonly used to add or remove underlines but accepts these five values: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">underline</code>, <code class="highlighter-rouge">overline</code>, <code class="highlighter-rouge">line-through</code> and <code class="highlighter-rouge">inherit</code></p>
+
+<p><strong><code class="highlighter-rouge">text-transform</code></strong><br />
+Accepts five values: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">capitalize</code>, <code class="highlighter-rouge">uppercase</code>, <code class="highlighter-rouge">lowercase</code> and <code class="highlighter-rouge">inherit</code>.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">capitalize</code> capitalizes the first letter of each word</li>
+  <li><code class="highlighter-rouge">uppercase</code> value will capitalize every letter</li>
+  <li><code class="highlighter-rouge">lowercase</code> value will make every letter lowercase</li>
+</ul>
+
+<p>Note that when a CSS property accepts <code class="highlighter-rouge">inherit</code> as a value, it will inherit the style set in either the parent or nearest ancestor element. <code class="highlighter-rouge">none</code> usually removes the style defined by that property.</p>
+
+<blockquote>
+  <h2 id="class-exercise-typography--codepen">CLASS EXERCISE: Typography &amp; CodePen</h2>
+  <p>Let’s try out the above typography based CSS properties. Use this example on <a href="http://codepen.io/learningcode/pen/yYpNej?editors=110">CodePen</a> to experiment.</p>
+
+  <p><a href="http://codepen.io">CodePen</a> is basically a “sandbox” to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and “fork” (save a copy) and edit pens by other users.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-type---font--properties">EXERCISE: <code class="highlighter-rouge">type-</code> &amp; <code class="highlighter-rouge">font-</code> properties</h2>
+  <p>Back in <strong>style.css</strong> of your project, complete the following:</p>
+  <ol>
+    <li>Change the font weight of the h1 heading.
+      <ol>
+        <li>Italicize the h2 heading.</li>
+        <li>Make the text in the h2 heading all uppercase.</li>
+        <li>Center align all the text in the footer.</li>
+      </ol>
+    </li>
+  </ol>
+</blockquote>
+
+<p>These are just a few type related CSS properties.  We’ll be going over more in future lessons.</p>
+
+<h2 id="bonus-font-face">Bonus: <code class="highlighter-rouge">@font-face</code></h2>
+
+<p>The <code class="highlighter-rouge">@font-face</code> CSS3 method can be used to embed and load fonts files that are not <em>hosted</em> online like Google Fonts.  These font files are downloaded and included in your folder directory.</p>
+
+<p><code class="highlighter-rouge">@font-face</code> must be declared in your CSS files first <em>before</em> you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@font-face {
+  font-family: 'Font Name';
+  src: url('file-path/font-file.woff2') format('woff2'),
+       url('file-path/font-file.woff') format('woff');
+}
+</code></pre>
+</div>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>font-family: 'Font Name', second-option, sans-serif;
+</code></pre>
+</div>
+
+<p>This snippet links the font files to the CSS, as well as declares a <code class="highlighter-rouge">font-family</code> name.</p>
+
+<p><em>Pro tip!</em> <br />
+You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.</p>
+
+<blockquote>
+  <h2 id="class-exercise-apply-styles-to-your-project">CLASS EXERCISE: Apply Styles to Your Project</h2>
+  <ol>
+    <li>Continue adding typography properties and colour to your project.</li>
+  </ol>
+</blockquote>
+
+<h3 id="extra-resources-1">Extra Resources</h3>
+
+<ul>
+  <li><a href="https://css-tricks.com/snippets/css/using-font-face/">CSS Tricks</a> - more about <code class="highlighter-rouge">font-face</code> and older browser support</li>
+  <li><a href="http://www.fontsquirrel.com/">Font Squirrel</a> - free fonts for downloads and <code class="highlighter-rouge">@font-face</code> generator (for creating cross-browser font file types)</li>
+  <li><a href="https://developers.google.com/fonts/docs/getting_started">Google Fonts: Getting Started</a></li>
 </ul>
 
 <p><br />

@@ -2,375 +2,182 @@
 layout: lessons
 module: 3
 lesson: 1
-title: CSS Fundamentals
-description: CSS selectors, block and inline elements, and the Box Model.
+title: Design
+description: Intro to Design, creating a brand, mood board, logo, design mockup, working with a grid
 permalink: module3-1.html
 ---
 
-
-In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let's do a review and look at a few more.
-
-
-## Type, class and id Selectors
-
-**Type selectors** target HTML elements by their element tag name. 
-
-    p {
-      /* targets all paragraphs */
-    }
-
-**Class selectors** are added using a class *attribute* to any element. 
-
-Remember, any *attribute* is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.
-
-    <p class="special">This is a special paragraph</p>
-
----
-    
-    .special {
-      /* applies to any element with this class */ 
-    }
-    p.special {
-      /* more specific - applies only to paragraphs with this class */
-    }
-
-**ID selectors** can be used only once per page and is reference in the CSS using the number/hash symbol (`#`).
-
-    #about {
-      /* applies to any element with this id */ 
-    }
-    section#about {
-      /* more specific - applies only to a section element with this id */
-    }
-
-## Descendant Selectors
-Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
-
-    <parent>
-      <child>
-        content here
-      </child>
-    </parent>
-    
----
-    parent child {
-      /* targets only the child elements contained in that parent */
-    }
-
----
-
-    <ul>
-      <li><a href="#">link 1</a></li>
-      <li><a href="#">link 2</a></li>
-      <li><a href="#">link 3</a></li>
-    </ul>
-    
----
-    ul li a {
-      color: blue;
-    }
-
-In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.
-
-You can even "skip" an element. The below example will work as well.
-
-    ul a {
-      color: blue;
-    }
-
-### Descendant Selectors and Specificity
-A good rule of thumb for descendant selectors is to avoid going more than **three** levels deep.  Browsers read selectors from right to left and work its way up the [DOM](http://www.w3.org/TR/WD-DOM/introduction.html) tree.  Having many selectors can impact the site performance.
-
-#### Yes
-    p a {
-      /* targets anchor link tags nested inside of a p tag */
-    }
-    .about p {
-      /* targets paragraphs within an element with the .about class*/
-    }
-
-#### No!
-    .about ul li a span {
-      ...
-    }
-
-Also, a more *specific* selector will override the descendant selector, regardless of written order in the CSS file.
-    
-    ul a {
-      /* least specific */
-    }
-    ul li a {
-      /* more specific */
-    }
-    ul.nav li a {
-      /* most specific */
-    }
+Congratulations! You've come so far in the last 2 weeks. You created your first website, for starters! Plus you can now use so many new amazing web tools to create beautiful things. Now we're going to create another website, but this time we'll start one step back from when we started before. We'll start with an exploration of web design and branding.
 
 
-## Combining selectors
-You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a *comma*. Any type of selector can be combined.
+## Creating our brand
+Before setting out to build a website, you need to have a good understanding of your client's needs. For the next two classes, answer these questions for your own personal website or business, OR for a fictitious business you want to use for fun. Then ask your client (or pretend client) the following questions: 
 
-    .special, #special {
-      color: red;
-    }
-    h1, h2 {
-      text-transform: uppercase;
-    }
-    header h1, h2 {
-      text-transform: uppercase;
-    }
+1. What does the business do? 
+1. Who is their target audience?
+1. What is the purpose of the website, OR what do they want visitors to do on the website. e.g. Sign up for a newsletter, donate, request a quote, purchase products, etc...  
+1. Who are competitors of the business and what are their websites like? Describe the website's feel and tone. 
+1. How is your client unique or different than the competitors? In other words, what's their value proposition as a business? 
+1. Do you think the competitors attract the demographic they want to attract well? How so? 
+1. What look and field do you think will attract their clients? Describe it with 5 adjectives.  
 
-> What is the difference is between combining `h1, h2` and `header h1, h2`?
+## EXERCISE: Mood Board
 
-## Pseudo-class Selectors
+1. Based on your answers to the questions above, we will create a Mood Board. This will help us flesh out our website design. 
+1. You will use the adjectives, the target demographic and the comparative analysis you did of competitors' websites to inspire your mood board choices. 
+1. Our mood board will contain a sampling of images, typography and a colour palette to inform our web design choices later on. 
+<img src="assets/img/module3/moodboard.jpg" alt="moodboard">
+1. Go to pixlr and open up the editor that we used for image resizing last week. 
+1. You will create a new "image" sized 600px by 800px.
+1. Now that you have a blank page you will start by selecting at least 3 photographs from thestocks.im that capture the feel of the brand your designing for. 1. Next, open up each of those images and crop them so that they are square and no larger than 200px by 200px. 
+1. Back in your blank moodboard pixlr project you will open up each of those images and place them side by side. To do this, head on over to Layer from the main menu and select **Open Image As Layer**. Line them up side by side at the top of the file. 
+1. Create a new layer to add your company name over the images. 
+1. Go to adobe.color.com and select or create a colour palette to go with your brand. Pro Tip: click on the camera icon to automate a palette from one of your photographs! 
+1. Create one layer per swatch and using the shape drawer, draw squares for each of your colours. Fill them in using your palette colours and the pain can. 
+1. Create a new layer for your Font Families. Visit [fonts.google.com](http://fonts.google.com) if you're not sure what to choose. 
+1. In the new layer, add the name of your fonts and a sample of text written in them. Google fonts should automatically load on Pixlr. 
+1. Save your moodboard file. We'll come back to it after we create our logo. 
 
-Pseudo-class selectors target an elements *state* or *action*. The most commonly used pseudo-class is `:hover`.  Note the syntax. It must start with a colon (`:`) and be attached to an HTML element, with no white-space.
+## Logos
+Logos are an iconic representation of our brand. Creating logos can be an artform onto themselves. 
 
-    <a href="#">Example link</a>
-
----
-    a { 
-      color: red;
-    }
-    a:hover { 
-      color: black;
-    }
-
-### Pseudo Class & links
-
-`:hover` - selects the link on mouse hover.  
-&nbsp; Can also be used to create hover effects for elements other than an `<a>`.
-
-`:link` - links that have *not* been clicked/visited
-
-`:visited` - links that *have* been clicked/visited in the the current browser
-
-`:active` - selects the link while it is being activated/clicked.
-
-
-<br>
-There are **many** more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.
-
-
->## EXERCISE: Selectors
+If we had a lot of time we could spend hours brainstorming with doodles of possible avenues we could take for our logo. We have to make sure to capture what the company is about or the general feel, without copying a logo that already exists. This can be very challening! 
+Another challenge may come in if you're not great at drawing. 
+So today, we're going to pick an icon as our logo from the vast library of The Noun Project. And we'll tweak it a bit in Pixlr to make it our own. 
+> 
+## EXERCISE: Creating our Logo
 >
->Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
->
->All the instructions are contained in the comments at the very top of `selector.html`.
+> 1. Spend 5-10 minutes thinking about what symbolic representations of your business may work as a logo. 
+1. Go to [nounproject.com](http://nounproject.com) and choose a symbol that resembles what you're going for. Pick more than one if you want to combine them. 
+1. Download the icon and open it up in Pixlr. 
+1. Play around with colouring it if you want using the paint can. 
+1. Go to Layers>Layers Style>Drop Shadow for a cool effect. 
+1. When you are satisfied with your logo, save it as a png. Make sure it's sized properly and not huge. 200px wide, max. 
+1. Add the logo as a layer to your Moodboard. 
+1. Now, save the moodboard file in your exercise folde as a pixlr file and as a jpg. Then,  you'll always have it to reference when designing your website. 
 
+## Web Design vs Web development
 
-## Block vs Inline Elements
+**Web *design*** and **web *development*** are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.
 
+In a nutshell, web *design* is about creating the visuals. Web *development* turns those visuals into code, to be able to display it in a web browser.
 
-Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
+There are even further specializations, such as back-end developers, front-end developers and interaction designers, just to name a few.
 
+The moodboard we created is a small version of what in web development we call a styleguide. Check out some great style guides below:
 
-Block level HTML elements default behavior:
+### Extra Resources
 
-* takes up 100% width of its container, no matter how long the actual content is
-* will be the same height as its content
-* always starts on a new line
-* can wrap other block level elements or inline elements
-* can apply sizing related CSS to it (margin, padding, height, width)
-* examples: `<p>`, `<div>`, `<ul>`
+* [Mailchimp brand guide](http://mailchimp.com/about/brand-assets/)
+* [Gov.uk web guidelines](http://govuk-elements.herokuapp.com/)
 
-Inline level HTML elements default behavior:
 
-* will be the height and width of its content
-* always appears "in a line" with other inline level elements
-* can wrap other inline elements but cannot wrap block level elements *except* `<a>` tags.  This is only valid with an HTML5 doctype.
-* does not render CSS height and width at all, will apply margin and padding but with unexpected results
-* examples: `<a>`, `<span>`
+## What is Design?
 
-<br>
-**Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
+Design is problem solving. In web design, the problem to be solved is how to effectively communicate the content. 
 
-<div style="background:lightblue;">this is a div</div>
+Design uses a combination of type, color, images and form to present content in a clear and concise manner that is visually appealing and reiterates the ideas we want to communicate.
 
-<span style="background:lightgreen;">this is a span</span>
 
+### What Makes Good Design?
 
-## CSS Display
+1. Clear - the content is easy to read and the graphics and colors support the ideas
+1. Concise - content is presented in a concise manner and you can navigate the website to find the content you need easily
 
-CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today: 
+> What are some of your favorite websites? Let's look at a few different sites and compare designs.
 
-* `block` - makes inline elements display as block elements
-* `inline` - makes block elements display as inline-block
-* `inline-block` - best of both worlds
 
-This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
+## Purpose and Organizing Content
+What do you want your website to do? Who is your target audience? What is the purpose of the website?
 
-### Resource 
+When thinking about how to organize and arrange the content on your website, think about how your eyes navigate a web page. Our eyes tend to gravitate to larger elements first, such as: 
 
-[CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
+* large images
+* large text
+* blocks of color
 
+Then we narrow in on interesting blocks of content to further explore in detail. 
 
+Use the layout of your website to guide the viewer’s eye and provide a clear path for viewers.
 
-## Box Model Review
+> Based on purpose and organization, how would a photographers website differ from a news outlet?
 
-The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  Let's do a review and then dive a little deeper!
+## Layout Tips
 
-* the browser looks at HTMLs element as a square/rectangular box
-* the box model describes the way CSS handles the size and spacing of HTML elements
-* `width` - change the default width
-* `height` - change the default width
-* `margin` - add or remove default space around the element
-* `padding` - add or remove default space inside the element
-* `border` -  add a border around the element
+### Size
 
-### Seeing it all together
+* vary the size of your content areas to guide the viewer 
+* large content areas can be used to indicate prominent information
+* less important information are given smaller areas
+* create a visual hierarchy of importance
 
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px; 
-    border: 5px solid black;
+### Alignment
 
-<div style="width:80%;margin:50px auto;padding:40px;border:5px solid black;">
-  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+* aligning items relative to each other makes visual connections
+* helps users understand the content flow and navigate more easily
 
+### Space
 
-### Width & Height
+* make sure there is enough space around your content
+* spacing enhances the readability of your content
+* *consistent* spacing adds balance and harmony to your design
+* gives content space to breathe, less clutter
 
-The `width` & `height` properties can be used to set specific heights and widths to only *block* level elements.  It won't work for *inline* level elements unless you use `display` to change it to `block` or `inline-block`.
 
-### Padding
+## Designing with a Grid
 
-The `padding` property adds/removes space *inside* of the element. It only accepts positive numerical values.
+A popular technique for design layouts is to use a grid. A grid provides:
 
-    /* longhand */
-    padding-top: 2px;
-    padding-right: 2px;
-    padding-bottom: 2px;
-    padding-left: 2px;
+* consistent structure
+* helps to create visual hierarchy
+* flexibility in design
 
-    /* shorthand */
-    padding: 2px; /* same on all sides */
-    padding: 2px 10px; /* top & bottom, right & left */
-    padding: 2px 10px 5px; /* top, right & left, bottom */
-    padding: 2px 2px 2px 2px; /* top right bottom left */
+### Using a Grid
 
-<p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
-<p style="background:lightgreen;padding:20px;">This is a paragraph with padding.</p>
+Using software like Pixlr or just paper & pencil:
 
-When adding padding to an *inline* element it will look like the below example.
-<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
-<a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a>
+* divide up the width of your page into equal width columns
+* include equal space between each column (a gutter), for breathing room
+* use the grid to mark areas for the different pieces of content
 
-<br>
-Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property. 
+Though you can use any number of columns, a 12 column grid is common because it can divide easily into 1, 2, 3, 4, 6, 12.  This is handy for responsive designs (can adapt to different screen sizes).
 
-More on this in the upcoming exercise.
+Here's a handy tool for creating a grid: [Grid Calculator](http://gridcalculator.dk/)
 
-### Margin
-Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. 
+Using graph paper can also help layout columns and gutters when doing a hand drawn sketch. Here are some examples: <http://bit.ly/1KbJbfZ>
 
-    /* longhand */
-    margin-top: 2px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-    margin-left: 2px;
 
-    /* shorthand */
-    margin: 2px; /* same on all sides */
-    margin: 2px 10px; /* top & bottom, right & left */
-    margin: 2px 10px 5px; /* top, right & left, bottom */
-    margin: 2px 2px 2px 2px; /* top right bottom left */
-    
-<p style="background:lightblue;margin:0px;">This is a paragraph without margin.</p>
-<p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
+### Page Layouts with Grids
 
-Just like padding, margin and spacing is not applied the same way to block and inline elements.
+Some content blocks may span multiple columns, others may span only one. Not every page component needs to fit into the grid dimensions either.
 
-<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
-<a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a>
+For example, the [Food Sense Blog website]({{ site.img }}/module2/grid-fs.jpg) uses the 12 column grid to organize the content in different ways. 
 
+In this article, [15 Reasons Why A Grid Based Approach Will Improve Your Designs](https://designschool.canva.com/blog/grid-design/), you can see even more ways to lay out content with a wide variety of grids.
 
-> ## Class Exercise: Box Model & `display`
-> In this [Codepen](http://codepen.io/learningcode/pen/vNRadg), let's try the different `display` property values and see how it affects inline & block HTML elements.
+#### Resources
 
+* [Grid Calculator](http://gridcalculator.dk/)
+* [Grid Based Web Design Resources](http://www.awwwards.com/grid-based-web-design-resources.html)
+* [Wireframe tools](http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302)
 
-## Margin & Negative values
 
-Margin also accepts negative values.  This will nudge it just outside of its stacked position.
+>## EXERCISE: Sketch a website layout
+>1. Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. Be sure to refer to the content for your website that you worked on in our first class. You will now explore what you want this content to look like on the page.s
+1. Next, you can choose to create a more polished design in Pixlr using your knowledge of layers, to bring your design to life. Or, you can design the website in the browser using inspect tools and your mood board as you go along coding your site. It's up to you! If you're going to use Pixlr, you can start now. 
+>Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
+>Pro Tip: If you plan to bring your design to life in Pixlr download this <a href="exercises/module3/grid.jpg" download>grid image to layer your design over inside of Pixlr.</a>
 
-<p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
-<p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
-
-## Center Aligning with `margin`
-The margin property can also be used to center align *block* level elements. 
-
-First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
-
-    div {
-      background: lightblue;
-      width: 600px;
-      margin: 0 auto; /* 0 on the top & bottom, auto on the left & right */
-    }
-
-<div style="width:600px;margin: 0 auto;background:lightblue;">
-  <p>Auto aligned!</p>
-</div>
-
-<br>
-But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?
-
-![]({{ site.img }}/module3/content-align.jpg)
-
-
-In the previous lesson, a wrapper was included around all of the page content.  
-
-But to create a style where different background styles apply to each section, we'll need to:
-
-* create a wrapper, just for the content, not the whole page
-* auto align the content wrapper
-* use the outer container for the background styles
-
->Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
-
-
-## The Box Model Problem and Fix
-
-In CSS ,the relationship between the width, padding and border properties is not always straightforward.
-For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:
-
-480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width
-
-But, there's a fix! Let's first compare how the element's sizing differs with and without the fix, looking at the CSS example below.
-
-    background: lightblue;
-    width: 480px;
-    padding: 0px 20px;
-    border: 15px solid green;
-
-<div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
-  <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
-</div>
-
-<div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
-  <p>This example DOES have the border box fix.</p>
-</div>
-
-
-<br>
-Notice that without the fix, the element is larger than the set `width`.
-
-The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.
-
-Here is the snippet:
-
-    /* apply a natural box layout model to all elements, but allowing components to change */
-    html {
-      box-sizing: border-box;
-    }
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
-
-Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
-
+**Note that many of the CSS techniques for creating page layout styles will be covered in Module 4.**
 
 <br>
 ~ End ~
+
+
+
+
+
+
+
 
 

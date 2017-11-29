@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>CSS Fundamentals</title>
-  <meta name="description" content="In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let’s do a review and look at a few more.">
+  <title>Design</title>
+  <meta name="description" content="Congratulations! You’ve come so far in the last 2 weeks. You created your first website, for starters! Plus you can now use so many new amazing web tools to ...">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -37,415 +37,200 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 3, Lesson 1</h3>
-        <h4>CSS Fundamentals</h4>
+        <h4>Design</h4>
       </nav>
       
       <article>
-        <h1>CSS Fundamentals</h1>
-        <p>In the previous lessons, we covered a few ways to select an element to apply CSS to it, but there are many more! Let’s do a review and look at a few more.</p>
+        <h1>Design</h1>
+        <p>Congratulations! You’ve come so far in the last 2 weeks. You created your first website, for starters! Plus you can now use so many new amazing web tools to create beautiful things. Now we’re going to create another website, but this time we’ll start one step back from when we started before. We’ll start with an exploration of web design and branding.</p>
 
-<h2 id="type-class-and-id-selectors">Type, class and id Selectors</h2>
+<h2 id="creating-our-brand">Creating our brand</h2>
+<p>Before setting out to build a website, you need to have a good understanding of your client’s needs. For the next two classes, answer these questions for your own personal website or business, OR for a fictitious business you want to use for fun. Then ask your client (or pretend client) the following questions:</p>
 
-<p><strong>Type selectors</strong> target HTML elements by their element tag name.</p>
+<ol>
+  <li>What does the business do?</li>
+  <li>Who is their target audience?</li>
+  <li>What is the purpose of the website, OR what do they want visitors to do on the website. e.g. Sign up for a newsletter, donate, request a quote, purchase products, etc…</li>
+  <li>Who are competitors of the business and what are their websites like? Describe the website’s feel and tone.</li>
+  <li>How is your client unique or different than the competitors? In other words, what’s their value proposition as a business?</li>
+  <li>Do you think the competitors attract the demographic they want to attract well? How so?</li>
+  <li>What look and field do you think will attract their clients? Describe it with 5 adjectives.</li>
+</ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>p {
-  /* targets all paragraphs */
-}
-</code></pre>
-</div>
+<h2 id="exercise-mood-board">EXERCISE: Mood Board</h2>
 
-<p><strong>Class selectors</strong> are added using a class <em>attribute</em> to any element.</p>
+<ol>
+  <li>Based on your answers to the questions above, we will create a Mood Board. This will help us flesh out our website design.</li>
+  <li>You will use the adjectives, the target demographic and the comparative analysis you did of competitors’ websites to inspire your mood board choices.</li>
+  <li>Our mood board will contain a sampling of images, typography and a colour palette to inform our web design choices later on. 
+<img src="assets/img/module3/moodboard.jpg" alt="moodboard" /></li>
+  <li>Go to pixlr and open up the editor that we used for image resizing last week.</li>
+  <li>You will create a new “image” sized 600px by 800px.</li>
+  <li>Now that you have a blank page you will start by selecting at least 3 photographs from thestocks.im that capture the feel of the brand your designing for. 1. Next, open up each of those images and crop them so that they are square and no larger than 200px by 200px.</li>
+  <li>Back in your blank moodboard pixlr project you will open up each of those images and place them side by side. To do this, head on over to Layer from the main menu and select <strong>Open Image As Layer</strong>. Line them up side by side at the top of the file.</li>
+  <li>Create a new layer to add your company name over the images.</li>
+  <li>Go to adobe.color.com and select or create a colour palette to go with your brand. Pro Tip: click on the camera icon to automate a palette from one of your photographs!</li>
+  <li>Create one layer per swatch and using the shape drawer, draw squares for each of your colours. Fill them in using your palette colours and the pain can.</li>
+  <li>Create a new layer for your Font Families. Visit <a href="http://fonts.google.com">fonts.google.com</a> if you’re not sure what to choose.</li>
+  <li>In the new layer, add the name of your fonts and a sample of text written in them. Google fonts should automatically load on Pixlr.</li>
+  <li>Save your moodboard file. We’ll come back to it after we create our logo.</li>
+</ol>
 
-<p>Remember, any <em>attribute</em> is added to the opening HTML tag. The same class can be used 1 or more times throughout the page and must be reference in the CSS with a leading period.</p>
+<h2 id="logos">Logos</h2>
+<p>Logos are an iconic representation of our brand. Creating logos can be an artform onto themselves.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p class="special"&gt;This is a special paragraph&lt;/p&gt;
-</code></pre>
-</div>
-
-<hr />
-
-<div class="highlighter-rouge"><pre class="highlight"><code>.special {
-  /* applies to any element with this class */ 
-}
-p.special {
-  /* more specific - applies only to paragraphs with this class */
-}
-</code></pre>
-</div>
-
-<p><strong>ID selectors</strong> can be used only once per page and is reference in the CSS using the number/hash symbol (<code class="highlighter-rouge">#</code>).</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>#about {
-  /* applies to any element with this id */ 
-}
-section#about {
-  /* more specific - applies only to a section element with this id */
-}
-</code></pre>
-</div>
-
-<h2 id="descendant-selectors">Descendant Selectors</h2>
-<p>Descendant selectors can be used to target <em>nested</em> elements. To use a descendant selector, add a <em>space</em> between selectors.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;parent&gt;
-  &lt;child&gt;
-    content here
-  &lt;/child&gt;
-&lt;/parent&gt;
-</code></pre>
-</div>
-
-<hr />
-<div class="highlighter-rouge"><pre class="highlight"><code>parent child {
-  /* targets only the child elements contained in that parent */
-}
-</code></pre>
-</div>
-
-<hr />
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#"&gt;link 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;link 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-</div>
-
-<hr />
-<div class="highlighter-rouge"><pre class="highlight"><code>ul li a {
-  color: blue;
-}
-</code></pre>
-</div>
-
-<p>In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.</p>
-
-<p>You can even “skip” an element. The below example will work as well.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>ul a {
-  color: blue;
-}
-</code></pre>
-</div>
-
-<h3 id="descendant-selectors-and-specificity">Descendant Selectors and Specificity</h3>
-<p>A good rule of thumb for descendant selectors is to avoid going more than <strong>three</strong> levels deep.  Browsers read selectors from right to left and work its way up the <a href="http://www.w3.org/TR/WD-DOM/introduction.html">DOM</a> tree.  Having many selectors can impact the site performance.</p>
-
-<h4 id="yes">Yes</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>p a {
-  /* targets anchor link tags nested inside of a p tag */
-}
-.about p {
-  /* targets paragraphs within an element with the .about class*/
-}
-</code></pre>
-</div>
-
-<h4 id="no">No!</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>.about ul li a span {
-  ...
-}
-</code></pre>
-</div>
-
-<p>Also, a more <em>specific</em> selector will override the descendant selector, regardless of written order in the CSS file.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>ul a {
-  /* least specific */
-}
-ul li a {
-  /* more specific */
-}
-ul.nav li a {
-  /* most specific */
-}
-</code></pre>
-</div>
-
-<h2 id="combining-selectors">Combining selectors</h2>
-<p>You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a <em>comma</em>. Any type of selector can be combined.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>.special, #special {
-  color: red;
-}
-h1, h2 {
-  text-transform: uppercase;
-}
-header h1, h2 {
-  text-transform: uppercase;
-}
-</code></pre>
-</div>
-
+<p>If we had a lot of time we could spend hours brainstorming with doodles of possible avenues we could take for our logo. We have to make sure to capture what the company is about or the general feel, without copying a logo that already exists. This can be very challening! 
+Another challenge may come in if you’re not great at drawing. 
+So today, we’re going to pick an icon as our logo from the vast library of The Noun Project. And we’ll tweak it a bit in Pixlr to make it our own.</p>
 <blockquote>
-  <p>What is the difference is between combining <code class="highlighter-rouge">h1, h2</code> and <code class="highlighter-rouge">header h1, h2</code>?</p>
+
+  <h2 id="exercise-creating-our-logo">EXERCISE: Creating our Logo</h2>
+
+  <ol>
+    <li>Spend 5-10 minutes thinking about what symbolic representations of your business may work as a logo.</li>
+    <li>Go to <a href="http://nounproject.com">nounproject.com</a> and choose a symbol that resembles what you’re going for. Pick more than one if you want to combine them.</li>
+    <li>Download the icon and open it up in Pixlr.</li>
+    <li>Play around with colouring it if you want using the paint can.</li>
+    <li>Go to Layers&gt;Layers Style&gt;Drop Shadow for a cool effect.</li>
+    <li>When you are satisfied with your logo, save it as a png. Make sure it’s sized properly and not huge. 200px wide, max.</li>
+    <li>Add the logo as a layer to your Moodboard.</li>
+    <li>Now, save the moodboard file in your exercise folde as a pixlr file and as a jpg. Then,  you’ll always have it to reference when designing your website.</li>
+  </ol>
 </blockquote>
 
-<h2 id="pseudo-class-selectors">Pseudo-class Selectors</h2>
+<h2 id="web-design-vs-web-development">Web Design vs Web development</h2>
 
-<p>Pseudo-class selectors target an elements <em>state</em> or <em>action</em>. The most commonly used pseudo-class is <code class="highlighter-rouge">:hover</code>.  Note the syntax. It must start with a colon (<code class="highlighter-rouge">:</code>) and be attached to an HTML element, with no white-space.</p>
+<p><strong>Web <em>design</em></strong> and <strong>web <em>development</em></strong> are often thought to be interchangeable but are actually quite different. Some people do both and some specialize in one or the other.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="#"&gt;Example link&lt;/a&gt;
-</code></pre>
-</div>
+<p>In a nutshell, web <em>design</em> is about creating the visuals. Web <em>development</em> turns those visuals into code, to be able to display it in a web browser.</p>
 
-<hr />
-<div class="highlighter-rouge"><pre class="highlight"><code>a { 
-  color: red;
-}
-a:hover { 
-  color: black;
-}
-</code></pre>
-</div>
+<p>There are even further specializations, such as back-end developers, front-end developers and interaction designers, just to name a few.</p>
 
-<h3 id="pseudo-class--links">Pseudo Class &amp; links</h3>
+<p>The moodboard we created is a small version of what in web development we call a styleguide. Check out some great style guides below:</p>
 
-<p><code class="highlighter-rouge">:hover</code> - selects the link on mouse hover.<br />
-  Can also be used to create hover effects for elements other than an <code class="highlighter-rouge">&lt;a&gt;</code>.</p>
+<h3 id="extra-resources">Extra Resources</h3>
 
-<p><code class="highlighter-rouge">:link</code> - links that have <em>not</em> been clicked/visited</p>
+<ul>
+  <li><a href="http://mailchimp.com/about/brand-assets/">Mailchimp brand guide</a></li>
+  <li><a href="http://govuk-elements.herokuapp.com/">Gov.uk web guidelines</a></li>
+</ul>
 
-<p><code class="highlighter-rouge">:visited</code> - links that <em>have</em> been clicked/visited in the the current browser</p>
+<h2 id="what-is-design">What is Design?</h2>
 
-<p><code class="highlighter-rouge">:active</code> - selects the link while it is being activated/clicked.</p>
+<p>Design is problem solving. In web design, the problem to be solved is how to effectively communicate the content.</p>
 
-<p><br />
-There are <strong>many</strong> more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.</p>
+<p>Design uses a combination of type, color, images and form to present content in a clear and concise manner that is visually appealing and reiterates the ideas we want to communicate.</p>
+
+<h3 id="what-makes-good-design">What Makes Good Design?</h3>
+
+<ol>
+  <li>Clear - the content is easy to read and the graphics and colors support the ideas</li>
+  <li>Concise - content is presented in a concise manner and you can navigate the website to find the content you need easily</li>
+</ol>
 
 <blockquote>
-  <h2 id="exercise-selectors">EXERCISE: Selectors</h2>
-
-  <p>Download the <a href="exercises/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to!</p>
-
-  <p>All the instructions are contained in the comments at the very top of <code class="highlighter-rouge">selector.html</code>.</p>
+  <p>What are some of your favorite websites? Let’s look at a few different sites and compare designs.</p>
 </blockquote>
 
-<h2 id="block-vs-inline-elements">Block vs Inline Elements</h2>
+<h2 id="purpose-and-organizing-content">Purpose and Organizing Content</h2>
+<p>What do you want your website to do? Who is your target audience? What is the purpose of the website?</p>
 
-<p>Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.</p>
-
-<p>Block level HTML elements default behavior:</p>
-
-<ul>
-  <li>takes up 100% width of its container, no matter how long the actual content is</li>
-  <li>will be the same height as its content</li>
-  <li>always starts on a new line</li>
-  <li>can wrap other block level elements or inline elements</li>
-  <li>can apply sizing related CSS to it (margin, padding, height, width)</li>
-  <li>examples: <code class="highlighter-rouge">&lt;p&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code>, <code class="highlighter-rouge">&lt;ul&gt;</code></li>
-</ul>
-
-<p>Inline level HTML elements default behavior:</p>
+<p>When thinking about how to organize and arrange the content on your website, think about how your eyes navigate a web page. Our eyes tend to gravitate to larger elements first, such as:</p>
 
 <ul>
-  <li>will be the height and width of its content</li>
-  <li>always appears “in a line” with other inline level elements</li>
-  <li>can wrap other inline elements but cannot wrap block level elements <em>except</em> <code class="highlighter-rouge">&lt;a&gt;</code> tags.  This is only valid with an HTML5 doctype.</li>
-  <li>does not render CSS height and width at all, will apply margin and padding but with unexpected results</li>
-  <li>examples: <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code></li>
+  <li>large images</li>
+  <li>large text</li>
+  <li>blocks of color</li>
 </ul>
 
-<p><br />
-<strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
+<p>Then we narrow in on interesting blocks of content to further explore in detail.</p>
 
-<div style="background:lightblue;">this is a div</div>
-
-<p><span style="background:lightgreen;">this is a span</span></p>
-
-<h2 id="css-display">CSS Display</h2>
-
-<p>CSS can be used to change how inline and block elements display using the <code class="highlighter-rouge">display</code> property. There are three values we’ll look at today:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">block</code> - makes inline elements display as block elements</li>
-  <li><code class="highlighter-rouge">inline</code> - makes block elements display as inline-block</li>
-  <li><code class="highlighter-rouge">inline-block</code> - best of both worlds</li>
-</ul>
-
-<p>This property will come in handy when using the Box Model properties.  Let’s do a review before we put display to use.</p>
-
-<h3 id="resource">Resource</h3>
-
-<p><a href="https://css-tricks.com/almanac/properties/d/display/">CSS Tricks: Display property</a></p>
-
-<h2 id="box-model-review">Box Model Review</h2>
-
-<p>The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  Let’s do a review and then dive a little deeper!</p>
-
-<ul>
-  <li>the browser looks at HTMLs element as a square/rectangular box</li>
-  <li>the box model describes the way CSS handles the size and spacing of HTML elements</li>
-  <li><code class="highlighter-rouge">width</code> - change the default width</li>
-  <li><code class="highlighter-rouge">height</code> - change the default width</li>
-  <li><code class="highlighter-rouge">margin</code> - add or remove default space around the element</li>
-  <li><code class="highlighter-rouge">padding</code> - add or remove default space inside the element</li>
-  <li><code class="highlighter-rouge">border</code> -  add a border around the element</li>
-</ul>
-
-<h3 id="seeing-it-all-together">Seeing it all together</h3>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>width: 80%;
-margin: 50px auto;
-padding: 40px; 
-border: 5px solid black;
-</code></pre>
-</div>
-
-<div style="width:80%;margin:50px auto;padding:40px;border:5px solid black;">
-  <p style="margin:0;padding:0">Just some content for demonstration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<h3 id="width--height">Width &amp; Height</h3>
-
-<p>The <code class="highlighter-rouge">width</code> &amp; <code class="highlighter-rouge">height</code> properties can be used to set specific heights and widths to only <em>block</em> level elements.  It won’t work for <em>inline</em> level elements unless you use <code class="highlighter-rouge">display</code> to change it to <code class="highlighter-rouge">block</code> or <code class="highlighter-rouge">inline-block</code>.</p>
-
-<h3 id="padding">Padding</h3>
-
-<p>The <code class="highlighter-rouge">padding</code> property adds/removes space <em>inside</em> of the element. It only accepts positive numerical values.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
-padding-top: 2px;
-padding-right: 2px;
-padding-bottom: 2px;
-padding-left: 2px;
-
-/* shorthand */
-padding: 2px; /* same on all sides */
-padding: 2px 10px; /* top &amp; bottom, right &amp; left */
-padding: 2px 10px 5px; /* top, right &amp; left, bottom */
-padding: 2px 2px 2px 2px; /* top right bottom left */
-</code></pre>
-</div>
-
-<p style="background:lightblue;padding:0px;">This is a paragraph without padding.</p>
-<p style="background:lightgreen;padding:20px;">This is a paragraph with padding.</p>
-
-<p>When adding padding to an <em>inline</em> element it will look like the below example.</p>
-<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
-<p><a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a></p>
-
-<p><br />
-Notice that there’s no space between the two element? Inline elements don’t apply padding the same way as block elements.  You will need to use the CSS <code class="highlighter-rouge">display</code> property.</p>
-
-<p>More on this in the upcoming exercise.</p>
-
-<h3 id="margin">Margin</h3>
-<p>Margin adds/removes space <em>outside</em> of an element. However, the shorthand and longhand rules are the same as padding.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>/* longhand */
-margin-top: 2px;
-margin-right: 2px;
-margin-bottom: 2px;
-margin-left: 2px;
-
-/* shorthand */
-margin: 2px; /* same on all sides */
-margin: 2px 10px; /* top &amp; bottom, right &amp; left */
-margin: 2px 10px 5px; /* top, right &amp; left, bottom */
-margin: 2px 2px 2px 2px; /* top right bottom left */
-</code></pre>
-</div>
-
-<p style="background:lightblue;margin:0px;">This is a paragraph without margin.</p>
-<p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
-
-<p>Just like padding, margin and spacing is not applied the same way to block and inline elements.</p>
-
-<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
-<p><a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a></p>
+<p>Use the layout of your website to guide the viewer’s eye and provide a clear path for viewers.</p>
 
 <blockquote>
-  <h2 id="class-exercise-box-model--display">Class Exercise: Box Model &amp; <code class="highlighter-rouge">display</code></h2>
-  <p>In this <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a>, let’s try the different <code class="highlighter-rouge">display</code> property values and see how it affects inline &amp; block HTML elements.</p>
+  <p>Based on purpose and organization, how would a photographers website differ from a news outlet?</p>
 </blockquote>
 
-<h2 id="margin--negative-values">Margin &amp; Negative values</h2>
+<h2 id="layout-tips">Layout Tips</h2>
 
-<p>Margin also accepts negative values.  This will nudge it just outside of its stacked position.</p>
-
-<p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
-<p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
-
-<h2 id="center-aligning-with-margin">Center Aligning with <code class="highlighter-rouge">margin</code></h2>
-<p>The margin property can also be used to center align <em>block</em> level elements.</p>
-
-<p>First a width needs to be set. Then by setting the left &amp; right values to <code class="highlighter-rouge">auto</code>, it finds the center of the page. The <code class="highlighter-rouge">0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>div {
-  background: lightblue;
-  width: 600px;
-  margin: 0 auto; /* 0 on the top &amp; bottom, auto on the left &amp; right */
-}
-</code></pre>
-</div>
-
-<div style="width:600px;margin: 0 auto;background:lightblue;">
-  <p>Auto aligned!</p>
-</div>
-
-<p><br />
-But notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the below example, notice that content stays in the middle but the background styles expand the width of the page?</p>
-
-<p><img src="assets/img/module3/content-align.jpg" alt="" /></p>
-
-<p>In the previous lesson, a wrapper was included around all of the page content.</p>
-
-<p>But to create a style where different background styles apply to each section, we’ll need to:</p>
+<h3 id="size">Size</h3>
 
 <ul>
-  <li>create a wrapper, just for the content, not the whole page</li>
-  <li>auto align the content wrapper</li>
-  <li>use the outer container for the background styles</li>
+  <li>vary the size of your content areas to guide the viewer</li>
+  <li>large content areas can be used to indicate prominent information</li>
+  <li>less important information are given smaller areas</li>
+  <li>create a visual hierarchy of importance</li>
+</ul>
+
+<h3 id="alignment">Alignment</h3>
+
+<ul>
+  <li>aligning items relative to each other makes visual connections</li>
+  <li>helps users understand the content flow and navigate more easily</li>
+</ul>
+
+<h3 id="space">Space</h3>
+
+<ul>
+  <li>make sure there is enough space around your content</li>
+  <li>spacing enhances the readability of your content</li>
+  <li><em>consistent</em> spacing adds balance and harmony to your design</li>
+  <li>gives content space to breathe, less clutter</li>
+</ul>
+
+<h2 id="designing-with-a-grid">Designing with a Grid</h2>
+
+<p>A popular technique for design layouts is to use a grid. A grid provides:</p>
+
+<ul>
+  <li>consistent structure</li>
+  <li>helps to create visual hierarchy</li>
+  <li>flexibility in design</li>
+</ul>
+
+<h3 id="using-a-grid">Using a Grid</h3>
+
+<p>Using software like Pixlr or just paper &amp; pencil:</p>
+
+<ul>
+  <li>divide up the width of your page into equal width columns</li>
+  <li>include equal space between each column (a gutter), for breathing room</li>
+  <li>use the grid to mark areas for the different pieces of content</li>
+</ul>
+
+<p>Though you can use any number of columns, a 12 column grid is common because it can divide easily into 1, 2, 3, 4, 6, 12.  This is handy for responsive designs (can adapt to different screen sizes).</p>
+
+<p>Here’s a handy tool for creating a grid: <a href="http://gridcalculator.dk/">Grid Calculator</a></p>
+
+<p>Using graph paper can also help layout columns and gutters when doing a hand drawn sketch. Here are some examples: <a href="http://bit.ly/1KbJbfZ">http://bit.ly/1KbJbfZ</a></p>
+
+<h3 id="page-layouts-with-grids">Page Layouts with Grids</h3>
+
+<p>Some content blocks may span multiple columns, others may span only one. Not every page component needs to fit into the grid dimensions either.</p>
+
+<p>For example, the <a href="assets/img/module2/grid-fs.jpg">Food Sense Blog website</a> uses the 12 column grid to organize the content in different ways.</p>
+
+<p>In this article, <a href="https://designschool.canva.com/blog/grid-design/">15 Reasons Why A Grid Based Approach Will Improve Your Designs</a>, you can see even more ways to lay out content with a wide variety of grids.</p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="http://gridcalculator.dk/">Grid Calculator</a></li>
+  <li><a href="http://www.awwwards.com/grid-based-web-design-resources.html">Grid Based Web Design Resources</a></li>
+  <li><a href="http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302">Wireframe tools</a></li>
 </ul>
 
 <blockquote>
-  <p>Looking at this <a href="http://codepen.io/learningcode/pen/avYXvq">CodePen example</a>, compare the difference between using and not using a content wrapper.</p>
+  <h2 id="exercise-sketch-a-website-layout">EXERCISE: Sketch a website layout</h2>
+  <ol>
+    <li>Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. Be sure to refer to the content for your website that you worked on in our first class. You will now explore what you want this content to look like on the page.s</li>
+    <li>Next, you can choose to create a more polished design in Pixlr using your knowledge of layers, to bring your design to life. Or, you can design the website in the browser using inspect tools and your mood board as you go along coding your site. It’s up to you! If you’re going to use Pixlr, you can start now. 
+Block out areas of the page for your content. Experiment with multiple layouts. Remember the tips of size, alignment and spacing when arranging your content.
+Pro Tip: If you plan to bring your design to life in Pixlr download this <a href="exercises/module3/grid.jpg" download="">grid image to layer your design over inside of Pixlr.</a></li>
+  </ol>
 </blockquote>
 
-<h2 id="the-box-model-problem-and-fix">The Box Model Problem and Fix</h2>
-
-<p>In CSS ,the relationship between the width, padding and border properties is not always straightforward.
-For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:</p>
-
-<p>480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width</p>
-
-<p>But, there’s a fix! Let’s first compare how the element’s sizing differs with and without the fix, looking at the CSS example below.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>background: lightblue;
-width: 480px;
-padding: 0px 20px;
-border: 15px solid green;
-</code></pre>
-</div>
-
-<div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
-  <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
-</div>
-
-<div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
-  <p>This example DOES have the border box fix.</p>
-</div>
-
-<p><br />
-Notice that without the fix, the element is larger than the set <code class="highlighter-rouge">width</code>.</p>
-
-<p>The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.</p>
-
-<p>Here is the snippet:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-</code></pre>
-</div>
-
-<p>Read more about the fix <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">here</a>.</p>
+<p><strong>Note that many of the CSS techniques for creating page layout styles will be covered in Module 4.</strong></p>
 
 <p><br />
 ~ End ~</p>

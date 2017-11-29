@@ -189,9 +189,6 @@ attribute values. Multiple declarations can be contained in the value.
       <p>Yep, another paragraph.</p>
     </body>
 
-
-> Let's try it out! Download the exercise file <a href="exercises/module1/reference-css.html" download>here</a>.
-
 ### Internal CSS
 
 Included in the `<head>` (not `<header>`) with a `<style>` *tag*.
@@ -214,10 +211,6 @@ Note that in XHTML, the `type` attribute was required.
       }
     </script>
 
->Go back to **reference-css.html** and try adding some internal CSS.  
->
->Be sure to remove the inline CSS or it will *override* the internal styles.
-
 ### External
 
 This method links to a separate stylesheet file (uses a `.css` file extension) to separate the CSS from the HTML document. 
@@ -237,7 +230,7 @@ Remember, CSS files are often saved in a separate folder for organization, so ma
 >Back in the text editor, create a new CSS file.  (**File > New File** or **ctrl/cmd + N**)
 >
 >Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc.
->
+> Be sure to save it inside the same project folder that your index.html file from last week is in. You can create a css folder if you want or just leave the css file right next to index.html.
 >Next, add it to **index.html** using the `<link>` tag.
 >
     <link rel="stylesheet" href="css/styles.css">
@@ -335,6 +328,197 @@ Add the same `class` from step 3 to a link (anchor tag). Because links already h
 
 If you want even more practice with selectors, try this game: <http://flukeout.github.io/>
 
+## Typography
+Good writing and good typography can help your reader understand your message more clearly.
+
+**Typography** is the art of arranging type to engage and guide your readers.  
+
+**Typeface** is what you think of when you think of Font. It is a set of fonts or a font family that is designed with common characteristics and features.  
+
+**Font** is the individual font file that is part of the font family or typeface.
+
+For example, *Helvetica Neue* is the **typeface**. It is a font family which contains many **font** files from *Helvetica Neue Ultra Light* to *Helvetica Neue Extra Bold*. The decision to set your type in *Helvetica Neue* and how you arrange it on the page is **typography**.
+
+
+## Type Classification
+
+<img class="right" src="{{ site.img }}/module2/serif.jpg">
+
+### Serif Typefaces
+
+* distinguished by the little "feet" or "hats" at the bottom or top of the letters 
+* grew out of the hand-lettering of scribes and roman or blackletter calligraphic writing.
+
+<hr class="clear">
+
+<img class="right" src="{{ site.img }}/module2/sansserif.jpg">
+
+### Sans Serif Typefaces
+
+* just like the name implies–no serifs at the end of the strokes
+* most are monoweight
+* the strokes of the letterform appears to be all one weight
+
+<hr class="clear">
+
+> Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes. 
+>
+> Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs.
+>
+> Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need.
+
+
+<img class="left" src="{{ site.img }}/module2/script.jpg">
+
+### Script Typefaces
+
+* appear to be hand-lettered with a calligraphy pen, brush or pencil or pen
+* use script typefaces sparingly and appropriately for your content
+* can be unreadable in small sizes, all caps and long blocks of text
+
+<hr class="clear">
+
+
+<img class="left" src="{{ site.img }}/module2/decorative.jpg">
+
+### Decorative Typefaces
+
+* have the characteristic of being very distinct in their style
+* not great for long blocks of text, may become too consuming and unreadable
+* can be great for decorative touches and add character to a design
+
+Most decorative typefaces are one offs containing just one font file. 
+
+
+## Tips for Selecting and Pairing Fonts
+
+* Personality
+  * select fonts to reflect your personality, tone of voice and/or your brand
+* Readability
+  * choose fonts that are easy to read 
+  * try them in various sizes, weights and styles
+* Contrast
+  * when pairing fonts, strive for sufficient contrast
+  * choose typefaces of different types or styles
+  * contrast with a serif and a sans serif, or 
+  * a thick condensed sans-serif with a thin sans-serif 
+* Flexibility
+  * Select fonts that have multiple styles to give you the most flexibility
+* Clarity
+  * select only one or two typefaces for your content
+  * too many typefaces may make your design unclear
+* Completeness
+  * look for fonts that have a complete character set
+  * pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc 
+  * missing characters may be a sign of an incomplete and poorly designed font
+
+#### Resource
+[Chrome extension](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm) for finding out what fonts are used on any website.
+
+
+## Typefaces, CSS and the Web
+
+### Web Safe Fonts
+
+Fonts that are considered to be "web safe" refer to pre-installed fonts on a computer or device.
+
+Because not all operating systems have the same fonts installed, use a font *stack* in your CSS to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.
+
+See examples of web safe fonts here:
+
+* [16 Gorgeous Web Safe Fonts To Use With CSS](http://www.webdesigndev.com/16-gorgeous-web-safe-fonts-to-use-with-css/)
+* [cssfontstack.com](http://www.cssfontstack.com)
+
+
+### CSS `font-family`
+
+In CSS, to change the default typeface, use the `font-family` property.
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+* best practice is to list at least 2 options
+* first font is the primary choice
+* alternative fonts are declared in order of preference and separated by a comma
+* font names with two or more words should be wrapped in quotation marks (single or double quotes)
+* last font should be the generic option
+
+#### Generic fonts
+
+* sans-serif
+* serif
+* cursive (script fonts)
+* fantasy (decorative fonts)
+* monospace (fixed width fonts)
+
+
+### Custom Fonts
+
+#### Free vs. Premium Fonts
+
+There are thousands of fonts available to download and use beyond the default web safe fonts.
+
+Free fonts:
+
+* free, no cost to use (sometimes free for personal use but need to be paid for commercial use)
+* may have missing characters
+* limited in the number of styles (generally one or two styles)
+* are commonly used
+
+Premium fonts:
+
+* can be costly; prices vary
+* typically better quality and elegantly designed
+* have a complete character set
+* usually have multiple styles
+* more exclusive and unique
+
+### Font Resources
+
+* Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
+* Google Font pairing resource - <http://femmebot.github.io/google-type/> 
+* Typekit is a Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <http://typekit.com/>
+* Fonts.com has a wide library of premium fonts to choose from including a web font delivery service - <http://www.fonts.com/>
+* Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
+
+
+## Google Fonts
+
+[Google Fonts](https://www.google.com/fonts) is a free service. You can link directly to their CSS files, making the fonts available to your site visitors and does not rely on system installed fonts. To use:
+
+1. Go to [Google Fonts](https://www.google.com/fonts).
+1. **Click on the red and white plus sign** to select a font.
+![]({{ site.img }}/module2/google-fonts-1.jpg)
+1. In the drawer that appears at the bottom of the page, customize your selections.
+![]({{ site.img }}/module2/font-review.jpg)
+1. Be sure to avoid a heavy load!<br>
+![]({{ site.img }}/module2/load-time.png)
+1. Copy the `<link>` code snippet in the embed tab and add it to the `<head>` of your page to reference their CSS.
+
+![]({{ site.img }}/module2/embed-font.png)
+
+
+--- 
+    <head>
+      <meta charset="UTF-8">
+      <title>My Website Title</title>
+      <link href='http://fonts.googleapis.com/css?family=Bad+Script|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+Now you can use these new fonts with the `font-family` property, using the font name listed in the example on the Google Fonts page.
+
+![]({{ site.img }}/module2/specify-font.png)
+>## EXERCISE: Google Fonts
+>1. Choose two fonts from [Google Fonts](https://www.google.com/fonts) to use for the typography exercise.
+1. Open up your style.css project file.
+1. Add the Google Fonts CSS file to the head.<br>
+### Follow the following instructions:
+11. Using the 'body' selector, set the font family to your first Google font choice. 
+11. For the h1 & h2 headings only, set the font family to your second Google font choice.
+1. Review the answers together!
+>
 
 ## Workflow Tips & Tools
 * Use a service like [Dropbox](https://db.tt/eCZX3yo) or [Google Drive](https://www.google.ca/drive/) to sync and save your work in the cloud.
@@ -344,6 +528,85 @@ If you want even more practice with selectors, try this game: <http://flukeout.g
   * [Pocket](https://getpocket.com/)
   * [Pinterest](https://www.pinterest.com/)
 * [Pixlr](https://pixlr.com/) is a free image editing tool.  This will coming handy for cropping and manipulating image files.
+
+
+## More CSS typography
+
+### `font-weight` & `font-style`
+
+Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter if the default HTML shows text in bold, not bolded, italicized, etc, because CSS can change all that!
+
+    font-weight: bold; /* makes text bold */
+    font-weight: normal; /* removes bold style */
+
+---
+    font-style: italic; /* sets text to italic */
+    font-style: normal; /* removes italic style */
+    
+    
+### `text-` properties
+
+**`text-align`**  
+Used for aligning text and accepts five values: `left`, `right`, `center`, `justify` and `inherit`.
+
+**`text-decoration`**   
+Most commonly used to add or remove underlines but accepts these five values: `none`, `underline`, `overline`, `line-through` and `inherit`
+
+**`text-transform`**  
+Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit`.
+
+* `capitalize` capitalizes the first letter of each word 
+* `uppercase` value will capitalize every letter 
+* `lowercase` value will make every letter lowercase
+
+Note that when a CSS property accepts `inherit` as a value, it will inherit the style set in either the parent or nearest ancestor element. `none` usually removes the style defined by that property.
+
+>## CLASS EXERCISE: Typography & CodePen
+>Let's try out the above typography based CSS properties. Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to experiment.  
+>
+> <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
+
+>## EXERCISE: `type-` & `font-` properties
+>Back in **style.css** of your project, complete the following: 
+>  1. Change the font weight of the h1 heading.
+    2. Italicize the h2 heading.
+    3. Make the text in the h2 heading all uppercase.
+    4. Center align all the text in the footer.
+
+These are just a few type related CSS properties.  We'll be going over more in future lessons.
+
+
+## Bonus: `@font-face`
+
+The `@font-face` CSS3 method can be used to embed and load fonts files that are not *hosted* online like Google Fonts.  These font files are downloaded and included in your folder directory.
+
+`@font-face` must be declared in your CSS files first *before* you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.
+
+    @font-face {
+      font-family: 'Font Name';
+      src: url('file-path/font-file.woff2') format('woff2'),
+           url('file-path/font-file.woff') format('woff');
+    }
+    
+---    
+    font-family: 'Font Name', second-option, sans-serif;
+
+This snippet links the font files to the CSS, as well as declares a `font-family` name.
+
+*Pro tip!*   
+You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.
+
+
+>## CLASS EXERCISE: Apply Styles to Your Project
+>1. Continue adding typography properties and colour to your project.
+
+
+### Extra Resources
+
+* [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support 
+* [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
+* [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
+
 
 
 <br>

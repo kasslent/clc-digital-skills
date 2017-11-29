@@ -1,0 +1,139 @@
+/* GENERAL LAYOUT STYLES ============================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #333;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* TYPOGRAPHY ============================== */
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+
+/* NAV ============================== */
+
+nav {
+    background: white;
+    ;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #ffd202;
+}
+
+
+/* HEADER ============================== */
+
+header {
+    text-align: center;
+    background: #b1009a;
+    color: white;
+    padding: 100px;
+}
+
+header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 50px;
+}
+
+
+/* ABOUT - SECTION ============================== */
+
+.about {
+    background: white;
+    text-align: center;
+    padding: 150px;
+}
+
+.about p {
+    text-align: left;
+}
+
+
+/* SOCIAL - SECTION ==================== */
+
+.social ul {
+    list-style-type: none;
+    text-align: center;
+    background: #333;
+    padding: 50px;
+    margin-bottom: 0;
+}
+
+.social ul li {
+    display: inline-block;
+}
+
+.fa {
+    font-size: 50px;
+    color: #b1009a;
+    margin: 10px;
+}
+
+.fa:hover {
+    color: #ffd202;
+}
+
+
+/* FOOTER ============================== */
+
+footer {
+    background: #b1009a;
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}

@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Design & CSS</title>
-  <meta name="description" content="There are more ways to use CSS to create typography based styles in your web page designs.">
+  <title>CSS Fundamentals</title>
+  <meta name="description" content="Spacing and CSS">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -37,345 +37,12 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 2, Lesson 2</h3>
-        <h4>Design & CSS</h4>
+        <h4>CSS Fundamentals</h4>
       </nav>
       
       <article>
-        <h1>Design & CSS</h1>
-        <p>There are more ways to use CSS to create typography based styles in your web page designs.</p>
-
-<p>The last lesson covered text based CSS properties that used keywords for values (e.g. <code class="highlighter-rouge">font-weight: bold;</code>). But there are many other properties (typography based and other styles) that use length to define the values.</p>
-
-<h2 id="length--measurement-units">Length / Measurement Units</h2>
-<p>The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:</p>
-
-<ul>
-  <li><strong>pixels</strong> (<code class="highlighter-rouge">px</code>) - most commonly used because computer monitors and mobile devices are measured in pixels.
-    <ul>
-      <li>must use whole numbers (e.g. <code class="highlighter-rouge">12px</code>)</li>
-    </ul>
-  </li>
-  <li><strong>percentages</strong> (<code class="highlighter-rouge">%</code>) - useful for fluid and responsive layouts
-    <ul>
-      <li>can use any number (e.g. <code class="highlighter-rouge">20%</code>, <code class="highlighter-rouge">25.5%</code>)</li>
-    </ul>
-  </li>
-  <li><strong>ems</strong> (<code class="highlighter-rouge">em</code>) - originally a typographic measurement based on the letter “M”
-    <ul>
-      <li>relative unit, sizing is based on parent &amp; ancestor elements sizes</li>
-      <li>can use any number (e.g. <code class="highlighter-rouge">1em</code>, <code class="highlighter-rouge">1.275em</code>)</li>
-    </ul>
-  </li>
-  <li><strong>rems</strong> (<code class="highlighter-rouge">rem</code>)-  stands for “relative em”
-    <ul>
-      <li>relative unit but is only relative to the <em>root</em> element (<code class="highlighter-rouge">html</code> tag)</li>
-    </ul>
-  </li>
-</ul>
-
-<p>By default, with no other CSS, here’s how these units compare to each other:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>1em = 1rem = 16px = 100% 
-</code></pre>
-</div>
-
-<p>There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.</p>
-
-<blockquote>
-  <p>Let’s edit the below Codepen and see how <code class="highlighter-rouge">em</code> and <code class="highlighter-rouge">rem</code> works.</p>
-</blockquote>
-
-<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/LpeaGZ/">font-size, em &amp; rem</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-<h3 id="extra-resources">Extra resources</h3>
-
-<ul>
-  <li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">rem &amp; the 62.5% method</a></li>
-  <li><a href="http://www.tutorialspoint.com/css/css_measurement_units.htm">CSS - Measurement Units</a></li>
-  <li><a href="http://www.w3.org/Style/Examples/007/units.en.html">W3C - Units of length: px, em, cm, etc.</a></li>
-  <li><a href="https://css-tricks.com/the-lengths-of-css/">CSS Tricks - Lengths of CSS</a></li>
-  <li><a href="http://www.sitepoint.com/understanding-and-using-rem-units-in-css/">Understanding and Using rem Units in CSS</a></li>
-</ul>
-
-<h2 id="css--typography">CSS &amp; Typography</h2>
-
-<h3 id="css-font-size--line-height">CSS <code class="highlighter-rouge">font-size</code> &amp; <code class="highlighter-rouge">line-height</code></h3>
-
-<p>The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.</p>
-
-<p>Use <code class="highlighter-rouge">font-size</code> to change the size and <code class="highlighter-rouge">line-height</code> to adjust the space <em>between</em> the lines of text.</p>
-
-<p>You can use any of the measurement units to declare the <code class="highlighter-rouge">font-size</code>.</p>
-
-<p>For <code class="highlighter-rouge">line-height</code>, this property actually does <em>not</em> require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>p {
-  font-size: 20px;
-  line-height: 25px; /* fixed size*/
-}
-</code></pre>
-</div>
-
-<hr />
-<div class="highlighter-rouge"><pre class="highlight"><code>p {
-  font-size: 20px;
-  line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
-}
-</code></pre>
-</div>
-
-<h3 id="css-text-shadow">CSS <code class="highlighter-rouge">text-shadow</code></h3>
-
-<p>Use this property to apply a shadow to your text.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>p { 
-  text-shadow: 2px 4px 1px red;
-}
-</code></pre>
-</div>
-
-<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
-
-<ul>
-  <li>first value - x-coordinate, horizontal distance of the shadow
-    <ul>
-      <li>positive numbers places the shadow to the right</li>
-      <li>negative numbers places the shadow to the left</li>
-    </ul>
-  </li>
-  <li>second value - y-coordinate, vertical distance
-    <ul>
-      <li>positive numbers places the shadow below the text</li>
-      <li>negative numbers places the shadow above the text</li>
-    </ul>
-  </li>
-  <li>third value - blur radius (optional), the higher the number, the bigger the blur</li>
-  <li>fourth value - color of the shadow</li>
-</ul>
-
-<h3 id="multiple-text-shadows">Multiple text shadows</h3>
-
-<p>To use multiple text shadows, separate each grouping with a comma.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>p { 
-  text-shadow: 1px 1px 1px #000, 
-               5px 5px 5px red; 
-}
-</code></pre>
-</div>
-
-<p><em>Pro tip!</em><br />
-Subtle effects work best.</p>
-
-<blockquote>
-  <p>Let’s edit the CodePen below and experiment with these properties.</p>
-</blockquote>
-
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/NGXovv/">font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-<h3 id="css-color">CSS <code class="highlighter-rouge">color</code></h3>
-
-<p>To change the colour of the text, use the <code class="highlighter-rouge">color</code> property.</p>
-
-<p>We’ve talked about how to set a background colour in <a href="module1-2.html#css-colours">Module 1</a>.  Use the same value types (hex, keyword or rgb) for this property as well.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>/* all the same colour */
-body {
-  color: firebrick;
-  color: rgb(178,34,34);
-  color: #B22222;
-}
-</code></pre>
-</div>
-
-<h2 id="icon-fonts">Icon fonts</h2>
-
-<p>Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties (like size and colour) using CSS since they <em>are</em> fonts!</p>
-
-<p><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> is a great free option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.</p>
-
-<p>Under <strong><a href="http://fortawesome.github.io/Font-Awesome/get-started/">Get Started</a></strong>, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).</p>
-
-<h3 id="watch-out">Watch out!</h3>
-<p>When using CDNs, they are sometimes listed like this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
-</code></pre>
-</div>
-
-<p>Remember to add the “http” to make it work when you run your page “locally” (on your computer) without a local server.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
-</code></pre>
-</div>
-
-<p>To use, <a href="http://fortawesome.github.io/Font-Awesome/icons/">pick an icon</a> and copy the supplied markup and class and add it to your HTML.</p>
-
-<h4 id="resources">Resources</h4>
-
-<ul>
-  <li><a href="https://css-tricks.com/html-for-icon-font-usage/">https://css-tricks.com/html-for-icon-font-usage/</a></li>
-  <li><a href="http://weloveiconfonts.com/">http://weloveiconfonts.com/</a></li>
-  <li><a href="http://reference.sitepoint.com/css/typography">http://reference.sitepoint.com/css/typography</a></li>
-</ul>
-
-<blockquote>
-  <h2 id="exercise-typography">EXERCISE: Typography</h2>
-  <p>Download the <a href="exercises/module2/typography-2.html" download="">typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the <code class="highlighter-rouge">&lt;head&gt;</code> of the page.</p>
-
-  <p><em>Pro tip!</em><br />
-Move this exercise file from the downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)</p>
-</blockquote>
-
-<h2 id="working-with-images">Working with Images</h2>
-
-<h3 id="cropping-and-saving-images">Cropping and Saving Images</h3>
-<p>When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).</p>
-
-<p>Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the <em>largest</em> size you need for your website.</p>
-
-<p>We’ll be using CSS to make sure the image size scales &amp; fits the page layout.</p>
-
-<p>When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.</p>
-
-<p>Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to <a href="module1-1.html#images">Module 1, Lesson 1</a> for reference.</p>
-
-<h3 id="image-editors">Image editors</h3>
-<p>You will need an image editor to crop and edit your images. <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a> and <a href="http://www.sketchapp.com/">Sketch</a> are popular paid options.</p>
-
-<p><a href="https://pixlr.com/editor/">Pixlr</a> is also a great free alternative.</p>
-
-<h2 id="using-pixlr">Using Pixlr</h2>
-
-<ol>
-  <li>Navigate to <a href="https://pixlr.com/">https://pixlr.com/</a></li>
-  <li>Choose the <strong>Editor</strong> version.</li>
-  <li>In the popup, choose an option for adding the image to be edited.</li>
-</ol>
-
-<p>To add or change to another image, these options can also be accessed under the <strong>File</strong> menu.</p>
-
-<p><img src="assets/img/module2/pixlr-file-menu.png" alt="Pixlr file menu" /></p>
-
-<h3 id="the-crop-tool">The Crop Tool</h3>
-
-<p>In <a href="https://pixlr.com/editor/">Pixlr</a> (and in most image editors), select the crop tool to resize and crop out parts of your images.</p>
-
-<p>Click &amp; drag the cursor over the image to highlight the areas to be cropped out.</p>
-
-<p><img src="assets/img/module2/pixlr-crop.jpg" alt="pixlr crop" /></p>
-
-<h3 id="resizing-images">Resizing images</h3>
-
-<p>If you just need to resize an image to reduce the resolution size for web, go to:<br />
-<strong>Image → Image Size…</strong></p>
-
-<p>Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.</p>
-
-<p><img src="assets/img/module2/pxlr-imagesize.jpg" /></p>
-
-<p>Choosing <strong>Canvas size…</strong> (the option under <strong>Image size…</strong>) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.</p>
-
-<blockquote>
-  <h2 id="exercise-resizing-images">EXERCISE: Resizing Images</h2>
-  <p>Using <a href="https://pixlr.com/editor/">Pixlr</a>, practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.</p>
-
-  <p><strong>Bonus:</strong> Check out some of the other menu options to familiarize yourself with the tool.</p>
-</blockquote>
-
-<h3 id="image-resources">Image resources</h3>
-
-<ul>
-  <li><a href="https://www.google.ca/search?q=placeholder+images">Placeholder image sites</a></li>
-  <li><a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">Stock Photos That Don’t Suck</a></li>
-</ul>
-
-<h2 id="svg-and-the-noun-project">SVG and the Noun Project</h2>
-
-<p>SVG is an image file type that stands for <em>Scalable Vector Graphics</em> and you can use it the same way you would use JPG, PNG or GIF, inside an <code class="highlighter-rouge">&lt;img&gt;</code> element:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;img src="cat.svg" alt="a cute cat"&gt;
-&lt;img src="cat.png" alt="a cute cat"&gt;
-</code></pre>
-</div>
-
-<p>So what’s the difference? Let’s compare a vector graphic (JPG / PNG) and a raster (sometimes called “bitmap”) graphic:</p>
-
-<p><img src="assets/img/module2/vector-vs-raster.png" /></p>
-
-<p>The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic. A major difference between SVG and other file types is size - an SVG will usually be a smaller file size and therefore easier for a browser to load. If a graphic is vector, it should be in SVG format for use on the web.</p>
-
-<p>SVGs can be created using design software such as <a href="http://www.adobe.com/ca/products/illustrator.html" target="_blank">Adobe Illustrator</a> (monthly subscription), <a href="https://www.sketchapp.com/" target="_blank">Sketch</a>, (mac only) or <a href="https://inkscape.org/en/" target="_blank">Inkscape</a> (free).</p>
-
-<p>They can also be found online - a great resource is a website called <a href="https://thenounproject.com/" target="_blank">The Noun Project</a>.</p>
-
-<blockquote>
-  <h2 id="class-exercise-the-noun-project">CLASS EXERCISE: The Noun Project</h2>
-
-  <p>As a class, we will use <a href="http://thenounproject.com">The Noun Project</a> to search for, download and include an SVG graphic in our project as our logo.</p>
-
-  <p>Once you have your SVG in your <strong>img</strong> folder, open it up in Atom. Proceed to comment out the entire <strong><code class="highlighter-rouge">&lt;text&gt;</code></strong> element from the SVG file. Once you’ve hidden it, save the SVG file and close it.</p>
-
-  <p>By omitting the <strong><code class="highlighter-rouge">&lt;text&gt;</code></strong> element from the SVG, we are removing the credit to the designer - so let’s credit them in our footer instead.</p>
-
-  <p>Now, let’s include our SVG as the src in an <strong><code class="highlighter-rouge">&lt;img&gt;</code></strong> element. It will always be scalable, but this doesn’t provide us with much control over the look of our SVG.</p>
-
-  <p>It’s huge! Give your <strong><code class="highlighter-rouge">&lt;img&gt;</code></strong> a class of “logo” and size it accordingly.</p>
-
-  <p>If you would like to change the SVG’s colour or animate it, you will need to use the SVG <strong>“inline”</strong> in your HTML file.</p>
-
-  <p><a href="https://css-tricks.com/using-svg/#article-header-id-7">Read how to include SVG inline and manipulate with CSS</a></p>
-</blockquote>
-
-<h4 id="for-more-resources-on-learning-svg-check-out">For more resources on learning SVG, check out:</h4>
-<ul>
-  <li><a href="https://css-tricks.com/using-svg/">CSS Tricks - “Using SVG”</a></li>
-  <li><a href="http://codepen.io/chriscoyier/pen/evcBu">CodePen Example - Inline SVG</a></li>
-  <li><a href="https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/">Styling and Animating SVG with CSS - Sara Soueidan</a></li>
-</ul>
-
-<h2 id="designing-with-colour">Designing with Colour</h2>
-
-<p>A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.</p>
-
-<h3 id="personality-and-meaning">Personality and Meaning</h3>
-
-<p>Colour communicates meaning.</p>
-
-<ul>
-  <li>Choose colours that reflect your personality or your brand.</li>
-  <li>Consider the emotional responses of your target audience.</li>
-  <li>Use colour to distinguish between elements and interactive states.</li>
-</ul>
-
-<p>Colour meanings can vary across different cultures so it’s important to consider who your target audience.</p>
-
-<p>Read more about colour meaning and how to use colour to enhance your designs <a href="http://vanseodesign.com/web-design/color-meaning/">here</a>.</p>
-
-<h3 id="harmony-and-rhythm">Harmony and Rhythm</h3>
-<p>Colour can be used to attract attention and organize content, creating a visual hierarchy.</p>
-
-<p>Repeating colours on elements adds clarity by allowing the viewer to make visual connections between pieces of content.</p>
-
-<p><strong>Less is more.</strong> When in doubt use one primary colour and a secondary accent colour. Vary the saturation and value of your colours to add variety while maintaining clarity.</p>
-
-<h3 id="colour-accessibility">Colour Accessibility</h3>
-<p>Many people have some sort of visual colour impairment such as being unable to distinguish certain colours from others.</p>
-
-<p>Ensure sufficient contrast between colours to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.</p>
-
-<p>Read more about colour blindness and designing for colour accessibility <a href="https://24ways.org/2012/color-accessibility/">here</a>.</p>
-
-<h4 id="colour-resources">Colour Resources</h4>
-<ul>
-  <li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color CC</a> - tool to help you choose colour palettes</li>
-  <li><a href="http://colorsafe.co/">Color Safe</a> - helps you choose colours with appropriate contrast for text</li>
-  <li><a href="http://www.colorzilla.com/">ColorZilla</a> - Chrome &amp; Firefox plugin to help you pick colours from websites</li>
-</ul>
-
-<h2 id="spacing-and-css">Spacing and CSS</h2>
+        <h1>CSS Fundamentals</h1>
+        <h2 id="spacing-and-css">Spacing and CSS</h2>
 
 <p>Using space is a key part in design to ensure that the content is easy to read, view, find and aesthetically pleasing. Sometimes a few pixels can make all the difference!</p>
 
@@ -473,7 +140,7 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
 <h3 id="autocenter-aligning-with-margin">Auto/Center Aligning with <code class="highlighter-rouge">margin</code></h3>
-<p>The margin property can also be used to center align <em>block</em> level elements.</p>
+<p>The margin property can also be used to center align elements.</p>
 
 <p>First a width needs to be set. Then by setting the left &amp; right values to <code class="highlighter-rouge">auto</code>, it finds the center of the page. The <code class="highlighter-rouge">0</code> refers to the top and bottom value and can be set to any value depending on the desired page style.</p>
 
@@ -489,12 +156,6 @@ margin: 2px 2px 2px 2px; /* top right bottom left */
 <div style="height:60px;width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
-
-<blockquote>
-  <h2 id="class-exercise-auto-align-content">CLASS EXERCISE: auto align content</h2>
-
-  <p>Looking at this <a href="http://codepen.io/learningcode/pen/adPrym">CodePen example</a>, compare the difference when <code class="highlighter-rouge">margin</code> is used to auto align the content block.</p>
-</blockquote>
 
 <h3 id="border">Border</h3>
 <p>The <code class="highlighter-rouge">border</code> property resides between the <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code> and creates an outline around the element. Also has longhand and shorthand syntax.</p>
@@ -554,11 +215,315 @@ border-top: 2px solid red;
   <p><strong>solution.css</strong> has been included for reference.</p>
 </blockquote>
 
+<h2 id="the-box-model-problem-and-fix">The Box Model Problem and Fix</h2>
+
+<p>In CSS ,the relationship between the width, padding and border properties is not always straightforward.
+For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:</p>
+
+<p>480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width</p>
+
+<p>But, there’s a fix! Let’s first compare how the element’s sizing differs with and without the fix, looking at the CSS example below.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>background: lightblue;
+width: 480px;
+padding: 0px 20px;
+border: 15px solid green;
+</code></pre>
+</div>
+
+<div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
+  <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
+</div>
+
+<div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
+  <p>This example DOES have the border box fix.</p>
+</div>
+
+<p><br />
+Notice that without the fix, the element is larger than the set <code class="highlighter-rouge">width</code>.</p>
+
+<p>The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.</p>
+
+<p>Here is the snippet:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+</code></pre>
+</div>
+
+<p>Read more about the fix <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">here</a>.</p>
+
 <blockquote>
   <h2 id="exercise-margin--padding-on-your-project">EXERCISE: Margin &amp; Padding on Your Project</h2>
   <p>Open up your project files and based on the last exercise, add margin and padding to make your website look more balanced.</p>
 
   <p>Wrap your content with a &lt;div class="wrapper"&gt;<code class="highlighter-rouge">, and add </code>margin<code class="highlighter-rouge"> and </code>width` to auto align the page content.</p>
+
+  <p>Add the box model fix to the top of your CSS file.</p>
+</blockquote>
+
+<h2 id="advanced-selectors">Advanced Selectors</h2>
+<p>In the previous lessons, we covered a few ways to select an element using element type, class and id selectors to apply CSS to it, but there are many more ways of targeting content!</p>
+
+<h2 id="descendant-selectors">Descendant Selectors</h2>
+<p>Descendant selectors can be used to target <em>nested</em> elements. To use a descendant selector, add a <em>space</em> between selectors.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;parent&gt;
+  &lt;child&gt;
+    content here
+  &lt;/child&gt;
+&lt;/parent&gt;
+</code></pre>
+</div>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>parent child {
+  /* targets only the child elements contained in that parent */
+}
+</code></pre>
+</div>
+
+<hr />
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>ul li a {
+  color: blue;
+}
+</code></pre>
+</div>
+
+<p>In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.</p>
+
+<p>You can even “skip” an element. The below example will work as well.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ul a {
+  color: blue;
+}
+</code></pre>
+</div>
+
+<h3 id="descendant-selectors-and-specificity">Descendant Selectors and Specificity</h3>
+<p>A good rule of thumb for descendant selectors is to avoid going more than <strong>three</strong> levels deep.  Browsers read selectors from right to left and work its way up the <a href="http://www.w3.org/TR/WD-DOM/introduction.html">DOM</a> tree.  Having many selectors can impact the site performance.</p>
+
+<h4 id="yes">Yes</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>p a {
+  /* targets anchor link tags nested inside of a p tag */
+}
+.about p {
+  /* targets paragraphs within an element with the .about class*/
+}
+</code></pre>
+</div>
+
+<h4 id="no">No!</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>.about ul li a span {
+  ...
+}
+</code></pre>
+</div>
+
+<p>Also, a more <em>specific</em> selector will override the descendant selector, regardless of written order in the CSS file.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ul a {
+  /* least specific */
+}
+ul li a {
+  /* more specific */
+}
+ul.nav li a {
+  /* most specific */
+}
+</code></pre>
+</div>
+
+<h2 id="combining-selectors">Combining selectors</h2>
+<p>You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a <em>comma</em>. Any type of selector can be combined.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.special, #special {
+  color: red;
+}
+h1, h2 {
+  text-transform: uppercase;
+}
+header h1, h2 {
+  text-transform: uppercase;
+}
+</code></pre>
+</div>
+
+<blockquote>
+  <p>What is the difference is between combining <code class="highlighter-rouge">h1, h2</code> and <code class="highlighter-rouge">header h1, h2</code>?</p>
+</blockquote>
+
+<h2 id="pseudo-class-selectors">Pseudo-class Selectors</h2>
+
+<p>Pseudo-class selectors target an elements <em>state</em> or <em>action</em>. The most commonly used pseudo-class is <code class="highlighter-rouge">:hover</code>.  Note the syntax. It must start with a colon (<code class="highlighter-rouge">:</code>) and be attached to an HTML element, with no white-space.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a href="#"&gt;Example link&lt;/a&gt;
+</code></pre>
+</div>
+
+<hr />
+<div class="highlighter-rouge"><pre class="highlight"><code>a { 
+  color: red;
+}
+a:hover { 
+  color: black;
+}
+</code></pre>
+</div>
+
+<h3 id="pseudo-class--links">Pseudo Class &amp; links</h3>
+
+<p><code class="highlighter-rouge">:hover</code> - selects the link on mouse hover.<br />
+  Can also be used to create hover effects for elements other than an <code class="highlighter-rouge">&lt;a&gt;</code>.</p>
+
+<p><code class="highlighter-rouge">:link</code> - links that have <em>not</em> been clicked/visited</p>
+
+<p><code class="highlighter-rouge">:visited</code> - links that <em>have</em> been clicked/visited in the the current browser</p>
+
+<p><code class="highlighter-rouge">:active</code> - selects the link while it is being activated/clicked.</p>
+
+<p><br />
+There are <strong>many</strong> more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.</p>
+
+<blockquote>
+  <h2 id="exercise-selectors">EXERCISE: Selectors</h2>
+
+  <p>Download the <a href="exercises/module3/selectors.zip" download="">exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to!</p>
+
+  <p>All the instructions are contained in the comments at the very top of <code class="highlighter-rouge">selector.html</code>.
+<strong>Bonus</strong> Open up your project’s style.css file and add a hover effect to your nav links. Tip: You might even be able to combine descendant selectors with pseudo selectors for this one!</p>
+</blockquote>
+
+<h2 id="block-vs-inline-elements">Block vs Inline Elements</h2>
+
+<p>Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.</p>
+
+<p>Block level HTML elements default behavior:</p>
+
+<ul>
+  <li>takes up 100% width of its container, no matter how long the actual content is</li>
+  <li>will be the same height as its content</li>
+  <li>always starts on a new line</li>
+  <li>can wrap other block level elements or inline elements</li>
+  <li>can apply sizing related CSS to it (margin, padding, height, width)</li>
+  <li>examples: <code class="highlighter-rouge">&lt;p&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code>, <code class="highlighter-rouge">&lt;ul&gt;</code></li>
+</ul>
+
+<p>Inline level HTML elements default behavior:</p>
+
+<ul>
+  <li>will be the height and width of its content</li>
+  <li>always appears “in a line” with other inline level elements</li>
+  <li>can wrap other inline elements but cannot wrap block level elements <em>except</em> <code class="highlighter-rouge">&lt;a&gt;</code> tags.  This is only valid with an HTML5 doctype.</li>
+  <li>does not render CSS height and width at all, will apply margin and padding but with unexpected results</li>
+  <li>examples: <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code></li>
+</ul>
+
+<p><br />
+<strong>Pro tip!</strong> If you’re not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it’s a block element.  If it spans only the length of its content, it’s an inline element.</p>
+
+<div style="background:lightblue;">this is a div</div>
+
+<p><span style="background:lightgreen;">this is a span</span></p>
+
+<h2 id="css-display">CSS Display</h2>
+
+<p>CSS can be used to change how inline and block elements display using the <code class="highlighter-rouge">display</code> property. There are three values we’ll look at today:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">block</code> - makes inline elements display as block elements</li>
+  <li><code class="highlighter-rouge">inline</code> - makes block elements display as inline-block</li>
+  <li><code class="highlighter-rouge">inline-block</code> - best of both worlds</li>
+</ul>
+
+<p>This property will come in handy when using the Box Model properties.  Let’s do a review before we put display to use.</p>
+
+<h3 id="resource">Resource</h3>
+
+<p><a href="https://css-tricks.com/almanac/properties/d/display/">CSS Tricks: Display property</a></p>
+
+<h2 id="display--box-model-a-match-made-in-heaven">Display + Box Model: A match made in heaven</h2>
+
+<p>The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It’s important to note that these 5 properties will affect elements differently depending on whether they are inline or block. (or inline-block)</p>
+
+<p>Let’s explore their unique behaviour:</p>
+
+<h3 id="width--height-1">Width &amp; Height</h3>
+<p>These properites won’t work for <em>inline</em> level elements unless you use <code class="highlighter-rouge">display</code> to change it to <code class="highlighter-rouge">block</code> or <code class="highlighter-rouge">inline-block</code>.</p>
+
+<h3 id="padding-1">Padding</h3>
+
+<p>When adding padding to an <em>inline</em> element it will look like the below example.</p>
+<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
+<p><a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a></p>
+
+<p><br />
+Notice that there’s no space between the two element? Inline elements don’t apply padding the same way as block elements.  You will need to use the CSS <code class="highlighter-rouge">display</code> property to make an element ‘block’ if you want to add padding..</p>
+
+<p>More on this in the upcoming exercise.</p>
+
+<h3 id="margin-1">Margin</h3>
+
+<p>Just like padding, margin and spacing is not applied the same way to block and inline elements.</p>
+
+<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
+<p><a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a></p>
+
+<blockquote>
+  <h2 id="class-exercise-box-model--display">Class Exercise: Box Model &amp; <code class="highlighter-rouge">display</code></h2>
+  <p>In this <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a>, let’s try the different <code class="highlighter-rouge">display</code> property values and see how it affects inline &amp; block HTML elements.</p>
+</blockquote>
+
+<h2 id="center-aligning-with-margin">Center Aligning with <code class="highlighter-rouge">margin</code></h2>
+<p>Using <code class="highlighter-rouge">margin:0 auto</code> to auto-align content only works with block elements! If you’re trying to center an inline-element you need to apply the <code class="highlighter-rouge">text-align: center</code> property and value to the parent of the inline element.</p>
+
+<p>Looking back at our auto-aligned block element:</p>
+<div style="width:600px;margin: 0 auto;background:lightblue;">
+  <p>Auto aligned!</p>
+</div>
+
+<p><br />
+Notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the example below, notice that content stays in the middle but the background styles expand the width of the page?</p>
+
+<p><img src="assets/img/module3/content-align.jpg" alt="" /></p>
+
+<p>In the previous lesson, a wrapper was included around all of the page content.</p>
+
+<p>But to create a style where different background styles apply to each section, we’ll need to:</p>
+
+<ul>
+  <li>create a wrapper, just for the content, not the whole page</li>
+  <li>auto align the content wrapper</li>
+  <li>use the outer container for the background styles</li>
+</ul>
+
+<blockquote>
+  <p>Looking at this <a href="http://codepen.io/learningcode/pen/avYXvq">CodePen example</a>, compare the difference between using and not using a content wrapper.</p>
+</blockquote>
+
+<blockquote>
+  <h2 id="exercise-content-wrappers-in-our-project">EXERCISE: Content Wrappers in our project</h2>
+  <p>Originally we added padding to our project sections to make the content a little narrower and nice to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer). 
+Go ahead and apply the codepen example from above to each of the sections of your project.</p>
+
+  <p>All in all, <a href="exercises/module2/project-one-final/index.html">this</a> is how the project might look like now that we’ve added so many styles.</p>
+
+  <p><a href="exercises/module2/project-one-final.zip" download="">Download </a>the example files as a reference.</p>
 </blockquote>
 
 <p><br />

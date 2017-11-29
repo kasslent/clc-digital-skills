@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Domains, Hosting & FTP</title>
-  <meta name="description" content="Local development vs live websites">
+  <title>Intro to CMS & WordPress</title>
+  <meta name="description" content="Blogs, Websites and CMS">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
-<body class="module7">
+<body class="">
   <header>
     <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
     <h1>Digital Skills Program</h1>
@@ -37,277 +37,810 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 7, Lesson 1</h3>
-        <h4>Domains, Hosting & FTP</h4>
+        <h4>Intro to CMS & WordPress</h4>
       </nav>
       
-      <article class="module7" >
-        <h1>Domains, Hosting & FTP</h1>
-        <h2 id="local-development-vs-live-websites">Local development vs live websites</h2>
+      <article>
+        <h1>Intro to CMS & WordPress</h1>
+        <h2 id="blogs-websites-and-cms">Blogs, Websites and CMS</h2>
 
-<p>Developing your website <em>locally</em> just means working on your files on your computer. You’re the only person who can see the website until you move it to a <em>web host</em>.</p>
-
-<p>Websites are basically just a bunch of files (HTML pages, images, css files, etc) in a folder. To put that website online and make it <em>live</em>, you will need to move your <em>local</em> folders to a <em>server</em>.</p>
-
-<h3 id="what-is-a-server">What is a server?</h3>
-
-<p>A server is a like a computer, but they never turn off and are always connected to the internet. <em>Hosts</em> own many different servers and are responsible for server maintenance to ensure that all the websites running on that server are always available.</p>
-
-<h2 id="moving-files-to-a-server">Moving files to a server</h2>
-
-<p>It’s similar to moving files from one folder to another. But instead, you’ll be moving files from your computer to your server.</p>
-
-<p>You’ll need 3 things:</p>
+<p>How are blogs different from websites?</p>
 
 <ul>
-  <li>a domain name - your web address (e.g. mywebsite.com)</li>
-  <li>a server/host - web space for your files</li>
-  <li>an FTP client - software/app to upload files to the server</li>
+  <li>the term blog is an abbreviation for weblog</li>
+  <li>blogs often contain an ongoing collection of posts and articles presented in chronological order</li>
+  <li>often (but not always) written in a diary-style of commentary</li>
+  <li>a website can also contain a blog <strong>and</strong> standard informational pages</li>
 </ul>
 
-<h2 id="removing-your-files-from-c9io">Removing your files from c9.io</h2>
+<p>A <strong>Content Management System (CMS)</strong>, is an application used to edit content and manage a website using a graphical user interface instead of editing the code or database.</p>
 
-<p>Before we explore the subject of moving files more, let’s see how we can remove our files from Cloud9 to be able to move them.</p>
+<p>A CMS usually includes features such as:</p>
 
-<p>First, remember that WordPress websites have the theme files and overall WordPress core files to deal with AND a database file. To launch a WordPress website on your own server you’ll need both of these.</p>
+<ul>
+  <li>database management</li>
+  <li>themes and templates for page layouts</li>
+  <li>making content searchable and indexable</li>
+  <li>and much more!</li>
+</ul>
 
-<p>Here’s how to remove them from c9.io.</p>
+<h2 id="what-is-wordpress">What is WordPress?</h2>
+
+<ul>
+  <li>one of many types of blogging software and CMS</li>
+  <li>an online, open source (a.k.a. free) website creation tool</li>
+  <li>can edit, publish content and manage the website using a graphical user interface, without editing the code or database (though you can!)</li>
+  <li>customizable core, can be extended and modified in anyway</li>
+  <li>written primarily in PHP but also requires HTML, CSS, JavaScript</li>
+  <li>uses PHP templates &amp; a database to create and store content (with static HTML, you have to manually create a new document for every new page)</li>
+</ul>
+
+<p>Depending on your needs and level of customization, you may not need to edit any of the code to get up and running.</p>
+
+<p>There are two options for using WordPress, <a href="http://wordpress.org">WordPress.org</a> and <a href="http://wordpress.com">WordPress.com</a>.</p>
+
+<h2 id="wordpresscom-vs-wordpressorg">WordPress.com vs WordPress.org</h2>
+
+<h3 id="wordpresscom">WordPress.com</h3>
+
+<ul>
+  <li>hosted and all technical maintenance handled by WordPress</li>
+  <li>your domain will be “yoursite.<strong>wordpress.com</strong>” (paid upgrade for a customized domain)</li>
+  <li>don’t need to write any PHP to get up and running</li>
+  <li>no access to the code (without an upgrade)</li>
+  <li>theme options are included but cannot upload your own themes</li>
+  <li>different plans ranging from free - $299 with added features</li>
+  <li>no plugins</li>
+</ul>
+
+<h3 id="wordpressorg">WordPress.org</h3>
+
+<ul>
+  <li>must register and pay for a domain &amp; web hosting</li>
+  <li>you are responsible for technical maintenance</li>
+  <li>requires web development knowledge (how much depends on level of customization desired)</li>
+  <li>written on PHP (back-end programming language)</li>
+  <li>also requires HTML &amp; CSS and usually JavaScript</li>
+  <li>full control over themes files and code</li>
+  <li>more theme options or customize it yourself</li>
+  <li>1000s of plugins for adding features &amp; functionality or create your own</li>
+</ul>
+
+<p>Both versions basically work the same but the <code class="highlighter-rouge">.com</code> version doesn’t require any technical knowledge and is limited on the level of customization.</p>
+
+<p>The <code class="highlighter-rouge">.org</code> version can be customized in any way but requires more technical knowledge.  How much depends on the level of complexity of the customizations required.</p>
+
+<h2 id="communicating-with-wordpress-servers-and-files">Communicating with WordPress: Servers and Files</h2>
+<p><img src="assets/img/module6/wpservers-01.svg" alt="" /></p>
+
+<p>A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Cloud9 (c9.io).</p>
+
+<p>How does WP work with a server?</p>
+
+<p style="text-align: left;">1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from wP (including our theme.)</p>
+
+<p style="text-align: left;">2. We visit the WP dashboard to add content to the database on the server. </p>
+
+<p style="text-align: left;">3. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)</p>
+
+<p style="text-align: left;">4. We visit the website and our server shows us the website according to what our theme files have requested it show us.</p>
+<h4 id="resources">Resources</h4>
+<ul>
+  <li><a href="http://www.wpbeginner.com/wordpress-hosting/">WPBeginner: 
+How to Choose the Best WordPress Hosting?</a></li>
+  <li><a href="http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/">Performance of the Best WordPress Hosting Companies Compared</a>
+*Check <a href="https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP">this link</a> for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).</li>
+</ul>
+
+<h3 id="setting-up-our-wordpress-coding-environment">Setting up our WordPress coding environment</h3>
+<p>WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See diagram above)
+These are the steps we normally take to set up a WordPress website:</p>
+
+<ol>
+  <li>We download the WordPress files from wordpress.org</li>
+  <li>We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).</li>
+  <li>We connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.</li>
+</ol>
+
+<p>That’s it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we’re going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!</p>
+
+<h2 id="wordpress-and-cloud9">WordPress and Cloud9</h2>
+
+<p>Cloud9 is a free service that allows you to develop any type of website or application in the browser. It’s a great tool for collaborating with others, and for learning.</p>
+
+<p>Cloud9(c9.io) is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.</p>
+
+<h3 id="lets-set-up-c9io">Let’s set up c9.io!</h3>
+
+<ol>
+  <li>Go to your e-mail and find the link invitation that was sent to you to register for c9. Though c9 is free, they still require you to use a credit card on their site. The link we e-mailed you prevents you from needing to enter your credit card info.</li>
+</ol>
+
+<p><img src="assets/img/module6/c9-welcome-email.png" alt="" /></p>
+
+<ol>
+  <li>Once there, please register for your account indicating that you are a student. 
+<img src="assets/img/module6/c9-create-account-student.png" alt="" /></li>
+  <li>Once you’re in, you’ll have access to your main dashboard. On the left, a menu will allow you switch from your personal dashboard, to the class dashboard showcasing all the projects made by other students.</li>
+  <li>In the horizontal top navigation, click on the plus sign on the right hand side.</li>
+  <li>Now we will fill out our site’s information and select WordPress as our type of project.
+<img src="assets/img/module6/c9-spin-up-wp.gif" alt="" /></li>
+  <li>What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let’s run our WP website to explore the dashboard.</li>
+  <li>Click on “Run Project” to start the server. <img src="assets/img/module6/c9-run-project.png" alt="" /></li>
+  <li>Next, you’ll notice in the console at the bottom of the page, that the words “Starting Apache” come up followed by a link to a long URL. This URL is the link to your website. Go ahead and click on it.</li>
+  <li>This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you’ll have to log in immediately after.</li>
+  <li>Log into your dashboard.</li>
+</ol>
+
+<h3 id="wordpress-settings">WordPress Settings</h3>
+
+<p>When you log into the WordPress admin area, the first thing you’ll see is the Dashboard. Here you can view your drafts, check out basic stats, respond to comments and get a general overview of your blog.</p>
+
+<p>The other menus in the left sidebar allows access to additional settings such as:</p>
+
+<ul>
+  <li>adding blog posts (Posts)</li>
+  <li>adding pages (Pages)</li>
+  <li>changing themes (Appearance)</li>
+  <li>uploading media (Media)</li>
+  <li>other general site settings</li>
+</ul>
+
+<h2 id="configure-basic-site-settings">Configure basic site settings</h2>
+
+<p>In the admin panel, go to <strong>Settings &gt; General</strong>.</p>
+
+<p>Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select <strong>Save Changes</strong>!</p>
 
 <blockquote>
-  <h2 id="class-code-along-accessing-your-files-on-cloud-9">Class Code-Along: Accessing your files on Cloud 9</h2>
-  <h3 id="getting-the-database">Getting the database</h3>
+  <p>Go to <strong>Settings &gt; General</strong> and update your Site Title and Tagline and another general setting if you’d like.</p>
+</blockquote>
 
-  <p>To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases.</p>
+<h2 id="posts-vs-pages">Posts vs Pages</h2>
+<p>Posts</p>
+
+<ul>
+  <li>used for date-based content</li>
+  <li>posts are listed chronologically</li>
+  <li>can also be assigned <em>categories</em> and <em>tags</em> (also referred to as <em>taxonomies</em>)</li>
+  <li>permalink (URL) will include the date (can change this in the settings&gt;reading)<br />(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)</li>
+</ul>
+
+<p>Pages</p>
+
+<ul>
+  <li>used for single pages of static content (e.g. about or contact page)</li>
+  <li>cannot have <em>taxonomies</em></li>
+  <li>can have a hierarchical structure (e.g. Travel &gt; Beach vacations)</li>
+  <li>permalink (url) will not include the date<br />(e.g. http://your-project-name.dev/about/)</li>
+</ul>
+
+<h2 id="content-options-and-settings">Content Options and Settings</h2>
+
+<p>When adding content into your <strong>Post</strong> or <strong>Page</strong>, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the <strong>Toolbar Toggle</strong> to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.</p>
+
+<p>When using the <strong>Visual</strong> editor, the content entered automatically gets converted into HTML.</p>
+
+<p><img src="assets/img/module6/adding-content-wysiwyg.png" alt="" /></p>
+
+<h3 id="wordpress-and-html">WordPress and HTML</h3>
+
+<p>You can also edit or add your own HTML by selecting the <strong>Text</strong> editor tab.</p>
+
+<p>In WordPress, you don’t need to add the <code class="highlighter-rouge">&lt;p&gt;</code> tags in either the visual or text editor. In the <strong>Visual</strong> editor, select the paragraph option from the dropdown.</p>
+
+<p><img src="assets/img/module6/editor-visual-p.png" alt="" /></p>
+
+<p>In the <strong>Text</strong> editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into <code class="highlighter-rouge">&lt;p&gt;</code> tags via Wordpress magic!</p>
+
+<p><img src="assets/img/module6/editor-text-p.png" alt="" /></p>
+
+<p>Also, break tags <code class="highlighter-rouge">&lt;br&gt;</code> are not needed. Just use the enter/return key <em>once</em> for a line break in either the Visual or Text WordPress editor.</p>
+
+<p><img src="assets/img/module6/editor-line-break.png" alt="" /></p>
+
+<h3 id="categories">Categories</h3>
+
+<p>Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.</p>
+
+<p>To add categories, go to <strong>Posts &gt; Categories</strong> or within the post itself.
+<img src="assets/img/module6/dashboard-categories-post.png" alt="" /></p>
+
+<p>Sub-categories can also be created by selecting a Parent in the <strong>Categories</strong> menu.</p>
+
+<p><img src="assets/img/module6/dashboard-categories.png" alt="" /></p>
+
+<h3 id="tags">Tags</h3>
+
+<p>Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Category: Breakfast
+Tags: eggs, kid friendly, under 30mins
+</code></pre>
+</div>
+
+<p>Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.</p>
+
+<blockquote>
+  <h2 id="exercise-add-content">Exercise: Add Content</h2>
+  <ol>
+    <li>Create a couple of random blog posts in the Posts section. Don’t dwell too much on the content. <a href="http://meettheipsums.com">Dummy text</a> is fine for now.</li>
+    <li>Add some categories and tags to your posts.</li>
+    <li>Create a page for each of your project’s pages. In the example project that would be three pages: Home, About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you’ve added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.</li>
+    <li>Go to Settings&gt;Reading and set the Home page as your home page and the Blog page as your blog page. 
+Having content to work with will make it easier to work with our theme files.</li>
+  </ol>
+</blockquote>
+
+<h2 id="the-guts-of-wordpress">The Guts of WordPress</h2>
+
+<p>Now that we’ve poked around a bit in the dashboard, let’s go deeper and take a look at the files back in c9.</p>
+
+<p>At first glance, it’s overwhelming to see how many folders and files WP needs to run. But on closer look, we’ll be ignoring the majority of the files which just make up the core of WP. The files we’ll use are in the wp-content folder.</p>
+
+<p>Inside of wp-content there is a folder named themes. That’ll be our most used folder.</p>
+
+<p>Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.</p>
+
+<h3 id="what-is-a-theme">What is a theme?</h3>
+
+<p>A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.</p>
+
+<p>Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.</p>
+
+<h3 id="whats-in-a-theme">What’s in a theme?</h3>
+
+<p>The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.</p>
+
+<h3 id="uploading-our-theme-to-wp">Uploading our Theme to WP</h3>
+
+<p>Currently there are three default themes inside the themes folder. These always come with WordPress.
+Under Appearance&gt;Themes we can see how these default themes look and even test them out on our website.
+But today we’re not interested in a default theme. We want to build our very own.</p>
+
+<ol>
+  <li>Let’s begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the <a href="exercises/module5/project-one-sample-w-js.zip">sample starter project folder.</a>.</li>
+  <li>
+    <p>To upload your project folder, click on the <code class="highlighter-rouge">themes</code> folder inside <code class="highlighter-rouge">wp-content</code> so that it’s highlighted. Then go to <code class="highlighter-rouge">File&gt;Upload Local Files</code> and find your folder.</p>
+  </li>
+  <li>
+    <p>Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project’s css file:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> /*
+ Theme Name: Twenty 
+ Theme URI: http://wordpress.org/themes/twentythirteen
+ Author: the WordPress team
+ Author URI: http://wordpress.org/
+ Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, edisplayed              beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matchheader images,              beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-widcustom-header,              custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-potranslation-ready
+ Text Domain: twentythirteen
+ This theme, like WordPress, is licensed under the GPL.
+ Use it to make something cool, have fun, and share what you've learned with others. 
+ */
+</code></pre>
+    </div>
+  </li>
+  <li>The next thing we must do is rename index.html to index.php (right click on file to rename in c9)</li>
+  <li>Make sure to check under Appearance&gt;Themes whether your own theme shows up! If it does, go ahead and activate it.
+How does it look?</li>
+</ol>
+
+<h3 id="why-isnt-any-of-our-css-showing-up">Why isn’t any of our CSS showing up?</h3>
+
+<p>This is because our stylesheet link is no longer working. It’s looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don’t work the same way as our basic html project from this morning.</p>
+
+<p>WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder. 
+To fix this issue, we could write a really long path to the stylesheet. Let’s try it.
+Replace our href in the stylesheet link with :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;link rel="stylesheet" href="wp-content/themes/your-theme-folder-name/style.css"&gt;
+</code></pre>
+</div>
+
+<p>Does it work?</p>
+
+<p>There is a better way to link to our CSS.</p>
+
+<h3 id="communicating-with-wordpress-php--template-tags">Communicating with WordPress: PHP &amp; Template Tags</h3>
+
+<p>Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.</p>
+
+<p>The way we communicate with WordPress is by using <strong>Template Tags</strong>.</p>
+
+<p>Template Tags are bits of PHP that will communicate with the WordPress database and print out the things we want on the page.</p>
+
+<h4 id="anatomy-of-a-template-tag">Anatomy of a Template Tag</h4>
+
+<p>Template Tags are written in PHP</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php /*template tag goes here*/ ?&gt;
+</code></pre>
+</div>
+
+<p>Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will yell at you.
+The template tags we put in between these PHP brackets vary.
+Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core.</p>
+
+<p>In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember <code class="highlighter-rouge">alert();</code> in JavaScript or <img src="assets/img/module5/scratch-builtin.png" alt="" /> in Scratch? WordPress Template Tags are exactly the same.</p>
+
+<p>Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php bloginfo(); ?&gt;
+</code></pre>
+</div>
+
+<p>Inside of those brackets we can add arguments that WordPress recognizes to pull specific data from the database.</p>
+
+<p>We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the dashboard.</p>
+<h4 id="resources-1">Resources</h4>
+<p><a href="https://codex.wordpress.org/Template_Tags">WordPress Codex</a></p>
+
+<blockquote>
+  <h2 id="exercise-header-template-tags">Exercise: Header Template Tags</h2>
+  <p>Let’s put some of these template tags in use to replace our static HTML content with data coming from WordPress.</p>
+
+  <p>We will begin with the &lt;head&gt;&lt;/head&gt; of the HTML.</p>
+
+  <p>Open up your index.php file in c9. We’ll be adding the following template tags to dynamically pull information from WP :</p>
+
+  <p>Where should these go?</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>1. &lt;?php bloginfo( 'charset' ); ?&gt;
+
+2. &lt;?php bloginfo( 'name' ); ?&gt;
+
+3. &lt;?php language_attributes(); ?&gt;
+
+4. &lt;?php echo get_stylesheet_uri(); ?&gt;
+</code></pre>
+  </div>
+
+  <p>In the end, our header should be looking like this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="err">&lt;?</span><span class="na">php</span> <span class="na">language_attributes</span><span class="err">();</span> <span class="err">?</span><span class="nt">&gt;</span>&gt;
+<span class="nt">&lt;head&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"&lt;?php bloginfo( 'charset' );?&gt;"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;title&gt;</span><span class="cp">&lt;?php bloginfo( 'name' ); ?&gt;</span><span class="nt">&lt;/title&gt;</span>
+ <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"&lt;?php echo get_stylesheet_uri(); ?&gt;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+  </div>
+
+  <p>Notice how much cleaner it is to add the stylesheet using the <code class="highlighter-rouge">get_stylesheet_uri</code> template tag?</p>
+</blockquote>
+
+<h3 id="resources-2">Resources</h3>
+
+<p><a href="https://developer.wordpress.org/reference/functions/bloginfo/">https://developer.wordpress.org/reference/functions/bloginfo/</a></p>
+
+<h2 id="the-loop">The Loop</h2>
+
+<p>Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called “The Loop”.</p>
+
+<p>The Loop is a conditional statement in PHP that tells the database something along the lines of <em>“Hey, Database! If you’ve got any content over there for this page, or for this blog post, as long as you’ve got it, print it out for me right here, would ya? Thanks.”</em></p>
+
+<p>In PHP it looks like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+	&lt;!-- content goes here --&gt;
+&lt;?php endwhile; else : ?&gt;
+	&lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+&lt;?php endif; ?&gt; 
+</code></pre>
+</div>
+
+<p>You’ve seen a statement like this beforehand. Do you remember this guy?</p>
+
+<p><img src="assets/img/module6/c9_scratch_conditional.png" alt="" /></p>
+
+<p>We need to add our loop to our index.php page
+So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page?</p>
+
+<p>We’ll put it after the banner, and before the horizontal sidebar.</p>
+
+<h3 id="the-content">The Content</h3>
+
+<p>So what goes inside the loop? Template tags!</p>
+
+<p>Specifically, we’ll be using the following template tags:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php the_content(); ?&gt;
+&lt;?php the_title(); ?&gt;
+</code></pre>
+</div>
+
+<blockquote>
+  <h3 id="exercise-add-your-template-tags">Exercise: Add your template tags</h3>
+
+  <p>Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through?</p>
+</blockquote>
+
+<p>Yay! We’re communicating with WP now.</p>
+
+<h2 id="template-files">Template Files</h2>
+
+<p>We’ve talked about template tags but in WordPress there are also Template Files. - It’s possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.</p>
+
+<p>It also enables us to put code that we need more than once, in its own file so that we don’t need to repeat it.</p>
+
+<blockquote>
+  <p>Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?</p>
+</blockquote>
+
+<blockquote>
+  <h3 id="class-exercise">Class Exercise:</h3>
+  <ol>
+    <li>Create 4 new files in your theme folder:
+      <ul>
+        <li>header.php</li>
+        <li>footer.php</li>
+        <li>sidebar.php</li>
+        <li>page.php</li>
+      </ul>
+    </li>
+    <li>Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)</li>
+  </ol>
+
+  <h4 id="indexphp-should-now-look-like-this">index.php should now look like this:</h4>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>    &lt;main&gt;
+    	&lt;section class="banner"&gt;
+    		&lt;div class="wrapper"&gt;
+    			&lt;h1&gt;An island girl around towndd&lt;/h1&gt;
+    		&lt;/div&gt;
+    	&lt;/section&gt;
+		&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+    	&lt;section class="about"&gt;
+    		&lt;div class="wrapper"&gt;
+    			&lt;?php the_content(); ?&gt;
+    		&lt;/div&gt;
+    	&lt;/section&gt;
+    	&lt;?php endwhile; else : ?&gt;
+    		&lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+    	&lt;?php endif; ?&gt; 
+    &lt;/main&gt;
+</code></pre>
+  </div>
+
+  <h4 id="headerphp-should-look-like-this">header.php should look like this:</h4>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>	    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+	    <span class="nt">&lt;html</span> <span class="err">&lt;?</span><span class="na">php</span> <span class="na">language_attributes</span><span class="err">();</span> <span class="err">?</span><span class="nt">&gt;</span>&gt;
+	    <span class="nt">&lt;head&gt;</span>
+	     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"&lt;?php bloginfo( 'charset' );?&gt;"</span><span class="nt">&gt;</span>
+	     <span class="nt">&lt;title&gt;</span><span class="cp">&lt;?php bloginfo( 'name' ); ?&gt;</span><span class="nt">&lt;/title&gt;</span>
+	     <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+	     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"&lt;?php echo get_stylesheet_uri(); ?&gt;"</span><span class="nt">&gt;</span>
+	    <span class="nt">&lt;/head&gt;</span>
+	    
+	    <span class="nt">&lt;body&gt;</span>
+	    	<span class="nt">&lt;header&gt;</span>
+	    		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+	    			<span class="nt">&lt;div&gt;</span>
+	    
+	    			<span class="nt">&lt;h1&gt;</span>Anne Shirley's Musings<span class="nt">&lt;/h1&gt;</span>
+	    			<span class="nt">&lt;/div&gt;</span>
+	    			<span class="nt">&lt;nav&gt;</span>
+	    				<span class="nt">&lt;ul&gt;</span>
+	    					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"about.html"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+	    					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+	    					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"contact.html"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+	    				<span class="nt">&lt;/ul&gt;</span>
+	    			<span class="nt">&lt;/nav&gt;</span>
+	    		<span class="nt">&lt;/div&gt;</span>
+	    	<span class="nt">&lt;/header&gt;</span>
+</code></pre>
+  </div>
+
+  <h4 id="sidebarphp-should-look-like-this">sidebar.php should look like this:</h4>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>	    &lt;aside&gt;
+	    	&lt;div class="wrapper aside"&gt;
+	    		&lt;div class="third"&gt;
+	    			&lt;h2&gt;From My Blog&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt,porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!&lt;/p&gt;
+	    			&lt;a href="#"&gt;Continue reading&lt;/a&gt;
+	    		&lt;/div&gt;
+	    
+	    		&lt;div class="third"&gt;
+	    			&lt;h2&gt;Me on Social Media&lt;/h2&gt;
+	    			&lt;!-- Insert Twitter Feed --&gt;
+	    			&lt;a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl"&gt;Tweets by anneofgreengabl&lt;/a&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+	    		&lt;/div&gt;
+	    		&lt;div class="third"&gt;
+	    			&lt;h2&gt;Subscribe to my Blog&lt;/h2&gt;
+	    			&lt;form action=""&gt;
+	    
+	    				&lt;input type="text" placeholder="E-mail Address"&gt;
+	    				&lt;input type="submit"&gt;
+	    			&lt;/form&gt;
+	    		&lt;/div&gt;
+	    	&lt;/div&gt;
+	    &lt;/aside&gt;
+</code></pre>
+  </div>
+
+  <h4 id="footerphp-should-look-like-this">footer.php should look like this:</h4>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>    	&lt;footer&gt;
+    		&lt;div class="wrapper"&gt;
+    			&lt;p&gt;&amp;copy; Anne Shirley 2016&lt;/p&gt;
+    		&lt;/div&gt;
+    	&lt;/footer&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+  </div>
+
+  <ol>
+    <li>In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.</li>
+    <li>Then into index.php and page.php we’ll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();</li>
+  </ol>
+
+  <h4 id="indexphp-should-look-like-this">index.php should look like this.</h4>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>       &lt;?php get_header(); ?&gt;
+       &lt;main&gt;
+    	    	
+    	    	&lt;section class="banner"&gt;
+    	    		&lt;div class="wr&gt;apper"&gt;
+    	    			&lt;h1&gt;&lt;?php the_title(); ?&gt;&lt;/h1&gt;
+    	    		&lt;/div&gt;
+    	    	&lt;/section&gt;
+    		&lt;?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?&gt;
+       	&lt;section class="about"&gt;
+       		&lt;div class="wrapper"&gt;
+    	    			&lt;?php the_content(); ?&gt;
+    	    		&lt;/div&gt;
+    	    	&lt;/section&gt;
+    	    	&lt;?php endwhile; else : ?&gt;
+        		&lt;p&gt;&lt;?php _e( 'Sorry, no posts matched your criteria.' ); ?&gt;&lt;/p&gt;
+    	    	&lt;?php endif; ?&gt;
+    	    	&lt;?php get_sidebar(); ?&gt;
+    	    &lt;/main&gt; &lt;?php get_footer();?&gt;
+</code></pre>
+  </div>
 
   <ol>
     <li>
-      <p>Open up a terminal: Watch this video of how: 
-<img src="assets/img/module7/c9-opening-terminal.gif" alt="" /></p>
-    </li>
-    <li>
-      <p>Enter the following in the terminal.</p>
+      <p>Now that you’ve split off your repeated code into tidy new files, let’s also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following:</p>
 
-      <div class="highlighter-rouge"><pre class="highlight"><code>     phpmyadmin-ctl install
+      <ol>
+        <li>Create a special template file for the About page. Call it <strong>page-about.php</strong>.</li>
+        <li>
+          <p>In page-about.php, write the following</p>
+
+          <div class="highlighter-rouge"><pre class="highlight"><code> &lt;?php /* Template Name: About */ ?&gt;
+</code></pre>
+          </div>
+        </li>
+      </ol>
+    </li>
+    <li>Below this, copy over everything from your index.php file there and delete what you don’t want. For example, the banner.</li>
+    <li>In the dashboard go to Pages&gt;About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <h2 id="bonus-tweaking-the-blog">Bonus: Tweaking the blog</h2>
+  <p>You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php. 
+This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out: 
+		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
+		    <?php the_author(); ?> This one will print out the author of your posts.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>	    &lt;?php the_category(); ?&gt; This one will print out the categories for a blog post
+	    &lt;?php the_tags(); ?&gt; This one will print out the tags for a blog post. 
+
+	    &lt;?php the_date(); ?&gt; This will print out the date published.
+
+	    &lt;?php the_excerpt(); ?&gt; This will print out a truncated part of the body of the blog post.
+</code></pre>
+  </div>
+
+  <p>Play around with these in index.php for better customization of your blog feed. 
+Also, consider creating a <strong>single.php</strong> template to control the way your single view of each blog post looks like.</p>
+</blockquote>
+
+<h3 id="resources-3">Resources</h3>
+
+<ul>
+  <li><a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">On Temple Heirarchy</a></li>
+  <li><a href="https://codex.wordpress.org/Template_Tags">On Template Tags</a></li>
+  <li><a href="https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29">On single.php</a></li>
+</ul>
+
+<p>So you could call it a day right now. There’s your theme. Great job! You’ve built your own simple theme and it works. But let’s go a little deeper and add even more functionality!</p>
+
+<p>There is another very powerful file we can add to theme and it’s called the Functions file. It’s a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more…</p>
+
+<blockquote>
+  <h3 id="class-exercise-1">Class Exercise</h3>
+
+  <ol>
+    <li>In your own custom theme folder, create a  new file named <code class="highlighter-rouge">functions.php</code>.</li>
+    <li>
+      <p>Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> &lt;?php
+   function register_my_menus() {
+register_nav_menus(
+array(
+ 'primary-menu' =&gt; __( 'Header Menu' ),
+ 'extra-menu' =&gt; __( 'Extra Menu' )d
+)
+);
+    }
+    add_action( 'init', 'register_my_menus' );
+ ?&gt;
+</code></pre>
+      </div>
+    </li>
+    <li>Go to the Dashboard and navigate to Appearance&gt;Menus - now this is available! d</li>
+    <li>Create a Menu with the three links to the 3 pages, make sure to pick Header Menu as the location when you create the menu.</li>
+    <li>Replace the ul inside the nav with the following</li>
+  </ol>
+
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php wp_nav_menu( array( 'theme_location' =&gt; 'primary-menu' ) ); ?&gt;
+</code></pre>
+</div>
+
+<blockquote>
+
+  <p>Refresh your page and now you should have a perfectly working Navigation again.</p>
+
+  <p><strong>Bonus:</strong> WordPress gives menu items of the currently visited page, the class of <em>current_page_item</em>. You can style it differently.</p>
+</blockquote>
+
+<h3 id="resources-4">Resources</h3>
+
+<p><a href="https://codex.wordpress.org/Navigation_Menus">Codex Navigations</a></p>
+
+<h2 id="sidebars-and-widgets">Sidebars and Widgets</h2>
+
+<p>Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We’ll be converting our current sidebar into a dynamic WP sidebar.</p>
+
+<blockquote>
+  <h3 id="class-exercise-2">Class Exercise</h3>
+  <ol>
+    <li>
+      <p>First off, we must register our sidebar inside functions.php so that we can enable Widgets on the website.
+Enter this into your functions file :</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>function themename_widgets_init() {
+  register_sidebar( array(    'name'    =&gt; __( 'Primary Sidebar', 'mammaspizza' ),    'id'
+ =&gt; 'sidebar-1',    'before_widget' =&gt; '&lt;div id="%1$s" class="third widget %2$s"&gt;',    'after_widget'  =&gt; '&lt;/div&gt;',    'before_title'  =&gt; '&lt;h2 class="widget-title"&gt;',    'after_title'   =&gt; '&lt;/h2&gt;',
+  ) );   }   add_action( 'widgets_init', 'themename_widgets_init' );
+</code></pre>
+      </div>
+    </li>
+    <li>Go to Appearance&gt;Widgets and add 3 widgets to your sidebar. <strong>Tip:</strong> If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed.</li>
+    <li>
+      <p>Delete all the elements with the class of <code class="highlighter-rouge">third</code> inside your aside element in page.php and replace them with:</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php dynamic_sidebar(); ?&gt;
 </code></pre>
       </div>
     </li>
   </ol>
-
-  <p>You will see a url generated to access your phpMyAdmin dashboard where you’ll download the database.
-You’ll select the database c9 on the sidebar and the go to “Export” to download the database for your website.
-Follow the instructions in this gif:</p>
 </blockquote>
 
-<blockquote>
-  <p><img src="assets/img/module7/downloading-database-from-c9.gif" alt="" /></p>
+<h2 id="featured-images">Featured Images</h2>
 
-  <ol>
-    <li>Once you’re done downloading the database, go back to c9, select your entire project folder, right click on it and select download. 
-You will use the files and the database to upload them to a hosting service/server.
-      <h3 id="resources">Resources</h3>
-      <p>Watch this awesome video walkthrough of <a href="http://wesbos.com/migrate-wordpress/">how to launch a wordpress website</a> by Wes Bos:</p>
-    </li>
-  </ol>
-</blockquote>
+<p>We can add featured image functionality to our pages and posts by adding the following to our functions file:</p>
 
-<h2 id="server-vs-domain">Server vs Domain</h2>
-
-<p>A <strong>server</strong> is the computer that will “host” the folder with your files.</p>
-
-<p>The <strong>domain</strong> is the internet address used to access that folder on the server.</p>
-
-<p>Many companies will sell domains and hosting but you can also purchase these separately and connect them through your hosting provider.</p>
-
-<p>There are many hosting and domain companies to choose from. Here are a few:</p>
-
-<ul>
-  <li><a href="http://www.dreamhost.com/r.cgi?2085384">Dreamhost</a> - hosting and domains - $40 off with promo code <strong>LLC40</strong></li>
-  <li><a href="Hover.com/learningcode">Hover</a> - domains only - 10% off with promo code <strong>learningcode</strong></li>
-  <li><a href="http://www.whoishostingthis.com/compare/">Compare Hosting</a></li>
-  <li><a href="http://www.pcmag.com/article2/0,2817,2424725,00.asp">The Best Web Hosting Services for 2016</a></li>
-</ul>
-
-<p>Read more about keeping hosting and domains separate <a href="http://ladieslearningcode.com/getting-hosted-domains-with-hover/">here</a>.</p>
-
-<h2 id="domains--hover">Domains &amp; Hover</h2>
-<p>Setting up a domain name will be slightly different based on which option you choose because it depends on that service providers website interface.  To set up a domain with <a href="Hover.com/learningcode">Hover</a>, follow the instructions below.</p>
-
-<h3 id="step-1">Step 1:</h3>
-<p>Visit <a href="http://hover.com">hover.com</a> and select <strong>Find a domain</strong> and enter your desired domain name into the search box.</p>
-
-<p><img src="assets/img/module7/1-search-domain.png" alt="" /></p>
-
-<h3 id="step-2">Step 2:</h3>
-<p>A list of available domain name extensions will show as well as suggestions for similar names.  This is useful if your desired domain name is already taken.</p>
-
-<p>Select an option and add to cart.</p>
-
-<p><img src="assets/img/module7/2-domain-options.gif" alt="" /></p>
-
-<h3 id="step-3">Step 3:</h3>
-<p>Optional email customizations</p>
-
-<p><strong>Mail Forwards</strong><br />
-Forward your custom domain email address to your Gmail, Hotmail, etc.  Get the benefit of a custom email address without managing multiple accounts.</p>
-
-<p><strong>Small &amp; Big Mailbox</strong><br />
-Ad-free email accounts. The Big option has more storage and a few other features.</p>
-
-<p>You can always add this option later. See full details <a href="https://www.hover.com/email">here</a>.</p>
-
-<p><img src="assets/img/module7/3-cart-email-options.png" alt="" /></p>
-
-<h3 id="step-4">Step 4:</h3>
-<p>Create an account &amp; add your WHOIS registration info.</p>
-
-<p><strong>What is a registration record?</strong></p>
-
-<p>When registering a domain name, the Internet Corporation for Assigned Names and Numbers (ICANN) requires your contact information for the WHOIS database which is publicly available using a WHOIS search tool.</p>
-
-<p>Hover (and most other domain registrars) offer a privacy option, automatic with Hover’s domain registration (see previous screenshot, the privacy option is automatically checked).</p>
-
-<p>More info <a href="https://help.hover.com/entries/21196313-Domain-WHOIS-Privacy">here</a>.</p>
-
-<p><img src="assets/img/module7/4-create-account.png" alt="" /></p>
-
-<p><img src="assets/img/module7/5-whois-info.png" alt="" /></p>
-
-<h3 id="step-5">Step 5:</h3>
-<p>Add your billing info.</p>
-
-<p>To add another domain name, log into your new account, choose the <strong>Add New</strong> option and follow the same steps.</p>
-
-<p><img src="assets/img/module7/6-get-another-domain.png" alt="" /></p>
-
-<p><br />
-And you’re done!</p>
-
-<h2 id="domains--hosting">Domains &amp; Hosting</h2>
-
-<p><strong>If you have a domain with your hosting company, skip this step.</strong></p>
-
-<p>To forward your domain to your hosting company, follow the steps below. First, find your hosting provider’s <strong>nameservers</strong>. It will look something like this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>ns1.hostingcompany.com
-ns2.hostingcompany.com
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php add_theme_support( 'post-thumbnails' ); ?&gt;
 </code></pre>
 </div>
 
-<p>This info is provided by your hosting company but the website’s interface for finding this info will vary. Sometimes it is also included in your confirmation email when you sign up.</p>
+<p>Once you’ve done that, go back into your home page and add a featured image. It will show up on the right hand side.</p>
 
-<p>You could also contact customer support or just do a web search for “[your host] nameservers”.  For example, searching for “Dreamhost nameservers” brings up <a href="http://wiki.dreamhost.com/Nameservers">this page</a>.  Dreamhost’s nameservers are:</p>
+<blockquote>
+  <p>##Class Exercise: Adding a featured image to a page</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ns1.dreamhost.com
-ns2.dreamhost.com
-ns3.dreamhost.com
+  <p>We can add featured images anywhere inside the loop in various default sizes:</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>the_post_thumbnail(); // Without parameter -&gt;; Thumbnail
+the_post_thumbnail( 'thumbnail' ); // Thumbnail (default 150px x 150px max)
+the_post_thumbnail( 'medium' ); // Medium resolution (default 300px x 300px max)
+the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
+the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 </code></pre>
 </div>
 
-<p>To forward your Hover domain to your hosting account, follow these steps. (This will be similar for other domain/hosting company)</p>
-
-<ol>
-  <li>login to your Hover account</li>
-  <li>go to <strong>Your Account &gt; Domains</strong> (also the landing page when you log in)</li>
-  <li>click your domain</li>
-  <li>go down to <strong>Nameservers</strong> and select <strong>Edit</strong>
-  <img src="assets/img/module7/hover-nameservers-1.png" alt="" /></li>
-  <li>update it with your host’s nameservers
-  <img src="assets/img/module7/hover-nameservers-2.png" alt="" /></li>
-</ol>
-
-<h2 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h2>
-
-<p>FTP (File Transfer Protocol) allows you to connect to the server to upload files.</p>
-
-<p>To use FTP, you will need to create an FTP username and password in your <strong>hosting</strong> account, since that is where your servers are.</p>
-
-<p>To create an FTP user in Dreamhost, follow these steps. (This will be similar with other hosting companies).</p>
-
-<ul>
-  <li>go to <strong>Users &gt; Manage users &gt; Add a new user</strong></li>
-  <li>create a username, password and save</li>
-</ul>
-
-<p><img src="assets/img/module7/dreamhost-ftp-1.png" alt="" />
-<img src="assets/img/module7/dreamhost-ftp-2.png" alt="" /></p>
-
-<h2 id="ftp-client">FTP Client</h2>
-
-<p>To get your files online, you will need upload your files to your newly purchased hosting server. Be sure to have the below information.</p>
-
-<ul>
-  <li>FTP Username</li>
-  <li>FTP Password</li>
-  <li>FTP Address (usually <code class="highlighter-rouge">ftp.yourdomain.com</code> or just <code class="highlighter-rouge">yourdomain.com</code> - check with your hosting provider)</li>
-</ul>
-
-<p>There are many free FTP Clients.  A great one is <a href="https://filezilla-project.org">FileZilla</a> or <a href="https://cyberduck.io/">CyberDuck</a>.</p>
-
-<p>Here’s a tutorial to get your files online using FileZilla: <a href="https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29">FileZilla Client Tutorial</a></p>
-
-<p><br />
-Feeling adventurous? Want to try a free hosting option?<br />
-Try <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">Hosting Static Sites on Github for Beginners</a>.</p>
-
 <blockquote>
-  <h2 id="final-class-exercise-launching-your-website-on-github">Final Class exercise: launching your website on github</h2>
-<<<<<<< HEAD
-  <p>Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free. This is how:</p>
-=======
-  <p>Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free if it’s just a plain HTML &amp; CSS website. Let’s try doing it with our plain websites, without the WP parts we worked on. Those will need more work anyhow before we can launch them:</p>
->>>>>>> master
+  <p>Try adding it to one of your template files. for example your custom <code class="highlighter-rouge">page-about.php</code> file.</p>
+</blockquote>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of <code class="highlighter-rouge">wp-content</code>.</p>
+
+<p>Popular plugins include:</p>
+
+<ul>
+  <li>Jetpack</li>
+  <li>Mailchimp</li>
+  <li>Google Analytics</li>
+</ul>
+
+<p>And there are many many more…
+Today we are going to work with Jetpack.</p>
+<blockquote>
+  <p>Exercise: Installing a plugin.</p>
   <ol>
-    <li>Go to <a href="http://github.io">http://github.io</a> and create an account or sign in.</li>
-    <li>Create a new repo:</li>
+    <li>Let’s get over to Plugins in the Dashboard and find Jetpack to install.</li>
+    <li>Click Add New inside of the Plugins area.</li>
+    <li>Jetpack should should up on the main page of the Add plugins page because it’s one of the most popular plugins out there. You’ll see this:</li>
   </ol>
 
-  <p><img src="assets/img/module7/github-repo.gif" alt="" /></p>
+  <p><img src="assets/img/module6/wp-jetpack.png" alt="" /></p>
+
+  <p>Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it’s compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you’ll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It’s also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).</p>
+
+  <p><strong>Rule of thumb:</strong> Don’t download plugins that have few reviews, and few installations. And definitely don’t download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website.</p>
   <ol>
-    <li>Fill in your repo info and initialize it with a Read Me.</li>
-    <li>Select “Upload Files”</li>
-    <li>From your Finder or File Explorer drag and drop the index.html, css folder, js folder and any images for your website into the uploader.</li>
-    <li>Write a commit message such as “Added files” and submit your commit message.(Commit messages help you keep track of when you make file changes in github).</li>
-    <li>Go into the settings of your repository and enable Github Pages.</li>
-    <li>Go to your-username.github.io/your-repo-name and you should see your site!</li>
+    <li>Click the Install Now button to install Jetpack. When it has finished installing, click on Activate.</li>
+    <li>You’ll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don’t have one yet. This will be the account you’ll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums.</li>
+    <li>Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog.</li>
+    <li>Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out.</li>
   </ol>
 </blockquote>
 
-<h2 id="resources-1">Resources</h2>
-<p>To set up your custom domain with github pages <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">read here</a></p>
+<blockquote>
+  <h2 id="bonus-exercise-swap-out-your-form-with-a-jetpack-form">Bonus Exercise: Swap out your form with a JetPack form.</h2>
+  <p>Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don’t need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the “Add Contact Form” button and follow the instructions.</p>
+</blockquote>
 
-<<<<<<< HEAD
-<p>Deploying websites can be tricky at first. It’s always good to find a buddy to help you through it if it’s your first time. Ladies Learning Code hosts free “Coffee &amp; Code” sessions every third Sunday of the month. This is exactly the kind of thing you can get help with there.</p>
-=======
-<p>Here’s another more effective way of managing your website on Github if you want to keep making changes and uploading them. In fact, this is a better way in the long run: <a href="https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5">Sharing your website on Github</a></p>
+<blockquote>
+  <h2 id="bonus-exercise-add-a-carousel-with-jetpack-to-your-posts-or-pages">Bonus Exercise: Add a carousel with Jetpack to your posts or pages</h2>
+  <p>Now that you’ve installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can <code class="highlighter-rouge">Create Gallery</code> instead of just Insert Media. Test out some of the available Galleries available.</p>
+</blockquote>
 
-<p>Deploying websites can be tricky at first. It’s always good to find a buddy to help you through it if it’s your first time. In some Chapters Ladies Learning Code hosts free “Coffee &amp; Code” sessions. This is exactly the kind of thing you can get help with there.</p>
->>>>>>> master
+<blockquote>
+  <h2 id="bonus-exercise-enabling-social-media-sharing-for-your-posts">Bonus Exercise: Enabling Social Media sharing for your posts</h2>
+  <p>JetPack makes it really easy for your visitors to share your posts on social media.</p>
+  <ol>
+    <li>Head over to Jetpack&gt;Settings from the side navigation in the Dashboard.</li>
+    <li>Click on Engagement.</li>
+    <li>Scroll down to Sharing and click on <code class="highlighter-rouge">Configure your Sharing Settings</code> after you expand it.</li>
+    <li>Set up your sharing buttons under the <code class="highlighter-rouge">Sharing Buttons</code> section. 
+There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It’s not uncommon for people to download JetPack and only use this feature of the plugin.</li>
+  </ol>
+</blockquote>
 
-<p>Most importantly, don’t stop coding and have fun!</p>
+<h2 id="more-wordpress">More WordPress</h2>
 
-<h2 id="resources-2">Resources</h2>
+<p>We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.</p>
 
-<p>For more advanced training, there are numerous institutions in Toronto that run in-person classes:</p>
+<p>It’s important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. <a href="http://underscoes.me">Underscores</a> is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.</p>
+
+<p>Other topics for later include:</p>
+
+<h3 id="advanced-subjects-in-wordpress-to-look-forward-to">Advanced Subjects in WordPress to Look Forward To</h3>
+
 <ol>
-  <li><a href="http://hackeryou.com">HackerYou</a></li>
-  <li><a href="http://bitmaker.co">Bitmaker Labs</a></li>
-  <li><a href="http://lighthouselabs.com">Lighthouse Labs</a></li>
-  <li><a href="http://brainstation.io">Brainstation</a></li>
-  <li>Colleges and universities</li>
-  <li>Maker Spaces: For example, <a href="steamlabs.ca">SteamLabs</a></li>
-  <li><a href="https://dmg.to/">Dames Making Games</a></li>
+  <li>Custom Post Types</li>
+  <li>Custom Fields</li>
+  <li>WordPress and JavaScript</li>
+  <li>WP-REST API
+And more…
+                                                                                                                                                                                                                                                                               2
+    <h3 id="wordpress-community">WordPress Community</h3>
+  </li>
 </ol>
 
-<p>For free online training:</p>
+<p>If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:</p>
 
-<ol>
-  <li><a href="http://freecodecamp.com">Free Code Camp</a></li>
-  <li><a href="http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&amp;R=EDB0187">Lynda</a> This is free through Toronto Libraries</li>
-<<<<<<< HEAD
-=======
-  <li><a href="http://glitch.com">Glitch</a></li>
->>>>>>> master
-</ol>
+<p><a href="http://make.wordpress.org">http://make.wordpress.org</a></p>
 
+<p>~ end ~</p>
 
       </article>
     </main>

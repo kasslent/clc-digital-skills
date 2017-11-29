@@ -3,33 +3,37 @@ layout: lessons
 module: 3
 lesson: 2
 title: CSS Fundamentals
-description: Review and in-class exercise with an intro to flexbox.
+description: Implementing our Design
 permalink: module3-2.html
 ---
 
-## HTML & CSS Review
+## Implementing our design in HTML & CSS!
 
-Let's review the concepts and techniques covered in all of the previous lessons by creating a basic one page site, similar to this [example](exercises/module3/susans-site/index-final.html), from scratch.  
+Let's review the concepts and techniques covered in all of the previous lessons by creating the start of our newly designed website, from scratch.
 
+Today everyone gets to work at their own pace with mentor support. You'll be surprised by how far you get in one class in making your dream website a reality! 
 
->## CODE-ALONG: Putting it all together!
+>## PROJECT TWO: Putting it all together!
 >
->1. Class Exercise: Let's get set up!
+>1.  Let's get set up!
 	* Open up the "root" project folder where you keep your projects/sites.
-	* Within the root folder, create a new folder and name it **susans-site**.
-	* The projects we've been working on so far may look different from one another - so let's download and use [these example files](exercises/module3/susans-site.zip) to build off of today, just so everything is consistent.
-	* Add the example files to your new folder and open it in Atom.
-1. Solo Exercise: Personalize the HTML (5 mins)
-	* Update the `<title>` tag, headings, email and any other content.
-	* Replace the profile picture. Make sure your images are added to the **img** folder.
-1. Solo Exercise: Update General Styles (15 mins)
-	* Add a background colour to the following elements on the page:
+	* Within the root folder, create a new folder and name it **project-two**.
+	* Create an index.html, styles.css and images folder (css folder optional) inside your project folder.
+1. Build the HTML (5 mins)
+	* Using your paper sketch or a Pixlr mockup if you got that far last class, build out the HTML elements of your website. Pro tip: Start with the structural elements first: header, nav, section, footer, etc... and then the content inside of each part of the site.
+	* If you have more than one page on your website, don't worry about those tonight. Let's just focus on the home page for now. 
+
+1. Update General Styles (15 mins) 
+If you've decided to just use your mood board and a rough sketch of the website layout for inspiration, here is a list of tasks you could complete to get your website looking pretty good: 
+
+	* Add a background colour to the following elements on the page if your design calls for it. Rely on your moodboard palette to choose colours :
 		* nav
 		* header
 		* aside
 		* social section
 		* footer
 	* Remove default padding & margin from the body element.
+	* Add the border-box snippet to the top of your CSS file!
 	* Update the font typeface for the page using either Google fonts or web safe fonts.
 	* Choose and add a different font typeface for the headings.
 	* Increase the font-size for all h1's.
@@ -39,27 +43,33 @@ Let's review the concepts and techniques covered in all of the previous lessons 
 	* Add padding around links in the social media section.
 	* On mouse hover, change the color of the social media links.
 	* Decrease the font-size and italicize of the fine-print in the footer.  
-1. Class Exercise: Add a wrapper, intro to **Flexbox**
+1. Add a wrapper if needed:
 	* In HTML, create a “content wrapper” around the content inside the:
 		* `<header>`
 		* `<main>`
 		* `<section class="social">`
 		* `<footer>`
 	* Use CSS `margin` to auto center align the wrapper to ensure that the background colour still spans the entire width of the page.
-	* Use CSS to give the `<aside>` a width of 30% and `<section id="about">` a width of 60%
-	* Use CSS to give the `<div class="wrapper">` inside of `<main>` a display value of "flex".
-	* On the wrapper inside of main, use flexbox reverse the direction - put the sidebar on the right.
-	* On the wrapper inside of main, use flexbox to justify the content so there is space in-between the about section and the aside.
+	
 1. Class Exercise: Adjust the Spacing
-	* Adjust the padding so the content/text doesn’t go right to the edge of it’s container. Try to make it look like the [example](exercises/module3/susans-site/index-final.html). Where do you think the space between the sections are coming from? Try inspecting the element!
+	* Adjust the padding so the content/text doesn’t go right to the edge of it’s container.
+	
+	Where do you think the space between the sections are coming from? Try inspecting the element!
 	* In the sidebar, center the profile image using margin, to and make it circular using border-radius.
-	* In the sidebar, give the paragraph justified text alignment.
-	* In the about section, ensure the image is always the full-width of the container.
+
 1. Exercise: Style the Nav
-	* Right align the text in the nav.
+	* Align the text in the nav - is it left, centered, right?
 	* Remove the underline & change the colour of the nav links.
-	* On mouse hover, change the colour of the nav links.
-	* Add some space around the links so the text is not too close to each other. Remember… links are ‘inline’ elements by default.
+	* Using your descendant selectors and pseudo-selectors, on mouse hover, change the colour of the nav links.
+	*  Add some space around the links so the text is not too close to each other. Remember… links are ‘inline’ elements by default.
 
+> Your site should be looking decent by now and hopefully resembling your mood board a little bit. There's a lot more we will add to it over the next few classes but this is a great start. For the remainder of the class, continue adding styles and be sure to use the inspect tools in the browser to adjust different styles based on how they look. You're the boss on this one! 
 
-> What else can we add? Any requests?
+Have fun! 
+
+> ## RECOMMENDED HOMEWORK: Flexbox Video Tutorial
+> Next week we'll be tackling the power of CSS Layouts. One of the properties of CSS we'll spend time on is Flexbox. Flexbox is a bit tricky to understand right away so we recommend that you watch [this](https://www.youtube.com/watch?v=G7EIAgfkhmg&feature=youtu.be) before next class to be extra prepared. It's really funny too! 
+><iframe width="560" height="315" src="https://www.youtube.com/embed/G7EIAgfkhmg" frameborder="0" allowfullscreen></iframe>
+
+<br>
+~ End ~

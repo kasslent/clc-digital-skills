@@ -2,700 +2,606 @@
 layout: lessons
 module: 6
 lesson: 1
-title: Intro to CMS & WordPress
-description: Intro to content management systems and WordPress.
+title: Intro to JavaScript & jQuery
+description: JavaScript basics and getting started with jQuery.
 permalink: module6-1.html
+class: module6-1
 ---
 
-## Blogs, Websites and CMS
+## Introduction to Computer Programming
 
-How are blogs different from websites?
+Up until now we have been working with HTML5 and CSS3. Both of these are coding languages but they're not considered programming languages per se. They are presentation-oriented languages and what makes them different than programming languages is that they cannot solve the problems that programming languages can. By contrast, all programming languages can write all programs. What that means is that what programming language A can solve, so can B. That doesn't mean they're the same. They could be very different in syntax (the symbols used in each language). But they can solve the same problems and both will share the same computational theories. This is why once you understand the basics of one programming language, you're likely to more easily pick up another. 
 
-* the term blog is an abbreviation for weblog
-* blogs often contain an ongoing collection of posts and articles presented in chronological order
-* often (but not always) written in a diary-style of commentary
-* a website can also contain a blog **and** standard informational pages
+In web development we use several programming languages. For example, PHP, Ruby, Python and JavaScript. JavaScript is the language we will be learning today because it's a language closely associated with HTML & CSS in that it can be executed in the browser. It's considered a front-end and a back-end language. The other programming languages mentioned do not run in the browser and they are considered back-end languages.
 
-A **Content Management System (CMS)**, is an application used to edit content and manage a website using a graphical user interface instead of editing the code or database.
+ While HTML & CSS determine the presentation of content on a website, JavaScript will determine the functionality and interactions of a website. Before we sink our teeth into JavaScript proper, we will learn some basics of computational thinking using a syntax-less language called Scratch. 
 
-A CMS usually includes features such as:
+## Computational Thinking with Scratch
 
-* database management
-* themes and templates for page layouts
-* making content searchable and indexable
-* and much more!
+Simply put, when we write a computer program, we give instructions to our computer to carry out a set of instructions that will help us solve a problem. And while it may seem somewhat intimidating when we look at the syntax of a programming language like JavaScript, you need to always keep in mind that the computer is not smart. You are. Computers are just very fast at performing the tasks we tell them to perform. 
 
-## What is WordPress?
+The first thing you need to become a great programmer, is to think like a computer. That means breaking solutions down into clear simple steps that a computer can perform. 
 
-* one of many types of blogging software and CMS
-* an online, open source (a.k.a. free) website creation tool
-* can edit, publish content and manage the website using a graphical user interface, without editing the code or database (though you can!)
-* customizable core, can be extended and modified in anyway
-* written primarily in PHP but also requires HTML, CSS, JavaScript
-* uses PHP templates & a database to create and store content (with static HTML, you have to manually create a new document for every new page)
+If you were asking a human to walk from point A to point B you might say:
 
-Depending on your needs and level of customization, you may not need to edit any of the code to get up and running.
+"Please walk over to point B"
 
-There are two options for using WordPress, [WordPress.org](http://wordpress.org) and [WordPress.com](http://wordpress.com).
+If you were to ask a robot to do the same thing you might need to be more clear and break things down in a way it will understand:
 
+Robot, please do the following:
+1. Bring your right leg forward 50cm.
+1. Bring your left leg forward 50cm past the right leg.
+1. Bring your right leg forward 50cm past the left leg.
+1. Repeat 2 and 3 until you reach Point B, then stop. 
+ 
+We're going to learn about some of the basic components of programming languages creating a simple game with Scratch: 
 
-## WordPress.com vs WordPress.org
+Take a look at the demo of our game here: 
 
-### WordPress.com
+<iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/145973347/?autostart=false" frameborder="0" allowfullscreen></iframe>
 
-* hosted and all technical maintenance handled by WordPress
-* your domain will be "yoursite.**wordpress.com**" (paid upgrade for a customized domain)
-* don't need to write any PHP to get up and running
-* no access to the code (without an upgrade)
-* theme options are included but cannot upload your own themes
-* different plans ranging from free - $299 with added features
-* no plugins
-
-### WordPress.org
-
-* must register and pay for a domain & web hosting
-* you are responsible for technical maintenance
-* requires web development knowledge (how much depends on level of customization desired)
-* written on PHP (back-end programming language)
-* also requires HTML & CSS and usually JavaScript
-* full control over themes files and code
-* more theme options or customize it yourself
-* 1000s of plugins for adding features & functionality or create your own
-
-Both versions basically work the same but the `.com` version doesn't require any technical knowledge and is limited on the level of customization.  
-
-The `.org` version can be customized in any way but requires more technical knowledge.  How much depends on the level of complexity of the customizations required.
-
-
-## Communicating with WordPress: Servers and Files
-![]({{site.img}}/module6/wpservers-01.svg)
-
-A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Cloud9 (c9.io).
-
-How does WP work with a server?
-
-<p style="text-align: left;">1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from wP (including our theme.)</p>
-
-<p style="text-align: left;">2. We visit the WP dashboard to add content to the database on the server. </p>
-
-<p style="text-align: left;">3. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)</p>
-
-<p style="text-align: left;">4. We visit the website and our server shows us the website according to what our theme files have requested it show us.</p>
-#### Resources
-* [WPBeginner: 
-How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
-* [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
-*Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).
-
-
-### Setting up our WordPress coding environment
-WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See diagram above)
-These are the steps we normally take to set up a WordPress website:
-
-1. We download the WordPress files from wordpress.org
-1. We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).
-1. We connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
-
-That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
-
-## WordPress and Cloud9
-
-Cloud9 is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others, and for learning. 
-
-Cloud9(c9.io) is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.
-
-### Let's set up c9.io!
-
-1. Go to your e-mail and find the link invitation that was sent to you to register for c9. Though c9 is free, they still require you to use a credit card on their site. The link we e-mailed you prevents you from needing to enter your credit card info. 
-
-![]({{site.img}}/module6/c9-welcome-email.png)
-
-
-1. Once there, please register for your account indicating that you are a student. 
-![]({{site.img}}/module6/c9-create-account-student.png)
-1. Once you're in, you'll have access to your main dashboard. On the left, a menu will allow you switch from your personal dashboard, to the class dashboard showcasing all the projects made by other students. 
-1. In the horizontal top navigation, click on the plus sign on the right hand side. 
-1. Now we will fill out our site's information and select WordPress as our type of project.
-![]({{site.img}}/module6/c9-spin-up-wp.gif)
-1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
-1. Click on "Run Project" to start the server. ![]({{site.img}}/module6/c9-run-project.png)
-1. Next, you'll notice in the console at the bottom of the page, that the words "Starting Apache" come up followed by a link to a long URL. This URL is the link to your website. Go ahead and click on it. 
-1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after. 
-1. Log into your dashboard. 
-
-
-
-### WordPress Settings
-
-When you log into the WordPress admin area, the first thing you'll see is the Dashboard. Here you can view your drafts, check out basic stats, respond to comments and get a general overview of your blog.
-
-The other menus in the left sidebar allows access to additional settings such as:
-
-* adding blog posts (Posts)
-* adding pages (Pages)
-* changing themes (Appearance)
-* uploading media (Media)
-* other general site settings
-
-
-## Configure basic site settings
-
-In the admin panel, go to **Settings > General**.
-
-Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select **Save Changes**!
-
-> Go to **Settings > General** and update your Site Title and Tagline and another general setting if you'd like.
-
-
-## Posts vs Pages
-Posts
-
-* used for date-based content
-* posts are listed chronologically
-* can also be assigned *categories* and *tags* (also referred to as *taxonomies*)
-* permalink (URL) will include the date (can change this in the settings>reading)<br>(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)
-
-Pages
-
-* used for single pages of static content (e.g. about or contact page)
-* cannot have *taxonomies*
-* can have a hierarchical structure (e.g. Travel > Beach vacations)
-* permalink (url) will not include the date<br>(e.g. http://your-project-name.dev/about/)
-
-
-## Content Options and Settings
-
-When adding content into your **Post** or **Page**, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the **Toolbar Toggle** to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.
-
-When using the **Visual** editor, the content entered automatically gets converted into HTML.
-
-![]({{site.img}}/module6/adding-content-wysiwyg.png)
-
-### WordPress and HTML
-
-You can also edit or add your own HTML by selecting the **Text** editor tab. 
-
-In WordPress, you don't need to add the `<p>` tags in either the visual or text editor. In the **Visual** editor, select the paragraph option from the dropdown. 
-
-![]({{site.img}}/module6/editor-visual-p.png)
-
-In the **Text** editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into `<p>` tags via Wordpress magic!
-
-![]({{site.img}}/module6/editor-text-p.png)
-
-Also, break tags `<br>` are not needed. Just use the enter/return key *once* for a line break in either the Visual or Text WordPress editor.
-
-![]({{site.img}}/module6/editor-line-break.png)
-
-
-### Categories
-
-Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.
-
-To add categories, go to **Posts > Categories** or within the post itself.
-![]({{site.img}}/module6/dashboard-categories-post.png)
-
-Sub-categories can also be created by selecting a Parent in the **Categories** menu.
-
-![]({{site.img}}/module6/dashboard-categories.png)
-
-
-### Tags
-
-Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:
-
-    Category: Breakfast
-    Tags: eggs, kid friendly, under 30mins
-
-Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.
-
-
-> ## Exercise: Add Content
-> 1. Create a couple of random blog posts in the Posts section. Don't dwell too much on the content. [Dummy text](http://meettheipsums.com) is fine for now.
-> 1. Add some categories and tags to your posts.  
-> 1. Create a page for each of your project's pages. In the example project that would be three pages: Home, About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
-> 1. Go to Settings>Reading and set the Home page as your home page and the Blog page as your blog page. 
-> Having content to work with will make it easier to work with our theme files. 
-
-
-## The Guts of WordPress
-
-Now that we've poked around a bit in the dashboard, let's go deeper and take a look at the files back in c9.
-
-At first glance, it's overwhelming to see how many folders and files WP needs to run. But on closer look, we'll be ignoring the majority of the files which just make up the core of WP. The files we'll use are in the wp-content folder.
-
-Inside of wp-content there is a folder named themes. That'll be our most used folder.
-
-Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.
-
-### What is a theme?
-
-A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.
-
-Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.
-
-### What's in a theme?
-
-The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.
-
-### Uploading our Theme to WP
-
-Currently there are three default themes inside the themes folder. These always come with WordPress.
-Under Appearance>Themes we can see how these default themes look and even test them out on our website.
-But today we're not interested in a default theme. We want to build our very own.
-
-
-1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip). 
-1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then go to `File>Upload Local Files` and find your folder. 
-![]({{site.img}}/module6/c9-upload-theme-folder.gif)
-1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project's css file:
-
-        /*
-        Theme Name: Twenty 
-        Theme URI: http://wordpress.org/themes/twentythirteen
-        Author: the WordPress team
-        Author URI: http://wordpress.org/
-        Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, edisplayed              beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matchheader images,              beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
-        Version: 1.0
-        License: GNU General Public License v2 or later
-        License URI: http://www.gnu.org/licenses/gpl-2.0.html
-        Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-widcustom-header,              custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-potranslation-ready
-        Text Domain: twentythirteen
-        This theme, like WordPress, is licensed under the GPL.
-        Use it to make something cool, have fun, and share what you've learned with others. 
-        */
-
-1. The next thing we must do is rename index.html to index.php (right click on file to rename in c9)
-1. Make sure to check under Appearance>Themes whether your own theme shows up! If it does, go ahead and activate it.
-How does it look?
-
-
-### Why isn't any of our CSS showing up?
-
-This is because our stylesheet link is no longer working. It's looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic html project from this morning.
-
-WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder. 
-To fix this issue, we could write a really long path to the stylesheet. Let's try it.
-Replace our href in the stylesheet link with :
-
-    <link rel="stylesheet" href="wp-content/themes/your-theme-folder-name/style.css">
-
-Does it work?
-
-There is a better way to link to our CSS.
-
-### Communicating with WordPress: PHP & Template Tags
-
-Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.
-
-The way we communicate with WordPress is by using **Template Tags**.
-
-Template Tags are bits of PHP that will communicate with the WordPress database and print out the things we want on the page.
-
-#### Anatomy of a Template Tag
-
-Template Tags are written in PHP
-
-    <?php /*template tag goes here*/ ?>
-
-Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will yell at you.
-The template tags we put in between these PHP brackets vary.
-Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core. 
-
-In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember `alert();` in JavaScript or ![]({{site.img}}/module5/scratch-builtin.png) in Scratch? WordPress Template Tags are exactly the same. 
-
-Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example 
-
-    <?php bloginfo(); ?>
-
-Inside of those brackets we can add arguments that WordPress recognizes to pull specific data from the database.
-
-We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the dashboard.
-#### Resources
-[WordPress Codex](https://codex.wordpress.org/Template_Tags)
-
->## Exercise: Header Template Tags
-> Let's put some of these template tags in use to replace our static HTML content with data coming from WordPress.
+> ## Class Discussion: 
+> Computer games are usually made up of players, goals and rules.
 >
->We will begin with the <head></head> of the HTML.
+>In your own english words, describe all the instructions we might need to give the computer to make this game work. In other words, what are the players, goals and rules of this game? How would you communicate the goals and rules to the computer?
+
+
+
+## Programming with Scratch
+ 1. Go to [this URL](https://scratch.mit.edu/projects/72180312/#editor) for our starter project and click on the orange "remix" button on the upper right hand corner of the screen. 
+ 1. The interface that you're on is Scratch. On the left hand side we have the game area where you should now see a planet, a rocket and steroid filled space background. In the middle you will see a bunch of colourful blocks. These are instructions you can give to the computer. In other words, these are little bits of code we can use to program our game. 
+ 1. To give an instruction to an object, select it from the Sprites section on the bottom left hand side of the screen (right below the game), and then drag any blocks you want to use, to the right hand side. 
+ 1. We will code the game together. 
+
+ > ## Code-Along: Let's create our own game.
+> Using blocks:
+> 1. Make the rocket follow the mouse, when it's clicked.
+> 1. Make the rocket say "Hooray" if it touches the planet and then go back to its starting position.
+> 1. Make the rocket play a losing sound and return to its starting position when it touches an asteroid. 
+> 1. Make the rocket return to its starting position when the green(start) flag is clicked.
+> 1. Create a Points variable and add 1 point each time the rocket touches the planet. 
+> 1. Bonus: Add a winning sound each time the rocket reaches the planet.
+> 
+> ### Resources
+> Watch the [Solution Video Walkthrough](https://www.youtube.com/watch?v=apx0WcL09ss)
+
+
+## Intro to JavaScript
+
+In our Scratch game we used some of the more common parts of any programming language. These include: Data types like Strings and Numbers; variables; Loops, conditional statements, functions, events, and even methods. 
+
+JavaScript includes **variables**, **functions**, **objects** or **control structures** such as **if** statements or **loops** just like Scratch. More on each of these later...
+
+### What do we use JavaScript for?
+
+JavaScript controls the **behavior** of your web page. It allows you to do things such as:
+
+* animate items
+* hide or show items
+* react to user input (on scroll, on click)
+* and even process data 
+
+Here's what JavaScript looks like:
+
+    var myVariable = "Hello World";
+    function sayHello(){
+        alert(myVariable);
+    }
+    sayHello();
+
+<br>
+
+It might look intimidating with all the JavaScript syntax but it's not much different from this set of instructions in Scratch:
+
+![]({{ site.img }}/module5/helloworld.png) 
+![]({{ site.img }}/module5/catsayshello.png) 
+
+Both, the JavaScript function and the set of Scratch blocks, are sets of instructions. The JavaScript function will make a box pop up with the words "Hello World" when the website loads. 
+
+Let's try some JavaScript.
+
+## The Console
+
+The console is a browser tool used to interact directly with a web page and is useful for testing small snippets of code or for debugging errors.  You can type commands and test code directly in the console as well.
+
+It can be accessed in the same area as when you're inspecting elements except it's under the **Console** tab.
+The console in Chrome looks like this:
+
+![Chrome console]({{site.img}}/module5/console-open.jpg)
+
+Note the `>` symbol. It is used by the console to represent a space for you to enter your input. In Chrome, there are a couple ways to open the Console tab.
+
+* keyboard shortcut: **CMD + OPTION + J**  (MAC) / **CTRL + SHIFT + J** (WINDOWS)
+* from the menu: **View > Developer > JavaScript Console**
+
+
+### Types: Numbers
+
+JavaScript values can be one of several different data *types*. The most basic is a number. 
+
+JavaScript can also do math.  
+Use `+` for addition, `-` for subtraction, `*` for multiplication and `/` for division.
+
+> Let's try out a couple math exercises in the console. 
+
+After the `>` symbol, try adding any two numbers together using the `+` symbol and press the enter/return key.  The command gets *evaluated* and a value is returned back to you. You will see something like this:
+
+    > 30 + 30
+    < 60
+
+The `>` symbol is used by the console to represent a space for your input.  
+The `<` symbol is used by the console to represent the returned value of your input.
+
+> **Fun Fact:** The order of operations is BEDMAS. Remember BEDMAS? (Brackets, Exponents, Division, Multiplication, Addition, Subtraction)
+
+> In Scratch, we used numbers in our Space game to count points, and to make the rocket go back to the starting coordinates on the x and y grid. 
 >
->Open up your index.php file in c9. We'll be adding the following template tags to dynamically pull information from WP :
+>**What do you think numbers and math can be used for in a website?**
+
+
+### Types: Strings
+
+When you store any amount of text, like words or sentences, the *type* is a **string** value and must be contained in quotes.
+
+    > "hello"
+    < "hello"
+
+> In our Scratch game we had the rocket say "Hooray!" when it reached its goal. "Hooray" was a string. 
 >
->Where should these go?
+>**When do you think a string can be used with JavaScript?**
+
+#### Extra Resource 
+ 
+There are more data types. View here: [Microsoft Developer Network Data Types (JavaScript)](https://msdn.microsoft.com/library/7wkd9z69%28v=vs.94%29.aspx).
+
+### Comments 
+
+There are two ways to write comments.
+
+    // Single line comment.
+    // Each line needs to include the two slashes.
+    
+    /* 
+    Multi-line comment.
+    Open and close the block
+    with the same syntax as 
+    CSS comments! 
+    */
+    
+### Intro to Functions
+
+JavaScript generally executes one line at a time, from top to bottom. 
+
+Functions can be used to execute a repetitive set of instructions by grouping multiple commands into one name.  There are functions built into the language and you can also create your own.
+
+In Scratch we created our own set of instructions for when our rocket was clicked. That was a function that looked like this:
+<br>
+![]({{ site.img }}/module5/scratch-function.png) 
+
+We also used built-in functions in Scratch like this:
+![]({{ site.img }}/module5/scratch-builtin.png) 
+
+Let&#39;s look at the `alert()` function in JavaScript.
+
+Note the syntax for functions, the parentheses `()`, must be included.
+
+Also, commands end with a semi-colon `;` to indicate that the instruction is complete.
+
+>Go back to the console and type in `alert();`, and see what happens!
+
+### Functions and Arguments
+
+We&#39;ve seen now that the `alert()` function creates a pop-up in the browser.  But the pop-up is blank.  *Pass* an `argument` into this function by adding a value *within* the parentheses `()`. 
+
+Note the use of quotes for string types.
+
+>Try this in the console:
 >
-    1. <?php bloginfo( 'charset' ); ?>
+    alert("Hello!");
 >
-    2. <?php bloginfo( 'name' ); ?>
+>Try using the function again but with a different argument.
+
+
+Whatever value you put within the parentheses will get *passed* into the function. That way, you can re-use the function with different arguments.
+
+### Make your own functions
+
+To create your own functions, use the keyword `function` and give it a name.
+
+    function nameOfFunction(){
+      // instructions go here
+    }
+    
+When you declare/create a function, it won't execute until you *call* it.
+
+    // Declare a function
+    function myGreeting(){
+      alert("hello!");
+    }
+
+    // Call the function
+    myGreeting();
+
+#### Extra resources
+
+* [MDN: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+* [Tutorials Point](http://www.tutorialspoint.com/javascript/javascript_functions.htm)
+
+### Variables
+
+Variables are used to store values. Remember ![]({{ site.img }}/module5/scratch-variable.png) ?
+
+It&#39;s like a box; put something in it to store and take it out when you&#39;re ready to use it.  
+
+Declare variables with the keyword `var` and a name of your choosing and *assign* a value. The name cannot contain spaces.
+
+    var myVariable = "Hello!";
+     |        |         |
+    keyword   |      value given to variable
+              |
+            variable name created by you          
+
+---
+    // Declare the variable
+    var favDay = "Saturday";
+    
+    // Pass the value into the function
+    alert(favDay);
+
+>Try out the above example in the console.  What do you think the alert message will be?
+
+### Objects
+If variables are boxes, objects can be thought of as a box with multiple compartments, like a bento box!
+
+A basic variable only holds one value.
+
+<img class="left" src="{{site.img}}/module5/rice.png" alt="rice object example">
+    
+    /* declare the variable */
+    var box;
+    /* assign a value */
+    box = "Rice";
+
+<hr class="clear">
+You can also declare and assign a variable and value in one line.
+
+    var box = "Rice";
+    
+An object holds a *collection* of values. Each value is a **property** of the object.
+
+    /* create a new object */
+    var bentobox = {};
+    
+<img class="left" src="{{site.img}}/module5/bento-box.png">
+
+    /* assign the values using "dot notation" */
+    bentobox.main = "Teriyaki";
+    bentobox.side = "Tempura";
+    bentobox.salad = "Seaweed Salad";
+    bentobox.soup = "Miso";
+    bentobox.sauce = "Soya";
+    bentobox.dessert = "Fruit";
+
+Enter the above in the console. And then type `bentobox` to see the object returned. You'll see each of the object's name:value pairs: 
+
+    bentobox = {
+    	main: "Teriyaki",
+    	side: "Tempura",
+    	salad: "Seaweed Salad",
+    	soup: "Miso",
+    	sauce: "Soya",
+    	dessert: "Fruit" //Notice there's no comma on the last name:value pair. 
+    }
+<hr class="clear">
+
+### (Almost) Everything in JS is an Object
+
+Variables can also be treated as an object.  *Dot notation* can be used to set the property value of an object but can also be used to get information from an object using functions.
+
+When you apply a function to an object, it's called a **method**.
+
+For example, the `length()` method can be used to find the number of characters in a string.
+
+    var day = "Sunday";
+    alert(day.length);
+
+You can even make the length command into a variable.
+    
+    var day = "Sunday";
+    var numOfCharacters = day.length;
+    alert(numOfCharacters);
+
+#### Extra resources:
+
+* [JavaScript values: not everything is an object ](http://www.2ality.com/2011/03/javascript-values-not-everything-is.html)
+* [The Secret Life of JavaScript Primitives](http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
+
+### Objects, Functions and Methods
+
+What&#39;s the difference between these two?  
+The second one kind of looks like a function right?
+
+    alert();
+    console.log();
+
+
+`alert()` is a **function** that works on its own.
+
+`log()` is also a function but it is attached to the `console` *object*, using dot notation described in the previous section. 
+
+When a function is attached to an object, it's referred to as a method. It will **log a message** into the **console**.
+
+`console.log()` can be used to test and debug by outputting values in the browser console itself rather than using `alert()`. No more pesky pop-ups!
+
+    alert("hello!"); /* will show as a popup */
+    console.log("hi!"); /* will show in only the console */
+
+>Try passing an argument into both `alert();` and `console.log();` in the console and see the difference.
+
+
+### Concatenation
+
+When you store any amount of text, like words or sentences, the *type* is a **string** value and must be contained in quotes.
+
+    var myVariable = "Hello class!";
+
+You can join strings together using the `+` symbol. This is called **concatenation**.  You can join actual strings or strings contained in a variable.
+
+    var name = "Ladies Learning Code";
+    var greeting = "Hello " + name + "!";
+    
+    
+### Resources
+
+Here are some resources to dig deeper in to pure JavaScript.
+
+* [Eloquent JavaScript](http://eloquentjavascript.net/)
+* [JavaScript 101 — again](https://medium.com/@christinatruong/javascript-101-again-6f5c3de74165)
+* [JavaScript Methods](http://www.scribd.com/doc/19457597/Javascript-Methods)
+* [Code School: JavaScript](https://www.codeschool.com/paths/javascript)
+
+## CSS vs JavaScript
+
+With the introduction of new CSS3 properties, effects such as animating page elements previously created with Flash or JavaScript can now be achieved using pure CSS. So sometimes trying to figure out when to use CSS or JavaScript can be tricky.
+
+Some guidelines:
+
+If it can be accomplished with CSS, usually it's better to go with CSS.
+
+* keep in mind that HTML semantics and efficient & clean code comes first
+* if it requires too many hacks or HTML/CSS that goes again best practices, creates accessibility or SEO issues, use JS!
+
+If it's a visual effect, that happens on page load, you *might* be able to use CSS
+
+* CSS is executed as soon as the page loads
+* new CSS3 property, [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes), allows for timing delays but still not attached to user actions
+* if it requires user interaction (e.g. when user clicks, when user scrolls), then it's usually JS
+
+#### Extra Resources
+
+* [Getting Started with CSS3 Transitions and Animation](http://blogs.adobe.com/dreamweaver/2015/09/getting-started-with-css3-transition-and-animation.html)
+* [Animate.css](https://daneden.github.io/animate.css/)
+* [GreenSock is a popular JS-based animation library.](https://greensock.com/gsap)
+* [ScrollMagic is a JS library that works with GSAP and is good for scrolling animations](http://scrollmagic.io)
+* [ihatetomatoes has excellent free beginner workshops on GreenSock](https://ihatetomatoes.net/)
+
+
+## JavaScript vs jQuery
+
+### What is jQuery?
+
+jQuery *is* JavaScript.  
+jQuery is a cross-browser JavaScript *library* used to simplify your program. 
+
+#### JavaScript example
+
+    document.getElementById("status")
+
+#### jQuery example
+
+    $("#status")
+
+Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have a base understanding of JavaScript principles to make sense of how jQuery works.
+
+## Functions & jQuery
+
+A function is one of the most powerful tools in JavaScript and the one you're learning about today is:
+
+    jQuery()
+    
+Looks like a function right?
+
+Remember, jQuery is a JavaScript *library* and basically contains LOTS of prewritten functions/methods used to simplify your program. 
+
+In most cases, it's conventional to use the jQuery shortcut, `$`.
+
+`jQuery()` is the same as `$()`.
+
+This syntax will be used for the remainder of the lessons. 
+
+## Using jQuery
+
+### How to select an HTML object/element 
+
+A common use for jQuery is selecting an HTML object and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
+
+To select all the paragraphs on the page, use `p` as the selector. It is contained in quotes because it is a string.
+
+    $("p");
+
+
+To select a class name, use the leading period, just like CSS.
+
+    $(".about");
+    
+To select an id name, use the number/hash symbol, just like CSS.
+
+    $("#about");
+
+> What element will be selected in this example?
 >
-    3. <?php language_attributes(); ?>
->
-    4. <?php echo get_stylesheet_uri(); ?>
->
->
-> In the end, our header should be looking like this: 
->
-    <html <?php language_attributes(); ?>>
+    $(".about p");
+
+Once you select an object, you can apply one of many jQuery effects using various methods.  All the methods are documented here: [http://api.jquery.com/](http://api.jquery.com/category/effects/)
+
+Many of these effects allow you to add parameters to change the speed of the effect (numbers are in milliseconds).  
+
+You can also chain them together to create multiple effects.
+
+    $(".box").fadeOut();
+    $(".box").fadeOut(2000);
+    $(".box").fadeOut(2000).fadeIn(500);
+
+> Let's try it out on CodePen: <http://codepen.io/learningcode/pen/pjQePw#0>
+
+## Adding JavaScript/jQuery to your files
+
+There are two ways to add JavaScript to a page.
+
+### Inline
+Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
+
+However, it's often recommended to add the scripts to the bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first. 
+
+
+    <!DOCTYPE html>
+    <html lang="en">
     <head>
-     <meta charset="<?php bloginfo( 'charset' );?>">
-     <title><?php bloginfo( 'name' ); ?></title>
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne" rel="stylesheet">
-     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+      <meta charset="UTF-8">
+      <title>Document</title>
     </head>
+    <body>
+      <!-- a bunch of HTML here -->
+      
+      <script>
+        // JavaScript here
+      </script>
+    </body>
+    </html>
+
+You might see the `type` attribute included as well. This was required before HTML5 was introduced.
+
+    <script type="text/javascript">
+      // JavaScript here
+    </script>
+
+
+#### jQuery vs JavaScript
+
+Including pure JavaScript into your web page only requires the code to be written between the `<script></script>` tags.
+
+    <script>
+      // JavaScript code here
+    </script>
+    
+In jQuery, the document needs to be "ready" first.
+
+    <script>    
+      $(document).ready(function(){
+         //jQuery code here
+      });
+    </script>
+
+#### $(document).ready()
+
+jQuery uses the `ready()` method to detect this state of readiness. 
+
+This is a bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly. 
+
+It only needs to be included *once*. Add all the jQuery code in *between* the curly brackets `{}`. 
+  
+(In CodePen, you don't have to add it because it's already integrated into the tool.)
+
+**Extra resource**: <http://learn.jquery.com/using-jquery-core/document-ready/>
+      
+      
+### External
+Just like CSS, you can also write JavaScript/jQuery in a separate file using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
+
+    <script src="folder/file.js"></script> 
+
+---
+    <script src="js/global.js"></script> 
+
+#### jQuery vs JavaScript
+In the external file, you do **not** need to add the `<script>` tags.
+
+But to write jQuery specific code, the `$( document ).ready()` is still required.
+
+## Referencing jQuery's library
+
+Similar to Google Fonts or any third party tool, you have to reference the file to access all code required to make to make it work. 
+
+**Option 1** - Download and include the files locally
+
+[Download](http://jquery.com/download/) the latest version of jQuery and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.
+
+Use the `<script>` tag to reference the file but in the `src`, link to where the file is saved in your project's directory and the *exact file name*.  Make sure to add it *before* your JavaScript file.
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+**Option 2** - Use a CDN
+
+CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the [Downloads](http://jquery.com/download/) page.
+
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/main.js"></script>
+
+Be sure to include the `http://` when viewing the site locally (on your computer).
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+>## EXERCISE: Adding JS To Our Own Projects
 >
-> Notice how much cleaner it is to add the stylesheet using the `get_stylesheet_uri` template tag? 
-
-### Resources 
-
-[https://developer.wordpress.org/reference/functions/bloginfo/](https://developer.wordpress.org/reference/functions/bloginfo/)
-
-## The Loop
-
-Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called "The Loop".
-
-The Loop is a conditional statement in PHP that tells the database something along the lines of *"Hey, Database! If you've got any content over there for this page, or for this blog post, as long as you've got it, print it out for me right here, would ya? Thanks."*
-
-In PHP it looks like this:
-
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    	<!-- content goes here -->
-    <?php endwhile; else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif; ?> 
-
-You've seen a statement like this beforehand. Do you remember this guy?
-
-![]({{site.img}}/module6/c9_scratch_conditional.png)
-
-We need to add our loop to our index.php page
-So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page? 
-
-We'll put it after the banner, and before the horizontal sidebar. 
-
-
-### The Content
-
-So what goes inside the loop? Template tags!
-
-Specifically, we'll be using the following template tags:
-
-    <?php the_content(); ?>
-    <?php the_title(); ?>
-
-> ### Exercise: Add your template tags
+>We are going to add jQuery and our own JavaScript file to our projects. Feel free to use the [sample project](exercises/module5/project-one-final.zip) if you don't want to add JS to your own project yet: 
+>
+>
+> 1. Create a JS folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins. (we'll learn more about plugins next class).
+> 1. Go to https://jquery.com/ and download the latest version of jQuery by clicking on the "Download jQuery" button and then selecting *Download the compressed, production jQuery 3.1.1*. Save your downloaded jQuery file into your new JS folder from step 1.
+> 1. Create your own js file and name it *main.js*
+> 1. Add the jQuery script followed by your own script using `<script></script>` tags to the end of your HTML file, right before the closing body tag.
 > 
-> Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through? 
-
-Yay! We're communicating with WP now. 
-
-## Template Files
-
-We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking. 
-
-It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it. 
-
-> Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website? 
-
-> ### Class Exercise: 
-> 1. Create 4 new files in your theme folder: 
-	- header.php
-	- footer.php
-	- sidebar.php 
-	- page.php
-> 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
-> 
-> #### index.php should now look like this:
+>        <script src="js/jquery-3.1.1.min.js"></script>
+>        <script src="js/main.js"></script>
+> 1. Be sure to add your `document.ready` function to your main.js file. Reminder: 
 >
->	    <main>
->	    	<section class="banner">
->	    		<div class="wrapper">
->	    			<h1>An island girl around towndd</h1>
->	    		</div>
->	    	</section>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
->	    	<section class="about">
->	    		<div class="wrapper">
->	    			<?php the_content(); ?>
->	    		</div>
->	    	</section>
->	    	<?php endwhile; else : ?>
->	    		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
->	    	<?php endif; ?> 
->	    </main>
->
->
-> #### header.php should look like this: 
->
->		    <!DOCTYPE html>
->		    <html <?php language_attributes(); ?>>
->		    <head>
->		     <meta charset="<?php bloginfo( 'charset' );?>">
->		     <title><?php bloginfo( 'name' ); ?></title>
->		     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Parisienne" rel="stylesheet">
->		     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
->		    </head>
->		    
->		    <body>
->		    	<header>
->		    		<div class="wrapper">
->		    			<div>
->		    
->		    			<h1>Anne Shirley's Musings</h1>
->		    			</div>
->		    			<nav>
->		    				<ul>
->		    					<li><a href="about.html">About</a></li>
->		    					<li><a href="index.html">Blog</a></li>
->		    					<li><a href="contact.html">Contact</a></li>
->		    				</ul>
->		    			</nav>
->		    		</div>
->		    	</header>
->
-> ####  sidebar.php should look like this: 
-> 
->		    <aside>
->		    	<div class="wrapper aside">
->		    		<div class="third">
->		    			<h2>From My Blog</h2>
-    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt,porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!</p>
->		    			<a href="#">Continue reading</a>
->		    		</div>
->		    
->		    		<div class="third">
->		    			<h2>Me on Social Media</h2>
->		    			<!-- Insert Twitter Feed -->
->		    			<a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl">Tweets by anneofgreengabl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
->		    		</div>
->		    		<div class="third">
->		    			<h2>Subscribe to my Blog</h2>
->		    			<form action="">
->		    
->		    				<input type="text" placeholder="E-mail Address">
->		    				<input type="submit">
->		    			</form>
->		    		</div>
->		    	</div>
->		    </aside>
->
-> #### footer.php should look like this: 
->
->	    	<footer>
->	    		<div class="wrapper">
->	    			<p>&copy; Anne Shirley 2016</p>
->	    		</div>
->	    	</footer>
->	    </body>
->	    </html>
->
-> 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template. 
-> 1. Then into index.php and page.php we'll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();
->
-> #### index.php should look like this.
->
->	       <?php get_header(); ?>
->	       <main>
->	    	    	
->	    	    	<section class="banner">
->	    	    		<div class="wr>apper">
->	    	    			<h1><?php the_title(); ?></h1>
->	    	    		</div>
->	    	    	</section>
-> 	    		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
->	       	<section class="about">
->	       		<div class="wrapper">
->	    	    			<?php the_content(); ?>
->	    	    		</div>
->	    	    	</section>
->	    	    	<?php endwhile; else : ?>
->	        		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
->	    	    	<?php endif; ?>
->	    	    	<?php get_sidebar(); ?>
->	    	    </main>
-<?php get_footer();?>
->
-> 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following: 
->
->	1. Create a special template file for the About page. Call it **page-about.php**.
->	1. In page-about.php, write the following 
->
-		    <?php /* Template Name: About */ ?>
->
->
-> 1. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
-> 1. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
+        $(document).ready(function(){
+           //jQuery code here
+        });
+> 1. Add a `console.log()` or `alert()` function where it says `//jQuery code here` above. For example `alert('Hello World!');`
+> 1. Open up your HTML page where the scripts are linked and test to see if the alert or console.log worked. If they did, that means you've successfully added jQuery and JavaScript to your website! 
 
-> ## Bonus: Tweaking the blog
-> You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php. 
-> This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out: 
-> 		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
->		    <?php the_author(); ?> This one will print out the author of your posts.
->
->		    <?php the_category(); ?> This one will print out the categories for a blog post
->		    <?php the_tags(); ?> This one will print out the tags for a blog post. 
->
->		    <?php the_date(); ?> This will print out the date published.
->
->		    <?php the_excerpt(); ?> This will print out a truncated part of the body of the blog post.
-> 
-> Play around with these in index.php for better customization of your blog feed. 
-> Also, consider creating a **single.php** template to control the way your single view of each blog post looks like. 
+#### Resources
+
+* [jQuery Selectors](http://api.jquery.com/category/selectors/)
+* [jQuery Effects](http://api.jquery.com/category/effects/)
 
 
-### Resources
+## jQuery Click Events
 
-- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
-- [On Template Tags](https://codex.wordpress.org/Template_Tags)
-- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
+Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same. Just like this little guy: ![]({{ site.img }}/module5/scratch-events.png)
 
-So you could call it a day right now. There's your theme. Great job! You've built your own simple theme and it works. But let's go a little deeper and add even more functionality!
+Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.
 
-There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
+> When would this effect be useful? 
 
-> ### Class Exercise
-> 
-> 1. In your own custom theme folder, create a  new file named `functions.php`. 
-> 1. Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard. 
-> 
->         <?php
->           function register_my_menus() {
->        register_nav_menus(
->        array(
->         'primary-menu' => __( 'Header Menu' ),
->         'extra-menu' => __( 'Extra Menu' )d
->        )
->        );
->            }
->            add_action( 'init', 'register_my_menus' );
->         ?>
->
-> 1. Go to the Dashboard and navigate to Appearance>Menus - now this is available! d
-> 2. Create a Menu with the three links to the 3 pages, make sure to pick Header Menu as the location when you create the menu.
-> 3. Replace the ul inside the nav with the following
->
+#### Syntax
+ 
+    $( "selector" ).click(function() {
+      // code to be executed on click
+    });
 
-    <?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
+Let's try this out in another [CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
 
->
->Refresh your page and now you should have a perfectly working Navigation again. 
->
->**Bonus:** WordPress gives menu items of the currently visited page, the class of *current_page_item*. You can style it differently. 
+Next week we'll use click events and objects in more depth with practical applications to our projects.
 
-### Resources
+#### Resource
 
-[Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
-
-
-## Sidebars and Widgets
-
-Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We'll be converting our current sidebar into a dynamic WP sidebar.
-
-> ### Class Exercise
-> 1. First off, we must register our sidebar inside functions.php so that we can enable Widgets on the website.
-> Enter this into your functions file :
->
->        function themename_widgets_init() {
->          register_sidebar( array(
->       'name'
->       => __( 'Primary Sidebar', 'mammaspizza' ),
->       'id'
->         => 'sidebar-1',
->       'before_widget' => '<div id="%1$s" class="third widget %2$s">',
->       'after_widget'  => '</div>',
->       'before_title'  => '<h2 class="widget-title">',
->       'after_title'   => '</h2>',
->          ) );
->      }
->      add_action( 'widgets_init', 'themename_widgets_init' );
->
-> 2. Go to Appearance>Widgets and add 3 widgets to your sidebar. **Tip:** If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed. 
-> 3. Delete all the elements with the class of `third` inside your aside element in page.php and replace them with: 
->
->        <?php dynamic_sidebar(); ?>
-
-
-## Featured Images
-
-We can add featured image functionality to our pages and posts by adding the following to our functions file: 
-
-    <?php add_theme_support( 'post-thumbnails' ); ?>
-
-Once you've done that, go back into your home page and add a featured image. It will show up on the right hand side.
-
-> ##Class Exercise: Adding a featured image to a page
->
-> We can add featured images anywhere inside the loop in various default sizes: 
-
-    the_post_thumbnail(); // Without parameter ->; Thumbnail
-    the_post_thumbnail( 'thumbnail' ); // Thumbnail (default 150px x 150px max)
-    the_post_thumbnail( 'medium' ); // Medium resolution (default 300px x 300px max)
-    the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
-    the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
-
-> Try adding it to one of your template files. for example your custom `page-about.php` file. 
-
-## Plugins
-
-
-Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`. 
-
-Popular plugins include:
-
-- Jetpack
-- Mailchimp
-- Google Analytics
-
-And there are many many more...
-Today we are going to work with Jetpack.
-> Exercise: Installing a plugin.
->1. Let's get over to Plugins in the Dashboard and find Jetpack to install.
->1. Click Add New inside of the Plugins area. 
-> 1. Jetpack should should up on the main page of the Add plugins page because it's one of the most popular plugins out there. You'll see this: 
->
-> ![]({{site.img}}/module6/wp-jetpack.png)
-> 
-> Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it's compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you'll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It's also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).
-> 
-> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. And definitely don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website. 
-> 1. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate. 
-> 1. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums. 
-> 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog. 
-> 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out. 
-
-> ## Bonus Exercise: Swap out your form with a JetPack form. 
-> Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions. 
-
-> ## Bonus Exercise: Add a carousel with Jetpack to your posts or pages
-> Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available. 
-
-> ## Bonus Exercise: Enabling Social Media sharing for your posts
-> JetPack makes it really easy for your visitors to share your posts on social media. 
-> 1. Head over to Jetpack>Settings from the side navigation in the Dashboard. 
-> 1. Click on Engagement. 
-> 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it. 
-> 1. Set up your sharing buttons under the `Sharing Buttons` section. 
-> There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin. 
-
-## More WordPress
-
-We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
-
-It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class. 
-
-Other topics for later include: 
-
-### Advanced Subjects in WordPress to Look Forward To
-
-1. Custom Post Types
-1. Custom Fields
-1. WordPress and JavaScript
-1. WP-REST API
-And more...
-                                                                                                                                                                                                                                                                                  2
-### WordPress Community
-
-If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout: 
-
-[http://make.wordpress.org](http://make.wordpress.org)
-
+<http://api.jquery.com/click/>
 
 ~ end ~
+
+

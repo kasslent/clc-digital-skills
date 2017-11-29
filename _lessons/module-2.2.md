@@ -2,296 +2,10 @@
 layout: lessons
 module: 2
 lesson: 2
-title: Design & CSS
-description: CSS typography, intro to the box model, working with images and colours.
+title: CSS Fundamentals
+description: The Box Model Advanced selectors, block and inline elements 
 permalink: module2-2.html
 ---
-
-There are more ways to use CSS to create typography based styles in your web page designs.
-
-The last lesson covered text based CSS properties that used keywords for values (e.g. `font-weight: bold;`). But there are many other properties (typography based and other styles) that use length to define the values.
-
-
-## Length / Measurement Units
-The properties that affect the sizing of an element uses various measurement units. Here are some commonly used units for the web:
-
-* **pixels** (`px`) - most commonly used because computer monitors and mobile devices are measured in pixels.
-  * must use whole numbers (e.g. `12px`)
-* **percentages** (`%`) - useful for fluid and responsive layouts
-  * can use any number (e.g. `20%`, `25.5%`)
-* **ems** (`em`) - originally a typographic measurement based on the letter "M"
-  * relative unit, sizing is based on parent & ancestor elements sizes
-  * can use any number (e.g. `1em`, `1.275em`)
-* **rems** (`rem`)-  stands for "relative em"
-  * relative unit but is only relative to the *root* element (`html` tag)
-
-By default, with no other CSS, here's how these units compare to each other:
-
-    1em = 1rem = 16px = 100% 
-
-There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.
-
-> Let's edit the below Codepen and see how `em` and `rem` works.
-
-<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-### Extra resources
-
-* [rem & the 62.5% method](http://snook.ca/archives/html_and_css/font-size-with-rem)
-* [CSS - Measurement Units](http://www.tutorialspoint.com/css/css_measurement_units.htm)
-* [W3C - Units of length: px, em, cm, etc.](http://www.w3.org/Style/Examples/007/units.en.html)
-* [CSS Tricks - Lengths of CSS]( https://css-tricks.com/the-lengths-of-css/)
-* [Understanding and Using rem Units in CSS](http://www.sitepoint.com/understanding-and-using-rem-units-in-css/)
-
-
-## CSS & Typography
-
-### CSS `font-size` & `line-height`
-
-The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.  
-
-Use `font-size` to change the size and `line-height` to adjust the space *between* the lines of text.
-
-You can use any of the measurement units to declare the `font-size`.  
-
-For `line-height`, this property actually does *not* require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.
-
-    p {
-      font-size: 20px;
-      line-height: 25px; /* fixed size*/
-    }
-
----
-    p {
-      font-size: 20px;
-      line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
-    }
-
-### CSS `text-shadow`
-
-Use this property to apply a shadow to your text.
-
-    p { 
-      text-shadow: 2px 4px 1px red;
-    }
-    
-<p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
-  
-* first value - x-coordinate, horizontal distance of the shadow
-  * positive numbers places the shadow to the right
-  * negative numbers places the shadow to the left
-* second value - y-coordinate, vertical distance 
-  * positive numbers places the shadow below the text
-  * negative numbers places the shadow above the text
-* third value - blur radius (optional), the higher the number, the bigger the blur
-* fourth value - color of the shadow
-
-### Multiple text shadows
-  
-To use multiple text shadows, separate each grouping with a comma.
-
-    p { 
-      text-shadow: 1px 1px 1px #000, 
-                   5px 5px 5px red; 
-    }
-
-*Pro tip!*  
-Subtle effects work best.
-
-
-> Let's edit the CodePen below and experiment with these properties.
-
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
-### CSS `color`
-
-To change the colour of the text, use the `color` property. 
-
-We've talked about how to set a background colour in [Module 1](module1-2.html#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
-    
-    /* all the same colour */
-    body {
-      color: firebrick;
-      color: rgb(178,34,34);
-      color: #B22222;
-    }
-    
-
-## Icon fonts
-
-Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties (like size and colour) using CSS since they *are* fonts!
-
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/) is a great free option. Similar to Google Fonts, to use Font Awesome, just link to their CSS file.
-
-Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  You can download the CSS file and add it to your project files or use their CDN (Content Delivery Network - files hosted online).
-
-
-### Watch out!
-When using CDNs, they are sometimes listed like this:
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-Remember to add the "http" to make it work when you run your page "locally" (on your computer) without a local server.
-
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
-
-#### Resources
-
-* <https://css-tricks.com/html-for-icon-font-usage/>
-* <http://weloveiconfonts.com/>
-* <http://reference.sitepoint.com/css/typography>
-
->## EXERCISE: Typography
->Download the <a href="exercises/module2/typography-2.html" download>typography-2.html</a> exercise file.  Open it in your editor and follow the instructions listed in the comments in the `<head>` of the page.
-> 
->*Pro tip!*  
-Move this exercise file from the downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
-
-
-## Working with Images
-
-### Cropping and Saving Images
-When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).  
-
-Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the *largest* size you need for your website.  
-
-We'll be using CSS to make sure the image size scales & fits the page layout. 
-
-When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.
-
-Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to [Module 1, Lesson 1](module1-1.html#images) for reference.
-
-### Image editors
-You will need an image editor to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular paid options.
-
-[Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
-
-## Using Pixlr
-
-1. Navigate to <https://pixlr.com/>
-1. Choose the **Editor** version.
-1. In the popup, choose an option for adding the image to be edited.
-
-To add or change to another image, these options can also be accessed under the **File** menu.
-
-![Pixlr file menu]({{ site.img }}/module2/pixlr-file-menu.png)
-
-### The Crop Tool
-
-In [Pixlr](https://pixlr.com/editor/) (and in most image editors), select the crop tool to resize and crop out parts of your images. 
-
-Click & drag the cursor over the image to highlight the areas to be cropped out.
-
-![pixlr crop]({{ site.img }}/module2/pixlr-crop.jpg)
- 
-
-### Resizing images
-
-If you just need to resize an image to reduce the resolution size for web, go to:  
-**Image &rarr; Image Size...**
-
-Make sure “Constrain Proportions” is checked in the popup to maintain proper image proportions.
-
-<img src="{{ site.img }}/module2/pxlr-imagesize.jpg">
-
-Choosing **Canvas size...** (the option under **Image size...**) will have a similar effect as cropping.  Use this to resize the image, but also crop portions of the image out.
-
-
->## EXERCISE: Resizing Images
-> Using [Pixlr](https://pixlr.com/editor/), practice cropping and resizing images. Use your own images, or choose from a number of placeholder sites or stock photography sites listed in the below resource links.
->
-> **Bonus:** Check out some of the other menu options to familiarize yourself with the tool.
-
-
-### Image resources
-
-* [Placeholder image sites](https://www.google.ca/search?q=placeholder+images)
-* [Stock Photos That Don't Suck](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
-
-
-## SVG and the Noun Project
-
-SVG is an image file type that stands for <em>Scalable Vector Graphics</em> and you can use it the same way you would use JPG, PNG or GIF, inside an `<img>` element:
-
-    <img src="cat.svg" alt="a cute cat">
-    <img src="cat.png" alt="a cute cat">
-
-So what's the difference? Let's compare a vector graphic (JPG / PNG) and a raster (sometimes called "bitmap") graphic:
-
-<img src="{{ site.img }}/module2/vector-vs-raster.png" />
-
-The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic. A major difference between SVG and other file types is size - an SVG will usually be a smaller file size and therefore easier for a browser to load. If a graphic is vector, it should be in SVG format for use on the web.
-
-SVGs can be created using design software such as <a href="http://www.adobe.com/ca/products/illustrator.html" target="_blank">Adobe Illustrator</a> (monthly subscription), <a href="https://www.sketchapp.com/" target="_blank">Sketch</a>, (mac only) or <a href="https://inkscape.org/en/" target="_blank">Inkscape</a> (free).
-
-They can also be found online - a great resource is a website called <a href="https://thenounproject.com/" target="_blank">The Noun Project</a>.
-
->## CLASS EXERCISE: The Noun Project
->
->As a class, we will use [The Noun Project](http://thenounproject.com) to search for, download and include an SVG graphic in our project as our logo.
->
->Once you have your SVG in your **img** folder, open it up in Atom. Proceed to comment out the entire **`<text>`** element from the SVG file. Once you've hidden it, save the SVG file and close it. 
->
->By omitting the **`<text>`** element from the SVG, we are removing the credit to the designer - so let's credit them in our footer instead.
->
->Now, let's include our SVG as the src in an **`<img>`** element. It will always be scalable, but this doesn't provide us with much control over the look of our SVG.
->
->It's huge! Give your **`<img>`** a class of "logo" and size it accordingly.
->
->If you would like to change the SVG's colour or animate it, you will need to use the SVG **"inline"** in your HTML file.
->
->[Read how to include SVG inline and manipulate with CSS](https://css-tricks.com/using-svg/#article-header-id-7)
-
-
-#### For more resources on learning SVG, check out:
-* [CSS Tricks - "Using SVG"](https://css-tricks.com/using-svg/)
-* [CodePen Example - Inline SVG](http://codepen.io/chriscoyier/pen/evcBu)
-* [Styling and Animating SVG with CSS - Sara Soueidan](https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/)
-
-
-## Designing with Colour
-
-A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.
-
-### Personality and Meaning
-
-Colour communicates meaning. 
-
-* Choose colours that reflect your personality or your brand. 
-* Consider the emotional responses of your target audience. 
-* Use colour to distinguish between elements and interactive states.
-
-
-Colour meanings can vary across different cultures so it’s important to consider who your target audience.
-
-
-Read more about colour meaning and how to use colour to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
-
-
-### Harmony and Rhythm
-Colour can be used to attract attention and organize content, creating a visual hierarchy. 
-
-Repeating colours on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
-
-**Less is more.** When in doubt use one primary colour and a secondary accent colour. Vary the saturation and value of your colours to add variety while maintaining clarity.
-
-
-### Colour Accessibility
-Many people have some sort of visual colour impairment such as being unable to distinguish certain colours from others. 
-
-Ensure sufficient contrast between colours to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
-
-Read more about colour blindness and designing for colour accessibility [here](https://24ways.org/2012/color-accessibility/).
-
-#### Colour Resources
-* [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose colour palettes
-* [Color Safe](http://colorsafe.co/) - helps you choose colours with appropriate contrast for text
-* [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colours from websites
-
 
 ## Spacing and CSS
 
@@ -384,7 +98,7 @@ Margin also accepts negative values.  This will nudge it just outside of its sta
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
 ### Auto/Center Aligning with `margin`
-The margin property can also be used to center align *block* level elements. 
+The margin property can also be used to center align elements. 
 
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
 
@@ -398,10 +112,6 @@ First a width needs to be set. Then by setting the left & right values to `auto`
 <div style="height:60px;width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
-
->## CLASS EXERCISE: auto align content
->
->Looking at this [CodePen example](http://codepen.io/learningcode/pen/adPrym), compare the difference when `margin` is used to auto align the content block.
 
 
 ### Border
@@ -454,19 +164,284 @@ In Chrome, you can access the tools in 3 ways:
 >
 >**solution.css** has been included for reference.
 
+
+## The Box Model Problem and Fix
+
+In CSS ,the relationship between the width, padding and border properties is not always straightforward.
+For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:
+
+480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width
+
+But, there's a fix! Let's first compare how the element's sizing differs with and without the fix, looking at the CSS example below.
+
+    background: lightblue;
+    width: 480px;
+    padding: 0px 20px;
+    border: 15px solid green;
+
+<div style="box-sizing: content-box;background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green; margin-bottom: 5px;">
+  <p style="box-sizing: content-box;">This example does NOT have the border box fix.</p>
+</div>
+
+<div class="example" style="background: lightblue; width: 480px;padding: 0px 20px;border: 15px solid green;">
+  <p>This example DOES have the border box fix.</p>
+</div>
+
+
+<br>
+Notice that without the fix, the element is larger than the set `width`.
+
+The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.
+
+Here is the snippet:
+
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+
 > ## EXERCISE: Margin & Padding on Your Project
 > Open up your project files and based on the last exercise, add margin and padding to make your website look more balanced.
 >
 >Wrap your content with a <div class="wrapper">`, and add `margin` and `width` to auto align the page content.
+>
+> Add the box model fix to the top of your CSS file.
+
+## Advanced Selectors
+In the previous lessons, we covered a few ways to select an element using element type, class and id selectors to apply CSS to it, but there are many more ways of targeting content!
+
+## Descendant Selectors
+Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
+
+    <parent>
+      <child>
+        content here
+      </child>
+    </parent>
+    
+---
+    parent child {
+      /* targets only the child elements contained in that parent */
+    }
+
+---
+
+    <ul>
+      <li><a href="#">link 1</a></li>
+      <li><a href="#">link 2</a></li>
+      <li><a href="#">link 3</a></li>
+    </ul>
+    
+---
+    ul li a {
+      color: blue;
+    }
+
+In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.
+
+You can even "skip" an element. The below example will work as well.
+
+    ul a {
+      color: blue;
+    }
+
+### Descendant Selectors and Specificity
+A good rule of thumb for descendant selectors is to avoid going more than **three** levels deep.  Browsers read selectors from right to left and work its way up the [DOM](http://www.w3.org/TR/WD-DOM/introduction.html) tree.  Having many selectors can impact the site performance.
+
+#### Yes
+    p a {
+      /* targets anchor link tags nested inside of a p tag */
+    }
+    .about p {
+      /* targets paragraphs within an element with the .about class*/
+    }
+
+#### No!
+    .about ul li a span {
+      ...
+    }
+
+Also, a more *specific* selector will override the descendant selector, regardless of written order in the CSS file.
+    
+    ul a {
+      /* least specific */
+    }
+    ul li a {
+      /* more specific */
+    }
+    ul.nav li a {
+      /* most specific */
+    }
+
+
+## Combining selectors
+You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a *comma*. Any type of selector can be combined.
+
+    .special, #special {
+      color: red;
+    }
+    h1, h2 {
+      text-transform: uppercase;
+    }
+    header h1, h2 {
+      text-transform: uppercase;
+    }
+
+> What is the difference is between combining `h1, h2` and `header h1, h2`?
+
+## Pseudo-class Selectors
+
+Pseudo-class selectors target an elements *state* or *action*. The most commonly used pseudo-class is `:hover`.  Note the syntax. It must start with a colon (`:`) and be attached to an HTML element, with no white-space.
+
+    <a href="#">Example link</a>
+
+---
+    a { 
+      color: red;
+    }
+    a:hover { 
+      color: black;
+    }
+
+### Pseudo Class & links
+
+`:hover` - selects the link on mouse hover.  
+&nbsp; Can also be used to create hover effects for elements other than an `<a>`.
+
+`:link` - links that have *not* been clicked/visited
+
+`:visited` - links that *have* been clicked/visited in the the current browser
+
+`:active` - selects the link while it is being activated/clicked.
+
+
+<br>
+There are **many** more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.
+
+
+>## EXERCISE: Selectors
+>
+>Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
+>
+>All the instructions are contained in the comments at the very top of `selector.html`.
+> **Bonus** Open up your project's style.css file and add a hover effect to your nav links. Tip: You might even be able to combine descendant selectors with pseudo selectors for this one! 
+
+
+## Block vs Inline Elements
+
+
+Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
+
+
+Block level HTML elements default behavior:
+
+* takes up 100% width of its container, no matter how long the actual content is
+* will be the same height as its content
+* always starts on a new line
+* can wrap other block level elements or inline elements
+* can apply sizing related CSS to it (margin, padding, height, width)
+* examples: `<p>`, `<div>`, `<ul>`
+
+Inline level HTML elements default behavior:
+
+* will be the height and width of its content
+* always appears "in a line" with other inline level elements
+* can wrap other inline elements but cannot wrap block level elements *except* `<a>` tags.  This is only valid with an HTML5 doctype.
+* does not render CSS height and width at all, will apply margin and padding but with unexpected results
+* examples: `<a>`, `<span>`
+
+<br>
+**Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
+
+<div style="background:lightblue;">this is a div</div>
+
+<span style="background:lightgreen;">this is a span</span>
+
+
+## CSS Display
+
+CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today: 
+
+* `block` - makes inline elements display as block elements
+* `inline` - makes block elements display as inline-block
+* `inline-block` - best of both worlds
+
+This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
+
+### Resource 
+
+[CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
+
+
+## Display + Box Model: A match made in heaven
+
+The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It's important to note that these 5 properties will affect elements differently depending on whether they are inline or block. (or inline-block) 
+
+Let's explore their unique behaviour:
+
+### Width & Height
+These properites won't work for *inline* level elements unless you use `display` to change it to `block` or `inline-block`.
+
+### Padding
+
+When adding padding to an *inline* element it will look like the below example.
+<p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
+<a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a>
+
+<br>
+Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property to make an element 'block' if you want to add padding.. 
+
+More on this in the upcoming exercise.
+
+### Margin
+
+Just like padding, margin and spacing is not applied the same way to block and inline elements.
+
+<p style="background:lightblue;margin:0px;">This is a block element without margin.</p>
+<a href="#" style="background:lightgreen;margin:40px;">This is an inline element with margin.</a>
+
+
+> ## Class Exercise: Box Model & `display`
+> In this [Codepen](http://codepen.io/learningcode/pen/vNRadg), let's try the different `display` property values and see how it affects inline & block HTML elements.
+
+## Center Aligning with `margin`
+Using `margin:0 auto` to auto-align content only works with block elements! If you're trying to center an inline-element you need to apply the `text-align: center` property and value to the parent of the inline element.
+
+Looking back at our auto-aligned block element: 
+<div style="width:600px;margin: 0 auto;background:lightblue;">
+  <p>Auto aligned!</p>
+</div>
+
+<br>
+Notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the example below, notice that content stays in the middle but the background styles expand the width of the page?
+
+![]({{ site.img }}/module3/content-align.jpg)
+
+
+In the previous lesson, a wrapper was included around all of the page content.  
+
+But to create a style where different background styles apply to each section, we'll need to:
+
+* create a wrapper, just for the content, not the whole page
+* auto align the content wrapper
+* use the outer container for the background styles
+
+>Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
+
+> ## EXERCISE: Content Wrappers in our project
+> Originally we added padding to our project sections to make the content a little narrower and nice to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer). 
+> Go ahead and apply the codepen example from above to each of the sections of your project. 
+>
+> All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added so many styles. 
+>
+><a href="exercises/module2/project-one-final.zip" download>Download </a>the example files as a reference. 
 
 <br>
 ~ End ~
-
-
-
-
-
-
-
 
 

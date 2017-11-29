@@ -1,276 +1,199 @@
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* GENERAL LAYOUT STYLES ============================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
 img {
-  max-width:100%;
-  height: auto;
-
+    max-width: 100%;
 }
 
-svg {
-	max-height: 100%;
-}
-
-/*=====================STYLES BEING HERE==========================*/
-
-/*Change the typographical properties of your website in this section by targeting headings, paragraphs, etc... */
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	line-height: 1.5;
+    color: #333;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
 }
-
-h1, h2 {
-	font-family: 'Parisienne', cursive;
-	color: #550165;
-	display: inline-block;
-	margin: 0;
-}
-
-
-h2 {
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-a {
-	text-decoration: none;
-	color: #550165;
-	font-weight: 600;
-}
-a:hover {
-	color: #FF680D;
-}
-
-blockquote {
-	font-size:24px;
-	padding-left: 0;
-	margin: 0;
-	font-weight: 300;
-	margin: 50px 0;
-
-}
-
-cite {
-	color: #FF680D;
-	display: block;
-	font-size: 16px;
-	font-weight: 600;
-	margin-top: 10px;
-}
-
 
 .wrapper {
-	max-width: 960px;
-	margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
 }
-/*=========HEADER STYLES =====================*/
 
-header .wrapper{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
+/* TYPOGRAPHY ============================== */
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+
+/* NAV ============================== */
+
+nav {
+    background: white;
+    ;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #ffd202;
+}
+
+
+/* HEADER ============================== */
+
+header {
+    text-align: center;
+    background: #b1009a;
+    color: white;
+    padding: 100px;
 }
 
 header h1 {
-	font-size: 24px;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 .logo {
-	width: 4%;
-	fill: #FF680D;
-	transform: rotate(180deg);
-	min-width: 25px;
-	position: relative;
-	top:5px;
-}
-
-nav {
-	text-align: right;
+    width: 50px;
 }
 
 
-nav ul {
-	padding: 0;
-	list-style-type: none;
-
-}
-
-ul.main-nav {
-  display:block;
-}
-nav li {
-	display: inline-block;
-}
-
-nav li a {
-	display: block;
-	padding: 5px;
-	color: #333;
-	font-weight: 300;
-}
-
-nav li a:hover {
-	color: #FF680D;
-}
-
-/*====================BANNER===================================*/
-.banner {
-	padding: 150px;
-	/*Change the banner image by changing the url below*/
-	background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: bottom right;
-}
-
-.banner h1 {
-	font-weight: 300;
-	color:white ;
-}
-
-/*=====================MAIN CONTENT============================*/
+/* ABOUT - SECTION ============================== */
 
 .about {
-	border-bottom: 1px solid #FF680D;
-	padding: 150px 0;
+    background: white;
+    text-align: center;
+    padding: 150px;
 }
 
-/*=====================SIDEBAR============================*/
-
-.aside {
-	padding: 100px 0;
-	display: flex;
-	justify-content: space-around;
-	font-size: 18px;
+.about p {
+    text-align: left;
 }
 
 
-.third {
-	width: 33%;
-	padding: 1%;
+/* SOCIAL - SECTION ==================== */
 
+.social ul {
+    list-style-type: none;
+    text-align: center;
+    background: #333;
+    padding: 50px;
+    margin-bottom: 0;
 }
 
-input {
-	display: block;
-	width: 100%;
-	padding: 10px;
-
+.social ul li {
+    display: inline-block;
 }
 
-input[type="submit"] {
-	background: #550165;
-	color: white;
-	outline: none;
-	border: none;
+.fa {
+    font-size: 50px;
+    color: #b1009a;
+    margin: 10px;
 }
 
-input[type="submit"]:hover {
-	background: #FF680D;
+.fa:hover {
+    color: #ffd202;
 }
 
-textarea {
-	display: block;
-	width: 100%;
-}
 
-form {
-	width: 50%;
-
-}
-/*=================FOOTER===========================*/
-/*Change the look of the footer by changing the background and font properties.*/
+/* FOOTER ============================== */
 
 footer {
-	padding: 1% 5%;
-	background: #550165;
-	color: white;
+    background: #b1009a;
+    text-align: center;
+    color: white;
+    padding: 50px;
 }
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
 
 /*===============RESPONSIVE STYLES==========================*/
 
-@media (max-width: 960px){
-	.wrapper {
-		padding: 1% 10%;
-	 }
-
-	 .third {
-	 	width: 100%;
-	 }
-
-	 header h1 {
-	 	font-size: 18px;
-	 }
+@media (max-width: 960px) {
+    .wrapper {
+        padding: 1% 10%;
+    }
+    header h1 {
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 780px) {
-	.aside {
-		display: block;
-	}
+.hamburger,
+.close {
+    display: none;
 }
 
-.hamburger, .close{
-  display: none;
+@media (max-width: 650px) {
+    .hamburger,
+    .close {
+        display: block;
+        font-size: 24px;
+        font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+    }
+    ul.main-nav {
+        top: -100vh;
+        margin-top: 0;
+        position: fixed;
+        right: 10px;
+    }
+    ul.main-nav li {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+    }
+    .main-nav.open-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2% 10%;
+        z-index: 2;
+        background: #550165;
+        width: 100%;
+        height: 100vh;
+    }
+    .open-nav a {
+        color: white;
+    }
+    .about {
+        padding: 10px;
+    }
+    nav {
+        text-align: right;
+    }
 }
-
-@media (max-width: 650px){
-
-  .banner {
-    padding: 50px 0px;
-    background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
-    background-position: center;
-  }
-
-  .about {
-    padding: 50px 0px;
-  }
-  blockquote {
-    margin: 0;
-  }
-  .hamburger, .close{
-    display: block;
-    font-size: 24px;
-    font-family: "Lucida Sans Unicode", "Arial Unicode MS";
-  }
-  ul.main-nav {
-    top: -100vh;
-    margin-top: 0;
-    position: fixed;
-  }
-
-  ul.main-nav li {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-  }
-
-  .main-nav.open-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 2% 10%;
-    z-index: 2;
-    background: #550165;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .open-nav a {
-    color: white;
-  }
-
-
-  .third {
-    padding-top: 50px;;
-  }
-  .third:last-child{
-    padding-bottom: 50px;
-  }
-
-  form {
-    width: 100%;
-  }
-}
-

@@ -263,7 +263,10 @@ All content to be displayed in the browser window goes between the `<body></body
 &lt;/html&gt;
 </code></pre>
 
->## EXERCISE: Setting up a project
+>## EXERCISE: Setting up our first project
+> Over the next couple of weeks, as we familiarize ourselves with the basics of HTML & CSS, we'll be creating a fun and simple website about anything you like. [Here's an example](exercises/module1/project-one-sample) of what we'll be building. 
+> First thing's first: creating our first HTML file!
+>
 > Remember to apply the file naming best practices!
 >
 > 1. Create a project folder.
@@ -586,6 +589,7 @@ There are many paid options ranging in price but there are also many resources f
 >
 >1. Create a general page structure using the appropriate tags
 * header, navigation menu, main content, footer, sidebar, etc
+> If you need some help <a href="exercises/module1/page-structure.html" download>download</a> the sample project html for inspiration. 
 >1. Add some content! Images, paragraphs, headings.
 >
 >Not sure what to write? Use placeholder text or images.
@@ -593,10 +597,10 @@ There are many paid options ranging in price but there are also many resources f
 >* [meettheipsums.com](http://meettheipsums.com)  
 >* [thewireipsum.com](http://thewireipsum.com)  
 >* List of [image placeholder sites](http://www.wpfreeware.com/tutorial/placeholder-images-generator-service-web-designers/).
->
+>* 
 > <br>
 > *Pro tip!*  
-While not required, it's best practice to put image files into its own folder (as well as other related files like CSS and JavaScript) to keep your project directory organized.
+While not required, it's best practice to put image files into its own folder (as well as other related files like CSS and JavaScript) to keep your project directory organized. Go ahead,try creating an images folder and download some royalty free images from [The Stocks](http://thestocks.im) to put in it.
 
 
 
@@ -676,6 +680,14 @@ When using an image or an icon, in addition to using the `alt` attribute, you ca
 
 More about `alt`, `title` and SEO (search engine optimization) [here](http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/).
 
+>## EXERCISE: Our First Na
+>
+>Back in **index.html**, let's create our first navigation. Since we only have one page, we'll be linking our navigation anchors to their corresponding section on our website. 
+>
+> 1. Since navigations are no more than a list of links, create a list of links and add as many links as you have sections. Currently the sample project only has an About section and a footer. So, we'll create a list with two items, and inside of each item, an anchor element.  
+> 1. To link our anchor elements in the nav to our about section and footer we'll first need to give the section and the footer an ID to anchor to. Go ahead. 
+> 1. Using the ID of each section, with a hashtag in front, add your href attributes to the nav links. 
+> 1. **Bonus** If you haven't added an e-mail link in your footer, now is a great time! 
 
 ## Folder Structure, Relative & Absolute Paths
 
@@ -723,28 +735,12 @@ Only link to web pages, not specific files such as images (unless it points to y
 
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
+
+
     
->## EXERCISE: Starting Your Class Project!
->Over the course of the program, you will be creating your very own website. The index.html file that you have been playing around with today can be the starting file for your website. You will have time to work on it every day in class, each week adding features to it incrementally.
-As we have discussed today, HTML is all about content. Essentially, what you want to communicate with your website. Between now and next class, your exercise is to think about what you want the website you'll build over the next few weeks to be about. More specifically ask yourself the following:
->
->1. What type of website do I want to build? Examples of possible projects are:
-  * A personal blog or resume/portfolio website.
-  * A Travel Journal
-  * An interest page about something you're knowledgeable about or really love. (e.g. Ethiopian Food)</li>
-  * A business website for a business you know, own, or want to own.
-  [Here's an example](exercises/module1/project-one-sample) of a website you could build.
->
->1. Who do you think will most likely want to visit your site? (i.e. What is your target demographic: age, personality, relevant characteristics)
->
->1. How can you best communicate with your intended audience? (i.e. What voice should your copy be written in? What types of content do you need? Words? Photos? Videos? Audio? Statistical Data? Etc...)
->
-> Once you have answered the above do the following: 
-	1. Sketch out a rough outline of your website (e.g.header, about section, footer) on a peace of paper. Don't dwell too much on how the website will look. We will get to design over the next couple of weeks! Right now it's just about content. 
-	1. Edit the content on your index.html file to match your sketch. 
-	1. If your website will have more than one page, create a new html file for each page and add content to them.
->
->**Bonus:**  For the email link, how do you set a default subject line? See example [here](http://stackoverflow.com/questions/4782068/can-i-set-subject-content-of-email-with-using-mailto).
+>## TAKE HOME EXERCISE: Finesse your HTML!
+> Next class we'll be making our website beautiful. Right now it should look something like [this](exercises/module1/project-one-sample-nocss/index.html). 
+> Keep practicing at home until next class and change your content around if you haven't decided yet what to make your website about. Remember, this website is just for fun so you can be as creative as you choose to! 
 
 ~ End ~
 

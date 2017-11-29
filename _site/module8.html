@@ -1,0 +1,320 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page is public but not meant to show up in search engine results -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Domains, Hosting & FTP</title>
+  <meta name="description" content="Local development vs live websites">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
+</head>
+<body class="module7">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
+    <h1>Digital Skills Program</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Module 8, Lesson 1</h2>
+  </header>
+
+
+    <main role="main" class="lessons" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <h3>Module 8, Lesson 1</h3>
+        <h4>Domains, Hosting & FTP</h4>
+      </nav>
+      
+      <article class="module7" >
+        <h1>Domains, Hosting & FTP</h1>
+        <h2 id="local-development-vs-live-websites">Local development vs live websites</h2>
+
+<p>Developing your website <em>locally</em> just means working on your files on your computer. You’re the only person who can see the website until you move it to a <em>web host</em>.</p>
+
+<p>Websites are basically just a bunch of files (HTML pages, images, css files, etc) in a folder. To put that website online and make it <em>live</em>, you will need to move your <em>local</em> folders to a <em>server</em>.</p>
+
+<h3 id="what-is-a-server">What is a server?</h3>
+
+<p>A server is a like a computer, but they never turn off and are always connected to the internet. <em>Hosts</em> own many different servers and are responsible for server maintenance to ensure that all the websites running on that server are always available.</p>
+
+<h2 id="moving-files-to-a-server">Moving files to a server</h2>
+
+<p>It’s similar to moving files from one folder to another. But instead, you’ll be moving files from your computer to your server.</p>
+
+<p>You’ll need 3 things:</p>
+
+<ul>
+  <li>a domain name - your web address (e.g. mywebsite.com)</li>
+  <li>a server/host - web space for your files</li>
+  <li>an FTP client - software/app to upload files to the server</li>
+</ul>
+
+<h2 id="removing-your-files-from-c9io">Removing your files from c9.io</h2>
+
+<p>Before we explore the subject of moving files more, let’s see how we can remove our files from Cloud9 to be able to move them.</p>
+
+<p>First, remember that WordPress websites have the theme files and overall WordPress core files to deal with AND a database file. To launch a WordPress website on your own server you’ll need both of these.</p>
+
+<p>Here’s how to remove them from c9.io.</p>
+
+<blockquote>
+  <h2 id="class-code-along-accessing-your-files-on-cloud-9">Class Code-Along: Accessing your files on Cloud 9</h2>
+  <h3 id="getting-the-database">Getting the database</h3>
+
+  <p>To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases.</p>
+
+  <ol>
+    <li>
+      <p>Open up a terminal: Watch this video of how: 
+<img src="assets/img/module7/c9-opening-terminal.gif" alt="" /></p>
+    </li>
+    <li>
+      <p>Enter the following in the terminal.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>     phpmyadmin-ctl install
+</code></pre>
+      </div>
+    </li>
+  </ol>
+
+  <p>You will see a url generated to access your phpMyAdmin dashboard where you’ll download the database.
+You’ll select the database c9 on the sidebar and the go to “Export” to download the database for your website.
+Follow the instructions in this gif:</p>
+</blockquote>
+
+<blockquote>
+  <p><img src="assets/img/module7/downloading-database-from-c9.gif" alt="" /></p>
+
+  <ol>
+    <li>Once you’re done downloading the database, go back to c9, select your entire project folder, right click on it and select download. 
+You will use the files and the database to upload them to a hosting service/server.
+      <h3 id="resources">Resources</h3>
+      <p>Watch this awesome video walkthrough of <a href="http://wesbos.com/migrate-wordpress/">how to launch a wordpress website</a> by Wes Bos:</p>
+    </li>
+  </ol>
+</blockquote>
+
+<h2 id="server-vs-domain">Server vs Domain</h2>
+
+<p>A <strong>server</strong> is the computer that will “host” the folder with your files.</p>
+
+<p>The <strong>domain</strong> is the internet address used to access that folder on the server.</p>
+
+<p>Many companies will sell domains and hosting but you can also purchase these separately and connect them through your hosting provider.</p>
+
+<p>There are many hosting and domain companies to choose from. Here are a few:</p>
+
+<ul>
+  <li><a href="http://www.dreamhost.com/r.cgi?2085384">Dreamhost</a> - hosting and domains - $40 off with promo code <strong>LLC40</strong></li>
+  <li><a href="Hover.com/learningcode">Hover</a> - domains only - 10% off with promo code <strong>learningcode</strong></li>
+  <li><a href="http://www.whoishostingthis.com/compare/">Compare Hosting</a></li>
+  <li><a href="http://www.pcmag.com/article2/0,2817,2424725,00.asp">The Best Web Hosting Services for 2016</a></li>
+</ul>
+
+<p>Read more about keeping hosting and domains separate <a href="http://ladieslearningcode.com/getting-hosted-domains-with-hover/">here</a>.</p>
+
+<h2 id="domains--hover">Domains &amp; Hover</h2>
+<p>Setting up a domain name will be slightly different based on which option you choose because it depends on that service providers website interface.  To set up a domain with <a href="Hover.com/learningcode">Hover</a>, follow the instructions below.</p>
+
+<h3 id="step-1">Step 1:</h3>
+<p>Visit <a href="http://hover.com">hover.com</a> and select <strong>Find a domain</strong> and enter your desired domain name into the search box.</p>
+
+<p><img src="assets/img/module7/1-search-domain.png" alt="" /></p>
+
+<h3 id="step-2">Step 2:</h3>
+<p>A list of available domain name extensions will show as well as suggestions for similar names.  This is useful if your desired domain name is already taken.</p>
+
+<p>Select an option and add to cart.</p>
+
+<p><img src="assets/img/module7/2-domain-options.gif" alt="" /></p>
+
+<h3 id="step-3">Step 3:</h3>
+<p>Optional email customizations</p>
+
+<p><strong>Mail Forwards</strong><br />
+Forward your custom domain email address to your Gmail, Hotmail, etc.  Get the benefit of a custom email address without managing multiple accounts.</p>
+
+<p><strong>Small &amp; Big Mailbox</strong><br />
+Ad-free email accounts. The Big option has more storage and a few other features.</p>
+
+<p>You can always add this option later. See full details <a href="https://www.hover.com/email">here</a>.</p>
+
+<p><img src="assets/img/module7/3-cart-email-options.png" alt="" /></p>
+
+<h3 id="step-4">Step 4:</h3>
+<p>Create an account &amp; add your WHOIS registration info.</p>
+
+<p><strong>What is a registration record?</strong></p>
+
+<p>When registering a domain name, the Internet Corporation for Assigned Names and Numbers (ICANN) requires your contact information for the WHOIS database which is publicly available using a WHOIS search tool.</p>
+
+<p>Hover (and most other domain registrars) offer a privacy option, automatic with Hover’s domain registration (see previous screenshot, the privacy option is automatically checked).</p>
+
+<p>More info <a href="https://help.hover.com/entries/21196313-Domain-WHOIS-Privacy">here</a>.</p>
+
+<p><img src="assets/img/module7/4-create-account.png" alt="" /></p>
+
+<p><img src="assets/img/module7/5-whois-info.png" alt="" /></p>
+
+<h3 id="step-5">Step 5:</h3>
+<p>Add your billing info.</p>
+
+<p>To add another domain name, log into your new account, choose the <strong>Add New</strong> option and follow the same steps.</p>
+
+<p><img src="assets/img/module7/6-get-another-domain.png" alt="" /></p>
+
+<p><br />
+And you’re done!</p>
+
+<h2 id="domains--hosting">Domains &amp; Hosting</h2>
+
+<p><strong>If you have a domain with your hosting company, skip this step.</strong></p>
+
+<p>To forward your domain to your hosting company, follow the steps below. First, find your hosting provider’s <strong>nameservers</strong>. It will look something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ns1.hostingcompany.com
+ns2.hostingcompany.com
+</code></pre>
+</div>
+
+<p>This info is provided by your hosting company but the website’s interface for finding this info will vary. Sometimes it is also included in your confirmation email when you sign up.</p>
+
+<p>You could also contact customer support or just do a web search for “[your host] nameservers”.  For example, searching for “Dreamhost nameservers” brings up <a href="http://wiki.dreamhost.com/Nameservers">this page</a>.  Dreamhost’s nameservers are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ns1.dreamhost.com
+ns2.dreamhost.com
+ns3.dreamhost.com
+</code></pre>
+</div>
+
+<p>To forward your Hover domain to your hosting account, follow these steps. (This will be similar for other domain/hosting company)</p>
+
+<ol>
+  <li>login to your Hover account</li>
+  <li>go to <strong>Your Account &gt; Domains</strong> (also the landing page when you log in)</li>
+  <li>click your domain</li>
+  <li>go down to <strong>Nameservers</strong> and select <strong>Edit</strong>
+  <img src="assets/img/module7/hover-nameservers-1.png" alt="" /></li>
+  <li>update it with your host’s nameservers
+  <img src="assets/img/module7/hover-nameservers-2.png" alt="" /></li>
+</ol>
+
+<h2 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h2>
+
+<p>FTP (File Transfer Protocol) allows you to connect to the server to upload files.</p>
+
+<p>To use FTP, you will need to create an FTP username and password in your <strong>hosting</strong> account, since that is where your servers are.</p>
+
+<p>To create an FTP user in Dreamhost, follow these steps. (This will be similar with other hosting companies).</p>
+
+<ul>
+  <li>go to <strong>Users &gt; Manage users &gt; Add a new user</strong></li>
+  <li>create a username, password and save</li>
+</ul>
+
+<p><img src="assets/img/module7/dreamhost-ftp-1.png" alt="" />
+<img src="assets/img/module7/dreamhost-ftp-2.png" alt="" /></p>
+
+<h2 id="ftp-client">FTP Client</h2>
+
+<p>To get your files online, you will need upload your files to your newly purchased hosting server. Be sure to have the below information.</p>
+
+<ul>
+  <li>FTP Username</li>
+  <li>FTP Password</li>
+  <li>FTP Address (usually <code class="highlighter-rouge">ftp.yourdomain.com</code> or just <code class="highlighter-rouge">yourdomain.com</code> - check with your hosting provider)</li>
+</ul>
+
+<p>There are many free FTP Clients.  A great one is <a href="https://filezilla-project.org">FileZilla</a> or <a href="https://cyberduck.io/">CyberDuck</a>.</p>
+
+<p>Here’s a tutorial to get your files online using FileZilla: <a href="https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29">FileZilla Client Tutorial</a></p>
+
+<p><br />
+Feeling adventurous? Want to try a free hosting option?<br />
+Try <a href="http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/">Hosting Static Sites on Github for Beginners</a>.</p>
+
+<blockquote>
+  <h2 id="final-class-exercise-launching-your-website-on-github">Final Class exercise: launching your website on github</h2>
+  <p>Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free if it’s just a plain HTML &amp; CSS website. Let’s try doing it with our plain websites, without the WP parts we worked on. Those will need more work anyhow before we can launch them:</p>
+  <ol>
+    <li>Go to <a href="http://github.io">http://github.io</a> and create an account or sign in.</li>
+    <li>Create a new repo:</li>
+  </ol>
+
+  <p><img src="assets/img/module7/github-repo.gif" alt="" /></p>
+  <ol>
+    <li>Fill in your repo info and initialize it with a Read Me.</li>
+    <li>Select “Upload Files”</li>
+    <li>From your Finder or File Explorer drag and drop the index.html, css folder, js folder and any images for your website into the uploader.</li>
+    <li>Write a commit message such as “Added files” and submit your commit message.(Commit messages help you keep track of when you make file changes in github).</li>
+    <li>Go into the settings of your repository and enable Github Pages.</li>
+    <li>Go to your-username.github.io/your-repo-name and you should see your site!</li>
+  </ol>
+</blockquote>
+
+<h2 id="resources-1">Resources</h2>
+<p>To set up your custom domain with github pages <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">read here</a></p>
+
+<p>Here’s another more effective way of managing your website on Github if you want to keep making changes and uploading them. In fact, this is a better way in the long run: <a href="https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5">Sharing your website on Github</a></p>
+
+<p>Deploying websites can be tricky at first. It’s always good to find a buddy to help you through it if it’s your first time. In some Chapters Ladies Learning Code hosts free “Coffee &amp; Code” sessions. This is exactly the kind of thing you can get help with there.</p>
+
+<p>Most importantly, don’t stop coding and have fun!</p>
+
+<h2 id="resources-2">Resources</h2>
+
+<p>For more advanced training, there are numerous institutions in Toronto that run in-person classes:</p>
+<ol>
+  <li><a href="http://hackeryou.com">HackerYou</a></li>
+  <li><a href="http://bitmaker.co">Bitmaker Labs</a></li>
+  <li><a href="http://lighthouselabs.com">Lighthouse Labs</a></li>
+  <li><a href="http://brainstation.io">Brainstation</a></li>
+  <li>Colleges and universities</li>
+  <li>Maker Spaces: For example, <a href="steamlabs.ca">SteamLabs</a></li>
+  <li><a href="https://dmg.to/">Dames Making Games</a></li>
+</ol>
+
+<p>For free online training:</p>
+
+<ol>
+  <li><a href="http://freecodecamp.com">Free Code Camp</a></li>
+  <li><a href="http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&amp;R=EDB0187">Lynda</a> This is free through Toronto Libraries</li>
+  <li><a href="http://glitch.com">Glitch</a></li>
+</ol>
+
+
+      </article>
+    </main>
+
+      <footer>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+  </footer>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/global.js"></script>
+</body>
+</html>
+
+

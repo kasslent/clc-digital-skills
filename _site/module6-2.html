@@ -1,0 +1,354 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page is public but not meant to show up in search engine results -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>jQuery & Plugins</title>
+  <meta name="description" content="jQuery Click Events">
+  
+  <!-- Syntax highlighting with highlightjs.org -->
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="assets/css/highlightjs/github.css">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
+</head>
+<body class="">
+  <header>
+    <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
+    <h1>Digital Skills Program</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    </nav>
+  </header>
+  <header class="print-only">
+    <h1>Ladies Learning Code | Digital Skills Program</h1>
+    <h2>Module 6, Lesson 2</h2>
+  </header>
+
+
+    <main role="main" class="lessons" data-main>
+      <nav role="navigation" class="table-of-contents" data-nav>
+        <span data-collapse class="icon"></span>
+        <h3>Module 6, Lesson 2</h3>
+        <h4>jQuery & Plugins</h4>
+      </nav>
+      
+      <article>
+        <h1>jQuery & Plugins</h1>
+        <h2 id="jquery-click-events">jQuery Click Events</h2>
+
+<p>Let’s do a review of the jQuery click events from the last lesson.</p>
+
+<h4 id="syntax">Syntax</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$( "selector" ).click(function() {
+  // code to be executed on click
+});
+</code></pre>
+</div>
+
+<p><a href="http://codepen.io/learningcode/pen/WQYpxG">CodePen example</a>.</p>
+
+<p><strong>Resource</strong>: <a href="http://api.jquery.com/click/">http://api.jquery.com/click/</a></p>
+
+<h2 id="click-event--mobile-navigation-aka-hamburger-menu">Click Event &amp; Mobile Navigation (a.k.a. Hamburger Menu)</h2>
+
+<p>A few classes ago we learned how to use Media Queries to make our website responsive. One really helpful thing we can use JS click events for is a fancy mobile navigation. Today we will be creating a simple one you can then use for your own website.</p>
+
+<p>Let’s take a look at the example below:</p>
+<p data-height="265" data-theme-id="dark" data-slug-hash="oBrYMV" data-default-tab="js,result" data-user="jessynd" data-embed-version="2" data-pen-title="oBrYMV" class="codepen">See the Pen <a href="http://codepen.io/jessynd/pen/oBrYMV/">oBrYMV</a> by jessica duarte (<a href="http://codepen.io/jessynd">@jessynd</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Let’s figure out what we need to do in English (tip: be sure to try resizing the codepen example to see what happens in bigger and smaller browser widths):</p>
+
+<ol>
+  <li>When the browser resizes to less than 650px, the menu items must disappear, and a tri-bar or hamburger (≡), will appear instead.</li>
+  <li>When we click on the hamburger, the menu items will appear again, and instead of a hamburger, we will see an “X” symbol to close the navigation in the upper right hand corner.</li>
+</ol>
+
+<blockquote>
+  <h2 id="class-code-along-creating-a-mobile-navigation-with-jquery-click-events">Class Code-Along: Creating a mobile navigation with jQuery click events.</h2>
+
+  <p>For this code-along, you can use the original project demo files if you would like, <a href="exercises/module5/project-one-final.zip">here</a>. Otherwise, use your own project files if you prefer.</p>
+
+  <p>This exercise is based on an HTML navigation markup that looks like this:</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#social"&gt;Social&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+  </div>
+
+  <ol>
+    <li>In order to create our fancy mobile navigation we first need to add a few things to our plain nav above.
+      <ul>
+        <li>We need a hamburger to open the mobile nav, and we need an × to close the navigation.</li>
+        <li>We need to give a class to our ul so that we can target it with JS.</li>
+      </ul>
+    </li>
+  </ol>
+
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    &lt;nav&gt;
+    	&lt;a href="#" class="hamburger"&gt;&amp;#8801;&lt;/a&gt;
+    	&lt;ul class="main-nav"&gt;
+    		&lt;a href="#" class="close"&gt;&amp;times;&lt;/a&gt;
+    		&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+ 				&lt;li&gt;&lt;a href="#social"&gt;Social&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    	&lt;/ul&gt;
+    &lt;/nav&gt;
+</code></pre>
+</div>
+
+<blockquote>
+  <h4 id="quick-tip--the-symbols-we-used-above-are-called-html-entities-check-out-some-of-the-available-ones-here">Quick tip : The symbols we used above are called HTML entities. Check out some of the available ones <a href="http://character-code.com/">here</a></h4>
+
+  <ol>
+    <li>
+      <p>Next, in our CSS files, we are going to create a media query for all widths 650px and lower. We are going to hide the hamburger and ‘close’ links unless we are inside the media query. We are also going to use a font-family that makes our symbols look better.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> @media(max-width: 650px){
+ 	.hamburger, .close{
+         display: block;
+         font-size: 24px;
+         font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+ 	}
+ }
+</code></pre>
+      </div>
+    </li>
+    <li>
+      <p>Outside of our media query we want to hide <code class="highlighter-rouge">.hamburger</code> and <code class="highlighter-rouge">.close</code>.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> 	.hamburger, .close{
+         display: none;
+ 	}
+</code></pre>
+      </div>
+    </li>
+    <li>
+      <p>Now we need to hide ul.main-nav when the browser is smaller than 650px because we just want the hamburger to show up in its place. We could use <code class="highlighter-rouge">display-none</code> to hide our ul but that would not be accessible for screen readers. Add the following inside our mobile media query. We will make our <code class="highlighter-rouge">ul</code> position fixed because we will make it take up the whole screen and want it to be fixed overlayed on top of the website. We will also position it off-sight above the top edge of the viewport.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> .main-nav {
+ 	position: fixed;
+ 	top: -100vh;
+ }
+</code></pre>
+      </div>
+    </li>
+    <li>
+      <p>Next we’ll create a new class for our main-nav that we will trigger to display the menu items again once we click on the hamburger. We will call the class <code class="highlighter-rouge">open-nav</code>.</p>
+
+      <div class="highlighter-rouge"><pre class="highlight"><code> .main-nav.open-nav {
+ 	top: 0;
+ }
+</code></pre>
+      </div>
+    </li>
+  </ol>
+
+  <p>Let’s try adding both classes to our ul.main-nav to see what it would look like once it’s open. Be sure to have your viewport at 650px or less. 
+As you can see, it doesn’t look amazing right now. It looks too narrow, and boring. So let’s add some more styles to our .open-nav class inside of the media-query.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>.main-nav.open-nav {
+	top: 0;
+	right: 20px;
+	padding: 2% 10%;
+	z-index: 2;
+	background: #550165;
+	width: 100%;
+	height: 100vh;
+}
+</code></pre>
+  </div>
+
+  <p>Let’s also give the anchors inside of the ul.main-nav in the media-query, the colour white, to contrast better with the purple background.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>.main-nav a {
+	color: white;
+}
+</code></pre>
+  </div>
+
+  <p>Alright, that should be pretty good for the styles. You can finesse them later. The next step is adding the click events using jQuery that will add and remove the class of <code class="highlighter-rouge">open-nav</code>. This next bit of code goes in your main.js file that we added to our projcets <a href="http://127.0.0.1:4000/llc-digital-skills/module5-1.html#adding-javascriptjquery-to-your-files">last week</a>. If you haven’t done that already, be sure to add both jQuery and your own js file to your project.</p>
+
+  <p>To add and remove the class of <code class="highlighter-rouge">open-nav</code> we will use a jQuery method called <code class="highlighter-rouge">toggleClass();</code>.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>$(".close, .hamburger").click(function(e){
+  e.preventDefault();
+  $(".main-nav").toggleClass('open-nav');
+});
+</code></pre>
+  </div>
+
+  <p>Now let’s test! Isn’t it a little bit magical?
+Don’t forget to add the JS files and the new navigation markup to all your HTML documents in your project.
+Checkout the full solution for your reference, <a href="exercises/module5/project-one-sample-w-js.zip">here</a></p>
+</blockquote>
+
+<h2 id="documentation--finding-answers">Documentation &amp; Finding Answers</h2>
+
+<p>A part of web development is reading tutorials, articles and documentation.</p>
+
+<p>Another important part is knowing how to ask directed questions to find the answers.</p>
+
+<blockquote>
+  <p>Discussion: What are some search techniques or resources that can be used to find answers?</p>
+</blockquote>
+
+<h2 id="below-are-some-bonus-activities-if-you-have-a-website-that-needs-any-of-these-features">Below are some bonus activities if you have a website that needs any of these features.</h2>
+
+<h3 id="bonus-click-event--an-active-menu">Bonus Click event &amp; an “active” menu</h3>
+
+<p>Here’s an example of a navigation effect that can be added to a one page website.</p>
+
+<p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class="codepen">See the Pen <a href="http://codepen.io/learningcode/pen/XJwKBb/">XJwKBb</a> by Ladies Learning Code (<a href="http://codepen.io/learningcode">@learningcode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Here’s how to do it, broken down into steps.</p>
+
+<ol>
+  <li>Select the elements to be clicked.</li>
+  <li>Test if you have correctly selected the element with <code class="highlighter-rouge">console.log()</code>.</li>
+  <li>Add a class of “active” to the active link (the link that was clicked) using <code class="highlighter-rouge">addClass()</code>.</li>
+  <li>Add the “active” class style to the CSS file.</li>
+  <li>When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.</li>
+</ol>
+
+<blockquote>
+  <h3 id="bonus-class-exercise-active-menu">Bonus Class Exercise: “Active” menu</h3>
+  <p>Download the <a href="exercises/module5/javascript.html" download="">javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user’s click.</p>
+</blockquote>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress).</p>
+
+<p>The jQuery library contains many methods and features but you can extend it even further by using plugins. To add a plugin to your website, all you need to do is add the plugin’s js file, possibly a css file as well, and then add a little bit of code you can usually copy straight from their webpage, into your own javascript file.</p>
+
+<p>How easy or hard it is to implement a JavaScript plugin depends on how detailed and simple to follow is the documentation of that plugin. Learning to understand plugin documentation is one of the most important skills to hone as a web developer. And the more you practice, the easier it will become. But don’t be discouraged if it looks way too technical and over your head when you first start out reading plugin documentation.</p>
+
+<p>Let’s try a couple!</p>
+
+<blockquote>
+  <h3 id="bonus-class-exercise-smooth-scroll">Bonus Class Exercise: Smooth scroll</h3>
+  <p>Using the previous exercise file, add the smooth scroll plugin.<br />
+Let’s follow the instructions listed in the plugin developers <a href="https://github.com/cferdinandi/smooth-scroll">site</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Bonus exercises:</p>
+
+  <ol>
+    <li>Set the navigation to be fixed at the top of the page.</li>
+    <li>Use the <a href="https://github.com/cferdinandi/smooth-scroll#options-and-settings">plugin options</a> to add an “offset” option, so you can position where the page scrolls to.</li>
+  </ol>
+
+  <p>Solution file for both exercises can be <a href="exercises/module5/javascript-solution.zip">downloaded here</a>.</p>
+</blockquote>
+
+<h3 id="bonus-magnific-popup-implementation">Bonus Magnific Popup Implementation</h3>
+
+<p>Let’s take a look at another plugin, <a href="http://dimsemenov.com/plugins/magnific-popup/">magnific popup</a>.</p>
+
+<p>Magnific Popup creates a <em>lightbox</em> that opens up to view a small thumbnail image, large. From the link above you can take a look at some demos.</p>
+
+<p>To create a gallery with lightbox pop-ups, we need to do the following:</p>
+<ol>
+  <li>Download the Magnific Popup JavaScript file from the website and add it to the javascript.html file after the jQuery link but above your own js code.</li>
+  <li>
+    <p>Create the thumbnail gallery exactly the way Magnific Popup tells you to in the Magnific Popup section. You’ll notice that each one of the small images is wrapped in an anchor tag that links that small image to the large image. The JavaScript we’ll add from Magnific Popup, makes that larger image open up in a lightbox. Below is a selection of sample Nicolas Cage photos but you can replace them with your own.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> &lt;div class="popup-gallery"&gt;
+ 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
+ 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
+ 	&lt;/a&gt;
+ 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
+ 		&lt;img src="http://placecage.com/200/200"  data-pin-nopin="true"&gt;
+ 	&lt;/a&gt;
+ 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
+ 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
+ 	&lt;/a&gt;
+ 	&lt;a href="http://placecage.com/900/600" title="Nick Cage"&gt;
+ 		&lt;img src="http://placecage.com/200/200" data-pin-nopin="true"&gt;
+ 	&lt;/a&gt;
+ &lt;/div&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Then add the jQuery code it gives you in the source</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> $(document).ready(function() {
+ 	$('.popup-gallery').magnificPopup({
+ 		delegate: 'a',
+ 		type: 'image',
+ 		tLoading: 'Loading image #%curr%...',
+ 		mainClass: 'mfp-img-mobile',
+ 		gallery: {
+ 			enabled: true,
+ 			navigateByImgClick: true,
+ 			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+ 		},
+ 		image: {
+ 			tError: '&lt;a href="%url%"&gt;The image #%curr%&lt;/a&gt; could not be loaded.',
+ 			titleSrc: function(item) {
+ 				return item.el.attr('title');
+ 			}
+ 		}
+ 	});
+ });
+</code></pre>
+    </div>
+  </li>
+  <li>Last, but not least, be sure to link the magnific popup css sheet that comes in the files you downloaded with the plugin, in the head of your html file. Othewrise your lightbox may look a little undressed.</li>
+</ol>
+
+<h2 id="more-plugins">More Plugins!</h2>
+
+<p>Why don’t you go ahead and try another plugin!</p>
+
+<ul>
+  <li><a href="https://jqueryui.com/">jQuery UI</a></li>
+  <li><a href="https://plugins.jquery.com/">The jQuery Plugin Registry</a></li>
+  <li><a href="http://www.woothemes.com/flexslider/">Flexslider</a> (photo slider)</li>
+  <li><a href="http://flickity.metafizzy.co/">Flickity</a> (another photo slider)</li>
+  <li><a href="http://fitvidsjs.com/">Fitvidsjs</a> (fluid width video embeds, makes your youtube videos resize properly and create great video backgrounds)</li>
+</ul>
+
+<p><br />
+~ end ~</p>
+
+      </article>
+    </main>
+
+      <footer>
+    <a href="index.html">Home</a> / <a href="http://digitalskills.slack.com" target="_blank">Slack group</a>
+    <ul>
+      <li>Email: <a href="mailto:info@ladieslearningcode.com">info@ladieslearningcode.com</a></li>
+      <li>Twitter: <a href="https://twitter.com/learningcode">learningcode</a></li>
+      <li>Facebook: <a href="http://fb.com/ladieslearningcode">fb.com/ladieslearningcode</a></li>
+    </ul>
+    
+    <p>© 2011 - <span data-year></span> Ladies Learning Code</p>
+  </footer>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/global.js"></script>
+</body>
+</html>
+
+

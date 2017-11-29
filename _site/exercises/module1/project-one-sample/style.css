@@ -1,262 +1,104 @@
-/*color: #FF680D rgb(85,1, 101)
-/*color: #550165 rgb(255,104,13)*/
+/* GENERAL LAYOUT STYLES ============================== */
 
-/*font-family: 'Parisienne', cursive;*/
-/*font-family: 'Open Sans', sans-serif;*/
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
-input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
-
-.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-img {
-  max-width:100%;
-  height: auto;
-
+html {
+    box-sizing: border-box;
 }
 
-svg {
-	max-height: 100%;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-/*=====================STYLES BEING HERE==========================*/
-
-/*Change the typographical properties of your website in this section by targeting headings, paragraphs, etc... */
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	line-height: 1.5;
-}
-
-h1, h2 {
-	font-family: 'Parisienne', cursive;
-	color: #550165;
-	display: inline-block;
-	margin: 0;
+    color: #333;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
 }
 
 
+/* TYPOGRAPHY ============================== */
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
 h2 {
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-a {
-	text-decoration: none;
-	color: #550165;
-	font-weight: 600;
-}
-a:hover {
-	color: #FF680D;
-}
-
-blockquote {
-	font-size:24px;
-	padding-left: 0;
-	margin: 0;
-	font-weight: 300;
-	margin: 50px 0;
-
-}
-
-cite {
-	color: #FF680D;
-	display: block;
-	font-size: 16px;
-	font-weight: 600;
-	margin-top: 10px;
+    font-weight: bold;
 }
 
 
-.wrapper {
-	max-width: 960px;
-	margin: 0 auto;
+/* NAV ============================== */
+
+nav {
+    background: white;
+    ;
 }
-/*=========HEADER STYLES =====================*/
 
-header .wrapper{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+nav ul {
+    list-style-type: none;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+}
 
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #ffd202;
+}
+
+
+/* HEADER ============================== */
+
+header {
+    text-align: center;
+    background: #b1009a;
+    color: white;
+    padding: 100px;
 }
 
 header h1 {
-	font-size: 24px;
-}
-
-.logo {
-	width: 4%;
-	fill: #FF680D;
-	transform: rotate(180deg);
-	min-width: 25px;
-	position: relative;
-	top:5px;
-}
-
-nav {
-	text-align: right;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 
-nav ul {
-	padding: 0;
-	list-style-type: none;
-
-}
-
-ul.main-nav {
-  display:block;
-}
-nav li {
-	display: inline-block;
-}
-
-nav li a {
-	display: block;
-	padding: 5px;
-	color: #333;
-	font-weight: 300;
-}
-
-nav li a:hover {
-	color: #FF680D;
-}
-
-/*====================BANNER===================================*/
-.banner {
-	padding: 150px;
-	/*Change the banner image by changing the url below*/
-	background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: bottom right;
-}
-
-.banner h1 {
-	font-weight: 300;
-	color:white ;
-}
-
-/*=====================MAIN CONTENT============================*/
+/* ABOUT - SECTION ============================== */
 
 .about {
-	border-bottom: 1px solid #FF680D;
-	padding: 150px 0;
+    background: white;
+    text-align: center;
+    padding: 150px;
 }
 
-/*=====================SIDEBAR============================*/
-
-.aside {
-	padding: 100px 0;
-	display: flex;
-	justify-content: space-around;
-	font-size: 18px;
+.about p {
+    text-align: left;
 }
 
 
-.third {
-	width: 33%;
-	padding: 1%;
-
-}
-
-input {
-	display: block;
-	width: 100%;
-	padding: 10px;
-
-}
-
-input[type="submit"] {
-	background: #550165;
-	color: white;
-	outline: none;
-	border: none;
-}
-
-input[type="submit"]:hover {
-	background: #FF680D;
-}
-
-textarea {
-	display: block;
-	width: 100%;
-}
-
-form {
-	width: 50%;
-
-}
-/*=================FOOTER===========================*/
-/*Change the look of the footer by changing the background and font properties.*/
+/* FOOTER ============================== */
 
 footer {
-	padding: 1% 5%;
-	background: #550165;
-	color: white;
+    background: #b1009a;
+    text-align: center;
+    color: white;
+    padding: 50px;
 }
 
-/*===============RESPONSIVE STYLES==========================*/
-
-@media (max-width: 960px){
-	.wrapper {
-		padding: 1% 10%;
-	 }
-
-	 .third {
-	 	width: 100%;
-	 }
-
-	 header h1 {
-	 	font-size: 18px;
-	 }
+footer a {
+    text-decoration: none;
+    color: white;
 }
-
-@media (max-width: 780px) {
-	.aside {
-		display: block;
-	}
-}
-
-.hamburger, .close{
-  display: none;
-}
-
-@media (max-width: 650px){
-
-  .banner {
-    padding: 50px 0px;
-    background-image: url(http://ladieslearningcode.github.io/llc-digital-skills/exercises/module1/project-one-sample/images/strawberries.jpeg);
-    background-position: center;
-  }
-
-  .about {
-    padding: 50px 0px;
-  }
-  blockquote {
-    margin: 0;
-  }
-
-
-  .third {
-    padding-top: 50px;;
-  }
-  .third:last-child{
-    padding-bottom: 50px;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  /*HAMBURGER NAVIGATION GOES HERE:*/
-
-
-
-}
-

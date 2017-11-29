@@ -7,8 +7,8 @@
   <!-- This page is public but not meant to show up in search engine results -->
   <meta name="robots" content="noindex, nofollow">
 
-  <title>Search Engine Optimization</title>
-  <meta name="description" content="Tools for this class">
+  <title>CSS Layouts</title>
+  <meta name="description" content="Inline-block vs Flexbox">
   
   <!-- Syntax highlighting with highlightjs.org -->
   <script src="assets/js/highlight.pack.js"></script>
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v3">
 </head>
-<body class="module4-1">
+<body class="">
   <header>
     <a class="logo" href="index.html"><img src="assets/img/logo-llc-horizontal.svg" alt="Ladies Learning Code"></a>
     <h1>Digital Skills Program</h1>
@@ -37,281 +37,380 @@
       <nav role="navigation" class="table-of-contents" data-nav>
         <span data-collapse class="icon"></span>
         <h3>Module 4, Lesson 1</h3>
-        <h4>Search Engine Optimization</h4>
+        <h4>CSS Layouts</h4>
       </nav>
       
-      <article class="module4-1" >
-        <h1>Search Engine Optimization</h1>
-        <h2 id="tools-for-this-class">Tools for this class</h2>
+      <article>
+        <h1>CSS Layouts</h1>
+        <h2 id="inline-block-vs-flexbox">Inline-block vs Flexbox</h2>
 
-<p>Students will need to download and install</p>
-<ul>
-  <li><a href="https://www.screamingfrog.co.uk/seo-spider/">Screaming Frog</a> - it’s a free tool for SEO audits.</li>
-  <li>They will also need <a href="https://keywordseverywhere.com/">Keywords Everywhere</a> browser extension, also free. Once they install it, they will need to activate it by entering their email and receiving an API key.</li>
-</ul>
+<p>In previous lessons, we talk about inline &amp; block elements and how to use the <code class="highlighter-rouge">display</code> property to change the behavior and make elements line up side by side or stacked. Refer to the previous lesson’s <a href="http://codepen.io/learningcode/pen/vNRadg">Codepen</a> for a refresher.</p>
 
-<h2 id="what-is-seo">What is SEO?</h2>
+<p>The Flexible Box Layout Module has become more widely supported and used by developers, provided that they do not have to support Internet Explorer 10 and below.</p>
 
-<p>Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine’s unpaid results—often referred to as “natural,” “organic,” or “earned” results.</p>
+<p><img src="assets/img/module3/flexbox-support.png" alt="" /></p>
 
-<h2 id="why-spend-time-working-on-seo-for-your-website">Why spend time working on SEO for your website?</h2>
+<p>That being said, the <a href="http://caniuse.com/#search=flex">Browser Support</a> for Flexbox has certainly improved and will work on all modern browsers. If you need to support older browsers, then you would have to use <strong>floats</strong>.</p>
 
-<p>Gaining high positions in rankings for valuable keywords can provide you with consistent high-quality traffic that will result in visitors taking preferred action on your website.</p>
+<h2 id="lets-talk-about-floats">Let’s talk about Floats</h2>
 
-<h3 id="pros-of-seo">Pros of SEO:</h3>
-<ul>
-  <li>Consistent traffic flow</li>
-  <li>“Free” traffic</li>
-  <li>High conversion rates</li>
-</ul>
+<p>The CSS <code class="highlighter-rouge">float</code> property is another way to align elements side by side.</p>
 
-<h3 id="cons-of-seo">Cons of SEO:</h3>
-<ul>
-  <li>Initial time investment can be quite heavy</li>
-  <li>Volatile to search engine algorithm updates</li>
-  <li>Depending on the niche, can be quite competitive</li>
-</ul>
+<p>To get block level elements to line up side by side using floats, the stacking flow has to be <em>broken</em> first.</p>
 
-<h3 id="goals-of-the-website">Goals of the website:</h3>
-<ul>
-  <li>Sales (E-commerce)</li>
-  <li>Leads (Get a quote, Request a demo, Learn more)</li>
-  <li>Donations (NGOs, NPOs, Charities)</li>
-  <li>Advertising revenue (Blogs)</li>
-  <li>Partnerships (Getting involved, Volunteering, etc.)</li>
-  <li>Job (Personal portfolio &amp; resume website)</li>
-  <li>Brand awareness (Viral campaigns)</li>
-</ul>
+<p>Use the <code class="highlighter-rouge">float</code> property with a value of <code class="highlighter-rouge">left</code> or <code class="highlighter-rouge">right</code> to align an element to either side. Any element after the floated element will move up beside it.</p>
 
-<h2 id="how-do-we-know-that-seo-is-working">How do we know that SEO is working?</h2>
+<p><img src="assets/img/module3/float-recording.gif" alt="" /></p>
 
-<h3 id="seo-metrics">SEO Metrics:</h3>
+<p>But floating elements like this may have unexpected results.</p>
+
+<p><img src="assets/img/module3/float-unexpectedresults.png" alt="" /></p>
+
+<p>If your content is the same size or longer than the floated element (the left image in the above example), then you won’t see this problem.</p>
+
+<p>Adding content won’t fix the issue unfortunately. First, we had to break the stacking order and now we have to put it back together.</p>
+
+<p>To restore the regular stacking flow after the floated element, it needs to be reset. There are a couple ways to do it… but this is a concept that requires much more discussion outside of the scope for today. For more information, check out these extra resources:</p>
+
+<h3 id="float-resources">Float resources</h3>
 
 <ul>
-  <li>Rankings (aka SERP - Search Engine Ranking Position) - how high does the website appear in the search results for a particular keyword.
-    <ul>
-      <li>Example goal: Increase SERP from 12 to 5 for [keyword]
-<img src="assets/img/module4/seo-searchresult-analysis.png" alt="" /></li>
-    </ul>
-  </li>
-  <li>Organic Traffic - how many visits did the website get through organic search engine results. Use Google Analytics to track.
-    <ul>
-      <li>Example goal: Increase organic traffic to the site by 15% in 2017</li>
-    </ul>
-  </li>
+  <li><a href="https://code.tutsplus.com/tutorials/css-fundamentals-containing-children--net-5664">CSS Fundamentals: Containing Children</a></li>
+  <li><a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">Clearing Floats: An Overview of Different clearfix Methods</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/clear-fix/">Force Element To Self-Clear its Children</a></li>
 </ul>
 
-<p><img src="assets/img/module4/seo-analytics-report.png" alt="" /></p>
+<p>Also feel free to check out this <a href="http://codepen.io/learningcode/pen/gaedLj">Codepen</a> to see how floats work.</p>
 
-<ul>
-  <li>Conversions - how successful is the website at getting visitors to take action on the website. Use <a href="https://www.google.com/analytics/">Google Analytics</a> to track.
-    <ul>
-      <li>Example goal: Increase the conversion rate of the page by 0.5%</li>
-    </ul>
-  </li>
-</ul>
+<p><br /></p>
 
-<p><img src="assets/img/module4/seo-goal-completion.png" alt="" /></p>
+<p>Today we’re going to dive deeper into using <strong>display</strong> with both <strong>inline-block</strong> and <strong>flexbox</strong> to style a horizontal navigation menu.</p>
 
-<ul>
-  <li>Domain Authority - (DA) is a score developed by Moz that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high Domain authority score means your complete website / all the pages on your domain have the potential to rank well in search engine results. Use Moz Bar Extension to find.
-    <ul>
-      <li>Example goal: Increase DA from 29 to 35</li>
-    </ul>
-  </li>
-</ul>
+<h2 id="horizontal-navigation">Horizontal Navigation</h2>
 
-<h2 id="what-can-we-do-to-optimize-the-website">What can we do to optimize the website?</h2>
+<p>Traditionally, navigation links were contained in a list like this:</p>
 
-<ol>
-  <li>Technical SEO</li>
-  <li>Content &amp; Keywords</li>
-  <li>Authority Building</li>
-</ol>
+<h4 id="pre-html5">Pre-HTML5</h4>
 
-<h2 id="technical-seo">Technical SEO</h2>
-<ul>
-  <li>how to make sure search engines can access, “read” and evaluate your website.</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact Me&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
 
-<p>Since search engine robots (aka spiders, bots, crawlers) can’t see the website the way you or your visitors can, it’s important to ensure they can access your website and its contents, process them and be able to make a decision about what position you should rank for.</p>
+<h4 id="html5">HTML5</h4>
 
-<h3 id="how-can-we-do-so">How can we do so?</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact Me&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+</div>
 
-<ol>
-  <li>
-    <p>Sitemap - make sure you have one. Use <a href="https://www.google.com/webmasters/tools/">Google Search Console</a> or <a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin (WordPress)</a> to submit.</p>
-  </li>
-  <li>On-page elements - help search engines determine what your website is about. Use <a href="https://www.screamingfrog.co.uk/seo-spider">Screaming Frog SEO Spider</a> to perform SEO audit.
-    <ul>
-      <li>Title tags (<title>...</title>) - this is one of the first elements search engine bots will look at to determine what each page is about.
-        <ul>
-          <li>Make sure it includes your target keywords for that page.</li>
-          <li>There shouldn’t be pages with the same title tags.</li>
-          <li>None of the pages should be missing title tags.</li>
-        </ul>
-      </li>
-      <li>H1 tags - (&lt;h1&gt;…&lt;/h1&gt;) - similar to title tags, this is one of the first things bots check.
-        <ul>
-          <li>Make sure you include keywords that describe the page contents.</li>
-          <li>There shouldn’t be pages with the same h1 tags.</li>
-          <li>None of the pages should be missing title h1 tags.</li>
-          <li>There should only be one h1 tag on the page.</li>
-        </ul>
-      </li>
-      <li>URL structure - makes it easier for the bots to understand the hierarchy of your website.
-        <ul>
-          <li>Make sure you use subdomains and folders appropriately</li>
-          <li>Include keywords in urls</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p>Example URL: <a href="http://www.example.com/category-keyword/subcategory-keyword/primary-keyword">http://www.example.com/category-keyword/subcategory-keyword/primary-keyword</a></p>
-
-    <p><img src="assets/img/module4/seo-cheatsheet.jpg" alt="" /></p>
-
-    <ul>
-      <li>
-        <p>Word count - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.</p>
-      </li>
-      <li>
-        <p>Images - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.</p>
-        <ul>
-          <li>Make sure your alt tags include your targeted keywords</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Errors - The absence of errors show search engines that your website can be easily accessed by people</p>
-
-    <ul>
-      <li>3xx Issues (301, 302, etc. ) - Redirects. Use Screaming Frog to find them</li>
-      <li>4xx Issues (404 is the most common one) - Client error. Use Google Search Console or Screaming Frog to find them</li>
-      <li>5xx Issues (500, 502, etc.) – Server error. Use Google Search Console to find them.</li>
-      <li>Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on <a href="http://onlineownership.com/google-manual-action-google-wmt-explained/">Google Manual Actions.</a></li>
-    </ul>
-  </li>
-</ol>
-
-<blockquote>
-  <h2 id="technical-seo-exercise">Technical SEO Exercise:</h2>
-  <p>Visit the following websites and use Screaming Frog to fill out the <a href="https://docs.google.com/spreadsheets/d/11VFZxEqHV0i9MlQyHFvOHs01BWTzJ2TdWQ4CDoAzTpk/edit#gid=0">Technical SEO Audit spreadsheet:</a></p>
-
-  <ul>
-    <li><a href="http://www.tabbedout.com">www.tabbedout.com</a></li>
-    <li><a href="http://www.gsnh.com">www.gsnh.com</a></li>
-  </ul>
+<blockquote class="note">
+  <p>This is another topic where there is much debate. Are lists necessary for accessibility and semantics or should links be used on it’s own?  You can read more about it <a href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/">here</a> and <a href="http://www.sitepoint.com/are-navigation-lists-necessary/">here</a>.</p>
 </blockquote>
 
-<h2 id="content--keywords">Content &amp; Keywords</h2>
-<p>You want to structure your website’s content in a way that’s easy for search engines and people to navigate.</p>
+<p>To style a list navigation, first you’ll need to reset the list styles.  You’ll probably also want to remove the default underline of the links.</p>
 
-<h3 id="how-can-we-do-that">How can we do that?</h3>
+<p>Putting a background color on the <code class="highlighter-rouge">ul</code> will help to visually see the space the element is occupying.
+Using the HTML5 markup example above, the CSS will looks like this:</p>
 
-<ol>
-  <li>
-    <p>Keyword Research
-Before you start writing and publishing content you need to figure out what your target keywords are.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
+  text-decoration: none; /* remove default underline */
+}
+nav ul {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+  list-style-type: none; /* removes default bullets */
+  background: red;
+}
+</code></pre>
+</div>
 
-    <p>Find keywords that:</p>
+<p>Using <code class="highlighter-rouge">display</code>, there are two values that can be used to align the list items horizontally.</p>
 
-    <ul>
-      <li>Highly relevant to what you do - For example, if you are a bakery in Barrie, don’t pick “cake recipes” as your major keyword. “bakery barrie” will probably get you more relevant traffic and is not as competitive</li>
-      <li>Have search volume - ranking #1 for “bikes for pets” can be super relevant to what you do, however if nobody is searching for it, it doesn’t matter. Go for something like “dog bike basket” instead (3,600 monthly searches).</li>
-      <li>Have reasonable competition levels - usually, the more general your keywords are, the more web pages compete for them. For example, “risk management” will be much more competitive than “risk management software” or “risk management services”. Evaluate your website and decide what your chances are at competing for the keywords you’ve picked.</li>
-    </ul>
-  </li>
-  <li>
-    <p>Evaluate Competition
- Once you determined your keywords, enter them to search engines and see what results come up.</p>
+<p><code class="highlighter-rouge">inline</code> will line up side by side but does not accept height and width values.</p>
 
-    <ul>
-      <li>What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.</li>
-      <li>What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page.</li>
-      <li>What else do they rank for? Use tools like <a href="https://ahrefs.com/">Ahrefs</a> or <a href="https://www.semrush.com/">SEMrush</a> to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.</li>
-    </ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
+  display: inline;
+}
+</code></pre>
+</div>
 
-    <blockquote>
-      <h2 id="keyword-research-exercise">Keyword Research Exercise:</h2>
+<p><code class="highlighter-rouge">inline-block</code> will also display the items side by side but accepts height and width values.</p>
 
-      <p>Use your website as an example.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
+  display: inline-block; 
+} 
+</code></pre>
+</div>
 
-      <ol>
-        <li>Come up with 3 keywords that describe what your home page is about.</li>
-        <li>Use Keywords Everywhere to find search volume for those keywords</li>
-        <li>Pick the keyword with the highest search volume</li>
-        <li>Look at the websites that already rank for that keyword</li>
-        <li>Confirm that the keyword you’ve picked is relevant</li>
-        <li>Use <a href="http://serps.com/tools/keyword-research/">serps.com/tools/keyword-research/</a> to find other keywords that might be relevant</li>
-        <li>Choose 1 major keyword for the page and 1-2 secondary keywords</li>
-      </ol>
-    </blockquote>
-  </li>
-  <li>
-    <p>Content Creation
-Once you’ve identified your keywords it’s time to create content for your website. Depending on the type of website you’re building you will focus on different types of content.</p>
+<blockquote>
+  <p>Which one is better to use?</p>
+</blockquote>
 
-    <ul>
-      <li>Business website - You should focus on pages that you expect will bring you the most revenue. Usually, they are Product, Service or Location pages. Start with pages that tell others what you do.</li>
-      <li>Ecommerce website - Start with Product pages you expect will bring you the most revenue.</li>
-      <li>Blog - Start with those blog posts that you think will be the easiest to rank well for.</li>
-    </ul>
-  </li>
-</ol>
+<p>At this point, the nav will be aligned horizontally but could use some spacing.</p>
 
-<p>You can read more about the different types of content <a href="https://www.troyfawkes.com/advanced-seo-pareto-pages-content-classifications-market-demand/">here</a>.</p>
+<p><img src="assets/img/module3/horizontal-nav-no-padding.png" alt="" /></p>
 
-<h2 id="authority-building">Authority Building</h2>
+<p>Put some padding on the link, <code class="highlighter-rouge">a</code>, to make the links look less squished and improve accessibility by making the clickable area bigger.  Reminder, links are <em>inline</em> elements by default which doesn’t render padding properly.</p>
 
-<p>Show search engines that you’re considered to be an expert by others</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>nav a {
+  text-decoration: none;
+  display: inline-block; /* add block behavior to use padding */
+  padding: 10px;
+}
+</code></pre>
+</div>
 
-<p>To win at the SEO game you need to do some authority building aka “link building”. Essentially, you need others to link back to your website. Why? Because search engines track those links and think your website is more valuable the more people link to you.</p>
+<blockquote>
+  <p>Use this <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> to explore these styles before moving on.</p>
+</blockquote>
 
-<h3 id="a-few-rules">A few rules:</h3>
-<ol>
-  <li>Partner up with websites that have a high DA - the higher the DA of a website is the more link value it can pass to you.</li>
-  <li>Make sure the links you get are “do follow” links meaning that they are setup to pass value and not keep it. More on “do follow” vs “no follow” links <a href="http://www.wordstream.com/blog/ws/2013/07/24/follow-nofollow-links">here</a>.</li>
-  <li>DO NOT get involved in spammy link building schemes such as cloaking, hidden text, blog networks, etc. If you do, most likely you will get a manual penalty from search engines that will prevent your website from ranking at all for a very long time.</li>
-  <li>DO plan and execute link building campaigns that build long-term partnerships. Examples of link building tactics: Influencer Marketing Campaigns, Directories, Digital PR. For a very long list and very good list of link building activities check here.</li>
-</ol>
+<h3 id="getting-to-know-your-options">Getting to know your options</h3>
+<p>If you put a background color on the list item, you’ll see an extra space between the elements.  Here’s the quirk!</p>
 
-<h2 id="next-steps">Next Steps:</h2>
-<p>If you wish to learn more about SEO, here are some resources you will find useful:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
+  display: inline-block; 
+  background: lightblue;
+}
+</code></pre>
+</div>
 
-<h3 id="seo-resources---guides">SEO Resources - guides</h3>
+<p><img src="assets/img/module3/horizontal-nav-display.png" alt="" /></p>
+
+<p>The extra space is caused by the line break in the HTML used to put the <code class="highlighter-rouge">&lt;li&gt;</code> on separate lines.</p>
+
+<p>If you use <code class="highlighter-rouge">display:flex;</code> on the <strong>ul</strong> instead, you won’t see this quirk. More on that soon!</p>
+
+<!-- But, float has it's own quirks too. What happened to the red background in the `ul`? -->
+
+<p>Let’s tackle the <code class="highlighter-rouge">display:inline-block;</code> example first.</p>
+
+<h2 id="horizontal-navigation-using-inline-block">Horizontal navigation using inline-block</h2>
+
+<p>If your design does not require equal width “boxes” or you don’t mind the space, visually, then leaving this as is would work just fine.  You can even add <code class="highlighter-rouge">text-align: center;</code> to automatically center align the list items containing the links.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+  text-align: center;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/horizontal-nav-centered.png" alt="" /></p>
+
+<p>Let’s say you wanted 4 equal width boxes for the nav.  You could set the list items to a width of 25%.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul li {
+  background: lightblue;
+  width: 25%;
+}
+</code></pre>
+</div>
+
+<p>However, the space between the <code class="highlighter-rouge">&lt;li&gt;</code> tags are taking up space so the boxes won’t fit in one line.
+<img src="assets/img/module3/horizontal-nav-spaces.jpg" alt="" /></p>
+
+<p>You could be sneaky and set the width to something slightly less than 25% or use a negative margin to nudge the elements a few pixels to the left. These options will work and get close to 100% total width but to truly remove the space, here’s another fix.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+  font-size: 0; /* removes space between li elements */
+}
+nav ul li {
+  font-size: 16px; /* reset the inherited font-size */
+}
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Let’s go back to the previous <a href="http://codepen.io/learningcode/pen/meLJMZ">Codepen</a> and try this out.</p>
+</blockquote>
+
+<h2 id="horizontal-navigation-using-flexbox">Horizontal navigation using flexbox</h2>
+
+<p>With the introduction of <strong>flexbox</strong>, styling a horizontal navigation is made much easier. To ensure the list items are all sitting next to each other, simply add <code class="highlighter-rouge">display: flex;</code> to the <code class="highlighter-rouge">&lt;ul&gt;</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-flex.png" alt="" />
+<br /><br /></p>
+
+<p>What if you want to center your links in the middle of your nav? 
+<br />Enter: <code class="highlighter-rouge">justify-content</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: center;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-center.png" alt="" />
+<br /><br /></p>
+
+<p>The CSS property <code class="highlighter-rouge">justify-content</code> is super powerful. Let’s say you want to align your nav on the right:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-end.png" alt="" />
+<br /><br /></p>
+
+<p>On the left:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: flex-start;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-start.png" alt="" />
+<br /><br /></p>
+
+<p>Okay that’s kinda boring. We could’ve used text-align on the <code class="highlighter-rouge">&lt;nav&gt;</code> to achieve that too, right? Well - can <code class="highlighter-rouge">text-align</code> do this?!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-space-between.png" alt="" />
+(P.S. the answer is no - <code class="highlighter-rouge">text-align</code> can’t do that)
+<br /><br /></p>
+
+<p>What if you don’t want your links to go all the way to the edge? Let’s say you want equal space around all the link items…</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+</code></pre>
+</div>
+
+<p><img src="assets/img/module3/flexbox-nav-space-around.png" alt="" /></p>
+
+<!-- When you use float to align elements, there is no extra white space to worry about. But, remember, float has it's own quirks too.  The parent of the floated elements collapse, which can cause problems too. 
+
+Suppose you had some content after the navigation?  It will look like this:
+
+<p data-height="175" data-theme-id="0" data-slug-hash="qOYbYX" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/qOYbYX/'>Horizontal nav & floats</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+No worries, just remember to clear your floats! Since this example requires all the list items to float, you'll need to *self-clear* the floated elements.
+
+    nav ul {
+      overflow: hidden;
+    }
+    
+(You can also use the "clearfix hack" instead of `overflow`.)
+
+With float, you could set equal widths without adding additional hacks. The below snippet will work just fine.
+
+    nav ul li {
+      width: 25%;
+    }
+
+However, `text-align: center;` will only center align the text *within* the `<li>` tags, not automatically center align the list items itself, like in the `display` example.
+
+>Let's try these techniques out in this [CodePen](http://codepen.io/learningcode/pen/qOYbYX?editors=110#0).
+ -->
+
+<blockquote>
+  <h2 id="exercise-horizontal-navigation-on-your-project">EXERCISE: Horizontal navigation on your project</h2>
+
+  <p>Now open up your own project file and try styling the list navigation using <code class="highlighter-rouge">flexbox</code>. If you don’t have a navigation on your own website, create one!</p>
+
+  <p>Use some of the layout techniques we’ve learned the last couple of classes and apply them to your website as needed.</p>
+</blockquote>
+
+<p>These are just some benefits to using <code class="highlighter-rouge">flexbox</code> to lay out your site, and we’ve only just scratched the surface. Using <code class="highlighter-rouge">flexbox</code>, you can alter the <strong>order</strong> in which items appear, and much more. This becomes even more powerful when re-arranging your desktop site for mobile devices.d</p>
+
+<h3 id="read-more-about-flexbox">Read more about Flexbox!</h3>
 
 <ul>
-  <li>
-    <p>The Beginner’s Guide to SEO
-<a href="https://moz.com/beginners-guide-to-seo">https://moz.com/beginners-guide-to-seo</a></p>
-  </li>
-  <li>
-    <p>Google Search Engine Optimization Starter Guide
-<a href="http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf">http://static.googleusercontent.com/media/</a></p>
-  </li>
-  <li>
-    <p>The Advanced Guide to SEO
-<a href="https://www.quicksprout.com/the-advanced-guide-to-seo/">https://www.quicksprout.com/the-advanced-guide-to-seo/</a></p>
-  </li>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks - Guide to Flexbox</a></li>
+  <li><a href="http://jonibologna.com/flexbox-cheatsheet/">Joni Bologna - Flexbox Cheatsheet</a></li>
+  <li><a href="http://flexbox.io/">What the Flexbox?! - Free 20-video course on CSS Flexbox</a></li>
+  <li><a href="http://tympanus.net/codrops/css_reference/flexbox/">Flexbox Reference (Codrops)</a></li>
 </ul>
 
-<h3 id="seo-resources---blogs">SEO Resources - blogs</h3>
+<p><br />
+Remember, every HTML element is essentially just a “box” so the techniques discussed above are not limited to just navigations using a list.</p>
+
+<h2 id="css-position-property">CSS Position property</h2>
+<p>The <code class="highlighter-rouge">position</code> property can also be used to lay out HTML elements and has five different values: <code class="highlighter-rouge">static</code>, <code class="highlighter-rouge">relative</code>, <code class="highlighter-rouge">absolute</code>, <code class="highlighter-rouge">fixed</code> and <code class="highlighter-rouge">inherit</code>.</p>
+
+<p><code class="highlighter-rouge">position</code> is also used with a combination of box <em>offset properties</em>, <code class="highlighter-rouge">top</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">bottom</code> and <code class="highlighter-rouge">left</code>, to specify the direction and measurements for the positioned elements.</p>
+
+<h3 id="position-static">position: static;</h3>
 
 <ul>
-  <li><a href="https://moz.com/blog">https://moz.com/blog</a></li>
-  <li><a href="http://searchengineland.com/">http://searchengineland.com/</a> - SEO/Digtial Marketing news</li>
-  <li><a href="https://www.searchenginejournal.com/">https://www.searchenginejournal.com/</a>- SEO/Digtial Marketing news</li>
-  <li><a href="https://inbound.org/">https://inbound.org/</a> - a community of digital marketers sharing articles and asking questions. Good if you don’t have much time but want to see what’s happening in the industry overall</li>
-  <li><a href="http://www.seobook.com/blog">http://www.seobook.com/blog</a>- SEO/Digtial Marketing news</li>
-  <li><a href="https://ahrefs.com/blog/">https://ahrefs.com/blog/</a> - ahrefs is one of the tools mentioned above. They have a pretty good blog section with some high quality content</li>
-  <li><a href="http://backlinko.com/blog">http://backlinko.com/blog</a> - really good actionable SEO content</li>
-  <li><a href="http://pointblankseo.com/link-building-strategies">http://pointblankseo.com/link-building-strategies</a> - a huge collection of link building strategies mentioned above</li>
-  <li><a href="http://www.annielytics.com/blog/">http://www.annielytics.com/blog/</a> - Blog about analytics which goes hand in hand with SEO</li>
+  <li>default value</li>
+  <li>elements are not positioned at all and in the normal page flow</li>
+  <li>offset properties are ignored</li>
 </ul>
 
-<p><strong>Content created by <a href="https://twitter.com/katyabovykina?lang=en">Katya Bovykina</a></strong></p>
+<h3 id="position-relative">position: relative;</h3>
+
+<ul>
+  <li>has the same behavior as <code class="highlighter-rouge">static</code> <strong>but</strong> box offset properties can be applied to it</li>
+  <li>use this to nudge the element within its stacked order</li>
+</ul>
+
+<h3 id="position-absolute">position: absolute;</h3>
+
+<ul>
+  <li>can be positioned anywhere, relative to its <strong>nearest positioned ancestor</strong> element</li>
+  <li>if no ancestor element is positioned, it will be relative to the body</li>
+  <li>to contain the element, use <code class="highlighter-rouge">position: relative</code> in a parent selector</li>
+</ul>
+
+<h3 id="position-fixed">position: fixed;</h3>
+
+<ul>
+  <li>positioned anywhere regardless of stacking order</li>
+  <li>not affected by any positioned ancestor element</li>
+  <li>always positioned to the body</li>
+  <li>stays in place when you scroll</li>
+</ul>
+
+<h3 id="position-inherit">position: inherit;</h3>
+
+<ul>
+  <li>takes the same value as its parent</li>
+</ul>
+
+<blockquote>
+  <p>Let’s try these values in <a href="http://codepen.io/learningcode/pen/PPedPQ">CodePen</a>.</p>
+</blockquote>
+
+<h3 id="extra-resource">Extra resource</h3>
+
+<p><a href="https://css-tricks.com/almanac/properties/p/position/">https://css-tricks.com/almanac/properties/p/position/</a></p>
+
+<p>~ End ~</p>
+
 
       </article>
     </main>
