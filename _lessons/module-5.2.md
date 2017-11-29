@@ -155,7 +155,7 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
 
 >## Exercise: Let's Create A Form for Our Website!
 >
->Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. [Here's an example](exercises/module1/project-one-sample/contact.html) of a form you could build.
+>Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. You can either add a form to your existing index.html file in a section, or create a new html document. e.g. contact.html. If you decide to create a new html document, make sure to copy over the head, nav, footer and anything else from the home page you want to keep on the about page.   <a href="exercises/module5/project-one-final.zip" download>Here's a copy of the finished first project</a>d if you don't want to add the form to your own work.](exercises/module5/project-one-final/contact.html) of a form you could build.
 >
 >This is the HTML for the example site's form: 
 >
@@ -165,7 +165,7 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
         <label for="email">E-mail Address</label>
         <input name="lead-email" type="email" id="email"/>
         <label for="explain">Explain why you are getting in touch.</label>
-        <textarea name="lead-message" id="explain"></textarea>
+        <textarea name="lead-message" id="explain"></textarea>d
         <input class="button" type="submit" value="Submit">
     </form>
 >

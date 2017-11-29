@@ -585,7 +585,7 @@ There is another very powerful file we can add to theme and it's called the Func
 [Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
 
 
-## Sidebars and Widgets
+## Bonus: Sidebars and Widgets
 
 Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We'll be converting our current sidebar into a dynamic WP sidebar.
 
@@ -613,7 +613,7 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 >        <?php dynamic_sidebar(); ?>
 
 
-## Featured Images
+## Bonus: Featured Images
 
 We can add featured image functionality to our pages and posts by adding the following to our functions file: 
 
@@ -621,7 +621,7 @@ We can add featured image functionality to our pages and posts by adding the fol
 
 Once you've done that, go back into your home page and add a featured image. It will show up on the right hand side.
 
-> ##Class Exercise: Adding a featured image to a page
+> ## Bonus Class Exercise: Adding a featured image to a page
 >
 > We can add featured images anywhere inside the loop in various default sizes: 
 
@@ -633,7 +633,7 @@ Once you've done that, go back into your home page and add a featured image. It 
 
 > Try adding it to one of your template files. for example your custom `page-about.php` file. 
 
-## Plugins
+## Bonus Plugins
 
 
 Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`. 

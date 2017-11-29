@@ -5,8 +5,16 @@ lesson: 1
 title: Domains, Hosting & FTP
 description: How to make your website live.
 permalink: module8.html
-class: module7
+class: module8
 ---
+
+## Choose Your Own Adventure! 
+
+With the remaining time left together we're giving you an opportunity to own your experience today as much as possible. In this document we have added some crucial information for you to be able to publish your websites when you're ready. 
+
+For today, it's your job to continue working on your own website and ask mentors and the instructor any questions you may have about any part of the material that you didn't understand. 
+
+If everything's clear, read ahead to some bonus material that may be of interest. 
 
 ## Local development vs live websites
 
@@ -37,7 +45,7 @@ First, remember that WordPress websites have the theme files and overall WordPre
 
 Here's how to remove them from c9.io. 
 
-> ## Class Code-Along: Accessing your files on Cloud 9
+> ## Bonus Exercise: Accessing your files on Cloud 9
 > ### Getting the database
 >
 >To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases. 
