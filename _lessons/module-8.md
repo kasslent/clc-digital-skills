@@ -2,8 +2,8 @@
 layout: lessons
 module: 8
 lesson: 1
-title: Domains, Hosting & FTP
-description: How to make your website live.
+title: Free Hack Time, Domains, Hosting & FTP
+description: Choose Your Own Adventure
 permalink: module8.html
 class: module8
 ---

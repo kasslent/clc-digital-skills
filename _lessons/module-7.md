@@ -1,6 +1,6 @@
 ---
 layout: lessons
-module: 6
+module: 7
 lesson: 1
 title: Intro to CMS & WordPress
 description: Intro to content management systems and WordPress.
