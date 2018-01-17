@@ -4,7 +4,7 @@ module: 7
 lesson: 1
 title: Intro to CMS & WordPress
 description: Intro to content management systems and WordPress.
-permalink: module6-1.html
+permalink: module7-1.html
 ---
 
 ## Blogs, Websites and CMS
