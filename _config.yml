@@ -28,3 +28,4 @@ js-global: assets/js/global.js # global JS file
 js-syntax: assets/js/highlight.pack.js # syntax highlighter JS
 js-waypoints: assets/js/jquery.waypoints.min.js # Waypoints library
 img: assets/img # path to image folder
+theme: jekyll-theme-cayman
