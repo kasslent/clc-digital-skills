@@ -561,7 +561,7 @@ There is another very powerful file we can add to theme and it's called the Func
 >        register_nav_menus(
 >        array(
 >         'primary-menu' => __( 'Header Menu' ),
->         'extra-menu' => __( 'Extra Menu' )d
+>         'extra-menu' => __( 'Extra Menu' )
 >        )
 >        );
 >            }
