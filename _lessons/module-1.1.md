@@ -680,7 +680,7 @@ When using an image or an icon, in addition to using the `alt` attribute, you ca
 
 More about `alt`, `title` and SEO (search engine optimization) [here](http://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/).
 
->## EXERCISE: Our First Na
+>## EXERCISE: Our First Nav
 >
 >Back in **index.html**, let's create our first navigation. Since we only have one page, we'll be linking our navigation anchors to their corresponding section on our website. 
 >
