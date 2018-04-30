@@ -152,7 +152,7 @@ This is a far deeper use of code than we've done so far. This is the first time 
 ### Module 6
 For this section on WordPress themes, students will take their existing website and convert it into a wordpress theme. They will also add a blog to their site if they so choose. They'll have opportunities to continue with advanced bonus topics on plugins, widgets, etc... 
 
-This class uses Cloud9 [c9.io](http://c9.io) to run a local WP installation in the cloud. it's the fastest way to get a custom WP installation up and running. To acces Cloud9 they will need an e-mail invitation from the CLC Account. Please contact [jessica.duarte@canadalearningcode.ca](mailto:jessica.duarte@canadalearningcode.ca) to have your students added to the platform. 
+This class uses Cloud9 [c9.io](http://c9.io) to run a local WP installation in the cloud. it's the fastest way to get a custom WP installation up and running. To acces Cloud9 they will need an e-mail invitation from the CLC Account. Please email [content@canadalearningcode.ca](mailto:content@canadalearningcode.ca) **at least two weeks in advance** to have your students added to the platform. 
 
 ### Module 7
 All notes in this module are optional. There is not supposed to be a lecture here but instructors are welcome to review material based on popular demand. If the WP content isn't finished from the previous class, you may finish it at the start of this class. With the remainder, give students lots of time to ask questions of mentors and keep working on their projects. 
