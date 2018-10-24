@@ -70,7 +70,7 @@ The `.org` version can be customized in any way but requires more technical know
 ## Communicating with WordPress: Servers and Files
 ![]({{site.img}}/module6/wpservers-01.svg)
 
-A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Cloud9 (c9.io).
+A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Code Anywhere.
 
 How does WP work with a server?
 
@@ -82,7 +82,7 @@ How does WP work with a server?
 
 <p style="text-align: left;">4. We visit the website and our server shows us the website according to what our theme files have requested it show us.</p>
 #### Resources
-* [WPBeginner: 
+* [WPBeginner:
 How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
 * [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
 *Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).
@@ -96,33 +96,41 @@ These are the steps we normally take to set up a WordPress website:
 1. We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).
 1. We connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
 
-That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Cloud9. C9 will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
+That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Code Anywhere. This will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
 
-## WordPress and Cloud9
+## WordPress and Code Anywhere
 
-Cloud9 is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others, and for learning. 
+Code Anywhere is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others, and for learning.
 
-Cloud9(c9.io) is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.
+Code Anywhere is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.
 
-### Let's set up c9.io!
+### Let's set it up!
 
-1. Go to your e-mail and find the link invitation that was sent to you to register for c9. Though c9 is free, they still require you to use a credit card on their site. The link we e-mailed you prevents you from needing to enter your credit card info. 
+1. Go to [https://codeanywhere.com/pricing](https://codeanywhere.com/pricing) and sign up for a free account
 
-![]({{site.img}}/module6/c9-welcome-email.png)
+![]({{site.img}}/module6/codeanywhere-1.png)
 
+1. Set your username and password
 
-1. Once there, please register for your account indicating that you are a student. 
-![]({{site.img}}/module6/c9-create-account-student.png)
-1. Once you're in, you'll have access to your main dashboard. On the left, a menu will allow you switch from your personal dashboard, to the class dashboard showcasing all the projects made by other students. 
-1. In the horizontal top navigation, click on the plus sign on the right hand side. 
-1. Now we will fill out our site's information and select WordPress as our type of project.
-![]({{site.img}}/module6/c9-spin-up-wp.gif)
+1. Log into your email to verify the account
+
+![]({{site.img}}/module6/codeanywhere-2.png)
+
+1. Go back to Code Anywhere and set up your site: Choose the name, Select Wordpress (either CentOS or Ubuntu work)
+
 1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
-1. Click on "Run Project" to start the server. ![]({{site.img}}/module6/c9-run-project.png)
-1. Next, you'll notice in the console at the bottom of the page, that the words "Starting Apache" come up followed by a link to a long URL. This URL is the link to your website. Go ahead and click on it. 
-1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after. 
-1. Log into your dashboard. 
 
+1. Scroll down to find your website URL. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
+
+![]({{site.img}}/module6/codeanywhere-3.png)
+
+1. Go to this URL and follow the steps to set up your Wordpress account
+
+1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after.
+
+1. Log into your dashboard.
+
+/* I am here */
 
 
 ### WordPress Settings
@@ -173,9 +181,9 @@ When using the **Visual** editor, the content entered automatically gets convert
 
 ### WordPress and HTML
 
-You can also edit or add your own HTML by selecting the **Text** editor tab. 
+You can also edit or add your own HTML by selecting the **Text** editor tab.
 
-In WordPress, you don't need to add the `<p>` tags in either the visual or text editor. In the **Visual** editor, select the paragraph option from the dropdown. 
+In WordPress, you don't need to add the `<p>` tags in either the visual or text editor. In the **Visual** editor, select the paragraph option from the dropdown.
 
 ![]({{site.img}}/module6/editor-visual-p.png)
 
@@ -214,19 +222,19 @@ Just like categories, tags can be added from the menu or when editing a post. Bu
 > 1. Create a couple of random blog posts in the Posts section. Don't dwell too much on the content. [Dummy text](http://meettheipsums.com) is fine for now.
 > 1. Add some categories and tags to your posts.  
 > 1. Create a page for each of your project's pages. In the example project that would be three pages: Home, About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
-> 1. Go to Settings>Reading and set the Home page as your home page and the Blog page as your blog page. 
-> Having content to work with will make it easier to work with our theme files. 
+> 1. Go to Settings>Reading and set the Home page as your home page and the Blog page as your blog page.
+> Having content to work with will make it easier to work with our theme files.
 
 
 ## The Guts of WordPress
 
-Now that we've poked around a bit in the dashboard, let's go deeper and take a look at the files back in c9.
+Now that we've poked around a bit in the dashboard, let's go deeper and take a look at the files back in Code Anywhere.
 
 At first glance, it's overwhelming to see how many folders and files WP needs to run. But on closer look, we'll be ignoring the majority of the files which just make up the core of WP. The files we'll use are in the wp-content folder.
 
 Inside of wp-content there is a folder named themes. That'll be our most used folder.
 
-Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, c9 is doing all that database work for us.
+Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, Code Anywhere is doing all that database work for us.
 
 ### What is a theme?
 
@@ -244,14 +252,14 @@ Currently there are three default themes inside the themes folder. These always 
 Under Appearance>Themes we can see how these default themes look and even test them out on our website.
 But today we're not interested in a default theme. We want to build our very own.
 
-
-1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip). 
-1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then go to `File>Upload Local Files` and find your folder. 
+/* I am here next */
+1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip).
+1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then go to `File>Upload Local Files` and find your folder.
 ![]({{site.img}}/module6/c9-upload-theme-folder.gif)
 1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project's css file:
 
         /*
-        Theme Name: Twenty 
+        Theme Name: Twenty
         Theme URI: http://wordpress.org/themes/twentythirteen
         Author: the WordPress team
         Author URI: http://wordpress.org/
@@ -262,7 +270,7 @@ But today we're not interested in a default theme. We want to build our very own
         Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-widcustom-header,              custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-potranslation-ready
         Text Domain: twentythirteen
         This theme, like WordPress, is licensed under the GPL.
-        Use it to make something cool, have fun, and share what you've learned with others. 
+        Use it to make something cool, have fun, and share what you've learned with others.
         */
 
 1. The next thing we must do is rename index.html to index.php (right click on file to rename in c9)
@@ -274,7 +282,7 @@ How does it look?
 
 This is because our stylesheet link is no longer working. It's looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic html project from this morning.
 
-WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder. 
+WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder.
 To fix this issue, we could write a really long path to the stylesheet. Let's try it.
 Replace our href in the stylesheet link with :
 
@@ -300,11 +308,11 @@ Template Tags are written in PHP
 
 Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will yell at you.
 The template tags we put in between these PHP brackets vary.
-Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core. 
+Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core.
 
-In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember `alert();` in JavaScript or ![]({{site.img}}/module5/scratch-builtin.png) in Scratch? WordPress Template Tags are exactly the same. 
+In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember `alert();` in JavaScript or ![]({{site.img}}/module5/scratch-builtin.png) in Scratch? WordPress Template Tags are exactly the same.
 
-Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example 
+Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example
 
     <?php bloginfo(); ?>
 
@@ -332,7 +340,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
     4. <?php echo get_stylesheet_uri(); ?>
 >
 >
-> In the end, our header should be looking like this: 
+> In the end, our header should be looking like this:
 >
     <html <?php language_attributes(); ?>>
     <head>
@@ -342,9 +350,9 @@ We use template tags anytime we want to ask WordPress for content of any kind th
      <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     </head>
 >
-> Notice how much cleaner it is to add the stylesheet using the `get_stylesheet_uri` template tag? 
+> Notice how much cleaner it is to add the stylesheet using the `get_stylesheet_uri` template tag?
 
-### Resources 
+### Resources
 
 [https://developer.wordpress.org/reference/functions/bloginfo/](https://developer.wordpress.org/reference/functions/bloginfo/)
 
@@ -360,16 +368,16 @@ In PHP it looks like this:
     	<!-- content goes here -->
     <?php endwhile; else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif; ?> 
+	<?php endif; ?>
 
 You've seen a statement like this beforehand. Do you remember this guy?
 
 ![]({{site.img}}/module6/c9_scratch_conditional.png)
 
 We need to add our loop to our index.php page
-So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page? 
+So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page?
 
-We'll put it after the banner, and before the horizontal sidebar. 
+We'll put it after the banner, and before the horizontal sidebar.
 
 
 ### The Content
@@ -382,27 +390,27 @@ Specifically, we'll be using the following template tags:
     <?php the_title(); ?>
 
 > ### Exercise: Add your template tags
-> 
-> Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through? 
+>
+> Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through?
 
-Yay! We're communicating with WP now. 
+Yay! We're communicating with WP now.
 
 ## Template Files
 
-We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking. 
+We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.
 
-It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it. 
+It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it.
 
-> Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website? 
+> Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?
 
-> ### Class Exercise: 
-> 1. Create 4 new files in your theme folder: 
+> ### Class Exercise:
+> 1. Create 4 new files in your theme folder:
 	- header.php
 	- footer.php
-	- sidebar.php 
+	- sidebar.php
 	- page.php
 > 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
-> 
+>
 > #### index.php should now look like this:
 >
 >	    <main>
@@ -419,11 +427,11 @@ It also enables us to put code that we need more than once, in its own file so t
 >	    	</section>
 >	    	<?php endwhile; else : ?>
 >	    		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
->	    	<?php endif; ?> 
+>	    	<?php endif; ?>
 >	    </main>
 >
 >
-> #### header.php should look like this: 
+> #### header.php should look like this:
 >
 >		    <!DOCTYPE html>
 >		    <html <?php language_attributes(); ?>>
@@ -451,8 +459,8 @@ It also enables us to put code that we need more than once, in its own file so t
 >		    		</div>
 >		    	</header>
 >
-> ####  sidebar.php should look like this: 
-> 
+> ####  sidebar.php should look like this:
+>
 >		    <aside>
 >		    	<div class="wrapper aside">
 >		    		<div class="third">
@@ -477,7 +485,7 @@ It also enables us to put code that we need more than once, in its own file so t
 >		    	</div>
 >		    </aside>
 >
-> #### footer.php should look like this: 
+> #### footer.php should look like this:
 >
 >	    	<footer>
 >	    		<div class="wrapper">
@@ -487,7 +495,7 @@ It also enables us to put code that we need more than once, in its own file so t
 >	    </body>
 >	    </html>
 >
-> 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template. 
+> 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.
 > 1. Then into index.php and page.php we'll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();
 >
 > #### index.php should look like this.
@@ -513,32 +521,32 @@ It also enables us to put code that we need more than once, in its own file so t
 >	    	    </main>
 <?php get_footer();?>
 >
-> 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following: 
+> 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following:
 >
 >	1. Create a special template file for the About page. Call it **page-about.php**.
->	1. In page-about.php, write the following 
+>	1. In page-about.php, write the following
 >
 		    <?php /* Template Name: About */ ?>
 >
 >
-> 1. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner. 
+> 1. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner.
 > 1. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
 
 > ## Bonus: Tweaking the blog
-> You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php. 
-> This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out: 
+> You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php.
+> This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out:
 > 		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
 >		    <?php the_author(); ?> This one will print out the author of your posts.
 >
 >		    <?php the_category(); ?> This one will print out the categories for a blog post
->		    <?php the_tags(); ?> This one will print out the tags for a blog post. 
+>		    <?php the_tags(); ?> This one will print out the tags for a blog post.
 >
 >		    <?php the_date(); ?> This will print out the date published.
 >
 >		    <?php the_excerpt(); ?> This will print out a truncated part of the body of the blog post.
-> 
-> Play around with these in index.php for better customization of your blog feed. 
-> Also, consider creating a **single.php** template to control the way your single view of each blog post looks like. 
+>
+> Play around with these in index.php for better customization of your blog feed.
+> Also, consider creating a **single.php** template to control the way your single view of each blog post looks like.
 
 
 ### Resources
@@ -552,10 +560,10 @@ So you could call it a day right now. There's your theme. Great job! You've buil
 There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
 
 > ### Class Exercise
-> 
-> 1. In your own custom theme folder, create a  new file named `functions.php`. 
-> 1. Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard. 
-> 
+>
+> 1. In your own custom theme folder, create a  new file named `functions.php`.
+> 1. Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard.
+>
 >         <?php
 >           function register_my_menus() {
 >        register_nav_menus(
@@ -576,9 +584,9 @@ There is another very powerful file we can add to theme and it's called the Func
     <?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
 
 >
->Refresh your page and now you should have a perfectly working Navigation again. 
+>Refresh your page and now you should have a perfectly working Navigation again.
 >
->**Bonus:** WordPress gives menu items of the currently visited page, the class of *current_page_item*. You can style it differently. 
+>**Bonus:** WordPress gives menu items of the currently visited page, the class of *current_page_item*. You can style it differently.
 
 ### Resources
 
@@ -607,15 +615,15 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 >      }
 >      add_action( 'widgets_init', 'themename_widgets_init' );
 >
-> 2. Go to Appearance>Widgets and add 3 widgets to your sidebar. **Tip:** If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed. 
-> 3. Delete all the elements with the class of `third` inside your aside element in page.php and replace them with: 
+> 2. Go to Appearance>Widgets and add 3 widgets to your sidebar. **Tip:** If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed.
+> 3. Delete all the elements with the class of `third` inside your aside element in page.php and replace them with:
 >
 >        <?php dynamic_sidebar(); ?>
 
 
 ## Bonus: Featured Images
 
-We can add featured image functionality to our pages and posts by adding the following to our functions file: 
+We can add featured image functionality to our pages and posts by adding the following to our functions file:
 
     <?php add_theme_support( 'post-thumbnails' ); ?>
 
@@ -623,7 +631,7 @@ Once you've done that, go back into your home page and add a featured image. It 
 
 > ## Bonus Class Exercise: Adding a featured image to a page
 >
-> We can add featured images anywhere inside the loop in various default sizes: 
+> We can add featured images anywhere inside the loop in various default sizes:
 
     the_post_thumbnail(); // Without parameter ->; Thumbnail
     the_post_thumbnail( 'thumbnail' ); // Thumbnail (default 150px x 150px max)
@@ -631,12 +639,12 @@ Once you've done that, go back into your home page and add a featured image. It 
     the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
     the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 
-> Try adding it to one of your template files. for example your custom `page-about.php` file. 
+> Try adding it to one of your template files. for example your custom `page-about.php` file.
 
 ## Bonus Plugins
 
 
-Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`. 
+Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`.
 
 Popular plugins include:
 
@@ -648,40 +656,40 @@ And there are many many more...
 Today we are going to work with Jetpack.
 > Exercise: Installing a plugin.
 >1. Let's get over to Plugins in the Dashboard and find Jetpack to install.
->1. Click Add New inside of the Plugins area. 
-> 1. Jetpack should should up on the main page of the Add plugins page because it's one of the most popular plugins out there. You'll see this: 
+>1. Click Add New inside of the Plugins area.
+> 1. Jetpack should should up on the main page of the Add plugins page because it's one of the most popular plugins out there. You'll see this:
 >
 > ![]({{site.img}}/module6/wp-jetpack.png)
-> 
+>
 > Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it's compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you'll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It's also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).
-> 
-> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. And definitely don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website. 
-> 1. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate. 
-> 1. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums. 
-> 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog. 
-> 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out. 
+>
+> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. And definitely don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website.
+> 1. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate.
+> 1. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums.
+> 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog.
+> 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out.
 
-> ## Bonus Exercise: Swap out your form with a JetPack form. 
-> Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions. 
+> ## Bonus Exercise: Swap out your form with a JetPack form.
+> Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions.
 
 > ## Bonus Exercise: Add a carousel with Jetpack to your posts or pages
-> Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available. 
+> Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available.
 
 > ## Bonus Exercise: Enabling Social Media sharing for your posts
-> JetPack makes it really easy for your visitors to share your posts on social media. 
-> 1. Head over to Jetpack>Settings from the side navigation in the Dashboard. 
-> 1. Click on Engagement. 
-> 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it. 
-> 1. Set up your sharing buttons under the `Sharing Buttons` section. 
-> There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin. 
+> JetPack makes it really easy for your visitors to share your posts on social media.
+> 1. Head over to Jetpack>Settings from the side navigation in the Dashboard.
+> 1. Click on Engagement.
+> 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it.
+> 1. Set up your sharing buttons under the `Sharing Buttons` section.
+> There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin.
 
 ## More WordPress
 
 We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
 
-It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class. 
+It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.
 
-Other topics for later include: 
+Other topics for later include:
 
 ### Advanced Subjects in WordPress to Look Forward To
 
@@ -693,7 +701,7 @@ And more...
                                                                                                                                                                                                                                                                                   2
 ### WordPress Community
 
-If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout: 
+If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:
 
 [http://make.wordpress.org](http://make.wordpress.org)
 
