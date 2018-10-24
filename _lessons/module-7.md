@@ -107,27 +107,16 @@ Code Anywhere is referred to as an Integrated Development Environment(IDE). The 
 ### Let's set it up!
 
 1. Go to [https://codeanywhere.com/pricing](https://codeanywhere.com/pricing) and sign up for a free account
-
 ![]({{site.img}}/module6/codeanywhere-1.png)
-
 1. Set your username and password
-
 1. Log into your email to verify the account
-
 ![]({{site.img}}/module6/codeanywhere-2.png)
-
 1. Go back to Code Anywhere and set up your site: Choose the name, Select Wordpress (either CentOS or Ubuntu work)
-
-1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
-
-1. Scroll down to find your website URL. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
-
 ![]({{site.img}}/module6/codeanywhere-3.png)
-
+1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
+1. Scroll down to find your website URL. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
 1. Go to this URL and follow the steps to set up your Wordpress account
-
 1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after.
-
 1. Log into your dashboard.
 
 /* I am here */
