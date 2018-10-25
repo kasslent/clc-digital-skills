@@ -8,23 +8,23 @@ permalink: module8.html
 class: module8
 ---
 
-## Choose Your Own Adventure! 
+## Choose Your Own Adventure!
 
-With the remaining time left together we're giving you an opportunity to own your experience today as much as possible. In this document we have added some crucial information for you to be able to publish your websites when you're ready. 
+With the remaining time left together we're giving you an opportunity to own your experience today as much as possible. In this document we have added some crucial information for you to be able to publish your websites when you're ready.
 
-For today, it's your job to continue working on your own website and ask mentors and the instructor any questions you may have about any part of the material that you didn't understand. 
+For today, it's your job to continue working on your own website and ask mentors and the instructor any questions you may have about any part of the material that you didn't understand.
 
-If everything's clear, read ahead to some bonus material that may be of interest. 
+If everything's clear, read ahead to some bonus material that may be of interest.
 
 ## Local development vs live websites
 
 Developing your website *locally* just means working on your files on your computer. You're the only person who can see the website until you move it to a *web host*.
 
-Websites are basically just a bunch of files (HTML pages, images, css files, etc) in a folder. To put that website online and make it *live*, you will need to move your *local* folders to a *server*. 
+Websites are basically just a bunch of files (HTML pages, images, css files, etc) in a folder. To put that website online and make it *live*, you will need to move your *local* folders to a *server*.
 
 ### What is a server?
 
-A server is a like a computer, but they never turn off and are always connected to the internet. *Hosts* own many different servers and are responsible for server maintenance to ensure that all the websites running on that server are always available. 
+A server is a like a computer, but they never turn off and are always connected to the internet. *Hosts* own many different servers and are responsible for server maintenance to ensure that all the websites running on that server are always available.
 
 ## Moving files to a server
 
@@ -37,34 +37,32 @@ You'll need 3 things:
 * an FTP client - software/app to upload files to the server
 
 
-## Removing your files from c9.io
+## Removing your files from Code Anywhere
 
-Before we explore the subject of moving files more, let's see how we can remove our files from Cloud9 to be able to move them. 
+Before we explore the subject of moving files more, let's see how we can remove our files from Code Anywhere to be able to move them.
 
-First, remember that WordPress websites have the theme files and overall WordPress core files to deal with AND a database file. To launch a WordPress website on your own server you'll need both of these. 
+First, remember that WordPress websites have the theme files and overall WordPress core files to deal with AND a database file. To launch a WordPress website on your own server you'll need both of these.
 
-Here's how to remove them from c9.io. 
+Here's how to remove them from Code Anywhere.
 
-> ## Bonus Exercise: Accessing your files on Cloud 9
+> ## Bonus Exercise: Accessing your files on Code Anywhere
 > ### Getting the database
 >
->To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases. 
-> 
-> 1. Open up a terminal: Watch this video of how: 
-> ![]({{site.img}}/module7/c9-opening-terminal.gif)
+>To grab our database file which contains all of our settings and actual pages and posts content in the website, we need to access a program called phpMyAdmin. This is a graphical user interface that makes it easy to interact with MySQL databases.
 >
-> 1. Enter the following in the terminal.
-> 
->		    phpmyadmin-ctl install
+> 1. Find your phpMyAdmin URL. Looks like: https://name-of-site-yourname804076.codeanyapp.com/phpmyadmin
+> ![]({{site.img}}/module7/codeanywhere-php.png)
 >
-> You will see a url generated to access your phpMyAdmin dashboard where you'll download the database.
-> You'll select the database c9 on the sidebar and the go to "Export" to download the database for your website.
-> Follow the instructions in this gif: 
-
-> ![]({{site.img}}/module7/downloading-database-from-c9.gif)
-> 
-> 1. Once you're done downloading the database, go back to c9, select your entire project folder, right click on it and select download. 
-> You will use the files and the database to upload them to a hosting service/server. 
+> 1. Log in with `root` (leave password blank)
+>
+> You'll select the `wordpress` database on the sidebar and the go to "Export" to download the database for your website.
+> Follow the instructions in this gif:
+> Select `custom` > `zipped` compression > `Go`
+>
+> ![]({{site.img}}/module7/myphp-export.gif)
+>
+> 1. Once you're done downloading the database, go back to Code Anywhere, select your entire project folder, right click on it and select download.
+> You will use the files and the database to upload them to a hosting service/server.
 > ### Resources
 Watch this awesome video walkthrough of [how to launch a wordpress website](http://wesbos.com/migrate-wordpress/) by Wes Bos:
 
@@ -83,25 +81,25 @@ There are many hosting and domain companies to choose from. Here are a few:
 * [Compare Hosting](http://www.whoishostingthis.com/compare/)
 * [The Best Web Hosting Services for 2016](http://www.pcmag.com/article2/0,2817,2424725,00.asp)
 
-Read more about keeping hosting and domains separate [here](http://ladieslearningcode.com/getting-hosted-domains-with-hover/). 
+Read more about keeping hosting and domains separate [here](http://ladieslearningcode.com/getting-hosted-domains-with-hover/).
 
 
 ## Domains & Hover
 Setting up a domain name will be slightly different based on which option you choose because it depends on that service providers website interface.  To set up a domain with [Hover](Hover.com/learningcode), follow the instructions below.
 
-### Step 1: 
+### Step 1:
 Visit [hover.com](http://hover.com) and select **Find a domain** and enter your desired domain name into the search box.
 
 ![]({{site.img}}/module7/1-search-domain.png)
 
-### Step 2: 
+### Step 2:
 A list of available domain name extensions will show as well as suggestions for similar names.  This is useful if your desired domain name is already taken.
 
 Select an option and add to cart.
 
 ![]({{site.img}}/module7/2-domain-options.gif)
 
-### Step 3: 
+### Step 3:
 Optional email customizations
 
 **Mail Forwards**  
@@ -114,12 +112,12 @@ You can always add this option later. See full details [here](https://www.hover.
 
 ![]({{site.img}}/module7/3-cart-email-options.png)
 
-### Step 4: 
+### Step 4:
 Create an account & add your WHOIS registration info.
 
 **What is a registration record?**
 
-When registering a domain name, the Internet Corporation for Assigned Names and Numbers (ICANN) requires your contact information for the WHOIS database which is publicly available using a WHOIS search tool. 
+When registering a domain name, the Internet Corporation for Assigned Names and Numbers (ICANN) requires your contact information for the WHOIS database which is publicly available using a WHOIS search tool.
 
 Hover (and most other domain registrars) offer a privacy option, automatic with Hover's domain registration (see previous screenshot, the privacy option is automatically checked).  
 
@@ -131,8 +129,8 @@ More info [here](https://help.hover.com/entries/21196313-Domain-WHOIS-Privacy).
 ![]({{site.img}}/module7/5-whois-info.png)
 
 
-### Step 5: 
-Add your billing info. 
+### Step 5:
+Add your billing info.
 
 To add another domain name, log into your new account, choose the **Add New** option and follow the same steps.
 
@@ -201,29 +199,29 @@ Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/developme
 
 >## Final Class exercise: launching your website on github
 > Github is a wonderful platform that enables developers to share code and collaborate on it. It also enables anyone to host a website for free if it's just a plain HTML & CSS website. Let's try doing it with our plain websites, without the WP parts we worked on. Those will need more work anyhow before we can launch them:
-> 1. Go to [http://github.io](http://github.io) and create an account or sign in. 
-> 1. Create a new repo: 
+> 1. Go to [http://github.io](http://github.io) and create an account or sign in.
+> 1. Create a new repo:
 >
 > ![]({{site.img}}/module7/github-repo.gif)
-> 1. Fill in your repo info and initialize it with a Read Me. 
+> 1. Fill in your repo info and initialize it with a Read Me.
 > 1. Select "Upload Files"
 > 1. From your Finder or File Explorer drag and drop the index.html, css folder, js folder and any images for your website into the uploader.
 > 1. Write a commit message such as "Added files" and submit your commit message.(Commit messages help you keep track of when you make file changes in github).
 > 1. Go into the settings of your repository and enable Github Pages.
-> 1. Go to your-username.github.io/your-repo-name and you should see your site! 
+> 1. Go to your-username.github.io/your-repo-name and you should see your site!
 
 ## Resources
 To set up your custom domain with github pages [read here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
 
 Here's another more effective way of managing your website on Github if you want to keep making changes and uploading them. In fact, this is a better way in the long run: [Sharing your website on Github](https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5)
 
-Deploying websites can be tricky at first. It's always good to find a buddy to help you through it if it's your first time. In some Chapters Ladies Learning Code hosts free "Coffee & Code" sessions. This is exactly the kind of thing you can get help with there. 
+Deploying websites can be tricky at first. It's always good to find a buddy to help you through it if it's your first time. In some Chapters Ladies Learning Code hosts free "Coffee & Code" sessions. This is exactly the kind of thing you can get help with there.
 
-Most importantly, don't stop coding and have fun! 
+Most importantly, don't stop coding and have fun!
 
 ## Resources
 
-For more advanced training, there are numerous institutions in Toronto that run in-person classes: 
+For more advanced training, there are numerous institutions in Toronto that run in-person classes:
 1. [HackerYou](http://hackeryou.com)
 1. [Bitmaker Labs](http://bitmaker.co)
 1. [Lighthouse Labs](http://lighthouselabs.com)
@@ -232,11 +230,8 @@ For more advanced training, there are numerous institutions in Toronto that run 
 1. Maker Spaces: For example, [SteamLabs](steamlabs.ca)
 1. [Dames Making Games](https://dmg.to/)
 
-For free online training: 
+For free online training:
 
 1. [Free Code Camp](http://freecodecamp.com)
 1. [Lynda](http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEDB0187&R=EDB0187) This is free through Toronto Libraries
 1. [Glitch](http://glitch.com)
-
-
-
