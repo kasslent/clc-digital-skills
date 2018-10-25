@@ -53,17 +53,13 @@ Here's how to remove them from Code Anywhere.
 > 1. Find your phpMyAdmin URL. Looks like: https://name-of-site-yourname804076.codeanyapp.com/phpmyadmin
 > ![]({{site.img}}/module7/codeanywhere-php.png)
 >
-> 1. Log in with `root` (leave password blank)
->
+> 1. Log in with **root** (leave password blank)
 > ![]({{site.img}}/module7/phpmyadmin.png)
->
-> You'll select the `wordpress` database on the sidebar and the go to "Export" to download the database for your website.
-> Select `custom`
->
+> You'll select the **wordpress** database on the sidebar, then go to **Export** to download the database for your website.
+> Select **custom**.
 > ![]({{site.img}}/module7/myphp-export1.png)
 >
-> Select `zipped` compression > `Go`
->
+> Select **zipped** compression > **Go**:
 > ![]({{site.img}}/module7/myphp-export2.png)
 >
 > 1. Once you're done downloading the database, go back to Code Anywhere, select your entire project folder, right click on it and select download.
