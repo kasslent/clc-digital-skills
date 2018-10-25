@@ -55,7 +55,8 @@ Here's how to remove them from Code Anywhere.
 >
 > 1. Log in with **root** (leave password blank)
 > ![]({{site.img}}/module7/phpmyadmin.png)
-> You'll select the **wordpress** database on the sidebar, then go to **Export** to download the database for your website.
+>
+> 1. You'll select the **wordpress** database on the sidebar, then go to **Export** to download the database for your website.
 > Select **custom**.
 > ![]({{site.img}}/module7/myphp-export1.png)
 >
