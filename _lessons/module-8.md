@@ -60,10 +60,10 @@ Here's how to remove them from Code Anywhere.
 > Select **custom**.
 > ![]({{site.img}}/module7/myphp-export1.png)
 >
-> Select **zipped** compression > **Go**:
+> 1. Select **zipped** compression > **Go**:
 > ![]({{site.img}}/module7/myphp-export2.png)
 >
-> 1. Once you're done downloading the database, go back to Code Anywhere, select your entire project folder, right click on it and select download.
+> 1. Once you're finished downloading the database, go back to Code Anywhere, select your entire project folder, right click on it and select download.
 > You will use the files and the database to upload them to a hosting service/server.
 > ### Resources
 Watch this awesome video walkthrough of [how to launch a wordpress website](http://wesbos.com/migrate-wordpress/) by Wes Bos:
