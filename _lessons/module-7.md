@@ -85,7 +85,7 @@ How does WP work with a server?
 * [WPBeginner:
 How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
 * [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
-*Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).
+*Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).*
 
 
 ### Setting up our WordPress coding environment
@@ -120,7 +120,7 @@ Code Anywhere is referred to as an Integrated Development Environment(IDE). The 
 1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after.
 1. Log into your dashboard.
 
-/* I am here */
+> To access your site at any time, add **/wp-admin** behind your url. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-admin
 
 
 ### WordPress Settings
@@ -242,10 +242,9 @@ Currently there are three default themes inside the themes folder. These always 
 Under Appearance>Themes we can see how these default themes look and even test them out on our website.
 But today we're not interested in a default theme. We want to build our very own.
 
-/* I am here next */
 1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip).
-1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then go to `File>Upload Local Files` and find your folder.
-![]({{site.img}}/module6/c9-upload-theme-folder.gif)
+1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then right-click > `upload` and drag your folder over.
+![]({{site.img}}/module6/codeanywhere-upload.gif)
 1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project's css file:
 
         /*
@@ -263,7 +262,7 @@ But today we're not interested in a default theme. We want to build our very own
         Use it to make something cool, have fun, and share what you've learned with others.
         */
 
-1. The next thing we must do is rename index.html to index.php (right click on file to rename in c9)
+1. The next thing we must do is rename index.html to index.php (right click on file to rename in Code Anywhere)
 1. Make sure to check under Appearance>Themes whether your own theme shows up! If it does, go ahead and activate it.
 How does it look?
 
@@ -317,7 +316,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 >
 >We will begin with the <head></head> of the HTML.
 >
->Open up your index.php file in c9. We'll be adding the following template tags to dynamically pull information from WP :
+>Open up your index.php file in Code Anywhere. We'll be adding the following template tags to dynamically pull information from WP :
 >
 >Where should these go?
 >
