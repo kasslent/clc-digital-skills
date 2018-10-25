@@ -55,11 +55,16 @@ Here's how to remove them from Code Anywhere.
 >
 > 1. Log in with `root` (leave password blank)
 >
-> You'll select the `wordpress` database on the sidebar and the go to "Export" to download the database for your website.
-> Follow the instructions in this gif:
-> Select `custom` > `zipped` compression > `Go`
+> ![]({{site.img}}/module7/phpmyadmin.png)
 >
-> ![]({{site.img}}/module7/myphp-export.gif)
+> You'll select the `wordpress` database on the sidebar and the go to "Export" to download the database for your website.
+> Select `custom`
+>
+> ![]({{site.img}}/module7/myphp-export1.png)
+>
+> Select `zipped` compression > `Go`
+>
+> ![]({{site.img}}/module7/myphp-export2.png)
 >
 > 1. Once you're done downloading the database, go back to Code Anywhere, select your entire project folder, right click on it and select download.
 > You will use the files and the database to upload them to a hosting service/server.
