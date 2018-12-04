@@ -10,7 +10,7 @@ permalink: module0.html
 
 Welcome to Ladies Learning Code's Digital Skills Program!
 
-Below are some tips and tricks to get you up and running and help with your work flow.
+Below are some tips and tricks to get you up and running and help with your work flow. Testing
 
 
 ## Web Browsers & Developer Tools
@@ -24,7 +24,7 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 * Option 1: Inspect
   * **right-click** OR **two-finger tap** OR **control + click** on any webpage
   * select **Inspect**
-* Option 2: Browser menu 
+* Option 2: Browser menu
   * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
   * select **More Tools > Developer Tools**
 * Option 3: Keyboard shortcut
@@ -37,8 +37,8 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 
 
 ### Extra resources
-  
-* [browsehappy.com](http://browsehappy.com) - more info about modern browsers. 
+
+* [browsehappy.com](http://browsehappy.com) - more info about modern browsers.
 * [http://discover-devtools.codeschool.com](http://discover-devtools.codeschool.com) - more about dev tools
 
 ## Text Editors
@@ -71,7 +71,7 @@ Under **Preferences**, there are many options for customizing your editor.
 
 #### Settings
 
-The Settings include general options for personalizing your editor. 
+The Settings include general options for personalizing your editor.
 
 ![atom settings]({{ site.img }}/module0/atom-settings.jpg)
 
@@ -98,14 +98,14 @@ Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) a
 
 
 ## Folders & directories
-Websites at its most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures. 
+Websites at its most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures.
 
 You will need to create/move/add/edit/delete a lot of folders and files so get in some practice to prepare you for the remainder of this course.
 
 
 ## Keyboard shortcuts
 
-Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. (Or bring an external mouse!) 
+Incorporating keyboard shortcuts will help improve efficiency but can also help to make working on a laptop easier, without the benefit of an external mouse. (Or bring an external mouse!)
 
 View the printable cheatsheet [here]({{ site.baseurl }}/assets/keyboard-shortcuts.pdf) to reference some commonly used shortcuts.
 
@@ -124,12 +124,12 @@ Some other useful general computer tricks:
 1. Copy and paste content from one file to another.  Try using shortcuts!
 1. Open any of the HTML files in your browser (there's no HTML code in it yet, this is just for workflow practice)
 1. Add/delete some text, save it and refresh your browser.  Try using shortcuts!
-1. Practice switching back and forth between the editor and browser. Try using shortcuts! 
+1. Practice switching back and forth between the editor and browser. Try using shortcuts!
 
 Finding a workflow that allows you to be organized and efficient lets you focus on learning to code rather than looking for files!
 
 
-## Using Slack 
+## Using Slack
 Slack can be used in the browser but there are also desktop and mobile apps. Download them [here](https://slack.com/apps).
 
 Some things to explore:
@@ -139,6 +139,3 @@ Some things to explore:
 - joining different rooms and private chats
 
 Take the tour [here](https://slack.com/is).
-
-
-
