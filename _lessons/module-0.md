@@ -10,8 +10,7 @@ permalink: module0.html
 
 Welcome to Ladies Learning Code's Digital Skills Program!
 
-Below are some tips and tricks to get you up and running and help with your work flow. Testing
-
+Below are some tips and tricks to get you up and running and help with your work flow.
 
 ## Web Browsers & Developer Tools
 

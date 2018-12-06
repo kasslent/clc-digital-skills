@@ -10,6 +10,18 @@ class: module8
 
 ## Choose Your Own Adventure!
 
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
 With the remaining time left together we're giving you an opportunity to own your experience today as much as possible. In this document we have added some crucial information for you to be able to publish your websites when you're ready.
 
 For today, it's your job to continue working on your own website and ask mentors and the instructor any questions you may have about any part of the material that you didn't understand.
