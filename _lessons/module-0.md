@@ -13,29 +13,30 @@ Welcome to Ladies Learning Code's Digital Skills Program!
 Below are some tips and tricks to get you up and running and help with your work flow.
 
 <details>
-<summary>
+<summary><h3>Web Browsers & Developer Tools</h3></summary>
 
-<h3>Web Browsers & Developer Tools</h3>
-</summary>
-
-<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).</p>
+<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a> and <a href="https://www.google.com/intl/en-CA/chrome/browser/" target="_blank">Google Chrome</a></p>
 
 <p>All examples going forward will be using Chrome.</p>
 
-<p>All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:</p>
+<p>All the modern browsers have built-in <strong>Developer tools</strong> that allow you to <em>inspect</em> any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:</p>
 
 <ul>
   <li>Option 1: Inspect
-    * **right-click** OR **two-finger tap** OR **control + click** on any webpage
-    * select **Inspect**
+    <ul>
+      <li><strong>right-click</strong> OR <strong>two-finger tap</strong> OR <strong>control + click</strong> on any webpage</li>
+      <li>select <strong>Inspect</strong></li>
+    </ul>
   </li>
   <li>Option 2: Browser menu
-    * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
-    * select **More Tools > Developer Tools**
+    <ul>
+    <li>Click the menu <span class="menu-icon"><img src="assets/img/module0/menu-icon.png" alt="menu icon"></span> icon</li>
+    <li>select <strong>More Tools > Developer Tools</strong></li>
   </li>
   <li>Option 3: Keyboard shortcut
-    * **CTRL + Shift + I** (PC)
-    * **CMD + Option + I** (Mac)
+    <ul>
+    <li><strong>CTRL + Shift + I</strong> (PC)</li>
+    <li><strong>CMD + Option + I</strong> (Mac)</li>
   </li>
 </ul>
 
