@@ -15,7 +15,7 @@ Below are some tips and tricks to get you up and running and help with your work
 <details>
 <summary><h3>Web Browsers & Developer Tools</h3></summary>
 
-<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a> and <a href="https://www.google.com/intl/en-CA/chrome/browser/" target="_blank">Google Chrome</a></p>
+<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> and <a target="_blank" href="https://www.google.com/intl/en-CA/chrome/browser/">Google Chrome</a></p>
 
 <p>All examples going forward will be using Chrome.</p>
 
@@ -30,13 +30,15 @@ Below are some tips and tricks to get you up and running and help with your work
   </li>
   <li>Option 2: Browser menu
     <ul>
-    <li>Click the menu <span class="menu-icon"><img src="assets/img/module0/menu-icon.png" alt="menu icon"></span> icon</li>
-    <li>select <strong>More Tools > Developer Tools</strong></li>
+      <li>Click the menu <span class="menu-icon"><img src="assets/img/module0/menu-icon.png" alt="menu icon"></span> icon</li>
+      <li>select <strong>More Tools > Developer Tools</strong></li>
+    </ul>
   </li>
   <li>Option 3: Keyboard shortcut
     <ul>
-    <li><strong>CTRL + Shift + I</strong> (PC)</li>
-    <li><strong>CMD + Option + I</strong> (Mac)</li>
+      <li><strong>CTRL + Shift + I</strong> (PC)</li>
+      <li><strong>CMD + Option + I</strong> (Mac)</li>
+    </ul>
   </li>
 </ul>
 
