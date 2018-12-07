@@ -15,31 +15,36 @@ Below are some tips and tricks to get you up and running and help with your work
 <details>
 <summary>
 
-### Web Browsers & Developer Tools
+<h3>Web Browsers & Developer Tools</h3>
 </summary>
-<p>
 
-Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
+<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).</p>
 
-All examples going forward will be using Chrome.
+<p>All examples going forward will be using Chrome.</p>
 
-All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:
+<p>All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:</p>
 
-* Option 1: Inspect
-  * **right-click** OR **two-finger tap** OR **control + click** on any webpage
-  * select **Inspect**
-* Option 2: Browser menu
-  * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
-  * select **More Tools > Developer Tools**
-* Option 3: Keyboard shortcut
-  * **CTRL + Shift + I** (PC)
-  * **CMD + Option + I** (Mac)
+<ul>
+  <li>Option 1: Inspect
+    * **right-click** OR **two-finger tap** OR **control + click** on any webpage
+    * select **Inspect**
+  </li>
+  <li>Option 2: Browser menu
+    * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
+    * select **More Tools > Developer Tools**
+  </li>
+  <li>Option 3: Keyboard shortcut
+    * **CTRL + Shift + I** (PC)
+    * **CMD + Option + I** (Mac)
+  </li>
+</ul>
 
-> In your browser, open the dev tools and experiment!  
->
-> HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+<blockquote>
+  <p>In your browser, open the dev tools and experiment!</p>
 
-</p>
+  <p>HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.</p>
+</blockquote>
+
 </details>
 
 
