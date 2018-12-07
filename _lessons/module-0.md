@@ -12,7 +12,7 @@ Welcome to Ladies Learning Code's Digital Skills Program!
 
 Below are some tips and tricks to get you up and running and help with your work flow.
 
-## Web Browsers & Developer Tools
+<details><summary>Web Browsers & Developer Tools</summary>
 
 Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
 
@@ -33,6 +33,9 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 > In your browser, open the dev tools and experiment!  
 >
 > HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+</details>
+
+##
 
 
 ### Extra resources
