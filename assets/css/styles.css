@@ -77,6 +77,11 @@ ul, ol {
   ul ul, ul ol, ol ul, ol ol {
     margin-bottom: 15px; }
 
+details{
+  border: 2px solid #efefef;
+  padding: 0 20px;
+}
+
 .btn {
   color: #b109aa;
   border-radius: 4px;

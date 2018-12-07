@@ -48,13 +48,15 @@ Below are some tips and tricks to get you up and running and help with your work
   <p>HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.</p>
 </blockquote>
 
+<h3>Extra resources</h3>
+
+<ul>
+  <li><a href="http://browsehappy.com" target="_blank">browsehappy.com</a> - more info about modern browsers.</li>
+  <li><a href="http://discover-devtools.codeschool.com" target="_blank">discover-devtools.codeschool.com</a> - more about dev tools</li>
+</ul>
+
 </details>
 
-
-### Extra resources
-
-* [browsehappy.com](http://browsehappy.com) - more info about modern browsers.
-* [http://discover-devtools.codeschool.com](http://discover-devtools.codeschool.com) - more about dev tools
 
 ## Text Editors
 
