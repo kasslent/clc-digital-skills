@@ -19,6 +19,11 @@ collections:
     output: true
     permalink: lessons/:path/
 
+kramdown:
+  # instruct kramdown to parse inside html block elements
+  # like p, header, lists, ...
+  parse_block_html: true
+
 
 #File paths
 css-global: assets/css/styles.css # global CSS file
