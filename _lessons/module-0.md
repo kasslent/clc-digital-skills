@@ -12,51 +12,37 @@ Welcome to Ladies Learning Code's Digital Skills Program!
 
 Below are some tips and tricks to get you up and running and help with your work flow.
 
-<details>
-<summary><h3>Web Browsers & Developer Tools</h3></summary>
+<span class="summary">
+## Web Browsers & Developer Tools
+</span>
 
-<p>Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> and <a target="_blank" href="https://www.google.com/intl/en-CA/chrome/browser/">Google Chrome</a></p>
+<div class="details">
+Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
 
-<p>All examples going forward will be using Chrome.</p>
+All examples going forward will be using Chrome.
 
-<p>All the modern browsers have built-in <strong>Developer tools</strong> that allow you to <em>inspect</em> any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:</p>
+All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:
 
-<ul>
-  <li>Option 1: Inspect
-    <ul>
-      <li><strong>right-click</strong> OR <strong>two-finger tap</strong> OR <strong>control + click</strong> on any webpage</li>
-      <li>select <strong>Inspect</strong></li>
-    </ul>
-  </li>
-  <li>Option 2: Browser menu
-    <ul>
-      <li>Click the menu <span class="menu-icon"><img src="assets/img/module0/menu-icon.png" alt="menu icon"></span> icon</li>
-      <li>select <strong>More Tools > Developer Tools</strong></li>
-    </ul>
-  </li>
-  <li>Option 3: Keyboard shortcut
-    <ul>
-      <li><strong>CTRL + Shift + I</strong> (PC)</li>
-      <li><strong>CMD + Option + I</strong> (Mac)</li>
-    </ul>
-  </li>
-</ul>
+* Option 1: Inspect
+  * **right-click** OR **two-finger tap** OR **control + click** on any webpage
+  * select **Inspect**
+* Option 2: Browser menu
+  * Click the menu <span class="menu-icon">![]({{ site.img }}/module0/menu-icon.png)</span> icon
+  * select **More Tools > Developer Tools**
+* Option 3: Keyboard shortcut
+  * **CTRL + Shift + I** (PC)
+  * **CMD + Option + I** (Mac)
 
-<blockquote>
-  <p>In your browser, open the dev tools and experiment!</p>
+> In your browser, open the dev tools and experiment!  
+>
+> HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+</div>
 
-  <p>HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.</p>
-</blockquote>
 
-<h3>Extra resources</h3>
+### Extra resources
 
-<ul>
-  <li><a href="http://browsehappy.com" target="_blank">browsehappy.com</a> - more info about modern browsers.</li>
-  <li><a href="http://discover-devtools.codeschool.com" target="_blank">discover-devtools.codeschool.com</a> - more about dev tools</li>
-</ul>
-
-</details>
-
+* [browsehappy.com](http://browsehappy.com) - more info about modern browsers.
+* [http://discover-devtools.codeschool.com](http://discover-devtools.codeschool.com) - more about dev tools
 
 ## Text Editors
 
