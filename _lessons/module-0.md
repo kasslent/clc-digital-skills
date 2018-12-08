@@ -40,13 +40,12 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
 >
 > HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
 
-</div>
-
-
 ### Extra resources
 
 * [browsehappy.com](http://browsehappy.com) - more info about modern browsers.
-* [http://discover-devtools.codeschool.com](http://discover-devtools.codeschool.com) - more about dev tools
+* [pluralsight.com](https://www.pluralsight.com/search?q=chrome%20developer%20tools) - more about dev tools
+
+</div>
 
 ## Text Editors
 
@@ -64,31 +63,52 @@ Having a good text editor and learning how to use it to its full potential will 
 
 Here are some features to familiarize yourself with:
 
+<div class="summary">
+
 ### Columns
+
+</div>
+
+<div class="details">
 
 * adds multiple column views, within the editor to allow for side by side editing
 * called "panes" in Atom  
   * `View > Panes > Split Up/Down/Left/Right`
 
+</div>
+
 
 ### Preferences
 Under **Preferences**, there are many options for customizing your editor.
+
+(On Windows, go to File > Settings)
 
 ![atom preferences]({{ site.img }}/module0/atom-preferences.jpg)
 
 #### Settings
 
-The Settings include general options for personalizing your editor.
+The Settings tab will show by default with a list of setting types on the left.
 
 ![atom settings]({{ site.img }}/module0/atom-settings.jpg)
 
-A recommended setting is to enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
+From that left menu, select *Editor* and scroll down to the Soft Wrap option.
+
+We recommend you enable **Soft Wrap** &mdash; to wrap lines that exceed the width of the window.
+You can also enable **Show Indent Guide** to help visualize the nesting of HTML tags.
+
+<div class="summary">
 
 #### Packages
+
+</div>
+
+<div class="details">
 
 Packages are tools that can be added to include even more features!
 
 ![atom install packages]({{ site.img }}/module0/atom-install-packages.jpg)
+
+[Autosave On Change](https://atom.io/packages/autosave-onchange) is really helpful to optimize your workflow. While making changes to your code, you will have to continuously save your changes as you go along. When you're first learning how to code, it's a common mistake to forget to save your changes before you try to preview them. This package will help you bypass that process!
 
 [Emmet](http://docs.emmet.io/abbreviations/syntax/) is a great package to install, once you gain some basic understanding of HTML & CSS. This package will help write HTML & CSS faster with some super handy shortcuts!
 
@@ -103,6 +123,7 @@ Checkout the [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) a
 * [Themes](https://atom.io/themes) for Atom
 * [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
 
+</div>
 
 ## Folders & directories
 Websites at its most basic, are just a bunch of files linked together. Because of this (and just for general organization) it's important to understand folder and files structures.
@@ -137,7 +158,9 @@ Finding a workflow that allows you to be organized and efficient lets you focus 
 
 
 ## Using Slack
-Slack can be used in the browser but there are also desktop and mobile apps. Download them [here](https://slack.com/apps).
+We will be using Slack to communicate with each other throughout the course. You can send messages directly to your fellow learners, share resources, or to ask a mentor for help.
+
+Slack can be used in the browser, but there are also [desktop and mobile apps](https://slack.com/apps).
 
 Some things to explore:
 
@@ -145,4 +168,4 @@ Some things to explore:
 - enabling/disabling notifications
 - joining different rooms and private chats
 
-Take the tour [here](https://slack.com/is).
+[Take the tour](https://slack.com/is).

@@ -79,7 +79,7 @@ ul, ol {
 
 /* for accordion controls */
 .summary {
-  display: inline-block;
+  display: block;
   border: 2px solid #efefef;
   padding: 0 20px;
 }
@@ -98,6 +98,8 @@ ul, ol {
 }
 .details{
   display: none;
+  border-left: 2px solid rgb(239, 239, 239);
+  padding-left: 20px;
 }
 
 .btn {
