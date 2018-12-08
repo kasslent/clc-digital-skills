@@ -12,11 +12,11 @@ Welcome to Ladies Learning Code's Digital Skills Program!
 
 Below are some tips and tricks to get you up and running and help with your work flow.
 
-<div class="summary" markdown=1>
+<span class="summary" markdown=1>
 
 ## Web Browsers & Developer Tools
 
-</div>
+</span>
 
 <div class="details" markdown=1>
 
