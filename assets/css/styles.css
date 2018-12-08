@@ -77,9 +77,27 @@ ul, ol {
   ul ul, ul ol, ol ul, ol ol {
     margin-bottom: 15px; }
 
-details{
+/* for accordion controls */
+.summary {
+  display: inline-block;
   border: 2px solid #efefef;
   padding: 0 20px;
+}
+.summary h2{
+  display: inline-block;
+  line-height: 1;
+}
+.summary:before{
+  content: "\2BC8";
+  color: #000;
+  line-height: normal;
+  vertical-align: text-top;
+}
+.summary.opened:before{
+  content: "\2BC6";
+}
+.details{
+  display: none;
 }
 
 .btn {
