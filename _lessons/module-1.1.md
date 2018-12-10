@@ -308,59 +308,39 @@ An important part of creating a web page is planning the page structure. Though 
 
 Get used to doing a lot of moving, deleting, changing and rewriting. This is the nature of programming!
 
-If you don't have a web design to work from, a simple hand sketch also works. Also, websites have many common elements. For example, here is a simple wireframe for a basic web page.
+If you don't have a web design to work from, a simple hand sketch also works. most websites share many common elements. Here is a simple wireframe for a basic web page:
 
 <img class="print-wireframe" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
 ### Grouping Elements
 
-Creating a page layout using structural HTML tags and often involves grouping related content together.
+Creating a page layout using structural HTML tags often involves grouping related content together.
 
-The `<div>` tag is one of two HTML tags that have no semantic meaning. (`<span>` is the other. More on this later.) It is used purely for grouping related elements to page components.
+### HTML5 Structural Elements
+
+HTML5 introduced new semantic tags to describe blocks of content such as `<header>`, `<footer>`, `<nav>`, `<section>` and [many more](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png).
 
 To create the page layout, the HTML could look something like this:
 
 <img class="grouping-elements print-hide" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
-    <div>
-      nav links here
-    </div>
+  <nav>
+    nav links here
+  </nav>
 
-    <div>
-      header content here
-    </div>
+  <header>
+    header content here
+  </header>
 
-    <div>
-      about content here
-    </div>
+  <section>
+    about content here
+  </section>
 
-    <div>
-      footer info here
-    </div>
+  <footer>
+    footer info here
+  </footer>
 
-
-<h3 class="clear">HTML5 Structural Elements</h3>
-
-HTML5 introduced new semantic tags to better describe blocks of content such as `<header>`, `<footer>`, `<nav>`, `<section>` and [many more](http://html5doctor.com/downloads/h5d-sectioning-flowchart.png).
-
-Using HTML5 tags, the previous example could look like this instead:
-
-    <nav>
-      nav links here
-    </nav>
-
-    <header>
-      header content here
-    </header>
-
-    <section>
-      about content here
-    </section>
-
-    <footer>
-      footer info here
-    </footer>
-
+A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements to page components.
 
 However, `<div>` can and is still often used, when no other HTML tag properly describes the content.
 

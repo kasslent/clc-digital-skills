@@ -83,7 +83,8 @@ ul, ol {
   border: 2px solid #efefef;
   padding: 0 20px;
 }
-.summary h2{
+.summary h2,
+.summary h3{
   display: inline-block;
   line-height: 1;
 }
