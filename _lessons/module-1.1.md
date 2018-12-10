@@ -324,25 +324,27 @@ To create the page layout, the HTML could look something like this:
 
 <img class="grouping-elements print-hide" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
-  <nav>
+<code>
+  &lt;nav&gt;
     nav links here
-  </nav>
+  &lt;/nav&gt;
 
-  <header>
+  &lt;header&gt;
     header content here
-  </header>
+  &lt;/header&gt;
 
-  <section>
+  &lt;section&gt;
     about content here
-  </section>
+  &lt;/section&gt;
 
-  <footer>
+  &lt;footer&gt;
     footer info here
-  </footer>
+  &lt;/footer&gt;
+</code>
 
-A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements to page components.
+A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements.
 
-However, `<div>` can and is still often used, when no other HTML tag properly describes the content.
+`<div>` can and are still often used when no other HTML tag properly describes the content.
 
 *Pro tip!*  
 When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structural tags for content it was not intended for.
