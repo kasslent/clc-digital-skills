@@ -340,7 +340,7 @@ To create the page layout, the HTML could look something like this:
       footer info here
     </footer>
 
-A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements.
+<p class="clear">A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements.</p>
 
 `<div>` can and are still often used when no other HTML tag properly describes the content.
 
