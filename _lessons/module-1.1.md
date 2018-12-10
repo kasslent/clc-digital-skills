@@ -324,23 +324,21 @@ To create the page layout, the HTML could look something like this:
 
 <img class="grouping-elements print-hide" src="{{ site.img }}/module1/wireframe-basic.jpg">
 
-<code>
-  &lt;nav&gt;
-    nav links here
-  &lt;/nav&gt;
+    <nav>
+      nav links here
+    </nav>
 
-  &lt;header&gt;
-    header content here
-  &lt;/header&gt;
+    <header>
+      header content here
+    </header>
 
-  &lt;section&gt;
-    about content here
-  &lt;/section&gt;
+    <section>
+      about content here
+    </section>
 
-  &lt;footer&gt;
-    footer info here
-  &lt;/footer&gt;
-</code>
+    <footer>
+      footer info here
+    </footer>
 
 A `<div>` tag is an HTML tags that has no semantic meaning. (`<span>` is another other. More on this later.) It is used purely for grouping related elements.
 
@@ -352,14 +350,15 @@ When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structur
 #### Extra Resources
 
 * [html5doctor.com](http://html5doctor.com)
-* [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf).
+* [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf)
+* [HTML5 Semantic elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
 >Look at a couple different websites and discuss how the page can be grouped into related components to display the content in a meaningful & semantic way. (e.g. Where is the nav? Is there a footer?)
 
 
 ## HTML Content Tags
 
-There are also many different HTML tags for displaying different types of content.  Here are some common tags.
+There are also many different HTML tags for displaying different types of content. Here are some common tags:
 
 ### Paragraphs
 Whether it's one sentence or more, each paragraph needs its own set of `<p></p>` tags.
@@ -373,12 +372,6 @@ Whether it's one sentence or more, each paragraph needs its own set of `<p></p>`
 There are six headings tags (different from the `<head>` tag) ranging from `<h1>` to `<h6>`. The different levels are used to describe the *hierarchy* of the page structure.
 
 Let's say you're writing an essay about apples.  How would describe the hierarchy of the main heading versus the subheadings for each section?
-
-Prior to the HTML5 rules, using only one `<h1>` was recommended per page.  With the introduction of HTML5 *sectioning* tags, each part of the document that uses a sectioning tag now gets its *own* outline.
-
-Let's look at how this hierarchy could be described using HTML and HTML5.
-
-**Pre-HTML5 Heading Outline:**
 
     <h1>Essay About Apples</h1>
 
@@ -403,36 +396,10 @@ Let's look at how this hierarchy could be described using HTML and HTML5.
       <p>Final paragraph.</p>
     </div>
 
-
-**HTML5 Heading Outline:**
-
-    <h1>Essay About Apples</h1>
-
-    <section>
-      <h1>Introduction</h1>
-      <p>There are many different types of apples...</p>
-    </section>
-
-    <section>
-      <h1>Apple varieties</h1>
-      <p>Paragraph. Culpa nihil voluptatem quae.</p>
-
-      <h2>Green apple varieties</h2>
-      <p>Paragraph. Culpa nihil voluptatem quae.</p>
-
-      <h2>Red apple varieties</h2>
-      <p>Paragraph. Culpa nihil voluptatem quae.</p>
-    </section>
-
-    <section>
-      <h1>Conclusion</h1>
-      <p>Final paragraph.</p>
-    </section>
-
-
 #### Extra resources
 
 Read more about headings and HTML5 [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) and [here](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
+According to Search Engine Optimization best practices, we should only have 1 `h1` tag per webpage.
 
 
 ### Lists
@@ -449,10 +416,12 @@ Ordered lists are used to list items in a specific order. Two elements are requi
       <li>Weigh and pay</il>
     </ol>
 
+>In CSS, we can [change this from appearing as a numbered list](https://www.w3schools.com/cssref/pr_list-style-type.asp). We can use letters a-z, roman numerals, and more.
+
 
 #### Unordered Lists
 
-Use unordered lists for list items that do not need to be order sequentially. The syntax is the same as ordered list but use the unordered list tag, `<ul>` instead.
+Use unordered lists for list items that do not need to be ordered sequentially. The syntax is the same as the ordered list, but use the unordered list tag `<ul>` instead.
 
     <ul>
       <li>Home</li>
@@ -461,9 +430,9 @@ Use unordered lists for list items that do not need to be order sequentially. Th
     </ul>
 
 ### Nesting Lists
-Lists can go inside of another list and must be nested inside of a list item `<li>`.
+A list can live inside of another list, and must be nested inside of a list item `<li>`.
 
-Ordered & unordered lists can also be mixed when nested. This is where indentation can really help visualize which list is nested.
+Ordered & unordered lists can also be mixed when nesting. This is where indentation can really help visualize which list is nested:
 
     <ul>
       <li>Home</li>
@@ -473,38 +442,29 @@ Ordered & unordered lists can also be mixed when nested. This is where indentati
           <li>Mains</li>
           <li>Desserts</li>
         </ul>
-      </li>
+      </li> <!-- close Recipes list item -->
       <li>Contact</li>
     </ul>
-
-
-
->## EXERCISE: Adding Content, part 1
->In your **index.html** file, practice writing HTML and get used to the syntax.  
->Add some headings, paragraphs and lists.
->
->Make sure to open & close the tags properly, use indentation to organize your code and build good habits!
 
 
 ## Italics, Bold & Semantics
 
 * `<em>` represents stress emphasis, i.e., something you would pronounce differently  
 * `<strong>` represents strong importance  
-* `<i>` represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
-* `<b>` stands for “stylistically offset” text, such as keywords
-
+* `<i>` no longer used for italics - please use `em` for that purpose instead. This now represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
+* `<b>` no longer used for bolding - please use `strong` for that purpose instead. This stands for “stylistically offset” text, such as keywords
 
 #### Older versions of HTML
 When XHTML was the latest version, `<b>` and `<i>` were *deprecated* since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.
 
 #### HTML5 - new rules
-In HTML5, the `<b>` and `<i>` tags were re-introduced but with a slightly different meaning, though `<em>` or `<strong>` is more commonly used.
+In HTML5, the `<b>` and `<i>` tags were re-introduced but with a slightly different meaning. `<em>` or `<strong>` are more commonly used.
 
-Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags.
+Because these tags are most often used for small chunks of inline text, they are usually nested inside of other text-based tags:
 
     <p>A paragraph with <strong>important</strong> text.</p>
 
-Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-element/).
+Read more about this on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-element/).
 
 ### sub, sup
 
@@ -514,10 +474,20 @@ Read more about it on [HTML5 Doctor](http://html5doctor.com/i-b-em-strong-elemen
 
 <p class="example">Pretend this word is trademarked<sup>TM</sup>!</p>
 
+    <p>H<sub>2</sub>0</p>
+
+<p class="example">H<sub>2</sub>0</p>
+
+>## EXERCISE: Adding Content, part 1
+>In your **index.html** file, practice writing HTML and get used to the syntax.  
+>Add some headings, paragraphs and lists.
+>
+>Make sure to open & close the tags properly, use indentation to organize your code and build good habits!
+
 
 ## Self-closing tags
 
-Self-closing tags don't format content. Instead they are used to embed objects onto the page; they *are* the content. Because of this, they do not require a closing tag.
+Self-closing tags don't indicate the meaning of content. They are used to embed objects onto the page; they *are* the content! Because of this, they do not require a closing tag.
 
 Two common self-closing tags are the line break (`<br>`) and horizontal rule (`<hr>`).
 
@@ -540,41 +510,41 @@ Prior to HTML5, self-closing tags had to include a forward slash like this:
     <br/>
     <hr/>
 
-Though this is still valid in HTML5, it is **no longer needed** but you may still see it in use.
+Though this is still valid in HTML5, the forward slash is **no longer needed**, but you may still see it in use.
 
 ## Images
 
-Images are another example of a self-closing tag. Images also **require** an attribute to provide additional info.
+Images are another example of a self-closing tag. Images also **requires** attributes to provide additional info.
 
-A `src` *attribute* is used to tell the browser the location of the image file.
+A `src` *attribute* is used to tell the browser the location of the image file:
 
     <img src="folder/filename.jpg">
 
-The `alt` attribute provides *alternative text* for visually impaired users, using screen readers or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility.
+The `alt` attribute provides *alternative text* for visually impaired users using screen readers, or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility:
 
     <img src="folder/filename.jpg" alt="short description of image">
 
 ### Image file types
 
-There are many different file types used for web. Use the format that maintains the best quality while reducing the file size.
+There are many different file types used for web. Use the format that maintains the best quality while reducing the file size:
 
 * **jpg** - used for photographs with lots of rich colours or gradients  
 * **png** - used for images with transparent or opaque backgrounds  
 * **gif** - used for images with minimal colour variation and of course, for animated gifs!
 * **svg** - used for 2D graphics and is scalable
   * based on XML and can be used as a image file or as HTML
-  * when included as HTML, CSS can be used to style the svg
-  * more about SVG [here](http://css-tricks.com/using-svg/)
+  * when included in the HTML, CSS can be used to style the svg (change the size or colour)
+  * [learn more about SVG here](http://css-tricks.com/using-svg/)
 
 
 #### Extra resource
 
-If your file extensions do not show by default, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
+If your file extensions do not show by default in your File explorer or Finder, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
 
 ### Copyright
 Though images can be found all over the internet, use your own images or royalty free photos to ensure you don't violate any copyright laws.
 
-There are many paid options ranging in price but there are also many resources for free stock photography.
+There are many paid options ranging in price, but there are also many resources for free stock photography.
 
 #### Image resources
 
@@ -588,10 +558,10 @@ There are many paid options ranging in price but there are also many resources f
 >
 >1. Create a general page structure using the appropriate tags
 * header, navigation menu, main content, footer, sidebar, etc
-> If you need some help <a href="exercises/module1/page-structure.html" download>download</a> the sample project html for inspiration.
+> If you need some help <a href="exercises/module1/page-structure.html" download>download the sample project html</a> for inspiration.
 >1. Add some content! Images, paragraphs, headings.
 >
->Not sure what to write? Use placeholder text or images.
+>Not sure what to write? Use placeholder text or images:
 >
 >* [meettheipsums.com](http://meettheipsums.com)  
 >* [thewireipsum.com](http://thewireipsum.com)  
@@ -599,13 +569,13 @@ There are many paid options ranging in price but there are also many resources f
 >*
 > <br>
 > *Pro tip!*  
-While not required, it's best practice to put image files into its own folder (as well as other related files like CSS and JavaScript) to keep your project directory organized. Go ahead,try creating an images folder and download some royalty free images from [The Stocks](http://thestocks.im) to put in it.
+While not required, it's best practice to put image files into its own folder (as well as other related files, like CSS and JavaScript) to keep your project organized. Go ahead, try creating an images folder and download some royalty free images from [The Stocks](http://thestocks.im).
 
 
 
 ## Links / Anchor tag
 
-Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` (hypertext reference) attribute to provide information about the the link.
+Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `href` (hypertext reference) attribute to provide information about the link:
 
 ### Link to an external site
 
@@ -619,7 +589,7 @@ Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `h
 
 ### Link to a specific spot on a page
 
-Add an `id` *attribute* to the tag where you would like the link to go *to*. In the `href` *attribute* value, use the `#` symbol followed by the id name, with **no spaces**.
+Add an `id` *attribute* to the tag where you would like the link to *go to*. In the `href` *attribute* value, use the `#` symbol followed by the id name, with **no spaces**.
 
     <a href="#go-here">Click this link to navigate to a spot on the page</a>
 
@@ -630,7 +600,7 @@ Add an `id` *attribute* to the tag where you would like the link to go *to*. In 
 
     <p id="go-here">This where you want the link to go TO.</p>
 
-It can be used in any order and in any HTML tag.  The `id` and `href` values have to match.
+The ID attribute can be used in any HTML tag inside of the `body`, including the `body` tag itself.  The `id` and `href` values must match exactly - they are case sensitive!
 
     <h1 id="top">Top of page</h1>
 
@@ -650,9 +620,9 @@ When you use a link to navigate to an `id` value, it adds that value to end of t
 
 ### Open link in a new window or tab
 
-Add a second attribute, `target="_blank"` to make the link open in a new window or tab. Whether it opens in a new window or tab is based on the users' settings.
+Add a second attribute, `target="_blank"` to make the link open in a new window or tab. Whether it opens in a new window or tab is based on the users' settings. This is a good practice when linking to a different site so the user is not taken away from your website. Without this additional attribute, the user would have to click on the back button in their brower to return to your website.
 
-When using more than one attribute, order does not matter but make sure to include a space *between* the attributes.
+When using more than one attribute, the order of those attributes do not matter, but make sure to include a space *between* the attributes.
 
     <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
 
@@ -663,9 +633,9 @@ When using more than one attribute, order does not matter but make sure to inclu
 
 ### Image as a link
 
-Instead of text, simply wrap the anchor tag around the image.
+Instead of text, simply wrap the anchor tag around the image tag.
 
-When using an image or an icon, in addition to using the `alt` attribute, you can also add a `title` attribute to provide more info about the link.  It will also show as a "tool tip" when you hover over it (there's a slight delay).
+When using an image or an icon, in addition to using the `alt` attribute, you can also add a `title` attribute to provide more info about the link.  It will also show as a "tool tip" when you hover over the link (there's a slight delay).
 
     <a href="http://twitter.com" title="Twitter">
       <img src="images/twitter-logo.png" alt="Twitter logo">
@@ -681,19 +651,16 @@ More about `alt`, `title` and SEO (search engine optimization) [here](http://www
 
 >## EXERCISE: Our First Nav
 >
->Back in **index.html**, let's create our first navigation. Since we only have one page, we'll be linking our navigation anchors to their corresponding section on our website.
+>Back in **index.html**, let's create our first navigation. Since we only have one page, we'll be linking our navigation items to their corresponding anchors on our website.
 >
-> 1. Since navigations are no more than a list of links, create a list of links and add as many links as you have sections. Currently the sample project only has an About section and a footer. So, we'll create a list with two items, and inside of each item, an anchor element.  
-> 1. To link our anchor elements in the nav to our about section and footer we'll first need to give the section and the footer an ID to anchor to. Go ahead.
+> 1. Since navigations are no more than a list of links, create a list of links and add as many links as you have sections. Currently, the sample project only has an About section and a footer. So, we'll create a list with two items, and inside of each item, an anchor element.  
+> 1. To link our anchor elements in the nav to our about section and footer, we'll first need to give the section and the footer an ID to anchor to.
 > 1. Using the ID of each section, with a hashtag in front, add your href attributes to the nav links.
-> 1. **Bonus** If you haven't added an e-mail link in your footer, now is a great time!
+> 1. **Bonus** If you haven't added an e-mail link in your footer, now is a great time to do so!
 
 ## Folder Structure, Relative & Absolute Paths
 
-A website is basically a variety of files linked together.
-Understanding the folder structure & using proper file
-naming techniques will ensure that these linked files are
-not "broken."
+A website is basically a group of files that are linked together. Understanding the folder structure & using proper file naming techniques will ensure that these linked files are not "broken."
 
 Basic folder directory example:
 
@@ -713,7 +680,7 @@ ladieslearningcode
 
 ### Relative Path
 
-Points to files located in the project files (not an external source like http://website.com). The file that you are editing is the *starting point*. Navigate to the desired directory from there.
+Points to files located in the project folder (not an external source like http://website.com). The file that you are editing is the *starting point*. Navigate to the desired directory from there.
 
 Using the above directory example, to add a link from **index.html** to **about.html**, the `href` value will look like this:
 
@@ -723,10 +690,12 @@ The `src` value for an image in the **images** folder would be:
 
     <img src="images/logo.png">
 
+You must include the name of the folder and the forward slash before you can use any files within that folder.
+
 
 ### Absolute Path
 
-Uses the exact address including domain, subdirectories and filename. Use this option when linking to an external or *hosted* source.
+Uses the exact address including the protocol, domain, subdirectories and filename. Use this option when linking to an external or *hosted* source.
 
     <a href="http://ladieslearningcode.com/">Ladies Learning Code</a>
 
@@ -734,11 +703,11 @@ Only link to web pages, not specific files such as images (unless it points to y
 
     <a href="http://ladieslearningcode.com/imagefile.jpg">Hotlinking an image. No!</a>
 
-
+This is bad practice because the site you are referencing this file from could move, delete, or rename that file at any point in the future. When they do that, your link will now be broken! Instead, if you have permission to share this image or file, download it, add it to your project folder, and reference the file using a relative path.
 
 
 >## TAKE HOME EXERCISE: Finesse your HTML!
 > Next class we'll be making our website beautiful. Right now it should look something like [this](exercises/module1/project-one-sample-nocss/index.html).
-> Keep practicing at home until next class and change your content around if you haven't decided yet what to make your website about. Remember, this website is just for fun so you can be as creative as you choose to!
+> Keep practicing at home until next class and change your content around if you have not yet decided what to make your website about. Remember, this website is just for fun so you can be as creative as you choose to!
 
 ~ End ~
