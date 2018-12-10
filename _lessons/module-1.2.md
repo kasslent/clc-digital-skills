@@ -12,33 +12,33 @@ permalink: module1-2.html
 >
 >Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
 >
->It could be formatting issues like tabbing nested elements, to mismatched tags, to missing quotes or recommended attributes.
+>It could be formatting issues like tabbing nested elements, two mismatched tags, missing quotes, or recommended attributes.
 >
 >*Pro tip!*  
-Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project/exercise files)
+Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project and exercise files)
 
 
 ## Audio and Video
 
-HTML5 introduced better support for media with `<audio>` and `<video>` tags.  However, with sites such as YouTube and Vimeo, it's often easier (and less bandwidth) to go with these options.  
+HTML5 introduced better support for media with `<audio>` and `<video>` tags.  However, with sites such as YouTube and Vimeo, it's often easier (and easier on bandwidth) to go with embedded videos from those services.
 
-Sites like these and other media sites such as Instagram and Twitter all offer embed options.
+Sites like YouTube, Vimeo and other media sites such as Instagram and Twitter all offer embed options.
 
-#### Extra resources 
+#### Extra resources
 
 * [http://html5doctor.com/native-audio-in-the-browser/](http://html5doctor.com/native-audio-in-the-browser/)
 * [http://html5doctor.com/the-video-element/](http://html5doctor.com/the-video-element/)
 
-> Let's check out the different embed options for [YouTube](http://youtube.com), [Instagram](http://instagram.com), [Twitter](http://twitter.com) and other media sites.
+> Let's check out the different embed options for [YouTube](https://support.google.com/youtube/answer/171780?hl=en), [Vimeo](https://help.vimeo.com/hc/en-us/articles/224969968-Embedding-videos-overview), [Instagram](https://www.instagram.com/developer/embedding/) and [Twitter](https://help.twitter.com/en/using-twitter/embed-twitter-feed).
 
 
 ## Intro to CSS
 
-* CSS = cascading stylesheet
-* stylesheet language with its own syntax rules, different from HTML
+* CSS = Cascading StyleSheet
+* stylesheet language has its own syntax rules, different from HTML
+* stylesheet contains a list of rules
 * used to separate content from presentation
 * presentational HTML tags and attributes are now obsolete
-* stylesheet contains a list of rules 
 * reduces redundancy and saves time
 
 CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colon `;`
@@ -49,8 +49,8 @@ CSS will require some new symbols: curly brackets `{ }`, colon `:` and semi-colo
 
 **Selectors** determine which HTML element(s) to apply the styles to.  
 
-**Declarations** are style rules written with `property:value` pairs. They must end with a semi-colon (`;`) to indicate that the instruction is complete. 
-  
+**Declarations** are style rules written with `property:value` pairs. They must end with a semi-colon (`;`) to indicate that the instruction is complete.
+
 A **declaration block** holds all the declarations within curly brackets `{ }` for a specific selector.  
 
     selector {
@@ -58,18 +58,19 @@ A **declaration block** holds all the declarations within curly brackets `{ }` f
     }
 
 **Properties** determine the type of style to be applied.    
-**Values** are specific to the property. 
+**Values** are specific to the property.
 
     p {
       color: red;
     }
 
 > In the above example, what is the selector? Property? Value?
+> Note the American spelling of color! It takes some getting used to.
 
 
 ### Multiple CSS Declarations
 
-Multiple declarations can be added for one selector to add and modify multiple styles.
+Multiple declarations can be added for one selector to add and modify multiple styles:
 
     h2 {
       background-color: green;
@@ -77,14 +78,14 @@ Multiple declarations can be added for one selector to add and modify multiple s
       line-height: 1.5;
     }
 
-There are many CSS properties with new ones being added and old ones being retired (deprecated).  It's good to have a few resources on hand.
+There are many CSS properties with new ones being added and old ones being retired (deprecated). It's good to have a few resources on hand:
 
 * [http://caniuse.com](http://caniuse.com)
 * [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ## CSS Comments
 
-Just like HTML, use comments in CSS to leave notes, "comment out" code for later or for organization. Comments are written between a forward slash & asterisk and must close in the *opposite order*.
+Just like HTML, you can use comments in CSS to leave notes, "comment out" code for later, or for organization purposes. Comments are written between a forward slash & asterisk and must close in the *opposite order*:
 
     p {
         color: #cc0066; /* magenta */
@@ -101,44 +102,44 @@ Just like HTML, use comments in CSS to leave notes, "comment out" code for later
         background: red;
     }
     */
-    
-    
+
+
 ## Basic CSS selectors
 
 ### Type Selectors
 
-Type selectors target HTML elements by their element tag name. 
+Type selectors target HTML elements by their element tag name:
 
     p {
-      /* targets all paragraphs */
+      /* select all paragraphs */
     }
     a {
-      /* targets all links */
+      /* select all links */
     }
 
 
 ### Class Selectors
 
-A `class` *attribute* can be added to any element but the value is defined by you.  The class value can then be used as a selector for *any* element that references the class attribute.
+A `class` *attribute* can be added to any element in the `body`, including the `body` tag itself. The value is defined by you.  The class value can then be used as a selector for *any* element that references the class attribute.
 
-Classes can be used multiple times on the same page. In CSS, classes are denoted by a leading period.
-    
+Classes can be used multiple times on the same page. In CSS, classes are denoted by a leading period:
+
     <p>This is a paragraph</p>
     <p class="special">This is a special paragraph</p>
     <span class="special">Special span text.</span>
-    
+
 ---  
     /* general - applies to all paragraphs */
     p {
-      color: yellow; 
+      color: yellow;
     }
     /* specific - applies to any element with this class */
     .special {
-      color: blue; 
+      color: blue;
     }
     /* more specific - applies only to paragraphs with this class */
     p.special {
-      color: red; 
+      color: red;
     }
 
 Note that the last example, `p.special`, does **not** have a space between the element selector and the class name.
@@ -160,25 +161,31 @@ In CSS, `id`s are denoted by a leading hash/number symbol (`#`).
 
 When choosing a `class` or `id` name, choose a descriptive, functional name and **do not use spaces**! Use hyphens `-`, underscores `_` or camel case to separate words.
 
-CSS is also case sensitive, so while these three examples below look similar, CSS will read these as three different classes.  
+CSS is also case sensitive, so while these three examples below look similar, CSS will read these as three different classes:
 
     class="content-wrapper"
     class="content_wrapper"
     class="contentWrapper"
 
-It's important for organization (and for your own sanity as well) to pick one style and be consistent.
+It's important for organization (and for your own sanity) to pick one style and be consistent!
 
-There are many more selectors but the few outlined here will give you a good starting point. We'll be exploring more over the next few weeks. 
+There are many more selectors, but the few outlined here will give you a good starting point. We'll be exploring more over the next few weeks.
 
 
 ## Referencing CSS
 
-There are three ways to reference (add) CSS to an HTML document.
+There are three ways to reference (add) CSS to an HTML document:
+
+<div class="summary">
 
 ### Inline CSS
 
+</div>
+
+<div class="details">
+
 Can be included in any HTML element using the `style`
-*attribute*. 
+*attribute*.
 
 The `property:value` pairs are included as the
 attribute values. Multiple declarations can be contained in the value.
@@ -189,7 +196,16 @@ attribute values. Multiple declarations can be contained in the value.
       <p>Yep, another paragraph.</p>
     </body>
 
+</div>
+
+
+<div class="summary">
+
 ### Internal CSS
+
+</div>
+
+<div class="details">
 
 Included in the `<head>` (not `<header>`) with a `<style>` *tag*.
 
@@ -211,9 +227,18 @@ Note that in XHTML, the `type` attribute was required.
       }
     </script>
 
+</div>
+
+
+<div class="summary">
+
 ### External
 
-This method links to a separate stylesheet file (uses a `.css` file extension) to separate the CSS from the HTML document. 
+</div>
+
+<div class="details">
+
+This method links to a separate stylesheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
 This method is recommended because it can be used across entire websites and updated quickly. Like the internal method, it's included within the `<head></head>` of the document but links to the css *file* instead.  
 
@@ -226,22 +251,22 @@ Remember, CSS files are often saved in a separate folder for organization, so ma
       <link rel="stylesheet" href="css/style.css">
     </head>
 
+</div>
+
+More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss).
+
 >## Class exercise
->Back in the text editor, create a new CSS file.  (**File > New File** or **ctrl/cmd + N**)
->
->Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc.
-> Be sure to save it inside the same project folder that your index.html file from last week is in. You can create a css folder if you want or just leave the css file right next to index.html.
+>Back in Atom, the text editor, create a new folder called css
+>Create a new CSS file.  (**File > New File** or **ctrl/cmd + N**). Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc. Be sure to save it inside the same project folder that your index.html file from last week is in.
 >Next, add it to **index.html** using the `<link>` tag.
 >
     <link rel="stylesheet" href="css/styles.css">
 >
->Try a basic test to see if the file linked properly by adding a background color on the entire viewport.
+>Try a basic test to see if the file linked properly by adding a background color on the entire viewport:
 >
     body {
       background: lightblue;
     }
-
-More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss).
 
 
 
@@ -261,7 +286,7 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
 
 
 #### Colour resources:  
-  
+
 * [http://coolors.co](http://coolors.co)
 * [http://colours.neilorangepeel.com](http://colours.neilorangepeel.com)
 * [http://wesandersonpalettes.tumblr.com](http://wesandersonpalettes.tumblr.com)
@@ -290,7 +315,7 @@ It's a common error to declare the same selector/property combo as your CSS file
 Often, projects will use more than one CSS file. The ordering of CSS also applies the order of the referenced CSS files in the `<head>` of the HTML document.  
 
 ## Inheritance and Specificity
-One of the strengths of CSS is the styles can be inherited from parent elements to child/descendant elements. Remember the family tree relationship?  This family tree-like structure is often referred to as the **DOM** (Document Object Model). 
+One of the strengths of CSS is the styles can be inherited from parent elements to child/descendant elements. Remember the family tree relationship?  This family tree-like structure is often referred to as the **DOM** (Document Object Model).
 
 Read more about the DOM [here](https://css-tricks.com/dom/).
 
@@ -316,7 +341,7 @@ In the above example, all descendants of `<body>` will inherit the styles.  Howe
 
 > ## EXERCISE: CSS Selectors
 > Practice using the different types of selectors. In your newly created **styles.css** file:
-> 
+>
 >1. change the text colour of all elements on the page
   * use the `color` property and `body` as the selector
 1. use a more specific selector to change the `color` of just the the `h1` elements
@@ -346,7 +371,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 ### Serif Typefaces
 
-* distinguished by the little "feet" or "hats" at the bottom or top of the letters 
+* distinguished by the little "feet" or "hats" at the bottom or top of the letters
 * grew out of the hand-lettering of scribes and roman or blackletter calligraphic writing.
 
 <hr class="clear">
@@ -361,7 +386,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 <hr class="clear">
 
-> Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes. 
+> Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes.
 >
 > Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs.
 >
@@ -387,7 +412,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 * not great for long blocks of text, may become too consuming and unreadable
 * can be great for decorative touches and add character to a design
 
-Most decorative typefaces are one offs containing just one font file. 
+Most decorative typefaces are one offs containing just one font file.
 
 
 ## Tips for Selecting and Pairing Fonts
@@ -395,13 +420,13 @@ Most decorative typefaces are one offs containing just one font file.
 * Personality
   * select fonts to reflect your personality, tone of voice and/or your brand
 * Readability
-  * choose fonts that are easy to read 
+  * choose fonts that are easy to read
   * try them in various sizes, weights and styles
 * Contrast
   * when pairing fonts, strive for sufficient contrast
   * choose typefaces of different types or styles
-  * contrast with a serif and a sans serif, or 
-  * a thick condensed sans-serif with a thin sans-serif 
+  * contrast with a serif and a sans serif, or
+  * a thick condensed sans-serif with a thin sans-serif
 * Flexibility
   * Select fonts that have multiple styles to give you the most flexibility
 * Clarity
@@ -409,7 +434,7 @@ Most decorative typefaces are one offs containing just one font file.
   * too many typefaces may make your design unclear
 * Completeness
   * look for fonts that have a complete character set
-  * pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc 
+  * pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc
   * missing characters may be a sign of an incomplete and poorly designed font
 
 #### Resource
@@ -477,7 +502,7 @@ Premium fonts:
 ### Font Resources
 
 * Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
-* Google Font pairing resource - <http://femmebot.github.io/google-type/> 
+* Google Font pairing resource - <http://femmebot.github.io/google-type/>
 * Typekit is a Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <http://typekit.com/>
 * Fonts.com has a wide library of premium fonts to choose from including a web font delivery service - <http://www.fonts.com/>
 * Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
@@ -499,7 +524,7 @@ Premium fonts:
 ![]({{ site.img }}/module2/embed-font.png)
 
 
---- 
+---
     <head>
       <meta charset="UTF-8">
       <title>My Website Title</title>
@@ -515,7 +540,7 @@ Now you can use these new fonts with the `font-family` property, using the font 
 1. Open up your style.css project file.
 1. Add the Google Fonts CSS file to the head.<br>
 ### Follow the following instructions:
-11. Using the 'body' selector, set the font family to your first Google font choice. 
+11. Using the 'body' selector, set the font family to your first Google font choice.
 11. For the h1 & h2 headings only, set the font family to your second Google font choice.
 1. Review the answers together!
 >
@@ -542,8 +567,8 @@ Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter i
 ---
     font-style: italic; /* sets text to italic */
     font-style: normal; /* removes italic style */
-    
-    
+
+
 ### `text-` properties
 
 **`text-align`**  
@@ -555,8 +580,8 @@ Most commonly used to add or remove underlines but accepts these five values: `n
 **`text-transform`**  
 Accepts five values: `none`, `capitalize`, `uppercase`, `lowercase` and `inherit`.
 
-* `capitalize` capitalizes the first letter of each word 
-* `uppercase` value will capitalize every letter 
+* `capitalize` capitalizes the first letter of each word
+* `uppercase` value will capitalize every letter
 * `lowercase` value will make every letter lowercase
 
 Note that when a CSS property accepts `inherit` as a value, it will inherit the style set in either the parent or nearest ancestor element. `none` usually removes the style defined by that property.
@@ -567,7 +592,7 @@ Note that when a CSS property accepts `inherit` as a value, it will inherit the 
 > <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
 
 >## EXERCISE: `type-` & `font-` properties
->Back in **style.css** of your project, complete the following: 
+>Back in **style.css** of your project, complete the following:
 >  1. Change the font weight of the h1 heading.
     2. Italicize the h2 heading.
     3. Make the text in the h2 heading all uppercase.
@@ -587,7 +612,7 @@ The `@font-face` CSS3 method can be used to embed and load fonts files that are 
       src: url('file-path/font-file.woff2') format('woff2'),
            url('file-path/font-file.woff') format('woff');
     }
-    
+
 ---    
     font-family: 'Font Name', second-option, sans-serif;
 
@@ -603,7 +628,7 @@ You can choose any font name and rename the font files to anything you wish, so 
 
 ### Extra Resources
 
-* [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support 
+* [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support
 * [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
 * [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
 
