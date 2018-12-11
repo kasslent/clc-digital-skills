@@ -27,7 +27,7 @@ The properties that affect the sizing of an element uses various measurement uni
 
 By default, with no other CSS, here's how these units compare to each other:
 
-    1em = 1rem = 16px = 100% 
+    1em = 1rem = 16px = 100%
 
 There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.
 
@@ -47,7 +47,14 @@ There are also other measurement units used for print and new experimental units
 
 ## CSS & Typography
 
+
+<div class="summary">
+
 ### CSS `font-size` & `line-height`
+
+</div>
+
+<div class="details">
 
 The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.  
 
@@ -68,58 +75,89 @@ For `line-height`, this property actually does *not* require the use of measurem
       line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
     }
 
+</div>
+
+<div class="summary">
+
 ### CSS `text-shadow`
+
+</div>
+
+<div class="details">
 
 Use this property to apply a shadow to your text.
 
-    p { 
+    p {
       text-shadow: 2px 4px 1px red;
     }
-    
+
 <p class="example" style="text-shadow: 2px 4px 1px red;">Text shadow!</p>
-  
+
 * first value - x-coordinate, horizontal distance of the shadow
   * positive numbers places the shadow to the right
   * negative numbers places the shadow to the left
-* second value - y-coordinate, vertical distance 
+* second value - y-coordinate, vertical distance
   * positive numbers places the shadow below the text
   * negative numbers places the shadow above the text
 * third value - blur radius (optional), the higher the number, the bigger the blur
 * fourth value - color of the shadow
 
+<div>
+
+<div class="summary">
+
 ### Multiple text shadows
-  
+
+</div>
+
+<div class="details">
+
 To use multiple text shadows, separate each grouping with a comma.
 
-    p { 
-      text-shadow: 1px 1px 1px #000, 
-                   5px 5px 5px red; 
+    p {
+      text-shadow: 1px 1px 1px #000,
+                   5px 5px 5px red;
     }
 
 *Pro tip!*  
 Subtle effects work best.
 
+</div>
 
-> Let's edit the CodePen below and experiment with these properties.
-
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+<div class="summary">
 
 ### CSS `color`
 
-To change the colour of the text, use the `color` property. 
+</div>
+
+<div class="details">
+
+To change the colour of the text, use the `color` property.
 
 We've talked about how to set a background colour in [Module 1](module1-2.html#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
-    
+
     /* all the same colour */
     body {
       color: firebrick;
       color: rgb(178,34,34);
       color: #B22222;
     }
-    
+
+</div>
+
+> Let's edit the CodePen below and experiment with these properties.
+
+<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+
+
+<div class="summary">
 
 ## Icon fonts
+
+</div>
+
+<div class="details">
 
 Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties (like size and colour) using CSS since they *are* fonts!
 
@@ -132,7 +170,7 @@ Under **[Get Started](http://fontawesome.io)**, there are different options for 
 When using CDNs, they will ask you to add the following to your head:
 
     <script src="https://use.fontawesome.com/aa9e827f90.js"></script>
-    
+
 
 To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and add it to your HTML.
 
@@ -142,9 +180,11 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 * <http://weloveiconfonts.com/>
 * <http://reference.sitepoint.com/css/typography>
 
+</div>
+
 >## EXERCISE: Typography Cont'd
->Our project is taking shape beautifully! In this excercise let's experiment with the following in our own project: 
-> 
+>Our project is taking shape beautifully! In this excercise let's experiment with the following in our own project:
+>
 1. Add a subtle text shadow to the h1 heading.
 2. Change the font size of both the h1 and h2 headings.
 3. Adjust the line height of the text on the whole page.
@@ -161,7 +201,7 @@ When working with images and photos, resize or crop the large images to reduce l
 
 Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the *largest* size you need for your website.  
 
-We'll be using CSS to make sure the image size scales & fits the page layout. 
+We'll be using CSS to make sure the image size scales & fits the page layout.
 
 When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.
 
@@ -170,7 +210,7 @@ Save your images using the file type (.jpg, .png, etc.) best suited for that ima
 ### Image editors
 You will need an image editor to crop and edit your images. [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) and [Sketch](http://www.sketchapp.com/) are popular paid options.
 
-[Pixlr](https://pixlr.com/editor/) is also a great free alternative. 
+[Pixlr](https://pixlr.com/editor/) is also a great free alternative.
 
 ## Using Pixlr
 
@@ -184,12 +224,12 @@ To add or change to another image, these options can also be accessed under the 
 
 ### The Crop Tool
 
-In [Pixlr](https://pixlr.com/editor/) (and in most image editors), select the crop tool to resize and crop out parts of your images. 
+In [Pixlr](https://pixlr.com/editor/) (and in most image editors), select the crop tool to resize and crop out parts of your images.
 
 Click & drag the cursor over the image to highlight the areas to be cropped out.
 
 ![pixlr crop]({{ site.img }}/module2/pixlr-crop.jpg)
- 
+
 
 ### Resizing images
 
@@ -236,7 +276,7 @@ They can also be found online - a great resource is a website called <a href="ht
 >
 >As a class, we will use [The Noun Project](http://thenounproject.com) to search for, download and include an SVG graphic in our project as our logo.
 >
->Once you have your SVG in your **img** folder, open it up in Atom. Proceed to comment out the entire **`<text>`** element from the SVG file. Once you've hidden it, save the SVG file and close it. 
+>Once you have your SVG in your **img** folder, open it up in Atom. Proceed to comment out the entire **`<text>`** element from the SVG file. Once you've hidden it, save the SVG file and close it.
 >
 >By omitting the **`<text>`** element from the SVG, we are removing the credit to the designer - so let's credit them in our footer instead.
 >
@@ -259,12 +299,18 @@ They can also be found online - a great resource is a website called <a href="ht
 
 A good design should be able to communicate clearly in the absence of colour. However, colour can still be used for many reasons.
 
+<div class="summary">
+
 ### Personality and Meaning
 
-Colour communicates meaning. 
+</div>
 
-* Choose colours that reflect your personality or your brand. 
-* Consider the emotional responses of your target audience. 
+<div class="details">
+
+Colour communicates meaning.
+
+* Choose colours that reflect your personality or your brand.
+* Consider the emotional responses of your target audience.
 * Use colour to distinguish between elements and interactive states.
 
 
@@ -273,21 +319,40 @@ Colour meanings can vary across different cultures so it’s important to consid
 
 Read more about colour meaning and how to use colour to enhance your designs [here](http://vanseodesign.com/web-design/color-meaning/).
 
+</div>
+
+<div class="summary">
 
 ### Harmony and Rhythm
-Colour can be used to attract attention and organize content, creating a visual hierarchy. 
+
+</div>
+
+<div class="summary">
+
+Colour can be used to attract attention and organize content, creating a visual hierarchy.
 
 Repeating colours on elements adds clarity by allowing the viewer to make visual connections between pieces of content.
 
 **Less is more.** When in doubt use one primary colour and a secondary accent colour. Vary the saturation and value of your colours to add variety while maintaining clarity.
 
+</div>
+
+<div class="summary">
 
 ### Colour Accessibility
-Many people have some sort of visual colour impairment such as being unable to distinguish certain colours from others. 
+
+</div>
+
+<div class="details">
+
+Many people have some sort of visual colour impairment such as being unable to distinguish certain colours from others.
 
 Ensure sufficient contrast between colours to help people distinguish between different pieces of content. Use a variety of values and levels of saturation to add contrast.
 
 Read more about colour blindness and designing for colour accessibility [here](https://24ways.org/2012/color-accessibility/).
+
+</div>
+
 
 #### Colour Resources
 * [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose colour palettes
@@ -296,18 +361,9 @@ Read more about colour blindness and designing for colour accessibility [here](h
 
 
 > ## EXERCISE: Testing for Contrast
-> Go to [Color Safe](http://colorsafe.co/) and test the contrast of the current colours you're using on your site. If the contrast doesn't get a green checkmark, or if you want the contrast to be better, find a palette that will allow you to meet accessibility standards for colour contrast. 
+> Go to [Color Safe](http://colorsafe.co/) and test the contrast of the current colours you're using on your site. If the contrast doesn't get a green checkmark, or if you want the contrast to be better, find a palette that will allow you to meet accessibility standards for colour contrast.
 
- 
+
 
 <br>
 ~ End ~
-
-
-
-
-
-
-
-
-

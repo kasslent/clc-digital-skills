@@ -297,6 +297,11 @@ blockquote {
       content: "\2630";
       /* 3 bar menu */ }
 
+.toc-container{
+  height: 70vh;
+  overflow-y: scroll;
+}
+
 .example {
   border: 1px solid #808080;
   padding: 15px; }
