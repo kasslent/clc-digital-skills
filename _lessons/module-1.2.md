@@ -627,7 +627,7 @@ You can choose any font name and rename the font files to anything you wish, so 
 
 <div class="summary">
 
-## Workflow Tips & Tools
+### Workflow Tips & Tools
 
 </div>
 
@@ -645,15 +645,15 @@ You can choose any font name and rename the font files to anything you wish, so 
 
 <div class="summary">
 
-### Extra Resources
+### Resources: CSS & Webfonts
 
 </div>
 
 <div class="details">
 
 * [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support
-* [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
-* [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
+* [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating font files that will work in all browsers)
+* [Google Fonts API: Getting Started](https://developers.google.com/fonts/docs/getting_started)
 
 </div>
 

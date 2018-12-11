@@ -6,7 +6,7 @@ $(function(){
 
 
   // Table of Contents for lesson notes
-  var ToC = "<ul>";
+  var ToC = "<div class='toc-container'><ul>";
   var newLine, el, title, link;
 
   $("article > h2, blockquote h2").each(function() {
@@ -22,7 +22,7 @@ $(function(){
     ToC += newLine;
   });
 
-  ToC +="</ul>";
+  ToC +="</ul></div>";
   $(".table-of-contents").append(ToC);
 
   $('[data-collapse]').on("click", function(){

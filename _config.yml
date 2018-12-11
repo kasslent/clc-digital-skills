@@ -8,7 +8,7 @@ baseurl: "/llc-digital-skills" # the subpath of your site, e.g. /blog/
 url: " " # the base hostname & protocol for your site
 twitter: learningcode
 slack: digitalskills
-facebook: ladieslearningcode
+facebook: canadalearningcode
 
 
 # Build settings
