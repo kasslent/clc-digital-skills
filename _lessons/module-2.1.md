@@ -7,9 +7,9 @@ description: Measurement Units, Images + Pixlr, The Noun Project, Icon Fonts, Te
 permalink: module2-1.html
 ---
 
-There are more ways to use CSS to create typography based styles in your web page designs.
+In the last module, we learned how to use CSS to create typography based styles in our webpages. Today, we'll be taking a deeper dive into them.
 
-The last lesson covered text based CSS properties that used keywords for values (e.g. `font-weight: bold;`). But there are many other properties (typography based and other styles) that use length to define the values.
+We covered text based CSS properties that used keywords for values (e.g. `font-weight: bold;`), but there are many other properties (typography based, and other styles) that use measurements to define the values.
 
 
 ## Length / Measurement Units
@@ -18,7 +18,8 @@ The properties that affect the sizing of an element uses various measurement uni
 * **pixels** (`px`) - most commonly used because computer monitors and mobile devices are measured in pixels.
   * must use whole numbers (e.g. `12px`)
 * **percentages** (`%`) - useful for fluid and responsive layouts
-  * can use any number (e.g. `20%`, `25.5%`)
+  * can use any number (e.g. `50%`, `25.5%`)
+**more advanced, but also cool:**
 * **ems** (`em`) - originally a typographic measurement based on the letter "M"
   * relative unit, sizing is based on parent & ancestor elements sizes
   * can use any number (e.g. `1em`, `1.275em`)
@@ -29,14 +30,20 @@ By default, with no other CSS, here's how these units compare to each other:
 
     1em = 1rem = 16px = 100%
 
-There are also other measurement units used for print and new experimental units that are not yet supported in all browsers.
+There are also other measurement units used for [print stylesheets](https://uxdesign.cc/i-totally-forgot-about-print-style-sheets-f1e6604cfd6), and new experimental units that are not yet supported by all browsers.
 
 > Let's edit the below Codepen and see how `em` and `rem` works.
 
-<p data-height="190s" data-theme-id="0" data-slug-hash="LpeaGZ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/LpeaGZ/'>font-size, em & rem</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+[Play with font-size, em & rem](http://codepen.io/learningcode/pen/LpeaGZ/) on CodePen.
 
-### Extra resources
+
+<div class="summary">
+
+### Resources: CSS Measurements
+
+</div>
+
+<div class="details">
 
 * [rem & the 62.5% method](http://snook.ca/archives/html_and_css/font-size-with-rem)
 * [CSS - Measurement Units](http://www.tutorialspoint.com/css/css_measurement_units.htm)
@@ -44,25 +51,21 @@ There are also other measurement units used for print and new experimental units
 * [CSS Tricks - Lengths of CSS]( https://css-tricks.com/the-lengths-of-css/)
 * [Understanding and Using rem Units in CSS](http://www.sitepoint.com/understanding-and-using-rem-units-in-css/)
 
+</div>
+
 
 ## CSS & Typography
 
 
-<div class="summary">
-
 ### CSS `font-size` & `line-height`
 
-</div>
+The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.
 
-<div class="details">
+Use `font-size` to change the size and `line-height` to adjust the space *between* the lines of text. This can help improve the readability of larger blocks of text.
 
-The default size of HTML text in the browser is equivalent to 16 pixels, with the headings getting progressively larger based on their hierarchy.  
+You can use any of the measurement units mentioned above to declare the `font-size`.  
 
-Use `font-size` to change the size and `line-height` to adjust the space *between* the lines of text.
-
-You can use any of the measurement units to declare the `font-size`.  
-
-For `line-height`, this property actually does *not* require the use of measurement units (though you can). Not using a measurement unit makes it relative to the font-size.
+For `line-height`, this property actually does *not* require the use of measurement units (though you can if you prefer to). Not using a unit of measure makes it ratio, relative to the font-size.
 
     p {
       font-size: 20px;
@@ -75,8 +78,6 @@ For `line-height`, this property actually does *not* require the use of measurem
       line-height: 1.5; /* relative to font-size - always 1.5x bigger than the font-size */
     }
 
-</div>
-
 <div class="summary">
 
 ### CSS `text-shadow`
@@ -85,7 +86,7 @@ For `line-height`, this property actually does *not* require the use of measurem
 
 <div class="details">
 
-Use this property to apply a shadow to your text.
+Use this property to apply a shadow to your text. This can help improve the readability of text against a background (like a photo) where you no longer have sufficient contrast to read the text.
 
     p {
       text-shadow: 2px 4px 1px red;
@@ -96,13 +97,11 @@ Use this property to apply a shadow to your text.
 * first value - x-coordinate, horizontal distance of the shadow
   * positive numbers places the shadow to the right
   * negative numbers places the shadow to the left
-* second value - y-coordinate, vertical distance
+* second value - y-coordinate, vertical distance of the shadow
   * positive numbers places the shadow below the text
   * negative numbers places the shadow above the text
 * third value - blur radius (optional), the higher the number, the bigger the blur
-* fourth value - color of the shadow
-
-<div>
+* fourth value - colour of the shadow
 
 <div class="summary">
 
@@ -124,15 +123,17 @@ Subtle effects work best.
 
 </div>
 
+</div>
+
 <div class="summary">
 
-### CSS `color`
+### Review: CSS `color`
 
 </div>
 
 <div class="details">
 
-To change the colour of the text, use the `color` property.
+To change the colour of the text, use the `color` property. Remember, American spelling!
 
 We've talked about how to set a background colour in [Module 1](module1-2.html#css-colours).  Use the same value types (hex, keyword or rgb) for this property as well.
 
@@ -147,8 +148,7 @@ We've talked about how to set a background colour in [Module 1](module1-2.html#c
 
 > Let's edit the CodePen below and experiment with these properties.
 
-<p data-height="290" data-theme-id="0" data-slug-hash="NGXovv" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/NGXovv/'>font-size, line-height, text-shadow</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+Play with [font-size, line-height, text-shadow](http://codepen.io/learningcode/pen/NGXovv/) on CodePen.
 
 
 <div class="summary">
@@ -176,6 +176,7 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 
 #### Resources
 
+* [Beautifully minimal icons font](https://ionicons.com/)
 * <https://css-tricks.com/html-for-icon-font-usage/>
 * <http://weloveiconfonts.com/>
 * <http://reference.sitepoint.com/css/typography>
@@ -183,27 +184,28 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 </div>
 
 >## EXERCISE: Typography Cont'd
->Our project is taking shape beautifully! In this excercise let's experiment with the following in our own project:
+>Our project is taking shape beautifully! In this exercise let's experiment with the following in our own project:
 >
 1. Add a subtle text shadow to the h1 heading.
 2. Change the font size of both the h1 and h2 headings.
-3. Adjust the line height of the text on the whole page.
-4. Change the color of the links.
-5. Remove the default underline of the links.
-6. Change the link color *on hover*. We have not covered this yet but tap into your detective skills and do a Google search, work in partners or with your mentor!
-7. BONUS: Add an icon font anywhere on the page and change some property (color, size, etc). If you have time, you could even add a social media section and link to your profiles using icons!
+3. Adjust the line height of all paragraphs.
+4. Change the colour of the links.
+5. Remove the default underline on the links.
+6. Change the link color *on hover*. We have not covered this yet, but tap into your detective skills to do a Google search, work in partners, or with your mentors!
+7. BONUS: Add an icon font anywhere on the page and change some property (colour, size, etc).
+8. If you have time, you can add a social media section and link to your profiles using icons!
 
 
 ## Working with Images
 
 ### Cropping and Saving Images
-When working with images and photos, resize or crop the large images to reduce load time of a web page (especially for phones).  
+When working with images and photos, resize or crop the large images to reduce load time of a web page. This is important for users on smaller devices, using a data connection on a mobile phone, or who otherwise have a slow internet connection.
 
-Most photos are large in size and resolution because by default it is optimized for print, not web. However, these images should be cropped to the *largest* size you need for your website.  
+Most photos we take on digital cameras are large in size and resolution because they are optimized for print, not the web. When preparing images for use on the web, the images should be cropped to the *largest* size you will need to see it displayed.
 
-We'll be using CSS to make sure the image size scales & fits the page layout.
+We'll be using CSS to make sure the image size scales & fits the page layout, regardless of the size of the user's device.
 
-When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality, but making a small image larger with CSS will make it appear pixelated.
+When working with responsive images (one image made to fit difference screen sizes), resizing large images to be smaller will not lose quality. Alternatively, making a small image larger with CSS will make it appear pixelated.
 
 Save your images using the file type (.jpg, .png, etc.) best suited for that image.  Refer to [Module 1, Lesson 1](module1-1.html#images) for reference.
 
@@ -253,11 +255,12 @@ Choosing **Canvas size...** (the option under **Image size...**) will have a sim
 
 * [Placeholder image sites](https://www.google.ca/search?q=placeholder+images)
 * [Stock Photos That Don't Suck](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
+* [Image compression tool](https://tinyjpg.com/) - can be used after images are cropped to improve your site's performance even more!
 
 
-## SVG and the Noun Project
+## SVG - Scalable Vector graphics
 
-SVG is an image file type that stands for <em>Scalable Vector Graphics</em> and you can use it the same way you would use JPG, PNG or GIF, inside an `<img>` element:
+SVG is an image file type that can be used in the same way you would use JPG, PNG or GIF, inside an `<img>` element:
 
     <img src="cat.svg" alt="a cute cat">
     <img src="cat.png" alt="a cute cat">
@@ -266,11 +269,20 @@ So what's the difference? Let's compare a vector graphic (JPG / PNG) and a raste
 
 <img src="{{ site.img }}/module2/vector-vs-raster.png" />
 
-The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic. A major difference between SVG and other file types is size - an SVG will usually be a smaller file size and therefore easier for a browser to load. If a graphic is vector, it should be in SVG format for use on the web.
+The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic.
+
+>"In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape."
+[W3Schools - HTML5 SVG] (https://www.w3schools.com/Html/html5_svg.asp)
+
+This means we can use CSS to make the image as large or as small as we need, and it will always look the same. That undesirable pixelation doesn't occur because the image is not made of pixels!
+
+Another major difference between SVG and other file types is size - an SVG will usually be a smaller file size, and therefore faster for a browser to load.
 
 SVGs can be created using design software such as <a href="http://www.adobe.com/ca/products/illustrator.html" target="_blank">Adobe Illustrator</a> (monthly subscription), <a href="https://www.sketchapp.com/" target="_blank">Sketch</a>, (mac only) or <a href="https://inkscape.org/en/" target="_blank">Inkscape</a> (free).
 
-They can also be found online - a great resource is a website called <a href="https://thenounproject.com/" target="_blank">The Noun Project</a>.
+They can also be found online - a great resource is a website called [Flaticon](https://www.flaticon.com/).
+
+>You can also try out [The Noun Project](https://thenounproject.com/), but you will be required to create an account to download any graphics.
 
 >## CLASS EXERCISE: The Noun Project
 >
