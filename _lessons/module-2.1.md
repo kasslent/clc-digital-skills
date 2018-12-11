@@ -18,7 +18,7 @@ The properties that affect the sizing of an element uses various measurement uni
 * **pixels** (`px`) - most commonly used because computer monitors and mobile devices are measured in pixels.
   * must use whole numbers (e.g. `12px`)
 * **percentages** (`%`) - useful for fluid and responsive layouts
-  * can use any number (e.g. `50%`, `25.5%`)
+  * can use any number (e.g. `50%`, `25.5%`)<br />
 **more advanced, but also cool:**
 * **ems** (`em`) - originally a typographic measurement based on the letter "M"
   * relative unit, sizing is based on parent & ancestor elements sizes
@@ -32,9 +32,7 @@ By default, with no other CSS, here's how these units compare to each other:
 
 There are also other measurement units used for [print stylesheets](https://uxdesign.cc/i-totally-forgot-about-print-style-sheets-f1e6604cfd6), and new experimental units that are not yet supported by all browsers.
 
-> Let's edit the below Codepen and see how `em` and `rem` works.
-
-[Play with font-size, em & rem](http://codepen.io/learningcode/pen/LpeaGZ/) on CodePen.
+> Let's [edit this Codepen](http://codepen.io/learningcode/pen/LpeaGZ/) and see how `em` and `rem` work.
 
 
 <div class="summary">
@@ -146,9 +144,7 @@ We've talked about how to set a background colour in [Module 1](module1-2.html#c
 
 </div>
 
-> Let's edit the CodePen below and experiment with these properties.
-
-Play with [font-size, line-height, text-shadow](http://codepen.io/learningcode/pen/NGXovv/) on CodePen.
+> Let's [edit the CodePen](http://codepen.io/learningcode/pen/NGXovv/) to experiment with these properties.
 
 
 <div class="summary">
@@ -176,7 +172,7 @@ To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and cop
 
 #### Resources
 
-* [Beautifully minimal icons font](https://ionicons.com/)
+* [Minimal and thin icons font](https://ionicons.com/)
 * <https://css-tricks.com/html-for-icon-font-usage/>
 * <http://weloveiconfonts.com/>
 * <http://reference.sitepoint.com/css/typography>
@@ -272,7 +268,7 @@ So what's the difference? Let's compare a vector graphic (JPG / PNG) and a raste
 The cat on the left is a vector graphic, whereas the cat on the right is a raster graphic.
 
 >"In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape."
-[W3Schools - HTML5 SVG] (https://www.w3schools.com/Html/html5_svg.asp)
+[W3Schools - HTML5 SVG](https://www.w3schools.com/Html/html5_svg.asp)
 
 This means we can use CSS to make the image as large or as small as we need, and it will always look the same. That undesirable pixelation doesn't occur because the image is not made of pixels!
 
@@ -284,15 +280,15 @@ They can also be found online - a great resource is a website called [Flaticon](
 
 >You can also try out [The Noun Project](https://thenounproject.com/), but you will be required to create an account to download any graphics.
 
->## CLASS EXERCISE: The Noun Project
+>## CLASS EXERCISE: Using SVGs
 >
->As a class, we will use [The Noun Project](http://thenounproject.com) to search for, download and include an SVG graphic in our project as our logo.
+>As a class, we will use [Flaticon](https://www.flaticon.com/) to search for, download and include an SVG graphic in our project as our logo.
 >
->Once you have your SVG in your **img** folder, open it up in Atom. Proceed to comment out the entire **`<text>`** element from the SVG file. Once you've hidden it, save the SVG file and close it.
+> After searching for a term in the search  bar, select the "Selection" option in the top menu (Next to the gold crown and "Premium" option) to select only free icons.
 >
->By omitting the **`<text>`** element from the SVG, we are removing the credit to the designer - so let's credit them in our footer instead.
+Move the icon from your downloads folder into your project folder with the rest of your images.
 >
->Now, let's include our SVG as the src in an **`<img>`** element. It will always be scalable, but this doesn't provide us with much control over the look of our SVG.
+>Now, let's include the path to our SVG as the value of the src attribute in the **`<img>`** tag. It will always be scalable, but this doesn't provide us with much control over the look of our SVG.
 >
 >It's huge! Give your **`<img>`** a class of "logo" and size it accordingly.
 >
@@ -339,7 +335,7 @@ Read more about colour meaning and how to use colour to enhance your designs [he
 
 </div>
 
-<div class="summary">
+<div class="details">
 
 Colour can be used to attract attention and organize content, creating a visual hierarchy.
 
