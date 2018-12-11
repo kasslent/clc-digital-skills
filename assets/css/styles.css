@@ -82,6 +82,7 @@ ul, ol {
   display: block;
   border: 2px solid #efefef;
   padding: 0 20px;
+  margin: 5px 0;
 }
 .summary h2,
 .summary h3{

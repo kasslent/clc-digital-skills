@@ -232,7 +232,7 @@ Note that in XHTML, the `type` attribute was required.
 
 <div class="summary">
 
-### External
+### External (recommended)
 
 </div>
 
@@ -256,8 +256,8 @@ Remember, CSS files are often saved in a separate folder for organization, so ma
 More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss).
 
 >## Class exercise
->Back in Atom, the text editor, create a new folder called css
->Create a new CSS file.  (**File > New File** or **ctrl/cmd + N**). Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc. Be sure to save it inside the same project folder that your index.html file from last week is in.
+>Back in Atom, the text editor, create a new folder called `css`.<br>
+>Create a new CSS file.  (**File > New File** or **ctrl/cmd + N**). Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc. Be sure to save it inside the same project folder that your index.html file from last week is in.<br>
 >Next, add it to **index.html** using the `<link>` tag.
 >
     <link rel="stylesheet" href="css/styles.css">
@@ -298,7 +298,7 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
 
 ## Cascading
 
-CSS executes from top to bottom (hence "cascading") so the order of your CSS declarations matter. The declaration that comes after overrides the one that came before.
+Your browser executes CSS from top to bottom (hence the word "cascading"), so the order of your CSS declarations matter. The declaration that comes after overrides the one that came before.
 
 In this example, based on the cascading rules, what colour will the `<h1>` be?
 
@@ -309,15 +309,18 @@ In this example, based on the cascading rules, what colour will the `<h1>` be?
       color: blue;
     }
 
-It's a common error to declare the same selector/property combo as your CSS files get bigger and longer so organization is key to help reduce these issues.
+Your browser will read this as follows: "You want all `h1`s to appear in black. Uh oh, it looks like you changed your mind! I will change them all to blue now".
+
+It's a common error to declare the same selector/property combo as your CSS files get bigger and longer, so organization is key to help reduce these issues.
 
 *Pro tip!*  
+Use the **ctrl/cmd f** in atom to find if you have already used a selector before creating a new one to avoid situations like the one above. They typically don't happen one right after the other like in that example, but manually looking through a large CSS file is too time consuming.<br />
 Often, projects will use more than one CSS file. The ordering of CSS also applies the order of the referenced CSS files in the `<head>` of the HTML document.  
 
 ## Inheritance and Specificity
-One of the strengths of CSS is the styles can be inherited from parent elements to child/descendant elements. Remember the family tree relationship?  This family tree-like structure is often referred to as the **DOM** (Document Object Model).
+One of the strengths of CSS is that styles can be inherited from parent elements to child/descendant elements. Remember the family tree relationship?  This family tree-like structure is often referred to as the **DOM** (Document Object Model).
 
-Read more about the DOM [here](https://css-tricks.com/dom/).
+[Read more about the DOM here](https://css-tricks.com/dom/).
 
 **HTML**
 
@@ -337,7 +340,7 @@ Read more about the DOM [here](https://css-tricks.com/dom/).
       color: black;
     }
 
-In the above example, all descendants of `<body>` will inherit the styles.  However, when a more *specific* selector is used (like `h1`), it overrides the inherited values.
+In the above example, all descendants of `<body>` will inherit the styles.  However, when a more *specific* selector is used (like `h1`), it overrides the inherited values. The `h1` selector in this case is more specific than the `body` selector because `h1` is a child of the `body`.
 
 > ## EXERCISE: CSS Selectors
 > Practice using the different types of selectors. In your newly created **styles.css** file:
@@ -349,20 +352,18 @@ In the above example, all descendants of `<body>` will inherit the styles.  Howe
   - using the class name as the selector, change the `color`
 >
 > **Bonus:**  
-Add the same `class` from step 3 to a link (anchor tag). Because links already have a default color (blue), you'll need to use a more specific selector to change the color.
+Add the same `class` from step 3 to a link (anchor tag). Because links already have a default color (blue), you'll need to use a more specific selector for  the `a` tag to change the color.
 
-If you want even more practice with selectors, try this game: <http://flukeout.github.io/>
+If you want even more practice with selectors, [try this game!](http://flukeout.github.io/)
 
 ## Typography
 Good writing and good typography can help your reader understand your message more clearly.
 
 **Typography** is the art of arranging type to engage and guide your readers.  
 
-**Typeface** is what you think of when you think of Font. It is a set of fonts or a font family that is designed with common characteristics and features.  
+A **Typeface** is what you think of when you think of a Font. It is a set of fonts or a font family that is designed with common characteristics and features.  
 
-**Font** is the individual font file that is part of the font family or typeface.
-
-For example, *Helvetica Neue* is the **typeface**. It is a font family which contains many **font** files from *Helvetica Neue Ultra Light* to *Helvetica Neue Extra Bold*. The decision to set your type in *Helvetica Neue* and how you arrange it on the page is **typography**.
+A **Font** is the individual font file that is part of the font family or typeface. For example, *Helvetica Neue* is the **typeface**. It is a font family which contains many **font** files, like *Helvetica Neue Ultra Light* or *Helvetica Neue Extra Bold*. The decision to set your type in *Helvetica Neue* and arrange it in a particular way on the page is **typography**.
 
 
 ## Type Classification
@@ -371,7 +372,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 ### Serif Typefaces
 
-* distinguished by the little "feet" or "hats" at the bottom or top of the letters
+* distinguished by the little "feet", "tails" or "hats" at the bottom and top of the letters
 * grew out of the hand-lettering of scribes and roman or blackletter calligraphic writing.
 
 <hr class="clear">
@@ -380,26 +381,25 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 
 ### Sans Serif Typefaces
 
-* just like the name implies–no serifs at the end of the strokes
-* most are monoweight
-* the strokes of the letterform appears to be all one weight
+* just like the name, implies–no serifs at the end of the strokes
+* most are monoweight (meaning the strokes of a letter is the same thickness all around)
 
 <hr class="clear">
 
 > Much debate has gone into whether serif typefaces are better than sans serif typefaces in terms of readability at different sizes.
 >
-> Some argue that serif typefaces have historically been better for small text because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs.
+> Some argue that serif typefaces have historically been better for small text, because their serifs guide the eye while reading. Others assert that sans serif typefaces are better for reading because they are unencumbered by serifs.
 >
-> Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need.
+> Classification aside, when selecting a font, consider the application and the readability of the letterforms at the sizes you need. Contrary to popular belief, there are no set rules about which are better suited for print or screen. You can use both on your website!
 
 
 <img class="left" src="{{ site.img }}/module2/script.jpg">
 
 ### Script Typefaces
 
-* appear to be hand-lettered with a calligraphy pen, brush or pencil or pen
+* appear to be hand-lettered with a calligraphy pen, brush or pencil
 * use script typefaces sparingly and appropriately for your content
-* can be unreadable in small sizes, all caps and long blocks of text
+* can be unreadable in small sizes, when in all caps, or for long blocks of text
 
 <hr class="clear">
 
@@ -412,7 +412,7 @@ For example, *Helvetica Neue* is the **typeface**. It is a font family which con
 * not great for long blocks of text, may become too consuming and unreadable
 * can be great for decorative touches and add character to a design
 
-Most decorative typefaces are one offs containing just one font file.
+Most decorative typefaces are one-offs containing just one font file (weight).
 
 
 ## Tips for Selecting and Pairing Fonts
@@ -426,14 +426,15 @@ Most decorative typefaces are one offs containing just one font file.
   * when pairing fonts, strive for sufficient contrast
   * choose typefaces of different types or styles
   * contrast with a serif and a sans serif, or
-  * a thick condensed sans-serif with a thin sans-serif
+  * a thick condensed font with a thin font
 * Flexibility
   * Select fonts that have multiple styles to give you the most flexibility
 * Clarity
   * select only one or two typefaces for your content
-  * too many typefaces may make your design unclear
+  * too many typefaces may make your design unclear and cluttered
 * Completeness
   * look for fonts that have a complete character set
+  * support for any alternative languages you need
   * pay attention to the glyphs and special characters you might need such as “@”, “$”, “#”, etc
   * missing characters may be a sign of an incomplete and poorly designed font
 
@@ -447,12 +448,12 @@ Most decorative typefaces are one offs containing just one font file.
 
 Fonts that are considered to be "web safe" refer to pre-installed fonts on a computer or device.
 
-Because not all operating systems have the same fonts installed, use a font *stack* in your CSS to provide multiple options. Choose fonts that look similar and a generic option to provide a fallback option.
-
 See examples of web safe fonts here:
 
 * [16 Gorgeous Web Safe Fonts To Use With CSS](http://www.webdesigndev.com/16-gorgeous-web-safe-fonts-to-use-with-css/)
 * [cssfontstack.com](http://www.cssfontstack.com)
+
+Because not all operating systems have the same fonts installed, we use a font *stack* in our CSS to provide multiple options. Choose fonts that look similar and add a generic option to provide a fallback. Let's look at the example below:
 
 
 ### CSS `font-family`
@@ -469,13 +470,15 @@ In CSS, to change the default typeface, use the `font-family` property.
 * font names with two or more words should be wrapped in quotation marks (single or double quotes)
 * last font should be the generic option
 
+On a Mac, we will see Helvetica Neue being used. On Windows, unless the user has purchased Helvetica Neue, we will see Arial instead, because Helvetica is  not pre-installed on the Windows operating system.
+
 #### Generic fonts
 
 * sans-serif
 * serif
 * cursive (script fonts)
 * fantasy (decorative fonts)
-* monospace (fixed width fonts)
+* monospace (fixed width fonts) - the one you use in a text editor like Atom
 
 
 ### Custom Fonts
@@ -486,10 +489,9 @@ There are thousands of fonts available to download and use beyond the default we
 
 Free fonts:
 
-* free, no cost to use (sometimes free for personal use but need to be paid for commercial use)
+* free, no cost to use (sometimes free for personal use, but need to be paid for commercial use)
 * may have missing characters
 * limited in the number of styles (generally one or two styles)
-* are commonly used
 
 Premium fonts:
 
@@ -502,18 +504,18 @@ Premium fonts:
 ### Font Resources
 
 * Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
-* Google Font pairing resource - <http://femmebot.github.io/google-type/>
-* Typekit is a Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <http://typekit.com/>
-* Fonts.com has a wide library of premium fonts to choose from including a web font delivery service - <http://www.fonts.com/>
+* Google Font pairing resource and inspiration - <http://femmebot.github.io/google-type/>
+* Typekit - an Adobe subscription based font service that allows you to use their library of fonts for desktop and web use - <http://typekit.com/>
+* Fonts.com has a wide library of premium fonts to choose from, including a web font delivery service - <http://www.fonts.com/>
 * Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
 
 
 ## Google Fonts
 
-[Google Fonts](https://www.google.com/fonts) is a free service. You can link directly to their CSS files, making the fonts available to your site visitors and does not rely on system installed fonts. To use:
+[Google Fonts](https://www.google.com/fonts) is a free service. You can link directly to their CSS files, making the fonts available to your site visitors. It does not rely on system installed fonts. To use:
 
 1. Go to [Google Fonts](https://www.google.com/fonts).
-1. **Click on the red and white plus sign** to select a font.
+1. **Click on the coral and white plus sign** to select a font.
 ![]({{ site.img }}/module2/google-fonts-1.jpg)
 1. In the drawer that appears at the bottom of the page, customize your selections.
 ![]({{ site.img }}/module2/font-review.jpg)
@@ -532,27 +534,17 @@ Premium fonts:
       <link rel="stylesheet" href="css/styles.css">
     </head>
 
-Now you can use these new fonts with the `font-family` property, using the font name listed in the example on the Google Fonts page.
+Now you can use these new fonts with the `font-family` property, using the font name listed in the example on the Google Fonts page. Be sure to paste that stylesheet in above yours. That way, our stylesheet will be ready to use the fonts. You need your paint brushes before you can paint!
 
 ![]({{ site.img }}/module2/specify-font.png)
 >## EXERCISE: Google Fonts
 >1. Choose two fonts from [Google Fonts](https://www.google.com/fonts) to use for the typography exercise.
 1. Open up your style.css project file.
 1. Add the Google Fonts CSS file to the head.<br>
-### Follow the following instructions:
-11. Using the 'body' selector, set the font family to your first Google font choice.
-11. For the h1 & h2 headings only, set the font family to your second Google font choice.
+1. Using the 'body' selector, set the font family to your first Google font choice.
+1. For the h1 & h2 headings only, set the font family to your second Google font choice.
 1. Review the answers together!
 >
-
-## Workflow Tips & Tools
-* Use a service like [Dropbox](https://db.tt/eCZX3yo) or [Google Drive](https://www.google.ca/drive/) to sync and save your work in the cloud.
-* Use a USB drive to save your work.
-* Use some kind of bookmarking service to store all your resources in one place. (You'll have many!) Here's a few to try out:
-  * [Evernote](https://evernote.com/)
-  * [Pocket](https://getpocket.com/)
-  * [Pinterest](https://www.pinterest.com/)
-* [Pixlr](https://pixlr.com/) is a free image editing tool.  This will coming handy for cropping and manipulating image files.
 
 
 ## More CSS typography
@@ -589,7 +581,7 @@ Note that when a CSS property accepts `inherit` as a value, it will inherit the 
 >## CLASS EXERCISE: Typography & CodePen
 >Let's try out the above typography based CSS properties. Use this example on [CodePen](http://codepen.io/learningcode/pen/yYpNej?editors=110) to experiment.  
 >
-> <a href="http://codepen.io">CodePen</a> is basically a "sandbox" to try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you OR sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) and edit pens by other users.
+> <a href="http://codepen.io">CodePen</a> is a "sandbox" where you can try out code without switching back and forth between a text editor and browser. When you save your pen, a unique URL is created for you. You can sign up for a (free) account to save your pens. You can also explore and "fork" (save a copy) to edit pens created by other users.
 
 >## EXERCISE: `type-` & `font-` properties
 >Back in **style.css** of your project, complete the following:
@@ -601,9 +593,15 @@ Note that when a CSS property accepts `inherit` as a value, it will inherit the 
 These are just a few type related CSS properties.  We'll be going over more in future lessons.
 
 
+<div class="summary">
+
 ## Bonus: `@font-face`
 
-The `@font-face` CSS3 method can be used to embed and load fonts files that are not *hosted* online like Google Fonts.  These font files are downloaded and included in your folder directory.
+</div>
+
+<div class="details">
+
+The `@font-face` CSS3 method can be used to embed and load fonts files that are not *hosted* online like Google Fonts. These font files are downloaded and included in your folder directory.
 
 `@font-face` must be declared in your CSS files first *before* you can use the downloaded fonts.  If you are targeting modern browsers, this snippet below will be enough to provide browser support.
 
@@ -621,18 +619,42 @@ This snippet links the font files to the CSS, as well as declares a `font-family
 *Pro tip!*   
 You can choose any font name and rename the font files to anything you wish, so choose something that follows best practices for file management and naming conventions.
 
+</div>
+
 
 >## CLASS EXERCISE: Apply Styles to Your Project
 >1. Continue adding typography properties and colour to your project.
 
+<div class="summary">
+
+## Workflow Tips & Tools
+
+</div>
+
+<div class="details">
+
+* Use a service like [Dropbox](https://db.tt/eCZX3yo) or [Google Drive](https://www.google.ca/drive/) to sync and save your work in the cloud.
+* Use a USB drive to save your work.
+* Use some kind of bookmarking service to store all your resources in one place. (You'll have many!) Here's a few to try out:
+  * [Evernote](https://evernote.com/)
+  * [Pocket](https://getpocket.com/)
+  * [Pinterest](https://www.pinterest.com/)
+* [Pixlr](https://pixlr.com/) is a free image editing tool.  This will coming handy for cropping and manipulating image files.
+
+</div>
+
+<div class="summary">
 
 ### Extra Resources
+
+</div>
+
+<div class="details">
 
 * [CSS Tricks](https://css-tricks.com/snippets/css/using-font-face/) - more about `font-face` and older browser support
 * [Font Squirrel](http://www.fontsquirrel.com/) - free fonts for downloads and `@font-face` generator (for creating cross-browser font file types)
 * [Google Fonts: Getting Started](https://developers.google.com/fonts/docs/getting_started)
 
+</div>
 
-
-<br>
 ~ End ~

@@ -451,8 +451,8 @@ Ordered & unordered lists can also be mixed when nesting. This is where indentat
 
 * `<em>` represents stress emphasis, i.e., something you would pronounce differently  
 * `<strong>` represents strong importance  
-* `<i>` no longer used for italics - please use `em` for that purpose instead. This now represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
-* `<b>` no longer used for bolding - please use `strong` for that purpose instead. This stands for “stylistically offset” text, such as keywords
+* `<i>` represents text in an alternate voice, a technical term, a phrase from another language (e.g. *je ne sais quoi*)  
+* `<b>` stands for “stylistically offset” text, such as keywords
 
 #### Older versions of HTML
 When XHTML was the latest version, `<b>` and `<i>` were *deprecated* since they were presentational tags. They used to represent bold and italics. Presentational tags were removed to separate content from styles.
