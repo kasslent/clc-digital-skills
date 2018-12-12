@@ -299,7 +299,7 @@ blockquote {
 
 .toc-container{
   height: 70vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .example {

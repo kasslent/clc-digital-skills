@@ -277,11 +277,11 @@ All content to be displayed in the browser window goes between the `<body></body
 </code></pre>
 
 *Pro tip!*  
-The W3C provides a free service to check if your markup is valid: [http://validator.w3.org/](http://validator.w3.org/)
+The W3C provides a free service to check if your markup is valid: [http://validator.w3.org/](http://validator.w3.org/)<br>
 This is a very helpful tool to make sure all of your tags are opened and closed properly.
 
 >## EXERCISE: Setting up our first project
-> Over the next couple of weeks, as we familiarize ourselves with the basics of HTML & CSS, we'll be creating a fun and simple website about anything you like. [Here's an example](exercises/module1/project-one-sample) of what we'll be building.
+> Over the next couple of weeks, as we familiarize ourselves with the basics of HTML & CSS, we'll be creating a fun and simple website about anything you like. <a href="exercises/module1/project-one-sample" target="_blank">Here's an example</a> of what we'll be building.
 > First thing's first: creating our first HTML file!
 >
 > Remember to apply the [file naming best practices](#best-practices-for-naming-web-files)!
@@ -347,7 +347,7 @@ To create the page layout, the HTML could look something like this:
 *Pro tip!*  
 When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structural tags for content it was not intended for.
 
-#### Extra Resources
+#### Resources: HTML5
 
 * [html5doctor.com](http://html5doctor.com)
 * [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf)
@@ -396,10 +396,18 @@ Let's say you're writing an essay about apples.  How would describe the hierarch
       <p>Final paragraph.</p>
     </div>
 
-#### Extra resources
+<div class="summary">
 
-Read more about headings and HTML5 [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) and [here](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
-According to Search Engine Optimization best practices, we should only have 1 `h1` tag per webpage.
+#### Resources: HTML Semantics
+
+</div>
+
+<div class="details">
+
+* [Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
+* [The Truth About Multiple H1 Tags in the HTML5 Era](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824)
+
+</div>
 
 
 ### Lists
@@ -514,15 +522,17 @@ Though this is still valid in HTML5, the forward slash is **no longer needed**, 
 
 ## Images
 
-Images are another example of a self-closing tag. Images also **requires** attributes to provide additional info.
+Images are another example of a self-closing tag. Images **require** attributes to provide additional info.
 
 A `src` *attribute* is used to tell the browser the location of the image file:
 
     <img src="folder/filename.jpg">
 
-The `alt` attribute provides *alternative text* for visually impaired users using screen readers, or if the images are disabled or unable to load.  This is recommended for your HTML to be valid and for accessibility:
+The `alt` attribute provides *alternative text* for visually impaired users using screen readers, if the images are disabled, or unable to load.  This is recommended for your HTML to be valid and for accessibility:
 
     <img src="folder/filename.jpg" alt="short description of image">
+
+Read more about [the importance of the alt attribute for accessibility](https://webaim.org/techniques/alttext/).
 
 ### Image file types
 
@@ -536,21 +546,27 @@ There are many different file types used for web. Use the format that maintains 
   * when included in the HTML, CSS can be used to style the svg (change the size or colour)
   * [learn more about SVG here](http://css-tricks.com/using-svg/)
 
-
-#### Extra resource
-
+<blockquote>
 If your file extensions do not show by default in your File explorer or Finder, here are instructions for [Mac](https://support.apple.com/kb/PH19072?locale=en_US) and for [Windows](http://windows.microsoft.com/en-ca/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7).
+</blockquote>
 
 ### Copyright
 Though images can be found all over the internet, use your own images or royalty free photos to ensure you don't violate any copyright laws.
 
 There are many paid options ranging in price, but there are also many resources for free stock photography.
 
-#### Image resources
+<div class="summary">
 
-* [https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
-*  [http://blog.hubspot.com/marketing/free-stock-photos](http://blog.hubspot.com/marketing/free-stock-photos)
+#### Resources: Images
 
+</div>
+
+<div class="details">
+
+* [A list of places to find the best free stock photos](https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b)
+* [20 of the Best Free Stock Photo Sites to Use in 2019](http://blog.hubspot.com/marketing/free-stock-photos)
+
+</div>
 
 >## EXERCISE: Adding Content, Part 2
 >
@@ -569,7 +585,7 @@ There are many paid options ranging in price, but there are also many resources 
 >*
 > <br>
 > *Pro tip!*  
-While not required, it's best practice to put image files into its own folder (as well as other related files, like CSS and JavaScript) to keep your project organized. Go ahead, try creating an images folder and download some royalty free images from [The Stocks](http://thestocks.im).
+While not required, it's best practice to put image files into their own folder (as well as other files, like CSS and JavaScript) to keep your project organized. Try creating an "images" folder, download some royalty free images from [The Stocks](http://thestocks.im), and move them from your Downloads into the images folder you created inside your project.
 
 
 
@@ -581,6 +597,7 @@ Links (hyperlinks) are represented by the anchor tag, `<a>`. It also needs an `h
 
     <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
 
+*You must include the protocol, `http://` or `https://` at the beginning, or external site links will not work.
 
 ### Link to an HTML page
 
@@ -653,10 +670,10 @@ More about `alt`, `title` and SEO (search engine optimization) [here](http://www
 >
 >Back in **index.html**, let's create our first navigation. Since we only have one page, we'll be linking our navigation items to their corresponding anchors on our website.
 >
-> 1. Since navigations are no more than a list of links, create a list of links and add as many links as you have sections. Currently, the sample project only has an About section and a footer. So, we'll create a list with two items, and inside of each item, an anchor element.  
-> 1. To link our anchor elements in the nav to our about section and footer, we'll first need to give the section and the footer an ID to anchor to.
+> 1. Since navigations are no more than a list of links, create a list of links and add as many links as you have sections. Currently, the sample project only has an 'About' section and a footer. So, we'll create a list with two items, and an anchor tag inside of each list item.  
+> 1. To link our anchor elements in the nav to our 'About' section and footer, we'll first need to give the section and the footer an ID to anchor to.
 > 1. Using the ID of each section, with a hashtag in front, add your href attributes to the nav links.
-> 1. **Bonus** If you haven't added an e-mail link in your footer, now is a great time to do so!
+> 1. **Bonus**: If you haven't added an e-mail link in your footer, now is a great time to do so!
 
 ## Folder Structure, Relative & Absolute Paths
 
@@ -707,7 +724,7 @@ This is bad practice because the site you are referencing this file from could m
 
 
 >## TAKE HOME EXERCISE: Finesse your HTML!
-> Next class we'll be making our website beautiful. Right now it should look something like [this](exercises/module1/project-one-sample-nocss/index.html).
+> Next class we'll be making our website beautiful. Right now it should <a href="exercises/module1/project-one-sample-nocss/index.html" target="_blank">look something like this</a>.
 > Keep practicing at home until next class and change your content around if you have not yet decided what to make your website about. Remember, this website is just for fun so you can be as creative as you choose to!
 
 ~ End ~
