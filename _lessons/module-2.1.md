@@ -19,7 +19,9 @@ The properties that affect the sizing of an element uses various measurement uni
   * must use whole numbers (e.g. `12px`)
 * **percentages** (`%`) - useful for fluid and responsive layouts
   * can use any number (e.g. `50%`, `25.5%`)<br />
+
 **more advanced, but also cool:**
+
 * **ems** (`em`) - originally a typographic measurement based on the letter "M"
   * relative unit, sizing is based on parent & ancestor elements sizes
   * can use any number (e.g. `1em`, `1.275em`)
@@ -364,13 +366,13 @@ Read more about colour blindness and designing for colour accessibility [here](h
 
 #### Colour Resources
 * [Adobe Color CC](https://color.adobe.com/create/color-wheel/) - tool to help you choose colour palettes
-* [Color Safe](http://colorsafe.co/) - helps you choose colours with appropriate contrast for text
+* [Color Safe](http://colorsafe.co/) - will suggest colours to use for your text based on the background colour you provide
 * [ColorZilla](http://www.colorzilla.com/) - Chrome & Firefox plugin to help you pick colours from websites
 
 
 > ## EXERCISE: Testing for Contrast
-> Go to [Color Safe](http://colorsafe.co/) and test the contrast of the current colours you're using on your site. If the contrast doesn't get a green checkmark, or if you want the contrast to be better, find a palette that will allow you to meet accessibility standards for colour contrast.
-
+> Go to [WebAIM's Color Contrast Checker](https://webaim.org/resources/contrastchecker/) and test the contrast of the current colours you're using on your site. If the contrast ratio doesn't pass, find a palette that will allow you to meet accessibility standards for colour contrast.
+> As of 2025 in Ontario, all public sector organizations, businesses and non-profit organizations with 50 or more employees will be required to meet **WCAG AA** standards. Your province may have different deadlines or requirements, but it's always best to go above and beyond if possible and pass the **AAA** level too!
 
 
 <br>

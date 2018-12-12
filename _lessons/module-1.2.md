@@ -10,12 +10,10 @@ permalink: module1-2.html
 
 >## EXERCISE: HTML Review
 >
->Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your editor and see if you can spot and correct all of the errors!
->
->It could be formatting issues like tabbing nested elements, two mismatched tags, missing quotes, or recommended attributes.
+>Download the exercise file <a href="exercises/module1/errors.html" download>here</a>.  Open **errors.html** in your text editor and see if you can spot and correct all of the errors! It could be formatting issues like tabbing nested elements, two mismatched tags, missing quotes, or recommended attributes.
 >
 >*Pro tip!*  
-Move this exercise file from your downloads folder and add it somewhere you can find it. (e.g. organized with the rest of your LLC project and exercise files)
+Move this exercise file from your downloads folder and add it somewhere you can find it (organized with the rest of your LLC project and exercise files).
 
 
 ## Audio and Video
@@ -80,8 +78,8 @@ Multiple declarations can be added for one selector to add and modify multiple s
 
 There are many CSS properties with new ones being added and old ones being retired (deprecated). It's good to have a few resources on hand:
 
-* [http://caniuse.com](http://caniuse.com)
-* [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+* [Can I use...](http://caniuse.com)
+* [CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ## CSS Comments
 
@@ -253,10 +251,10 @@ Remember, CSS files are often saved in a separate folder for organization, so ma
 
 </div>
 
-More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss).
+Read more about [referencing CSS here](http://www.corelangs.com/css/basics/linking.html).
 
 >## Class exercise
->Back in Atom, the text editor, create a new folder called `css`.<br>
+>Back in our text editor, create a new folder called `css`.<br>
 >Create a new CSS file.  (**File > New File** or **ctrl/cmd + N**). Some common file names are "global.css", "main.css", custom.css", "project-name.css", "styles.css", etc. Be sure to save it inside the same project folder that your index.html file from last week is in.<br>
 >Next, add it to **index.html** using the `<link>` tag.
 >
@@ -284,17 +282,23 @@ More about referencing CSS [here](http://reference.sitepoint.com/css/linkingcss)
       background: #B22222;
     }
 
+<div class="summary">
 
-#### Colour resources:  
+#### Colour resources
 
-* [http://coolors.co](http://coolors.co)
-* [http://colours.neilorangepeel.com](http://colours.neilorangepeel.com)
-* [http://wesandersonpalettes.tumblr.com](http://wesandersonpalettes.tumblr.com)
-* [http://www.colorpicker.com](http://www.colorpicker.com)
-* [http://www.colourlovers.com](http://www.colourlovers.com)
-* [http://flatuicolors.com](http://flatuicolors.com)
-* [http://color.hailpixel.com](http://color.hailpixel.com)
+</div>
 
+<div class="details">
+
+* [Color picker tool](https://www.webpagefx.com/web-design/color-picker/)
+* [CSS Color names](http://colours.neilorangepeel.com)
+* [Color scheme generator](http://coolors.co)
+* [Color palettes Inspired by Wes Anderson films](http://wesandersonpalettes.tumblr.com)
+* [Color trends and palettes](http://www.colourlovers.com)
+* [Palettes made by designers around the world](http://flatuicolors.com)
+* [A color picker for humans](http://color.hailpixel.com)
+
+</div>
 
 ## Cascading
 
@@ -439,7 +443,7 @@ Most decorative typefaces are one-offs containing just one font file (weight).
   * missing characters may be a sign of an incomplete and poorly designed font
 
 #### Resource
-[Chrome extension](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm) for finding out what fonts are used on any website.
+Here's a [chrome extension](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm) for finding out what fonts are used on any website.
 
 
 ## Typefaces, CSS and the Web
@@ -483,7 +487,13 @@ On a Mac, we will see Helvetica Neue being used. On Windows, unless the user has
 
 ### Custom Fonts
 
+<div class="summary">
+
 #### Free vs. Premium Fonts
+
+</div>
+
+<div class="details">
 
 There are thousands of fonts available to download and use beyond the default web safe fonts.
 
@@ -501,7 +511,15 @@ Premium fonts:
 * usually have multiple styles
 * more exclusive and unique
 
+</div>
+
+<div class="summary">
+
 ### Font Resources
+
+</div>
+
+<div class="details">
 
 * Google Fonts is a great source of quality & free fonts for the web - <https://www.google.com/fonts>
 * Google Font pairing resource and inspiration - <http://femmebot.github.io/google-type/>
@@ -509,6 +527,7 @@ Premium fonts:
 * Fonts.com has a wide library of premium fonts to choose from, including a web font delivery service - <http://www.fonts.com/>
 * Monotype has a history of providing quality premium fonts - <http://www.monotype.com/>
 
+</div>
 
 ## Google Fonts
 
@@ -561,7 +580,7 @@ Remember, use HTML for *meaning* and CSS for *presentation*. It doesn't matter i
     font-style: normal; /* removes italic style */
 
 
-### `text-` properties
+###text-properties
 
 **`text-align`**  
 Used for aligning text and accepts five values: `left`, `right`, `center`, `justify` and `inherit`.
