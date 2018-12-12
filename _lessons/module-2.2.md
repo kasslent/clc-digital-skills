@@ -3,26 +3,28 @@ layout: lessons
 module: 2
 lesson: 2
 title: CSS Fundamentals
-description: The Box Model Advanced selectors, block and inline elements 
+description: The Box Model Advanced selectors, block and inline elements
 permalink: module2-2.html
 ---
 
 ## Spacing and CSS
 
-Using space is a key part in design to ensure that the content is easy to read, view, find and aesthetically pleasing. Sometimes a few pixels can make all the difference!
+Use of space is a key part of design to ensure that the content is easy to read, view, find and aesthetically pleasing. Sometimes a few pixels can make all the difference!
 
-By default, many HTML tags are styled with some default spacing. For example, there is extra space between two paragraphs. Headings also have extra space around them.
+Based on defaults set by our browser, many HTML tags are styled with some default spacing. For example, there is extra space between paragraphs, and around headings.
 
-CSS uses 5 properties to determine the size and spacing of these elements: `width`, `height`, `padding`, `margin` and `border`. 
+CSS uses 5 properties to determine the size and spacing of these elements: `width`, `height`, `padding`, `margin` and `border`.
 
 This is referred to as **The Box Model**.
+
+<img src="{{ site.img }}/module2/css_box_model_chrome.png" alt="graphic demonstrating box model" class="print-hide">
 
 
 ## Intro to The Box Model
 
-The browser looks at every HTML element on the page as a square/rectangular box. The **CSS Box Model** describes the way CSS handles the size and spacing of HTML elements. 
+The browser looks at every HTML element on the page as a square/rectangular box. The **CSS Box Model** describes the way CSS handles the size and spacing of HTML elements.
 
-CSS uses 5 properties to determine the size and spacing of these boxes: 
+CSS uses 5 properties to determine the size and spacing of these boxes:
 
 * `width` - change the default width
 * `height` - change the default width
@@ -31,14 +33,14 @@ CSS uses 5 properties to determine the size and spacing of these boxes:
 * `border` -  add a border around the element
 
 
-Each of these boxes can have different combinations of the above properties, which in turn changes the element's size and how much space it takes up on the page.
+Each element or "box" on our page can have different combinations of the above properties, which in turn changes the element's size and how much space it takes up on the page.
 
 ### Width & Height
 
 The `width` & `height` properties can be used to set specific heights and widths to only *block* level elements.  (More on block elements in Module 3.)
 
-<div style="background:lightgreen;">This is a div with default width & height.</div>
-<div style="background:lightgreen;width:60%;height:80px;margin-top:10px;">This is a div with a set width & height.</div>
+<p style="background:lightgreen;">This is a div with default width & height.</p>
+<p style="background:lightgreen;width:60%;height:80px;margin-top:10px;">This is a div with a set width & height.</p>
 
     div {
       width: 60%;
@@ -67,7 +69,7 @@ Setting the padding to "0" will remove any default space on an HTML element. Any
 <p style="background:lightblue;padding:20px;">This is a paragraph with padding.</p>
 
 ### Margin
-Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding. 
+Margin adds/removes space *outside* of an element. However, the shorthand and longhand rules are the same as padding.
 
     /* longhand */
     margin-top: 2px;
@@ -80,7 +82,7 @@ Margin adds/removes space *outside* of an element. However, the shorthand and lo
     margin: 2px 10px; /* top & bottom, right & left */
     margin: 2px 10px 5px; /* top, right & left, bottom */
     margin: 2px 2px 2px 2px; /* top right bottom left */
-    
+
 <p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
 <p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
 
@@ -98,7 +100,7 @@ Margin also accepts negative values.  This will nudge it just outside of its sta
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
 
 ### Auto/Center Aligning with `margin`
-The margin property can also be used to center align elements. 
+The margin property can also be used to center align elements.
 
 First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
 
@@ -223,7 +225,7 @@ Descendant selectors can be used to target *nested* elements. To use a descendan
         content here
       </child>
     </parent>
-    
+
 ---
     parent child {
       /* targets only the child elements contained in that parent */
@@ -236,7 +238,7 @@ Descendant selectors can be used to target *nested* elements. To use a descendan
       <li><a href="#">link 2</a></li>
       <li><a href="#">link 3</a></li>
     </ul>
-    
+
 ---
     ul li a {
       color: blue;
@@ -267,7 +269,7 @@ A good rule of thumb for descendant selectors is to avoid going more than **thre
     }
 
 Also, a more *specific* selector will override the descendant selector, regardless of written order in the CSS file.
-    
+
     ul a {
       /* least specific */
     }
@@ -301,10 +303,10 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
     <a href="#">Example link</a>
 
 ---
-    a { 
+    a {
       color: red;
     }
-    a:hover { 
+    a:hover {
       color: black;
     }
 
@@ -326,10 +328,10 @@ There are **many** more ways to select elements such as position in the HTML doc
 
 >## EXERCISE: Selectors
 >
->Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to! 
+>Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to!
 >
 >All the instructions are contained in the comments at the very top of `selector.html`.
-> **Bonus** Open up your project's style.css file and add a hover effect to your nav links. Tip: You might even be able to combine descendant selectors with pseudo selectors for this one! 
+> **Bonus** Open up your project's style.css file and add a hover effect to your nav links. Tip: You might even be able to combine descendant selectors with pseudo selectors for this one!
 
 
 ## Block vs Inline Elements
@@ -365,7 +367,7 @@ Inline level HTML elements default behavior:
 
 ## CSS Display
 
-CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today: 
+CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today:
 
 * `block` - makes inline elements display as block elements
 * `inline` - makes block elements display as inline-block
@@ -373,14 +375,14 @@ CSS can be used to change how inline and block elements display using the `displ
 
 This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
 
-### Resource 
+### Resource
 
 [CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
 
 
 ## Display + Box Model: A match made in heaven
 
-The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It's important to note that these 5 properties will affect elements differently depending on whether they are inline or block. (or inline-block) 
+The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It's important to note that these 5 properties will affect elements differently depending on whether they are inline or block. (or inline-block)
 
 Let's explore their unique behaviour:
 
@@ -394,7 +396,7 @@ When adding padding to an *inline* element it will look like the below example.
 <a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a>
 
 <br>
-Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property to make an element 'block' if you want to add padding.. 
+Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property to make an element 'block' if you want to add padding..
 
 More on this in the upcoming exercise.
 
@@ -412,7 +414,7 @@ Just like padding, margin and spacing is not applied the same way to block and i
 ## Center Aligning with `margin`
 Using `margin:0 auto` to auto-align content only works with block elements! If you're trying to center an inline-element you need to apply the `text-align: center` property and value to the parent of the inline element.
 
-Looking back at our auto-aligned block element: 
+Looking back at our auto-aligned block element:
 <div style="width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
@@ -434,14 +436,12 @@ But to create a style where different background styles apply to each section, w
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
 > ## EXERCISE: Content Wrappers in our project
-> Originally we added padding to our project sections to make the content a little narrower and nice to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer). 
-> Go ahead and apply the codepen example from above to each of the sections of your project. 
+> Originally we added padding to our project sections to make the content a little narrower and nice to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer).
+> Go ahead and apply the codepen example from above to each of the sections of your project.
 >
-> All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added so many styles. 
+> All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added so many styles.
 >
-><a href="exercises/module2/project-one-final.zip" download>Download </a>the example files as a reference. 
+><a href="exercises/module2/project-one-final.zip" download>Download </a>the example files as a reference.
 
 <br>
 ~ End ~
-
-
