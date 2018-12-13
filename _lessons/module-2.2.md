@@ -86,15 +86,11 @@ Margin adds/removes space *outside* of an element. However, the shorthand and lo
 <p style="background:lightgreen;margin:0px;">This is a paragraph without margin.</p>
 <p style="background:lightgreen;margin:40px;">This is a paragraph with margin.</p>
 
-> Edit the CodePen below and try editing padding and margin.
-
-<p data-height="268" data-theme-id="0" data-slug-hash="bVaymY" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/bVaymY/'>margin & padding</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
-
+>Let's edit [this CodePen](http://codepen.io/learningcode/pen/bVaymY/) to try editing padding and margin.
 
 ### Margin & Negative values
 
-Margin also accepts negative values.  This will nudge it just outside of its stacked position.
+The margin property can also accept negative values.  This will nudge the element just outside of its stacked position.
 
 <p style="background:lightgreen;margin:0px;">This a paragraph without margin.</p>
 <p style="background:lightblue;margin:-15px 0 0 340px;">This a paragraph with a <strong>negative top</strong> margin value and a <strong>positive left</strong> value.</p>
@@ -102,7 +98,7 @@ Margin also accepts negative values.  This will nudge it just outside of its sta
 ### Auto/Center Aligning with `margin`
 The margin property can also be used to center align elements.
 
-First a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the top and bottom value and can be set to any value depending on the desired page style.
+First, a width needs to be set. Then by setting the left & right values to `auto`, it finds the center of the page. The `0` refers to the margin at the top and bottom of the element and can be set to any value depending on the desired page style.
 
     div {
       background: lightblue;
@@ -117,7 +113,7 @@ First a width needs to be set. Then by setting the left & right values to `auto`
 
 
 ### Border
-The `border` property resides between the `margin` and `padding` and creates an outline around the element. Also has longhand and shorthand syntax.
+The `border` property resides between the `margin` and `padding`, and creates an outline around the element. Borders can also use longhand or shorthand syntax:
 
     /* longhand */
     border-width: 2px;
@@ -127,7 +123,7 @@ The `border` property resides between the `margin` and `padding` and creates an 
     /* shorthand */
     border: 2px solid red;
 
-Like padding and margin, a border can be added to a specific side of the element.
+Like padding and margin, a border can be added only to a specific side of the element:
 
     /* longhand */
     border-top-width: 2px;
@@ -138,16 +134,18 @@ Like padding and margin, a border can be added to a specific side of the element
     border-top: 2px solid red;
 
 
-Read more about the Box Model [here](https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/).  We'll also be revisiting it in Module 3.
+[Read more about the Box Model](https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/).  We'll be revisiting this concept in Module 3.
 
 
 ## Dev tools & designing in the browser
 
-Getting to know your browser dev tools will be super handy when tweaking styles on your web page.  You'll be able to try out different CSS styles right in the browser and see the changes update right away rather than flipping back and forth between your editor and browser.
+Getting to know your browser developer tools will be super handy when tweaking styles on your web page. You'll be able to try out different CSS styles directly in the browser to see the changes immediately*, rather than flipping back and forth between your editor and browser.
 
 It's also useful for finding the correct css selectors faster than hunting through your files (or someone else's).
 
 <img src="{{ site.img }}/module2/inspect-element-css.gif" class="print-hide">
+
+> * Any changes you make in your developer tools only happen in our browser. When you refresh the page, any changes you made will disappear. Be sure to copy any changes you make in the developer tools and replicate them in your text editor.
 
 In Chrome, you can access the tools in 3 ways:
 

@@ -298,8 +298,18 @@ blockquote {
       /* 3 bar menu */ }
 
 .toc-container{
-  height: 70vh;
+  min-height: 70vh;
   overflow-y: auto;
+}
+.back-to-top{
+  background: white;
+  color: black;
+  overflow: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
 }
 
 .example {

@@ -372,7 +372,7 @@ Read more about colour blindness and designing for colour accessibility [here](h
 
 > ## EXERCISE: Testing for Contrast
 > Go to [WebAIM's Color Contrast Checker](https://webaim.org/resources/contrastchecker/) and test the contrast of the current colours you're using on your site. If the contrast ratio doesn't pass, find a palette that will allow you to meet accessibility standards for colour contrast.
-> As of 2025 in Ontario, all public sector organizations, businesses and non-profit organizations with 50 or more employees will be required to meet **WCAG AA** standards. Your province may have different deadlines or requirements, but it's always best to go above and beyond if possible and pass the **AAA** level too!
+> As of 2021 in Ontario, all public sector organizations, businesses and non-profit organizations with 50 or more employees will be required to meet **WCAG AA** standards. Your province may have different deadlines or requirements, but it's always best to go above and beyond if possible and pass the **AAA** level too!
 
 
 <br>
