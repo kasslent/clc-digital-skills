@@ -145,7 +145,7 @@ It's also useful for finding the correct css selectors faster than hunting throu
 
 <img src="{{ site.img }}/module2/inspect-element-css.gif" class="print-hide">
 
-> * Any changes you make in your developer tools only happen in our browser. When you refresh the page, any changes you made will disappear. Be sure to copy any changes you make in the developer tools and replicate them in your text editor.
+>&#42;Any changes you make in your developer tools only happen in our browser. When you refresh the page, any changes you made will disappear. Be sure to copy any changes you make in the developer tools and replicate them in your text editor.
 
 In Chrome, you can access the tools in 3 ways:
 
@@ -153,26 +153,26 @@ In Chrome, you can access the tools in 3 ways:
 * **Option 2:** select the menu icon in the top right hand corner and select **More Tools > Developer Tools**
 * **Option 3:** keyboard shortcut: **Ctrl + Shift + I (PC)** / **Cmnd + Option + I (Mac)**
 
-> Pick your favorite website and try it out!
+Pick your favorite website and try it out!
 
 > ## EXERCISE: Margin & Padding
 > Download the [exercise file](exercises/module2/margin-padding.zip) (zip file).  Base HTML & CSS is already included.
 >
->With a partner, edit/add/remove some margin and padding to make this web page look just a little bit nicer and more balanced.
+>With a partner, edit/add/remove some margin and padding to make this web page look nicer and more balanced.
 >
->Using the class added to the HTML, `<div class="wrapper">`, add `margin` and `width` to auto align the page content.
+>Using the `wrapper` class added to the `div` tag, add `margin` and `width` properties in your CSS to auto align the page content.
 >
 >**solution.css** has been included for reference.
 
 
 ## The Box Model Problem and Fix
 
-In CSS ,the relationship between the width, padding and border properties is not always straightforward.
-For example, if you set the width of a box to 480px and added 20px of padding and a 15px border on the left and right side, the width of the box will actually be:
+In CSS, the relationship between the width, padding and border properties is not always straightforward.
+For example, if you set the width of a box to 480px, added 20px of padding on the left and right sides, and a 15px border on the left and right sides, the width of the box will actually be:
 
 480 (width) + 20 (padding-left) + 20 (padding-right) + 15 (border-left) + 15 (border-right) = 550px total width
 
-But, there's a fix! Let's first compare how the element's sizing differs with and without the fix, looking at the CSS example below.
+Having to do this math everytime can be complicated to keep track of. There is a way around this! Let's first compare how the element's sizing differs with and without the fix by looking at the CSS example below:
 
     background: lightblue;
     width: 480px;
@@ -189,9 +189,9 @@ But, there's a fix! Let's first compare how the element's sizing differs with an
 
 
 <br>
-Notice that without the fix, the element is larger than the set `width`.
+Notice that without the fix, the element is larger than the `width` that we specify.
 
-The box model fix is a CSS code snippet you can (and should) add to all your projects.  With this fix, padding and border will not affect the overall sizing of the element.
+The Box Model fix is a CSS code snippet you can (and should) add to all your projects. With this quick fix, padding and border will not affect the overall sizing of any element.
 
 Here is the snippet:
 
@@ -203,20 +203,20 @@ Here is the snippet:
       box-sizing: inherit;
     }
 
-Read more about the fix [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+[Read more about this fix(http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
 > ## EXERCISE: Margin & Padding on Your Project
-> Open up your project files and based on the last exercise, add margin and padding to make your website look more balanced.
->
->Wrap your content with a <div class="wrapper">`, and add `margin` and `width` to auto align the page content.
->
 > Add the box model fix to the top of your CSS file.
+>
+> Open up your project files and based on the last exercise, add margin and padding to make your website look more balanced. Add more space around your sections, header and footer, or remove space around headings that you don't want.
+>
+>Wrap your content with a `<div class="wrapper">`, and add `margin` and `width` to auto align the page content.
 
 ## Advanced Selectors
 In the previous lessons, we covered a few ways to select an element using element type, class and id selectors to apply CSS to it, but there are many more ways of targeting content!
 
-## Descendant Selectors
-Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors.
+### Descendant Selectors
+Descendant selectors can be used to target *nested* elements. To use a descendant selector, add a *space* between selectors:
 
     <parent>
       <child>
@@ -242,16 +242,16 @@ Descendant selectors can be used to target *nested* elements. To use a descendan
       color: blue;
     }
 
-In the above example, this style would apply only to links inside of a list item, inside of an unordered list. Descendant selectors apply to any nested element, no matter how many levels deep.
+It can help to try and read the selector from right to left; in the above example, this style would apply only to links (`a`) inside of a list item (`li`), inside of an unordered list (`ul`).
 
-You can even "skip" an element. The below example will work as well.
+You can even "skip" an element. The below example will work as well:
 
     ul a {
       color: blue;
     }
 
-### Descendant Selectors and Specificity
-A good rule of thumb for descendant selectors is to avoid going more than **three** levels deep.  Browsers read selectors from right to left and work its way up the [DOM](http://www.w3.org/TR/WD-DOM/introduction.html) tree.  Having many selectors can impact the site performance.
+#### Descendant Selectors and Specificity
+A good rule of thumb for descendant selectors is to avoid going more than **three** levels deep.  Browsers read selectors from right to left and work its way up the [DOM](http://www.w3.org/TR/WD-DOM/introduction.html).  Having many selectors can impact the site performance, so it's always preferable to have only as many as are necessary.
 
 #### Yes
     p a {
@@ -266,21 +266,23 @@ A good rule of thumb for descendant selectors is to avoid going more than **thre
       ...
     }
 
-Also, a more *specific* selector will override the descendant selector, regardless of written order in the CSS file.
+Buckle your seat belts, things get a little more complicated!
 
+A more *specific* selector will override the descendant selector, regardless of written order in the CSS file.
+
+    ul.nav li a {
+      /* most specific */
+    }
     ul a {
       /* least specific */
     }
     ul li a {
       /* more specific */
     }
-    ul.nav li a {
-      /* most specific */
-    }
 
 
-## Combining selectors
-You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a *comma*. Any type of selector can be combined.
+### Combining selectors
+You can also combine selectors if you want the same style to be applied to multiple elements by separating the selectors with a *comma*, just like you would when you are listing items in a sentence. Any type of selectors can be combined:
 
     .special, #special {
       color: red;
@@ -294,9 +296,15 @@ You can also combine selectors if you want the same style to be applied to multi
 
 > What is the difference is between combining `h1, h2` and `header h1, h2`?
 
-## Pseudo-class Selectors
+<div class="summary">
 
-Pseudo-class selectors target an elements *state* or *action*. The most commonly used pseudo-class is `:hover`.  Note the syntax. It must start with a colon (`:`) and be attached to an HTML element, with no white-space.
+### Pseudo-class Selectors
+
+</div>
+
+<div class="details">
+
+Pseudo-class selectors target an element's *state* or *action*. The most commonly used pseudo-class is `:hover`.  Note the syntax: it must start with a colon (`:`) and be attached to an HTML element, with no white-space. These are commonly applied to links, but can be applied to *any* HTML tag.
 
     <a href="#">Example link</a>
 
@@ -307,8 +315,6 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
     a:hover {
       color: black;
     }
-
-### Pseudo Class & links
 
 `:hover` - selects the link on mouse hover.  
 &nbsp; Can also be used to create hover effects for elements other than an `<a>`.
@@ -321,44 +327,51 @@ Pseudo-class selectors target an elements *state* or *action*. The most commonly
 
 
 <br>
-There are **many** more ways to select elements such as position in the HTML document or by attribute name. Explore the resources below for more information about advanced CSS selectors.
+There are **many** more ways to select elements, such as position in the HTML document, or by attribute name. Explore these resources for more information about advanced CSS selectors:
 
+>*[Scroll down to the bottom of this page](https://www.w3schools.com/css/css_pseudo_classes.asp) to reference a list of all pseudo classes
+>*[CSS Attributes selector](https://www.w3schools.com/css/css_attribute_selectors.asp)
+>*[CSS Combinators](https://www.w3schools.com/css/css_combinators.asp)
+
+</div>
 
 >## EXERCISE: Selectors
 >
 >Download the <a href="exercises/module3/selectors.zip" download>exercise</a> (zip file). The answer key has been included so no peeking unless you really really need to!
 >
->All the instructions are contained in the comments at the very top of `selector.html`.
-> **Bonus** Open up your project's style.css file and add a hover effect to your nav links. Tip: You might even be able to combine descendant selectors with pseudo selectors for this one!
+>All the instructions are contained in the comments at the very top of `selector.html`
+>**Bonus:** Open up your project's `style.css` file and add a hover effect to your nav links
+>**Tip:** You can even combine descendant selectors with pseudo selectors for this one!
 
 
 ## Block vs Inline Elements
 
 
-Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override default HTML styles.
+Though CSS can be used to add a lot of new styles to your webpage, CSS is also used to override the default behaviours of HTML elements.
 
 
-Block level HTML elements default behavior:
+*Block* level HTML elements default behavior:
 
-* takes up 100% width of its container, no matter how long the actual content is
 * will be the same height as its content
+* takes up 100% width of its container, no matter how long the actual content is
 * always starts on a new line
 * can wrap other block level elements or inline elements
 * can apply sizing related CSS to it (margin, padding, height, width)
 * examples: `<p>`, `<div>`, `<ul>`
 
-Inline level HTML elements default behavior:
+*Inline* level HTML elements default behavior:
 
-* will be the height and width of its content
+* will be the height **and width** of its content
 * always appears "in a line" with other inline level elements
-* can wrap other inline elements but cannot wrap block level elements *except* `<a>` tags.  This is only valid with an HTML5 doctype.
-* does not render CSS height and width at all, will apply margin and padding but with unexpected results
+* can wrap other inline elements, but cannot wrap block level elements *except* `<a>` tags. (This is only valid with an HTML5 doctype.)
+* does not render CSS height and width at all
+* will apply margin and padding, but with unexpected results
 * examples: `<a>`, `<span>`
 
 <br>
 **Pro tip!** If you're not quite sure if an element is block or inline, put a background color on the element.  If it stretches the full width of the browser window, it's a block element.  If it spans only the length of its content, it's an inline element.
 
-<div style="background:lightblue;">this is a div</div>
+<p style="background:lightblue;">this is a div</p>
 
 <span style="background:lightgreen;">this is a span</span>
 
@@ -368,35 +381,30 @@ Inline level HTML elements default behavior:
 CSS can be used to change how inline and block elements display using the `display` property. There are three values we'll look at today:
 
 * `block` - makes inline elements display as block elements
-* `inline` - makes block elements display as inline-block
-* `inline-block` - best of both worlds
+* `inline` - makes block elements display as inline elements
+* `inline-block` - best of both worlds!
 
-This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use.
-
-### Resource
-
-[CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/)
+This property will come in handy when using the Box Model properties.  Let's do a review before we put display to use. If you're interested to learn more, read [CSS Tricks: Display property](https://css-tricks.com/almanac/properties/d/display/).
 
 
 ## Display + Box Model: A match made in heaven
 
-The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It's important to note that these 5 properties will affect elements differently depending on whether they are inline or block. (or inline-block)
+The last lesson introduced the Box Model and 5 CSS properties: width, height, padding, margin, border.  It's important to note that these 5 properties will affect elements differently depending on whether they are `inline` or `block`, or `inline-block`.
 
 Let's explore their unique behaviour:
 
 ### Width & Height
-These properites won't work for *inline* level elements unless you use `display` to change it to `block` or `inline-block`.
+These properties won't work for *inline* level elements. If you want to specify a width and height, you will have to use the `display` property with a value of `block` or `inline-block`.
 
 ### Padding
 
-When adding padding to an *inline* element it will look like the below example.
+When applying padding to an *inline* element, it will look like the below example:
+
 <p style="background:lightblue;padding:0px;">This is a block element without padding.</p>
 <a href="#" style="background:lightgreen;padding:20px;">This is an inline element with padding.</a>
 
 <br>
-Notice that there's no space between the two element? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property to make an element 'block' if you want to add padding..
-
-More on this in the upcoming exercise.
+Notice that there's no space between the two elements? Inline elements don't apply padding the same way as block elements.  You will need to use the CSS `display` property to make an element 'block' if you want to apply padding.
 
 ### Margin
 
@@ -410,15 +418,20 @@ Just like padding, margin and spacing is not applied the same way to block and i
 > In this [Codepen](http://codepen.io/learningcode/pen/vNRadg), let's try the different `display` property values and see how it affects inline & block HTML elements.
 
 ## Center Aligning with `margin`
-Using `margin:0 auto` to auto-align content only works with block elements! If you're trying to center an inline-element you need to apply the `text-align: center` property and value to the parent of the inline element.
+Using `margin:0 auto` to auto-align content only works with `block` elements! If you're trying to center an `inline` element, you need to use `text-align: center` on the parent of the inline element.
 
-Looking back at our auto-aligned block element:
+Let's look back at our auto-aligned block element:
 <div style="width:600px;margin: 0 auto;background:lightblue;">
   <p>Auto aligned!</p>
 </div>
 
+  `div{
+    background: lightblue;
+    width: 600px;
+  }`
+
 <br>
-Notice how the background color only extends the set width of the element?  What if you want to auto align the content only and have different background colors or images?  In the example below, notice that content stays in the middle but the background styles expand the width of the page?
+Notice how the background colour only extends the set width of the element?  What if you want to auto align only the content, and have different background colors or images?  In the example below, notice that content stays in the middle but the background styles expand the width of the page?
 
 ![]({{ site.img }}/module3/content-align.jpg)
 
