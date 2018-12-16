@@ -259,15 +259,7 @@ What if you don't want your links to go all the way to the edge? Let's say you w
 
 ![]({{ site.img }}/module3/flexbox-nav-space-around.png)
 
-</div>
-
->## EXERCISE: Horizontal navigation on your project
->
->Now open up your own project file and try styling the list navigation using `flexbox`. If you don't have a navigation on your own website, create one!
->
->Use some of the layout techniques we've learned the last couple of classes and apply them to your website as needed.
-
-These are just some benefits to using `flexbox` to lay out your site, and we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more. This becomes even more powerful when re-arranging your desktop site for mobile devices.d
+These are just some benefits to using `flexbox` to lay out your site, but we've only just scratched the surface. Using `flexbox`, you can alter the **order** in which items appear, and much more! This becomes even more powerful when re-arranging your desktop site for mobile devices.
 
 ### Read more about Flexbox!
 
@@ -276,8 +268,16 @@ These are just some benefits to using `flexbox` to lay out your site, and we've 
 * [What the Flexbox?! - Free 20-video course on CSS Flexbox](http://flexbox.io/)
 * [Flexbox Reference (Codrops)](http://tympanus.net/codrops/css_reference/flexbox/)
 
+</div>
+
+>## EXERCISE: Horizontal navigation on your project
+>
+>Now open up your own project file and try styling the list navigation using `flexbox`.
+>
+>Use some of the layout techniques we've learned the last couple of classes and apply them to your website as needed.
+
 <br>
-Remember, every HTML element is essentially just a "box" so the techniques discussed above are not limited to just navigations using a list.  
+Remember, every HTML element is essentially just a "box", so the techniques discussed above are not limited to just navigation lists.  
 
 
 ## CSS Position property
@@ -288,12 +288,12 @@ The `position` property can also be used to lay out HTML elements and has five d
 ### position: static;
 
 * default value
-* elements are not positioned at all and in the normal page flow
+* elements are not positioned at all and stay in the normal page flow
 * offset properties are ignored
 
 ### position: relative;
 
-* has the same behavior as `static` **but** box offset properties can be applied to it
+* has the same behavior as `static`, but offset properties can be applied to it
 * use this to nudge the element within its stacked order
 
 ### position: absolute;
