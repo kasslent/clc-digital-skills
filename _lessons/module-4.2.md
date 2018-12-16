@@ -74,7 +74,7 @@ To navigate *up and out* of a folder, the syntax is always `../`  to represent m
 
 <div class="summary">
 
-### `background-repeat`
+## `background-repeat`
 
 </div>
 
@@ -97,7 +97,7 @@ To keep the image from repeating, use the `background-repeat` property. You can 
 
 <div class="summary">
 
-### `background-attachment`
+## `background-attachment`
 
 </div>
 
@@ -306,7 +306,7 @@ Height and width can also be used together in the media query:
     940px - 1024px — Tablet landscape, netbook, small desktop
     1280px & greater — Desktop
 
-These are just general guidelines. There are no set-in-stone rules, because neew devices are being made and purchased all the time. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
+These are just general guidelines. There are no set-in-stone rules, because new devices are being made and purchased all the time. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
 
 >## EXERCISE: Basic Media queries
 >
@@ -316,11 +316,13 @@ These are just general guidelines. There are no set-in-stone rules, because neew
 > Change the background color and test it to make sure it works!
 >
 >**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
->   @media (max-width: 768px) {
-      *{
-        outline: 1px solid red;
-      }
-    }
+>
+>   <code>@media (max-width: 768px) {<br />
+    &nbsp;&nbsp;&nbsp;*{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outline: 1px solid red;<br />
+    &nbsp;&nbsp;&nbsp;}<br />
+    }</code>
+>
 > The `*` selector means *all*. It will select **every** element
 
 ## RWD Best Practices
