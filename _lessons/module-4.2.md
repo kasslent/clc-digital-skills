@@ -59,7 +59,7 @@ So far we've used `background` for colours, but it can also be used for setting 
            |---picture.jpg
       |---index.html    
 
-To find the correct file path to add a background image using CSS, the starting point is **styles.css**.  If your folder directory looks like the above example, the steps to follow are:
+To find the correct path to add a background image using CSS, the starting point is **styles.css**.  If your folder directory looks like the above example, the steps to follow are:
 
 1. navigate up and out of the css folder (`../`)
 1. go into the images folder (`../images/`)
@@ -68,7 +68,7 @@ To find the correct file path to add a background image using CSS, the starting 
 ---
     background-image: url(../images/picture.jpg);
 
-To navigate *up and out* of a folder, the syntax is always `../`  to represent moving up the directory by *one* folder, regardless of the folder name.
+To navigate *up and out* of a folder, the syntax is always `../`  to represent moving up the directory by *one* folder.
 
 </div>
 
@@ -80,11 +80,11 @@ To navigate *up and out* of a folder, the syntax is always `../`  to represent m
 
 <div class="details">
 
-If the image file is *smaller* than the element with the background image applied to it, the image will automatically repeat to fill up the space.
+If the image file is *smaller* than the element than you're applying the background image to, the image will automatically repeat to fill up the space.
 
 ![]({{ site.img }}/module3/background-repeat.jpg)
 
-To keep the image from repeating, use the `background-repeat` property **or** add it to the shorthand `background` property.
+To keep the image from repeating, use the `background-repeat` property. You can also add it to the shorthand `background` property:
 
     /* shorthand */
     background: url(../images/picture.jpg) no-repeat;
@@ -103,7 +103,7 @@ To keep the image from repeating, use the `background-repeat` property **or** ad
 
 <div class="details">
 
-When the page scrolls, all the content scrolls with it including the background image.  Adding `background-attachment: fixed;` will change that.
+When the page scrolls, all the content scrolls with it, including the background image. Adding `background-attachment: fixed;` will change that behaviour:
 
     /* shorthand */
     background: url(../images/picture.jpg) no-repeat fixed;
@@ -113,11 +113,13 @@ When the page scrolls, all the content scrolls with it including the background 
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+>Try it out on your project and see the result when you scroll down the page.
+
 </div>
 
 <div class="summary">
 
-### Background-size
+## Background-size
 
 </div>
 
@@ -125,9 +127,12 @@ When the page scrolls, all the content scrolls with it including the background 
 
 CSS3 introduced the `background-size` property which can be used to change the size. The syntax is:
 
-    background-size: width height;
+    background-size: 300px 100px; /* width, height */
 
-The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`.
+
+    background-size: 500px; /* changes only the width, height will adjust accordingly */
+
+The default values for width and height are `auto` which retains the original image dimensions.
 
 There are several sizing dimensions: pixels, percentages and keywords.
 
@@ -145,7 +150,7 @@ To include it in the shorthand `background` property, it **must** be included af
     /* shorthand */
     background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
 
-**Important**: If no `background-position` value is being used, `background-size` will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax.
+**Important**: If no `background-position` value is being used, `background-size` will not work using the shorthand syntax. In this case, it may be less error prone to add it using the longhand syntax:
 
     background: url(../images/background-1.jpg) no-repeat fixed 50%;
     background-size: 100%;
@@ -154,16 +159,16 @@ To include it in the shorthand `background` property, it **must** be included af
 `background-size` also accepts keyword values, `contain` and `cover`.
 
 * `contain` scales the image to fit its container. The image will grow or shrink proportionally, but the width and height will not exceed the container’s dimensions
-* `cover` scales the image to fit the entire container but if the container has a different aspect ratio, the image will be cropped
+* `cover` scales the image to fit the entire container, but if the container has a different aspect ratio than the image, the image will be cropped.
 
 </div>
 
 >## EXERCISE: images & background images
 >
 >Download the exercise files <a href="exercises/module3/fluid-images.html" download>fluid-images.html</a> and in the text editor.
->Uncomment each property, change some values and see what happens!
+>Uncomment each property and change some values to see what happens.
 
-#### Extra Resources
+#### Extra Resources: CSS Backgrounds
 * [Mozilla Developer Network - background-size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 * [CSS Background Shorthand Property](http://sixrevisions.com/css/background-css-shorthand/)
 
@@ -173,7 +178,7 @@ To include it in the shorthand `background` property, it **must** be included af
 
 When Ethan Marcotte introduced the [responsive web design](http://alistapart.com/article/responsive-web-design) approach in 2010, the idea that one website could target multiple screens got the dev community really excited.
 
-Fluid websites are not new. Using percentage based widths in the base CSS will make the page fluid as the page is resized. Responsive techniques take it a step further and is used to rearrange and restyle elements based on the device’s screen size using **media queries**.
+Fluid websites are not new. Using percentage based widths in CSS will make the page fluid as the page is resized. Responsive techniques take that a step further and can be used to rearrange and change the styles of elements based on the device’s screen size using **media queries**.
 
 [mediaqueri.es](http://mediaqueri.es) houses a collection of responsive websites. Take a look at a few sites and see how the layouts change when the browser window size changes.
 
@@ -187,7 +192,7 @@ While responsive web design has become a popular standard, a separate mobile sit
 
 ### Different types of web design
 
-In order to understand responsive web design and web development better, we have to understand what the options are:
+In order to understand responsive web design and web development better, we will explore some common techniques:
 
 * Fixed/Static
 * Fluid/Liquid
@@ -196,29 +201,29 @@ In order to understand responsive web design and web development better, we have
 
 > Let's take a look at and discuss this example: <http://www.liquidapsive.com/>
 >
-> Make your browser window bigger and smaller. How do the different designs styles change?
+> Make your browser window bigger and smaller. How does the layout and styles change?
 
 ### Mobile-first design
 
 When responsive design was introduced, it was common to start with a desktop design, then make the design responsive for smaller screens.
 
-This has changed with smartphones and tablets, giving rise to another approach, mobile first design:
+This has changed with the proliferation of smartphones and tablets, giving rise to another approach, mobile first design:
 
-* design an experience for mobile devices first, then desktop
+* design an experience for mobile devices first, then adapt for desktop
 * make mobile integral, not an afterthought
-* graceful degradation and progressive enhancement
 
 ### Resources
 
 * The [article](http://alistapart.com/article/responsive-web-design) that started the Responsive Design movement.
 * [Mobile First Design: Why It’s Great and Why It Sucks](https://codemyviews.com/blog/mobilefirst)
+* [Graceful Degradation vs. Progressive Enhancement](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement)
 
 
 ## Viewport Meta Tag
 
 The viewport meta tag is **required** in the `<head>` of the HTML document to ensure that the page responds on mobile devices.
 
-If you forget to include this tag, it will **not** render properly on a mobile device.
+If you forget to include this tag, media queries **will not** render properly on a mobile device:
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -232,17 +237,17 @@ If you forget to include this tag, it will **not** render properly on a mobile d
 
 ## Media queries
 
-Media queries allows you to apply CSS to your document only when the screen has reach a certain size (also referred to as a breakpoint).
+Media queries allow you to apply CSS to your document only when the screen has reach a certain size (also referred to as a breakpoint).
 
 Basic media query:
 
     @media (max-width: 940px) {
-      /* CSS for that screen size goes here */
+      /* CSS for screens 940px wide or smaller */
     }
 
 The above example targets a browser with the maximum width of 940px (anything equal or less than 940px).
 
-All rules for a specific screen size is required to be nested *within* the media query.
+All rules for a specific screen size are required to be nested *within* the media query.
 
     @media (max-width: 940px) {
       body {
@@ -253,7 +258,7 @@ All rules for a specific screen size is required to be nested *within* the media
       }
     }
 
-You can also use `min-width` in media queries.
+You can also use `min-width` in media queries:
 
     @media (max-width: 940px) {
       /* any screen 940px and below */
@@ -264,19 +269,19 @@ You can also use `min-width` in media queries.
 
 > Why do you think 941px was used for min-width instead of 940px?
 
+When you are starting out, you may find it easier to stick to only `max-width` or only `min-width`. Switching between the two can get confusing, espeically if you are using many media queries.
 
-To limit the CSS to a range of pixel values, use a combination of `min-width` and `max-width`. This can be helpful when targeting a specific screen size and is best used to contain a particular style just within range.
+Since we are adapting a desktop design for smaller devices, we will be using max-width queries to target smaller devices and give them specific styles. If we were adopting the mobile first approach, we would style for the smallest screen size first, and then use `min-width` queries to apply styles to larger devices.
 
-    @media (min-width: 768px) and (max-width: 940px) {
-
-    }
-
-The above media query will only be applied when the width of the browser is greater or equal to 768px **and** less or equal to 940px.
-
+<div class="summary">
 
 ### Height
 
-Most responsive techniques target width but it is possible to target device heights.
+</div>
+
+<div class="details">
+
+Most responsive techniques target width, but it is possible to target device heights:
 
     @media (min-height: 568px) {
       /* anything as high or higher than the iPhone 5 */
@@ -288,7 +293,9 @@ Height and width can also be used together in the media query:
       /* anything as high or higher than the iPhone 5 */
     }
 
-**Note:** Relying on height-based media queries can be inconsistent and most of the time, it's better to let the content flow downward as the width of the device gets smaller.
+**Note:** Relying on height-based media queries can be inconsistent, so most of the time it's better to let the content flow downward as the width of the device gets smaller.
+
+</div>
 
 ### Common breakpoints
 
@@ -299,7 +306,7 @@ Height and width can also be used together in the media query:
     940px - 1024px — Tablet landscape, netbook, small desktop
     1280px & greater — Desktop
 
-These are just general guidelines. There are no hard and fast rules. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
+These are just general guidelines. There are no set-in-stone rules, because neew devices are being made and purchased all the time. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
 
 >## EXERCISE: Basic Media queries
 >
@@ -308,7 +315,13 @@ These are just general guidelines. There are no hard and fast rules. Depending o
 > In the `<head>` section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 > Change the background color and test it to make sure it works!
 >
->**Bonus:** Try using `min-width` or a combination of `min-` and `max-width` to create a range.
+>**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
+>   @media (max-width: 768px) {
+      *{
+        outline: 1px solid red;
+      }
+    }
+> The `*` selector means *all*. It will select **every** element
 
 ## RWD Best Practices
 
