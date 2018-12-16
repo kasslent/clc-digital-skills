@@ -192,13 +192,13 @@ Using graph paper can also help layout columns and gutters when doing a hand dra
 
 Some content blocks may span multiple columns, others may span only one.
 
-For example, the <a href="/llc-digital-skills-1/assets/img/module2/grid-fs.jpg" target="_blank">Food Sense Blog website</a>/module2/grid-fs.jpg uses the 12 column grid to organize the content in different ways.
+For example, the <a href="/llc-digital-skills-1/assets/img/module2/grid-fs.jpg" target="_blank">Food Sense Blog website</a> uses the 12 column grid to organize the content in different ways.
 
 </div>
 
 <div class="summary">
 
-#### Resources: Grid Layouts
+### Resources: Grid Layouts
 
 </div>
 
@@ -216,7 +216,7 @@ For example, the <a href="/llc-digital-skills-1/assets/img/module2/grid-fs.jpg" 
 >1. Using paper and pen/pencil, roughly sketch a 12 column grid on the paper. Use this as a base for the layout for a website. Be sure to refer to the content for your website that you've been working on in the last 2 weeks. You will now explore how you want to layout this content on the page.
 1. Next, you can choose to create a more polished design in Pixlr using your knowledge of layers to bring your design to life.
 >Block out areas of the page for your content. Experiment with multiple layouts to see which works best. Remember the tips of size, alignment and spacing when arranging your content.
->Pro Tip: If you plan to bring your design to life in Pixlr, download this <a href="exercises/module3/grid.png" download>grid image to layer over your design</a>.
+>Pro Tip: If you plan to bring your design to life in Pixlr, <a href="exercises/module3/grid.png" download>download this grid image</a> to layer over your design.
 
 **The CSS techniques for creating page layout styles will be covered in Module 4.**
 
