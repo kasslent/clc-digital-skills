@@ -425,13 +425,13 @@ Let's look back at our auto-aligned block element:
   <p>Auto aligned!</p>
 </div>
 
-  `div{
-    background: lightblue;
-    width: 600px;
-  }`
+    div{
+      background: lightblue;
+      width: 600px;
+    }
 
 <br>
-Notice how the background colour only extends the set width of the element?  What if you want to auto align only the content, and have different background colors or images?  In the example below, notice that content stays in the middle but the background styles expand the width of the page?
+Notice how the background colour only extends the set width of the element?  What if you want to auto align only the content, and have different background colors or images?  In the example below, notice that content stays in the middle, but the background styles expand the width of the page?
 
 ![]({{ site.img }}/module3/content-align.jpg)
 
@@ -440,19 +440,19 @@ In the previous lesson, a wrapper was included around all of the page content.
 
 But to create a style where different background styles apply to each section, we'll need to:
 
-* create a wrapper, just for the content, not the whole page
-* auto align the content wrapper
+* create a wrapper for each section of content, not the whole page
+* auto align the content wrappers
 * use the outer container for the background styles
 
 >Looking at this [CodePen example](http://codepen.io/learningcode/pen/avYXvq), compare the difference between using and not using a content wrapper.
 
 > ## EXERCISE: Content Wrappers in our project
-> Originally we added padding to our project sections to make the content a little narrower and nice to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer).
-> Go ahead and apply the codepen example from above to each of the sections of your project.
+> Originally, we added padding to our project sections to make the content area more narrow, making the text easier to read. But it would be much better to use content wrappers in each of our sections (nav, header, section, footer).
+> Go ahead and apply the Codepen example from above to each of the sections of your project.
 >
-> All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added so many styles.
+> All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added our styles.
 >
-><a href="exercises/module2/project-one-final.zip" download>Download </a>the example files as a reference.
+> You can <a href="exercises/module2/project-one-final.zip" download>Download the example files</a> to use as reference if you get stuck.
 
 <br>
 ~ End ~
