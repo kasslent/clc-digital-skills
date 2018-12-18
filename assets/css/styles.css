@@ -312,10 +312,11 @@ blockquote {
   right: 25px;
   height: 50px;
   width: 50px;
-  transition-duration: 0.5;
+  text-indent: -999px;
+  transition-duration: 0.5s;
 }
 .back-to-top:hover{
-  opacity: 0.9;
+  opacity: 0.65;
 }
 
 .example {
