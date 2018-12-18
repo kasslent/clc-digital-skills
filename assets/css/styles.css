@@ -302,14 +302,20 @@ blockquote {
   overflow-y: auto;
 }
 .back-to-top{
-  background: white;
+  background: url(../img/back-top.png);
+  background-size: 100%;
   color: black;
   overflow: hidden;
+  opacity: 0.4;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   height: 50px;
   width: 50px;
+  transition-duration: 0.5;
+}
+.back-to-top:hover{
+  opacity: 0.9;
 }
 
 .example {
