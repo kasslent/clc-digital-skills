@@ -45,7 +45,13 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 
 ## How do we know that SEO is working?
 
+<div class="summary">
+
 ### SEO Metrics:
+
+</div>
+
+<div class="details">
 
 - Rankings (aka SERP - Search Engine Ranking Position) - how high does the website appear in the search results for a particular keyword.
 	- Example goal: Increase SERP from 12 to 5 for [keyword]
@@ -64,6 +70,8 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 - Domain Authority - (DA) is a score developed by Moz that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high Domain authority score means your complete website / all the pages on your domain have the potential to rank well in search engine results. Use Moz Bar Extension to find.
 	- Example goal: Increase DA from 29 to 35
 
+</div>
+
 ## What can we do to optimize the website?
 
 1. Technical SEO
@@ -75,7 +83,13 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 
 Since search engine robots (aka spiders, bots, crawlers) can’t see the website the way you or your visitors can, it’s important to ensure they can access your website and its contents, process them and be able to make a decision about what position you should rank for.
 
+<div class="summary">
+
 ### How can we do so?
+
+</div>
+
+<div class="details">
 
 1. Sitemap - make sure you have one. Use [Google Search Console](https://www.google.com/webmasters/tools/) or [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to submit.
 
@@ -112,6 +126,8 @@ Since search engine robots (aka spiders, bots, crawlers) can’t see the website
 	- 5xx Issues (500, 502, etc.) – Server error. Use Google Search Console to find them.
 	- Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on [Google Manual Actions.](http://onlineownership.com/google-manual-action-google-wmt-explained/)
 
+</div>
+
 > ## Technical SEO Exercise:
 Visit the following websites and use Screaming Frog to fill out the [Technical SEO Audit spreadsheet:](https://docs.google.com/spreadsheets/d/11VFZxEqHV0i9MlQyHFvOHs01BWTzJ2TdWQ4CDoAzTpk/edit#gid=0)
 >
@@ -121,7 +137,13 @@ Visit the following websites and use Screaming Frog to fill out the [Technical S
 ## Content & Keywords
 You want to structure your website’s content in a way that’s easy for search engines and people to navigate.
 
+<div class="summary">
+
 ### How can we do that?
+
+</div>
+
+<div class="details">
 
 1. Keyword Research
 Before you start writing and publishing content you need to figure out what your target keywords are.
@@ -138,6 +160,8 @@ Before you start writing and publishing content you need to figure out what your
 	- What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.
 	- What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page.
 	- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.
+
+  </div>
 
 	> ## Keyword Research Exercise:
 	>
@@ -187,40 +211,35 @@ If you wish to learn more about SEO, here are some resources you will find usefu
 
 <div class="summary">
 
-### SEO Resources - guides
+### SEO Resources - Guides
 
 </div>
 
 <div class="details">
 
-- The Beginner’s Guide to SEO
-[https://moz.com/beginners-guide-to-seo](https://moz.com/beginners-guide-to-seo)
-
-- Google Search Engine Optimization Starter Guide
-[http://static.googleusercontent.com/media/](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf)
-
-- The Advanced Guide to SEO
-[https://www.quicksprout.com/the-advanced-guide-to-seo/](https://www.quicksprout.com/the-advanced-guide-to-seo/)
+* [The Beginner’s Guide to SEO](https://moz.com/beginners-guide-to-seo)
+* [Google Search Engine Optimization Starter Guide](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf)
+* [The Advanced Guide to SEO](https://www.quicksprout.com/the-advanced-guide-to-seo/)
 
 </div>
 
 <div class="summary">
 
-### SEO Resources - blogs
+### SEO Resources - Blogs
 
 </div>
 
 <div class="details">
 
-- [https://moz.com/blog](https://moz.com/blog )
-- [SEO/Digtial Marketing news](http://searchengineland.com/)
-- [SEO/Digtial Marketing news](https://www.searchenginejournal.com/)
-- [A Community of digital marketers](https://inbound.org/) sharing articles and asking questions. Good if you don't have much time but want to see what's happening in the industry overall
-- [SEO/Digtial Marketing news](http://www.seobook.com/blog)
-- [ahrefs](https://ahrefs.com/blog/), one of the tools mentioned above. They have a pretty good blog section with some high quality content
-- [Actionable SEO content](http://backlinko.com/blog)
-- [Collection of link building strategies](http://pointblankseo.com/link-building-strategies)
-- [Blog](http://www.annielytics.com/blog/) about analytics which goes hand-in-hand with SEO
+* [https://moz.com/blog](https://moz.com/blog )
+* [SEO/Digtial Marketing news](http://searchengineland.com/)
+* [SEO/Digtial Marketing news](https://www.searchenginejournal.com/)
+* [A Community of digital marketers](https://inbound.org/) sharing articles and asking questions. Good if you don't have much time but want to see what's happening in the industry overall
+* [SEO/Digtial Marketing news](http://www.seobook.com/blog)
+* [ahrefs](https://ahrefs.com/blog/), one of the tools mentioned above. They have a pretty good blog section with some high quality content
+* [Actionable SEO content](http://backlinko.com/blog)
+* [Collection of link building strategies](http://pointblankseo.com/link-building-strategies)
+* [Blog](http://www.annielytics.com/blog/) about analytics which goes hand-in-hand with SEO
 
 </div>
 
