@@ -119,7 +119,7 @@ When the page scrolls, all the content scrolls with it, including the background
 
 <div class="summary">
 
-## Background-size
+## `background-size`
 
 </div>
 
@@ -314,22 +314,21 @@ These are just general guidelines. There are no set-in-stone rules, because new 
 >
 > In the `<head>` section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 > Change the background color and test it to make sure it works!
->
->**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
->
->   <code>@media (max-width: 768px) {<br />
-    &nbsp;&nbsp;&nbsp;*{<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outline: 1px solid red;<br />
-    &nbsp;&nbsp;&nbsp;}<br />
-    }</code>
->
-> The `*` selector means *all*. It will select **every** element
+
+**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
+
+    @media (max-width: 768px) {
+      /*
+      * { // select all
+        outline: 1px solid red;
+      } */
+    }  -- end 768px -- */
 
 ## RWD Best Practices
 
-Try not to use too many breakpoints. Two to four works, maybe up to six for complex designs.
+Try not to use too many breakpoints! Up to six should be sufficient for complex designs.
 
-If you find that you have two media queries that are close, see if you can move the styles to one or the other instead of creating another breakpoint.
+If you find that you have two media queries that are close in size to one another, see if you can move the styles from one or the other.
 
 When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.
 
