@@ -297,7 +297,13 @@ Height and width can also be used together in the media query:
 
 </div>
 
+<div class="summary">
+
 ### Common breakpoints
+
+</div>
+
+<div class="details">
 
     320px — Mobile portrait
     480px — Mobile landscape
@@ -307,6 +313,8 @@ Height and width can also be used together in the media query:
     1280px & greater — Desktop
 
 These are just general guidelines. There are no set-in-stone rules, because new devices are being made and purchased all the time. Depending on the design and the scope of the project, you may need to target different resolutions and add media queries at different breakpoints. A responsive design should however, have at least 2-3 breakpoints to optimize for mobile phones, tablets and desktops/laptops.
+
+</div>
 
 >## EXERCISE: Basic Media queries
 >
@@ -319,7 +327,7 @@ These are just general guidelines. There are no set-in-stone rules, because new 
       * { // select all
         outline: 1px solid red;
       }
-    }  -- end 768px -- */
+    }  /* -- end 768px -- */
 
 **Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
 
