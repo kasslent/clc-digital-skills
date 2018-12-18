@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <style>
+      div{
+        display: block;
+        float: left;
+      }
+      h2{
+        clear: both;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(websiteChart);
+      google.charts.setOnLoadCallback(programmingChart);
+      google.charts.setOnLoadCallback(incorporateChart);
+      google.charts.setOnLoadCallback(successfullyBuilt);
+      google.charts.setOnLoadCallback(mostEnjoyed);
+      google.charts.setOnLoadCallback(leastEnjoyed);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function websiteChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Strongly Agree', 0],
+          ['Agree', 6],
+          ['Neutral', 3],
+          ['Disagree', 0],
+          ['Strongly Disagree', 0],
+        ]);
+
+        // Set chart options
+        var options = {'title':'creating a website',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_website'));
+        chart.draw(data, options);
+      }
+
+      function programmingChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Strongly Agree', 0],
+          ['Agree', 0],
+          ['Neutral', 2],
+          ['Disagree', 3],
+          ['Strongly Disagree', 4]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Creating a computer program',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_programming'));
+        chart.draw(data, options);
+      }
+
+      function incorporateChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Strongly Agree', 2],
+          ['Agree', 3],
+          ['Neutral', 4],
+          ['Disagree', 0],
+          ['Strongly Disagree', 0],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Incorporate what I learned into my existing job/career',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_incorporate'));
+        chart.draw(data, options);
+      }
+
+      function successfullyBuilt() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Strongly Agree', 1],
+          ['Agree', 4],
+          ['Neutral', 3],
+          ['Disagree', 1],
+          ['Strongly Disagree', 0],
+        ]);
+
+        // Set chart options
+        var options = {'title':'I successfully built something during this course',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_built'));
+        chart.draw(data, options);
+      }
+
+      function mostEnjoyed() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Install Party', 1],
+          ['HTML', 7],
+          ['CSS', 9],
+          ['Design', 2],
+          ['SEO/SEM', 4],
+          ['Google forms', 2],
+          ['jQuery/Javascript', 3],
+          ['CMS/WordPress', 6]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Topics I most enjoyed',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_most_enjoyed'));
+        chart.draw(data, options);
+      }
+
+      function leastEnjoyed() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Response');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Install Party', 0],
+          ['HTML', 1],
+          ['CSS', 0],
+          ['Design', 3],
+          ['SEO/SEM', 2],
+          ['Google forms', 2],
+          ['jQuery/Javascript', 0],
+          ['CMS/WordPress', 1],
+          ['Other (Excel, Domains & Hosting)', 3]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Topics I least enjoyed',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_least_enjoyed'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+
+    <h1>I am confident...</h1>
+
+    <div id="chart_website"></div>
+
+    <div id="chart_programming"></div>
+
+    <div id="chart_incorporate"></div>
+
+    <h2>Other responses</h2>
+
+    <div id="chart_built"></div>
+
+    <div id="chart_most_enjoyed"></div>
+
+    <div id="chart_least_enjoyed"></div>
+  </body>
+</html>
