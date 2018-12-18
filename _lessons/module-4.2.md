@@ -315,34 +315,31 @@ These are just general guidelines. There are no set-in-stone rules, because new 
 > In the `<head>` section, a media query has already been included. Add 2 more media queries to target mobile and tablet.
 > Change the background color and test it to make sure it works!
 
-**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
-
     @media (max-width: 768px) {
-      /*
       * { // select all
         outline: 1px solid red;
-      } */
+      }
     }  -- end 768px -- */
 
-## RWD Best Practices
+**Pro-tip:** Apply `outlines` in the CSS to see which media query you should be adding your styles to. Outlines are similar to the `border` property, but have no affect on the layout. It will look something like this in your CSS:
 
-Try not to use too many breakpoints! Up to six should be sufficient for complex designs.
+## Best Practices
 
-If you find that you have two media queries that are close in size to one another, see if you can move the styles from one or the other.
+Try not to use too many breakpoints! If you find that you have two media queries that are close in size to one another, see if you can move the styles from one or the other.
 
-When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. Do not repeat styles.
+When writing media queries and adding responsive changes, only add the specific CSS property that needs to be changed. No need to repeat styles.
 
     .wrapper {
+      width: 100%;
       max-width: 1140px;
-      font-family: helvetica, arial, sans-serif;
+      font-family: Helvetica, Arial, sans-serif;
       background: white;
-      padding: 20px;
+      padding: 40px;
     }
 
     @media (max-width: 940px) {
       .wrapper {
-        max-width: 900px;
-        padding-top: 10px;
+        padding: 20px 30px;
       }
     }
 
@@ -354,7 +351,7 @@ Chrome has an emulator built right into the dev tools!
 
 ![]({{ site.img }}/module3/chrome-emulator.png)
 
-There are also many many other tools, [free](http://lab.maltewassermann.com/viewport-resizer/) and [paid](https://www.browserstack.com/responsive), available for testing and emulating multiple devices and device sizes.
+
 
 
 >## EXERCISE: Responsive Web page
@@ -363,11 +360,20 @@ There are also many many other tools, [free](http://lab.maltewassermann.com/view
 > Follow the instructions in the comments in the `<head>` of **responsive.html** to make the 3 columns fluid and responsive.
 
 
-
 >## EXERCISE: Making Your Website Responsive
-> Continue working on your website's layout.If you have it working on desktop,try creating some media queries to improve the layout on different widths.
->**Don't forget your Viewport Metatag!**
->
->Does your website design call for any background images? Go ahead and try it out on your project!
+> Continue working on your website's layout. If you have it working on desktop, try creating some media queries to improve the layout as you resize the browser.
+>**Don't forget the [Viewport Metatag](#viewport-meta-tag)!**
+>* Change 2 column layouts into a single column
+>* Decrease the font size of headings
+>* Want a mobile menu? We will cover this in the jQuery module!
+
+
+Responsive Design Resources
+
+* [Free device emulator](http://lab.maltewassermann.com/viewport-resizer/)
+* [Responsive images](https://internetingishard.com/html-and-css/responsive-images/)
+* [Responsive design framework: Foundation](https://foundation.zurb.com/)
+* [Try a book! From the A Book Apart series](https://abookapart.com/products/responsive-web-design)
+* [10 Responsive design problems and fixes](http://uxmag.com/articles/10-responsive-design-problems-and-fixes)
 
 ~ End ~
