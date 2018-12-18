@@ -10,9 +10,9 @@ class: module5-1
 
 ## Tools for this class
 
-Students will need to download and install
-- [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) - it's a free tool for SEO audits.
-- They will also need [Keywords Everywhere](https://keywordseverywhere.com/) browser extension, also free. Once they install it, they will need to activate it by entering their email and receiving an API key.
+You will need to install:
+* [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) - it's a free tool for SEO audits on large websites
+* [Keywords Everywhere](https://keywordseverywhere.com/) Chromme browser extension, also free. You will need to activate the plugin by entering your email to obtain an API key. Ask your mentors if you need help!
 
 
 ## What is SEO?
@@ -91,21 +91,21 @@ Since search engine robots (aka spiders, bots, crawlers) can’t see the website
 
 <div class="details">
 
-1. Sitemap - make sure you have one. Use [Google Search Console](https://www.google.com/webmasters/tools/) or [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to submit.
+1. **Sitemap** - make sure you have one. Use [Google Search Console](https://www.google.com/webmasters/tools/) or [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to submit.
 
-1. On-page elements - help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
-	- Title tags (<title>...</title>) - this is one of the first elements search engine bots will look at to determine what each page is about.
+1. **On-page elements** - help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
+	- **Title tags** (`<title>`...`</title>`) - this is one of the first elements search engine bots will look at to determine what each page is about.
 		- Make sure it includes your target keywords for that page.
-		- There shouldn’t be pages with the same title tags.
+		- There shouldn't be pages with the same title tags.
 		- None of the pages should be missing title tags.
 
-	- H1 tags - (<h1>...</h1>) - similar to title tags, this is one of the first things bots check.
+	- **H1 tags** - (`<h1>`...`</h1>`) - similar to title tags, this is one of the first things bots check.
 		- Make sure you include keywords that describe the page contents.
 		- There shouldn’t be pages with the same h1 tags.
 		- None of the pages should be missing title h1 tags.
 		- There should only be one h1 tag on the page.
 
-	- URL structure - makes it easier for the bots to understand the hierarchy of your website.
+	- **URL structure** - makes it easier for the bots to understand the hierarchy of your website.
 		- Make sure you use subdomains and folders appropriately
 		- Include keywords in urls
 
@@ -114,17 +114,17 @@ Since search engine robots (aka spiders, bots, crawlers) can’t see the website
 	![]({{ site.img }}/module4/seo-cheatsheet.jpg)
 
 
-	- Word count - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.
+	- **Word count** - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.
 
-	- Images - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
+	- **Images** - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
 		- Make sure your alt tags include your targeted keywords
 
-1. Errors - The absence of errors show search engines that your website can be easily accessed by people
+1. **Errors** - The absence of errors show search engines that your website can be easily accessed by people
 
-	- 3xx Issues (301, 302, etc. ) - Redirects. Use Screaming Frog to find them
-	- 4xx Issues (404 is the most common one) - Client error. Use Google Search Console or Screaming Frog to find them
-	- 5xx Issues (500, 502, etc.) – Server error. Use Google Search Console to find them.
-	- Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on [Google Manual Actions.](http://onlineownership.com/google-manual-action-google-wmt-explained/)
+* 3xx Issues (301, 302, etc. ): **Redirects**. Use Screaming Frog to find them
+* 4xx Issues (404 is the most common one): **Client error**. Use Google Search Console or Screaming Frog to find them
+* 5xx Issues (500, 502, etc.):  **Server error**. Use Google Search Console to find them.
+* Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on [Google Manual Actions.](http://onlineownership.com/google-manual-action-google-wmt-explained/)
 
 </div>
 
@@ -163,17 +163,17 @@ Before you start writing and publishing content you need to figure out what your
 
   </div>
 
-	> ## Keyword Research Exercise:
-	>
-	> Use your website as an example.
-	>
-	>1. Come up with 3 keywords that describe what your home page is about.
-	>1. Use Keywords Everywhere to find search volume for those keywords
-	>1. Pick the keyword with the highest search volume
-	>1. Look at the websites that already rank for that keyword
-	>1. Confirm that the keyword you’ve picked is relevant
-	>1. Use [serps.com/tools/keyword-research/](http://serps.com/tools/keyword-research/) to find other keywords that might be relevant
-	>1. Choose 1 major keyword for the page and 1-2 secondary keywords
+> ## Keyword Research Exercise:
+>
+> Use your website as an example.
+>
+>1. Come up with 3 keywords that describe what your home page is about.
+>1. Use Keywords Everywhere to find search volume for those keywords
+>1. Pick the keyword with the highest search volume
+>1. Look at the websites that already rank for that keyword
+>1. Confirm that the keyword you’ve picked is relevant
+>1. Use [serps.com/tools/keyword-research/](http://serps.com/tools/keyword-research/) to find other keywords that might be relevant
+>1. Choose 1 major keyword for the page and 1-2 secondary keywords
 
 
 1. Content Creation
