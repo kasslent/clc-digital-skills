@@ -12,7 +12,7 @@ class: module5-1
 
 You will need to install:
 * [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) - it's a free tool for SEO audits on large websites
-* [Keywords Everywhere](https://keywordseverywhere.com/) Chrome browser extension, also free. You will need to activate the plugin by entering your email to obtain an API key. Ask your mentors if you need help!
+* [Keywords Everywhere](https://keywordseverywhere.com/) - a Chrome browser extension, also free. You will need to activate the plugin by entering your email to obtain an API key. Ask your mentors if you need help!
 
 
 ## What is SEO?
@@ -69,7 +69,7 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 
 ![]({{ site.img }}/module4/seo-goal-completion.png)
 
-- Domain Authority - a score developed by [Moz]() that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high domain authority score means your complete website (all the pages on your domain) have the potential to rank well in search engine results. Use [Moz Bar Extension]() to find.
+- Domain Authority - a score developed by [Moz](https://moz.com/) that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a scale from 0 to 100. A high domain authority score means your  website has the potential to rank well in search engine results. Use [Moz Bar Extension](https://chrome.google.com/webstore/detail/mozbar/eakacpaijcpapndcfffdgphdiccmpknp?hl=en) to find your Domain Authority score.
 
 </div>
 
@@ -94,8 +94,9 @@ Since search engine robots (aka spiders, bots, or crawlers) can’t *see* the we
 
 <div class="details">
 
-A Sitemap is just a listing of all of the pages that make up your website. You can [use this website](https://www.xml-sitemaps.com/) to generate a sitemap for free. A valid sitemap is an [XML](https://www.w3.org/XML/) file - you will notice it looks similar to HTML in syntax, but it is a different language. It is comprised of opening and closing tags, but the tags can be created by you, not restricted to a set of valid tags (eg. `h1`, `nav`, `p`).
-If you are using a CMS like WordPress, you can use a plugin like [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to generate an XML sitemap for you. This plugin will constantly update the sitemap as new pages and blog posts are added to your site.
+A Sitemap is just a listing of all of the pages that make up your website. You can [use this website](https://www.xml-sitemaps.com/) to generate a sitemap for free.
+
+A valid sitemap is an [XML](https://www.w3.org/XML/) file - you will notice it looks similar to HTML in syntax, but it is actually a different language. Just like HTML, it is comprised of opening and closing tags, but the tags can be created by you - not restricted to a set of valid tags (eg. `h1`, `nav`, `p`).
 
 Once the sitemap has been made, you need to submit it to search engines so they know where to look for it. You will have to set up an account with [Google Webmaster](https://www.google.com/webmasters/tools/) to submit your sitemap to Google. [Bing](https://www.bing.com/toolbox/webmaster) has a similar tool.
 
@@ -103,6 +104,7 @@ Here are some step-by-step instructions on how to submit your sitemap once your 
 
 > * [Submit Sitemaps to Bing](https://www.bing.com/webmaster/help/how-to-submit-sitemaps-82a15bd4) - doing this [will also submit your sitemap to Yahoo's search engine](https://help.yahoo.com/kb/SLN2217.html?guccounter=1).
 > * [Build and submit a sitemap - Google](https://support.google.com/webmasters/answer/183668?hl=en)
+> If you are using a CMS like WordPress, you can use a plugin like [Yoast SEO Plugin](https://yoast.com/wordpress/plugins/seo/) to generate an XML sitemap for you. This plugin will constantly update the sitemap as new pages and blog posts are added to your site.
 
 </div>
 
