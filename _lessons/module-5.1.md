@@ -6,6 +6,7 @@ title: Search Engine Optimization
 description: Intro to SEO, tips and tricks for optimization.
 permalink: module5-1.html
 class: module5-1
+author: Katya Bovykina
 ---
 
 ## Tools for this class
@@ -142,7 +143,8 @@ Help search engines determine what your website is about. Use [Screaming Frog SE
 	* Make sure to use [subdomains](https://en.wikipedia.org/wiki/Subdomain) and folders appropriately
 	* Include keywords in URLs
 
-Example URL: http://www.example.com/outerwear/trench-coats/product-name
+Example URL: https://example.com/category/sub-category/product-name
+https://shopllc.com/bottoms/skirts/sequin-mini-skirt
 
 ![]({{ site.img }}/module4/seo-cheatsheet.jpg)
 
@@ -163,11 +165,11 @@ Example URL: http://www.example.com/outerwear/trench-coats/product-name
 
 The absence of errors show search engines that your website can be easily accessed by people
 
-* 3xx status code (301, 302, etc. ): **Redirects**. When a site domain is changed, or a redesign of a site causes many page URLs to change from their old versions, developers will set up **redirects**. This means if a user finds a link to an old site somewhere on the web, or has it bookmarked, the server will route the user to the closest equivalent URL on the new site. These redirects will result in a **301, 302** or **307** status code - they are done intentionally to improve UX, so they are not considered an error.
-**300, 301, 305** or  **306** however are errors that can be found using Screaming Frog. [Read more about 300 status codes here](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+* 3xx status code (301, 302, etc. ): **Redirects**. When a site domain is changed, or a redesign of a site causes many page URLs to change from their old versions, developers will set up **redirects**. This means if a user finds a link to an old site somewhere on the web, or has it bookmarked, the server will route the user to the closest equivalent URL on the new site. These redirects will result in a **301, 302** or **307** status code - they are done intentionally to improve UX, so they are not considered an error.<br />
+**300, 301, 305** or  **306** however, are errors that can be found using Screaming Frog. [Read more about 300 status codes here](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 * 4xx Issues: **Client error**. These include messages like "Forbidden", "Unauthorized", "Payment Required", "Request Timeout", and "Page not found". Use [Google Search Console](https://search.google.com/search-console/about) or Screaming Frog to find them.
 * 5xx Issues (500, 502, etc.):  **Server error**. These include messages like "Internal Server Error", "Bad Gateway", "Gateway Timeout", or "Service Unavailable". Use [Google Search Console](https://search.google.com/search-console/about) to find them.
-* Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use [Google Search Console](https://search.google.com/search-console/about) to find them. Read more information on [Google Manual Actions](http://onlineownership.com/google-manual-action-google-wmt-explained/).
+* Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use [Google Search Console](https://search.google.com/search-console/about) to find them. Read more information on [Google Manual Actions](https://onlineownership.com/google-manual-action-google-wmt-explained/).
 
 </div>
 
@@ -180,33 +182,29 @@ Visit the following websites and use Screaming Frog to fill out the [Technical S
 ## Content & Keywords
 You want to structure your website’s content in a way that’s easy for search engines and people to navigate.
 
-
-
 ### How can we do that?
-
-
 
 <div class="summary">
 
-1. Keyword Research
+#### Keyword Research
 
 </div>
 
 <div class="details">
 
-Before you start writing and publishing content you need to figure out what your target keywords are.
+Before you start writing and publishing content, you need to figure out what your target keywords are.
 
-	Find keywords that:
+Find keywords that:
 
-	- Highly relevant to what you do - For example, if you are a bakery in Barrie, don’t pick “cake recipes” as your major keyword. “bakery barrie” will probably get you more relevant traffic and is not as competitive
-	- Have search volume - ranking #1 for “bikes for pets” can be super relevant to what you do, however if nobody is searching for it, it doesn’t matter. Go for something like “dog bike basket” instead (3,600 monthly searches).
-	- Have reasonable competition levels - usually, the more general your keywords are, the more web pages compete for them. For example, “risk management” will be much more competitive than “risk management software” or “risk management services”. Evaluate your website and decide what your chances are at competing for the keywords you’ve picked.
+* Are highly relevant to what you do - For example, if you are a bakery in Barrie, don’t pick “cake recipes” as your major keyword. “bakery barrie” will probably get you more relevant traffic, and is not as competitive
+* Have search volume - ranking #1 for “bikes for pets” can be super relevant to what you do, however if nobody is searching for it, it doesn’t matter. Go for something like “dog bike basket” instead.
+* Have reasonable competition levels - usually, the more general your keywords are, the more web pages there are to compete for them. For example, “risk management” will be much more competitive than “risk management software”, or “risk management services”. Evaluate your website and decide what your chances are at competing for the keywords you’ve picked.
 
 </div>
 
 <div class="summary">
 
-1. Evaluate Competition
+#### Evaluate Competition
 
 </div>
 
@@ -214,9 +212,9 @@ Before you start writing and publishing content you need to figure out what your
 
 Once you determined your keywords, enter them to search engines and see what results come up.
 
-- What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.
-- What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page.
-- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.
+- If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.
+- What’s their Domain Authority? If you try to compete with the websites whose domain authority is much higher than yours, it will take you a very long time to appear anywhere close to the first page.
+- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are.
 
 </div>
 
@@ -224,23 +222,22 @@ Once you determined your keywords, enter them to search engines and see what res
 >
 > Use your website as an example.
 >
->1. Come up with 3 keywords that describe what your home page is about.
->1. Use Keywords Everywhere to find search volume for those keywords
->1. Pick the keyword with the highest search volume
->1. Look at the websites that already rank for that keyword
->1. Confirm that the keyword you’ve picked is relevant
+>1. Come up with 3 keywords that describe what your home page is about. A keyword can be a phrase, like "risk management"
+>1. Use [Keywords Everywhere](https://keywordseverywhere.com/) to find search volume for those keywords
+>1. Pick the keyword with the highest search volume that is relevant to your content
+>1. Look at the websites that already rank high for that keyword
 >1. Use [serps.com/tools/keyword-research/](http://serps.com/tools/keyword-research/) to find other keywords that might be relevant
 >1. Choose 1 major keyword for the page and 1-2 secondary keywords
 
+### Content Creation
 
-1. Content Creation
-Once you’ve identified your keywords it’s time to create content for your website. Depending on the type of website you’re building you will focus on different types of content.
+Once you’ve identified your keywords, it’s time to create content for your website. Depending on the type of website you’re building, you will have to focus on different types of content:
 
-	- Business website - You should focus on pages that you expect will bring you the most revenue. Usually, they are Product, Service or Location pages. Start with pages that tell others what you do.
-	- Ecommerce website - Start with Product pages you expect will bring you the most revenue.
-	- Blog - Start with those blog posts that you think will be the easiest to rank well for.
+* Business website -  Usually, they are product, service or location pages. Start with pages that tell others what you do.
+* Ecommerce website - Here, you will also focus on pages that you expect will bring you the most revenue. Start with Product pages.
+* Blog - Start with those blog posts that you think will be the easiest to rank well for.
 
-You can read more about the different types of content [here](https://www.troyfawkes.com/advanced-seo-pareto-pages-content-classifications-market-demand/).
+> [Read more about the different types of content](https://www.troyfawkes.com/advanced-seo-pareto-pages-content-classifications-market-demand/).
 
 <div class="summary">
 
@@ -250,15 +247,15 @@ You can read more about the different types of content [here](https://www.troyfa
 
 <div class="details">
 
-Show search engines that you’re considered to be an expert by others
+Show search engines that you’re considered to be an expert by others in your community or field of expertise.
 
-To win at the SEO game you need to do some authority building aka “link building”. Essentially, you need others to link back to your website. Why? Because search engines track those links and think your website is more valuable the more people link to you.
+To win at the SEO game, you need to do some authority building (aka “link building”). Essentially, you need others to link back to your website. Search engines track those links and will consider your website to be more valuable the more people link to you.
 
 ### A few rules:
-1. Partner up with websites that have a high DA - the higher the DA of a website is the more link value it can pass to you.
-1. Make sure the links you get are “do follow” links meaning that they are setup to pass value and not keep it. More on “do follow” vs “no follow” links [here](http://www.wordstream.com/blog/ws/2013/07/24/follow-nofollow-links).
-1. DO NOT get involved in *spammy* link building schemes such as cloaking, hidden text, blog networks, etc. If you do, most likely you will get a manual penalty from search engines that will prevent your website from ranking at all for a very long time.
-1. DO plan and execute link building campaigns that build long-term partnerships. Examples of link building tactics: Influencer Marketing Campaigns, Directories, Digital PR. For a very long list and very good list of link building activities check here.
+1. Partner up with websites that have a high domain authority (DA) - the higher the DA of a website, the more link value it can pass to you.
+1. Make sure the links you get are “do follow” links, meaning that they are setup to pass value and not keep it. [More on “do follow” vs “no follow” links here](http://www.wordstream.com/blog/ws/2013/07/24/follow-nofollow-links).
+1. DO NOT get involved in *spammy* link building schemes such as cloaking or hidden text. If you do, you may get a manual penalty from search engines that will prevent your website from ranking at all for a very long time.
+1. DO plan and execute link building campaigns that build long-term partnerships. Examples of link building tactics include Influencer marketing campaigns, directories and digital PR.
 
 </div>
 
@@ -275,7 +272,7 @@ If you wish to learn more about SEO, here are some resources you will find usefu
 <div class="details">
 
 * [Google Analytics](https://www.google.com/analytics/)
-* [Simple SEO audit tool]()
+* [Simple SEO Site Checkup tool](https://seositecheckup.com) - with the free version, you are limited to 1 site scan every 24 hours.
 
 </div>
 
@@ -288,7 +285,7 @@ If you wish to learn more about SEO, here are some resources you will find usefu
 <div class="details">
 
 * [The Beginner’s Guide to SEO](https://moz.com/beginners-guide-to-seo)
-* [Google Search Engine Optimization Starter Guide](http://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf)
+* [Google Search Engine Optimization Starter Guide](https://support.google.com/webmasters/answer/7451184?hl=en)
 * [The Advanced Guide to SEO](https://www.quicksprout.com/the-advanced-guide-to-seo/)
 
 </div>
@@ -312,6 +309,3 @@ If you wish to learn more about SEO, here are some resources you will find usefu
 * [Blog](http://www.annielytics.com/blog/) about analytics which goes hand-in-hand with SEO
 
 </div>
-
-
-**Content created by [Katya Bovykina](https://twitter.com/katyabovykina?lang=en)**
