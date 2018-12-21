@@ -100,11 +100,11 @@ A valid sitemap is an [XML](https://www.w3.org/XML/) file - you will notice it l
 
 Once the sitemap has been made, you need to submit it to search engines so they know where to look for it. You will have to set up an account with [Google Webmaster](https://www.google.com/webmasters/tools/) to submit your sitemap to Google. [Bing](https://www.bing.com/toolbox/webmaster) has a similar tool.
 
-Here are some step-by-step instructions on how to submit your sitemap once your webmaster accounts have been created:
-
+> Here are some step-by-step instructions on how to submit your sitemap once your webmaster accounts have been created:
 > * [Submit Sitemaps to Bing](https://www.bing.com/webmaster/help/how-to-submit-sitemaps-82a15bd4) - doing this [will also submit your sitemap to Yahoo's search engine](https://help.yahoo.com/kb/SLN2217.html?guccounter=1).
 > * [Build and submit a sitemap - Google](https://support.google.com/webmasters/answer/183668?hl=en)
-> If you are using a CMS like WordPress, you can use a plugin like [Yoast SEO Plugin](https://yoast.com/wordpress/plugins/seo/) to generate an XML sitemap for you. This plugin will constantly update the sitemap as new pages and blog posts are added to your site.
+
+If you are using a CMS like WordPress, you can use a plugin like [Yoast SEO Plugin](https://yoast.com/wordpress/plugins/seo/) to generate an XML sitemap for you. This plugin will constantly update the sitemap as new pages and blog posts are added to your site.
 
 </div>
 
@@ -117,22 +117,30 @@ Here are some step-by-step instructions on how to submit your sitemap once your 
 <div class="details">
 
 Help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
-	- **Title tags** (`<title>`...`</title>`) - this is one of the first elements search engine bots will look at to determine what each page is about.
-		- Make sure it includes your target keywords for that page.
-		- There shouldn't be pages with the same title tags.
-		- None of the pages should be missing title tags.
+*  **Title tags** (`<title>`...`</title>`) - this is one of the first elements search engine bots will look at to determine what each page is about.
+	* Make sure it includes your target keywords for that page.
+	* There shouldn't be two pages with the same page title.
 
-	- **H1 tags** - (`<h1>`...`</h1>`) - similar to title tags, this is one of the first things bots check.
-		- Make sure you include keywords that describe the page contents.
-		- There shouldn’t be pages with the same h1 tags.
-		- None of the pages should be missing title h1 tags.
-		- There should only be one h1 tag on the page.
+* **H1 tags** - (`<h1>`...`</h1>`) - similar to title tags, this is one of the first things bots will look for on a page.
+	* Make sure you include keywords that describe the page contents
+	* There shouldn't be two pages with the same h1
+	* There should only be one h1 tag on the page*
 
-	- **URL structure** - makes it easier for the bots to understand the hierarchy of your website.
-		- Make sure you use subdomains and folders appropriately
-		- Include keywords in urls
+> Discussion:
+> Recall back in module 1.1, we linked to this article: [The Truth About Multiple H1 Tags in the HTML5 Era](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824). This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?
+> ![testing]({{ site.img }}/module5/john-mueller.jpg)
+> [John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google
+> You can also watch this very quick video (<2 minutes) from the [Google Webmaster channel](https://www.youtube.com/watch?v=WsgrSxCmMbM) on this topic.
+>However, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a) "Only one `<h1> tag per page"
+> In this article,[Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines), "The description of problems solved by HTML5 is theoretical only."
+> Using only one `h1` tag per page is a simple and clear solution. Depending on the complexity of your site though, only one `h1` tag might not make sense in context of a complex layout. However multiple h1 tags should only be used when you have very semantic markup
+> Your decision will come down to how complex your site design is
 
-	Example URL: [http://www.example.com/category-keyword/subcategory-keyword/primary-keyword](http://www.example.com/category-keyword/subcategory-keyword/primary-keyword)
+* **URL structure** - makes it easier for the bots to understand the hierarchy of your website.
+	* Make sure you use subdomains and folders appropriately
+	* Include keywords in urls
+
+ Example URL: [http://www.example.com/category-keyword/subcategory-keyword/primary-keyword](http://www.example.com/category-keyword/subcategory-keyword/primary-keyword)
 
 	![]({{ site.img }}/module4/seo-cheatsheet.jpg)
 
