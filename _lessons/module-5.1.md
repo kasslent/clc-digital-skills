@@ -124,15 +124,18 @@ Help search engines determine what your website is about. Use [Screaming Frog SE
 * **H1 tags** - (`<h1>`...`</h1>`) - similar to title tags, this is one of the first things bots will look for on a page.
 	* Make sure you include keywords that describe the page contents
 	* There shouldn't be two pages with the same h1
-	* There should only be one h1 tag on the page*
+	* There should only be one h1 tag on the page - read on below
 
-> Discussion:
-> Recall back in module 1.1, we linked to this article: [The Truth About Multiple H1 Tags in the HTML5 Era](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824). This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?
-> ![Mathiaus tweets, regarding the use of heading tags - how many h1-tags should be used on a single web page? One one? #seo. John responds, As many as you want.]({{ site.img }}/module5/john-mueller.png)
+> Recall back in module 1.1, we linked to this article: [The Truth About Multiple H1 Tags in the HTML5 Era](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
+> This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?
+> ![Mathiaus tweets, regarding the use of heading tags - how many h1-tags should be used on a single web page? One one? #seo. John responds, As many as you want.]({{ site.img }}/module5/john-mueller.png)<br />
 > [John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google
-> You can also watch this very quick video (<2 minutes) from the [Google Webmaster channel](https://www.youtube.com/watch?v=WsgrSxCmMbM) on this topic.
->However, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a) "Only one `<h1>` tag per page"
-> In this article,[Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines), "The description of problems solved by HTML5 is theoretical only."
+> You can also [watch this very quick video](https://www.youtube.com/watch?v=WsgrSxCmMbM) (1:16) from the Google Webmaster channel on this topic.
+> However, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)
+> "Only one `<h1>` tag per page"
+> In this article, [Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+> "The description of problems solved by HTML5 is theoretical only."
+>
 > Using only one `<h1>` tag per page is a simple and clear solution. Depending on the complexity of your site though, only one `<h1>` tag might not make sense in context of a complex layout. However multiple h1 tags should only be used when you have very semantic markup
 > Your decision will come down to how complex your site design is
 
