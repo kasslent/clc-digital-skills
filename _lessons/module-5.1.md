@@ -129,13 +129,13 @@ Help search engines determine what your website is about. Use [Screaming Frog SE
 > Recall back in module 1.1, we linked to this article: [The Truth About Multiple H1 Tags in the HTML5 Era](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
 > This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?<br />
 > ![Mathiaus tweets, regarding the use of heading tags - how many h1-tags should be used on a single web page? Only one? #seo. John responds, As many as you want.]({{ site.img }}/module5/john-mueller.png)<br />
-> [John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google<br />
-> You can also [watch this very quick video](https://www.youtube.com/watch?v=WsgrSxCmMbM) (1:16) from the Google Webmaster channel on this topic.<br />
-> On the other side of the debate, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)<br />
-> "Only one `<h1>` tag per page"<br />
+> *[John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google*<br /><br />
+> You can also [watch this very quick video](https://www.youtube.com/watch?v=WsgrSxCmMbM) (1:16) from the Google Webmaster channel on this topic.<br /><br />
+> On the other side of the debate, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a):<br />
+> *"Only one `<h1>` tag per page"*<br />
 > In this Mozilla article, [Using HTML Sections and Outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines), they had this to say on the HTML5 semantic markup solution:<br />
-> "The description of problems solved by HTML5 is theoretical only."<br /><br />
-> Using only one `<h1>` tag per page is a simple and clear solution. Depending on the complexity of your site though, only one `<h1>` tag might not make sense in context of a complex layout.<br />
+> *"The description of problems solved by HTML5 is theoretical only."*<br /><br />
+> Using only one `<h1>` tag per page is a simple and clear solution around these complex discussions. Depending on the complexity of your site though, only one `<h1>` tag might not make sense in context of a more complex layout.<br />
 > **We want to present both sides of this argument and let you make your own decisions based on what you think is best for your site.**
 
 * **URL structure** - makes it easier for both bots and people to understand the hierarchy of your website.
@@ -146,10 +146,10 @@ Example URL: http://www.example.com/outerwear/trench-coats/product-name
 
 ![]({{ site.img }}/module4/seo-cheatsheet.jpg)
 
-* **Word count** - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.
+* **Word count** - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content, you have the ability to naturally include more keywords to your text, which search engines will then pick up. A good rule of thumb is around 500+ words.
 
-* **Images** - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
-	* Make sure your alt tags include your targeted keywords
+* **Images** - although search engine bots can’t “see” images, our use of the `alt` attribute will not only benefit our site's accessibility, but also our SEO.
+	* Your `alt` attribute can include your targeted keywords if applicable to the image's context
 
 </div>
 
@@ -163,10 +163,11 @@ Example URL: http://www.example.com/outerwear/trench-coats/product-name
 
 The absence of errors show search engines that your website can be easily accessed by people
 
-* 3xx Issues (301, 302, etc. ): **Redirects**. Use Screaming Frog to find them
-* 4xx Issues (404 is the most common one): **Client error**. Use Google Search Console or Screaming Frog to find them
-* 5xx Issues (500, 502, etc.):  **Server error**. Use Google Search Console to find them.
-* Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use Google Search Console (formerly Google Webmaster Tools)  to find them. Read more information on [Google Manual Actions.](http://onlineownership.com/google-manual-action-google-wmt-explained/)
+* 3xx status code (301, 302, etc. ): **Redirects**. When a site domain is changed, or a redesign of a site causes many page URLs to change from their old versions, developers will set up **redirects**. This means if a user finds a link to an old site somewhere on the web, or has it bookmarked, the server will route the user to the closest equivalent URL on the new site. These redirects will result in a **301, 302** or **307** status code - they are done intentionally to improve UX, so they are not considered an error.
+**300, 301, 305** or  **306** however are errors that can be found using Screaming Frog. [Read more about 300 status codes here](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+* 4xx Issues: **Client error**. These include messages like "Forbidden", "Unauthorized", "Payment Required", "Request Timeout", and "Page not found". Use [Google Search Console](https://search.google.com/search-console/about) or Screaming Frog to find them.
+* 5xx Issues (500, 502, etc.):  **Server error**. These include messages like "Internal Server Error", "Bad Gateway", "Gateway Timeout", or "Service Unavailable". Use [Google Search Console](https://search.google.com/search-console/about) to find them.
+* Manual Actions - alerts you get when Google flags your website or penalizes your website for shady SEO tactics. Use [Google Search Console](https://search.google.com/search-console/about) to find them. Read more information on [Google Manual Actions](http://onlineownership.com/google-manual-action-google-wmt-explained/).
 
 </div>
 
@@ -179,15 +180,20 @@ Visit the following websites and use Screaming Frog to fill out the [Technical S
 ## Content & Keywords
 You want to structure your website’s content in a way that’s easy for search engines and people to navigate.
 
-<div class="summary">
+
 
 ### How can we do that?
+
+
+
+<div class="summary">
+
+1. Keyword Research
 
 </div>
 
 <div class="details">
 
-1. Keyword Research
 Before you start writing and publishing content you need to figure out what your target keywords are.
 
 	Find keywords that:
@@ -196,14 +202,23 @@ Before you start writing and publishing content you need to figure out what your
 	- Have search volume - ranking #1 for “bikes for pets” can be super relevant to what you do, however if nobody is searching for it, it doesn’t matter. Go for something like “dog bike basket” instead (3,600 monthly searches).
 	- Have reasonable competition levels - usually, the more general your keywords are, the more web pages compete for them. For example, “risk management” will be much more competitive than “risk management software” or “risk management services”. Evaluate your website and decide what your chances are at competing for the keywords you’ve picked.
 
+</div>
+
+<div class="summary">
+
 1. Evaluate Competition
-	Once you determined your keywords, enter them to search engines and see what results come up.
 
-	- What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.
-	- What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page.
-	- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.
+</div>
 
-  </div>
+<div class="details">
+
+Once you determined your keywords, enter them to search engines and see what results come up.
+
+- What web pages show up for your keywords? If they are businesses similar to you, it probably means you’ve selected keywords that are relevant and have reasonable competition levels.
+- What’s their Domain Authority? If you try to compete with the websites whose DA is much higher than yours most likely it will take you a very long time to appear anywhere close to the first page.
+- What else do they rank for? Use tools like [Ahrefs](https://ahrefs.com/) or [SEMrush](https://www.semrush.com/) to see what keywords they rank for organically. Look at positions and search volume to evaluate how successful they are. Also, if they rank high for multiple keywords visit their website, analyze it and try to understand what makes them rank.
+
+</div>
 
 > ## Keyword Research Exercise:
 >
