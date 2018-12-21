@@ -127,31 +127,29 @@ Help search engines determine what your website is about. Use [Screaming Frog SE
 	* There should only be one h1 tag on the page - read on below
 
 > Recall back in module 1.1, we linked to this article: [The Truth About Multiple H1 Tags in the HTML5 Era](https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
-> This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?
-> ![Mathiaus tweets, regarding the use of heading tags - how many h1-tags should be used on a single web page? One one? #seo. John responds, As many as you want.]({{ site.img }}/module5/john-mueller.png)<br />
-> [John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google
-> You can also [watch this very quick video](https://www.youtube.com/watch?v=WsgrSxCmMbM) (1:16) from the Google Webmaster channel on this topic.
-> However, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)
-> "Only one `<h1>` tag per page"
-> In this article, [Using HTML sections and outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
-> "The description of problems solved by HTML5 is theoretical only."
->
-> Using only one `<h1>` tag per page is a simple and clear solution. Depending on the complexity of your site though, only one `<h1>` tag might not make sense in context of a complex layout. However multiple h1 tags should only be used when you have very semantic markup
-> Your decision will come down to how complex your site design is
+> This article was written in 2013, when HTML5 was still in its early days. SEO experts and developers are still debating to this day over the one-h1-per-page rule. Will search engines penalize you for this?<br />
+> ![Mathiaus tweets, regarding the use of heading tags - how many h1-tags should be used on a single web page? Only one? #seo. John responds, As many as you want.]({{ site.img }}/module5/john-mueller.png)<br />
+> [John Mueller](https://twitter.com/JohnMu), Senior Webmaster Trends Analyst at Google<br />
+> You can also [watch this very quick video](https://www.youtube.com/watch?v=WsgrSxCmMbM) (1:16) from the Google Webmaster channel on this topic.<br />
+> On the other side of the debate, Bing clearly states in their [Webmaster Guidelines](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)<br />
+> "Only one `<h1>` tag per page"<br />
+> In this Mozilla article, [Using HTML Sections and Outlines](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines), they had this to say on the HTML5 semantic markup solution:<br />
+> "The description of problems solved by HTML5 is theoretical only."<br /><br />
+> Using only one `<h1>` tag per page is a simple and clear solution. Depending on the complexity of your site though, only one `<h1>` tag might not make sense in context of a complex layout.<br />
+> **We want to present both sides of this argument and let you make your own decisions based on what you think is best for your site.**
 
-* **URL structure** - makes it easier for the bots to understand the hierarchy of your website.
-	* Make sure you use subdomains and folders appropriately
-	* Include keywords in urls
+* **URL structure** - makes it easier for both bots and people to understand the hierarchy of your website.
+	* Make sure to use [subdomains](https://en.wikipedia.org/wiki/Subdomain) and folders appropriately
+	* Include keywords in URLs
 
- Example URL: [http://www.example.com/category-keyword/subcategory-keyword/primary-keyword](http://www.example.com/category-keyword/subcategory-keyword/primary-keyword)
+Example URL: http://www.example.com/outerwear/trench-coats/product-name
 
-	![]({{ site.img }}/module4/seo-cheatsheet.jpg)
+![]({{ site.img }}/module4/seo-cheatsheet.jpg)
 
+* **Word count** - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.
 
-	- **Word count** - this is a tricky one since “recommended word count for SEO” keeps changing. Some say 300 words is enough, others argue that long-form (1000+ words) content performs better. Generally, with longer content you have an ability to naturally include more keywords to your text, which search engines will pick up. My personal rule of thumb 500+ words.
-
-	- **Images** - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
-		- Make sure your alt tags include your targeted keywords
+* **Images** - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
+	* Make sure your alt tags include your targeted keywords
 
 </div>
 
