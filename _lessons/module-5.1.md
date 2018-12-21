@@ -12,16 +12,16 @@ class: module5-1
 
 You will need to install:
 * [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) - it's a free tool for SEO audits on large websites
-* [Keywords Everywhere](https://keywordseverywhere.com/) Chromme browser extension, also free. You will need to activate the plugin by entering your email to obtain an API key. Ask your mentors if you need help!
+* [Keywords Everywhere](https://keywordseverywhere.com/) Chrome browser extension, also free. You will need to activate the plugin by entering your email to obtain an API key. Ask your mentors if you need help!
 
 
 ## What is SEO?
 
-Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine's unpaid results—often referred to as "natural," "organic," or "earned" results.
+Search Engine Optimization (SEO) is the process of affecting the visibility of a website or a web page in a search engine's *unpaid* results — often referred to as "natural," "organic," or "earned" results. Simply put - how can you get more eyes on your site without paying for ads?
 
 ## Why spend time working on SEO for your website?
 
-Gaining high positions in rankings for valuable keywords can provide you with consistent high-quality traffic that will result in visitors taking preferred action on your website.
+Gaining high positions in rankings for valuable keywords can provide you with consistent, high-quality traffic (real people, not bots) that will result in visitors taking preferred action on your website.
 
 ### Pros of SEO:
 - Consistent traffic flow
@@ -36,10 +36,10 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 
 ### Goals of the website:
 - Sales (E-commerce)
-- Leads (Get a quote, Request a demo, Learn more)
-- Donations (NGOs, NPOs, Charities)
+- Leads (Get a quote, request a demo, Learn more)
+- Donations (Non-governmental organizations, non-profit organizations, charities)
 - Advertising revenue (Blogs)
-- Partnerships (Getting involved, Volunteering, etc.)
+- Partnerships (Getting involved, volunteering, etc.)
 - Job (Personal portfolio & resume website)
 - Brand awareness (Viral campaigns)
 
@@ -53,47 +53,68 @@ Gaining high positions in rankings for valuable keywords can provide you with co
 
 <div class="details">
 
-- Rankings (aka SERP - Search Engine Ranking Position) - how high does the website appear in the search results for a particular keyword.
+- Rankings (aka SERP - Search Engine Ranking Position) - how high does the website appear in the search results for a particular keyword?
 	- Example goal: Increase SERP from 12 to 5 for [keyword]
 ![]({{ site.img }}/module4/seo-searchresult-analysis.png)
 
-- Organic Traffic - how many visits did the website get through organic search engine results. Use Google Analytics to track.
-	- Example goal: Increase organic traffic to the site by 15% in 2017
+- Organic Traffic - how many visits did the website get through organic search engine results?
+	- Use [Google Analytics](https://www.google.com/analytics/) to track
+	- Example goal: Increase organic traffic to the site by 15% in the next year
 
 ![]({{ site.img }}/module4/seo-analytics-report.png)
 
-- Conversions - how successful is the website at getting visitors to take action on the website. Use [Google Analytics](https://www.google.com/analytics/) to track.
+- Conversions - how successful is the website at getting visitors to take action on the website?
+	- Use [Google Analytics](https://www.google.com/analytics/) to track.
 	- Example goal: Increase the conversion rate of the page by 0.5%
 
 ![]({{ site.img }}/module4/seo-goal-completion.png)
 
-- Domain Authority - (DA) is a score developed by Moz that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high Domain authority score means your complete website / all the pages on your domain have the potential to rank well in search engine results. Use Moz Bar Extension to find.
-	- Example goal: Increase DA from 29 to 35
+- Domain Authority - a score developed by [Moz]() that predicts how well a website will rank on search engine result pages (SERP). Domain authority uses a 0 to 100 logarithmic scale. A high domain authority score means your complete website (all the pages on your domain) have the potential to rank well in search engine results. Use [Moz Bar Extension]() to find.
 
 </div>
 
-## What can we do to optimize the website?
+## What can we do to optimize our website?
 
 1. Technical SEO
 1. Content & Keywords
 1. Authority Building
 
 ## Technical SEO
-- how to make sure search engines can access, “read” and evaluate your website.
+How to make sure search engines can access, “read” and evaluate your website.
 
-Since search engine robots (aka spiders, bots, crawlers) can’t see the website the way you or your visitors can, it’s important to ensure they can access your website and its contents, process them and be able to make a decision about what position you should rank for.
+Since search engine robots (aka spiders, bots, or crawlers) can’t *see* the website the way you or your visitors can. It’s important to ensure they can access your website and its contents, process that content, and be able to make a decision about what position you should rank for.
+
+### How can we do so?
 
 <div class="summary">
 
-### How can we do so?
+#### Sitemap
 
 </div>
 
 <div class="details">
 
-1. **Sitemap** - make sure you have one. Use [Google Search Console](https://www.google.com/webmasters/tools/) or [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to submit.
+A Sitemap is just a listing of all of the pages that make up your website. You can [use this website](https://www.xml-sitemaps.com/) to generate a sitemap for free. A valid sitemap is an [XML](https://www.w3.org/XML/) file - you will notice it looks similar to HTML in syntax, but it is a different language. It is comprised of opening and closing tags, but the tags can be created by you, not restricted to a set of valid tags (eg. `h1`, `nav`, `p`).
+If you are using a CMS like WordPress, you can use a plugin like [Yoast SEO Plugin (WordPress)](https://yoast.com/wordpress/plugins/seo/) to generate an XML sitemap for you. This plugin will constantly update the sitemap as new pages and blog posts are added to your site.
 
-1. **On-page elements** - help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
+Once the sitemap has been made, you need to submit it to search engines so they know where to look for it. You will have to set up an account with [Google Webmaster](https://www.google.com/webmasters/tools/) to submit your sitemap to Google. [Bing](https://www.bing.com/toolbox/webmaster) has a similar tool.
+
+Here are some step-by-step instructions on how to submit your sitemap once your webmaster accounts have been created:
+
+> * [Submit Sitemaps to Bing](https://www.bing.com/webmaster/help/how-to-submit-sitemaps-82a15bd4) - doing this [will also submit your sitemap to Yahoo's search engine](https://help.yahoo.com/kb/SLN2217.html?guccounter=1).
+> * [Build and submit a sitemap - Google](https://support.google.com/webmasters/answer/183668?hl=en)
+
+</div>
+
+<div class="summary">
+
+#### On-page elements
+
+</div>
+
+<div class="details">
+
+Help search engines determine what your website is about. Use [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider) to perform SEO audit.
 	- **Title tags** (`<title>`...`</title>`) - this is one of the first elements search engine bots will look at to determine what each page is about.
 		- Make sure it includes your target keywords for that page.
 		- There shouldn't be pages with the same title tags.
@@ -119,7 +140,17 @@ Since search engine robots (aka spiders, bots, crawlers) can’t see the website
 	- **Images** - although search engine bots can’t “see” images, there is a way to make them visible by adding alt tags.
 		- Make sure your alt tags include your targeted keywords
 
-1. **Errors** - The absence of errors show search engines that your website can be easily accessed by people
+</div>
+
+<div class="summary">
+
+#### Errors
+
+</div>
+
+<div class="details">
+
+The absence of errors show search engines that your website can be easily accessed by people
 
 * 3xx Issues (301, 302, etc. ): **Redirects**. Use Screaming Frog to find them
 * 4xx Issues (404 is the most common one): **Client error**. Use Google Search Console or Screaming Frog to find them
@@ -200,7 +231,7 @@ To win at the SEO game you need to do some authority building aka “link buildi
 ### A few rules:
 1. Partner up with websites that have a high DA - the higher the DA of a website is the more link value it can pass to you.
 1. Make sure the links you get are “do follow” links meaning that they are setup to pass value and not keep it. More on “do follow” vs “no follow” links [here](http://www.wordstream.com/blog/ws/2013/07/24/follow-nofollow-links).
-1. DO NOT get involved in spammy link building schemes such as cloaking, hidden text, blog networks, etc. If you do, most likely you will get a manual penalty from search engines that will prevent your website from ranking at all for a very long time.
+1. DO NOT get involved in *spammy* link building schemes such as cloaking, hidden text, blog networks, etc. If you do, most likely you will get a manual penalty from search engines that will prevent your website from ranking at all for a very long time.
 1. DO plan and execute link building campaigns that build long-term partnerships. Examples of link building tactics: Influencer Marketing Campaigns, Directories, Digital PR. For a very long list and very good list of link building activities check here.
 
 </div>
@@ -208,6 +239,19 @@ To win at the SEO game you need to do some authority building aka “link buildi
 
 ## Next Steps:
 If you wish to learn more about SEO, here are some resources you will find useful:
+
+<div class="summary">
+
+### SEO Resources - Tools
+
+</div>
+
+<div class="details">
+
+* [Google Analytics](https://www.google.com/analytics/)
+* [Simple SEO audit tool]()
+
+</div>
 
 <div class="summary">
 
@@ -232,8 +276,8 @@ If you wish to learn more about SEO, here are some resources you will find usefu
 <div class="details">
 
 * [https://moz.com/blog](https://moz.com/blog )
-* [SEO/Digtial Marketing news](http://searchengineland.com/)
-* [SEO/Digtial Marketing news](https://www.searchenginejournal.com/)
+* [SEO/Digital Marketing news - Search Engine Land](http://searchengineland.com/)
+* [SEO/Digital Marketing news - Search Engine Journal](https://www.searchenginejournal.com/)
 * [A Community of digital marketers](https://inbound.org/) sharing articles and asking questions. Good if you don't have much time but want to see what's happening in the industry overall
 * [SEO/Digtial Marketing news](http://www.seobook.com/blog)
 * [ahrefs](https://ahrefs.com/blog/), one of the tools mentioned above. They have a pretty good blog section with some high quality content
