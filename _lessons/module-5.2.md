@@ -176,10 +176,12 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
         <input class="button" type="submit" value="Submit">
     </form>
 >
->Feel free to add other fields to your form as necessary. Reference [this list](http://www.sitepoint.com/web-foundations/form-elements/) for any additional fields you may want to explore and use.
+>Feel free to add other fields to your form as necessary. Reference [this list](https://www.w3schools.com/html/html_form_elements.asp) for any additional fields you may want to explore and use.
+
+
 >To create a separate contact page, start by creating a new html document. e.g. `contact.html`, within the same folder as your `index.html` file.
 >Copy over the `head`, `nav`, `footer` and anything else from the `index.html` page you want to keep on your contact page.
->Update the `nav` links on both pages to make a connection between them. Ask your mentors if you need help!
+>Update `a` tags in your `nav` on both pages to make a connection between the two HTML files. Ask your mentors if you need help!
 
 
 ### Processing a Form
@@ -188,50 +190,47 @@ The HTML we just added only creates the form elements in the browser. We will ha
 
 Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle the form processing.
 
-> You could also use either of these services to create the entire form, without adding a form to your own HTML page. In this case, you would have to create a link to the form you created on the 3rd party service.
-> If you choose that method, remember that you will have less control over the look & feel of your form, and the user will be forced to leave your website to fill out that form.
-> It is recommended that the link to the form opens in a new tab, so the user can easily return to your site after the form is completed. Eg.:
->   <a href="http://forms.google.ca/blahdeeblah" target="_blank">Contact Us</a>
+>You could also use either of these services to create the forminstead of adding a form to your own HTML page. In this case, you would have to create a link to the form you created on the 3rd party service.
+>If you choose to go with that method, remember that you will have less control over the style of your form, and the user will be forced to leave your website to fill out that form.
 
 ## Google Forms
 
-You can use **Google Forms** to process your website's new form and save all the responses sent to a Google spreadsheet. This will enable you to use the power of **Sheets** to manipulate & sort the data!
+You can use **Google Forms** to process your website's form, and save all the responses into a Google spreadsheet. This will enable you to use the power of **Google Sheets** to manipulate & sort the data! You can even export the spreadsheet from Google into an Excel spreadsheet if you prefer that format.
 
 >## Code-Along: Using Google Forms:
 >
->1. Go to Google Drive, [drive.google.com](https://drive.google.com), and sign into your account.
->1. Select **New** > **More** > **Google Forms** to create a new form. (You can also go straight to the form option here: [docs.google.com/forms](https://docs.google.com/forms/))<br><br>
->  ![]({{ site.img }}/module4/gforms-new.png)
-> <br>
-1. From there, you will see WYSIWYG editor with options similar to Word or Google Docs. Create a Google Form that is an exact replica of the form you just built on your page. There are a wide array of the type of questions available (free form, multiple choice, etc).
-Note: Google Forms don't have "e-mail" inputs, so use a general "short answer" input for the e-mail for now if needed.
+>1. Go to [Google Forms](https://docs.google.com/forms/u/0/) and sign into your account.
+>1. In the dark grey bar across the top of the screen, click on the box with the **+** sign to create a new form.
+>1. From there, you will see a WYSIWYG (What you see is what you get) editor with options similar to Word or Google Docs. Add each field to reflect the same form fields you created in your HTML. There are a wide array of the type of questions available (free form, multiple choice, etc).
+Note: Google Forms doesn't have an "e-mail" input, so use a general "short answer" input for the e-mail for now if needed.
   <br>
   ![]({{ site.img }}/module4/gforms-contactform.png)
-1. Now that your form is ready, click on the eyeball to enter preview mode.
+>1. When your form is ready, click on the eyeball to enter preview mode.
     ![]({{ site.img }}/module4/gforms-eyeball.gif)
   <br>
-1. Now that we're in the preview screen for the form, open up the web inspector to find the information we need to connect our form to the Google Form. You can do this by right clicking the first element in the form, and choosing *inspect* in the menu.
-1. Find and copy the value of the `action` attribute in the opening form element:
-[insert image here]
-1. Move over to Atom and paste what you just copied into the `action` attribute of your form. You may have used the `GET` or `POST` method as a placeholder, but we are going to use this URL you copied instead.
-1. Next, find and copy the value of the `name` attribute of the first form element.
-Take a look at the gif below to see how to find the name of each of your inputs. Sometimes they will be buried in several divs. **Pro tip:** use `ctrl/cmd` + `f` on your keyboard to open the Find menu. search for `name="` to more quickly find these attributes.
+>1. Now that we're in the preview screen for the form, open up the web inspector to find the information we need to connect our form to the Google Form. You can do this by right clicking the first element in the form, and choosing *inspect*.
+>1. Find and copy the value of the `action` attribute (the URL between the double quotes) in the opening form element:
+  ![]({{ site.img }}/module4/g-forms-action.png)
+>**Pro tip:** use `ctrl/cmd` + `f` on your keyboard to open the Find bar. Type `<form` into the search bar to quickly jump to the opening form tag.
+>1. Move over to Atom and paste what you just copied into the `action` attribute of your own form.
+>1. Return to your Google form to find and copy the value of the `name` attribute of the first form element. Right click on the input box to see the HTML of that input.
+Take a look at the gif below to see how to find the `name` of each of your inputs. They will be buried within several divs:
   ![]({{ site.img }}/module4/gforms-inspectelement.gif)
   <br>
-1. Moving back to Atom, find the equivalent `input` in your HTML and paste the value for the name attribute that you just copied.
-1. Repeat steps *4-5* until you have attached every `input` in your HTML form is matched up to the form elements in your Google form.
+>1. Moving back to Atom, find the equivalent `input` in your HTML and paste the value for the name attribute that you just copied.
+>1. Repeat steps *8-9* until every `input` in your HTML form is matched up to the form elements in your Google form.
   <br>
-1. Lastly, test your site's form by filling out all inputs and clicking the submit button.
-> We will not be covering form validation in today's module, but try missing some required fields to see what happens. At the end of this module, you can explore some resources on form validation.
+>1. Lastly, test your site's form by filling out all inputs and clicking the submit button.
+> We will not be covering form validation in today's module, but try skipping a required field to see what happens. At the end of this module, you can explore some resources on form validation.
 
 You successfully created a form that works! But where is all our data going? Wouldn't it be handy if we could collect all of our submissions automatically, in a format that would be easy to read?
 
 > 1. Go back to Google Forms and create a spreadsheet for your responses as shown below.
-> 1. In the browser open, up your contact page and fill out your form again.
-> `. Open up the spreadsheet you just created to capture your form entries.
 >
   ![]({{ site.img }}/module4/gforms-excel.gif)
 >
+> 1. Return to your website, fill out and submit the form again.
+> Open up the spreadsheet you just created to capture your form entries. TA-DA!
 
 <div class="summary">
 
@@ -257,10 +256,18 @@ When it comes to inputs, try selecting the input you want using the type attribu
       margin-right: 5px;
     }
 
-Here are a couple of tricks to keep in mind though:
+You can also use combined selectors to apply the same styles to inputs that are of a different type:
 
-1. Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change or remove include the border, padding, background, color and font-size.
-2. Form elements usually come with an 'outline' when they are selected. This state is called "focus". Remember when we learned about hover states? Focus states can be targeted in the same way using [CSS Pseudo-classes](). The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it.
+    input[type="text"],
+    input[type="email"]{ /* Will apply to both text and email input boxes */
+      background: transparent;
+      border-bottom: 2px solid grey;
+    }
+
+Here are a couple of tricks to keep in mind:
+
+* Form elements often come with default browser styles that you will need to overwrite if you want to change them. Properties you may want to change or remove include the border, padding, background, color and font-size.
+* Form elements usually come with an 'outline' when they are selected. This state is called "focus". Remember when we learned about hover states? Focus states can be targeted in the same way using [CSS Pseudo-classes](). The focus state of an input is triggered when a visitor has clicked on the input and is interacting with it.
 
 >Give it a try based on the example below:
 
