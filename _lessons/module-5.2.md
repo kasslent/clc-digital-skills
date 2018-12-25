@@ -43,8 +43,8 @@ By using the `type` attribute in the `input`, we can set the value to our desire
 
 `<button></button>` - Button tags can be used within the form element, or on its own. As mentioned above, you can also create submit and reset buttons with the `input` tag. The difference is the `button` element allows the addition of content between the open and closing tag, unlike an input which is a self-closing tag. The input tag uses the `value` attribute to add text to the button. These two examples below will look and function in the same way:
 
-    <button type="submit">Send</button>
-    <input type="submit" value="Send">
+    <button type="submit">Send (button tag)</button>
+    <input type="submit" value="Send (input tag)">
 
 <div class="example">    
   <button type="submit">Send (button tag)</button>
@@ -94,8 +94,7 @@ A complete form will require a few more attributes, but let's take a look at how
 
 ## User Experience and Accessibility
 
-### `<label>` and the `for` attribute
-
+### `<label>` tag and the `for` attribute
 
 Use the `for` attribute in the label to create an association with the related input. This is needed for accessibility reasons, and also makes a better user experience for everyone. It must match the `id` value of the related form control.
 
@@ -156,21 +155,14 @@ What day is it today?<br>
     <input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
     <input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
 
-<p>What day do you attend class?</p>
-<input type="checkbox" name="days" id="mon"><label for="mon">Monday</label><br>
-<input type="checkbox" name="days" id="tues"><label for="tues">Tuesday</label><br>
-<input type="checkbox" name="days" id="wed"><label for="wed">Wednesday</label><br>
-<input type="checkbox" name="days" id="thurs"><label for="thurs">Thursday</label><br>
-<input type="checkbox" name="days" id="fri"><label for="fri">Friday</label>
-
 </div>
 
-In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).  To style the form, apply CSS in the same way you would for any HTML element.
+In addition to the form controls, any HTML tags can be contained within the `<form>` element (e.g. `div`, `p`, etc).
 
->## Exercise: Let's Create A Form for Our Website!
+>## Exercise: Let's Create A Form on Our Website!
 >
->Take a few minutes and create a form for your website. For example, a contact form for your visitors to leave you a message on your site. You can either add a form to your existing index.html file in a section, or create a new html document. e.g. contact.html.
-> If you decide to create a new html document, make sure to copy over the `head`, `nav`, `footer` and anything else from the home page you want to keep on your contact page. <a href="exercises/module5/project-one-final.zip" download>Here's a copy of the finished first project</a> with an unnstyled form you could build.
+>Take a few minutes and create a form for your website. You can either add a form to your existing `index.html` file in a section, or create a new page on your site! If you want to do this, follow the instructions at the bottom of this box.
+><a href="exercises/module5/project-one-final.zip" download>Here's a copy of the finished first project</a> with an un-styled form you could build.
 >
 >This is the HTML for the example site's form:
 >
@@ -185,11 +177,14 @@ In addition to the form controls, any HTML tags can be contained within the `<fo
     </form>
 >
 >Feel free to add other fields to your form as necessary. Reference [this list](http://www.sitepoint.com/web-foundations/form-elements/) for any additional fields you may want to explore and use.
+>To create a separate contact page, start by creating a new html document. e.g. `contact.html`, within the same folder as your `index.html` file.
+>Copy over the `head`, `nav`, `footer` and anything else from the `index.html` page you want to keep on your contact page.
+>Update the `nav` links on both pages to make a connection between them. Ask your mentors if you need help!
 
 
 ### Processing a Form
 
-The HTML we just added only creates the form elements in the browser.  To actually submit the information and process the data, a *server side* language is required, like PHP.
+The HTML we just added only creates the form elements in the browser. We will have time to style this form at the end of class, but let's prioritize making it work first! To actually submit the information and process the data, a *server side* language is required, like PHP.
 
 Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com/) or [Google Forms](https://www.google.ca/forms/about/) to handle the form processing.
 
@@ -197,10 +192,6 @@ Another option is to use 3rd party services such as [Wufoo](http://www.wufoo.com
 > If you choose that method, remember that you will have less control over the look & feel of your form, and the user will be forced to leave your website to fill out that form.
 > It is recommended that the link to the form opens in a new tab, so the user can easily return to your site after the form is completed. Eg.:
 >   <a href="http://forms.google.ca/blahdeeblah" target="_blank">Contact Us</a>
-
-#### Extra Resources
-* [sitepoint: form elements](http://www.sitepoint.com/web-foundations/form-elements/)
-* [Dive Into HTML5 forms](http://diveintohtml5.info/forms.html)
 
 ## Google Forms
 
@@ -285,6 +276,8 @@ Here are a couple of tricks to keep in mind though:
 
 #### Resources
 
+* [sitepoint: form elements](http://www.sitepoint.com/web-foundations/form-elements/)
+* [Dive Into HTML5 forms](http://diveintohtml5.info/forms.html)
 * [CSS Pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
 * [Customize a Google Form for Your Website](http://codepen.io/learningcode/post/customize-a-google-form-for-your-website)
 * [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/)
