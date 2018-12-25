@@ -14,10 +14,10 @@ In today's module, we are going to add a form to our webpage. Forms are used to 
 
 Information processing & form submission requires a server-side language (e.g. PHP, Ruby or Python). Instead of learning a whole new language, we are going to use [Google Forms](https://www.google.ca/forms/about/) to process and collect form submissions.
 
-You will be required to create [a Google account]() to follow along with this module if you do not have one already.
+**You will be required to create [a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en-AU&flowName=GlifWebSignIn&flowEntry=SignUp) to follow along with this module if you do not have one already. Ask a mentor if you need any help!**
 
-* all forms begin with the `<form>` element and requires two *attributes*, `method` and `action`
-  * **`method`** defines how the form will communicate with the web server using `get` or `post` (more secure)
+* all forms begin with the `<form>` element which requires two *attributes*, `method` and `action`
+  * **`method`** defines how the form will communicate with the web server, typically using `get` or `post` (more secure)
   * **`action`** provides the path to where the form script is processed
 
 **Extra resource:** Learn more about the difference between [Get vs Post](http://www.diffen.com/difference/GET_%28HTTP%29_vs_POST_%28HTTP%29)
@@ -31,17 +31,17 @@ You will be required to create [a Google account]() to follow along with this mo
 
 `<label></label>` - Represents a caption associated with a specific form control.
 
-`<input>` - There are many types of inputs that you may want to use on a form, but it is the most commonly used tag when building forms. The `<input>` tag is a self-closing tag, so do not add a `</input>` tag at the end!
+`<input>` - There are many types of inputs that you may want to use on a form, but it is the most commonly used tag when building forms. The `<input>` tag is a self-closing tag, so no `</input>` tag necessary!
 
 By using the `type` attribute in the `input`, we can set the value to our desired type. Common values include:
 
-* `text` is used for a textbox. `password` will look pretty much the same, but will cloak the user's input to show a series of dots.
+* `text` is used for a textbox. `password` will also look like a textbox, but will cloak the user's input to show a series of dots.
 * `radio` and `checkbox` are used for single selection, and multi-select respectively. Radio buttons look like circles, whereas checkboxes will appear as squares.
-* `submit` can be used as the final button the user will click when they have finished filling out the form. `reset` will also appear as a button, and can be used to clear the values filled out in the entire form.
+* `submit` can be used as the final button the user will click when they have finished filling out the form. A `reset` type will also appear as a button, but is used to clear all values filled out in the form.
 
-`<textarea></textarea>` - Used for multi-line text, or a larger textarea when a small textbox is not sufficient.
+`<textarea></textarea>` - Used for multi-line text; a larger textarea when a small textbox is not sufficient.
 
-`<button></button>` - Button tags can be used within the form element or on its own. As mentioned above, you can create buttons with the `input` tag. The difference is the `button` element allows the addition of content between the open and closing tag, unlike input which is a self-closing tag. The input tag uses the `value` attribute to add text to the button. These two examples below will look and function in the same way:
+`<button></button>` - Button tags can be used within the form element, or on its own. As mentioned above, you can also create submit and reset buttons with the `input` tag. The difference is the `button` element allows the addition of content between the open and closing tag, unlike an input which is a self-closing tag. The input tag uses the `value` attribute to add text to the button. These two examples below will look and function in the same way:
 
     <button type="submit">Send</button>
     <input type="submit" value="Send">
@@ -51,6 +51,7 @@ By using the `type` attribute in the `input`, we can set the value to our desire
   <input type="submit" value="Send (input tag)">
 </div>
 
+Read more about [the differences between a button and an input](https://css-tricks.com/use-button-element/) for submit buttons.
 
 A complete form will require a few more attributes, but let's take a look at how the different inputs will display by default based on the specific `type` value:
 
@@ -58,8 +59,8 @@ A complete form will require a few more attributes, but let's take a look at how
       <label>Name </label> <input type="text">
       <label>Password </label> <input type="password">
       <br>
-      <input type="radio" name="radio-example"><label>yes</label>
-      <input type="radio" name="radio-example"><label>no</label>
+      <input type="radio" name="radio-yes-no"><label>yes</label>
+      <input type="radio" name="radio-yes-no"><label>no</label>
       <input type="checkbox"><label>option 1</label>
       <input type="checkbox">label>option 2</label>
       <br>
@@ -74,8 +75,8 @@ A complete form will require a few more attributes, but let's take a look at how
   <label>Password </label>
   <input type="password">
   <br>
-  <input type="radio" name="radio-example"><label>yes</label>
-  <input type="radio" name="radio-example"><label>no</label>
+  <input type="radio" name="radio-yes-no"><label>yes</label>
+  <input type="radio" name="radio-yes-no"><label>no</label>
   <input type="checkbox"><label>option 1</label>
   <input type="checkbox"><label>option 2</label>
   <br>
@@ -85,11 +86,13 @@ A complete form will require a few more attributes, but let's take a look at how
 </form>
 
 
->Try typing in the **Name** and **Password** fields to compare how the `type`  `text` and `password` differ.
+>Try typing in the **Name** and **Password** fields to compare how the **type**  `text` and `password` differ.
 >
 >Try selecting both the radio and checkbox options. Can you spot the difference in the behaviour?
 >
 >Note that clicking "submit" will not process any information yet, because this example is only in HTML and is not attached to any server side processing.
+
+## User Experience and Accessibility
 
 ### `<label>` and the `for` attribute
 
@@ -123,14 +126,14 @@ Use the `for` attribute in the label to create an association with the related i
 
 <div class="details">
 
-The `name` attribute is used to reference the form fields *after* the data is submitted to the server. This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters.
+This attribute value is defined by you and can be anything as long as it doesn’t contain any spaces or special characters. The `name` attribute is used to reference the form fields *after* the data is submitted to the server.
 
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
     <input type="text" name="lastname" id="lastname">
 
-The `name` attribute is also be used to group radio and checkbox options together. For radio inputs, grouping them together ensures that the user can only select one option at a time.
+The `name` attribute is also used to group radio and checkbox options together. For radio inputs, grouping them together ensures that the user can only select one option at a time.
 
     <p>What day is it today?</p>
     <input type="radio" name="days" id="mon"><label for="mon">Monday</label><br>
@@ -286,5 +289,6 @@ Here are a couple of tricks to keep in mind though:
 * [Customize a Google Form for Your Website](http://codepen.io/learningcode/post/customize-a-google-form-for-your-website)
 * [The 10 Commandments of Good Form Design on the Web](http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/)
 * [Bring Your Forms Up to Date With CSS3 and HTML5 Validation](http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738)
+* [Creating Accessible Forms](https://webaim.org/techniques/forms/controls)
 
 ~ End ~
