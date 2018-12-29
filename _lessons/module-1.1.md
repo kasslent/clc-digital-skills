@@ -347,8 +347,9 @@ To create the page layout, the HTML could look something like this:
 *Pro tip!*  
 When in doubt, it&#39;s better use `<div>` than to use one of the HTML5 structural tags for content it was not intended for.
 
-#### Resources: HTML5
+### Resources: HTML5
 
+* Book: [HTML5 for Web Designers from the A Book Apart series](https://abookapart.com/products/html5-for-web-designers)
 * [html5doctor.com](http://html5doctor.com)
 * [HTML5 Element Flowchart](http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf)
 * [HTML5 Semantic elements](https://www.w3schools.com/html/html5_semantic_elements.asp)

@@ -134,7 +134,7 @@ Like padding and margin, a border can be added only to a specific side of the el
     border-top: 2px solid red;
 
 
-[Read more about the Box Model](https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/).  We'll be revisiting this concept in Module 3.
+[Read more about the Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model).  We'll be revisiting this concept in Module 3.
 
 
 ## Dev tools & designing in the browser
@@ -203,7 +203,7 @@ Here is the snippet:
       box-sizing: inherit;
     }
 
-[Read more about this fix(http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+[Read more about this fix](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
 > ## EXERCISE: Margin & Padding on Your Project
 > Add the box model fix to the top of your CSS file.
@@ -329,9 +329,9 @@ Pseudo-class selectors target an element's *state* or *action*. The most commonl
 <br>
 There are **many** more ways to select elements, such as position in the HTML document, or by attribute name. Explore these resources for more information about advanced CSS selectors:
 
->*[Scroll down to the bottom of this page](https://www.w3schools.com/css/css_pseudo_classes.asp) to reference a list of all pseudo classes
->*[CSS Attributes selector](https://www.w3schools.com/css/css_attribute_selectors.asp)
->*[CSS Combinators](https://www.w3schools.com/css/css_combinators.asp)
+>* [Reference a list of all pseudo classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
+>* [CSS Attributes selector](https://www.w3schools.com/css/css_attribute_selectors.asp)
+>* [CSS Combinators](https://www.w3schools.com/css/css_combinators.asp)
 
 </div>
 
@@ -453,6 +453,20 @@ But to create a style where different background styles apply to each section, w
 > All in all, [this](exercises/module2/project-one-final/index.html) is how the project might look like now that we've added our styles.
 >
 > You can <a href="exercises/module2/project-one-final.zip" download>Download the example files</a> to use as reference if you get stuck.
+
+#### More CSS Resources
+
+* Book: [CSS3 for Web Designers from the A Book Apart series](https://abookapart.com/products/css3-for-web-designers)
+* [What is the Document Object Model?](https://www.w3.org/TR/WD-DOM/introduction.html)
+* [The Box Model explained](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model)
+* [Box Sizing for the Win](https://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+* [CSS Tricks: Display Property](https://css-tricks.com/almanac/properties/d/display/)
+
+* [Pseudo classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
+* [CSS Attributes selector](https://www.w3schools.com/css/css_attribute_selectors.asp)
+* [CSS Diner - Game to practice selectors](https://flukeout.github.io/)
+* [CSS Combinators](https://www.w3schools.com/css/css_combinators.asp)
+
 
 <br>
 ~ End ~
