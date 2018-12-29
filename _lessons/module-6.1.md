@@ -440,7 +440,7 @@ If it's a visual effect, that happens on page load, you *might* be able to use C
 * [JavaScript Methods](http://www.scribd.com/doc/19457597/Javascript-Methods)
 * [Code School: JavaScript](https://www.codeschool.com/paths/javascript)
 * [GreenSock is a popular JS-based animation library](https://greensock.com/gsap)
-* [ScrollMagic is a JS library that works with GSAP and is good for scrolling animations](http://scrollmagic.io)
-* [ihatetomatoes has excellent free beginner workshops on GreenSock](https://ihatetomatoes.net/)
+* [ScrollMagic](http://scrollmagic.io) - a JS library that works with GSAP for scrolling animations
+* ihatetomatoes has excellent [free beginner workshops](https://ihatetomatoes.net/) on GreenSock
 
 ~ end ~

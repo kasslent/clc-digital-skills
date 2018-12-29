@@ -11,8 +11,7 @@ permalink: module6-2.html
 
 ### What is jQuery?
 
-jQuery *is* JavaScript.  
-jQuery is a cross-browser JavaScript *library* used to simplify your program.
+Simply put, jQuery is a JavaScript file written by [an awesome team of developers](https://js.foundation/) who make coding easier for you, and they do it all for free.
 
 #### JavaScript example
 
@@ -22,7 +21,7 @@ jQuery is a cross-browser JavaScript *library* used to simplify your program.
 
     $("#status")
 
-Though it has its own syntax, it is still JavaScript at its core. Because of this, it's important to have a base understanding of JavaScript principles to make sense of how jQuery works.
+It has its own syntax, which is the beauty of jQuery. It's easier to read and faster to type. It is still JavaScript at its core, which is why it was important to have a base understanding of JavaScript principles in our last module to make sense of how jQuery works.
 
 ## Functions & jQuery
 
@@ -32,7 +31,7 @@ A function is one of the most powerful tools in JavaScript and the one you're le
 
 Looks like a function right?
 
-Remember, jQuery is a JavaScript *library* and basically contains LOTS of prewritten functions/methods used to simplify your program.
+Remember, jQuery is a JavaScript *library* which contains *many* prewritten functions/methods used to simplify your program.
 
 In most cases, it's conventional to use the jQuery shortcut, `$`.
 
@@ -44,7 +43,7 @@ This syntax will be used for the remainder of the lessons.
 
 ### How to select an HTML object/element
 
-A common use for jQuery is selecting an HTML object and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
+A common use for jQuery is selecting an HTML element, and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
 
 To select all the paragraphs on the page, use `p` as the selector. It is contained in quotes because it is a string.
 
