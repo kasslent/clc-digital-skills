@@ -43,18 +43,18 @@ This syntax will be used for the remainder of the lessons.
 
 ### How to select an HTML object/element
 
-A common use for jQuery is selecting an HTML element, and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector that is similar to how items are selected in CSS.
+A common use for jQuery is selecting an HTML element, and applying an effect or action to it. The `$()` function takes a single value: a string containing a selector, just like the ones we use in CSS.
 
-To select all the paragraphs on the page, use `p` as the selector. It is contained in quotes because it is a string.
+To select all the paragraphs on the page, use `p` as the selector. It is contained in quotes because it is a string:
 
     $("p");
 
 
-To select a class name, use the leading period, just like CSS.
+To select a class name, use the leading period, just like we do in CSS:
 
     $(".about");
 
-To select an id name, use the number/hash symbol, just like CSS.
+To select an id name, use the number/hash symbol, you guessed it, just like we do in CSS:
 
     $("#about");
 
@@ -62,11 +62,11 @@ To select an id name, use the number/hash symbol, just like CSS.
 >
     $(".about p");
 
-Once you select an object, you can apply one of many jQuery effects using various methods.  All the methods are documented here: [http://api.jquery.com/](http://api.jquery.com/category/effects/)
+Once you select an object, you can apply one of many effects to it using various methods. All the methods are documented here: [http://api.jquery.com/](http://api.jquery.com/category/effects/)
 
-Many of these effects allow you to add parameters to change the speed of the effect (numbers are in milliseconds).  
+Many of these effects allow you to add **parameters** to change the speed of the effect (numbers are in milliseconds).  
 
-You can also chain them together to create multiple effects.
+You can even chain them together to create multiple effects!
 
     $(".box").fadeOut();
     $(".box").fadeOut(2000);
@@ -76,9 +76,17 @@ You can also chain them together to create multiple effects.
 
 ## Adding JavaScript/jQuery to your files
 
-There are two ways to add JavaScript to a page.
+Let's start by adding jQuery to our project. There are two ways to add JavaScript to a page:
+
+
+<div class="summary">
 
 ### Inline
+
+</div>
+
+<div class="details">
+
 Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
 
 However, it's often recommended to add the scripts to the bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first.
@@ -105,6 +113,24 @@ You might see the `type` attribute included as well. This was required before HT
       // JavaScript here
     </script>
 
+</div>
+
+<div class="summary">
+
+### External
+
+</div>
+
+<div class="summary">
+
+Just like CSS, you can also write JavaScript/jQuery in a separate file using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
+
+    <script src="folder/file.js"></script>
+
+---
+    <script src="js/global.js"></script>
+
+</div>
 
 #### jQuery vs JavaScript
 
@@ -134,19 +160,6 @@ It only needs to be included *once*. Add all the jQuery code in *between* the cu
 
 **Extra resource**: <http://learn.jquery.com/using-jquery-core/document-ready/>
 
-
-### External
-Just like CSS, you can also write JavaScript/jQuery in a separate file using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
-
-    <script src="folder/file.js"></script>
-
----
-    <script src="js/global.js"></script>
-
-#### jQuery vs JavaScript
-In the external file, you do **not** need to add the `<script>` tags.
-
-But to write jQuery specific code, the `$( document ).ready()` is still required.
 
 ## Referencing jQuery's library
 
