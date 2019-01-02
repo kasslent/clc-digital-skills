@@ -87,9 +87,7 @@ Let's start by adding jQuery to our project. There are two ways to add JavaScrip
 
 <div class="details">
 
-Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page!  
-
-However, it's often recommended to add the scripts to the bottom of the page, just before the closing `</body>` tag, to allow all the page content to load first.
+Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page, but it's often recommended to add the scripts to the bottom of the page just before the closing `</body>` tag to allow all the page content to load first.
 
 
     <!DOCTYPE html>
@@ -107,7 +105,7 @@ However, it's often recommended to add the scripts to the bottom of the page, ju
     </body>
     </html>
 
-You might see the `type` attribute included as well. This was required before HTML5 was introduced.
+>You might see the `type` attribute included as well. This was required before HTML5 was introduced:
 
     <script type="text/javascript">
       // JavaScript here
@@ -121,51 +119,41 @@ You might see the `type` attribute included as well. This was required before HT
 
 </div>
 
-<div class="summary">
+<div class="details">
 
-Just like CSS, you can also write JavaScript/jQuery in a separate file using a `.js` file extension.  Link to it using the same `<script></script>` tag pair but add the `src` attribute.
+Just like CSS, you can also write JavaScript in a separate file using a `.js` file extension. Link to it using the same `<script></script>` tag pair, but add the `src` attribute with the path to your file:
 
-    <script src="folder/file.js"></script>
-
----
     <script src="js/global.js"></script>
+
+Common file names include `global.js`, `main.js`, or `project-name.js`
 
 </div>
 
-#### jQuery vs JavaScript
-
-Including pure JavaScript into your web page only requires the code to be written between the `<script></script>` tags.
-
-    <script>
-      // JavaScript code here
-    </script>
-
-In jQuery, the document needs to be "ready" first.
-
-    <script>    
-      $(document).ready(function(){
-         //jQuery code here
-      });
-    </script>
-
 #### $(document).ready()
 
-jQuery uses the `ready()` method to detect this state of readiness.
+jQuery uses the `ready()` method to detect the state of readiness. It's some additional syntax to get used to, but it's **required** to make the jQuery code work properly. **It only needs to be included *once***. Add all the jQuery code in *between* the curly brackets `{}`:
 
-This is a bit of a complex idea and has a lot of syntax to get used to. Just know that it's **required** to make the jQuery code work properly.
+    $(document).ready(function(){
+      // jQuery goes here
+      console.log("Ready to jQuery!");
+    });
 
-It only needs to be included *once*. Add all the jQuery code in *between* the curly brackets `{}`.
-
-(In CodePen, you don't have to add it because it's already integrated into the tool.)
+*(In CodePen, you don't have to include the `document.ready()` because it's already integrated into the tool.)*
 
 **Extra resource**: <http://learn.jquery.com/using-jquery-core/document-ready/>
 
 
 ## Referencing jQuery's library
 
-Similar to Google Fonts or any third party tool, you have to reference the file to access all code required to make to make it work.
+Similar to Google Fonts or any third party tool, you have to reference the jQuery file to access all code required first, just like you need your paint brushes before you can paint!
+
+<div class="summary">
 
 **Option 1** - Download and include the files locally
+
+</div>
+
+<div class="details">
 
 [Download](http://jquery.com/download/) the latest version of jQuery and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.
 
@@ -174,8 +162,15 @@ Use the `<script>` tag to reference the file but in the `src`, link to where the
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/main.js"></script>
 
+</div>
+
+<div class="summary">
 
 **Option 2** - Use a CDN
+
+</div>
+
+<div class="details">
 
 CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the [Downloads](http://jquery.com/download/) page.
 
@@ -186,6 +181,8 @@ CDNs can offer a performance benefit by hosting jQuery on servers spread across 
 Be sure to include the `http://` when viewing the site locally (on your computer).
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</div>
 
 >## EXERCISE: Adding JS To Our Own Projects
 >
