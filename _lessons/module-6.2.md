@@ -123,7 +123,7 @@ Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScr
 
 Just like CSS, you can also write JavaScript in a separate file using a `.js` file extension. Link to it using the same `<script></script>` tag pair, but add the `src` attribute with the path to your file:
 
-    <script src="js/global.js"></script>
+    <script src="js/main.js"></script>
 
 Common file names include `global.js`, `main.js`, or `project-name.js`
 
@@ -135,7 +135,6 @@ jQuery uses the `ready()` method to detect the state of readiness. It's some add
 
     $(document).ready(function(){
       // jQuery goes here
-      console.log("Ready to jQuery!");
     });
 
 *(In CodePen, you don't have to include the `document.ready()` because it's already integrated into the tool.)*
@@ -149,74 +148,77 @@ Similar to Google Fonts or any third party tool, you have to reference the jQuer
 
 <div class="summary">
 
-**Option 1** - Download and include the files locally
+###Option 1 - Download and include the files locally
 
 </div>
 
 <div class="details">
 
-[Download](http://jquery.com/download/) the latest version of jQuery and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.
+[Download](http://jquery.com/download/) the latest version of jQuery, and save it within your projects files. It’s common to create a separate folder for JavaScript files for organization, just like the images and css folders.
 
-Use the `<script>` tag to reference the file but in the `src`, link to where the file is saved in your project's directory and the *exact file name*.  Make sure to add it *before* your JavaScript file.
+Use the `<script>` tag to reference the file using the `src` attribute to provide the path to the jQuery file. Make sure to include jQuery *before* your JavaScript file. Remember, you need your paint brushes before you can paint!
 
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
+
+>**Why download and include locally?**
+>You can work with jQuery offline using this method - that means you can practice jQuery and work with it on your site without needing a WiFi connection
 
 </div>
 
 <div class="summary">
 
-**Option 2** - Use a CDN
+###Option 2 - Use a CDN
 
 </div>
 
 <div class="details">
 
-CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the [Downloads](http://jquery.com/download/) page.
-
+CDNs can offer a performance benefit by hosting jQuery on servers spread across the globe. To use the jQuery CDN, reference the hosted file directly, listed on the [Downloads](http://jquery.com/download/) page, like this:
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/main.js"></script>
 
-Be sure to include the `http://` when viewing the site locally (on your computer).
+**Pro tip:** Opt for the **compressed** version. Compressed is also referred to as **minified**. which is where the `.min` before the `.js` comes from. This means that all the indentation and line breaks have been removed from the file. Remember, this makes it harder for *humans* to read, but your browser can read it just fine. We aren't going to be making any changes to the core jQuery file anyway, so it's fine for the file to be unreadable for us.
+
+Be sure to include the `http://` when viewing the site locally (on your computer)!
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+>**Why use a CDN?**
+>This can improve your sites performance because of the popularity of jQuery. If your user has already visited a site that uses your same version of jQuery, that file will already be cached (remembered) in their browser, so their browser will have one less request to make when they are visiting your site. Plainly said, their browser will think "hey, I've seen this before, I don't need to download it again".
 
 </div>
 
 >## EXERCISE: Adding JS To Our Own Projects
 >
->We are going to add jQuery and our own JavaScript file to our projects. Feel free to use the [sample project](exercises/module5/project-one-final.zip) if you don't want to add JS to your own project yet:
+>We are going to add jQuery and our own JavaScript file to our project. Feel free to use the [sample project](exercises/module5/project-one-sample-w-js.zip):
 >
 >
-> 1. Create a JS folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins. (we'll learn more about plugins next class).
+> 1. Create a js folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins you may want to include in future.
 > 1. Go to https://jquery.com/ and download the latest version of jQuery by clicking on the "Download jQuery" button and then selecting *Download the compressed, production jQuery 3.1.1*. Save your downloaded jQuery file into your new JS folder from step 1.
 > 1. Create your own js file and name it *main.js*
-> 1. Add the jQuery script followed by your own script using `<script></script>` tags to the end of your HTML file, right before the closing body tag.
+> 1. Add the jQuery script, followed by your own script using `<script></script>` tags. Add them to the end of your HTML file, right before the closing body tag:
 >
->        <script src="js/jquery-3.1.1.min.js"></script>
+>        <script src="js/jquery-3.3.1.min.js"></script>
 >        <script src="js/main.js"></script>
-> 1. Be sure to add your `document.ready` function to your main.js file. Reminder:
+> 1. Be sure to add your `document.ready` function to your main.js file:
 >
         $(document).ready(function(){
            //jQuery code here
         });
 > 1. Add a `console.log()` or `alert()` function where it says `//jQuery code here` above. For example `alert('Hello World!');`
-> 1. Open up your HTML page where the scripts are linked and test to see if the alert or console.log worked. If they did, that means you've successfully added jQuery and JavaScript to your website!
-
-#### Resources
-
-* [jQuery Selectors](http://api.jquery.com/category/selectors/)
-* [jQuery Effects](http://api.jquery.com/category/effects/)
+> 1. Open up your HTML page where the scripts are linked and test to see if the alert or console.log worked. If they did, that means you've successfully added jQuery and JavaScript to your website! If they do not, use your Developer tools and select the console tab. Read any errors to help you debug the root of the problem. Ask a mentor or someone sitting beside you if you need help!
 
 
 ## jQuery Click Events
 
-Often, JavaScript is used to handle events that require the user to click first, before something happens.  Also, using a click event can control *when* the effects happen instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same. Just like this little guy: ![]({{ site.img }}/module5/scratch-events.png)
+Often, JavaScript is used to handle events that require the user to click on something before an action happens.  Using a click event can control *when* the effect happens instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same:
+![]({{ site.img }}/module5/scratch-events.png)
 
-Instead of the browser running the event right away, a click event is triggered only when a selected item is clicked by the user.
+Instead of the browser running the event right away, a **click event** is triggered only when the selected item is clicked by the user.
 
-> When would this effect be useful?
+> When would this effect be useful? Can you find examples of this on the page you're reading now?
 
 #### Syntax
 
@@ -226,38 +228,23 @@ Instead of the browser running the event right away, a click event is triggered 
 
 Let's try this out in another [CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
 
-Next week we'll use click events and objects in more depth with practical applications to our projects.
-
-## jQuery Click Events
-
-Let's do a review of the jQuery click events from the last lesson.
-
-#### Syntax
-
-    $( "selector" ).click(function() {
-      // code to be executed on click
-    });
-
-[CodePen example](http://codepen.io/learningcode/pen/WQYpxG).
-
-**Resource**: <http://api.jquery.com/click/>
-
 
 ## Click Event & Mobile Navigation (a.k.a. Hamburger Menu)
 
-A few classes ago we learned how to use Media Queries to make our website responsive. One really helpful thing we can use JS click events for is a fancy mobile navigation. Today we will be creating a simple one you can then use for your own website.
+A few classes ago we learned how to use Media Queries to make our website responsive. One really helpful thing we can use JS click events for is a mobile navigation. Today we will be creating a simple one you can then use for your own website.
 
 Let's take a look at the example below:
 <p data-height="265" data-theme-id="dark" data-slug-hash="oBrYMV" data-default-tab="js,result" data-user="jessynd" data-embed-version="2" data-pen-title="oBrYMV" class="codepen">See the Pen <a href="http://codepen.io/jessynd/pen/oBrYMV/">oBrYMV</a> by jessica duarte (<a href="http://codepen.io/jessynd">@jessynd</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 Let's figure out what we need to do in English (tip: be sure to try resizing the codepen example to see what happens in bigger and smaller browser widths):
 
-1. When the browser resizes to less than 650px, the menu items must disappear, and a tri-bar or hamburger (&#8801;), will appear instead.
-2. When we click on the hamburger, the menu items will appear again, and instead of a hamburger, we will see an "X" symbol to close the navigation in the upper right hand corner.
+1. When the browser resizes to less than 650px, the menu items disappear, and a tri-bar or hamburger (&#8801;), will appear instead.
+2. When we click on the hamburger, the menu items will appear, and instead of a hamburger, we will see an "X" in the upper right hand corner.
+3. When we click on the "X", we return back to the original state.
 
 >## Class Code-Along: Creating a mobile navigation with jQuery click events.
 >
-For this code-along, you can use the original project demo files if you would like, [here](exercises/module5/project-one-final.zip). Otherwise, use your own project files if you prefer.
+For this code-along, you can add this to your project, or use the project demo files if you would like [here](exercises/module5/project-one-sample-w-js.zip).
 >
 > This exercise is based on an HTML navigation markup that looks like this:
 >
@@ -269,9 +256,9 @@ For this code-along, you can use the original project demo files if you would li
 >     	</ul>
 >     </nav>
 >
-> 1. In order to create our fancy mobile navigation we first need to add a few things to our plain nav above.
-> * We need a hamburger to open the mobile nav, and we need an &times; to close the navigation.
-> * We need to give a class to our ul so that we can target it with JS.
+> 1. In order to create our fancy mobile navigation, we first need to add a few things to our plain nav above:
+> * We need a hamburger to open the mobile nav
+> * We need an &times; to close the navigation
 >
 
         <nav>
@@ -284,49 +271,54 @@ For this code-along, you can use the original project demo files if you would li
         	</ul>
         </nav>
 
->#### Quick tip : The symbols we used above are called HTML entities. Check out some of the available ones [here](http://character-code.com/)
+>#### Quick tip : The symbols we used above are called *HTML entities*. Check out [some of the available ones here](http://character-code.com/)
 >
-> 1. Next, in our CSS files, we are going to create a media query for all widths 650px and lower. We are going to hide the hamburger and 'close' links unless we are inside the media query. We are also going to use a font-family that makes our symbols look better.
+> 1. Next, in our CSS files, we are going to hide the hamburger and close buttons by default. That means on screens that are large enough, we'll see the regular menu.
+>
+        	.hamburger, .close{
+			       display: none;
+        	}
+>
+> 1. Now we are going to create a media query for when our device or browser is 650px wide or smaller. (You can choose a value that works best for your design, depending on the number of navigation items you have.)
+> When our screens are smaller than 650px, we will show the hamburger and close buttons.
+We are also going to change the font-family to make the symbols we're using look a little better:
 >
         @media(max-width: 650px){
         	.hamburger, .close{
-			    display: block;
-			    font-size: 24px;
-			    font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+  			    display: block;
+  			    font-size: 24px;
+  			    font-family: "Lucida Sans Unicode", "Arial Unicode MS";
         	}
         }
 >
-> 1. Outside of our media query we want to hide `.hamburger` and `.close`.
+
+> 1. We also need to hide the `ul` inside the `nav` when the browser is smaller than 650px. Remember, our mobile menu will only show after the user clicks on the hamburger button.
+> We could use `display: none;` to hide our `ul`, but instead we will apply  `position: fixed;` to our `ul` because we want it to take up the whole screen when it is visible. We will also position it out-of-sight for now, above the top edge of the viewport.
 >
-        	.hamburger, .close{
-			    display: none;
-        	}
->
-> 1. Now we need to hide ul.main-nav when the browser is smaller than 650px because we just want the hamburger to show up in its place. We could use `display-none` to hide our ul but that would not be accessible for screen readers. Add the following inside our mobile media query. We will make our `ul` position fixed because we will make it take up the whole screen and want it to be fixed overlayed on top of the website. We will also position it off-sight above the top edge of the viewport.
->
-        .main-nav {
+        nav ul {
         	position: fixed;
-        	top: -100vh;
+        	top: -100vh; /*vh = vertical height*/
         }
 >
-> 1. Next we'll create a new class for our main-nav that we will trigger to display the menu items again once we click on the hamburger. We will call the class `open-nav`.
+> 1. Next we'll create a new class for our `ul` that we will trigger to display the menu items once we click on the hamburger. We will call the class `open-nav`.
 >
-        .main-nav.open-nav {
+        nav ul.open-nav {
         	top: 0;
         }
 >
->Let's try adding both classes to our ul.main-nav to see what it would look like once it's open. Be sure to have your viewport at 650px or less.
-> As you can see, it doesn't look amazing right now. It looks too narrow, and boring. So let's add some more styles to our .open-nav class inside of the media-query.
+>Let's try adding the class to our `ul` to see what it would look like once it's open. Be sure to have your viewport at 650px or less.
+>**Pro tip:** Recall back to our responsive design class - do you remember how to use the device testing mode in the Developer tools?
+> As you can see, the menu right now looks too narrow. So let's add some more styles to our .open-nav class inside of the media-query:
 >
-    .main-nav.open-nav {
-    	top: 0;
-    	right: 20px;
-    	padding: 2% 10%;
-    	z-index: 2;
-    	background: #550165;
-    	width: 100%;
-    	height: 100vh;
-    }
+      nav ul.open-nav {
+      	top: 0;
+      	right: 20px;
+      	padding: 2% 10%;
+      	z-index: 2; /*the stacking order of items*/
+      	background: #550165;
+      	width: 100%;
+      	height: 100vh;
+      }
 >
 > Let's also give the anchors inside of the ul.main-nav in the media-query, the colour white, to contrast better with the purple background.
 >
@@ -447,6 +439,12 @@ To create a gallery with lightbox pop-ups, we need to do the following:
 
 1. Last, but not least, be sure to link the magnific popup css sheet that comes in the files you downloaded with the plugin, in the head of your html file. Othewrise your lightbox may look a little undressed.
 
+
+## jQuery resources
+
+* [jQuery Selectors](http://api.jquery.com/category/selectors/)
+* [jQuery Click Event](http://api.jquery.com/click/)
+* [jQuery Effects](http://api.jquery.com/category/effects/)
 
 ## More Plugins!
 
