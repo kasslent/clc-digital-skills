@@ -2,8 +2,8 @@
 layout: lessons
 module: 6
 lesson: 1
-title: Intro to JavaScript & jQuery
-description: JavaScript basics and getting started with jQuery.
+title: Intro to JavaScript
+description: JavaScript basics and intro to computational thinking.
 permalink: module6-1.html
 class: module6-1
 ---

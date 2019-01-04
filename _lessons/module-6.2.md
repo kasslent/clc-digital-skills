@@ -2,7 +2,7 @@
 layout: lessons
 module: 6
 lesson: 2
-title: jQuery & Plugins
+title: Intro to jQuery & Plugins
 description: Exploring jQuery and extending the library with Plugins.
 permalink: module6-2.html
 ---
@@ -87,6 +87,10 @@ Let's start by adding jQuery to our project. There are two ways to add JavaScrip
 
 <div class="details">
 
+*Pros*: Easier to implement because you don't have to create a separate file. Is perfectly fine if you are running some action only one page, for example if you have a photo slider only on the homepage.
+
+*Cons*: On a multi-page site, the scripts would have to be added to every page. If you update it on one page, you would have to copy and paste your changes across the rest of the pages.
+
 Add a pair of `<script></script>` tags onto the HTML page to enclose the JavaScript code.  JavaScript can be added anywhere on the page, but it's often recommended to add the scripts to the bottom of the page just before the closing `</body>` tag to allow all the page content to load first.
 
 
@@ -148,7 +152,7 @@ Similar to Google Fonts or any third party tool, you have to reference the jQuer
 
 <div class="summary">
 
-###Option 1 - Download and include the files locally
+### Option 1 - Download and include the files locally
 
 </div>
 
@@ -168,7 +172,7 @@ Use the `<script>` tag to reference the file using the `src` attribute to provid
 
 <div class="summary">
 
-###Option 2 - Use a CDN
+### Option 2 - Use a CDN
 
 </div>
 
@@ -179,7 +183,7 @@ CDNs can offer a performance benefit by hosting jQuery on servers spread across 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/main.js"></script>
 
-**Pro tip:** Opt for the **compressed** version. Compressed is also referred to as **minified**. which is where the `.min` before the `.js` comes from. This means that all the indentation and line breaks have been removed from the file. Remember, this makes it harder for *humans* to read, but your browser can read it just fine. We aren't going to be making any changes to the core jQuery file anyway, so it's fine for the file to be unreadable for us.
+**Pro tip:** Opt for the *compressed* version, also referred to as *minified*, which is where the `.min` before the `.js` comes from. This means that all the indentation and line breaks have been removed from the file. Remember, this makes it harder for *humans* to read, but your browser can read it just fine. We aren't going to be making any changes to the core jQuery file anyway, so it's fine for the file to be unreadable for us.
 
 Be sure to include the `http://` when viewing the site locally (on your computer)!
 
@@ -195,10 +199,10 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 >We are going to add jQuery and our own JavaScript file to our project. Feel free to use the [sample project](exercises/module5/project-one-sample-w-js.zip):
 >
 >
-> 1. Create a js folder inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins you may want to include in future.
-> 1. Go to https://jquery.com/ and download the latest version of jQuery by clicking on the "Download jQuery" button and then selecting *Download the compressed, production jQuery 3.1.1*. Save your downloaded jQuery file into your new JS folder from step 1.
+> 1. Create a folder named `js` inside your project folder to keep your JavaScript files. This will include your own JS code, as well as any jQuery files and jQuery plugins you may want to include in future.
+> 1. Go to [jquery.com](https://jquery.com/) and download the latest version of jQuery by clicking on the "Download jQuery" button and then selecting *Download the compressed, production jQuery x.x.x*. Copy your downloaded jQuery file into your new `/js` folder from step 1.
 > 1. Create your own js file and name it *main.js*
-> 1. Add the jQuery script, followed by your own script using `<script></script>` tags. Add them to the end of your HTML file, right before the closing body tag:
+> 1. In your html file(s) add the jQuery script, followed by your own script using `<script></script>` tags. Add them to the end of your HTML file, right before the closing body tag:
 >
 >        <script src="js/jquery-3.3.1.min.js"></script>
 >        <script src="js/main.js"></script>
@@ -213,7 +217,7 @@ Be sure to include the `http://` when viewing the site locally (on your computer
 
 ## jQuery Click Events
 
-Often, JavaScript is used to handle events that require the user to click on something before an action happens.  Using a click event can control *when* the effect happens instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same:
+Often, JavaScript is used to handle events that require the user to click on something before an action happens.  Using a click event can control *when* the effect happens instead of being executed right away. Remember when we talked about "Events" in Scratch? This is exactly the same:<br>
 ![]({{ site.img }}/module5/scratch-events.png)
 
 Instead of the browser running the event right away, a **click event** is triggered only when the selected item is clicked by the user.
@@ -231,11 +235,11 @@ Let's try this out in another [CodePen example](http://codepen.io/learningcode/p
 
 ## Click Event & Mobile Navigation (a.k.a. Hamburger Menu)
 
-A few classes ago we learned how to use Media Queries to make our website responsive. One really helpful thing we can use JS click events for is a mobile navigation. Today we will be creating a simple one you can then use for your own website.
+In one of our earlier modules we learned how to use Media Queries to make our website responsive. One really helpful thing we can use click events for is a mobile navigation. Today we will be creating a simple one you can then use for your own website.
 
 Let's take a look at the example below:
-<p data-height="265" data-theme-id="dark" data-slug-hash="oBrYMV" data-default-tab="js,result" data-user="jessynd" data-embed-version="2" data-pen-title="oBrYMV" class="codepen">See the Pen <a href="http://codepen.io/jessynd/pen/oBrYMV/">oBrYMV</a> by jessica duarte (<a href="http://codepen.io/jessynd">@jessynd</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="0" data-slug-hash="NeyMZp" data-default-tab="css,result" data-user="sdaponte" data-pen-title="Simple Hamburger Navigation" class="codepen">See the Pen <a href="https://codepen.io/sdaponte/pen/NeyMZp/">Simple Hamburger Navigation</a> by sdaponte (<a href="https://codepen.io/sdaponte">@sdaponte</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 Let's figure out what we need to do in English (tip: be sure to try resizing the codepen example to see what happens in bigger and smaller browser widths):
 
 1. When the browser resizes to less than 650px, the menu items disappear, and a tri-bar or hamburger (&#8801;), will appear instead.
