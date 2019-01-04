@@ -262,7 +262,7 @@ For this code-along, you can add this to your project, or use the project demo f
         </ul>
       </nav>
 >
-> 1. In order to create our fancy mobile navigation, we first need to add a few things to our plain nav above:
+> In order to create our fancy mobile navigation, we first need to add a few things to our plain nav above:
 > * We need a &#8801; to open the mobile nav
 > * We need an &times; to close the navigation
 
@@ -276,27 +276,27 @@ For this code-along, you can add this to your project, or use the project demo f
         </ul>
       </nav>
 
-> *Quick tip : The symbols we used above are called **HTML entities**. Check out [this list for more](https://www.freeformatter.com/html-entities.html#iso88591-symbols).*
+> *Quick tip: The symbols we used above are called **HTML entities**. Check out [this list for more](https://www.freeformatter.com/html-entities.html#iso88591-symbols).*
 >
-> 2. Next, in our CSS files, we are going to hide the hamburger and close buttons by default. That means on screens that are large enough, we'll see the regular menu.
+> Next, in our CSS files, we are going to hide the hamburger and close buttons by default. That means on screens that are large enough, we'll see the regular menu.
 
       .hamburger, .close{
         display: none;
       }
 
-> 3. Now we are going to create a media query for when our device or browser is 650px wide or smaller. (You can choose a value that works best for your design, depending on the number of navigation items you have.)
+> Now we are going to create a media query for when our device or browser is 650px wide or smaller. (You can choose a value that works best for your design, depending on the number of navigation items you have.)
 > When our screens are smaller than 650px, we will show the hamburger and close buttons.
 We are also going to change the font-family to make the symbols we're using look a little better:
 
       @media(max-width: 650px){
-      	.hamburger, .close{
-          display: block;
-          font-size: 24px;
-          font-family: "Lucida Sans Unicode", "Arial Unicode MS";
-      	  }
+       .hamburger, .close{
+        display: block;
+        font-size: 24px;
+        font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+       }
       }
 
-> 4. We also need to hide the `ul` inside the `nav` when the browser is smaller than 650px. Remember, our mobile menu will only show after the user clicks on the hamburger button.
+> We also need to hide the `ul` inside the `nav` when the browser is smaller than 650px. Remember, our mobile menu will only show after the user clicks on the hamburger button.
 > We could use `display: none;` to hide our `ul`, but instead we will apply  `position: fixed;` to our `ul` because we want it to take up the whole screen when it is visible. We will also position it out-of-sight for now, above the top edge of the viewport.
 
       nav ul {
@@ -304,7 +304,7 @@ We are also going to change the font-family to make the symbols we're using look
       	top: -100vh; /*vh = vertical height*/
       }
 
-> 5. Next we'll create a new class for our `ul` that we will trigger to display the menu items once we click on the hamburger. We will call the class `open-nav`.
+> Next we'll create a new class for our `ul` that we will trigger to display the menu items once we click on the hamburger. We will call the class `open-nav`.
 
       nav ul.open-nav {
       	top: 0;
@@ -313,7 +313,7 @@ We are also going to change the font-family to make the symbols we're using look
 > Let's try adding the class to our `ul` to see what it would look like once it's open. Be sure to have your viewport at 650px or less.<br>
 >**Pro tip:** Think back to our responsive design module - do you remember how to use the device testing mode in the Developer tools?
 >
-> 6. As you can see, the menu right now looks too narrow. So let's add some more styles to our `.open-nav` class inside of the media query:
+> As you can see, the menu right now looks too narrow. So let's add some more styles to our `.open-nav` class inside of the media query:
 
       nav ul.open-nav {
       	top: 0;
@@ -325,13 +325,13 @@ We are also going to change the font-family to make the symbols we're using look
       	height: 100vh;
       }
 
-> 7. Let's also change the colour of links in our mobile menu to white to contrast better with the purple background. Within the same media query, lets change the colour of the `a`s in our `nav`:
+> Let's also change the colour of links in our mobile menu to white to contrast better with the purple background. Within the same media query, lets change the colour of the `a`s in our `nav`:
 
       nav a {
         color: white;
       }
 
-> 8. The next step is adding the click events in jQuery that will add and remove the class of `open-nav`. This next bit of code goes in your `main.js` file inside of the `$(document).ready` function.
+> The next step is adding the click events in jQuery that will add and remove the class of `open-nav`. This next bit of code goes in your `main.js` file inside of the `$(document).ready` function.
 >
 > To add and remove the class of `open-nav` we will use a jQuery method called `toggleClass();`.
 
