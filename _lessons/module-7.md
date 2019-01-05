@@ -9,13 +9,15 @@ permalink: module7-1.html
 
 ## Blogs, Websites and CMS
 
-A **Content Management System (CMS)**, is an application used to edit content and manage a website using a user interface, instead of editing the code or database.
+A **Content Management System (CMS)**, is an application used to edit content and manage a website using an interface, without having to edit the code or database.
+
+Let's imagine you're a freelance web developer, and you created a site just like the one you have been working on during this course for your client. If they wanted to make a simple change to their content, you would either have to teach them HTML, or you would have to make every little change for them.
 
 ![example of how to edit content in WordPress vs in HTML]({{site.img}}/module7/wordpress-vs-html.jpg)
 
-Let's imagine you're a freelance web developer, and you created a site just like the one you have been working on during this course for your client. If they wanted to make a simple change made to their content, you would either have to teach them HTML, or you would have to make every little change for them.
-
-Using a CMS gives *you* the power to control the layout, design, and functionality, and empowers *your client* to have control over their content - the words and images used on each page.
+Using a CMS:
+* gives *you* the power to control the layout, design, and functionality
+* empowers *your client* to have control over their content - the words and images used on each page
 
 A CMS usually includes features such as:
 
@@ -25,29 +27,29 @@ A CMS usually includes features such as:
 * and much more!
 
 
-> Though WordPress by far is the most popular CMS in the world, there are many different CMS available. Have any of you (mentors too!) worked with a CMS before?
+> Though WordPress by far is the most popular CMS in the world, there are many different CMS available. Have any of you (mentors too!) worked with a CMS before in your jobs, or just for fun?
 
 ## What is WordPress?
 
 * primarily blogging software, but can also be used as a CMS
-* an online, open source (a.k.a. editable and free) website creation tool
+* an online, [open source](https://en.wikipedia.org/wiki/Open-source_software) (editable and free) website creation tool
 * can edit, publish content and manage the website using an interface, without having to edit the code or database (though you can if you want to!)
 * customizable core - can be extended and modified in anyway you please
-* written primarily in PHP but also requires HTML, CSS, JavaScript
-* uses PHP templates and a database to create and store content
-  * with static HTML, you have to manually create a new document for every new page
+* written primarily in PHP but also requires HTML, CSS and JavaScript
+* uses PHP for template files
+* uses a database to create and store content, vs "static" HTML where you have to manually create a new document for every new page
 
-Depending on your needs and level of customization, you may not need to write any code to get a website or blog up and running. That is another reason why WordPress is so popular - it allows people with no knowledge of code to create their own website fairly easily, and for free (not including hosting costs, which we will talk about in our last module!).
+Depending on your needs, you may not need to write any code to get a website or blog up and running. That is another reason why WordPress is so popular - it allows people with no knowledge of code to create their own website fairly easily, and for free! (Not including hosting costs)
 
 <div class="summary">
 
-What is a Blog, and how is it different from a website?
+### What is a blog, and how is it different from a website?
 
 </div>
 
 <div class="details">
 
-* the term blog is an abbreviation for weblog
+* the term blog is an abbreviation for *weblog*
 * blogs contain an ongoing collection of *posts and articles*, presented in chronological order
 * a website is a collection of pages, presented in whatever order the person creating the site prefers. Pages are *not time based*
 * a website **can** contain both a blog **and** standard informational pages
@@ -110,129 +112,149 @@ The `.org` version can be customized in any way, but requires more technical kno
 
 A <strong>server</strong> is simply a computer that runs software. The server needs to run all day, everyday. If the server is shut off or malfunctions, so does your website. The server lets you access those files and data through the internet whenever you want to use it (eg. when you click on a link, when you click on a search result in Google, or if you go directly to a website by typing the URL in your browser's address bar).
 
-**Anyone** can set up a server, as long and you have the hardware and the know-how. If you don't want to go through all that setting up on your own though, you can pay for a hosting provider. Paying for hosting is like paying for a storage locker - you pay a monthly fee to have your files and database to live.
+**Anyone** can set up a server, as long and you have the hardware and the know-how. If you don't want to go through all that setting up on your own though, you can pay for a hosting provider. Paying for hosting is like paying for a storage locker - you pay a monthly fee to have your files and database to live in a physical space.
 </div>
 
 ### How does WP work with a server?
 
 1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from WP (including our theme).
 1. We visit the WP dashboard to add content to the database on the server.
-1. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)
-1. We visit the website and our server shows us the website according to what our theme files have requested it show us.
+1. We make our WP template files request the content we want from the database and display it on our pages.
+1. When we visit the website, our server shows us the website according to what our theme files have requested it show us.
 
 #### Resources
-* [WPBeginner:
-How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
+* WPBeginner: [How to Choose the Best WordPress Hosting](http://www.wpbeginner.com/wordpress-hosting/)
 * [Performance of the Best WordPress Hosting Companies Compared](http://www.wpsitecare.com/performance-of-7-top-wordpress-hosting-companies-compared/)
-*Check [this link](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP) for instructions on how to set up a WordPress website locally on your computer. (A fun activity to do at home on a rainy day!).*
+* How to set up a WordPress website locally:
+  * [On your Mac](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
+  * [On your PC](https://themeisle.com/blog/install-xampp-and-wordpress-locally/)
 
 
 ### Setting up our WordPress coding environment
-WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP and they talk to a MySQL database that has the content the website will display on each page. (See diagram above)
-These are the steps we normally take to set up a WordPress website:
+WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP, which talk to a MySQL database that has the content the website will display on each page. (See diagram above)
+Here's how we would set up a WordPress website:
 
-1. We download the WordPress files from wordpress.org
-1. We set up a database on a server (this could be a local server on your computer that you can set up with a program like MAMP or it could be a server on the web).
-1. We connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
+1. Download the WordPress files from [wordpress.org](https://wordpress.org/)
+1. Set up a database on a server (this could be a local server on your computer, or from your hosting provider).
+1. Connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
 
-That's it! Only 3 steps but they can be a little tricky. So instead of running a local server today, we're going to use Code Anywhere. This will set up the server, the database and the files we need all in one fell swoop, and it will do it all from the browser!
+That's it! Only 3 steps, but they can be a little tricky. So instead of running a local server today, we're going to use a free service called [Code Anywhere](https://codeanywhere.com/). This will set up the server, the database and the files we need all in one fell swoop!
 
 ## WordPress and Code Anywhere
 
-Code Anywhere is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others, and for learning.
+[Code Anywhere](https://codeanywhere.com/) is a free service that allows you to develop any type of website or application in the browser. It's a great tool for collaborating with others and for learning.
 
-Code Anywhere is referred to as an Integrated Development Environment(IDE). The reason is that it integrates an editor, a browser and a console, all in one.
+Code Anywhere is referred to as an Integrated Development Environment(IDE). It integrates an editor, a browser and a console, all in one.
 
 ### Let's set it up!
 
 1. Go to [https://codeanywhere.com/pricing](https://codeanywhere.com/pricing) and sign up for a free account
 ![]({{site.img}}/module6/codeanywhere-1.png)
 1. Set your username and password
-1. Log into your email to verify the account
+1. Verify your account - you will be sent an email with a link to verify
 ![]({{site.img}}/module6/codeanywhere-2.png)
-1. Go back to Code Anywhere and set up your site: Choose the name, Select Wordpress (either CentOS or Ubuntu work)
+1. Go back to Code Anywhere and set up your site: Choose the name, and type for "Wordpress" in the search box (either CentOS or Ubuntu work)
 ![]({{site.img}}/module6/codeanywhere-3.png)
 1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
-1. Scroll down to find your website URL. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
+1. Scroll down to find your website URL. This will looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
 ![]({{site.img}}/module6/codeanywhere-4.png)
-1. Go to this URL and follow the steps to set up your Wordpress account
-1. This will open a page to allow you to set up the installation of WP. Make sure to keep your username and password safe as you'll have to log in immediately after.
+1. Go to this URL and follow the steps to set up your WordPress account
+1. Make sure to keep your username and password safe as you'll have to log in immediately after.
 1. Log into your dashboard.
 
 > ### Accessing Your Site
-> To access the back end of your site at any time, add **/wp-login.php** behind your url. Looks like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-login.php
+> To access the back end of your site at any time, add **/wp-login** at the end of your site URL. This will look something like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-login
 >
-> There are some limitations on our free Code Anywhere accounts, regarding the amount of hours our container can be powered on per day. If you have trouble viewing your site, you may need to restart the container. To do so, right-click on the container > select **Restart**. Once it has finished restarting, select the play icon to run your site.
+> There are some limitations on our free Code Anywhere accounts regarding the amount of hours our container can be powered on per day. If you have trouble viewing your site, you may need to restart the container. To do so, right-click on the container and select **Restart**. Once it has finished restarting, select the play icon to run your site.
 >
 > ![]({{site.img}}/module6/codeanywhere-restart.png)
 >
-> To access unlimited daily container usage, you can always upgrade your account [here](https://codeanywhere.com/pricing).
+> To access unlimited daily container usage, you would have to [upgrade your account](https://codeanywhere.com/pricing).
 
+## Getting to know WordPress
 
 ### WordPress Settings
 
-When you log into the WordPress admin area, the first thing you'll see is the Dashboard. Here you can view your drafts, check out basic stats, respond to comments and get a general overview of your blog.
+When you log into the WordPress admin area, the first thing you'll see is the Dashboard. Here you can view your drafts, check out stats, respond to comments, and get a general overview of your blog.
 
-The other menus in the left sidebar allows access to additional settings such as:
+The menu in the left sidebar allows you to access features like:
 
-* adding blog posts (Posts)
-* adding pages (Pages)
+* creating blog posts (Posts)
+* creating/editing pages (Pages)
 * changing themes (Appearance)
-* uploading media (Media)
-* other general site settings
-
+* uploading media files (Media)
+* general site settings like languages, URL patterns and privacy settings
 
 ## Configure basic site settings
 
 In the admin panel, go to **Settings > General**.
 
-Here, you can change/update your site title and tagline. You can also set your timezone, date/time format and language options here as well. Make sure to select **Save Changes**!
+Here, you can change/update your site's title and tagline. These are important because they're used by search engines to let users know what your site is all about. You can also set your timezone, date/time format and language options here as well. Make sure to select **Save Changes** button at the bottom of the page when you're done!
 
-> Go to **Settings > General** and update your Site Title and Tagline and another general setting if you'd like.
+> Go to **Settings > General**, update your Site Title and Tagline, and any other general settings you'd like to change.
 
 
 ## Posts vs Pages
+
+<div class="summary">
+
 Posts
+
+</div>
+
+<div class="details">
 
 * used for date-based content
 * posts are listed chronologically
 * can also be assigned *categories* and *tags* (also referred to as *taxonomies*)
-* permalink (URL) will include the date (can change this in the settings>reading)<br>(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)
+* permalink (URL) will include the date in which the post was published (can change this in the settings > reading)<br>(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)
+
+</div>
+
+<div class="summary">
 
 Pages
 
-* used for single pages of static content (e.g. about or contact page)
+</div>
+
+<div class="details">
+
+* used for single pages of static content (e.g. about us, contact us)
 * cannot have *taxonomies*
-* can have a hierarchical structure (e.g. Travel > Beach vacations)
+* can have a hierarchical structure, ie. child pages (e.g. Travel > Beach vacations)
 * permalink (url) will not include the date<br>(e.g. http://your-project-name.dev/about/)
+
+</div>
 
 
 ## Content Options and Settings
 
-When adding content into your **Post** or **Page**, the default visual editor uses a WYSIWYG editor (what you see is what you get) to format the content. Click on the **Toolbar Toggle** to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.
+When adding content into a **post** or a **page**, the default editor offers some simple tools to format the content. Click on the **Toolbar Toggle** to show all of the editing options. Hover over any icon to see a short description of what each tool is used for.
 
-When using the **Visual** editor, the content entered automatically gets converted into HTML.
+Type
 
-![]({{site.img}}/module6/adding-content-wysiwyg.png)
+![screenshot of editor in WordPress 5]({{site.img}}/module6/wordpress-editor.png)
+
+When you click within a text block, start typing some content to access the formatting menu:
+
+![formatting options within Wordpress editor]({{site.img}}/module6/wordpress-formatting-options.png)
+
+Clicking on that dropdown will reveal options to allow you to add Headings, lists and quotes.
 
 ### WordPress and HTML
 
-You can also edit or add your own HTML by selecting the **Text** editor tab.
+To switch from the visual editor to the HTML view, click on the icon with the three vertical dots:
 
-In WordPress, you don't need to add the `<p>` tags in either the visual or text editor. In the **Visual** editor, select the paragraph option from the dropdown.
+![edit as html]({{site.img}}/module6/edit-as-html.png)
 
-![]({{site.img}}/module6/editor-visual-p.png)
 
-In the **Text** editor, just ensure you return/enter twice to add a space between the paragraphs. They will automatically be converted into `<p>` tags via Wordpress magic!
-
-![]({{site.img}}/module6/editor-text-p.png)
-
-Also, break tags `<br>` are not needed. Just use the enter/return key *once* for a line break in either the Visual or Text WordPress editor.
-
-![]({{site.img}}/module6/editor-line-break.png)
-
+<div class="summary">
 
 ### Categories
+
+</div>
+
+<div class="details">
 
 Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.
 
@@ -243,8 +265,15 @@ Sub-categories can also be created by selecting a Parent in the **Categories** m
 
 ![]({{site.img}}/module6/dashboard-categories.png)
 
+</div>
+
+<div class="summary">
 
 ### Tags
+
+</div>
+
+<div class="details">
 
 Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:
 
@@ -252,6 +281,8 @@ Tags are best used to create groups of content that can apply to multiple catego
     Tags: eggs, kid friendly, under 30mins
 
 Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.
+
+</div>
 
 
 > ## Exercise: Add Content
