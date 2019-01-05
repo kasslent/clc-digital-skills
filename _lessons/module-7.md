@@ -256,7 +256,7 @@ To switch from the visual editor to the HTML view, click on the icon with the th
 
 <div class="details">
 
-Categories allow for a broad grouping of post topics. Blog posts should fit into a single category. For example, a food blog can have recipes in the following categories: Breakfast, Lunch or Dinner.
+Categories allow for broad grouping of post topics. For example, a food blog can have recipes in the following categories: Soups, Mains, Sides, Desserts.
 
 To add categories, go to **Posts > Categories** or within the post itself.
 ![]({{site.img}}/module6/dashboard-categories-post.png)
