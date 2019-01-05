@@ -9,78 +9,117 @@ permalink: module7-1.html
 
 ## Blogs, Websites and CMS
 
-How are blogs different from websites?
+A **Content Management System (CMS)**, is an application used to edit content and manage a website using a user interface, instead of editing the code or database.
 
-* the term blog is an abbreviation for weblog
-* blogs often contain an ongoing collection of posts and articles presented in chronological order
-* often (but not always) written in a diary-style of commentary
-* a website can also contain a blog **and** standard informational pages
+![example of how to edit content in WordPress vs in HTML]({{site.img}}/module7/wordpress-vs-html.jpg)
 
-A **Content Management System (CMS)**, is an application used to edit content and manage a website using a graphical user interface instead of editing the code or database.
+Let's imagine you're a freelance web developer, and you created a site just like the one you have been working on during this course for your client. If they wanted to make a simple change made to their content, you would either have to teach them HTML, or you would have to make every little change for them.
+
+Using a CMS gives *you* the power to control the layout, design, and functionality, and empowers *your client* to have control over their content - the words and images used on each page.
 
 A CMS usually includes features such as:
 
 * database management
 * themes and templates for page layouts
-* making content searchable and indexable
+* easier to make content searchable and indexable
 * and much more!
+
+
+> Though WordPress by far is the most popular CMS in the world, there are many different CMS available. Have any of you (mentors too!) worked with a CMS before?
 
 ## What is WordPress?
 
-* one of many types of blogging software and CMS
-* an online, open source (a.k.a. free) website creation tool
-* can edit, publish content and manage the website using a graphical user interface, without editing the code or database (though you can!)
-* customizable core, can be extended and modified in anyway
+* primarily blogging software, but can also be used as a CMS
+* an online, open source (a.k.a. editable and free) website creation tool
+* can edit, publish content and manage the website using an interface, without having to edit the code or database (though you can if you want to!)
+* customizable core - can be extended and modified in anyway you please
 * written primarily in PHP but also requires HTML, CSS, JavaScript
-* uses PHP templates & a database to create and store content (with static HTML, you have to manually create a new document for every new page)
+* uses PHP templates and a database to create and store content
+  * with static HTML, you have to manually create a new document for every new page
 
-Depending on your needs and level of customization, you may not need to edit any of the code to get up and running.
+Depending on your needs and level of customization, you may not need to write any code to get a website or blog up and running. That is another reason why WordPress is so popular - it allows people with no knowledge of code to create their own website fairly easily, and for free (not including hosting costs, which we will talk about in our last module!).
 
-There are two options for using WordPress, [WordPress.org](http://wordpress.org) and [WordPress.com](http://wordpress.com).
+<div class="summary">
+
+What is a Blog, and how is it different from a website?
+
+</div>
+
+<div class="details">
+
+* the term blog is an abbreviation for weblog
+* blogs contain an ongoing collection of *posts and articles*, presented in chronological order
+* a website is a collection of pages, presented in whatever order the person creating the site prefers. Pages are *not time based*
+* a website **can** contain both a blog **and** standard informational pages
+
+</div>
 
 
 ## WordPress.com vs WordPress.org
 
+There are two options for using WordPress, [WordPress.org](http://wordpress.org) and [WordPress.com](http://wordpress.com).
+
+<div class="summary">
+
 ### WordPress.com
 
-* hosted and all technical maintenance handled by WordPress
+</div>
+
+<div class="details">
+
+* different plans ranging from free - $59/month with added features like eCommerce
+* hosting and all technical maintenance handled by WordPress
 * your domain will be "yoursite.**wordpress.com**" (paid upgrade for a customized domain)
 * don't need to write any PHP to get up and running
-* no access to the code (without an upgrade)
-* theme options are included but cannot upload your own themes
-* different plans ranging from free - $299 with added features
+* you have no access to the code (without an upgrade)
 * no plugins
+
+</div>
+
+<div class="summary">
 
 ### WordPress.org
 
-* must register and pay for a domain & web hosting
-* you are responsible for technical maintenance
-* requires web development knowledge (how much depends on level of customization desired)
-* written on PHP (back-end programming language)
-* also requires HTML & CSS and usually JavaScript
-* full control over themes files and code
-* more theme options or customize it yourself
-* 1000s of plugins for adding features & functionality or create your own
+</div>
 
-Both versions basically work the same but the `.com` version doesn't require any technical knowledge and is limited on the level of customization.  
+<div class="details">
 
-The `.org` version can be customized in any way but requires more technical knowledge.  How much depends on the level of complexity of the customizations required.
+* must register and pay for a domain & web hosting (more on this in the next module)
+* you are responsible for technical maintenance because of the point above
+* requires some web development knowledge (how much depends on level of customization desired)
+* you have full control over themes files and all code
+* more theme customization options
+* thousands of plugins for adding features & functionality, or the ability to create your own!
+
+</div>
+
+Simply put, the wordpress `.com` version doesn't require any technical knowledge, but as a result you are limited on the level of customization.  
+The `.org` version can be customized in any way, but requires more technical knowledge.
 
 
 ## Communicating with WordPress: Servers and Files
 ![]({{site.img}}/module6/wpservers-01.svg)
 
-A <strong>server</strong> is a computer/computer program that provides us with the service of holding our data and showing it to us when we ask for it. In other words, imagine a computer in a room somewhere in the world that holds all your files and information, and lets you access it through the internet whenever you want. Today our server is Code Anywhere.
+<div class="summary">
 
-How does WP work with a server?
+### What is a Server?
 
-<p style="text-align: left;">1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from wP (including our theme.)</p>
+</div>
 
-<p style="text-align: left;">2. We visit the WP dashboard to add content to the database on the server. </p>
+<div class="details">
 
-<p style="text-align: left;">3. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)</p>
+A <strong>server</strong> is simply a computer that runs software. The server needs to run all day, everyday. If the server is shut off or malfunctions, so does your website. The server lets you access those files and data through the internet whenever you want to use it (eg. when you click on a link, when you click on a search result in Google, or if you go directly to a website by typing the URL in your browser's address bar).
 
-<p style="text-align: left;">4. We visit the website and our server shows us the website according to what our theme files have requested it show us.</p>
+**Anyone** can set up a server, as long and you have the hardware and the know-how. If you don't want to go through all that setting up on your own though, you can pay for a hosting provider. Paying for hosting is like paying for a storage locker - you pay a monthly fee to have your files and database to live.
+</div>
+
+### How does WP work with a server?
+
+1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from WP (including our theme).
+1. We visit the WP dashboard to add content to the database on the server.
+1. We make our WP files request the content we want from the database and display it in our HTML pages. (the website)
+1. We visit the website and our server shows us the website according to what our theme files have requested it show us.
+
 #### Resources
 * [WPBeginner:
 How to Choose the Best WordPress Hosting?](http://www.wpbeginner.com/wordpress-hosting/)
