@@ -359,54 +359,81 @@ We are also going to change the font-family to make the symbols we're using look
 
 ## Documentation & Finding Answers
 
-A part of web development is reading tutorials, articles and documentation.  
+A huge part of web development is reading tutorials, articles and documentation.  
 
 Another important part is knowing how to ask directed questions to find the answers.
 
 > Discussion: What are some search techniques or resources that can be used to find answers?
 
-## Below are some bonus activities if you have a website that needs any of these features.
+<div class="summary">
+## Bonus activity - add active state to menu items
+</div>
 
-### Bonus Click event & an "active" menu
-
-Here's an example of a navigation effect that can be added to a one page website.  
+<div class="details">
+Here's an example of a navigation effect that can be added to a one page website. Click on any of the menu items below:
 
 <p data-height="185" data-theme-id="0" data-slug-hash="XJwKBb" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/XJwKBb/'>XJwKBb</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
 
-Here's how to do it, broken down into steps.
+Here's how to do it, broken down into steps:
 
 1. Select the elements to be clicked.
-1. Test if you have correctly selected the element with `console.log()`.
-1. Add a class of “active” to the active link (the link that was clicked) using `addClass()`.
-1. Add the “active” class style to the CSS file.
-1. When the user clicks on another menu item, add the “active” class to the new item and remove the active class from non-active items.
+1. Test if you have correctly selected the element using a `console.log()` inside your click event.
+1. Add a class of “active” to the active link (the link that was clicked) using `.addClass()`.
+1. Add the `active` class selector and its corresponding styles (like a change of background colour) to your CSS file.
+1. When the user clicks on another menu item, add the “active” class to the new item, and remove the active class from non-active items.
 
 > ### Bonus Class Exercise: "Active" menu
-> Download the <a href="exercises/module5/javascript.html" download>javascript.html</a> exercise file.  Using the instructions above to create active styles for the menu, based on the user's click.
+> Download the <a href="exercises/module5/javascript.html" download>javascript.html</a> exercise file. Using the instructions above to create active styles for the menu.
+
+</div>
 
 ## Plugins
 
-A plugin is a piece of software that adds additional functionality and are available for many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress).
+A plugin is just another name for a code file (or a collection of code files) that adds additional functionality to your webpage. They are available in many programming languages, software (i.e. browsers) or frameworks (i.e. WordPress).
 
-The jQuery library contains many methods and features but you can extend it even further by using plugins. To add a plugin to your website, all you need to do is add the plugin's js file, possibly a css file as well, and then add a little bit of code you can usually copy straight from their webpage, into your own javascript file.
+jQuery contains many methods and features out-of-the-box, but you can extend it even further by using jQuery plugins. To add a plugin to your website, all you need to do is add the plugin's JS file, possibly a CSS file as well, and then add a little bit of code (you can usually copy straight from their webpage), into your own JavaScript file.
 
-How easy or hard it is to implement a JavaScript plugin depends on how detailed and simple to follow is the documentation of that plugin. Learning to understand plugin documentation is one of the most important skills to hone as a web developer. And the more you practice, the easier it will become. But don't be discouraged if it looks way too technical and over your head when you first start out reading plugin documentation.
+How easy or hard it is to implement a JavaScript plugin depends on how detailed and simple the documentation of that plugin is. Learning how to understand plugin documentation is one of the most important skills to practice as a web developer. The more you practice, the easier it will become. But don't be discouraged if it looks way too technical and over your head when you first start out reading plugin documentation.
 
-Let's try a couple!
+Here are a couple you can try to implement on your webpage:
 
 
-> ### Bonus Class Exercise: Smooth scroll
+<div class="summary">
+
+Smooth scroll
+
+</div>
+
+<div class="details">
+
 > Using the previous exercise file, add the smooth scroll plugin.  
 > Let's follow the instructions listed in the plugin developers [site](https://github.com/cferdinandi/smooth-scroll).
 
-> Bonus exercises:
->
+</div>
+
+<div class="summary">
+
+Fixed top navigation
+
+</div>
+
+<div class="details">
+
 > 1. Set the navigation to be fixed at the top of the page.
 > 1. Use the [plugin options](https://github.com/cferdinandi/smooth-scroll#options-and-settings) to add an "offset" option, so you can position where the page scrolls to.
 >
 > Solution file for both exercises can be [downloaded here](exercises/module5/javascript-solution.zip).
 
+</div>
+
+<div class="summary">
+
+Popup window / Popup photo gallery
+
+</div>
+
+<div class="details">
 
 ### Bonus Magnific Popup Implementation
 
@@ -456,6 +483,10 @@ To create a gallery with lightbox pop-ups, we need to do the following:
         });
 
 1. Last, but not least, be sure to link the magnific popup css sheet that comes in the files you downloaded with the plugin, in the head of your html file. Othewrise your lightbox may look a little undressed.
+
+</div>
+
+[Here is a codebase](http://ladieslearningcode.github.io/llc-digital-skills/clc-codebase/) we put together with a collection of jQuery features you may want to add to your pages. Each feature has 3 boxes for you to copy the HTML, CSS & JS needed to get the example to work. Try implementing one of these on your own time. Feel free to ask a mentor in your Slack channel if you run into issues or have any questions!
 
 
 ## jQuery resources
