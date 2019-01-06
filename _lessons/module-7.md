@@ -506,7 +506,7 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 
 > Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?
 
-### Class Exercise: Making your Theme
+> ### Class Exercise: Making your Theme
 > 1. Create 4 new files in your theme folder. They can all be empty for now:
 	- `header.php`
 	- `footer.php`
@@ -573,8 +573,8 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >
 > `date('Y')` will output the current year. This way you don't need to update this at the beginning of every year!
 >
-> 1. In `page.php`, copy (don't cut) everything from `index.php` and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.
-> 1. Then into `index.php` and `page.php` we'll bring in the footer and header by using these template tags: `get_header();` and `get_footer();`
+> 3. In `page.php`, copy (don't cut) everything from `index.php` and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.
+> 4. Then into `index.php` and `page.php` we'll bring in the footer and header by using these template tags: `get_header();` and `get_footer();`
 >
 > #### `index.php` should look like this.
 >
@@ -598,43 +598,52 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >	    	    </main>
 <?php get_footer();?>
 >
-> 1. Now that you've organized your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a new page template, do the following:
->
->	1. Create a special template file for the About page. Call it `page-about.php`.
->	1. In `page-about.php`, add the following line to the very top of the file:
+> 5. Now that you've organized your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a new page template, do the following:
+>	6. Create a special template file for the About page. Call it `page-about.php`.
+>	7. In `page-about.php`, add the following line to the very top of the file:
 >
 		    <?php /* Template Name: About */ ?>
 >
 >
-> 1. Below this, copy over everything from your `index.php` file there and delete what you don't want - in this case, the banner.
-> 1. Going back to the WP dashboard, go to Pages > About. In the right column, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created.
+> 8. Below this, copy over everything from your `index.php` file there and delete what you don't want - in this case, the banner.
+> 9. Going back to the WP dashboard, go to Pages > About. In the right column, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created.
 
 
-There's your theme. Great job! You've built your own simple theme and it works. Have a look at the bonus exercises below to add even more functionality!
+There's your theme. Great job! You've built your own simple theme and it works! Where do we go from here?
 
 
 ## More WordPress
 
 We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
 
-It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.
+It's important to note that most developers will use a starter theme and not always start entirely from scratch. [Underscores](http://underscoes.me) is a good starter theme because it is developed by Automatic, the creators of WordPress. Starter themes are great because they will often break up your theme using the correct Template File structure already in place. [Download Underscores](http://underscores.me/) and explore it. The cool thing about it is provides you with the necessary template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.
 
-Other topics for later include:
+<div class="summary">
 
 ### Advanced Subjects in WordPress to Look Forward To
 
-1. Custom Post Types
-1. Custom Fields
-1. WordPress and JavaScript
-1. WP-REST API
-And more...
+</div>
+
+<div class="details">
+
+* [Custom Post Types](https://codex.wordpress.org/Post_Types)
+* [Custom Fields](https://codex.wordpress.org/Custom_Fields)
+  * You can try using [this plugin](https://en-ca.wordpress.org/plugins/advanced-custom-fields/) if you don't want to code them yourself, but you should read the primer first to get an idea of what they are and why we use them.
+* [WP-REST API](https://v2.wp-api.org/)
+
+</div>
 
 ### WordPress Community
 
-If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:
+One of the great benefits of using a popular CMS like WordPress is that is comes along with a huge community of WordPress developers who you can learn from and ask questions to. If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:
 
 [http://make.wordpress.org](http://make.wordpress.org)
 
+You can also reference this forum when you run into problems or questions. You can check if someone has asked the question you have before, or ask a new question to the community:
+
+[WordPress Stack Exchange](https://wordpress.stackexchange.com/)
+
+#Bonus Exercises
 
 <div class="summary">
 
@@ -703,13 +712,6 @@ There is another very powerful file we can add to theme and it's called the Func
 
 </div>
 
-### Resources
-
-- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
-- [On Template Tags](https://codex.wordpress.org/Template_Tags)
-- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
-[Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
-
 <div class="summary">
 
 ## Bonus: Sidebars and Widgets
@@ -775,7 +777,7 @@ Once you've done that, go back into your home page and add a featured image. It 
 
 <div class="summary">
 
-## Bonus Plugins
+## Bonus: WordPress Plugins
 
 </div>
 
@@ -785,9 +787,9 @@ Plugins enable us to add incredible functionality to a website without having to
 
 Popular plugins include:
 
-- Jetpack
-- Mailchimp
-- Google Analytics
+* [Jetpack](https://en-ca.wordpress.org/plugins/jetpack/)
+* [Mailchimp] for email newsletters(https://en-ca.wordpress.org/plugins/mailchimp-for-wp/)
+* [Google Analytics](https://en-ca.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
 
 And there are many many more...
 Today we are going to work with Jetpack.
@@ -848,6 +850,13 @@ Today we are going to work with Jetpack.
 > There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin.
 
 </div>
+
+### Resources
+
+- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+- [On Template Tags](https://codex.wordpress.org/Template_Tags)
+- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
+[Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
 
 
 ~ end ~
