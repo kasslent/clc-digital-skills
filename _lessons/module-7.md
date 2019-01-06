@@ -643,7 +643,7 @@ You can also reference this forum when you run into problems or questions. You c
 
 [WordPress Stack Exchange](https://wordpress.stackexchange.com/)
 
-#Bonus Exercises
+# Bonus Exercises
 
 <div class="summary">
 
@@ -653,22 +653,17 @@ You can also reference this forum when you run into problems or questions. You c
 
 <div class="details">
 
-You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php.
+You may have noticed that now that you have a `page.php` and an `index.php`, only the blog posts listing page is using `index.php`, while all the other pages except for About are using `page.php`.
 
-This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out:
-> 		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
->		    <?php the_author(); ?> This one will print out the author of your posts.
->
->		    <?php the_category(); ?> This one will print out the categories for a blog post
->		    <?php the_tags(); ?> This one will print out the tags for a blog post.
->
->		    <?php the_date(); ?> This will print out the date published.
->
->		    <?php the_excerpt(); ?> This will print out a truncated part of the body of the blog post.
->
-> Play around with these in index.php for better customization of your blog feed.
-> Also, consider creating a **single.php** template to control the way your single view of each blog post looks like.
+This means that you can reserve `index.php` for your blog, and add some additional handy template tags. Try out:
+`<?php the_permalink(); ?>` will enable you to link the title of each post to the post page. You can paste it into the `href` value of the `a` tag.
+`<?php the_author(); ?>` will print out the author of the post
+`<?php the_category(); ?>` will print out the categories assigned to a blog post
+`<?php the_tags(); ?>` respectively, will print out the tags assigned to a blog post
+`<?php the_date(); ?>` will print out the date that the post was published. You can change the date format by [reading about the parameters you can pass into `the_date` function](https://codex.wordpress.org/Template_Tags/the_date#Parameters).
+`<?php the_excerpt(); ?>` will print out a truncated part of the body of the blog post. You can change the length of the excerpt by [reading this article](http://matthewfecher.com/webdesign/wp-quick-tip-how-to-change-the-excerpt-length/).
 
+Play around with these template tags in your `index.php`.
 </div>
 
 <div class="summary">
@@ -679,12 +674,16 @@ This means that you can reserve index.php for your blog (WP will always use this
 
 <div class="details">
 
-There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
+The `functions.php` file is probably the most powerful file we can use in our theme. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file:
+* Adding and using Widgets
+* Adding Navigation menus
+* Adding Featured Images for posts and pages
+* and many many more
 
 > ### Exercise
 >
-> 1. In your own custom theme folder, create a  new file named `functions.php`.
-> 1. Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard.
+> 1. In your own custom theme folder, create a new file named `functions.php`.
+> 1. Next, we will add the functionality to configure menus (navigation) to our functions file. The following PHP function came straight from [the Codex](https://codex.wordpress.org/), and it will add the ability to add menus to your website from the dashboard:
 >
 >         <?php
 >           function register_my_menus() {
@@ -698,17 +697,17 @@ There is another very powerful file we can add to theme and it's called the Func
 >            add_action( 'init', 'register_my_menus' );
 >         ?>
 >
-> 1. Go to the Dashboard and navigate to Appearance>Menus - now this is available! d
-> 2. Create a Menu with the three links to the 3 pages, make sure to pick Header Menu as the location when you create the menu.
-> 3. Replace the ul inside the nav with the following
+> 3. Go to the Dashboard and navigate to Appearance > Menus - now this is available!
+> 4. Create a Menu with the three links to your 3 pages. Make sure to pick 'Header Menu' as the location when you create the menu.
+> 5. In Code Anywhere, go to the `header.php` file in your theme and replace the `ul` inside your `nav` with the following:
 >
 
     <?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
 
 >
->Refresh your page and now you should have a perfectly working Navigation again.
+>Refresh your page and now you should have a perfectly working Navigation again! This time when you want to add a page, rearrange the pages or make any other changes to your menu, you can do it straight from your WordPress dashboard.
 >
->**Bonus:** WordPress gives menu items of the currently visited page, the class of *current_page_item*. You can style it differently.
+>**Bonus:** WordPress adds a class to the currently viewed page in the menu, the class of `current_page_item`. Use your Developer tools to inspect and see this class in action. You can now use that class in your CSS to style the current menu item differently! Try giving it a bottom border, or changing the background or text colour.
 
 </div>
 
@@ -720,11 +719,11 @@ There is another very powerful file we can add to theme and it's called the Func
 
 <div class="details">
 
-Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We'll be converting our current sidebar into a dynamic WP sidebar.
+Sidebars enable you to add [WP widgets](https://www.wpbeginner.com/glossary/widgets/) (e.g. blog feeds, tag clouds, forms) to your website.
 
 > ### Exercise
 > 1. First off, we must register our sidebar inside functions.php so that we can enable Widgets on the website.
-> Enter this into your functions file :
+> Enter this into your `functions.php` file:
 >
 >        function themename_widgets_init() {
 >          register_sidebar( array(
@@ -740,8 +739,8 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 >      }
 >      add_action( 'widgets_init', 'themename_widgets_init' );
 >
-> 2. Go to Appearance>Widgets and add 3 widgets to your sidebar. **Tip:** If you use the Text widget you can enter any HTML in the widget. Including script tags from a video embed, or twitter feed.
-> 3. Delete all the elements with the class of `third` inside your aside element in page.php and replace them with:
+> 2. In the WP dashboard, Go to Appearance > Widgets and add 3 widgets to your sidebar. **Tip:** If you use the 'Text widget' you can enter any HTML in the widget, including script tags from a video embed, or twitter feed!
+> 3. In Code Anywhere, find your `page.php` and add this code where you want the widgets to appear:
 >
 >        <?php dynamic_sidebar(); ?>
 
@@ -755,13 +754,13 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 
 <div class="details">
 
-We can add featured image functionality to our pages and posts by adding the following to our functions file:
+We can add featured image functionality to our pages and posts by adding the following to our `functions.php` file:
 
     <?php add_theme_support( 'post-thumbnails' ); ?>
 
-Once you've done that, go back into your home page and add a featured image. It will show up on the right hand side.
+Once you've done that, go back into your WP dashboard and edit one of your pages or posts. In the right column you will now see a Featured Image box. Go ahead and select one from your media library, or upload a new one from your computer. Don't forget to save your changes to the page when you're done!
 
-> ## Bonus Class Exercise: Adding a featured image to a page
+> ### Adding the featured image to a page
 >
 > We can add featured images anywhere inside the loop in various default sizes:
 
@@ -771,7 +770,7 @@ Once you've done that, go back into your home page and add a featured image. It 
     the_post_thumbnail( 'large' ); // Large resolution (default 640px x 640px max)
     the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 
-> Try adding it to one of your template files. for example your custom `page-about.php` file.
+> Try adding one of those snippets to one of your template files. for example your custom `page-about.php` file.
 
 </div>
 
@@ -783,44 +782,31 @@ Once you've done that, go back into your home page and add a featured image. It 
 
 <div class="details">
 
-Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`.
+Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the WP dashboard. Once a plugin is downloaded, you will see folders being added inside your `plugins` folder inside of `wp-content`.
 
 Popular plugins include:
 
 * [Jetpack](https://en-ca.wordpress.org/plugins/jetpack/)
+  * Site stats and analytics
+  * Automated social media posting and scheduling in advance
+  * SEO tools for Google, Bing, Twitter and Facebook
+  * Simple PayPal payment buttons
+  * and many more!
 * [Mailchimp] for email newsletters(https://en-ca.wordpress.org/plugins/mailchimp-for-wp/)
 * [Google Analytics](https://en-ca.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
 
-And there are many many more...
-Today we are going to work with Jetpack.
-> Exercise: Installing a plugin.
->1. Let's get over to Plugins in the Dashboard and find Jetpack to install.
->1. Click Add New inside of the Plugins area.
-> 1. Jetpack should should up on the main page of the Add plugins page because it's one of the most popular plugins out there. You'll see this:
+> Exercise: Installing Jetpack
 >
-> ![]({{site.img}}/module6/wp-jetpack.png)
+>1. In your WP Dashboard, go to Plugins > Add New in the left menu.
+>1. Search for Jetpack.
+> **Note:** Before you choose and install a plugin, you want to place close attention to the number of installations, when it was last updated and whether it's compatible with your version of WordPress (which should be the latest version). Reading the reviews can also give you a good idea of if this plugin does what you want. If you click on the 'More Details' link, you'll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars.
 >
-> Before you choose a plugin, you want to place close attention to the number of reviews and installations, when it was last updated and whether it's compatible with your version of WordPress (which should be the latest version). If you click on the More Details link, you'll be able to make a good assessment of that plugin. JetPack is safe because it has over one million installations and 4/5 stars. It's also regularly updated and the author is Automattic which is a very trusted plugin author (they created WordPress).
+> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. Don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website! (If it does, you can simply deactivate and uninstall it.)
 >
-> **Rule of thumb:** Don't download plugins that have few reviews, and few installations. And definitely don't download plugins that are not compatible with the latest version of WordPress. An incompatible plugin could break your website.
-> 1. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate.
-> 1. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums.
-> 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog.
-> 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out.
-
-</div>
-
-<div class="summary">
-
-> ## Bonus Exercise: Swap out your form with a JetPack form.
-
-</div>
-
-<div class="details">
-
-> Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions.
-
-</div>
+> 3. Click the Install Now button to install Jetpack. When it has finished installing, click on Activate.
+> 4. You'll be then taken to the plugins page where Jetpack will ask you to connect to jetpack.com using your WordPress account. Go ahead and connect, registering for a WP account if you don't have one yet. This will be the account you'll use universally on WordPress websites moving forward. It will also allow you to post questions on the WordPress support forums.
+> 5. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give you sharing options, contact forms, and really cool photo carousels that you can add to pages and posts.
+> 6. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out!
 
 <div class="summary">
 
@@ -831,6 +817,8 @@ Today we are going to work with Jetpack.
 <div class="details">
 
 > Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available.
+
+</div>
 
 </div>
 
