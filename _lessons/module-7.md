@@ -507,14 +507,13 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 > Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?
 
 ### Class Exercise: Making your Theme
-> 1. Create 4 new files in your theme folder:
+> 1. Create 4 new files in your theme folder. They can all be empty for now:
 	- `header.php`
 	- `footer.php`
-	- `sidebar.php`
 	- `page.php`
-> 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
+> 1. Together we will now take each of the corresponding parts from `index.php` and paste them into one of these files. That means you will delete the header and navigation from `index.php`, and the footer and put each of these in their corresponding files.
 >
-> #### index.php should now look like this:
+> #### `index.php` should now look like this:
 >
 >	    <main>
 >	    	<section class="banner">
@@ -534,7 +533,7 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >	    </main>
 >
 >
-> #### header.php should look like this:
+> #### `header.php` should look like this:
 >
 >		    <!DOCTYPE html>
 >		    <html <?php language_attributes(); ?>>
@@ -562,52 +561,28 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >		    		</div>
 >		    	</header>
 >
-> ####  sidebar.php should look like this:
->
->		    <aside>
->		    	<div class="wrapper aside">
->		    		<div class="third">
->		    			<h2>From My Blog</h2>
-    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum omnis corporis asperiores totam non ipsa nesciunt,porro sit numquam perferendis dignissimos repellendus aliquam cupiditate odit, id maiores, deleniti hic at!</p>
->		    			<a href="#">Continue reading</a>
->		    		</div>
->		    
->		    		<div class="third">
->		    			<h2>Me on Social Media</h2>
->		    			<!-- Insert Twitter Feed -->
->		    			<a class="twitter-timeline" data-width="220" data-height="400" data-link-color="#981CEB" href="https://twitter.com/anneofgreengabl">Tweets by anneofgreengabl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
->		    		</div>
->		    		<div class="third">
->		    			<h2>Subscribe to my Blog</h2>
->		    			<form action="">
->		    
->		    				<input type="text" placeholder="E-mail Address">
->		    				<input type="submit">
->		    			</form>
->		    		</div>
->		    	</div>
->		    </aside>
->
-> #### footer.php should look like this:
+> #### `footer.php` should look like this:
 >
 >	    	<footer>
 >	    		<div class="wrapper">
->	    			<p>&copy; Anne Shirley 2016</p>
+>	    			<p>&copy; Anne Shirley <?php echo date('Y'); ?></p>
 >	    		</div>
 >	    	</footer>
 >	    </body>
 >	    </html>
 >
-> 1. In page.php, copy everything from index.php and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.
-> 1. Then into index.php and page.php we'll bring in the footer, sidebar and header by using: get_header(); get_footer(); and get_sidebar();
+> `date('Y')` will output the current year. This way you don't need to update this at the beginning of every year!
 >
-> #### index.php should look like this.
+> 1. In `page.php`, copy (don't cut) everything from `index.php` and paste it there. This will be the default template for any page you add to your website, unless you specify otherwise with a custom template.
+> 1. Then into `index.php` and `page.php` we'll bring in the footer and header by using these template tags: `get_header();` and `get_footer();`
+>
+> #### `index.php` should look like this.
 >
 >	       <?php get_header(); ?>
 >	       <main>
 >	    	    	
 >	    	    	<section class="banner">
->	    	    		<div class="wr>apper">
+>	    	    		<div class="wrapper">
 >	    	    			<h1><?php the_title(); ?></h1>
 >	    	    		</div>
 >	    	    	</section>
@@ -620,24 +595,58 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >	    	    	<?php endwhile; else : ?>
 >	        		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 >	    	    	<?php endif; ?>
->	    	    	<?php get_sidebar(); ?>
 >	    	    </main>
 <?php get_footer();?>
 >
-> 1. Now that you've split off your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a different looking page, do the following:
+> 1. Now that you've organized your repeated code into tidy new files, let's also create a custom page template for our About page that will not have a banner. To create a new page template, do the following:
 >
->	1. Create a special template file for the About page. Call it **page-about.php**.
->	1. In page-about.php, write the following
+>	1. Create a special template file for the About page. Call it `page-about.php`.
+>	1. In `page-about.php`, add the following line to the very top of the file:
 >
 		    <?php /* Template Name: About */ ?>
 >
 >
-> 1. Below this, copy over everything from your index.php file there and delete what you don't want. For example, the banner.
-> 1. In the dashboard go to Pages>About. Find the box on the right, below the update button, to change your template file from the default, to the special About template you just created.
+> 1. Below this, copy over everything from your `index.php` file there and delete what you don't want - in this case, the banner.
+> 1. Going back to the WP dashboard, go to Pages > About. In the right column, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created.
 
-> ## Bonus: Tweaking the blog
-> You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php.
-> This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out:
+
+There's your theme. Great job! You've built your own simple theme and it works. Have a look at the bonus exercises below to add even more functionality!
+
+
+## More WordPress
+
+We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
+
+It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.
+
+Other topics for later include:
+
+### Advanced Subjects in WordPress to Look Forward To
+
+1. Custom Post Types
+1. Custom Fields
+1. WordPress and JavaScript
+1. WP-REST API
+And more...
+
+### WordPress Community
+
+If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:
+
+[http://make.wordpress.org](http://make.wordpress.org)
+
+
+<div class="summary">
+
+## Bonus: Tweaking the blog
+
+</div>
+
+<div class="details">
+
+You may have noticed that now that you have a page.php and an index.php, only the blog is using index.php while all the other pages except for about are using page.php.
+
+This means that you can reserve index.php for your blog (WP will always use this one for your blog), and add some additional handy template tags. Try out:
 > 		    <?php the_permalink(); ?> This will enable you to link the title of each post to the full single view of it.
 >		    <?php the_author(); ?> This one will print out the author of your posts.
 >
@@ -651,18 +660,19 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 > Play around with these in index.php for better customization of your blog feed.
 > Also, consider creating a **single.php** template to control the way your single view of each blog post looks like.
 
+</div>
 
-### Resources
+<div class="summary">
 
-- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
-- [On Template Tags](https://codex.wordpress.org/Template_Tags)
-- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
+## Bonus: Functions
 
-So you could call it a day right now. There's your theme. Great job! You've built your own simple theme and it works. But let's go a little deeper and add even more functionality!
+</div>
+
+<div class="details">
 
 There is another very powerful file we can add to theme and it's called the Functions file. It's a file in which we can paste snippets of code that increase the functionality of WP. These are some expanded functionality we can get from a functions file: - Widgets - Navigations - Featured Images for posts and pages - and many many more...
 
-> ### Class Exercise
+> ### Exercise
 >
 > 1. In your own custom theme folder, create a  new file named `functions.php`.
 > 1. Next, we will add the functionality for menus to our functions file. The following PHP function came straight from the Codex, and it will add the ability to add menus to your website from the dashboard.
@@ -691,16 +701,26 @@ There is another very powerful file we can add to theme and it's called the Func
 >
 >**Bonus:** WordPress gives menu items of the currently visited page, the class of *current_page_item*. You can style it differently.
 
+</div>
+
 ### Resources
 
+- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+- [On Template Tags](https://codex.wordpress.org/Template_Tags)
+- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
 [Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
 
+<div class="summary">
 
 ## Bonus: Sidebars and Widgets
 
+</div>
+
+<div class="details">
+
 Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even forms) to your website. We'll be converting our current sidebar into a dynamic WP sidebar.
 
-> ### Class Exercise
+> ### Exercise
 > 1. First off, we must register our sidebar inside functions.php so that we can enable Widgets on the website.
 > Enter this into your functions file :
 >
@@ -723,8 +743,15 @@ Sidebars enable you to add WP widgets (e.g. blog feeds, tag clouds, and even for
 >
 >        <?php dynamic_sidebar(); ?>
 
+</div>
+
+<div class="summary">
 
 ## Bonus: Featured Images
+
+</div>
+
+<div class="details">
 
 We can add featured image functionality to our pages and posts by adding the following to our functions file:
 
@@ -744,8 +771,15 @@ Once you've done that, go back into your home page and add a featured image. It 
 
 > Try adding it to one of your template files. for example your custom `page-about.php` file.
 
+</div>
+
+<div class="summary">
+
 ## Bonus Plugins
 
+</div>
+
+<div class="details">
 
 Plugins enable us to add incredible functionality to a website without having to do a lot of coding of our own. Plugins can be downloaded directly from the Plugins area of the dashboard. They will then live inside your Plugins folder inside of `wp-content`.
 
@@ -772,13 +806,40 @@ Today we are going to work with Jetpack.
 > 1. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give ou sharing options, contact forms and really cool carousels for your media in your pages and blog.
 > 1. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out.
 
+</div>
+
+<div class="summary">
+
 > ## Bonus Exercise: Swap out your form with a JetPack form.
+
+</div>
+
+<div class="details">
+
 > Remember that for our Contact page we hacked a google sheet? If you added your contact form to your Contact page in WordPress, this form would continue working and you don't need to make changes. However, JetPack will also provide you with easy to set up forms in your pages. From the Page editor, simply click on the "Add Contact Form" button and follow the instructions.
 
+</div>
+
+<div class="summary">
+
 > ## Bonus Exercise: Add a carousel with Jetpack to your posts or pages
+
+</div>
+
+<div class="details">
+
 > Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available.
 
+</div>
+
+<div class="summary">
+
 > ## Bonus Exercise: Enabling Social Media sharing for your posts
+
+</div>
+
+<div class="details">
+
 > JetPack makes it really easy for your visitors to share your posts on social media.
 > 1. Head over to Jetpack>Settings from the side navigation in the Dashboard.
 > 1. Click on Engagement.
@@ -786,27 +847,7 @@ Today we are going to work with Jetpack.
 > 1. Set up your sharing buttons under the `Sharing Buttons` section.
 > There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin.
 
-## More WordPress
-
-We have built our very own custom WordPress theme. We did it this way to learn how WordPress really works from the inside out.
-
-It's important to note that most developers will create their own starter theme and not always start entirely from scratch every time. Some also use other starter themes. [Underscores](http://underscoes.me) is a good one because it is developed by Automattic, the creators of WordPress (And Jetpack). Starter themes are great because they will often break up your theme using the correct Template File structure based on the WP Template Hierarchy. Download Underscores and explore it. The cool thing about it is that it gives you template files, but very little CSS. You get to customize the style of the website just like you did on you project throughout this class.
-
-Other topics for later include:
-
-### Advanced Subjects in WordPress to Look Forward To
-
-1. Custom Post Types
-1. Custom Fields
-1. WordPress and JavaScript
-1. WP-REST API
-And more...
-                                                                                                                                                                                                                                                                                  2
-### WordPress Community
-
-If you would like to contribute to the WordPress open source community or read many of their awesome resources, checkout:
-
-[http://make.wordpress.org](http://make.wordpress.org)
+</div>
 
 
 ~ end ~
