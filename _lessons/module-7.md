@@ -248,7 +248,7 @@ Clicking on that dropdown will reveal options to allow you to add Headings, list
 
 To switch from the visual editor to the HTML view, click on the icon with the three vertical dots:
 
-![edit as html]({{site.img}}/module6/edit-as-html.png)
+![edit as html]({{site.img}}/module7/edit-as-html.png)
 
 
 <div class="summary">
@@ -281,51 +281,58 @@ Sub-categories can also be created by selecting a Parent in the **Categories** m
 Tags are best used to create groups of content that can apply to multiple categories and be more specific. This gives people the ability to navigate your site quickly and find exactly what they want. For example, a frittata recipe can have the following category and tags:
 
     Category: Breakfast
-    Tags: eggs, kid friendly, under 30mins
+    Tags: eggs, kid friendly, gluten free, under 30mins
 
-Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags cannot have a hierarchy.
+Just like categories, tags can be added from the menu or when editing a post. But unlike categories, tags *cannot have a hierarchy*.
+Tags should not be duplicated from your categories. For example, if you are using a category called *soups*, you do not also need a tag called *soups*.
 
 </div>
 
 
 > ## Exercise: Add Content
+> Having content to work with will make it easier to choose a theme and work with the theme code.
+>
 > 1. Create a couple of random blog posts in the Posts section. Don't dwell too much on the content. [Dummy text](http://meettheipsums.com) is fine for now.
 > 1. Add some categories and tags to your posts.  
-> 1. Create a page for each of your project's pages. In the example project that would be three pages: Home, About, Blog and Contact. Grab any content you have in your pages (except for the sidebar if you've added one like the sample project), and put it in the content editor after the title of each page. Remember you can enter straight HTML in the content editor by using the Text tab.
-> 1. Go to Settings>Reading and set the Home page as your home page and the Blog page as your blog page.
-> Having content to work with will make it easier to work with our theme files.
+> 1. Create a page to mirror each of your project's pages. If you only have 1 page in your project, you could create pages for each section of your site, for eg. Home, About, Blog and Contact. Grab the text content you have in your pages, and put it in the content editor after the title of each page. Remember, you can enter HTML in the content editor by clicking on the 3 vertical dots above the text area and selecting the 'Edit as HTML' option.
+> 1. Create another page and call it Blog. No need to add any content to that page yet.
+> 1. Go to Settings > Reading and set the Home page as your home page, and the Blog page as the Posts page.
 
 
 ## The Guts of WordPress
 
 Now that we've poked around a bit in the dashboard, let's go deeper and take a look at the files back in Code Anywhere.
 
-At first glance, it's overwhelming to see how many folders and files WP needs to run. But on closer look, we'll be ignoring the majority of the files which just make up the core of WP. The files we'll use are in the wp-content folder.
+At first glance, it's overwhelming to see how many folders and files WP needs to run. We'll be ignoring the majority of the files which make up the core of WP. You have the ability to change those files, but most people leave them exactly as is. All the files we'll be looking at and editing are in the `wp-content` folder.
 
-Inside of wp-content there is a folder named themes. That'll be our most used folder.
+Inside of `wp-content` folder, there is a folder named `themes`. That'll be our most used folder.
 
-Outside of wp-content we normally also need to look at wp-config.php to write in database credentials. Today, Code Anywhere is doing all that database work for us.
+Outside of `wp-content` we may need to look at `wp-config.php` to provide our database credentials. Today, Code Anywhere is doing all that database work for us.
+
+> **Pro tip:** a lot of hosting providers offer a quick WordPress setup option, since WordPress is such a popular tool for building websites. Those providers will also help you with the database setup so you likely won't have to edit the `wp-config.php` file.
+
 
 ### What is a theme?
 
-A WordPress Theme is a group of files that determine the way the WordPress looks, and what content is displayed on each page. In other words, this is just a fancy way of saying that a theme is basically the collection of files that make up the HTML and CSS for our site.
-
-Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.
+A WordPress Theme is like the clothes your website wears. The content in your pages and posts will stay the same, but the layout, the fonts, colours and other styles will change depending on the theme you choose. It is essentially a group of files that determine the way the WordPress looks, and how content is displayed on each page. The theme files contain the HTML and CSS to control the look and feel. Since we already know HTML and CSS, creating a theme will be a natural progression of our knowledge.
 
 ### What's in a theme?
 
-The most basic WP theme consists of no more and no less than an index file and a css file. The project files we already worked on are a great start to our own WP basic theme.
+The most basic WP theme consists of no more and no less than an `index.php` file and a `style.css` file. The project files we already worked on are a great start to create our own simple WP theme.
 
 ### Uploading our Theme to WP
 
-Currently there are three default themes inside the themes folder. These always come with WordPress.
-Under Appearance>Themes we can see how these default themes look and even test them out on our website.
-But today we're not interested in a default theme. We want to build our very own.
+Currently, there are three default themes inside the themes folder. These always come with WordPress.
 
-1. Let's begin by uploading the our project folder, into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip).
-1. To upload your project folder, click on the `themes` folder inside `wp-content` so that it's highlighted. Then right-click > `upload` and drag your folder over.
+In your WordPress Dashboard, go to Appearance > Themes in the left menu to see those 3 default themes. Try changing your active theme and previewing your site to see how the layout and styles change with each theme.
+
+Today we're going to learn to build our very own theme!
+
+> Let's begin by uploading our project folder into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip).
+> 1. In Code Anywhere, upload your project folder by clicking on the `themes` folder inside `wp-content` so that it's highlighted. Then right-click > `upload` and select the root of the project folder on your computer.
 ![]({{site.img}}/module6/codeanywhere-upload.gif)
-1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this we need to copy and paste the snippet below, and edit the example in your own project's css file:
+> 1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this, find your projects main `css` file and make sure it is named `style.css` if it is not already.
+>1. Copy the snippet below and paste it at the very top of your `style.css` file. Edit the theme name, author and description:
 
         /*
         Theme Name: Twenty
@@ -342,12 +349,18 @@ But today we're not interested in a default theme. We want to build our very own
         Use it to make something cool, have fun, and share what you've learned with others.
         */
 
-1. The next thing we must do is rename index.html to index.php (right click on file to rename in Code Anywhere)
-1. Make sure to check under Appearance>Themes whether your own theme shows up! If it does, go ahead and activate it.
-How does it look?
+> 1. The next thing we must do is rename `index.html` to `index.php` (right click on file to rename in Code Anywhere)
+> 1. Go back to your WordPress dashboard and go to Appearance > Themes. Refresh the page to check whether your new theme shows up. If it does, go ahead and activate it.
+>
+> How does it look?
 
+<div class="summary">
 
 ### Why isn't any of our CSS showing up?
+
+</div>
+
+<div class="details">
 
 This is because our stylesheet link is no longer working. It's looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic html project from this morning.
 
@@ -360,6 +373,8 @@ Replace our href in the stylesheet link with :
 Does it work?
 
 There is a better way to link to our CSS.
+
+</div>
 
 ### Communicating with WordPress: PHP & Template Tags
 
