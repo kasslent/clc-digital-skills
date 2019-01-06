@@ -808,43 +808,46 @@ Popular plugins include:
 > 5. Once you have successfully connected, Jetpack will ask you to Activate Recommended Features. Go ahead and do that. It will give you sharing options, contact forms, and really cool photo carousels that you can add to pages and posts.
 > 6. Now that you have installed Jetpack, head back to your widgets area to take a look at all the cool new widgets you can add to your sidebar! Try a couple of them out!
 
-<div class="summary">
+  <div class="summary">
 
-> ## Bonus Exercise: Add a carousel with Jetpack to your posts or pages
+  ### Add a carousel with Jetpack to your posts or pages
 
-</div>
+  </div>
 
-<div class="details">
+  <div class="details">
 
-> Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available.
+  Now that you've installed JetPack, you have some really cool new features in your Media Gallery. If you click on Add Media from the content editor of any of your pages or posts you can `Create Gallery` instead of just Insert Media. Test out some of the available Galleries available.
 
-</div>
+  </div>
 
-</div>
+  <div class="summary">
 
-<div class="summary">
+  ### Enabling Social Media sharing with Jetpack
 
-> ## Bonus Exercise: Enabling Social Media sharing for your posts
+  </div>
 
-</div>
+  <div class="details">
 
-<div class="details">
+  > JetPack makes it really easy for your visitors to share your posts on social media.
+  > 1. Head over to Jetpack>Settings from the side navigation in the Dashboard.
+  > 1. Click on Engagement.
+  > 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it.
+  > 1. Set up your sharing buttons under the `Sharing Buttons` section.
+  > There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin.
 
-> JetPack makes it really easy for your visitors to share your posts on social media.
-> 1. Head over to Jetpack>Settings from the side navigation in the Dashboard.
-> 1. Click on Engagement.
-> 1. Scroll down to Sharing and click on `Configure your Sharing Settings` after you expand it.
-> 1. Set up your sharing buttons under the `Sharing Buttons` section.
-> There are lots of plugins to set up sharing on WordPress but JetPack provides a very functional and easy to customize option. It's not uncommon for people to download JetPack and only use this feature of the plugin.
+  </div>
 
 </div>
 
 ### Resources
 
-- [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
-- [On Template Tags](https://codex.wordpress.org/Template_Tags)
-- [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
-[Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
+* [WordPress Codex](https://codex.wordpress.org/Template_Tags)
+* [The bloginfo function](https://developer.wordpress.org/reference/functions/bloginfo/)
+* WPBeginner: [How to Choose the Best WordPress Hosting](http://www.wpbeginner.com/wordpress-hosting/)
+* [On Temple Heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+* [On Template Tags](https://codex.wordpress.org/Template_Tags)
+* [On single.php](https://codex.wordpress.org/Theme_Development#Single_Post_.28single.php.29)
+* [Codex Navigations](https://codex.wordpress.org/Navigation_Menus)
 
 
 ~ end ~
