@@ -480,9 +480,11 @@ Specifically, we'll be using the following template tags:
 
 > ### Exercise: Add your template tags
 >
-> Go ahead and add the template tags to your own `index.php` file, inside the loop (right after the while). Do you see the content coming through?
+> 1. Copy the loop syntax above and paste it into your `index.php` file right after the banner.
+> 1. Add the template tags to inside the loop (to replace the comment that says "content goes here").
+> Do you see the content coming through?
 
-Yay! We're communicating with WP now.
+Yay! We're communicating with WP now!
 
 </div>
 
@@ -494,20 +496,22 @@ Yay! We're communicating with WP now.
 
 <div class="details">
 
-We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.
+We've talked about template **tags**, but in WordPress there are also **template files**. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. Currently, all our pages are using the same template, which is the `index.php`. However, WordPress enables us to create custom templates so that we can layout different pages to our liking:
 
-It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it.
+![2 column and single column templates]({{site.img}}/module6/wp-template-types.jpg)
 
 </div>
 
+Templates also enable us to put code that we use more than once (eg. the footer on every page) in their own discrete files, so that we don't need to edit the footer on every page.
+
 > Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?
 
-> ### Class Exercise:
+### Class Exercise: Making your Theme
 > 1. Create 4 new files in your theme folder:
-	- header.php
-	- footer.php
-	- sidebar.php
-	- page.php
+	- `header.php`
+	- `footer.php`
+	- `sidebar.php`
+	- `page.php`
 > 1. Together we will now take each of the corresponding parts from index.php and paste them into one of these files. That means you will delete the header and navigation from index.php, you will delete the sidebar, and the footer and put each of these in their corresponding files. (header.php, sidebar.php and footer.php)
 >
 > #### index.php should now look like this:
