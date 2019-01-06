@@ -795,7 +795,7 @@ Popular plugins include:
 * [Mailchimp] for email newsletters(https://en-ca.wordpress.org/plugins/mailchimp-for-wp/)
 * [Google Analytics](https://en-ca.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
 
-> Exercise: Installing Jetpack
+> ### Exercise: Installing Jetpack
 >
 >1. In your WP Dashboard, go to Plugins > Add New in the left menu.
 >1. Search for Jetpack.
@@ -810,7 +810,7 @@ Popular plugins include:
 
   <div class="summary">
 
-  ### Add a carousel with Jetpack to your posts or pages
+  Add a carousel with Jetpack to your posts or pages
 
   </div>
 
@@ -822,7 +822,7 @@ Popular plugins include:
 
   <div class="summary">
 
-  ### Enabling Social Media sharing with Jetpack
+  Enabling Social Media sharing with Jetpack
 
   </div>
 
