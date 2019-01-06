@@ -403,7 +403,7 @@ Inside of those brackets we can add additional information, called *arguments*, 
 We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the Dashboard (where we added our pages and posts).
 
 #### Resources
-[WordPress Codex](https://codex.wordpress.org/Template_Tags)
+* [WordPress Codex](https://codex.wordpress.org/Template_Tags)
 
 >## Exercise: Header Template Tags
 > Let's put some of these template tags in use to replace our static HTML content with data coming from WordPress.
@@ -436,8 +436,7 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 > Notice how much cleaner it is to add the stylesheet using the `get_stylesheet_uri` template tag?
 
 ### Resources
-
-[https://developer.wordpress.org/reference/functions/bloginfo/](https://developer.wordpress.org/reference/functions/bloginfo/)
+* [The bloginfo function](https://developer.wordpress.org/reference/functions/bloginfo/)
 
 <div class="summary">
 
@@ -447,47 +446,41 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 
 <div class="details">
 
-Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called "The Loop".
+Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get that, we have to use something called "**The Loop**".
 
-The Loop is a conditional statement in PHP that tells the database something along the lines of *"Hey, Database! If you've got any content over there for this page, or for this blog post, as long as you've got it, print it out for me right here, would ya? Thanks."*
+The Loop is a **conditional statement** in PHP that essentially says *"Hey, Database! **If** you've got any content over there for this page, or for this blog post, print it out for me right here, would ya?"*
+That word **if** is what makes it a **conditional statement**. The condition in this case is that the content exists.
 
 In PHP it looks like this:
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     	<!-- content goes here -->
     <?php endwhile; else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif; ?>
+		  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+	  <?php endif; ?>
 
-You've seen a statement like this beforehand. Do you remember this guy?
+You've seen a statement like this before! Do you remember this guy?
 
 ![]({{site.img}}/module6/c9_scratch_conditional.png)
 
-We need to add our loop to our index.php page
-So where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current html page?
+In the PHP snippet above, **if** the condition is not met, it will display a default message. This is helpful when using a search or filter. If the user searches for a word or phrase that doesn't match the content of any of your posts or pages, they will see that sentence on the page.
 
-We'll put it after the banner, and before the horizontal sidebar.
+We need to add our loop to our `index.php` page. Where should the loop go in our page if we want it to ask for content? In other words, where is the content in our current HTML page?
 
-</div>
-
-<div class="summary">
+We'll put it right after the banner.
 
 ### The Content
 
-</div>
-
-<div class="details">
-
-So what goes inside the loop? Template tags!
+What goes inside the loop? Template tags!
 
 Specifically, we'll be using the following template tags:
 
-    <?php the_content(); ?>
     <?php the_title(); ?>
+    <?php the_content(); ?>
 
 > ### Exercise: Add your template tags
 >
-> Go ahead and add the template tags to your own index.php file, inside the loop (right after the while). Do you see the content coming through?
+> Go ahead and add the template tags to your own `index.php` file, inside the loop (right after the while). Do you see the content coming through?
 
 Yay! We're communicating with WP now.
 
