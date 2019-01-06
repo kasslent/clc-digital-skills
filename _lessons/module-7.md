@@ -27,7 +27,7 @@ A CMS usually includes features such as:
 * and much more!
 
 
-> Though WordPress by far is the most popular CMS in the world, there are many different CMS available. Have any of you (mentors too!) worked with a CMS before in your jobs, or just for fun?
+> Though WordPress is by far the most popular CMS in the world, there are many different CMS available. Have any of you (mentors too!) worked with a CMS before in your jobs, or just for fun?
 
 ## What is WordPress?
 
@@ -112,15 +112,7 @@ The `.org` version can be customized in any way, but requires more technical kno
 
 A <strong>server</strong> is simply a computer that runs software. The server needs to run all day, everyday. If the server is shut off or malfunctions, so does your website. The server lets you access those files and data through the internet whenever you want to use it (eg. when you click on a link, when you click on a search result in Google, or if you go directly to a website by typing the URL in your browser's address bar).
 
-**Anyone** can set up a server, as long and you have the hardware and the know-how. If you don't want to go through all that setting up on your own though, you can pay for a hosting provider. Paying for hosting is like paying for a storage locker - you pay a monthly fee to have your files and database to live in a physical space.
-</div>
-
-### How does WP work with a server?
-
-1. We place an empty database (MySQL database) on the server, and all of the files we downloaded from WP (including our theme).
-1. We visit the WP dashboard to add content to the database on the server.
-1. We make our WP template files request the content we want from the database and display it on our pages.
-1. When we visit the website, our server shows us the website according to what our theme files have requested it show us.
+**Anyone** can set up a server, as long and you have the hardware and the know-how. If you don't want to go through the work of setting one up on your own, you can pay for a hosting provider. Paying for hosting is like paying for a storage locker - you pay a monthly fee to have your files and database to live in a physical space.
 
 #### Resources
 * WPBeginner: [How to Choose the Best WordPress Hosting](http://www.wpbeginner.com/wordpress-hosting/)
@@ -129,16 +121,27 @@ A <strong>server</strong> is simply a computer that runs software. The server ne
   * [On your Mac](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
   * [On your PC](https://themeisle.com/blog/install-xampp-and-wordpress-locally/)
 
+</div>
+
+### How does WP work with a server?
+
+1. We place an empty database on the server, and all of the files we downloaded from WP (including our theme).
+1. We visit the WP dashboard to add content, which injects that content into the database.
+1. We make our WP template files (written in PHP) request the content we want from the database to display it on our pages.
+1. When we visit the website, our server shows us the website according to what our theme files have requested.
+
+You can see below what a page *hardcoded* in HTML would look like vs a template written in PHP:
+![example of hardcoded html vs dynamic content with php]({{site.img}}/module7/hardcoded-vs-dynamic.jpg)
 
 ### Setting up our WordPress coding environment
-WordPress is a collection of files, just like our project files. The only difference is that WordPress files are written in a language called PHP, which talk to a MySQL database that has the content the website will display on each page. (See diagram above)
+WordPress is a collection of files, just like our project. The only difference is that WordPress files are written in a language called PHP, which talk to the database which houses the content the website will display on each page. (See diagram above)
 Here's how we would set up a WordPress website:
 
 1. Download the WordPress files from [wordpress.org](https://wordpress.org/)
 1. Set up a database on a server (this could be a local server on your computer, or from your hosting provider).
-1. Connect the WP files to the database so they can communicate with each other. This is done in the wp-config.php file that you download from wordpress.org in step 1.
+1. Connect the WP files to the database so they can communicate with each other. This is done in the `wp-config.php` file that you download from wordpress.org in step 1.
 
-That's it! Only 3 steps, but they can be a little tricky. So instead of running a local server today, we're going to use a free service called [Code Anywhere](https://codeanywhere.com/). This will set up the server, the database and the files we need all in one fell swoop!
+It's only 3 steps, but they can be a little tricky. Instead of running a local server today, we're going to use a free service called [Code Anywhere](https://codeanywhere.com/). This will set up the server, the database and the files we need all in one fell swoop!
 
 ## WordPress and Code Anywhere
 
@@ -151,11 +154,11 @@ Code Anywhere is referred to as an Integrated Development Environment(IDE). It i
 1. Go to [https://codeanywhere.com/pricing](https://codeanywhere.com/pricing) and sign up for a free account
 ![]({{site.img}}/module6/codeanywhere-1.png)
 1. Set your username and password
-1. Verify your account - you will be sent an email with a link to verify
+1. Verify your account - you will be sent an email with a verification link
 ![]({{site.img}}/module6/codeanywhere-2.png)
-1. Go back to Code Anywhere and set up your site: Choose the name, and type for "Wordpress" in the search box (either CentOS or Ubuntu work)
+1. Go back to Code Anywhere and set up your site: Choose the name, and type "Wordpress" in the search box (either CentOS or Ubuntu work)
 ![]({{site.img}}/module6/codeanywhere-3.png)
-1. What opens up is your IDE. Much like our code editor, on the left hand side we can see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
+1. What opens up is your IDE. Much like our code editor, on the left side you will see a long list of folders and files. These are the files that make up WP. We will come back to these later. First, let's run our WP website to explore the dashboard.
 1. Scroll down to find your website URL. This will looks like: http(s)://name-of-site-yourname804076.codeanyapp.com
 ![]({{site.img}}/module6/codeanywhere-4.png)
 1. Go to this URL and follow the steps to set up your WordPress account
@@ -165,7 +168,7 @@ Code Anywhere is referred to as an Integrated Development Environment(IDE). It i
 > ### Accessing Your Site
 > To access the back end of your site at any time, add **/wp-login** at the end of your site URL. This will look something like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-login
 >
-> There are some limitations on our free Code Anywhere accounts regarding the amount of hours our container can be powered on per day. If you have trouble viewing your site, you may need to restart the container. To do so, right-click on the container and select **Restart**. Once it has finished restarting, select the play icon to run your site.
+> **Important to note**: There are some limitations on our free Code Anywhere accounts regarding the amount of hours our container can be powered on per day. If you have trouble viewing your site, you may need to restart the container. To do so, right-click on the container and select **Restart**. Once it has finished restarting, select the play icon to run your site.
 >
 > ![]({{site.img}}/module6/codeanywhere-restart.png)
 >
@@ -198,7 +201,7 @@ Here, you can change/update your site's title and tagline. These are important b
 
 <div class="summary">
 
-Posts
+### Posts
 
 </div>
 
@@ -207,13 +210,13 @@ Posts
 * used for date-based content
 * posts are listed chronologically
 * can also be assigned *categories* and *tags* (also referred to as *taxonomies*)
-* permalink (URL) will include the date in which the post was published (can change this in the settings > reading)<br>(e.g. http://your-project-name.dev/2017/09/28/my-catchy-title/)
+* permalink (URL) will include the date in which the post was published (can change this in the settings > reading)<br>(e.g. `http://your-project-name.dev/2019/02/28/my-catchy-title/`)
 
 </div>
 
 <div class="summary">
 
-Pages
+### Pages
 
 </div>
 
@@ -222,7 +225,7 @@ Pages
 * used for single pages of static content (e.g. about us, contact us)
 * cannot have *taxonomies*
 * can have a hierarchical structure, ie. child pages (e.g. Travel > Beach vacations)
-* permalink (url) will not include the date<br>(e.g. http://your-project-name.dev/about/)
+* permalink (url) will not include the date<br>(e.g. `http://your-project-name.dev/about/`)
 
 </div>
 
@@ -233,11 +236,11 @@ When adding content into a **post** or a **page**, the default editor offers som
 
 Type
 
-![screenshot of editor in WordPress 5]({{site.img}}/module6/wordpress-editor.png)
+![screenshot of editor in WordPress 5]({{site.img}}/module7/wordpress-editor.png)
 
 When you click within a text block, start typing some content to access the formatting menu:
 
-![formatting options within Wordpress editor]({{site.img}}/module6/wordpress-formatting-options.png)
+![formatting options within Wordpress editor]({{site.img}}/module7/wordpress-formatting-options.png)
 
 Clicking on that dropdown will reveal options to allow you to add Headings, lists and quotes.
 
