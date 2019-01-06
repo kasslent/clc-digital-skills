@@ -166,7 +166,7 @@ Code Anywhere is referred to as an Integrated Development Environment(IDE). It i
 1. Log into your dashboard.
 
 > ### Accessing Your Site
-> To access the back end of your site at any time, add **/wp-login** at the end of your site URL. This will look something like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-login
+> To access the back end of your site at any time, add **/wp-admin** at the end of your site URL. This will look something like: http(s)://name-of-site-yourname804076.codeanyapp.com/wp-admin
 >
 > **Important to note**: There are some limitations on our free Code Anywhere accounts regarding the amount of hours our container can be powered on per day. If you have trouble viewing your site, you may need to restart the container. To do so, right-click on the container and select **Restart**. Once it has finished restarting, select the play icon to run your site.
 >
@@ -349,8 +349,8 @@ Today we're going to learn to build our very own theme!
         Use it to make something cool, have fun, and share what you've learned with others.
         */
 
-> 1. The next thing we must do is rename `index.html` to `index.php` (right click on file to rename in Code Anywhere)
-> 1. Go back to your WordPress dashboard and go to Appearance > Themes. Refresh the page to check whether your new theme shows up. If it does, go ahead and activate it.
+> 4. The next thing we must do is rename `index.html` to `index.php` (right click on file to rename in Code Anywhere)
+> 5. Go back to your WordPress dashboard and go to Appearance > Themes. Refresh the page to check whether your new theme shows up. If it does, go ahead and activate it.
 >
 > How does it look?
 
@@ -362,54 +362,53 @@ Today we're going to learn to build our very own theme!
 
 <div class="details">
 
-This is because our stylesheet link is no longer working. It's looking for our style file in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic html project from this morning.
+Our stylesheet link is no longer working because it's looking for our stylesheet in the wrong place. This is because even though our files are in the same theme folder next to each other, they don't work the same way as our basic HTML project from this morning.
 
-WordPress is loading the index.php file in the overall WordPress folder and pulling content from wp-content/themes. This means that when we create a path to the css, it needs to be relative to that index.php file and not the one inside our theme folder.
-To fix this issue, we could write a really long path to the stylesheet. Let's try it.
-Replace our href in the stylesheet link with :
+WordPress is loading the index.php file in the overall `wordpress` folder, and pulling content from `wp-content/themes`. Open up your Developer tools in the browser when previewing your site, and look in the console to see the error message. It will show you here the path to where it is looking for the file.
+
+When we create a path to the CSS, it needs to be relative to that index.php file, and not the one inside our theme folder. To fix this issue, we could write a really long path to the stylesheet. Let's try it:
+Replace our `href` in the stylesheet link with:
 
     <link rel="stylesheet" href="wp-content/themes/your-theme-folder-name/style.css">
 
-Does it work?
-
-There is a better way to link to our CSS.
+This will work, but there is a better way to link to our CSS.
 
 </div>
 
 ### Communicating with WordPress: PHP & Template Tags
 
-Even though the super long url worked to link our , WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.
+Even though the super long URL worked to link our stylesheet, WP provides us with much easier ways to figure out paths and to print out important pieces of content on our page.
 
 The way we communicate with WordPress is by using **Template Tags**.
 
 Template Tags are bits of PHP that will communicate with the WordPress database and print out the things we want on the page.
 
+
 #### Anatomy of a Template Tag
 
-Template Tags are written in PHP
+Template Tags are written in PHP:
 
     <?php /*template tag goes here*/ ?>
 
-Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will yell at you.
-The template tags we put in between these PHP brackets vary.
-Template tags are easy for us to use but they represent more complex bits of PHP code found in the WP Core.
+Much like HTML and CSS, you must be syntactically exact when writing PHP. Or else the browser will show you error messages. Whenever we are about to use a template tag, we must first write the opening and closing PHP tags. We can switch between writing HTML & PHP in a PHP file, as long as we **don't forget to close our PHP tags properly!**
 
-In other words, template tags are built-in functions that WordPress gives us to make it easier to for us to request bits of content from the backend. Remember `alert();` in JavaScript or ![]({{site.img}}/module5/scratch-builtin.png) in Scratch? WordPress Template Tags are exactly the same.
+Template tags are built-in functions that WordPress gives us to make it easier  for us to request bits of content from the database. Remember `alert();` in JavaScript or ![]({{site.img}}/module5/scratch-builtin.png) in Scratch? WordPress Template Tags are exactly the same!
 
-Template tags are always made up of a one or a couple of words joined by an underscore and followed at the end by round brackets. For example
+Template tags are always made up of a one or a couple of words, joined by  underscores and followed at the end by round brackets, just like we do with JavaScript and jQuery functions. For example:
 
     <?php bloginfo(); ?>
 
-Inside of those brackets we can add arguments that WordPress recognizes to pull specific data from the database.
+Inside of those brackets we can add additional information, called *arguments*, that WordPress recognizes to pull specific data from the database.
 
-We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the dashboard.
+We use template tags anytime we want to ask WordPress for content of any kind that we have entered through the Dashboard (where we added our pages and posts).
+
 #### Resources
 [WordPress Codex](https://codex.wordpress.org/Template_Tags)
 
 >## Exercise: Header Template Tags
 > Let's put some of these template tags in use to replace our static HTML content with data coming from WordPress.
 >
->We will begin with the <head></head> of the HTML.
+>We will begin with the ``<head></head>`` in our `index.php` file.
 >
 >Open up your index.php file in Code Anywhere. We'll be adding the following template tags to dynamically pull information from WP :
 >
@@ -440,7 +439,13 @@ We use template tags anytime we want to ask WordPress for content of any kind th
 
 [https://developer.wordpress.org/reference/functions/bloginfo/](https://developer.wordpress.org/reference/functions/bloginfo/)
 
+<div class="summary">
+
 ## The Loop
+
+</div>
+
+<div class="details">
 
 Template Tags allow us to grab quite a bit of information from our database. However, the most important information we want to get is the content of the pages and blog posts. To get these we have to use something called "The Loop".
 
@@ -463,8 +468,15 @@ So where should the loop go in our page if we want it to ask for content? In oth
 
 We'll put it after the banner, and before the horizontal sidebar.
 
+</div>
+
+<div class="summary">
 
 ### The Content
+
+</div>
+
+<div class="details">
 
 So what goes inside the loop? Template tags!
 
@@ -479,11 +491,21 @@ Specifically, we'll be using the following template tags:
 
 Yay! We're communicating with WP now.
 
+</div>
+
+<div class="summary">
+
 ## Template Files
+
+</div>
+
+<div class="details">
 
 We've talked about template tags but in WordPress there are also Template Files. - It's possible that you will not want every single page on your website to be identical. In fact, in most websites, the home page and the blog page look a bit different, if they are separate. - Currently, all our pages are using the same template - index.php. However WordPress enables us to create custom pages easily so that we can modify different pages to our liking.
 
 It also enables us to put code that we need more than once, in its own file so that we don't need to repeat it.
+
+</div>
 
 > Discussion: Looking at all your HTML documents from your projects, what are the common parts being reused in every page of your website?
 
