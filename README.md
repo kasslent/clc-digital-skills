@@ -1,4 +1,4 @@
-# Ladies Learning Code Digital Skills Program
+# Canada Learning Code Digital Skills Program
 
 This repo uses [Github pages](https://help.github.com/articles/using-jekyll-with-pages/) to host the notes so all updates in the master branch needs to be rebased into the gh-pages branch to be available online.
 
