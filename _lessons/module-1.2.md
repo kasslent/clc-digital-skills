@@ -15,8 +15,13 @@ permalink: module1-2.html
 >*Pro tip!*  
 Move this exercise file from your downloads folder and add it somewhere you can find it (organized with the rest of your LLC project and exercise files).
 
+<div class="summary">
 
 ## Audio and Video
+
+</div>
+
+<div class="details">
 
 HTML5 introduced better support for media with `<audio>` and `<video>` tags.  However, with sites such as YouTube and Vimeo, it's often easier (and easier on bandwidth) to go with embedded videos from those services.
 
@@ -28,6 +33,8 @@ Sites like YouTube, Vimeo and other media sites such as Instagram and Twitter al
 * [http://html5doctor.com/the-video-element/](http://html5doctor.com/the-video-element/)
 
 > Let's check out the different embed options for [YouTube](https://support.google.com/youtube/answer/171780?hl=en), [Vimeo](https://help.vimeo.com/hc/en-us/articles/224969968-Embedding-videos-overview), [Instagram](https://www.instagram.com/developer/embedding/) and [Twitter](https://help.twitter.com/en/using-twitter/embed-twitter-feed).
+
+</div>
 
 
 ## Intro to CSS
@@ -485,11 +492,9 @@ On a Mac, we will see Helvetica Neue being used. On Windows, unless the user has
 * monospace (fixed width fonts) - the one you use in a text editor like Atom
 
 
-### Custom Fonts
-
 <div class="summary">
 
-#### Free vs. Premium Fonts
+### Free vs. Premium Fonts
 
 </div>
 

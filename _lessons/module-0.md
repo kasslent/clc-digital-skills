@@ -14,15 +14,23 @@ Below are some tips and tricks to get you up and running and help with your work
 
 <div class="summary">
 
-## Web Browsers & Developer Tools
+## Web Browsers
 
 </div>
 
 <div class="details">
 
-Choose a modern web browser that supports current web standards and integrated developer tools for a better web experience. A couple good ones to use are [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) and [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/).
+Choose a modern web browser that supports current web standards and integrated developer tools for a better experience using the web. A couple developer favourites are [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) and [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/). All examples going forward in this course will be using Chrome. We suggest you use this one in class so we're all working in a similar environment.
 
-All examples going forward will be using Chrome.
+</div>
+
+<div class="summary">
+
+## Developer Tools
+
+</div>
+
+<div class="details">
 
 All the modern browsers have built-in **Developer tools** that allow you to *inspect* any web page, making it easier to test & debug code. This tool can be accessed in 3 ways:
 
@@ -36,9 +44,9 @@ All the modern browsers have built-in **Developer tools** that allow you to *ins
   * **CTRL + Shift + I** (PC)
   * **CMD + Option + I** (Mac)
 
-> In your browser, open the dev tools and experiment!  
+> In your browser, open the dev tools and explore!  
 >
-> HTML is displayed on the left, CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
+> You will see the HTML code on the left, and CSS on the right. Remember, refreshing the browser will restore the original code, so there's no danger in "breaking" the website.
 
 ### Extra resources
 
