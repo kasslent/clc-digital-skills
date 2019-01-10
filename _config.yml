@@ -8,7 +8,7 @@ baseurl: "/llc-digital-skills" # the subpath of your site, e.g. /blog/
 url: " " # the base hostname & protocol for your site
 twitter: learningcode
 slack: digitalskills
-facebook: ladieslearningcode
+facebook: canadalearningcode
 
 
 # Build settings
@@ -18,6 +18,11 @@ collections:
   lessons:
     output: true
     permalink: lessons/:path/
+
+kramdown:
+  # instruct kramdown to parse inside html block elements
+  # like p, header, lists, ...
+  parse_block_html: true
 
 
 #File paths

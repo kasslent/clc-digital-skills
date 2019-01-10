@@ -1,65 +1,23 @@
 # Ladies Learning Code Digital Skills Program
 
-### UPDATE December 2017
-
-## Module 1: 
-1.1 Removed the large "first project" at the end of this class and incorporated the "Susan's site demo" from the onset of the workshop, broken up in smaller chunks to build together as a class as concepts are learned. Instead of having the code along weeks after everything has been learned and trying to remember. This is a code-along we do with the learners until they reach the Design Day and get to build their own project from scratch. 
-
-As we introduce different parts of HTML we add content to the site. From the very beginning the learners will understand how all that they're learning comes together.
-1.1 the starter project was restyled to match LLC program colours.
-1.2 Added Typography CSS intro to Day 2. 
-Throughout:
-Remove repeated code reviews that were redundant throughout the workshop, in particular CSS Selectors. and Box Model.  
-- Update Google Font Screenshots
-
-## 2.1 and 2.2 - Box Model and Inline-Block, Icons, Image Cropping and Resizing and SVG
-- Moved all these topics to 2.1 and 2.2 so that the learners can continue building out a decent basic version of their first website and only then go into designing their own brand, etc...
-
-##  3.1, 3.2 - Design and Implementation
-
-Created a whole class dedicated to creating a personal OR business brand. Pulled content from Pixlr Branding and Web Design with Photoshop workshops and adapted them to DS. learners will analyse their business needs, the feel and tone of their site, create a mood board, create a logo, create a pen and pencil sketch of the home page, and choose between designing in the browser or polishing a static mockup on Pixlr. 
-
-3.2. Replaces the current website creation day with an independent project where the learners will implement their brand and designs. Layout will not be completed on this day, as well as many other things but from this point on they will build on their site. 
-3.2 Added homework of a video on Flexbox for students to watch before the Flexbox class. 
-
-3.2. There is not flexbox code-along before they actually learn about it anymore. It was too repetive. 
-
-## 4.1, 4.2- CSS Layouts with Flexbox have been moved here. As well as Responsive web design. 
-
-## 5.1. SEO Content was updated in Fall of 2017. 
-## 5.2. Google Form exercise clarified with new project files branded in LLC colours. 
- 
-## 6.1 and 6.2 All project files simplified and fixed to match LLC Brand. 
-
-## 7 WordPress - moved large parts of the content to "Bonus" land and made the in-class component shorter and easier for beginners to manage. 
-
-## Module 8 This module is a "Choose your Own Adventure" module. 
-
-It is essentially now a "free" class where students can ask questions and work on what they'd like. Instructors can make use of this free period to tie any loose ends if they're running behind, and students can ask last questions to mentors and finalize their business/personal website. 
-
-- Updated Read Me. 
-- Updated Instructor Notes. 
-- Update Exercise Files. 
-
-
-These lesson plans are created using [Jekyll](http://jekyllrb.com/) to make use of its templating system for creating mostly text-based lesson plans in [Markdown](http://daringfireball.net/projects/markdown/) and converted into HTML.
-
-Syntax highlighting by <http://highlightjs.org>.
-
-## Making Edits
-
-1. Fork or clone this repo.
-1. In Terminal, navigate to the **llc-digital-skills** folder.
-1. Run the command `jekyll server` or `jekyll serve` to start the local server.
-  * There's no need to preinstall Jekyll first.  The repo already contains what you need.
-1. The local url should be `http://127.0.0.1:4000/llc-digital-skills/` (It will be listed under **Server address** in your Terminal).
-  * This will watch any changes made to any of the files (content, CSS, template updates, etc).
-  
-All files are compiled into standard HTML pages into the **_site** folder.  If learners want a local copy, you can zip up the contents of the **_site** folder.  
-
 This repo uses [Github pages](https://help.github.com/articles/using-jekyll-with-pages/) to host the notes so all updates in the master branch needs to be rebased into the gh-pages branch to be available online.
 
 At the time of this writing, Jekyll supports [Sass](http://jekyllrb.com/docs/assets/) with specific rules but doesn't support sourcemaps so I use [CodeKit](https://incident57.com/codekit/index.html) to compile the Sass. Sourcemaps are not required but are useful for debugging. Use whatever compiler you prefer!
+
+## Updates for 2019
+
+### Accordions
+
+Used to hide info that the instructor may not have time to cover in class, but could be of interest for learners to delve into after class.
+They are also used to organize content when multiple options are presented, for example inline vs. external CSS, or wordpress.com vs wordpress.org
+
+### Controls
+
+Back to top button, ability to scroll within side Navigation
+
+### Module 6.2
+
+jQuery codebase of plugins included as a reference for learners to apply to their sites
 
 ## Lesson file structure
 
@@ -78,5 +36,23 @@ Each lesson is created as a **[Collection](http://jekyllrb.com/docs/collections/
 Refer to **[_instructor_notes.md](_instructor_notes.md)** for general notes, tips and suggestions for teaching the course.
 
 ---
-Created by [Christina Truong](http://christinatruong.com) for Ladies Learning Code.  
-SEO content by [Daniel Butterfield](https://twitter.com/DanielButterf) for Ladies Learning Code.
+
+## Attributions
+
+Created by [Christina Truong](http://christinatruong.com) with contributions from Dara Skolnick, Nat Cooper, Kassandra Lenters, Jessica Duarte and Stacie DaPonte for Ladies Learning Code.  
+SEO content by [Daniel Butterfield](https://twitter.com/DanielButterf) and Katya Bovykina for Ladies Learning Code.
+
+Email questions & comments to <content@ladieslearningcode.com>.
+
+This content was created with the advisory of and in collaboration with educators, industry representatives and technologists. These individuals have helped us to ensure that lesson content represents the technology landscape and educator needs, with learners in mind. If you'd like to contribute to future lesson content development, let us know [here](https://docs.google.com/forms/d/e/1FAIpQLSfJ8NSMKVAmzpdn3EAymxCbDDz3XZPxyDdmtQ87GECuvXzzDQ/viewform).
+
+We're really happy to see others leverage our content in their community - we’ve developed it to be used by others with attribution through a [Creative Commons (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/).
+
+Here's an easy way to attribute content back to us - please include it wherever you use or make reference to our content.
+
+"Please note that this is not a [Canada Learning Code](https://www.canadalearningcode.ca/) affiliated event, but we want to acknowledge the organization for the creation of [the content](https://github.com/ladieslearningcode/llc-intro-to-javascript) being delivered under Creative Commons license"
+
+
+## Contributing
+
+Our general Rule of Thumb is that it's okay to add examples if you feel it could provide more context for your community. However, we ask that instructors do not remove anything, as the content is designed with intention, whether that be meeting specific learning objectives, or maintaining our organization’s culture through the design.  Any suggestions for revisions or updates can be submitted in Github via issues and pull requests. If submitting an issue, please include the slide number(s) in the title.
