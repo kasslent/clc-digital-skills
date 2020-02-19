@@ -342,8 +342,7 @@ In your WordPress Dashboard, go to Appearance > Themes in the left menu to see t
 Today we're going to learn to build our very own theme!
 
 > Let's begin by uploading our project folder into our themes folder. If you want to start from scratch, you may just use the [sample starter project folder.](exercises/module5/project-one-sample-w-js.zip).
-> 1. Upload your project folder by clicking on the `themes` folder inside `wp-content` so that it's highlighted. Then right-click > `upload` and select the root of the project folder on your computer.
-![]({{site.img}}/module6/codeanywhere-upload.gif)
+> 1. Upload your project folder by clicking and dragging it into the `themes` folder inside of `wp-content`
 > 1. Next, we need to make WordPress recognize this folder as a WordPress theme. To do this, find your projects main `css` file and make sure it is named `style.css` if it is not already.
 >1. Copy the snippet below and paste it at the very top of your `style.css` file. Edit the theme name, author and description:
 
