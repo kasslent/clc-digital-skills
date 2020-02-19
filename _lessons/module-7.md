@@ -137,7 +137,7 @@ You can see below what a page *hardcoded* in HTML would look like vs a template 
 WordPress is a collection of files, just like our project. The only difference is that WordPress files are written in a language called PHP, which talk to the database which houses the content the website will display on each page. (See diagram above)
 Here's how we would set up a WordPress website:
 
-1. Download the WordPress files from [wordpress.org](https://wordpress.org/)
+1. Download the WordPress files from wordpress.org
 1. Set up a database on a server (this could be a local server on your computer, or from your hosting provider).
 1. Connect the WP files to the database so they can communicate with each other. This is done in the `wp-config.php` file that you download from wordpress.org in step 1.
 
@@ -151,35 +151,26 @@ Using a local host allows us to test and debug our websites before sharing them 
 
 ### Let's set it up!
 
-1. Go to [http://local.getflywheel.com/](http://local.getflywheel.com/) and select 'free download'
-![]({{site.img}}/module7/local-download.png)
-1. Select your operating system and enter your email address (this is required)
-![]({{site.img}}/module7/local-os.png)
+1. Go to [http://local.getflywheel.com/](http://local.getflywheel.com/) and select 'free download' <br> ![]({{site.img}}/module7/local-download.png)
+1. Select your operating system and enter your email address (this is required) <br> ![]({{site.img}}/module7/local-os.png)
 1. Select 'Download' - This may take a few minutes.
 
 **While Local is downloading, let's set up our (free) WordPress account!**
 
 1. Go to [http://wordpress.com/](http://wordpress.com/)
 1. Click 'Get Started'
-1. Enter your login information (take mental note - we'll need this information for Local in a minute!)
-![]({{site.img}}/module7/wp-create.png)
-1. Describe the type of site you are building, name of site, and select 'start with a free site'
-![]({{site.img}}/module7/wp-free.png)
+1. Enter your login information (take mental note - we'll need this information for Local in a minute!) <br> ![]({{site.img}}/module7/wp-create.png)
+1. Describe the type of site you are building, name of site, and select 'start with a free site' <br> ![]({{site.img}}/module7/wp-free.png)
 
 **Continuing with Local:**
 
 1. Once Local has downloaded, right-click > Open and follow the installation instructions. Your computer may prompt you with a warning message: "This type of file can harm your computer.. keep anyway?" - We can select 'Keep', as this is a trusted site.
-1. Open Local once it has been installed (it should be in your applications folder)
-![]({{site.img}}/module7/local-icon.png)
+1. Open Local once it has been installed (it should be in your applications folder) <br> ![]({{site.img}}/module7/local-icon.png)
 1. Select 'X' and exit the Local Pro advertisement to continue for free.
-1. Select 'Create a new site'
-![]({{site.img}}/module7/local-create.png)
-1. Enter your website's name
-![]({{site.img}}/module7/local-create2.png)
-1. Select 'Preferred'
-![]({{site.img}}/module7/local-create3.png)
-1. Enter your WordPress account info - which we just created. If you're unsure about any of the details, you can find them under your WordPress 'Account Settings'
-![]({{site.img}}/module7/local-create4.png)
+1. Select 'Create a new site' <br> ![]({{site.img}}/module7/local-create.png)
+1. Enter your website's name <br> ![]({{site.img}}/module7/local-create2.png)
+1. Select 'Preferred' <br> ![]({{site.img}}/module7/local-create3.png)
+1. Enter your WordPress account info - which we just created. If you're unsure about any of the details, you can find them under your WordPress 'Account Settings' <br> ![]({{site.img}}/module7/local-create4.png)
 1. Click 'Add Site.' You will need admin access to your computer (Local will prompt you to log in as admin)
 
 
