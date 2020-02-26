@@ -145,9 +145,9 @@ It's only 3 steps, but they can be a little tricky. We're going to run a local s
 
 ## WordPress and Local
 
-[Local](https://localwp.com/) is a free development environment that allows us to develop WordPress sites locally. Websites can be hosted locally or through web hosting. Hosting locally means that we are running a server on our personal computer. A web host, on the other hand, is usually a paid service where companies will store our websites on an online server for us, in order to have our websites accessible by others online.
+[Local](https://localwp.com/) is a free development environment that allows us to develop WordPress sites locally. While a web host is usually a paid service where a company stores our website on a server for us, hosting locally means that we are running a server on our personal computer.
 
-Using a local host allows us to test and debug our websites before sharing them widely online. If we're weighing the [pros and cons](https://webable.eu/en/localhost-web-host/) of these two options, usually using localhost can be a long and slightly complicated process (including installing [MAMP](https://www.mamp.info/en/) or [WAMP](http://www.wampserver.com/en/) and manually linking to your server and database), with not much support or methods for sharing your site. However, Local helps streamline this process AND allows you to create simple demo URLs to easily share your site with others.
+Using a local host allows us to test and debug our websites before sharing them widely online. If we're weighing the [pros and cons](https://webable.eu/en/localhost-web-host/) of these two options, usually using localhost can be a long and slightly complicated process (as laid out above), without a lot of support or the ability to share your site. However, Local helps streamline this process AND allows you to create simple demo URLs to easily share your site with others.
 
 ### Let's set it up!
 
@@ -160,12 +160,13 @@ Using a local host allows us to test and debug our websites before sharing them 
 1. Go to [http://wordpress.com/](http://wordpress.com/)
 1. Click 'Get Started'
 1. Enter your login information (take mental note - we'll need this information for Local in a minute!) <br> ![]({{site.img}}/module7/wp-create.png)
-1. Describe the type of site you are building, name of site, and select 'start with a free site' <br> ![]({{site.img}}/module7/wp-free.png)
+1. Describe the type of site you are building, name of site, and select the free wordpress option for your website's domain name <br> ![]({{site.img}}/module7/wp-domain.png)
+1. Select 'start with a free site' <br> ![]({{site.img}}/module7/wp-free.png)
 
 **Continuing with Local:**
 
 1. Once Local has downloaded, right-click > Open and follow the installation instructions. Your computer may prompt you with a warning message: "This type of file can harm your computer.. keep anyway?" - We can select 'Keep', as this is a trusted site.
-1. Open Local once it has been installed (it should be in your applications folder) <br> ![]({{site.img}}/module7/local-icon.png)
+1. Open Local once it has been installed (it should be in your applications folder). Your computer may prompt you with a warning message: ""Local" is an app downloaded from the Internet. Are you sure you want to open it?" - Select "Open" <br> ![]({{site.img}}/module7/local-icon.png)
 1. Select 'X' and exit the Local Pro advertisement to continue for free.
 1. Select 'Create a new site' <br> ![]({{site.img}}/module7/local-create.png)
 1. Enter your website's name <br> ![]({{site.img}}/module7/local-create2.png)
@@ -173,6 +174,7 @@ Using a local host allows us to test and debug our websites before sharing them 
 1. Enter your WordPress account info - which we just created. If you're unsure about any of the details, you can find them under your WordPress 'Account Settings' <br> ![]({{site.img}}/module7/local-create4.png)
 1. Click 'Add Site.' You will need admin access to your computer (Local will prompt you to log in as admin)
 
+Troubleshooting: If you come across any issues setting up your site, try searching the error message in the Local community forum, here: [https://localwp.com/community/](https://localwp.com/community/).
 
 > ### Accessing Your Site
 > To view your site at any time, select 'View Site'
@@ -618,7 +620,8 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 >
 >
 > 8. Below this, copy over everything from your `index.php` file there and delete what you don't want - in this case, the banner.
-> 9. Going back to the WP dashboard, go to Pages > About. In the right column, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created.
+> 9. Going back to the WP dashboard, create a new page called "About" if you don't already have one.
+> 10. In the right column of the About page, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created. <br> ![]({{site.img}}/module5/wp-about-template.png)
 
 
 There's your theme. Great job! You've built your own simple theme and it works! Where do we go from here?
