@@ -622,6 +622,7 @@ Templates also enable us to put code that we use more than once (eg. the footer 
 > 8. Below this, copy over everything from your `index.php` file there and delete what you don't want - in this case, the banner.
 > 9. Going back to the WP dashboard, create a new page called "About" if you don't already have one.
 > 10. In the right column of the About page, scroll down to the section called 'Page Attributes', and in the 'Template' dropdown select the About template you just created. <br> ![]({{site.img}}/module5/wp-about-template.png)
+> 11. In your `header.php` file, update the navigation bar links accordingly (e.g. `<li><a href="about">About</a></li>`)
 
 
 There's your theme. Great job! You've built your own simple theme and it works! Where do we go from here?
